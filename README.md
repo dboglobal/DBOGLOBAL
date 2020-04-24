@@ -11,4 +11,4 @@
 
 # Info
  Development branch may be corrupt and has test code.
- Use master branch for stable release
+ Use master branch for stable code
