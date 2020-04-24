@@ -244,7 +244,7 @@ CGUIFileParser::CGUIFileParser(const std::string &filename)
 				#ifdef BORLAND
 				stlCompStack.top().second.Options.m_stlOptions.insert(std::make_pair(std::string(strVariableName), std::string("")));
 				#else
-				stlCompStack.top().second.Options.m_stlOptions.insert(std::make_pair<std::string, std::string>(strVariableName, ""));
+				stlCompStack.top().second.Options.m_stlOptions.insert(std::make_pair(strVariableName, ""));
 				#endif
 				strVariableName = "";
 				stlVariableValue.clear();
