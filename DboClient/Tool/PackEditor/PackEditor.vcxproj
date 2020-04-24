@@ -107,6 +107,9 @@
       <Project>{5229f8ae-a505-4077-b6d3-5ce0164dfe73}</Project>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
     </ProjectReference>
+    <ProjectReference Include="..\..\..\NtlLib\Shared\Zip\zlib123\projects\visualdotnet2005\zlib.vcxproj">
+      <Project>{9b2b6c11-764e-4d4b-8db2-f91ac99e0b93}</Project>
+    </ProjectReference>
     <ProjectReference Include="..\..\Lib\NtlCore\NtlCore.vcxproj">
       <Project>{2d91cafc-1814-4cb4-b844-4e55f937d051}</Project>
     </ProjectReference>
