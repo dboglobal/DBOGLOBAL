@@ -1,0 +1,172 @@
+
+GameStage(0)
+--[
+	Action("add npc")
+	--[
+		Param("index", 3362101)
+		Param("loc x", 2325.67)
+		Param("loc y", -52.853)
+		Param("loc z", 2821.403)
+		Param("dir x", -0.978)
+		Param("dir z", -0.208)
+		Param("play script", 3362101)
+		Param("play scene", 1)
+		Param("no spawn wait","true")
+	--]
+	End()
+
+	Action( "function" )
+	--[
+		Condition( "child" )
+		--[
+			Action( "wait" )
+			--[
+				Condition( "npc faint" )
+				--[
+					Param( "npc index", 3362101)
+				--]
+				End()
+			--]
+			End()
+		
+			Action( "wps fail" )
+			--[
+		
+			--]
+			End()
+		--]
+		End()
+
+		Action( "wait" )
+		--[
+			Condition( "recv event from sps" )
+			--[
+				Param( "object type", "npc" )
+				Param( "object index", 3362101)
+				Param( "event id", 281)
+			--]
+			End()
+		--]
+		End()
+
+		Action("add mob")
+		--[
+			Param("index", 9413204)
+			Param("group", 1232)
+			Param("loc x", 2421.498)
+			Param("loc y", -49)
+			Param("loc z", 3211.861)
+			Param("dir x", -0.35)
+			Param("dir z", -0.934)
+		--]
+		End()
+
+		Action("add mob")
+		--[
+			Param("index", 9413204)
+			Param("group", 1232)
+			Param("loc x", 2414.857)
+			Param("loc y", -49)
+			Param("loc z", 3201.785)
+			Param("dir x", 0.921)
+			Param("dir z", 0.390)	
+		--]
+		End()
+
+		Action("send event to sps")
+		--[
+			Param("target type", "npc")
+			Param("target index", 3362101)
+			Param("event id", 318)
+		--]
+		End()
+
+		Action("wait")
+		--[
+			Param("operation","or")
+
+			Condition("check mobgroup")
+			--[
+				Param("group", 1232)
+				Param("count", 2)
+			--]
+			End()
+
+			Condition("child")
+			--[
+				Action("wait")
+				--[
+					Condition("check time")
+					--[
+						Param("time",300)
+					--]
+					End()
+				--]
+				End()
+
+				Action("wps fail")
+				--[
+				--]
+				End()
+			--]
+			End()
+		--]
+		End()
+
+		Action("send event to sps")
+		--[
+			Param("target type", "npc")
+			Param("target index", 3362101)
+			Param("event id", 282)
+		--]
+		End()
+
+		Action("wait")
+		--[
+			Condition("recv event from sps")
+			--[
+				Param("object type", "npc")
+				Param("object index", 3362101)
+				Param("event id", 283)
+			--]
+			End()
+		--]
+		End()
+	--]
+	End()
+
+	Action( "send event to ts" )
+	--[
+		Param( "trigger type", "quest" )
+		Param( "apply type", "register all")
+		Param( "event id", 284)
+	--]
+	End()
+
+	Action("wait")
+	--[
+		Condition("check time")
+		--[
+			Param("time", 3)
+		--]
+		End()
+	--]
+	End()
+
+	Action("remove npc")
+	--[
+		Param("index", 3362101)
+		Param("type","clear")
+	--]
+	End()
+
+
+--]
+End()
+
+GameFailed()
+--[
+
+
+--]
+End()

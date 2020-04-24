@@ -1,0 +1,57 @@
+-- 2층
+-- 오브젝트에서 실행됨
+-- 키리 정제소 출구가 열리면 시스템 메세지 "키리 정제소 출구가 열렸습니다"
+
+GameStage(0)
+--[
+	-- 시스템 메세지 "키리 정제소 출구가 열렸습니다"
+	Action( "system message" )
+	--[
+		Param( "notify", "action" )
+		Param( "text index", 16 )
+	--]
+	End()
+	
+	Action( "system message" )
+	--[
+		Param( "notify", "system" )
+		Param( "text index", 16 )
+	--]
+	End()
+	
+	Action( "add mobgroup" )
+	--[
+		Param( "group", 16 )
+		Param( "no spawn wait", "true" )
+	--]
+	End()
+
+	Action( "add mobgroup" )
+	--[
+		Param( "group", 17 )
+		Param( "no spawn wait", "true" )
+	--]
+	End()
+	
+	-- spawn한 mob들 모두 잡을 때 까지 wps종료 하지 않고 대기
+	Action( "wait" )
+	--[
+		Param( "operation", "and" )
+		
+		Condition( "check mobgroup" )
+		--[
+			Param( "group", 16 )
+			Param( "count", 0 )
+		--]
+		End()
+				
+		Condition( "check mobgroup" )
+		--[
+			Param( "group", 17 )
+			Param( "count", 0 )
+		--]
+		End()
+	--]
+	End()
+--]
+End()

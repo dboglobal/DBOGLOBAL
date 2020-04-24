@@ -1,0 +1,154 @@
+
+GameStage(0)
+--[
+	Action( "add npc" )
+	--[
+		Param( "index", 1511201 )
+		Param( "loc x", 6583.2 )
+		Param( "loc y", -82)
+		Param( "loc z", -3158.88 )
+		Param( "dir x", -0.86 )
+		Param( "dir z", 0.52 )
+		Param( "play script", 1511201 )
+		Param( "play scene", 1 )
+		Param( "no spawn wait", "true" )
+	--]
+	End()
+
+	Action( "send event to ts" )
+	--[
+		Param( "trigger type", "quest" )
+		Param( "apply type", "register all" )
+		Param( "event id", 86 )
+	--]
+	End()
+
+	Action( "wait" )
+	--[
+		Condition( "check time" )
+		--[
+			Param( "time", 5 )
+		--]
+		End()	
+	--]
+	End()
+
+	Action( "add npc" )
+	--[
+		Param( "index", 3272101 )
+		Param( "loc x", 6572.99 )
+		Param( "loc y", -81)
+		Param( "loc z", -3161.26 )
+		Param( "dir x", 0.948 )
+		Param( "dir z", -0.317 )
+		Param( "play script", 3272101 )
+		Param( "play scene", 1 )
+		Param( "no spawn wait", "true" )
+	--]
+	End()
+
+	Action( "add npc" )
+	--[
+		Param( "index", 3272102 )
+		Param( "loc x", 6581.24 )
+		Param( "loc y", -81)
+		Param( "loc z", -3148.63 )
+		Param( "dir x", 0.359 )
+		Param( "dir z", -0.934 )
+		Param( "play script", 3272102 )
+		Param( "play scene", 1 )
+		Param( "no spawn wait", "true" )
+	--]
+	End()
+
+	Action( "wait" )
+	--[
+		Param( "operation", "and" )
+
+		Condition( "recv event from sps" )
+		--[
+			Param( "object type", "npc" )
+			Param( "object index", 3272101 )
+			Param( "event id", 87 )
+		--]
+		End()
+
+		Condition( "recv event from sps" )
+		--[
+			Param( "object type", "npc" )
+			Param( "object index", 3272102 )
+			Param( "event id", 88 )
+		--]
+		End()
+	--]
+	End()
+
+	Action( "send event to sps" )
+	--[
+		Param( "target type", "npc" )
+		Param( "target index", 1511201 )
+		Param( "event id", 89 )
+	--]
+	End()
+
+	Action( "send event to sps" )
+	--[
+		Param( "target type", "npc" )
+		Param( "target index", 3272101 )
+		Param( "event id", 91 )
+	--]
+	End()
+
+	Action( "send event to sps" )
+	--[
+		Param( "target type", "npc" )
+		Param( "target index", 3272102 )
+		Param( "event id", 92 )
+	--]
+	End()
+
+	Action( "wait" )
+	--[
+		Condition( "recv event from sps" )
+		--[
+			Param( "object type", "npc" )
+			Param( "object index", 1511201 )
+			Param( "event id", 90 )
+		--]
+		End()
+	--]
+	End()
+
+	Action( "wait" )
+	--[
+		Condition( "check time" )
+		--[
+			Param( "time", 2 )
+		--]
+		End()
+	--]
+	End()
+
+	Action( "remove npc" )
+	--[
+		Param( "index", 1511201 )
+		Param( "type", "clear" )
+	--]
+	End()
+
+	Action( "remove npc" )
+	--[
+		Param( "index", 3272101 )
+		Param( "type", "clear" )
+	--]
+	End()
+
+	Action( "remove npc" )
+	--[
+		Param( "index", 3272102 )
+		Param( "type", "clear" )
+	--]
+	End()
+--]
+End()
+

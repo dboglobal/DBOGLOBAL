@@ -1,0 +1,79 @@
+
+GameStage(0)
+--[
+        Action( "change sps scene" )
+        --[
+                Param( "index", 2952102 )
+                Param( "play script", 2952102 )
+                Param( "play scene", 1 )
+        --]
+        End()
+        
+        Action( "change sps scene" )
+        --[
+                Param( "index", 3132103 )
+                Param( "play script", 3132103 )
+                Param( "play scene", 1 )
+        --]
+        End()
+        
+        Action( "function" )
+        --[
+                Condition( "child" )
+                --[
+                        Action( "wait" )
+                        --[
+                                Condition( "check time" )
+                                --[
+                                        Param( "time", 600 )
+                                --]
+                                End()
+                        --]
+                        End()
+                        
+                        Action( "wps fail" )
+                        --[
+                        
+                        --]
+                        End()
+                --]
+                End()
+                
+                Action( "wait" )
+                --[
+                        Param( "operation", "and" )
+                        
+                        Condition( "recv event from sps" )
+                        --[
+                                Param( "object type", "npc" )
+                                Param( "object index", 2952102 )
+                                Param( "event id", 543 )
+                        --]
+                        End()
+                        
+                        Condition( "recv event from sps" )
+                        --[
+                                Param( "object type", "npc" )
+                                Param( "object index", 3132103 )
+                                Param( "event id", 544 )
+                        --]
+                        End()
+                --]
+                End()
+
+                Action( "send event to ts" )
+                --[
+                        Param( "trigger type", "quest" )
+                        Param( "apply type", "register all" )
+                        Param( "event id", 545 )
+                --]
+                End()            
+        --]
+        End()
+--]
+End()
+
+GameFailed()
+--[
+--]
+End()

@@ -1,0 +1,665 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="world">
+      <UniqueIdentifier>{f260b028-c124-40b6-9271-cf972a655d71}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="world\pipe">
+      <UniqueIdentifier>{430861c6-72f1-4afb-b61a-110284a8f1dc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="world\pipe\p2">
+      <UniqueIdentifier>{2e3d0199-a9ee-4d3f-af79-07c2ffdc4d30}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="world\pipe\p2\d3d9">
+      <UniqueIdentifier>{744df7e4-a032-4354-808e-5a7eb64a2a32}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src">
+      <UniqueIdentifier>{d8babaf9-06fe-4f61-a3f0-5323d536ec57}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\pipe">
+      <UniqueIdentifier>{a566a2f0-1512-41b4-b7b5-1fe992562157}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\pipe\p2">
+      <UniqueIdentifier>{febfdc49-230a-4556-9480-da6ae0ae751a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\pipe\p2\d3d9">
+      <UniqueIdentifier>{019b526f-4114-4fd4-bd98-0b244a5f05b6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\pipe\plcore">
+      <UniqueIdentifier>{5757267f-5d04-4f66-b90b-d3b914d6acfe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="driver">
+      <UniqueIdentifier>{6a09df0d-cd9d-40a8-ae88-d7f64bdbf4ea}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="driver\d3d9">
+      <UniqueIdentifier>{f61867b8-e7dc-4019-96a0-2c745f31ceae}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="driver\common">
+      <UniqueIdentifier>{fa3533b0-fbfe-4a7e-8712-660b2d83fee7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="os">
+      <UniqueIdentifier>{42e11fc5-4923-4423-9c84-eeabb2d0765b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="os\win">
+      <UniqueIdentifier>{ae3ef628-f2b2-4f50-aee6-e259c11a3b12}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="world\babinwor.c">
+      <Filter>world</Filter>
+    </ClCompile>
+    <ClCompile Include="world\baclump.c">
+      <Filter>world</Filter>
+    </ClCompile>
+    <ClCompile Include="world\bageomet.c">
+      <Filter>world</Filter>
+    </ClCompile>
+    <ClCompile Include="world\balight.c">
+      <Filter>world</Filter>
+    </ClCompile>
+    <ClCompile Include="world\bamateri.c">
+      <Filter>world</Filter>
+    </ClCompile>
+    <ClCompile Include="world\bamatlst.c">
+      <Filter>world</Filter>
+    </ClCompile>
+    <ClCompile Include="world\bamesh.c">
+      <Filter>world</Filter>
+    </ClCompile>
+    <ClCompile Include="world\bameshop.c">
+      <Filter>world</Filter>
+    </ClCompile>
+    <ClCompile Include="world\basector.c">
+      <Filter>world</Filter>
+    </ClCompile>
+    <ClCompile Include="world\baworld.c">
+      <Filter>world</Filter>
+    </ClCompile>
+    <ClCompile Include="world\baworobj.c">
+      <Filter>world</Filter>
+    </ClCompile>
+    <ClCompile Include="world\NtlPluginWorldGlobal.c">
+      <Filter>world</Filter>
+    </ClCompile>
+    <ClCompile Include="world\pipe\p2\bapipew.c">
+      <Filter>world\pipe\p2</Filter>
+    </ClCompile>
+    <ClCompile Include="world\pipe\p2\d3d9\D3D9lights.c">
+      <Filter>world\pipe\p2\d3d9</Filter>
+    </ClCompile>
+    <ClCompile Include="world\pipe\p2\d3d9\D3D9pipe.c">
+      <Filter>world\pipe\p2\d3d9</Filter>
+    </ClCompile>
+    <ClCompile Include="world\pipe\p2\d3d9\d3d9usage.c">
+      <Filter>world\pipe\p2\d3d9</Filter>
+    </ClCompile>
+    <ClCompile Include="world\pipe\p2\d3d9\d3d9vertexdeclaration.c">
+      <Filter>world\pipe\p2\d3d9</Filter>
+    </ClCompile>
+    <ClCompile Include="world\pipe\p2\d3d9\d3d9vertexshader.c">
+      <Filter>world\pipe\p2\d3d9</Filter>
+    </ClCompile>
+    <ClCompile Include="world\pipe\p2\d3d9\d3d9vertexshaderutils.c">
+      <Filter>world\pipe\p2\d3d9</Filter>
+    </ClCompile>
+    <ClCompile Include="world\pipe\p2\d3d9\native.c">
+      <Filter>world\pipe\p2\d3d9</Filter>
+    </ClCompile>
+    <ClCompile Include="world\pipe\p2\d3d9\nodeD3D9AtomicAllInOne.c">
+      <Filter>world\pipe\p2\d3d9</Filter>
+    </ClCompile>
+    <ClCompile Include="world\pipe\p2\d3d9\nodeD3D9WorldSectorAllInOne.c">
+      <Filter>world\pipe\p2\d3d9</Filter>
+    </ClCompile>
+    <ClCompile Include="world\pipe\p2\d3d9\wrldpipe.c">
+      <Filter>world\pipe\p2\d3d9</Filter>
+    </ClCompile>
+    <ClCompile Include="src\babbox.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\babincam.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\babinfrm.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\babintex.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\bacamera.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\bacamval.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\badevice.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\baframe.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\baim3doc.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\baimage.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\baimras.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\baraster.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\baresamp.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\basync.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\batextur.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\batypehf.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\rwdbgwor.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\pipe\p2\baim3d.c">
+      <Filter>src\pipe\p2</Filter>
+    </ClCompile>
+    <ClCompile Include="src\pipe\p2\bapipe.c">
+      <Filter>src\pipe\p2</Filter>
+    </ClCompile>
+    <ClCompile Include="src\pipe\p2\p2altmdl.c">
+      <Filter>src\pipe\p2</Filter>
+    </ClCompile>
+    <ClCompile Include="src\pipe\p2\p2core.c">
+      <Filter>src\pipe\p2</Filter>
+    </ClCompile>
+    <ClCompile Include="src\pipe\p2\p2define.c">
+      <Filter>src\pipe\p2</Filter>
+    </ClCompile>
+    <ClCompile Include="src\pipe\p2\p2dep.c">
+      <Filter>src\pipe\p2</Filter>
+    </ClCompile>
+    <ClCompile Include="src\pipe\p2\p2heap.c">
+      <Filter>src\pipe\p2</Filter>
+    </ClCompile>
+    <ClCompile Include="src\pipe\p2\p2macros.c">
+      <Filter>src\pipe\p2</Filter>
+    </ClCompile>
+    <ClCompile Include="src\pipe\p2\p2renderstate.c">
+      <Filter>src\pipe\p2</Filter>
+    </ClCompile>
+    <ClCompile Include="src\pipe\p2\p2resort.c">
+      <Filter>src\pipe\p2</Filter>
+    </ClCompile>
+    <ClCompile Include="src\pipe\p2\p2stdcls.c">
+      <Filter>src\pipe\p2</Filter>
+    </ClCompile>
+    <ClCompile Include="src\pipe\p2\pipequat.c">
+      <Filter>src\pipe\p2</Filter>
+    </ClCompile>
+    <ClCompile Include="src\pipe\p2\d3d9\im3dpipe.c">
+      <Filter>src\pipe\p2\d3d9</Filter>
+    </ClCompile>
+    <ClCompile Include="src\pipe\p2\d3d9\nodeD3D9SubmitNoLight.c">
+      <Filter>src\pipe\p2\d3d9</Filter>
+    </ClCompile>
+    <ClCompile Include="src\plcore\babinary.c">
+      <Filter>src\pipe\plcore</Filter>
+    </ClCompile>
+    <ClCompile Include="src\plcore\babinmtx.c">
+      <Filter>src\pipe\plcore</Filter>
+    </ClCompile>
+    <ClCompile Include="src\plcore\bacolor.c">
+      <Filter>src\pipe\plcore</Filter>
+    </ClCompile>
+    <ClCompile Include="src\plcore\badebug.c">
+      <Filter>src\pipe\plcore</Filter>
+    </ClCompile>
+    <ClCompile Include="src\plcore\baerr.c">
+      <Filter>src\pipe\plcore</Filter>
+    </ClCompile>
+    <ClCompile Include="src\plcore\baimmedi.c">
+      <Filter>src\pipe\plcore</Filter>
+    </ClCompile>
+    <ClCompile Include="src\plcore\balist.c">
+      <Filter>src\pipe\plcore</Filter>
+    </ClCompile>
+    <ClCompile Include="src\plcore\bamatrix.c">
+      <Filter>src\pipe\plcore</Filter>
+    </ClCompile>
+    <ClCompile Include="src\plcore\bamemory.c">
+      <Filter>src\pipe\plcore</Filter>
+    </ClCompile>
+    <ClCompile Include="src\plcore\baresour.c">
+      <Filter>src\pipe\plcore</Filter>
+    </ClCompile>
+    <ClCompile Include="src\plcore\bastream.c">
+      <Filter>src\pipe\plcore</Filter>
+    </ClCompile>
+    <ClCompile Include="src\plcore\batkbin.c">
+      <Filter>src\pipe\plcore</Filter>
+    </ClCompile>
+    <ClCompile Include="src\plcore\batkreg.c">
+      <Filter>src\pipe\plcore</Filter>
+    </ClCompile>
+    <ClCompile Include="src\plcore\bavector.c">
+      <Filter>src\pipe\plcore</Filter>
+    </ClCompile>
+    <ClCompile Include="src\plcore\resmem.c">
+      <Filter>src\pipe\plcore</Filter>
+    </ClCompile>
+    <ClCompile Include="src\plcore\rpdbgerr.c">
+      <Filter>src\pipe\plcore</Filter>
+    </ClCompile>
+    <ClCompile Include="src\plcore\rwdbgerr.c">
+      <Filter>src\pipe\plcore</Filter>
+    </ClCompile>
+    <ClCompile Include="src\plcore\rwgrp.c">
+      <Filter>src\pipe\plcore</Filter>
+    </ClCompile>
+    <ClCompile Include="src\plcore\rwstring.c">
+      <Filter>src\pipe\plcore</Filter>
+    </ClCompile>
+    <ClCompile Include="driver\d3d9\d3d92drend.c">
+      <Filter>driver\d3d9</Filter>
+    </ClCompile>
+    <ClCompile Include="driver\d3d9\d3d9convrt.c">
+      <Filter>driver\d3d9</Filter>
+    </ClCompile>
+    <ClCompile Include="driver\d3d9\d3d9device.c">
+      <Filter>driver\d3d9</Filter>
+    </ClCompile>
+    <ClCompile Include="driver\d3d9\d3d9dxttex.c">
+      <Filter>driver\d3d9</Filter>
+    </ClCompile>
+    <ClCompile Include="driver\d3d9\d3d9dxttex_add.c">
+      <Filter>driver\d3d9</Filter>
+    </ClCompile>
+    <ClCompile Include="driver\d3d9\d3d9metric.c">
+      <Filter>driver\d3d9</Filter>
+    </ClCompile>
+    <ClCompile Include="driver\d3d9\d3d9raster.c">
+      <Filter>driver\d3d9</Filter>
+    </ClCompile>
+    <ClCompile Include="driver\d3d9\d3d9rendst.c">
+      <Filter>driver\d3d9</Filter>
+    </ClCompile>
+    <ClCompile Include="driver\d3d9\d3d9texdic.c">
+      <Filter>driver\d3d9</Filter>
+    </ClCompile>
+    <ClCompile Include="driver\d3d9\d3d9vertexbuffer.c">
+      <Filter>driver\d3d9</Filter>
+    </ClCompile>
+    <ClCompile Include="driver\d3d9\drvequat.c">
+      <Filter>driver\d3d9</Filter>
+    </ClCompile>
+    <ClCompile Include="driver\common\cpuext.c">
+      <Filter>driver\common</Filter>
+    </ClCompile>
+    <ClCompile Include="driver\common\datblkcb.c">
+      <Filter>driver\common</Filter>
+    </ClCompile>
+    <ClCompile Include="driver\common\imrascnv.c">
+      <Filter>driver\common</Filter>
+    </ClCompile>
+    <ClCompile Include="driver\common\palquant.c">
+      <Filter>driver\common</Filter>
+    </ClCompile>
+    <ClCompile Include="driver\common\ssematml.c">
+      <Filter>driver\common</Filter>
+    </ClCompile>
+    <ClCompile Include="os\win\osintf.c">
+      <Filter>os\win</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="world\babinwor.h">
+      <Filter>world</Filter>
+    </ClInclude>
+    <ClInclude Include="world\baclump.h">
+      <Filter>world</Filter>
+    </ClInclude>
+    <ClInclude Include="world\bageomet.h">
+      <Filter>world</Filter>
+    </ClInclude>
+    <ClInclude Include="world\balight.h">
+      <Filter>world</Filter>
+    </ClInclude>
+    <ClInclude Include="world\bamateri.h">
+      <Filter>world</Filter>
+    </ClInclude>
+    <ClInclude Include="world\bamatlst.h">
+      <Filter>world</Filter>
+    </ClInclude>
+    <ClInclude Include="world\bamesh.h">
+      <Filter>world</Filter>
+    </ClInclude>
+    <ClInclude Include="world\bameshop.h">
+      <Filter>world</Filter>
+    </ClInclude>
+    <ClInclude Include="world\basector.h">
+      <Filter>world</Filter>
+    </ClInclude>
+    <ClInclude Include="world\baworld.h">
+      <Filter>world</Filter>
+    </ClInclude>
+    <ClInclude Include="world\baworobj.h">
+      <Filter>world</Filter>
+    </ClInclude>
+    <ClInclude Include="world\NtlPluginWorldGlobal.h">
+      <Filter>world</Filter>
+    </ClInclude>
+    <ClInclude Include="world\rpplugin.h">
+      <Filter>world</Filter>
+    </ClInclude>
+    <ClInclude Include="world\pipe\p2\bapipew.h">
+      <Filter>world\pipe\p2</Filter>
+    </ClInclude>
+    <ClInclude Include="world\pipe\p2\d3d9\D3D9lights.h">
+      <Filter>world\pipe\p2\d3d9</Filter>
+    </ClInclude>
+    <ClInclude Include="world\pipe\p2\d3d9\D3D9pipe.h">
+      <Filter>world\pipe\p2\d3d9</Filter>
+    </ClInclude>
+    <ClInclude Include="world\pipe\p2\d3d9\d3d9usage.h">
+      <Filter>world\pipe\p2\d3d9</Filter>
+    </ClInclude>
+    <ClInclude Include="world\pipe\p2\d3d9\d3d9vertexdeclaration.h">
+      <Filter>world\pipe\p2\d3d9</Filter>
+    </ClInclude>
+    <ClInclude Include="world\pipe\p2\d3d9\d3d9vertexshader.h">
+      <Filter>world\pipe\p2\d3d9</Filter>
+    </ClInclude>
+    <ClInclude Include="world\pipe\p2\d3d9\d3d9vertexshaderdefs.h">
+      <Filter>world\pipe\p2\d3d9</Filter>
+    </ClInclude>
+    <ClInclude Include="world\pipe\p2\d3d9\d3d9vertexshaderutils.h">
+      <Filter>world\pipe\p2\d3d9</Filter>
+    </ClInclude>
+    <ClInclude Include="world\pipe\p2\d3d9\native.h">
+      <Filter>world\pipe\p2\d3d9</Filter>
+    </ClInclude>
+    <ClInclude Include="world\pipe\p2\d3d9\nodeD3D9AtomicAllInOne.h">
+      <Filter>world\pipe\p2\d3d9</Filter>
+    </ClInclude>
+    <ClInclude Include="world\pipe\p2\d3d9\nodeD3D9WorldSectorAllInOne.h">
+      <Filter>world\pipe\p2\d3d9</Filter>
+    </ClInclude>
+    <ClInclude Include="world\pipe\p2\d3d9\wrldpipe.h">
+      <Filter>world\pipe\p2\d3d9</Filter>
+    </ClInclude>
+    <ClInclude Include="src\babbox.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\babincam.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\babinfrm.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\babintex.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\bacamera.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\bacamval.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\baframe.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\baim3doc.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\baimage.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\baimras.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\baraster.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\baresamp.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\basync.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\batextur.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\batypehf.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\pipe\p2\baim3d.h">
+      <Filter>src\pipe\p2</Filter>
+    </ClInclude>
+    <ClInclude Include="src\pipe\p2\bapipe.h">
+      <Filter>src\pipe\p2</Filter>
+    </ClInclude>
+    <ClInclude Include="src\pipe\p2\p2altmdl.h">
+      <Filter>src\pipe\p2</Filter>
+    </ClInclude>
+    <ClInclude Include="src\pipe\p2\p2core.h">
+      <Filter>src\pipe\p2</Filter>
+    </ClInclude>
+    <ClInclude Include="src\pipe\p2\p2define.h">
+      <Filter>src\pipe\p2</Filter>
+    </ClInclude>
+    <ClInclude Include="src\pipe\p2\p2dep.h">
+      <Filter>src\pipe\p2</Filter>
+    </ClInclude>
+    <ClInclude Include="src\pipe\p2\p2heap.h">
+      <Filter>src\pipe\p2</Filter>
+    </ClInclude>
+    <ClInclude Include="src\pipe\p2\p2macros.h">
+      <Filter>src\pipe\p2</Filter>
+    </ClInclude>
+    <ClInclude Include="src\pipe\p2\p2renderstate.h">
+      <Filter>src\pipe\p2</Filter>
+    </ClInclude>
+    <ClInclude Include="src\pipe\p2\p2resort.h">
+      <Filter>src\pipe\p2</Filter>
+    </ClInclude>
+    <ClInclude Include="src\pipe\p2\p2stdcls.h">
+      <Filter>src\pipe\p2</Filter>
+    </ClInclude>
+    <ClInclude Include="src\pipe\p2\d3d9\im3dpipe.h">
+      <Filter>src\pipe\p2\d3d9</Filter>
+    </ClInclude>
+    <ClInclude Include="src\pipe\p2\d3d9\nodeD3D9SubmitNoLight.h">
+      <Filter>src\pipe\p2\d3d9</Filter>
+    </ClInclude>
+    <ClInclude Include="src\pipe\p2\d3d9\pip2model.h">
+      <Filter>src\pipe\p2\d3d9</Filter>
+    </ClInclude>
+    <ClInclude Include="src\plcore\babinary.h">
+      <Filter>src\pipe\plcore</Filter>
+    </ClInclude>
+    <ClInclude Include="src\plcore\babinmtx.h">
+      <Filter>src\pipe\plcore</Filter>
+    </ClInclude>
+    <ClInclude Include="src\plcore\bacolor.h">
+      <Filter>src\pipe\plcore</Filter>
+    </ClInclude>
+    <ClInclude Include="src\plcore\badebug.h">
+      <Filter>src\pipe\plcore</Filter>
+    </ClInclude>
+    <ClInclude Include="src\plcore\badevice.h">
+      <Filter>src\pipe\plcore</Filter>
+    </ClInclude>
+    <ClInclude Include="src\plcore\baerr.h">
+      <Filter>src\pipe\plcore</Filter>
+    </ClInclude>
+    <ClInclude Include="src\plcore\baimmedi.h">
+      <Filter>src\pipe\plcore</Filter>
+    </ClInclude>
+    <ClInclude Include="src\plcore\balibtyp.h">
+      <Filter>src\pipe\plcore</Filter>
+    </ClInclude>
+    <ClInclude Include="src\plcore\balist.h">
+      <Filter>src\pipe\plcore</Filter>
+    </ClInclude>
+    <ClInclude Include="src\plcore\bamath.h">
+      <Filter>src\pipe\plcore</Filter>
+    </ClInclude>
+    <ClInclude Include="src\plcore\bamatrix.h">
+      <Filter>src\pipe\plcore</Filter>
+    </ClInclude>
+    <ClInclude Include="src\plcore\bamemory.h">
+      <Filter>src\pipe\plcore</Filter>
+    </ClInclude>
+    <ClInclude Include="src\plcore\baresour.h">
+      <Filter>src\pipe\plcore</Filter>
+    </ClInclude>
+    <ClInclude Include="src\plcore\bastream.h">
+      <Filter>src\pipe\plcore</Filter>
+    </ClInclude>
+    <ClInclude Include="src\plcore\batkbin.h">
+      <Filter>src\pipe\plcore</Filter>
+    </ClInclude>
+    <ClInclude Include="src\plcore\batkreg.h">
+      <Filter>src\pipe\plcore</Filter>
+    </ClInclude>
+    <ClInclude Include="src\plcore\batype.h">
+      <Filter>src\pipe\plcore</Filter>
+    </ClInclude>
+    <ClInclude Include="src\plcore\batypes.h">
+      <Filter>src\pipe\plcore</Filter>
+    </ClInclude>
+    <ClInclude Include="src\plcore\bavector.h">
+      <Filter>src\pipe\plcore</Filter>
+    </ClInclude>
+    <ClInclude Include="src\plcore\resmem.h">
+      <Filter>src\pipe\plcore</Filter>
+    </ClInclude>
+    <ClInclude Include="src\plcore\rpcriter.h">
+      <Filter>src\pipe\plcore</Filter>
+    </ClInclude>
+    <ClInclude Include="src\plcore\rpdbgerr.h">
+      <Filter>src\pipe\plcore</Filter>
+    </ClInclude>
+    <ClInclude Include="src\plcore\rperror.h">
+      <Filter>src\pipe\plcore</Filter>
+    </ClInclude>
+    <ClInclude Include="src\plcore\rwdbgerr.h">
+      <Filter>src\pipe\plcore</Filter>
+    </ClInclude>
+    <ClInclude Include="src\plcore\rwgrp.h">
+      <Filter>src\pipe\plcore</Filter>
+    </ClInclude>
+    <ClInclude Include="src\plcore\rwstring.h">
+      <Filter>src\pipe\plcore</Filter>
+    </ClInclude>
+    <ClInclude Include="src\plcore\rwversion.h">
+      <Filter>src\pipe\plcore</Filter>
+    </ClInclude>
+    <ClInclude Include="driver\d3d9\d3d92drend.h">
+      <Filter>driver\d3d9</Filter>
+    </ClInclude>
+    <ClInclude Include="driver\d3d9\d3d9convrt.h">
+      <Filter>driver\d3d9</Filter>
+    </ClInclude>
+    <ClInclude Include="driver\d3d9\d3d9device.h">
+      <Filter>driver\d3d9</Filter>
+    </ClInclude>
+    <ClInclude Include="driver\d3d9\d3d9dxttex.h">
+      <Filter>driver\d3d9</Filter>
+    </ClInclude>
+    <ClInclude Include="driver\d3d9\d3d9dxttex_add.h">
+      <Filter>driver\d3d9</Filter>
+    </ClInclude>
+    <ClInclude Include="driver\d3d9\d3d9metric.h">
+      <Filter>driver\d3d9</Filter>
+    </ClInclude>
+    <ClInclude Include="driver\d3d9\d3d9raster.h">
+      <Filter>driver\d3d9</Filter>
+    </ClInclude>
+    <ClInclude Include="driver\d3d9\d3d9rendst.h">
+      <Filter>driver\d3d9</Filter>
+    </ClInclude>
+    <ClInclude Include="driver\d3d9\d3d9texdic.h">
+      <Filter>driver\d3d9</Filter>
+    </ClInclude>
+    <ClInclude Include="driver\d3d9\d3d9vertexbuffer.h">
+      <Filter>driver\d3d9</Filter>
+    </ClInclude>
+    <ClInclude Include="driver\d3d9\dds.h">
+      <Filter>driver\d3d9</Filter>
+    </ClInclude>
+    <ClInclude Include="driver\d3d9\drvfns.h">
+      <Filter>driver\d3d9</Filter>
+    </ClInclude>
+    <ClInclude Include="driver\d3d9\drvmodel.h">
+      <Filter>driver\d3d9</Filter>
+    </ClInclude>
+    <ClInclude Include="driver\common\baequ.h">
+      <Filter>driver\common</Filter>
+    </ClInclude>
+    <ClInclude Include="driver\common\baprocfp.h">
+      <Filter>driver\common</Filter>
+    </ClInclude>
+    <ClInclude Include="driver\common\barwasmm.h">
+      <Filter>driver\common</Filter>
+    </ClInclude>
+    <ClInclude Include="driver\common\barwtyp.h">
+      <Filter>driver\common</Filter>
+    </ClInclude>
+    <ClInclude Include="driver\common\cpuext.h">
+      <Filter>driver\common</Filter>
+    </ClInclude>
+    <ClInclude Include="driver\common\datblkcb.h">
+      <Filter>driver\common</Filter>
+    </ClInclude>
+    <ClInclude Include="driver\common\imrascnv.h">
+      <Filter>driver\common</Filter>
+    </ClInclude>
+    <ClInclude Include="driver\common\palquant.h">
+      <Filter>driver\common</Filter>
+    </ClInclude>
+    <ClInclude Include="driver\common\ssematml.h">
+      <Filter>driver\common</Filter>
+    </ClInclude>
+    <ClInclude Include="driver\common\x86matml.h">
+      <Filter>driver\common</Filter>
+    </ClInclude>
+    <ClInclude Include="driver\common\x86matvc.h">
+      <Filter>driver\common</Filter>
+    </ClInclude>
+    <ClInclude Include="os\win\osintf.h">
+      <Filter>os\win</Filter>
+    </ClInclude>
+    <ClInclude Include="os\win\ostypes.h">
+      <Filter>os\win</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="world\rperror.def">
+      <Filter>world</Filter>
+    </None>
+    <None Include="driver\common\baprocfp.asm">
+      <Filter>driver\common</Filter>
+    </None>
+    <None Include="driver\common\barwasmm.asm">
+      <Filter>driver\common</Filter>
+    </None>
+    <None Include="driver\common\iammx.inc">
+      <Filter>driver\common</Filter>
+    </None>
+    <None Include="driver\common\x86matml.asm">
+      <Filter>driver\common</Filter>
+    </None>
+    <None Include="driver\common\x86matvc.asm">
+      <Filter>driver\common</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,42 @@
+
+GameStage(0)
+--[
+        Action( "add mob" )
+        --[
+                Param( "index", 3211146 )
+                Param( "group", 2550 )
+                Param( "loc x", -2389.441 )
+                Param( "loc y", -140.742 )
+                Param( "loc z", -4469.222 )
+                Param( "dir x", 0.731 )
+                Param( "dir z", 0.682 )
+                Param( "no spawn wait", "true" )
+        --]
+        End()
+
+        Action( "wait" )
+        --[
+                Param( "operation", "or" )
+                
+                Condition( "check time" )
+                --[
+                        Param( "time", 300 )
+                --]
+                End()
+                
+                Condition( "recv event from ts" )
+                --[
+                        Param( "trigger type", "quest" )
+                        Param( "event id", 571 )
+                --]
+                End()
+        --]
+        End()
+--]
+End()
+
+GameFailed()
+--[
+
+--]
+End()

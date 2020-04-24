@@ -1,0 +1,97 @@
+
+GameStage(0)
+--[
+	Action( "add mob" )
+	--[
+		Param( "index", 8911107 )
+		Param( "group", 639 )
+		Param( "loc x", 6930.84 )
+		Param( "loc y", -122)
+		Param( "loc z", -746.70 )
+		Param( "dir x", -0.50 )
+		Param( "dir z", 0.87 )
+		Param( "play script", 8911107 )
+		Param( "play scene", 1 )
+		Param( "no spawn wait", "true" )
+	--]
+	End()
+
+	Action( "add mob" )
+	--[
+		Param( "index", 8911107 )
+		Param( "group", 639 )
+		Param( "loc x", 6932.79 )
+		Param( "loc y", -121)
+		Param( "loc z", -731.40 )
+		Param( "dir x", -0.82 )
+		Param( "dir z", -0.57 )
+		Param( "play script", 8911107 )
+		Param( "play scene", 2 )
+		Param( "no spawn wait", "true" )
+	--]
+	End()
+
+	Action( "add mob" )
+	--[
+		Param( "index", 8911107 )
+		Param( "group", 639 )
+		Param( "loc x", 6919.66 )
+		Param( "loc y", -120)
+		Param( "loc z", -728.19 )
+		Param( "dir x", 0.52 )
+		Param( "dir z", -0.86 )
+		Param( "play script", 8911107 )
+		Param( "play scene", 3 )
+		Param( "no spawn wait", "true" )
+	--]
+	End()
+
+	Action( "add mob" )
+	--[
+		Param( "index", 8911107 )
+		Param( "group", 639 )
+		Param( "loc x", 6914.33 )
+		Param( "loc y", -121)
+		Param( "loc z", -740.92 )
+		Param( "dir x", 0.80 )
+		Param( "dir z", 0.60 )
+		Param( "play script", 8911107 )
+		Param( "play scene", 4 )
+		Param( "no spawn wait", "true" )
+	--]
+	End()
+
+	Action( "wait" )
+	--[
+		Param( "operation", "or" )
+
+		Condition( "check mobgroup" )
+		--[
+			Param( "group", 639 )
+			Param( "count", 4 )
+		--]
+		End()
+
+		Condition( "child" )
+		--[
+			Action( "wait" )
+			--[
+				Condition( "check time" )
+				--[
+					Param( "time", 600 )
+				--]
+				End()
+			--]
+			End()
+
+			Action( "wps fail" )
+			--[
+	
+			--]
+			End()
+		--]
+		End()
+	--]
+	End()
+--]
+End()

@@ -1,0 +1,77 @@
+-- UD1 Legendary µµ°³±³ 1
+
+GameStage(0)
+--[
+
+	Action("wait")
+	--[
+		Condition("area enter")
+		--[
+			Param("origin x", 21.234)
+			Param("origin z", 247.166)
+			Param("radius", 5)
+			Param("all member", "false")
+		--]
+		End()
+
+	--]
+	End()
+
+	Action("add mob")
+	--[
+		Param("index", 9416103)
+		Param("group", 2600701)
+		Param("loc x", 20.208)
+		Param("loc y", 21.831)
+		Param("loc z", 227.209)
+		Param("dir x", -0.081)
+		Param("dir z", 0.997)
+		Param("play script", 9416101)
+		Param("play scene", 5)
+		Param("no spawn wait", "true")
+	--]
+	End()
+
+	Action("add mob")
+	--[
+		Param("index", 9416103)
+		Param("group", 2600701)
+		Param("loc x", 24.718)
+		Param("loc y", 21.887)
+		Param("loc z", 226.948)
+		Param("dir x", 0.015)
+		Param("dir z", 1.0)
+		Param("play script", 9416101)
+		Param("play scene", 6)
+		Param("no spawn wait", "true")
+	--]
+	End()
+
+	Action("add mob")
+	--[
+		Param("index", 9416103)
+		Param("group", 2600701)
+		Param("loc x", 15.321)
+		Param("loc y", 21.746)
+		Param("loc z", 227.401)
+		Param("dir x", 0.171)
+		Param("dir z", 0.985)
+		Param("play script", 9416101)
+		Param("play scene", 7)
+		Param("no spawn wait", "true")
+	--]
+	End()
+
+
+	Action("wait")
+	--[
+		Condition("check mobgroup")
+		--[
+			Param("group", 2600701)
+			Param("count", 3)
+		--]
+		End()
+	--]
+	End()
+--]
+End()	

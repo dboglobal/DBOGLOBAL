@@ -1,0 +1,54 @@
+-- UD 2 HARD
+
+GameStage(0)
+--[
+	Action( "exec wps" )
+	--[
+		Param( "wps tblidx", 23001 )
+	--]
+	End()
+
+	Action( "exec wps" )
+	--[
+		Param( "wps tblidx", 23002 )
+	--]
+	End()
+
+	Action( "exec wps" )
+	--[
+		Param( "wps tblidx", 23003 )
+	--]
+	End()
+
+	Action( "exec wps" )
+	--[
+		Param( "wps tblidx", 23004 )
+	--]
+	End()
+	
+	Action( "exec wps" )
+	--[
+		Param( "wps tblidx", 23005 )
+	--]
+	End()
+
+	Action( "exec wps" )
+	--[
+		Param( "wps tblidx", 23006 )
+	--]
+	End()
+
+	Action( "exec wps" )
+	--[
+		Param( "wps tblidx", 23007 )
+	--]
+	End()
+
+	Action( "exec wps" )
+	--[
+		Param( "wps tblidx", 23008 )
+	--]
+	End()
+
+--]
+End()

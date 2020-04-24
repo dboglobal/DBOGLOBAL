@@ -1,0 +1,305 @@
+---------------------------------------------------------------------
+-- Bus
+-- Begin : 2009-06-30
+-- Copyright : ⓒ NTL-Inc Co., Ltd
+-- Author : Ju-hyeong Lee
+---------------------------------------------------------------------
+
+-- 사용 Path:
+-- 90022	기란 부락 - 아지랑이샘1
+-- 90023	기란 부락 - 아지랑이샘2
+
+-- 출발지: 기란 부락
+-- 도착지: 아지랑이샘
+
+-- 사용 버스 수: 7
+-- 사용 버스 Code: B1
+-- 사용 버스 NPC 인덱스: 1532134,1532135,1532136,1532137,1532138,1532139,1532140
+
+
+
+GameStage(0)
+--[
+	Action( "while" )
+	--[
+		-- 다음과 같이 사용하면 무한 루프를 돌게 된다.
+		Condition( "loop cond" )
+		--[
+			Param( "reverse", "false" )
+			Param( "operation", "true" )
+		--]
+		End()
+
+		Action( "loop" )
+		--[
+
+---------------------------------------------------------------------
+			-- 버스 1
+			Action( "wait" )
+			--[
+				Condition( "npc faint" )
+				--[
+					Param( "npc index", 1532134 )
+				--]
+				End()
+			--]
+			End()
+
+			Action( "add npc" )
+			--[
+				Param( "index", 1532134 )
+				Param( "loc x", 7022.94 )
+				Param( "loc y", -112.46 )
+				Param( "loc z", -1268.73 )
+				Param( "dir x", 0.92 )
+				Param( "dir z", 0.39 )
+				Param( "play script", 90022 )
+				Param( "play scene", 1)
+			--]
+			End()
+
+			-- 60초 만큼 대기
+			Action( "wait" )
+			--[
+				Condition( "check time" )
+				--[
+					Param( "time", 60 )
+				--]
+				End()
+			--]
+			End()
+
+---------------------------------------------------------------------
+			-- 버스 2
+			Action( "wait" )
+			--[
+				Condition( "npc faint" )
+				--[
+					Param( "npc index", 1532135 )
+				--]
+				End()
+			--]
+			End()
+
+			Action( "add npc" )
+			--[
+				Param( "index", 1532135 )
+				Param( "loc x", 7022.94 )
+				Param( "loc y", -112.46 )
+				Param( "loc z", -1268.73 )
+				Param( "dir x", 0.92 )
+				Param( "dir z", 0.39 )
+				Param( "play script", 90022 )
+				Param( "play scene", 1)
+			--]
+			End()
+
+			-- 60초 만큼 대기
+			Action( "wait" )
+			--[
+				Condition( "check time" )
+				--[
+					Param( "time", 60 )
+				--]
+				End()
+			--]
+			End()
+
+---------------------------------------------------------------------
+			-- 버스 3
+			Action( "wait" )
+			--[
+				Condition( "npc faint" )
+				--[
+					Param( "npc index", 1532136 )
+				--]
+				End()
+			--]
+			End()
+
+			Action( "add npc" )
+			--[
+				Param( "index", 1532136 )
+				Param( "loc x", 7022.94 )
+				Param( "loc y", -112.46 )
+				Param( "loc z", -1268.73 )
+				Param( "dir x", 0.92 )
+				Param( "dir z", 0.39 )
+				Param( "play script", 90022 )
+				Param( "play scene", 1)
+			--]
+			End()
+
+			-- 60초 만큼 대기
+			Action( "wait" )
+			--[
+				Condition( "check time" )
+				--[
+					Param( "time", 60 )
+				--]
+				End()
+			--]
+			End()
+
+---------------------------------------------------------------------
+			-- 버스 4
+			Action( "wait" )
+			--[
+				Condition( "npc faint" )
+				--[
+					Param( "npc index", 1532137 )
+				--]
+				End()
+			--]
+			End()
+
+			Action( "add npc" )
+			--[
+				Param( "index", 1532137 )
+				Param( "loc x", 7022.94 )
+				Param( "loc y", -112.46 )
+				Param( "loc z", -1268.73 )
+				Param( "dir x", 0.92 )
+				Param( "dir z", 0.39 )
+				Param( "play script", 90022 )
+				Param( "play scene", 1)
+			--]
+			End()
+
+			-- 60초 만큼 대기
+			Action( "wait" )
+			--[
+				Condition( "check time" )
+				--[
+					Param( "time", 60 )
+				--]
+				End()
+			--]
+			End()
+
+---------------------------------------------------------------------
+			-- 버스 5
+			Action( "wait" )
+			--[
+				Condition( "npc faint" )
+				--[
+					Param( "npc index", 1532138 )
+				--]
+				End()
+			--]
+			End()
+
+			Action( "add npc" )
+			--[
+				Param( "index", 1532138 )
+				Param( "loc x", 7022.94 )
+				Param( "loc y", -112.46 )
+				Param( "loc z", -1268.73 )
+				Param( "dir x", 0.92 )
+				Param( "dir z", 0.39 )
+				Param( "play script", 90022 )
+				Param( "play scene", 1)
+			--]
+			End()
+
+			-- 60초 만큼 대기
+			Action( "wait" )
+			--[
+				Condition( "check time" )
+				--[
+					Param( "time", 60 )
+				--]
+				End()
+			--]
+			End()
+
+---------------------------------------------------------------------
+			-- 버스 6
+			Action( "wait" )
+			--[
+				Condition( "npc faint" )
+				--[
+					Param( "npc index", 1532139 )
+				--]
+				End()
+			--]
+			End()
+
+			Action( "add npc" )
+			--[
+				Param( "index", 1532139 )
+				Param( "loc x", 7022.94 )
+				Param( "loc y", -112.46 )
+				Param( "loc z", -1268.73 )
+				Param( "dir x", 0.92 )
+				Param( "dir z", 0.39 )
+				Param( "play script", 90022 )
+				Param( "play scene", 1)
+			--]
+			End()
+
+			-- 60초 만큼 대기
+			Action( "wait" )
+			--[
+				Condition( "check time" )
+				--[
+					Param( "time", 60 )
+				--]
+				End()
+			--]
+			End()
+
+---------------------------------------------------------------------
+			-- 버스 7
+			Action( "wait" )
+			--[
+				Condition( "npc faint" )
+				--[
+					Param( "npc index", 1532140 )
+				--]
+				End()
+			--]
+			End()
+
+			Action( "add npc" )
+			--[
+				Param( "index", 1532140 )
+				Param( "loc x", 7022.94 )
+				Param( "loc y", -112.46 )
+				Param( "loc z", -1268.73 )
+				Param( "dir x", 0.92 )
+				Param( "dir z", 0.39 )
+				Param( "play script", 90022 )
+				Param( "play scene", 1)
+			--]
+			End()
+
+			-- 60초 만큼 대기
+			Action( "wait" )
+			--[
+				Condition( "check time" )
+				--[
+					Param( "time", 60 )
+				--]
+				End()
+			--]
+			End()
+
+
+---------------------------------------------------------------------
+
+		--]
+		End()
+		-- end loop
+
+	--]
+	End()
+	-- end while
+--]
+End()
+
+GameFailed()
+--[
+
+--]
+End()

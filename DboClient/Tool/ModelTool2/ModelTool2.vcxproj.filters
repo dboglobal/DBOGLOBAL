@@ -1,0 +1,342 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Panes">
+      <UniqueIdentifier>{a8e71a1d-d8e2-4bb4-bcec-c44d21cfcbf7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Controls">
+      <UniqueIdentifier>{2cf928c1-070c-4959-9092-1f1a7db1c065}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav</Extensions>
+    </Filter>
+    <Filter Include="MFC_Core">
+      <UniqueIdentifier>{adb0bd3c-1fe2-420a-91c7-1b7d1416ab0f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ModelTool_Core">
+      <UniqueIdentifier>{d6554013-b6b9-4688-8d28-6be15e89f7cd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Util">
+      <UniqueIdentifier>{28a28cbb-6d28-412c-a11f-1ba5d3b862ef}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="AnimPlayPane.cpp">
+      <Filter>Panes</Filter>
+    </ClCompile>
+    <ClCompile Include="AnimSetPane.cpp">
+      <Filter>Panes</Filter>
+    </ClCompile>
+    <ClCompile Include="AttackTypePane.cpp">
+      <Filter>Panes</Filter>
+    </ClCompile>
+    <ClCompile Include="BBoxPane.cpp">
+      <Filter>Panes</Filter>
+    </ClCompile>
+    <ClCompile Include="BoneEditPane.cpp">
+      <Filter>Panes</Filter>
+    </ClCompile>
+    <ClCompile Include="ClumpPane.cpp">
+      <Filter>Panes</Filter>
+    </ClCompile>
+    <ClCompile Include="ConvertingDlg.cpp">
+      <Filter>Panes</Filter>
+    </ClCompile>
+    <ClCompile Include="DummyModelPane.cpp">
+      <Filter>Panes</Filter>
+    </ClCompile>
+    <ClCompile Include="EnvMapPane.cpp">
+      <Filter>Panes</Filter>
+    </ClCompile>
+    <ClCompile Include="ItemViewPane.cpp">
+      <Filter>Panes</Filter>
+    </ClCompile>
+    <ClCompile Include="LinkEffectPane.cpp">
+      <Filter>Panes</Filter>
+    </ClCompile>
+    <ClCompile Include="MaterialPane.cpp">
+      <Filter>Panes</Filter>
+    </ClCompile>
+    <ClCompile Include="NaviMeshPane.cpp">
+      <Filter>Panes</Filter>
+    </ClCompile>
+    <ClCompile Include="PropertyPane.cpp">
+      <Filter>Panes</Filter>
+    </ClCompile>
+    <ClCompile Include="TreeItemPane.cpp">
+      <Filter>Panes</Filter>
+    </ClCompile>
+    <ClCompile Include="TreeMob.cpp">
+      <Filter>Panes</Filter>
+    </ClCompile>
+    <ClCompile Include="TreeNPCPane.cpp">
+      <Filter>Panes</Filter>
+    </ClCompile>
+    <ClCompile Include="TreeObjectPane.cpp">
+      <Filter>Panes</Filter>
+    </ClCompile>
+    <ClCompile Include="TreePCPane.cpp">
+      <Filter>Panes</Filter>
+    </ClCompile>
+    <ClCompile Include="TreeVehiclePane.cpp">
+      <Filter>Panes</Filter>
+    </ClCompile>
+    <ClCompile Include="VehicleViewPane.cpp">
+      <Filter>Panes</Filter>
+    </ClCompile>
+    <ClCompile Include="CustomItems.cpp">
+      <Filter>Controls</Filter>
+    </ClCompile>
+    <ClCompile Include="ExSliderCtrl.cpp">
+      <Filter>Controls</Filter>
+    </ClCompile>
+    <ClCompile Include="ExTreeCtrl.cpp">
+      <Filter>Controls</Filter>
+    </ClCompile>
+    <ClCompile Include="GDIPlusDBuffer.cpp">
+      <Filter>Controls</Filter>
+    </ClCompile>
+    <ClCompile Include="MainFrm.cpp">
+      <Filter>MFC_Core</Filter>
+    </ClCompile>
+    <ClCompile Include="ModelTool2.cpp">
+      <Filter>MFC_Core</Filter>
+    </ClCompile>
+    <ClCompile Include="ModelTool2Doc.cpp">
+      <Filter>MFC_Core</Filter>
+    </ClCompile>
+    <ClCompile Include="ModelTool2View.cpp">
+      <Filter>MFC_Core</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>MFC_Core</Filter>
+    </ClCompile>
+    <ClCompile Include="ModelToolApplication.cpp">
+      <Filter>ModelTool_Core</Filter>
+    </ClCompile>
+    <ClCompile Include="MTCharacter.cpp">
+      <Filter>ModelTool_Core</Filter>
+    </ClCompile>
+    <ClCompile Include="MTCharacterInfo.cpp">
+      <Filter>ModelTool_Core</Filter>
+    </ClCompile>
+    <ClCompile Include="MTItem.cpp">
+      <Filter>ModelTool_Core</Filter>
+    </ClCompile>
+    <ClCompile Include="MTItemPool.cpp">
+      <Filter>ModelTool_Core</Filter>
+    </ClCompile>
+    <ClCompile Include="MTObject.cpp">
+      <Filter>ModelTool_Core</Filter>
+    </ClCompile>
+    <ClCompile Include="MTPropertyContainer.cpp">
+      <Filter>ModelTool_Core</Filter>
+    </ClCompile>
+    <ClCompile Include="ToolCamera.cpp">
+      <Filter>ModelTool_Core</Filter>
+    </ClCompile>
+    <ClCompile Include="MiniDump.cpp">
+      <Filter>Util</Filter>
+    </ClCompile>
+    <ClCompile Include="NormEnvMap.cpp">
+      <Filter>Util</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlMTXml.cpp">
+      <Filter>Util</Filter>
+    </ClCompile>
+    <ClCompile Include="PropertyListXML.cpp">
+      <Filter>Util</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AnimPlayPane.h">
+      <Filter>Panes</Filter>
+    </ClInclude>
+    <ClInclude Include="AnimSetPane.h">
+      <Filter>Panes</Filter>
+    </ClInclude>
+    <ClInclude Include="AttackTypePane.h">
+      <Filter>Panes</Filter>
+    </ClInclude>
+    <ClInclude Include="BBoxPane.h">
+      <Filter>Panes</Filter>
+    </ClInclude>
+    <ClInclude Include="BoneEditPane.h">
+      <Filter>Panes</Filter>
+    </ClInclude>
+    <ClInclude Include="ClumpPane.h">
+      <Filter>Panes</Filter>
+    </ClInclude>
+    <ClInclude Include="ConvertingDlg.h">
+      <Filter>Panes</Filter>
+    </ClInclude>
+    <ClInclude Include="DummyModelPane.h">
+      <Filter>Panes</Filter>
+    </ClInclude>
+    <ClInclude Include="EnvMapPane.h">
+      <Filter>Panes</Filter>
+    </ClInclude>
+    <ClInclude Include="ItemViewPane.h">
+      <Filter>Panes</Filter>
+    </ClInclude>
+    <ClInclude Include="LinkEffectPane.h">
+      <Filter>Panes</Filter>
+    </ClInclude>
+    <ClInclude Include="MaterialPane.h">
+      <Filter>Panes</Filter>
+    </ClInclude>
+    <ClInclude Include="NaviMeshPane.h">
+      <Filter>Panes</Filter>
+    </ClInclude>
+    <ClInclude Include="PropertyPane.h">
+      <Filter>Panes</Filter>
+    </ClInclude>
+    <ClInclude Include="TreeItemPane.h">
+      <Filter>Panes</Filter>
+    </ClInclude>
+    <ClInclude Include="TreeMob.h">
+      <Filter>Panes</Filter>
+    </ClInclude>
+    <ClInclude Include="TreeNPCPane.h">
+      <Filter>Panes</Filter>
+    </ClInclude>
+    <ClInclude Include="TreeObjectPane.h">
+      <Filter>Panes</Filter>
+    </ClInclude>
+    <ClInclude Include="TreePCPane.h">
+      <Filter>Panes</Filter>
+    </ClInclude>
+    <ClInclude Include="TreeVehiclePane.h">
+      <Filter>Panes</Filter>
+    </ClInclude>
+    <ClInclude Include="VehicleViewPane.h">
+      <Filter>Panes</Filter>
+    </ClInclude>
+    <ClInclude Include="CustomItems.h">
+      <Filter>Controls</Filter>
+    </ClInclude>
+    <ClInclude Include="ExSliderCtrl.h">
+      <Filter>Controls</Filter>
+    </ClInclude>
+    <ClInclude Include="ExTreeCtrl.h">
+      <Filter>Controls</Filter>
+    </ClInclude>
+    <ClInclude Include="GDIPlusDBuffer.h">
+      <Filter>Controls</Filter>
+    </ClInclude>
+    <ClInclude Include="MainFrm.h">
+      <Filter>MFC_Core</Filter>
+    </ClInclude>
+    <ClInclude Include="ModelTool2.h">
+      <Filter>MFC_Core</Filter>
+    </ClInclude>
+    <ClInclude Include="ModelTool2Doc.h">
+      <Filter>MFC_Core</Filter>
+    </ClInclude>
+    <ClInclude Include="ModelTool2View.h">
+      <Filter>MFC_Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>MFC_Core</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>MFC_Core</Filter>
+    </ClInclude>
+    <ClInclude Include="ModelToolApplication.h">
+      <Filter>ModelTool_Core</Filter>
+    </ClInclude>
+    <ClInclude Include="MTCharacter.h">
+      <Filter>ModelTool_Core</Filter>
+    </ClInclude>
+    <ClInclude Include="MTCharacterInfo.h">
+      <Filter>ModelTool_Core</Filter>
+    </ClInclude>
+    <ClInclude Include="MTDef.h">
+      <Filter>ModelTool_Core</Filter>
+    </ClInclude>
+    <ClInclude Include="MTItem.h">
+      <Filter>ModelTool_Core</Filter>
+    </ClInclude>
+    <ClInclude Include="MTItemPool.h">
+      <Filter>ModelTool_Core</Filter>
+    </ClInclude>
+    <ClInclude Include="MTObject.h">
+      <Filter>ModelTool_Core</Filter>
+    </ClInclude>
+    <ClInclude Include="MTPropertyContainer.h">
+      <Filter>ModelTool_Core</Filter>
+    </ClInclude>
+    <ClInclude Include="ToolCamera.h">
+      <Filter>ModelTool_Core</Filter>
+    </ClInclude>
+    <ClInclude Include="MiniDump.h">
+      <Filter>Util</Filter>
+    </ClInclude>
+    <ClInclude Include="NormEnvMap.h">
+      <Filter>Util</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlMTXml.h">
+      <Filter>Util</Filter>
+    </ClInclude>
+    <ClInclude Include="PropertyListXML.h">
+      <Filter>Util</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\aim.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\Animation.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\ModelTool2.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\ModelTool2Doc.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\paneicons.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\script.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\Toolbar.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\toolbar1.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\toolbar2.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\xbox.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\xp_folder_closed.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\xp_folder_open.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="ModelTool2.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\ModelTool2.rc2">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\move4way.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Xml Include="Indent.xsl">
+      <Filter>Util</Filter>
+    </Xml>
+  </ItemGroup>
+</Project>

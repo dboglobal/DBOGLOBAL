@@ -1,0 +1,22 @@
+
+Scene(1, "tmq2-1 재배맨 소환" )
+--[
+	State( "fight" )
+	--[
+		Condition( "himself check" )
+		--[
+			Param( "event type", "lp" )
+			Param( "%", 50 )
+		
+			Action( "add mob" )
+			--[
+				Param( "index", 1415210 )
+				Param( "type", "recall" )
+			--]
+			End()
+		--]
+		End()
+	--]
+	End()
+--]
+End()

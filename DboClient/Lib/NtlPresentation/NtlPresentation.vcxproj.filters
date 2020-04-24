@@ -1,0 +1,1548 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Collision">
+      <UniqueIdentifier>{838117bf-90b7-458d-a521-bca17384cbd0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Entity">
+      <UniqueIdentifier>{247c6fcd-1afd-4c2f-8b96-f150c57ff0ae}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Entity\Object">
+      <UniqueIdentifier>{7d36d8d5-cb24-46b9-ab0a-7cbff311deb8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Entity\Sky">
+      <UniqueIdentifier>{5747b3c4-383d-4eee-97e7-45a79408b65e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Entity\Sky\Planet">
+      <UniqueIdentifier>{e9c57ecf-1378-4f78-8d18-57bc6f0425bb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Entity\Light">
+      <UniqueIdentifier>{46fa8182-7c87-4bf4-89b2-4337a0476fc5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Entity\Light\WorldLight">
+      <UniqueIdentifier>{212962e9-e8f5-43e9-a400-767016a85bdc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Entity\Character">
+      <UniqueIdentifier>{b0396d3e-2cc6-45c5-b0ad-fc309fa24dde}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Entity\Character\Anim">
+      <UniqueIdentifier>{aa29d3a7-d14d-4402-add9-f4e6be690cef}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Entity\Character\Base">
+      <UniqueIdentifier>{fb430454-53c6-4a3d-8279-089c4733857c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Entity\Character\RenderPipe">
+      <UniqueIdentifier>{62205b15-3be3-46cf-adca-795da537522f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Entity\Gui">
+      <UniqueIdentifier>{965fc641-1ff5-4101-9e14-9ecc12015522}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Entity\Gui\GuiGroup">
+      <UniqueIdentifier>{6c42c12b-8747-4e17-9c6f-0c44a3e4ad7c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Entity\Item">
+      <UniqueIdentifier>{54949b74-ec9f-4455-97af-b30a2a6959b7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Entity\PlayerName">
+      <UniqueIdentifier>{9532cc0c-6a19-4362-b8e1-63cf2b86e111}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Entity\DamageBox">
+      <UniqueIdentifier>{443ea6c2-a1ac-4de7-96b1-db442c748628}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Entity\World">
+      <UniqueIdentifier>{8831aa58-3c21-435a-9d6a-71b65ebe6c2c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Entity\Fog">
+      <UniqueIdentifier>{dc93cdfe-8f81-4919-a8a8-14c45d5922fe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Entity\Water">
+      <UniqueIdentifier>{efe22752-9d2f-4341-9b2b-d1799b945ea6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Entity\DummyWorld">
+      <UniqueIdentifier>{102c6390-9481-4fbd-92ae-54540e94839f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Entity\Decal">
+      <UniqueIdentifier>{ac94a847-88e3-4eca-a463-77d4c03e8c39}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Entity\EntityHelper">
+      <UniqueIdentifier>{f70fce6c-214f-4447-bd0f-4b7a290c18c5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Entity\Effect">
+      <UniqueIdentifier>{f0e8ed93-5bfa-446e-823e-c43a7a091eea}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Entity\Effect\Effect Main Files">
+      <UniqueIdentifier>{89b20e92-90d0-4250-b574-dd16c94062f8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Entity\Effect\Effect Resource Files">
+      <UniqueIdentifier>{50fc15fc-ac11-453f-a772-1315bc30ee12}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Entity\Effect\Effect Instance Files">
+      <UniqueIdentifier>{fc5efe1c-ecdb-41ee-a349-b0123f4fc300}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Entity\Effect\Effect Spline Files">
+      <UniqueIdentifier>{fc5cc27d-6d43-4e9b-9156-1495204dd581}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Entity\Sound">
+      <UniqueIdentifier>{6b9030df-b247-4ed8-b29d-38b7244c9eb3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Entity\Bloom">
+      <UniqueIdentifier>{3a9a13b7-b873-47ec-a5c1-527a39f44666}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Entity\ShoreLine">
+      <UniqueIdentifier>{488a3854-f5eb-4127-99e0-f52f8264434d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Entity\Plant">
+      <UniqueIdentifier>{df892bc4-5d74-464a-93e0-2e29ea84d0c7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Entity\Occluder">
+      <UniqueIdentifier>{2afce256-13df-42df-ad4c-7353fcbd2139}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Entity\Weather">
+      <UniqueIdentifier>{3f43551b-e91f-47e8-9730-c52d37b5b79f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Entity\GameProperty">
+      <UniqueIdentifier>{87d45672-5abf-4aa4-9ca4-2d06114cb6ba}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Entity\Dojo">
+      <UniqueIdentifier>{5af02526-f95f-425c-8524-81c5c184a7b7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Helpers">
+      <UniqueIdentifier>{20057c40-d008-492d-af27-6fe133f295f7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Main">
+      <UniqueIdentifier>{847c2d44-a25e-467c-b1a9-93146d5b3fb3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Picking">
+      <UniqueIdentifier>{1334d23d-8475-4bf3-9bd1-ec197bdc9603}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Precompile">
+      <UniqueIdentifier>{4a9464d2-08af-4cfc-9b47-a22d91e51a66}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Property">
+      <UniqueIdentifier>{aece0527-f8a5-44e9-9e73-062ea91d70d3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ResourceManager">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SceneManager">
+      <UniqueIdentifier>{eb2aa145-0bbc-49d9-b151-e84e62a7ac77}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="World">
+      <UniqueIdentifier>{a3ae0278-216d-44fc-9501-56e9ee10f782}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="World\Main">
+      <UniqueIdentifier>{664a4edc-e794-417b-968e-87cd2b585282}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="World\Manager">
+      <UniqueIdentifier>{8ad21f76-4902-4e9d-a25d-f8c6868a27e4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="World\Plugin">
+      <UniqueIdentifier>{be3b6af8-b0d0-405f-baa2-326aafa5eb8b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="World\LOD">
+      <UniqueIdentifier>{f11a51c8-c579-4a36-957b-b94ce69a25e2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="World\Spawn">
+      <UniqueIdentifier>{0473a64c-1311-4762-964c-9361bdbbd72e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="World\Spawn\Path">
+      <UniqueIdentifier>{aad1c353-1d4c-4fb7-8bfc-265dbc341f87}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="World\Util">
+      <UniqueIdentifier>{d7ab1c7d-1d8a-43c0-a0cd-3a556164b7aa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="World\Util\Brush">
+      <UniqueIdentifier>{a75cfaf9-7d81-4f29-a6e2-96d4878bc081}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="World\Util\File">
+      <UniqueIdentifier>{6a6e1004-a5af-4fb9-9588-08694ca85f8b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="World\Util\SectorMethod">
+      <UniqueIdentifier>{67c8fa67-07e9-4c8f-8124-bf93d0352f3a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="World\Util\SectorMethod\Method">
+      <UniqueIdentifier>{a749de96-9791-4fab-a0bf-0b97f1f4792c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="World\Util\SectorMethod\Implementor">
+      <UniqueIdentifier>{d080f5e5-6b12-47b7-b8ce-14db97206a26}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="World\Util\Rand">
+      <UniqueIdentifier>{d1fe9127-65fb-4bc2-bb9c-9bc1f47e3015}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="World\Util\TextureStageStateView">
+      <UniqueIdentifier>{dffc8ba3-a179-46e5-b6ee-f075ad893a31}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Event">
+      <UniqueIdentifier>{3da18e85-5d62-4905-89aa-57c39b31ecf7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Doc">
+      <UniqueIdentifier>{066ab5f9-1e56-457a-be68-0b77e6e87e9d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Render">
+      <UniqueIdentifier>{a5ddf837-cd8e-4cc9-8cda-c337e42c8a77}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Controller">
+      <UniqueIdentifier>{369cdbbf-eba4-47a7-80b7-a9537b2a02cc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Controller\ElapsedController">
+      <UniqueIdentifier>{06641cf2-3074-4142-97ba-1efa4a82d08c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Controller\DNController">
+      <UniqueIdentifier>{2abb252e-6da6-40f9-a6e3-d752a33c4391}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Controller\FadeController">
+      <UniqueIdentifier>{0dc0ffcc-0e05-476d-b55d-c5ef7337f09b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Controller\AccelController">
+      <UniqueIdentifier>{7731907b-6078-4a9d-9c39-b0a950148750}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Option">
+      <UniqueIdentifier>{46ec0e9e-f440-4eff-8c08-52b0ec05d374}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="NtlPLCollision.cpp">
+      <Filter>Collision</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlPLObject.cpp">
+      <Filter>Entity\Object</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlPLObjectType.cpp">
+      <Filter>Entity\Object</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlPLUVAnim.cpp">
+      <Filter>Entity\Object</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlPLSky.cpp">
+      <Filter>Entity\Sky</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlPLSkyDragon.cpp">
+      <Filter>Entity\Sky</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlPLSkySphere.cpp">
+      <Filter>Entity\Sky</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlPLPlanet.cpp">
+      <Filter>Entity\Sky\Planet</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlPLPlanetHandler.cpp">
+      <Filter>Entity\Sky\Planet</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlPLSun.cpp">
+      <Filter>Entity\Sky\Planet</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlPLLight.cpp">
+      <Filter>Entity\Light</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlPLLightObject.cpp">
+      <Filter>Entity\Light</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlPLSoftSpot.cpp">
+      <Filter>Entity\Light</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlWorldRpLightManager.cpp">
+      <Filter>Entity\Light</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlPLWorldLight_Base.cpp">
+      <Filter>Entity\Light\WorldLight</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlPLWorldLight_Box.cpp">
+      <Filter>Entity\Light\WorldLight</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlPLWorldLight_Sphere.cpp">
+      <Filter>Entity\Light\WorldLight</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlPLCharacter.cpp">
+      <Filter>Entity\Character</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlPLEquipItem.cpp">
+      <Filter>Entity\Character</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlAnimChannel.cpp">
+      <Filter>Entity\Character\Anim</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlAnimLayer.cpp">
+      <Filter>Entity\Character\Anim</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlInstanceAnimData.cpp">
+      <Filter>Entity\Character\Anim</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlTypeAnimData.cpp">
+      <Filter>Entity\Character\Anim</Filter>
+    </ClCompile>
+    <ClCompile Include="LinkItemTrasformList.cpp">
+      <Filter>Entity\Character\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlAnimEventData.cpp">
+      <Filter>Entity\Character\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlDefaultItemData.cpp">
+      <Filter>Entity\Character\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlPLCharacterParser.cpp">
+      <Filter>Entity\Character\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlPLCharMeshRenderPipe.cpp">
+      <Filter>Entity\Character\RenderPipe</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlPLCharMeshRenderPipe00.cpp">
+      <Filter>Entity\Character\RenderPipe</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlPLCharMeshRenderPipe01.cpp">
+      <Filter>Entity\Character\RenderPipe</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlPLCharMeshRenderPipeFarAway.cpp">
+      <Filter>Entity\Character\RenderPipe</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlPLGui.cpp">
+      <Filter>Entity\Gui</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlPLGuiManager.cpp">
+      <Filter>Entity\Gui</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlPLChatBalloonManager.cpp">
+      <Filter>Entity\Gui\GuiGroup</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlPLCinematicGui.cpp">
+      <Filter>Entity\Gui\GuiGroup</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlPLCinematicObject.cpp">
+      <Filter>Entity\Gui\GuiGroup</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlPLGuiGroup.cpp">
+      <Filter>Entity\Gui\GuiGroup</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlPLProfilerGui.cpp">
+      <Filter>Entity\Gui\GuiGroup</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlPLSceneChangerGui.cpp">
+      <Filter>Entity\Gui\GuiGroup</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlPLItem.cpp">
+      <Filter>Entity\Item</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlPLItemParser.cpp">
+      <Filter>Entity\Item</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlPLItemProperty.cpp">
+      <Filter>Entity\Item</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlPLItemUVTimeLine.cpp">
+      <Filter>Entity\Item</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlPLItemXMLScript.cpp">
+      <Filter>Entity\Item</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlPLPlayerName.cpp">
+      <Filter>Entity\PlayerName</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlPLDamageBox.cpp">
+      <Filter>Entity\DamageBox</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlPLWorldEntity.cpp">
+      <Filter>Entity\World</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlPlFog.cpp">
+      <Filter>Entity\Fog</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlPLWater.cpp">
+      <Filter>Entity\Water</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlPLDummyWorld.cpp">
+      <Filter>Entity\DummyWorld</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlPLDecal.cpp">
+      <Filter>Entity\Decal</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlPLDecalVolume.cpp">
+      <Filter>Entity\Decal</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlPLWorldDecal.cpp">
+      <Filter>Entity\Decal</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlPLEntityRenderHelpers.cpp">
+      <Filter>Entity\EntityHelper</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlPLHeatHaze.cpp">
+      <Filter>Entity\Effect</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlPLLensFlare.cpp">
+      <Filter>Entity\Effect</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlPLLinkEffect.cpp">
+      <Filter>Entity\Effect</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlPLRefractionEffect.cpp">
+      <Filter>Entity\Effect</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlPostEffectCamera.cpp">
+      <Filter>Entity\Effect</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlEffectAPI.cpp">
+      <Filter>Entity\Effect\Effect Main Files</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlEffectSystemFreeList.cpp">
+      <Filter>Entity\Effect\Effect Main Files</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlResourceBeamSystem.cpp">
+      <Filter>Entity\Effect\Effect Resource Files</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlResourceComponentSystem.cpp">
+      <Filter>Entity\Effect\Effect Resource Files</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlResourceDecalSystem.cpp">
+      <Filter>Entity\Effect\Effect Resource Files</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlResourceEffect.cpp">
+      <Filter>Entity\Effect\Effect Resource Files</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlResourceHurricaneSystem.cpp">
+      <Filter>Entity\Effect\Effect Resource Files</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlResourceImVertexSystem.cpp">
+      <Filter>Entity\Effect\Effect Resource Files</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlResourceLightningSystem.cpp">
+      <Filter>Entity\Effect\Effect Resource Files</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlResourceLineSystem.cpp">
+      <Filter>Entity\Effect\Effect Resource Files</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlResourceMeshSystem.cpp">
+      <Filter>Entity\Effect\Effect Resource Files</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlResourceParticleSystem.cpp">
+      <Filter>Entity\Effect\Effect Resource Files</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlResourcePostEffectSystem.cpp">
+      <Filter>Entity\Effect\Effect Resource Files</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlInstanceBeamSystem.cpp">
+      <Filter>Entity\Effect\Effect Instance Files</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlInstanceComponentSystem.cpp">
+      <Filter>Entity\Effect\Effect Instance Files</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlInstanceDecalSystem.cpp">
+      <Filter>Entity\Effect\Effect Instance Files</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlInstanceEffect.cpp">
+      <Filter>Entity\Effect\Effect Instance Files</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlInstanceHurricaneSystem.cpp">
+      <Filter>Entity\Effect\Effect Instance Files</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlInstanceImVertexSystem.cpp">
+      <Filter>Entity\Effect\Effect Instance Files</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlInstanceLightningSystem.cpp">
+      <Filter>Entity\Effect\Effect Instance Files</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlInstanceLineSystem.cpp">
+      <Filter>Entity\Effect\Effect Instance Files</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlInstanceMeshSystem.cpp">
+      <Filter>Entity\Effect\Effect Instance Files</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlInstanceParticleSystem.cpp">
+      <Filter>Entity\Effect\Effect Instance Files</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlInstancePostEffectSystem.cpp">
+      <Filter>Entity\Effect\Effect Instance Files</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlInstanceTraceSystem.cpp">
+      <Filter>Entity\Effect\Effect Instance Files</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlInstanceTrailSystem.cpp">
+      <Filter>Entity\Effect\Effect Instance Files</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlEffectSplinePath.cpp">
+      <Filter>Entity\Effect\Effect Spline Files</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlPLSound.cpp">
+      <Filter>Entity\Sound</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlPLBloom.cpp">
+      <Filter>Entity\Bloom</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlPLShoreLine.cpp">
+      <Filter>Entity\ShoreLine</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlPLPlant.cpp">
+      <Filter>Entity\Plant</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlPLOccluder_Base.cpp">
+      <Filter>Entity\Occluder</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlPLOccluder_Quad.cpp">
+      <Filter>Entity\Occluder</Filter>
+    </ClCompile>
+    <ClCompile Include="OccluderProxy.cpp">
+      <Filter>Entity\Occluder</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlPLWeather.cpp">
+      <Filter>Entity\Weather</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlPLWeatherController.cpp">
+      <Filter>Entity\Weather</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlPLWeatherDefine.cpp">
+      <Filter>Entity\Weather</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlPLWeatherHandler.cpp">
+      <Filter>Entity\Weather</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlPLGameProperty.cpp">
+      <Filter>Entity\GameProperty</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlPLDojo.cpp">
+      <Filter>Entity\Dojo</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlPLHelpers.cpp">
+      <Filter>Helpers</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlPLApi.cpp">
+      <Filter>Main</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlPLAtomicSorter.cpp">
+      <Filter>Main</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlPLAttach.cpp">
+      <Filter>Main</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlPLDistanceFilterGroup.cpp">
+      <Filter>Main</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlPLDojoContainer.cpp">
+      <Filter>Main</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlPLEntity.cpp">
+      <Filter>Main</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlPLEntityBlend.cpp">
+      <Filter>Main</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlPLEntityFactory.cpp">
+      <Filter>Main</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlPLEntityFreeList.cpp">
+      <Filter>Main</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlPLGlobal.cpp">
+      <Filter>Main</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlPLPropertyContainer.cpp">
+      <Filter>Main</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlPLRenderGroup.cpp">
+      <Filter>Main</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlPLWorldState.cpp">
+      <Filter>Main</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlPicking.cpp">
+      <Filter>Picking</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlPLPicking.cpp">
+      <Filter>Picking</Filter>
+    </ClCompile>
+    <ClCompile Include="precomp_ntlpresentation.cpp">
+      <Filter>Precompile</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlCharacterXMLScript.cpp">
+      <Filter>Property</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlPLCharacterProperty.cpp">
+      <Filter>Property</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlPLEmblemStuffList.cpp">
+      <Filter>Property</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlPLGuiProperty.cpp">
+      <Filter>Property</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlPlLightProperty.cpp">
+      <Filter>Property</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlPLObjectProperty.cpp">
+      <Filter>Property</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlPLObjectXMLScript.cpp">
+      <Filter>Property</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlPLPlantProperty.cpp">
+      <Filter>Property</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlPLShoreLineProp.cpp">
+      <Filter>Property</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlPLSoundProp.cpp">
+      <Filter>Property</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlPLWaterProp.cpp">
+      <Filter>Property</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlPLWeatherProperty.cpp">
+      <Filter>Property</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlPLWorldProp.cpp">
+      <Filter>Property</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlPLXMLScriptHelper.cpp">
+      <Filter>Property</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlPLCameraRenderTexture.cpp">
+      <Filter>ResourceManager</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlPLCameraRT.cpp">
+      <Filter>ResourceManager</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlPLEmblemMaker.cpp">
+      <Filter>ResourceManager</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlPLPalette.cpp">
+      <Filter>ResourceManager</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlPLResourceManager.cpp">
+      <Filter>ResourceManager</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlPLResourcePack.cpp">
+      <Filter>ResourceManager</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlPLResourceScheduling.cpp">
+      <Filter>ResourceManager</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlPLCullingScheduling.cpp">
+      <Filter>SceneManager</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlPLRenderState.cpp">
+      <Filter>SceneManager</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlPLSceneManagerFactroy.cpp">
+      <Filter>SceneManager</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlPLVisualManager.cpp">
+      <Filter>SceneManager</Filter>
+    </ClCompile>
+    <ClCompile Include="ntlworldcommon.cpp">
+      <Filter>World\Main</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlWorldField.cpp">
+      <Filter>World\Main</Filter>
+    </ClCompile>
+    <ClCompile Include="ntlworldfieldinfo.cpp">
+      <Filter>World\Main</Filter>
+    </ClCompile>
+    <ClCompile Include="ntlworldinterface.cpp">
+      <Filter>World\Main</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlWorldPaletteDefine.cpp">
+      <Filter>World\Main</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlWorldSchedule.cpp">
+      <Filter>World\Main</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlWorldSector.cpp">
+      <Filter>World\Main</Filter>
+    </ClCompile>
+    <ClCompile Include="ntlworldsectorinfo.cpp">
+      <Filter>World\Main</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlWorldSectorPVS.cpp">
+      <Filter>World\Main</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlWorldShadow.cpp">
+      <Filter>World\Main</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlFieldColorManager.cpp">
+      <Filter>World\Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlOccluderManager.cpp">
+      <Filter>World\Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlSpawnMergeManager.cpp">
+      <Filter>World\Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlSpecularManager.cpp">
+      <Filter>World\Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlWorldBGMManager.cpp">
+      <Filter>World\Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlWorldBlockManager.cpp">
+      <Filter>World\Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlWorldFieldManager.cpp">
+      <Filter>World\Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlWorldFieldManager4RWWorld.cpp">
+      <Filter>World\Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlWorldFileAccessor.cpp">
+      <Filter>World\Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlWorldFileMemAccessor.cpp">
+      <Filter>World\Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlWorldLTManager.cpp">
+      <Filter>World\Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlWorldMergeManager.cpp">
+      <Filter>World\Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlWorldPathEngineManager.cpp">
+      <Filter>World\Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlWorldSectorManager.cpp">
+      <Filter>World\Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlWorldShadowManager.cpp">
+      <Filter>World\Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlWorldSLManger.cpp">
+      <Filter>World\Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="SpawnMacroManager.cpp">
+      <Filter>World\Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlWorldMaterialPlugin.cpp">
+      <Filter>World\Plugin</Filter>
+    </ClCompile>
+    <ClCompile Include="ntlworldplugin.cpp">
+      <Filter>World\Plugin</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlWorldSectorLOD.cpp">
+      <Filter>World\LOD</Filter>
+    </ClCompile>
+    <ClCompile Include="Spawn.cpp">
+      <Filter>World\Spawn</Filter>
+    </ClCompile>
+    <ClCompile Include="SpawnContainer.cpp">
+      <Filter>World\Spawn</Filter>
+    </ClCompile>
+    <ClCompile Include="SpawnInstNode.cpp">
+      <Filter>World\Spawn</Filter>
+    </ClCompile>
+    <ClCompile Include="SpawnMacro.cpp">
+      <Filter>World\Spawn</Filter>
+    </ClCompile>
+    <ClCompile Include="SpawnMOB.cpp">
+      <Filter>World\Spawn</Filter>
+    </ClCompile>
+    <ClCompile Include="SpawnNPC.cpp">
+      <Filter>World\Spawn</Filter>
+    </ClCompile>
+    <ClCompile Include="SpawnParty.cpp">
+      <Filter>World\Spawn</Filter>
+    </ClCompile>
+    <ClCompile Include="SpawnPartyPath.cpp">
+      <Filter>World\Spawn</Filter>
+    </ClCompile>
+    <ClCompile Include="SpawnTreeNode.cpp">
+      <Filter>World\Spawn</Filter>
+    </ClCompile>
+    <ClCompile Include="C2DAABB.cpp">
+      <Filter>World\Spawn\Path</Filter>
+    </ClCompile>
+    <ClCompile Include="PathList.cpp">
+      <Filter>World\Spawn\Path</Filter>
+    </ClCompile>
+    <ClCompile Include="PathPoint.cpp">
+      <Filter>World\Spawn\Path</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlWorldBrush.cpp">
+      <Filter>World\Util\Brush</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlWorldBrush3DCircle.cpp">
+      <Filter>World\Util\Brush</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlWorldBrushController.cpp">
+      <Filter>World\Util\Brush</Filter>
+    </ClCompile>
+    <ClCompile Include="FileController.cpp">
+      <Filter>World\Util\File</Filter>
+    </ClCompile>
+    <ClCompile Include="FileMem.cpp">
+      <Filter>World\Util\File</Filter>
+    </ClCompile>
+    <ClCompile Include="ISectorMethod.cpp">
+      <Filter>World\Util\SectorMethod\Method</Filter>
+    </ClCompile>
+    <ClCompile Include="SM_GetAABB.cpp">
+      <Filter>World\Util\SectorMethod\Method</Filter>
+    </ClCompile>
+    <ClCompile Include="SM_GetDoodadNum.cpp">
+      <Filter>World\Util\SectorMethod\Method</Filter>
+    </ClCompile>
+    <ClCompile Include="SM_GetRuleOutDoodad.cpp">
+      <Filter>World\Util\SectorMethod\Method</Filter>
+    </ClCompile>
+    <ClCompile Include="SM_GetRuleOutWater.cpp">
+      <Filter>World\Util\SectorMethod\Method</Filter>
+    </ClCompile>
+    <ClCompile Include="SM_GetTileTransparency.cpp">
+      <Filter>World\Util\SectorMethod\Method</Filter>
+    </ClCompile>
+    <ClCompile Include="SM_SplatTexMaxBlend.cpp">
+      <Filter>World\Util\SectorMethod\Method</Filter>
+    </ClCompile>
+    <ClCompile Include="SM_SplatTexMinBlend.cpp">
+      <Filter>World\Util\SectorMethod\Method</Filter>
+    </ClCompile>
+    <ClCompile Include="FieldMethodImp.cpp">
+      <Filter>World\Util\SectorMethod\Implementor</Filter>
+    </ClCompile>
+    <ClCompile Include="ISectorMethodContainer.cpp">
+      <Filter>World\Util\SectorMethod\Implementor</Filter>
+    </ClCompile>
+    <ClCompile Include="SectorMethodImp.cpp">
+      <Filter>World\Util\SectorMethod\Implementor</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlPLRandDistribution.cpp">
+      <Filter>World\Util\Rand</Filter>
+    </ClCompile>
+    <ClCompile Include="TextureStageStateView.cpp">
+      <Filter>World\Util\TextureStageStateView</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlPLEvent.cpp">
+      <Filter>Event</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlPLEventGenerator.cpp">
+      <Filter>Event</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlPLEventHandler.cpp">
+      <Filter>Event</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlPLMaterialExtWrapper.cpp">
+      <Filter>Render</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlPLRenderCallback.cpp">
+      <Filter>Render</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlPLRenderGeometry.cpp">
+      <Filter>Render</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlPLElapsedController.cpp">
+      <Filter>Controller\ElapsedController</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlDNController.cpp">
+      <Filter>Controller\DNController</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlPLFadeController.cpp">
+      <Filter>Controller\FadeController</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlPLAccelController.cpp">
+      <Filter>Controller\AccelController</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlPLOptionManager.cpp">
+      <Filter>Option</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="NtlPLCollision.h">
+      <Filter>Collision</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlPLObject.h">
+      <Filter>Entity\Object</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlPLObjectType.h">
+      <Filter>Entity\Object</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlPLUVAnim.h">
+      <Filter>Entity\Object</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlPLSky.h">
+      <Filter>Entity\Sky</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlPLSkyDragon.h">
+      <Filter>Entity\Sky</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlPLSkySphere.h">
+      <Filter>Entity\Sky</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlPLPlanet.h">
+      <Filter>Entity\Sky\Planet</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlPLPlanetHandler.h">
+      <Filter>Entity\Sky\Planet</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlPLSun.h">
+      <Filter>Entity\Sky\Planet</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlPLLight.h">
+      <Filter>Entity\Light</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlPLLightObject.h">
+      <Filter>Entity\Light</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlPLSoftSpot.h">
+      <Filter>Entity\Light</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlWorldRpLightManager.h">
+      <Filter>Entity\Light</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlPLWorldLight_Base.h">
+      <Filter>Entity\Light\WorldLight</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlPLWorldLight_Box.h">
+      <Filter>Entity\Light\WorldLight</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlPLWorldLight_Sphere.h">
+      <Filter>Entity\Light\WorldLight</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlPLCharacter.h">
+      <Filter>Entity\Character</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlPLEquipItem.h">
+      <Filter>Entity\Character</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlAnimChannel.h">
+      <Filter>Entity\Character\Anim</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlAnimLayer.h">
+      <Filter>Entity\Character\Anim</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlInstanceAnimData.h">
+      <Filter>Entity\Character\Anim</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlTypeAnimData.h">
+      <Filter>Entity\Character\Anim</Filter>
+    </ClInclude>
+    <ClInclude Include="LinkItemTrasformList.h">
+      <Filter>Entity\Character\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlAnimEventData.h">
+      <Filter>Entity\Character\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlCharacterData.h">
+      <Filter>Entity\Character\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlDefaultItemData.h">
+      <Filter>Entity\Character\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlPLCharacterParser.h">
+      <Filter>Entity\Character\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlPLCharMeshRenderPipe.h">
+      <Filter>Entity\Character\RenderPipe</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlPLCharMeshRenderPipe00.h">
+      <Filter>Entity\Character\RenderPipe</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlPLCharMeshRenderPipe01.h">
+      <Filter>Entity\Character\RenderPipe</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlPLCharMeshRenderPipeFarAway.h">
+      <Filter>Entity\Character\RenderPipe</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlPLGui.h">
+      <Filter>Entity\Gui</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlPLGuiManager.h">
+      <Filter>Entity\Gui</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlPLChatBalloonManager.h">
+      <Filter>Entity\Gui\GuiGroup</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlPLProfilerGui.h">
+      <Filter>Entity\Gui\GuiGroup</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlPLItem.h">
+      <Filter>Entity\Item</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlPLItemData.h">
+      <Filter>Entity\Item</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlPLItemParser.h">
+      <Filter>Entity\Item</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlPLItemProperty.h">
+      <Filter>Entity\Item</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlPLItemUVTimeLine.h">
+      <Filter>Entity\Item</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlPLItemXMLScript.h">
+      <Filter>Entity\Item</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlPLPlayerName.h">
+      <Filter>Entity\PlayerName</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlPLDamageBox.h">
+      <Filter>Entity\DamageBox</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlPLWorldEntity.h">
+      <Filter>Entity\World</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlPlFog.h">
+      <Filter>Entity\Fog</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlPLWater.h">
+      <Filter>Entity\Water</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlPLDummyWorld.h">
+      <Filter>Entity\DummyWorld</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlPLDecal.h">
+      <Filter>Entity\Decal</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlPLDecalVolume.h">
+      <Filter>Entity\Decal</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlPLWorldDecal.h">
+      <Filter>Entity\Decal</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlPLEntityRenderHelpers.h">
+      <Filter>Entity\EntityHelper</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlPLHeatHaze.h">
+      <Filter>Entity\Effect</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlPLLensFlare.h">
+      <Filter>Entity\Effect</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlPLLinkEffect.h">
+      <Filter>Entity\Effect</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlPLRefractionEffect.h">
+      <Filter>Entity\Effect</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlPostEffectCamera.h">
+      <Filter>Entity\Effect</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlEffectAPI.h">
+      <Filter>Entity\Effect\Effect Main Files</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlEffectDefine.h">
+      <Filter>Entity\Effect\Effect Main Files</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlEffectSystemFreeList.h">
+      <Filter>Entity\Effect\Effect Main Files</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlResourceBeamSystem.h">
+      <Filter>Entity\Effect\Effect Resource Files</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlResourceComponentSystem.h">
+      <Filter>Entity\Effect\Effect Resource Files</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlResourceDecalSystem.h">
+      <Filter>Entity\Effect\Effect Resource Files</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlResourceEffect.h">
+      <Filter>Entity\Effect\Effect Resource Files</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlResourceHurricaneSystem.h">
+      <Filter>Entity\Effect\Effect Resource Files</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlResourceImVertexSystem.h">
+      <Filter>Entity\Effect\Effect Resource Files</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlResourceLightningSystem.h">
+      <Filter>Entity\Effect\Effect Resource Files</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlResourceLineSystem.h">
+      <Filter>Entity\Effect\Effect Resource Files</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlResourceMeshSystem.h">
+      <Filter>Entity\Effect\Effect Resource Files</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlResourceParticleSystem.h">
+      <Filter>Entity\Effect\Effect Resource Files</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlResourcePostEffectSystem.h">
+      <Filter>Entity\Effect\Effect Resource Files</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlInstanceBeamSystem.h">
+      <Filter>Entity\Effect\Effect Instance Files</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlInstanceComponentSystem.h">
+      <Filter>Entity\Effect\Effect Instance Files</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlInstanceDecalSystem.h">
+      <Filter>Entity\Effect\Effect Instance Files</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlInstanceEffect.h">
+      <Filter>Entity\Effect\Effect Instance Files</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlInstanceHurricaneSystem.h">
+      <Filter>Entity\Effect\Effect Instance Files</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlInstanceImVertexSystem.h">
+      <Filter>Entity\Effect\Effect Instance Files</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlInstanceLightningSystem.h">
+      <Filter>Entity\Effect\Effect Instance Files</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlInstanceLineSystem.h">
+      <Filter>Entity\Effect\Effect Instance Files</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlInstanceMeshSystem.h">
+      <Filter>Entity\Effect\Effect Instance Files</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlInstanceParticleSystem.h">
+      <Filter>Entity\Effect\Effect Instance Files</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlInstancePostEffectSystem.h">
+      <Filter>Entity\Effect\Effect Instance Files</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlInstanceTraceSystem.h">
+      <Filter>Entity\Effect\Effect Instance Files</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlInstanceTrailSystem.h">
+      <Filter>Entity\Effect\Effect Instance Files</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlEffectSplinePath.h">
+      <Filter>Entity\Effect\Effect Spline Files</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlPLSound.h">
+      <Filter>Entity\Sound</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlPLBloom.h">
+      <Filter>Entity\Bloom</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlPLShoreLine.h">
+      <Filter>Entity\ShoreLine</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlPLPlant.h">
+      <Filter>Entity\Plant</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlPLOccluder_Base.h">
+      <Filter>Entity\Occluder</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlPLOccluder_Quad.h">
+      <Filter>Entity\Occluder</Filter>
+    </ClInclude>
+    <ClInclude Include="OccluderProxy.h">
+      <Filter>Entity\Occluder</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlPLWeather.h">
+      <Filter>Entity\Weather</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlPLWeatherController.h">
+      <Filter>Entity\Weather</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlPLWeatherDefine.h">
+      <Filter>Entity\Weather</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlPLWeatherHandler.h">
+      <Filter>Entity\Weather</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlPLGameProperty.h">
+      <Filter>Entity\GameProperty</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlPLDojo.h">
+      <Filter>Entity\Dojo</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlPLHelpers.h">
+      <Filter>Helpers</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlPLApi.h">
+      <Filter>Main</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlPLAtomicSorter.h">
+      <Filter>Main</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlPLAttach.h">
+      <Filter>Main</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlPLDef.h">
+      <Filter>Main</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlPLDistanceFilterGroup.h">
+      <Filter>Main</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlPLDojoContainer.h">
+      <Filter>Main</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlPLEntity.h">
+      <Filter>Main</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlPLEntityBlend.h">
+      <Filter>Main</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlPLEntityFactory.h">
+      <Filter>Main</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlPLEntityFreeList.h">
+      <Filter>Main</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlPLGlobal.h">
+      <Filter>Main</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlPLProperty.h">
+      <Filter>Main</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlPLPropertyContainer.h">
+      <Filter>Main</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlPLRenderGroup.h">
+      <Filter>Main</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlPLWorldState.h">
+      <Filter>Main</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlPicking.h">
+      <Filter>Picking</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlPLPicking.h">
+      <Filter>Picking</Filter>
+    </ClInclude>
+    <ClInclude Include="precomp_ntlpresentation.h">
+      <Filter>Precompile</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlCharacterXMLScript.h">
+      <Filter>Property</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlPLCharacterProperty.h">
+      <Filter>Property</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlPLEmblemStuffList.h">
+      <Filter>Property</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlPLGuiProperty.h">
+      <Filter>Property</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlPlLightProperty.h">
+      <Filter>Property</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlPLObjectProperty.h">
+      <Filter>Property</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlPLObjectXMLScript.h">
+      <Filter>Property</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlPLPlantProperty.h">
+      <Filter>Property</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlPLShoreLineProp.h">
+      <Filter>Property</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlPLSoundProp.h">
+      <Filter>Property</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlPLWaterProp.h">
+      <Filter>Property</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlPLWeatherProperty.h">
+      <Filter>Property</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlPLWorldProp.h">
+      <Filter>Property</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlPLXMLScriptHelper.h">
+      <Filter>Property</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlPLCameraRenderTexture.h">
+      <Filter>ResourceManager</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlPLCameraRT.h">
+      <Filter>ResourceManager</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlPLEmblemMaker.h">
+      <Filter>ResourceManager</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlPLPalette.h">
+      <Filter>ResourceManager</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlPLResource.h">
+      <Filter>ResourceManager</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlPLResourceManager.h">
+      <Filter>ResourceManager</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlPLResourcePack.h">
+      <Filter>ResourceManager</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlPLResourceScheduling.h">
+      <Filter>ResourceManager</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlPLCullingScheduling.h">
+      <Filter>SceneManager</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlPLRenderState.h">
+      <Filter>SceneManager</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlPLSceneManager.h">
+      <Filter>SceneManager</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlPLSceneManagerFactory.h">
+      <Filter>SceneManager</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlPLVisualManager.h">
+      <Filter>SceneManager</Filter>
+    </ClInclude>
+    <ClInclude Include="ntlworldcommon.h">
+      <Filter>World\Main</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlWorldField.h">
+      <Filter>World\Main</Filter>
+    </ClInclude>
+    <ClInclude Include="ntlworldfieldinfo.h">
+      <Filter>World\Main</Filter>
+    </ClInclude>
+    <ClInclude Include="ntlworldinterface.h">
+      <Filter>World\Main</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlWorldPaletteDefine.h">
+      <Filter>World\Main</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlWorldSchedule.h">
+      <Filter>World\Main</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlWorldSector.h">
+      <Filter>World\Main</Filter>
+    </ClInclude>
+    <ClInclude Include="ntlworldsectorinfo.h">
+      <Filter>World\Main</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlWorldSectorPVS.h">
+      <Filter>World\Main</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlWorldShadow.h">
+      <Filter>World\Main</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlFieldColorManager.h">
+      <Filter>World\Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlOccluderManager.h">
+      <Filter>World\Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlSpawnMergeManager.h">
+      <Filter>World\Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlSpecularManager.h">
+      <Filter>World\Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlWorldBGMManager.h">
+      <Filter>World\Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlWorldBlockManager.h">
+      <Filter>World\Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlWorldFieldManager.h">
+      <Filter>World\Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlWorldFieldManager4RWWorld.h">
+      <Filter>World\Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlWorldFileAccessor.h">
+      <Filter>World\Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlWorldFileMemAccessor.h">
+      <Filter>World\Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlWorldLTManager.h">
+      <Filter>World\Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlWorldMergeManager.h">
+      <Filter>World\Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlWorldPathEngineManager.h">
+      <Filter>World\Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlWorldSectorManager.h">
+      <Filter>World\Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlWorldShadowManager.h">
+      <Filter>World\Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlWorldSLManger.h">
+      <Filter>World\Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="SpawnMacroManager.h">
+      <Filter>World\Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlWorldMaterialPlugin.h">
+      <Filter>World\Plugin</Filter>
+    </ClInclude>
+    <ClInclude Include="ntlworldplugin.h">
+      <Filter>World\Plugin</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlWorldSectorLOD.h">
+      <Filter>World\LOD</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlWorldSectorLODStaticIB.h">
+      <Filter>World\LOD</Filter>
+    </ClInclude>
+    <ClInclude Include="Spawn.h">
+      <Filter>World\Spawn</Filter>
+    </ClInclude>
+    <ClInclude Include="SpawnContainer.h">
+      <Filter>World\Spawn</Filter>
+    </ClInclude>
+    <ClInclude Include="SpawnInstNode.h">
+      <Filter>World\Spawn</Filter>
+    </ClInclude>
+    <ClInclude Include="SpawnMacro.h">
+      <Filter>World\Spawn</Filter>
+    </ClInclude>
+    <ClInclude Include="SpawnMOB.h">
+      <Filter>World\Spawn</Filter>
+    </ClInclude>
+    <ClInclude Include="SpawnNPC.h">
+      <Filter>World\Spawn</Filter>
+    </ClInclude>
+    <ClInclude Include="SpawnParty.h">
+      <Filter>World\Spawn</Filter>
+    </ClInclude>
+    <ClInclude Include="SpawnPartyPath.h">
+      <Filter>World\Spawn</Filter>
+    </ClInclude>
+    <ClInclude Include="SpawnTreeNode.h">
+      <Filter>World\Spawn</Filter>
+    </ClInclude>
+    <ClInclude Include="C2DAABB.h">
+      <Filter>World\Spawn\Path</Filter>
+    </ClInclude>
+    <ClInclude Include="PathList.h">
+      <Filter>World\Spawn\Path</Filter>
+    </ClInclude>
+    <ClInclude Include="PathPoint.h">
+      <Filter>World\Spawn\Path</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlWorldBrush.h">
+      <Filter>World\Util\Brush</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlWorldBrush2DCircle.h">
+      <Filter>World\Util\Brush</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlWorldBrush3DCircle.h">
+      <Filter>World\Util\Brush</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlWorldBrushCircle.h">
+      <Filter>World\Util\Brush</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlWorldBrushController.h">
+      <Filter>World\Util\Brush</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlWorldBrushFrustum.h">
+      <Filter>World\Util\Brush</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlWorldBrushLine.h">
+      <Filter>World\Util\Brush</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlWorldBrushRectangle.h">
+      <Filter>World\Util\Brush</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlWorldBrushRectangleInDetail.h">
+      <Filter>World\Util\Brush</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlWorldBrushRoad.h">
+      <Filter>World\Util\Brush</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlWorldBrushTile.h">
+      <Filter>World\Util\Brush</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlWorldBrushTileEx.h">
+      <Filter>World\Util\Brush</Filter>
+    </ClInclude>
+    <ClInclude Include="FileController.h">
+      <Filter>World\Util\File</Filter>
+    </ClInclude>
+    <ClInclude Include="FileMem.h">
+      <Filter>World\Util\File</Filter>
+    </ClInclude>
+    <ClInclude Include="ISectorMethod.h">
+      <Filter>World\Util\SectorMethod\Method</Filter>
+    </ClInclude>
+    <ClInclude Include="SM_GetAABB.h">
+      <Filter>World\Util\SectorMethod\Method</Filter>
+    </ClInclude>
+    <ClInclude Include="SM_GetDoodadNum.h">
+      <Filter>World\Util\SectorMethod\Method</Filter>
+    </ClInclude>
+    <ClInclude Include="SM_GetRuleOutDoodad.h">
+      <Filter>World\Util\SectorMethod\Method</Filter>
+    </ClInclude>
+    <ClInclude Include="SM_GetRuleOutWater.h">
+      <Filter>World\Util\SectorMethod\Method</Filter>
+    </ClInclude>
+    <ClInclude Include="SM_GetTileTransparency.h">
+      <Filter>World\Util\SectorMethod\Method</Filter>
+    </ClInclude>
+    <ClInclude Include="SM_SplatTexMaxBlend.h">
+      <Filter>World\Util\SectorMethod\Method</Filter>
+    </ClInclude>
+    <ClInclude Include="SM_SplatTexMinBlend.h">
+      <Filter>World\Util\SectorMethod\Method</Filter>
+    </ClInclude>
+    <ClInclude Include="FieldMethodImp.h">
+      <Filter>World\Util\SectorMethod\Implementor</Filter>
+    </ClInclude>
+    <ClInclude Include="ISectorMethodContainer.h">
+      <Filter>World\Util\SectorMethod\Implementor</Filter>
+    </ClInclude>
+    <ClInclude Include="SectorMethodImp.h">
+      <Filter>World\Util\SectorMethod\Implementor</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlPLRandDistribution.h">
+      <Filter>World\Util\Rand</Filter>
+    </ClInclude>
+    <ClInclude Include="TextureStageStateView.h">
+      <Filter>World\Util\TextureStageStateView</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlPLEvent.h">
+      <Filter>Event</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlPLEventGenerator.h">
+      <Filter>Event</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlPLEventHandler.h">
+      <Filter>Event</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlPLMaterialExtWrapper.h">
+      <Filter>Render</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlPLRenderCallback.h">
+      <Filter>Render</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlPLRenderGeometry.h">
+      <Filter>Render</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlPLElapsedController.h">
+      <Filter>Controller\ElapsedController</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlDNController.h">
+      <Filter>Controller\DNController</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlPLFadeController.h">
+      <Filter>Controller\FadeController</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlPLAccelController.h">
+      <Filter>Controller\AccelController</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlPLOptionManager.h">
+      <Filter>Option</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="NtlWorldSectorLOD.inl">
+      <Filter>World\LOD</Filter>
+    </None>
+    <None Include="Doc\Effect Library.doc">
+      <Filter>Doc</Filter>
+    </None>
+    <None Include="Doc\Effect Library.vsd">
+      <Filter>Doc</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Xml Include="Doc\Palette.xml">
+      <Filter>Doc</Filter>
+    </Xml>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="NtlPLCinematicGui.h">
+      <Filter>Entity\Gui\GuiGroup</Filter>
+    </CustomBuild>
+    <CustomBuild Include="NtlPLCinematicObject.h">
+      <Filter>Entity\Gui\GuiGroup</Filter>
+    </CustomBuild>
+    <CustomBuild Include="NtlPLGuiGroup.h">
+      <Filter>Entity\Gui\GuiGroup</Filter>
+    </CustomBuild>
+    <CustomBuild Include="NtlPLSceneChangerGui.h">
+      <Filter>Entity\Gui\GuiGroup</Filter>
+    </CustomBuild>
+  </ItemGroup>
+</Project>

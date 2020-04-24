@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="plugin">
+      <UniqueIdentifier>{ead8620b-7bdf-46bc-b7bb-b918fd67607e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="customize">
+      <UniqueIdentifier>{33f5afe5-0adb-4fa6-92f8-b1f6960f5606}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="collis\collbuild.c">
+      <Filter>plugin</Filter>
+    </ClCompile>
+    <ClCompile Include="collis\colldata.c">
+      <Filter>plugin</Filter>
+    </ClCompile>
+    <ClCompile Include="collis\collquery.c">
+      <Filter>plugin</Filter>
+    </ClCompile>
+    <ClCompile Include="collis\ctbuild.c">
+      <Filter>plugin</Filter>
+    </ClCompile>
+    <ClCompile Include="collis\ctdata.c">
+      <Filter>plugin</Filter>
+    </ClCompile>
+    <ClCompile Include="collis\ctquery.c">
+      <Filter>plugin</Filter>
+    </ClCompile>
+    <ClCompile Include="collis\rpcollis.c">
+      <Filter>plugin</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Renderware\Include\rpdbgerr.c">
+      <Filter>plugin</Filter>
+    </ClCompile>
+    <ClCompile Include="collis\NtlCollis.c">
+      <Filter>customize</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="collis\collbuild.h">
+      <Filter>plugin</Filter>
+    </ClInclude>
+    <ClInclude Include="collis\colldata.h">
+      <Filter>plugin</Filter>
+    </ClInclude>
+    <ClInclude Include="collis\collquery.h">
+      <Filter>plugin</Filter>
+    </ClInclude>
+    <ClInclude Include="collis\ctbuild.h">
+      <Filter>plugin</Filter>
+    </ClInclude>
+    <ClInclude Include="collis\ctdata.h">
+      <Filter>plugin</Filter>
+    </ClInclude>
+    <ClInclude Include="collis\ctquery.h">
+      <Filter>plugin</Filter>
+    </ClInclude>
+    <ClInclude Include="collis\rpcollis.h">
+      <Filter>plugin</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Renderware\Include\rpdbgerr.h">
+      <Filter>plugin</Filter>
+    </ClInclude>
+    <ClInclude Include="collis\rpplugin.h">
+      <Filter>plugin</Filter>
+    </ClInclude>
+    <ClInclude Include="collis\NtlCollis.h">
+      <Filter>customize</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="collis\rperror.def">
+      <Filter>plugin</Filter>
+    </None>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,119 @@
+GameStage( 0 )
+--[
+	Action( "add mob" )
+	--[
+		Param( "index", 6692101 )
+		Param( "group", 20007 )
+		Param( "loc x", -1.07 )
+		Param( "loc y", 2.79 )
+		Param( "loc z", 252.96 )
+		Param( "dir x", -0.03 )
+		Param( "dir z", -1.00 )
+		Param( "no spawn wait", "true" )
+	--]
+	End()
+
+	Action( "function" )
+	--[
+		Condition( "child" )
+		--[
+			Action( "while" )
+			--[
+				Action( "loop" )
+				--[
+
+					Action( "wait" )
+					--[
+						Condition( "check battle" )
+						--[
+							Param( "type", "mob" )
+							Param( "group", 20007 )
+							Param( "is battle", "true" )
+						--]
+						End() 
+					--]
+					End()
+
+					Action( "change object state" )
+					--[
+						Param( "index", 31 )
+						Param( "state", 3 )
+						Param( "substate show", 1 )
+					--]
+					End()
+
+					Action( "wait" )
+					--[
+						Condition( "check battle" )
+						--[
+							Param( "type", "mob" )
+							Param( "group", 20007 )
+							Param( "is battle", "false" )
+						--]
+						End() 
+					--]
+					End()
+
+					Action( "change object state" )
+					--[
+						Param( "index", 31 )
+						Param( "state", 1 )
+						Param( "substate show", 1 )
+					--]
+					End()
+
+					Action( "remove mobgroup" )
+					--[
+						Param( "group", 20007 )
+						Param( "type", "clear" )
+					--]
+					End()
+					
+					Action( "add mob" )
+					--[
+						Param( "index", 6692101 )
+						Param( "group", 20007 )
+						Param( "loc x", -1.07 )
+						Param( "loc y", 2.79 )
+						Param( "loc z", 252.96 )
+						Param( "dir x", -0.03 )
+						Param( "dir z", -1.00 )
+						Param( "no spawn wait", "true" )
+					--]
+					End()
+				--]
+				End()
+			--]
+			End()
+		--]
+		End()
+
+		Action( "wait" )
+		--[
+			Condition( "check mobgroup" )
+			--[
+				Param( "group", 20007 )
+				Param( "count", 1 )
+			--]
+			End()
+		--]
+		End()
+	--]
+	End()
+	
+	Action( "change object state" )
+	--[
+		Param( "index", 31 )
+		Param( "state", 1 )
+		Param( "substate show", 1 )
+	--]
+	End()
+
+	Action( "send event to wps" )
+	--[
+		Param( "wps index", 20010 )
+		Param( "event id", 394 )
+	--]
+	End()
+--]
+End()

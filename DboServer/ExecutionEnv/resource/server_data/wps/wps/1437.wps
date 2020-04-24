@@ -1,0 +1,43 @@
+
+GameStage(0)
+--[
+	Action( "change object state" )
+	--[
+		Param( "index", 693 )
+		Param( "state", 0 )
+		Param( "substate show", 0 )
+	--]
+	End()
+
+	Action( "wait" )
+	--[
+		Condition( "check time" )
+		--[
+			Param( "time", 60 )
+		--]
+		End()
+	--]
+	End()
+
+	Action( "change object state" )
+	--[
+		Param( "index", 693 )
+		Param( "state", 0 )
+		Param( "substate show", 1 )
+	--]
+	End()
+--]
+End()
+
+GameFailed()
+--[
+	Action( "change object state" )
+	--[
+		Param( "index", 693 )
+		Param( "state", 0 )
+		Param( "substate show", 1 )
+	--]
+	End()
+--]
+End()
+

@@ -1,0 +1,15 @@
+// ===============================
+// Date : 2005.11.04
+// ===============================
+ㅇ Copy and Cut and Paste 기능 추가(Keyboard 로 사용 가능)
+ㅇ Dummy Object Render(Terrain, Sky)
+ㅇ Light 추가
+ㅇ Test 용 Lightning System 추가
+ㅇ UpdateNews Dialog 추가
+ㅇ Config File Save
+
+// ===============================
+// Date : 2005.10.28
+// ===============================
+ㅇ Path 를 연결 시키지 않고 Path Action 을 추가하여 Instance Effect 를 생성할때 나던 에러 해결
+ㅇ Instance Effect 의 Path Line 제대로 출력 되지 않든 문제 해결

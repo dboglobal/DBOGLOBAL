@@ -1,0 +1,78 @@
+
+GameStage(0)
+--[
+	Action( "change sps scene" )
+	--[
+		Param( "index", 5731106 )
+		Param( "play script", 5731106 )
+		Param( "play scene", 2 )
+	--]
+	End()
+
+	Action( "wait" )
+	--[
+		Condition( "recv event from sps" )
+		--[
+			Param( "object type", "npc" )
+			Param( "object index", 5731106 )
+			Param( "event id", 538 )
+		--]
+		End()
+	--]
+	End()
+
+	Action( "remove npc" )
+	--[
+		Param( "index", 5731106 )
+		Param( "type", "clear" )
+	--]
+	End()
+
+	Action( "wait" )
+	--[
+		Condition( "check time" )
+		--[
+			Param( "time", 10 )
+		--]
+		End()
+	--]
+	End()
+
+	Action( "add npc" )
+	--[
+		Param( "index", 5731106 )
+		Param( "loc x", 743.59 )
+		Param( "loc y", -29.56 )
+		Param( "loc z", -389.81 )
+		Param( "dir x", 0.87 )
+		Param( "dir z", -0.50 )
+		Param( "no spawn wait", "true" )
+		Param( "stand alone", "true" )
+	--]
+	End()
+--]
+End()
+
+GameFailed()
+--[
+	Action( "remove npc" )
+	--[
+		Param( "index", 5731106 )
+		Param( "type", "clear" )
+	--]
+	End()
+
+	Action( "add npc" )
+	--[
+		Param( "index", 5731106 )
+		Param( "loc x", 743.59 )
+		Param( "loc y", -29.56 )
+		Param( "loc z", -389.81 )
+		Param( "dir x", 0.87 )
+		Param( "dir z", -0.50 )
+		Param( "no spawn wait", "true" )
+		Param( "stand alone", "true" )
+	--]
+	End()
+--]
+End()

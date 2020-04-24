@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="pecompiled header">
+      <UniqueIdentifier>{a85ba7bb-3d6b-47a0-9f7b-daa5775f11f9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include">
+      <UniqueIdentifier>{53305918-20a8-4963-a3ec-ef8c30515277}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="main">
+      <UniqueIdentifier>{f3771aca-5163-42bc-8d8d-432d987a39b3}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>pecompiled header</Filter>
+    </ClCompile>
+    <ClCompile Include="Discord.cpp">
+      <Filter>main</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="stdafx.h">
+      <Filter>pecompiled header</Filter>
+    </ClInclude>
+    <ClInclude Include="discord_register.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="discord_rpc.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="Discord.h">
+      <Filter>main</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

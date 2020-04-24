@@ -1,0 +1,51 @@
+-- First floor
+-- Infinite spawn on the front of the conveyor belt
+
+GameStage(0)
+--[
+	Action( "while" )
+	--[
+		-- Use the following is pumping an endless loop.
+		Condition( "loop cond" )
+		--[
+			Param( "reverse", "false" )
+			Param( "operation", "true" )
+		--]
+		End()
+
+		Action( "loop" )
+		--[
+			Action( "add mob" )
+			--[
+				Param( "index", 3593104 )
+				Param( "group", 2801401 )
+				Param( "loc x", -94.44 )
+				Param( "loc y", 0.05 )
+				Param( "loc z", -404.00 )
+				Param( "dir x", -1.00 )
+				Param( "dir z", -0.05 )
+				Param( "play script", 3593104 )
+				Param( "play scene", 1 )
+			--]
+			End()
+
+			-- 9√  ∏∏≈≠ ¥Î±‚
+			Action( "wait" )
+			--[
+				Condition( "check time" )
+				--[
+					Param( "time", 9 )
+				--]
+				End()
+			--]
+			End()
+			
+		-- loop ¥›¿Ω
+		--]
+		End()
+		
+	-- while ¥›¿Ω
+	--]
+	End()
+--]
+End()

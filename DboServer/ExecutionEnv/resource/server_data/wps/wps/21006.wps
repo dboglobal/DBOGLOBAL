@@ -1,0 +1,53 @@
+
+GameStage(0)
+--[
+	Action( "add mob" )
+	--[
+		Param( "index", 4621104 )
+		Param( "group", 21006 )
+		Param( "loc x", 231.72 )
+		Param( "loc y", 9.56 )
+		Param( "loc z", 1.69 )
+		Param( "dir x", -0.98 )
+		Param( "dir z", -0.21 )
+		Param( "no spawn wait", "true" )
+	--]
+	End()
+
+	Action( "wait" )
+	--[
+		Condition( "check mobgroup" )
+		--[
+			Param( "group", 21006 )
+			Param( "count", 1 )
+		--]
+		End()
+	--]
+	End()
+	
+	Action( "send event to wps" )
+	--[
+		Param( "wps index", 21008 )
+		Param( "event id", 399 )
+	--]
+	End()
+
+	Action( "wait" )
+	--[
+		Condition( "check time" )
+		--[
+			Param( "time", 3 )
+		--]
+		End()
+	--]
+	End()
+
+	Action( "change object state" )
+	--[
+		Param( "index", 23 )
+		Param( "state", 1 )
+		Param( "substate show", 1 )
+	--]
+	End()
+--]
+End()

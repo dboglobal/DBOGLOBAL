@@ -1,0 +1,49 @@
+
+GameStage(0)
+--[
+	Action( "add mob" )
+	--[
+		Param( "index", 5653107)
+		Param( "group", 1581)
+		Param( "loc x", -1348.18)
+		Param( "loc y", -87)
+		Param( "loc z", 1251.71)
+		Param( "dir x", -0.45)
+		Param( "dir z", -0.89)
+		Param( "respawn", "true" )
+	--]
+	End()
+
+	Action( "add mob" )
+	--[
+		Param( "index", 5652110)
+		Param( "group", 1581)
+		Param( "loc x", -1348.28)
+		Param( "loc y", -87)
+		Param( "loc z", 1247.80)
+		Param( "dir x", 0.00)
+		Param( "dir z", 1.00)
+		Param( "respawn", "true" )
+	--]
+	End()
+
+	Action("wait")
+	--[
+		Param( "operation", "or" )
+	   
+		Condition( "recv ts event" )
+		--[
+			Param( "trigger type", "quest" );
+			Param( "event id", 185 )
+		--]
+		End()
+		
+		Condition( "check time" )
+		--[
+			Param( "time", 600 )
+		--]
+		End()	
+	--]
+	End()
+--]
+End()

@@ -1,0 +1,106 @@
+
+Scene( 1, "TMQ2-3" )
+--[
+	State( "fight" )
+	--[
+		Condition( "recv event from wps" )
+		--[
+			Param( "wps index", 12321 )
+			Param( "event id", 23660 )
+		--]
+		End()
+
+		Action( "use skill" )
+		--[
+			Param( "skill index", 0 )
+		--]
+		End()
+	--]     
+	End()
+--]     
+End()
+
+Scene( 2, "TMQ2-3" )
+--[
+	State( "fight" )
+	--[
+		Condition( "recv event from wps" )
+		--[
+			Param( "wps index", 12321 )
+			Param( "event id", 23670 )
+		--]
+		End()
+
+		Action( "use skill" )
+		--[
+			Param( "skill index", 0 )
+		--]
+		End()
+	--]     
+	End()
+--]     
+End()
+
+Scene( 3, "TMQ2-3" )
+--[
+	State( "fight" )
+	--[
+		Condition( "recv event from wps" )
+		--[
+			Param( "wps index", 12321 )
+			Param( "event id", 23680 )
+		--]
+		End()
+
+		Action( "use skill" )
+		--[
+			Param( "skill index", 0 )
+		--]
+		End()
+	--]     
+	End()
+--]     
+End()
+
+Scene( 4, "TMQ2-3" )
+--[
+	State( "fight" )
+	--[
+		Condition( "recv event from wps" )
+		--[
+			Param( "wps index", 12321 )
+			Param( "event id", 23690 )
+		--]
+		End()
+
+		Action( "use skill" )
+		--[
+			Param( "skill index", 0 )
+		--]
+		End()
+	--]     
+	End()
+--]     
+End()
+
+Scene( 5, "TMQ2-3" )
+--[
+	State( "fight" )
+	--[
+		Condition( "recv event from wps" )
+		--[
+			Param( "wps index", 12321 )
+			Param( "event id", 23700 )
+		--]
+		End()
+
+		Action( "use skill" )
+		--[
+			Param( "skill index", 0 )
+		--]
+		End()
+	--]     
+	End()
+--]     
+End()
+

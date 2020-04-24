@@ -1,0 +1,87 @@
+
+GameStage(0)
+--[
+	Action( "add mob" )	-- ¼¼³ú ÀÚºÀ
+	--[
+		Param( "index", 4542104 )
+		Param( "group", 7 )
+		Param( "loc x", -302.802 )
+		Param( "loc y", 133.412 )
+		Param( "loc z", -51.27 )
+		Param( "dir x", -0.936 )
+		Param( "dir z", -0.352 )
+		Param( "no spawn wait", "true" )
+	--]
+	End()
+
+	Action( "wait" )
+	--[
+		Condition( "check lp" )
+		--[
+			Param( "type", "mob" )
+			Param( "group", 7 )
+			Param( "lp", 50 )
+		--]
+		End()
+	--]
+	End()
+
+	Action( "send event to ts" )
+	--[
+		Param( "trigger type", "quest" )
+		Param( "apply type", "register all" )
+		Param( "event id", 21250 )
+	--]
+	End()
+
+	Action( "remove mobgroup" )
+	--[
+		Param( "group", 7 )
+		Param( "type", "clear" )
+	--]
+	End()
+
+	Action( "wait" )
+	--[
+		Condition( "recv event from ts" )
+		--[
+			Param( "trigger type", "quest" )
+			Param( "event id", 21310 )
+		--]
+		End()
+	--]
+	End()
+	
+	Action( "add mob" )	-- ¼¼³ú º¯½Å ÀÚºÀ
+	--[
+		Param( "index", 4561104 )
+		Param( "group", 8 )
+		Param( "loc x", -302.802 )
+		Param( "loc y", 133.412 )
+		Param( "loc z", -51.27 )
+		Param( "dir x", -0.936 )
+		Param( "dir z", -0.352 )
+		Param( "no spawn wait", "true" )
+	--]
+	End()	
+
+	Action( "wait" )
+	--[
+		Condition( "check mobgroup" )
+		--[
+			Param( "group", 8 )
+			Param( "count", 1 )
+		--]
+		End()
+	--]
+	End()
+		
+	Action( "send event to ts" )
+	--[
+		Param( "trigger type", "quest" )
+		Param( "apply type", "register all" )
+		Param( "event id", 21260 )
+	--]
+	End()
+--]
+End()

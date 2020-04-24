@@ -1,0 +1,107 @@
+-- UD1 Easy °æº¸±â
+
+GameStage(0)
+--[
+
+	Action("wait")
+	--[
+		Condition("area enter")
+		--[
+			Param("origin x", 55)
+			Param("origin z", 131)
+			Param("radius", 4)
+			Param("all member", "false")
+		--]
+		End()
+	--]
+	End()
+
+	Action("change object state")
+	--[
+		Param("index", 10)
+		Param("state", 1)
+		Param("substate show", 1)
+	--]
+	End()
+
+	Action("add mob")
+	--[
+		Param("index", 9416101)
+		Param("group", 2400101)
+		Param("loc x", 61.116)
+		Param("loc y", 25.613)
+		Param("loc z", 146.699)
+		Param("dir x", -0.009)
+		Param("dir z", -1.0)
+		Param("play script", 9416101)
+		Param("play scene", 1)
+		Param("no spawn wait", "true")
+	--]
+	End()
+
+	Action("add mob")
+	--[
+		Param("index", 9416101)
+		Param("group", 2400101)
+		Param("loc x", 66.312)
+		Param("loc y", 25.63)
+		Param("loc z", 145.443)
+		Param("dir x", -0.493)
+		Param("dir z", -0.87)
+		Param("play script", 9416101)
+		Param("play scene", 2)
+		Param("no spawn wait", "true")
+	--]
+	End()
+
+	Action("add mob")
+	--[
+		Param("index", 9416101)
+		Param("group", 2400101)
+		Param("loc x", 31.936)
+		Param("loc y", 10.536)
+		Param("loc z", 115.539)
+		Param("dir x", 0.862)
+		Param("dir z", 0.507)
+		Param("play script", 9416101)
+		Param("play scene", 3)
+		Param("no spawn wait", "true")
+	--]
+	End()
+
+	Action("add mob")
+	--[
+		Param("index", 9416101)
+		Param("group", 2400101)
+		Param("loc x", 32.804)
+		Param("loc y", 10.509)
+		Param("loc z", 111.578)
+		Param("dir x", 0.879)
+		Param("dir z", 0.477)
+		Param("play script", 9416101)
+		Param("play scene", 4)
+		Param("no spawn wait", "true")
+	--]
+	End()
+
+	Action("wait")
+	--[
+		Condition("check mobgroup")
+		--[
+			Param("group", 2400101)
+			Param("count", 4)
+		--]
+		End()
+	--]
+	End()
+
+	Action("change object state")
+	--[
+		Param("index", 10)
+		Param("state", 0)
+		Param("substate show", 1)
+	--]
+	End()
+--]
+End()
+

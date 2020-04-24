@@ -1,0 +1,210 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="소스 파일">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="헤더 파일">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="리소스 파일">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav</Extensions>
+    </Filter>
+    <Filter Include="Common">
+      <UniqueIdentifier>{dfd872a1-b670-4f89-abe8-9bc2a052958a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Patcher">
+      <UniqueIdentifier>{fcf3a108-1f5c-48e6-b0cd-cb34737f2887}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Manager%28Process%29">
+      <UniqueIdentifier>{48ea9110-cdbb-44fd-8fd8-dc3eb8dbef19}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DownLoader">
+      <UniqueIdentifier>{0a4c1724-5716-4ac0-8df4-9725b27b7cb2}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="explorer_information.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="HTTPTransparent.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Launcher.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="LauncherDlg.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Test2.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="BitmapDlg.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="Dib.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="ImageTextButton.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlLauncherConfig.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlPatchData.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlPatchServerConfig.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlPatchXmlSave.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="OutputBox.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlPatcher.cpp">
+      <Filter>Patcher</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlRtPatcher.cpp">
+      <Filter>Patcher</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlPatchManager.cpp">
+      <Filter>Manager%28Process%29</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlDownLoader.cpp">
+      <Filter>DownLoader</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlHttpDownLoader.cpp">
+      <Filter>DownLoader</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="explorer_information.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="HTTPTransparent.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Launcher.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="LauncherDlg.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Test2.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="BitmapDlg.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="DataType.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Dib.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="ImageTextButton.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlLauncherConfig.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlPatchData.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlPatchServerConfig.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlPatchXmlSave.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="OutputBox.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlEventPatcher.h">
+      <Filter>Patcher</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlPatcher.h">
+      <Filter>Patcher</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlRtPatcher.h">
+      <Filter>Patcher</Filter>
+    </ClInclude>
+    <ClInclude Include="patchwin.h">
+      <Filter>Patcher</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlPatchManager.h">
+      <Filter>Manager%28Process%29</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlDownLoader.h">
+      <Filter>DownLoader</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlEventDownLoader.h">
+      <Filter>DownLoader</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlHttpDownLoader.h">
+      <Filter>DownLoader</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\Background.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\ClosesBtnDown.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\ClosesBtnFocus.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\ClosesBtnUp.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\HtmlBack.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\Launcher.ico">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\PachProgress.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\Start BtnStand.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\StartBtnDown.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\StartBtnFocus.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\StartBtnUp.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Launcher.rc">
+      <Filter>리소스 파일</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\Launcher.rc2">
+      <Filter>리소스 파일</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+</Project>

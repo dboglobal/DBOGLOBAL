@@ -1,0 +1,137 @@
+GameStage(0)
+--[
+
+	Action("change sps scene")
+	--[
+		Param("index",5041201)
+		Param("play script",5041201)
+		Param("play scene",1)
+	--]
+	End()
+
+	Action("wait")
+	--[
+		Condition("check time")
+		--[
+			Param("time",5)
+		--]
+		End()
+	--]
+	End()
+
+	Action("add mob")
+	--[
+		Param("index", 7901104)
+		Param("group", 927)
+		Param("loc x", 3683.5)
+		Param("loc y", -52)
+		Param("loc z", 1345.7)
+		Param("dir x", 0.1)
+		Param("dir z", 0.9)
+		Param("no spawn wait", "true")
+	--]
+	End()
+
+	Action("add mob")
+	--[
+		Param("index", 7901104)
+		Param("group", 927)
+		Param("loc x", 3676.8)
+		Param("loc y", -52)
+		Param("loc z", 1350.4)
+		Param("dir x", 0.7)
+		Param("dir z", 0.6)
+		Param("no spawn wait", "true")
+	--]
+	End()
+
+	Action("add mob")
+	--[
+		Param("index", 7901104)
+		Param("group", 927)
+		Param("loc x", 3690.4)
+		Param("loc y", -52)
+		Param("loc z", 1349.2)
+		Param("dir x", -0.4)
+		Param("dir z", 0.9)
+		Param("no spawn wait", "true")
+	--]
+	End()
+
+	Action("send event to sps")
+	--[
+		Param("target type","npc")
+		Param("target index",5041201)
+		Param("event id", 240)
+	--]
+	End()
+
+	Action("wait")
+	--[
+		Param("operation", "or")
+
+		Condition("check mobgroup")
+		--[
+			Param("group", 927)
+			Param("count", 3)
+		--]
+		End()
+
+		Condition("child")
+		--[
+			Action("wait")
+			--[
+				Condition("check time")
+				--[
+					Param("time", 300)
+				--]
+				End()
+			--]
+			End()
+
+			Action("wps fail")
+			--[
+			--]
+			End()
+
+		--]
+		End()
+		
+	--]
+	End()
+
+	Action("send event to sps")
+	--[
+		Param("target type","npc")
+		Param("target index",5041201)
+		Param("event id", 241)
+	--]
+	End()
+
+--]
+End()
+
+GameFailed()
+--[
+
+	Action("remove npc")
+	--[
+		Param("index", 5041201)
+		Param("type", "clear")
+	--]
+	End()
+
+	Action("add npc")
+	--[
+		Param("index", 5041201)
+		Param("loc x", 3683.71)
+		Param("loc y", -51)
+		Param("loc z", 1358.07)
+		Param("dir x", 0.24)
+		Param("dir z", -0.971)
+		Param("no spawn wait","true")
+		Param("stand alone", "true")
+	--]
+	End()
+--]
+End()

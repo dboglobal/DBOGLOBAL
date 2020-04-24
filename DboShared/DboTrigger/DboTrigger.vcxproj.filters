@@ -1,0 +1,1044 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Precomp">
+      <UniqueIdentifier>{d8bed383-84c2-45e0-8d6a-59f0fbba5c48}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Entity">
+      <UniqueIdentifier>{a58860a8-2ac0-4013-9ac0-289b480c49b4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Entity\Factory">
+      <UniqueIdentifier>{390bfee0-f2a3-4ebc-b188-9ad1d44e45f1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Entity\Event">
+      <UniqueIdentifier>{fcb877b3-d9a4-4599-8dd1-3d34ee573104}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Entity\Condition">
+      <UniqueIdentifier>{fcfdaa3f-2538-4000-93ad-84e95bf08748}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Entity\Action">
+      <UniqueIdentifier>{293e7a53-f2ac-4122-8efe-bf62c6a6327b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Entity\Container">
+      <UniqueIdentifier>{f8f608d5-d8dc-4114-ab61-1ce6d9f28b8b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Global">
+      <UniqueIdentifier>{2a06c932-13c8-4fc1-adbc-be2133372eb4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Control">
+      <UniqueIdentifier>{4a86491a-d23d-4194-bbc4-0d090baa4bb6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Control\Event Mapper">
+      <UniqueIdentifier>{e3b8d26d-c2bf-4865-ba01-16767d9c5f67}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Control\Factory">
+      <UniqueIdentifier>{afe05b19-6cd0-48d8-8d4c-92d8dfd26de2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Control\Controller">
+      <UniqueIdentifier>{2d768c9f-00f9-4314-9ee6-4a4608c7e7b9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="UI">
+      <UniqueIdentifier>{547f545d-1a05-4555-8b66-96ee8ee5ac3e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="UI\Factory">
+      <UniqueIdentifier>{66bd6386-5b91-44b6-9775-949156b4311a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="UI\Agency">
+      <UniqueIdentifier>{0c3143c3-382f-4acc-a335-6654a3491d64}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="UI\Main">
+      <UniqueIdentifier>{dca3ec44-e59f-423f-b815-b988d0693288}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="UI\Receiver">
+      <UniqueIdentifier>{a0615050-add3-4ae3-9888-99c09a1f7854}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="precomp_trigger.cpp">
+      <Filter>Precomp</Filter>
+    </ClCompile>
+    <ClCompile Include="DboTSActFactoryType.cpp">
+      <Filter>Entity\Factory</Filter>
+    </ClCompile>
+    <ClCompile Include="DboTSCondFactoryType.cpp">
+      <Filter>Entity\Factory</Filter>
+    </ClCompile>
+    <ClCompile Include="DboTSContFactoryType.cpp">
+      <Filter>Entity\Factory</Filter>
+    </ClCompile>
+    <ClCompile Include="DboTSEntityFactory.cpp">
+      <Filter>Entity\Factory</Filter>
+    </ClCompile>
+    <ClCompile Include="DboTSEventFactoryType.cpp">
+      <Filter>Entity\Factory</Filter>
+    </ClCompile>
+    <ClCompile Include="DboTSBindStone.cpp">
+      <Filter>Entity\Event</Filter>
+    </ClCompile>
+    <ClCompile Include="DboTSBudokai.cpp">
+      <Filter>Entity\Event</Filter>
+    </ClCompile>
+    <ClCompile Include="DboTSClickMob.cpp">
+      <Filter>Entity\Event</Filter>
+    </ClCompile>
+    <ClCompile Include="DboTSClickNPC.cpp">
+      <Filter>Entity\Event</Filter>
+    </ClCompile>
+    <ClCompile Include="DboTSClickObject.cpp">
+      <Filter>Entity\Event</Filter>
+    </ClCompile>
+    <ClCompile Include="DboTSColObject.cpp">
+      <Filter>Entity\Event</Filter>
+    </ClCompile>
+    <ClCompile Include="DboTSColRgn.cpp">
+      <Filter>Entity\Event</Filter>
+    </ClCompile>
+    <ClCompile Include="DboTSFreeBattle.cpp">
+      <Filter>Entity\Event</Filter>
+    </ClCompile>
+    <ClCompile Include="DboTSHoipoiMix.cpp">
+      <Filter>Entity\Event</Filter>
+    </ClCompile>
+    <ClCompile Include="DboTSItemEquip.cpp">
+      <Filter>Entity\Event</Filter>
+    </ClCompile>
+    <ClCompile Include="DboTSItemGet.cpp">
+      <Filter>Entity\Event</Filter>
+    </ClCompile>
+    <ClCompile Include="DboTSItemIdentity.cpp">
+      <Filter>Entity\Event</Filter>
+    </ClCompile>
+    <ClCompile Include="DboTSItemUpgrade.cpp">
+      <Filter>Entity\Event</Filter>
+    </ClCompile>
+    <ClCompile Include="DboTSItemUse.cpp">
+      <Filter>Entity\Event</Filter>
+    </ClCompile>
+    <ClCompile Include="DboTSParty.cpp">
+      <Filter>Entity\Event</Filter>
+    </ClCompile>
+    <ClCompile Include="DboTSPrivateShop.cpp">
+      <Filter>Entity\Event</Filter>
+    </ClCompile>
+    <ClCompile Include="DboTSRB.cpp">
+      <Filter>Entity\Event</Filter>
+    </ClCompile>
+    <ClCompile Include="DboTSRcvSvrEvt.cpp">
+      <Filter>Entity\Event</Filter>
+    </ClCompile>
+    <ClCompile Include="DboTSScoutUse.cpp">
+      <Filter>Entity\Event</Filter>
+    </ClCompile>
+    <ClCompile Include="DboTSSearchQuest.cpp">
+      <Filter>Entity\Event</Filter>
+    </ClCompile>
+    <ClCompile Include="DboTSSkillUse.cpp">
+      <Filter>Entity\Event</Filter>
+    </ClCompile>
+    <ClCompile Include="DboTSSlotMachine.cpp">
+      <Filter>Entity\Event</Filter>
+    </ClCompile>
+    <ClCompile Include="DboTSTeleport.cpp">
+      <Filter>Entity\Event</Filter>
+    </ClCompile>
+    <ClCompile Include="DboTSUseMail.cpp">
+      <Filter>Entity\Event</Filter>
+    </ClCompile>
+    <ClCompile Include="DboTSCheckAttachObj.cpp">
+      <Filter>Entity\Condition</Filter>
+    </ClCompile>
+    <ClCompile Include="DboTSCheckAvatarDead.cpp">
+      <Filter>Entity\Condition</Filter>
+    </ClCompile>
+    <ClCompile Include="DboTSCheckBudokaiState.cpp">
+      <Filter>Entity\Condition</Filter>
+    </ClCompile>
+    <ClCompile Include="DboTSCheckClrQst.cpp">
+      <Filter>Entity\Condition</Filter>
+    </ClCompile>
+    <ClCompile Include="DboTSCheckCustomEvent.cpp">
+      <Filter>Entity\Condition</Filter>
+    </ClCompile>
+    <ClCompile Include="DboTSCheckDistWithNPC.cpp">
+      <Filter>Entity\Condition</Filter>
+    </ClCompile>
+    <ClCompile Include="DboTSCheckHasCoupon.cpp">
+      <Filter>Entity\Condition</Filter>
+    </ClCompile>
+    <ClCompile Include="DboTSCheckInNPC.cpp">
+      <Filter>Entity\Condition</Filter>
+    </ClCompile>
+    <ClCompile Include="DboTSCheckInWorld.cpp">
+      <Filter>Entity\Condition</Filter>
+    </ClCompile>
+    <ClCompile Include="DboTSCheckItem.cpp">
+      <Filter>Entity\Condition</Filter>
+    </ClCompile>
+    <ClCompile Include="DboTSCheckLvl.cpp">
+      <Filter>Entity\Condition</Filter>
+    </ClCompile>
+    <ClCompile Include="DboTSCheckNPCDead.cpp">
+      <Filter>Entity\Condition</Filter>
+    </ClCompile>
+    <ClCompile Include="DboTSCheckObjItem.cpp">
+      <Filter>Entity\Condition</Filter>
+    </ClCompile>
+    <ClCompile Include="DboTSCheckObjState.cpp">
+      <Filter>Entity\Condition</Filter>
+    </ClCompile>
+    <ClCompile Include="DboTSCheckOPObject.cpp">
+      <Filter>Entity\Condition</Filter>
+    </ClCompile>
+    <ClCompile Include="DboTSCheckOutRgn.cpp">
+      <Filter>Entity\Condition</Filter>
+    </ClCompile>
+    <ClCompile Include="DboTSCheckPCCls.cpp">
+      <Filter>Entity\Condition</Filter>
+    </ClCompile>
+    <ClCompile Include="DboTSCheckPCRace.cpp">
+      <Filter>Entity\Condition</Filter>
+    </ClCompile>
+    <ClCompile Include="DboTSCheckProgQuest.cpp">
+      <Filter>Entity\Condition</Filter>
+    </ClCompile>
+    <ClCompile Include="DboTSCheckPS.cpp">
+      <Filter>Entity\Condition</Filter>
+    </ClCompile>
+    <ClCompile Include="DboTSCheckQItem.cpp">
+      <Filter>Entity\Condition</Filter>
+    </ClCompile>
+    <ClCompile Include="DboTSCheckReputation.cpp">
+      <Filter>Entity\Condition</Filter>
+    </ClCompile>
+    <ClCompile Include="DboTSCheckSSM.cpp">
+      <Filter>Entity\Condition</Filter>
+    </ClCompile>
+    <ClCompile Include="DboTSCheckSToCDelivery.cpp">
+      <Filter>Entity\Condition</Filter>
+    </ClCompile>
+    <ClCompile Include="DboTSCheckSToCEvt.cpp">
+      <Filter>Entity\Condition</Filter>
+    </ClCompile>
+    <ClCompile Include="DboTSCheckWItem.cpp">
+      <Filter>Entity\Condition</Filter>
+    </ClCompile>
+    <ClCompile Include="DboTSActBroadMsg.cpp">
+      <Filter>Entity\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="DboTSActConcCheck.cpp">
+      <Filter>Entity\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="DboTSActCustomEvt.cpp">
+      <Filter>Entity\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="DboTSActDir.cpp">
+      <Filter>Entity\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="DboTSActDirIndicator.cpp">
+      <Filter>Entity\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="DboTSActDojo.cpp">
+      <Filter>Entity\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="DboTSActDoSkill.cpp">
+      <Filter>Entity\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="DboTSActDrop.cpp">
+      <Filter>Entity\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="DboTSActEscort.cpp">
+      <Filter>Entity\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="DboTSActETimerE.cpp">
+      <Filter>Entity\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="DboTSActETimerS.cpp">
+      <Filter>Entity\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="DboTSActExcCGroup.cpp">
+      <Filter>Entity\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="DboTSActHint.cpp">
+      <Filter>Entity\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="DboTSActInSSM.cpp">
+      <Filter>Entity\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="DboTSActItem.cpp">
+      <Filter>Entity\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="DboTSActMiniNarration.cpp">
+      <Filter>Entity\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="DboTSActNPCConv.cpp">
+      <Filter>Entity\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="DboTSActObjConv.cpp">
+      <Filter>Entity\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="DboTSActObjState.cpp">
+      <Filter>Entity\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="DboTSActObjWPS.cpp">
+      <Filter>Entity\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="DboTSActOPCam.cpp">
+      <Filter>Entity\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="DboTSActOpenWindow.cpp">
+      <Filter>Entity\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="DboTSActOPObject.cpp">
+      <Filter>Entity\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="DboTSActPCConv.cpp">
+      <Filter>Entity\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="DboTSActPIDgn.cpp">
+      <Filter>Entity\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="DboTSActPortal.cpp">
+      <Filter>Entity\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="DboTSActPSEmpty.cpp">
+      <Filter>Entity\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="DboTSActPSPop.cpp">
+      <Filter>Entity\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="DboTSActPSPush.cpp">
+      <Filter>Entity\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="DboTSActPSToSSM.cpp">
+      <Filter>Entity\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="DboTSActQItem.cpp">
+      <Filter>Entity\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="DboTSActRegCTiming.cpp">
+      <Filter>Entity\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="DboTSActRegQInfo.cpp">
+      <Filter>Entity\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="DboTSActRmvCoupon.cpp">
+      <Filter>Entity\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="DboTSActSendSvrEvt.cpp">
+      <Filter>Entity\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="DboTSActSkipCont.cpp">
+      <Filter>Entity\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="DboTSAcTSSMToPS.cpp">
+      <Filter>Entity\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="DboTSAcTSToCEvt.cpp">
+      <Filter>Entity\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="DboTSActSWProbSF.cpp">
+      <Filter>Entity\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="DboTSActTelecast.cpp">
+      <Filter>Entity\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="DboTSActTelMinorMatch.cpp">
+      <Filter>Entity\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="DboTSActTelMudosa.cpp">
+      <Filter>Entity\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="DboTSActTLQ.cpp">
+      <Filter>Entity\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="DboTSActTMQInfoShow.cpp">
+      <Filter>Entity\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="DboTSActTMQStage.cpp">
+      <Filter>Entity\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="DboTSActTMQTimeBonus.cpp">
+      <Filter>Entity\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="DboTSActTObjFriendly.cpp">
+      <Filter>Entity\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="DboTSActTSState.cpp">
+      <Filter>Entity\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="DboTSActTWaitTS.cpp">
+      <Filter>Entity\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="DboTSActWorldPlayScript.cpp">
+      <Filter>Entity\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="DboTSContEnd.cpp">
+      <Filter>Entity\Container</Filter>
+    </ClCompile>
+    <ClCompile Include="DboTSContGAct.cpp">
+      <Filter>Entity\Container</Filter>
+    </ClCompile>
+    <ClCompile Include="DboTSContGCond.cpp">
+      <Filter>Entity\Container</Filter>
+    </ClCompile>
+    <ClCompile Include="DboTSContNarration.cpp">
+      <Filter>Entity\Container</Filter>
+    </ClCompile>
+    <ClCompile Include="DboTSContProposal.cpp">
+      <Filter>Entity\Container</Filter>
+    </ClCompile>
+    <ClCompile Include="DboTSContReward.cpp">
+      <Filter>Entity\Container</Filter>
+    </ClCompile>
+    <ClCompile Include="DboTSContStart.cpp">
+      <Filter>Entity\Container</Filter>
+    </ClCompile>
+    <ClCompile Include="DboTSContSwitch.cpp">
+      <Filter>Entity\Container</Filter>
+    </ClCompile>
+    <ClCompile Include="DboTSContSyncAct.cpp">
+      <Filter>Entity\Container</Filter>
+    </ClCompile>
+    <ClCompile Include="DboTSContUnifiedNarration.cpp">
+      <Filter>Entity\Container</Filter>
+    </ClCompile>
+    <ClCompile Include="DboTSContUsrSel.cpp">
+      <Filter>Entity\Container</Filter>
+    </ClCompile>
+    <ClCompile Include="DboTSEMBindStone.cpp">
+      <Filter>Control\Event Mapper</Filter>
+    </ClCompile>
+    <ClCompile Include="DboTSEMBudokai.cpp">
+      <Filter>Control\Event Mapper</Filter>
+    </ClCompile>
+    <ClCompile Include="DboTSEMColRgn.cpp">
+      <Filter>Control\Event Mapper</Filter>
+    </ClCompile>
+    <ClCompile Include="DboTSEMFreeBattle.cpp">
+      <Filter>Control\Event Mapper</Filter>
+    </ClCompile>
+    <ClCompile Include="DboTSEMHoipoiMix.cpp">
+      <Filter>Control\Event Mapper</Filter>
+    </ClCompile>
+    <ClCompile Include="DboTSEMItem.cpp">
+      <Filter>Control\Event Mapper</Filter>
+    </ClCompile>
+    <ClCompile Include="DboTSEMItemIdentity.cpp">
+      <Filter>Control\Event Mapper</Filter>
+    </ClCompile>
+    <ClCompile Include="DboTSEMItemUpgrade.cpp">
+      <Filter>Control\Event Mapper</Filter>
+    </ClCompile>
+    <ClCompile Include="DboTSEMMob.cpp">
+      <Filter>Control\Event Mapper</Filter>
+    </ClCompile>
+    <ClCompile Include="DboTSEMNPC.cpp">
+      <Filter>Control\Event Mapper</Filter>
+    </ClCompile>
+    <ClCompile Include="DboTSEMObject.cpp">
+      <Filter>Control\Event Mapper</Filter>
+    </ClCompile>
+    <ClCompile Include="DboTSEMParty.cpp">
+      <Filter>Control\Event Mapper</Filter>
+    </ClCompile>
+    <ClCompile Include="DboTSEMPrivateShop.cpp">
+      <Filter>Control\Event Mapper</Filter>
+    </ClCompile>
+    <ClCompile Include="DboTSEMRB.cpp">
+      <Filter>Control\Event Mapper</Filter>
+    </ClCompile>
+    <ClCompile Include="DboTSEMSearchQuest.cpp">
+      <Filter>Control\Event Mapper</Filter>
+    </ClCompile>
+    <ClCompile Include="DboTSEMSkill.cpp">
+      <Filter>Control\Event Mapper</Filter>
+    </ClCompile>
+    <ClCompile Include="DboTSEMSlotMachine.cpp">
+      <Filter>Control\Event Mapper</Filter>
+    </ClCompile>
+    <ClCompile Include="DboTSEMSvrEvt.cpp">
+      <Filter>Control\Event Mapper</Filter>
+    </ClCompile>
+    <ClCompile Include="DboTSEMTeleport.cpp">
+      <Filter>Control\Event Mapper</Filter>
+    </ClCompile>
+    <ClCompile Include="DboTSEMUseMail.cpp">
+      <Filter>Control\Event Mapper</Filter>
+    </ClCompile>
+    <ClCompile Include="DboTSCtrlFactory.cpp">
+      <Filter>Control\Factory</Filter>
+    </ClCompile>
+    <ClCompile Include="DboTSCtrlFactoryType.cpp">
+      <Filter>Control\Factory</Filter>
+    </ClCompile>
+    <ClCompile Include="DboTSQCtrl.cpp">
+      <Filter>Control\Controller</Filter>
+    </ClCompile>
+    <ClCompile Include="DboTSTCtrl.cpp">
+      <Filter>Control\Controller</Filter>
+    </ClCompile>
+    <ClCompile Include="DboTSCompleteQInfo.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="DboTSUIFactory.cpp">
+      <Filter>UI\Factory</Filter>
+    </ClCompile>
+    <ClCompile Include="DboTSUIFactoryType.cpp">
+      <Filter>UI\Factory</Filter>
+    </ClCompile>
+    <ClCompile Include="DboTSQAgency.cpp">
+      <Filter>UI\Agency</Filter>
+    </ClCompile>
+    <ClCompile Include="DboTSTAgency.cpp">
+      <Filter>UI\Agency</Filter>
+    </ClCompile>
+    <ClCompile Include="DboTSMain.cpp">
+      <Filter>UI\Main</Filter>
+    </ClCompile>
+    <ClCompile Include="DboTSQRecv.cpp">
+      <Filter>UI\Receiver</Filter>
+    </ClCompile>
+    <ClCompile Include="DboTSTRecv.cpp">
+      <Filter>UI\Receiver</Filter>
+    </ClCompile>
+    <ClCompile Include="DboTSActOutMsg.cpp">
+      <Filter>Entity\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="DboTSActWPSFD.cpp">
+      <Filter>Entity\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="DboTSActMail.cpp">
+      <Filter>Entity\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="DboTSClickSideIcon.cpp">
+      <Filter>Entity\Event</Filter>
+    </ClCompile>
+    <ClCompile Include="DboTSActAvatarDead.cpp">
+      <Filter>Entity\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="DboTSDialogOpen.cpp">
+      <Filter>Entity\Event</Filter>
+    </ClCompile>
+    <ClCompile Include="DboTSQuest.cpp">
+      <Filter>Entity\Event</Filter>
+    </ClCompile>
+    <ClCompile Include="DboTSLevelCheck.cpp">
+      <Filter>Entity\Event</Filter>
+    </ClCompile>
+    <ClCompile Include="DboTSActSkyDgn.cpp">
+      <Filter>Entity\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="DboTSEMDialogOpen.cpp">
+      <Filter>Control\Event Mapper</Filter>
+    </ClCompile>
+    <ClCompile Include="DboTSEMFLink.cpp">
+      <Filter>Control\Event Mapper</Filter>
+    </ClCompile>
+    <ClCompile Include="DboTSEMLevelCheck.cpp">
+      <Filter>Control\Event Mapper</Filter>
+    </ClCompile>
+    <ClCompile Include="DboTSEMQuest.cpp">
+      <Filter>Control\Event Mapper</Filter>
+    </ClCompile>
+    <ClCompile Include="DboTSEMSideIcon.cpp">
+      <Filter>Control\Event Mapper</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="precomp_trigger.h">
+      <Filter>Precomp</Filter>
+    </ClInclude>
+    <ClInclude Include="DboTSActFactoryType.h">
+      <Filter>Entity\Factory</Filter>
+    </ClInclude>
+    <ClInclude Include="DboTSCondFactoryType.h">
+      <Filter>Entity\Factory</Filter>
+    </ClInclude>
+    <ClInclude Include="DboTSContFactoryType.h">
+      <Filter>Entity\Factory</Filter>
+    </ClInclude>
+    <ClInclude Include="DboTSEntityFactory.h">
+      <Filter>Entity\Factory</Filter>
+    </ClInclude>
+    <ClInclude Include="DboTSEventFactoryType.h">
+      <Filter>Entity\Factory</Filter>
+    </ClInclude>
+    <ClInclude Include="DboTSBindStone.h">
+      <Filter>Entity\Event</Filter>
+    </ClInclude>
+    <ClInclude Include="DboTSBudokai.h">
+      <Filter>Entity\Event</Filter>
+    </ClInclude>
+    <ClInclude Include="DboTSClickMob.h">
+      <Filter>Entity\Event</Filter>
+    </ClInclude>
+    <ClInclude Include="DboTSClickNPC.h">
+      <Filter>Entity\Event</Filter>
+    </ClInclude>
+    <ClInclude Include="DboTSClickObject.h">
+      <Filter>Entity\Event</Filter>
+    </ClInclude>
+    <ClInclude Include="DboTSColObject.h">
+      <Filter>Entity\Event</Filter>
+    </ClInclude>
+    <ClInclude Include="DboTSColRgn.h">
+      <Filter>Entity\Event</Filter>
+    </ClInclude>
+    <ClInclude Include="DboTSFreeBattle.h">
+      <Filter>Entity\Event</Filter>
+    </ClInclude>
+    <ClInclude Include="DboTSHoipoiMix.h">
+      <Filter>Entity\Event</Filter>
+    </ClInclude>
+    <ClInclude Include="DboTSItemEquip.h">
+      <Filter>Entity\Event</Filter>
+    </ClInclude>
+    <ClInclude Include="DboTSItemGet.h">
+      <Filter>Entity\Event</Filter>
+    </ClInclude>
+    <ClInclude Include="DboTSItemIdentity.h">
+      <Filter>Entity\Event</Filter>
+    </ClInclude>
+    <ClInclude Include="DboTSItemUpgrade.h">
+      <Filter>Entity\Event</Filter>
+    </ClInclude>
+    <ClInclude Include="DboTSItemUse.h">
+      <Filter>Entity\Event</Filter>
+    </ClInclude>
+    <ClInclude Include="DboTSParty.h">
+      <Filter>Entity\Event</Filter>
+    </ClInclude>
+    <ClInclude Include="DboTSPrivateShop.h">
+      <Filter>Entity\Event</Filter>
+    </ClInclude>
+    <ClInclude Include="DboTSRB.h">
+      <Filter>Entity\Event</Filter>
+    </ClInclude>
+    <ClInclude Include="DboTSRcvSvrEvt.h">
+      <Filter>Entity\Event</Filter>
+    </ClInclude>
+    <ClInclude Include="DboTSScoutUse.h">
+      <Filter>Entity\Event</Filter>
+    </ClInclude>
+    <ClInclude Include="DboTSSearchQuest.h">
+      <Filter>Entity\Event</Filter>
+    </ClInclude>
+    <ClInclude Include="DboTSSkillUse.h">
+      <Filter>Entity\Event</Filter>
+    </ClInclude>
+    <ClInclude Include="DboTSSlotMachine.h">
+      <Filter>Entity\Event</Filter>
+    </ClInclude>
+    <ClInclude Include="DboTSTeleport.h">
+      <Filter>Entity\Event</Filter>
+    </ClInclude>
+    <ClInclude Include="DboTSUseMail.h">
+      <Filter>Entity\Event</Filter>
+    </ClInclude>
+    <ClInclude Include="DboTSCheckAttachObj.h">
+      <Filter>Entity\Condition</Filter>
+    </ClInclude>
+    <ClInclude Include="DboTSCheckAvatarDead.h">
+      <Filter>Entity\Condition</Filter>
+    </ClInclude>
+    <ClInclude Include="DboTSCheckBudokaiState.h">
+      <Filter>Entity\Condition</Filter>
+    </ClInclude>
+    <ClInclude Include="DboTSCheckClrQst.h">
+      <Filter>Entity\Condition</Filter>
+    </ClInclude>
+    <ClInclude Include="DboTSCheckCustomEvent.h">
+      <Filter>Entity\Condition</Filter>
+    </ClInclude>
+    <ClInclude Include="DboTSCheckDistWithNPC.h">
+      <Filter>Entity\Condition</Filter>
+    </ClInclude>
+    <ClInclude Include="DboTSCheckHasCoupon.h">
+      <Filter>Entity\Condition</Filter>
+    </ClInclude>
+    <ClInclude Include="DboTSCheckInNPC.h">
+      <Filter>Entity\Condition</Filter>
+    </ClInclude>
+    <ClInclude Include="DboTSCheckInWorld.h">
+      <Filter>Entity\Condition</Filter>
+    </ClInclude>
+    <ClInclude Include="DboTSCheckItem.h">
+      <Filter>Entity\Condition</Filter>
+    </ClInclude>
+    <ClInclude Include="DboTSCheckLvl.h">
+      <Filter>Entity\Condition</Filter>
+    </ClInclude>
+    <ClInclude Include="DboTSCheckNPCDead.h">
+      <Filter>Entity\Condition</Filter>
+    </ClInclude>
+    <ClInclude Include="DboTSCheckObjItem.h">
+      <Filter>Entity\Condition</Filter>
+    </ClInclude>
+    <ClInclude Include="DboTSCheckObjState.h">
+      <Filter>Entity\Condition</Filter>
+    </ClInclude>
+    <ClInclude Include="DboTSCheckOPObject.h">
+      <Filter>Entity\Condition</Filter>
+    </ClInclude>
+    <ClInclude Include="DboTSCheckOutRgn.h">
+      <Filter>Entity\Condition</Filter>
+    </ClInclude>
+    <ClInclude Include="DboTSCheckPCCls.h">
+      <Filter>Entity\Condition</Filter>
+    </ClInclude>
+    <ClInclude Include="DboTSCheckPCRace.h">
+      <Filter>Entity\Condition</Filter>
+    </ClInclude>
+    <ClInclude Include="DboTSCheckProgQuest.h">
+      <Filter>Entity\Condition</Filter>
+    </ClInclude>
+    <ClInclude Include="DboTSCheckPS.h">
+      <Filter>Entity\Condition</Filter>
+    </ClInclude>
+    <ClInclude Include="DboTSCheckQItem.h">
+      <Filter>Entity\Condition</Filter>
+    </ClInclude>
+    <ClInclude Include="DboTSCheckReputation.h">
+      <Filter>Entity\Condition</Filter>
+    </ClInclude>
+    <ClInclude Include="DboTSCheckSSM.h">
+      <Filter>Entity\Condition</Filter>
+    </ClInclude>
+    <ClInclude Include="DboTSCheckSToCDelivery.h">
+      <Filter>Entity\Condition</Filter>
+    </ClInclude>
+    <ClInclude Include="DboTSCheckSToCEvt.h">
+      <Filter>Entity\Condition</Filter>
+    </ClInclude>
+    <ClInclude Include="DboTSCheckWItem.h">
+      <Filter>Entity\Condition</Filter>
+    </ClInclude>
+    <ClInclude Include="DboTSActBroadMsg.h">
+      <Filter>Entity\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="DboTSActConcCheck.h">
+      <Filter>Entity\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="DboTSActCustomEvt.h">
+      <Filter>Entity\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="DboTSActDir.h">
+      <Filter>Entity\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="DboTSActDirIndicator.h">
+      <Filter>Entity\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="DboTSActDojo.h">
+      <Filter>Entity\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="DboTSActDoSkill.h">
+      <Filter>Entity\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="DboTSActDrop.h">
+      <Filter>Entity\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="DboTSActEscort.h">
+      <Filter>Entity\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="DboTSActETimerE.h">
+      <Filter>Entity\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="DboTSActETimerS.h">
+      <Filter>Entity\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="DboTSActExcCGroup.h">
+      <Filter>Entity\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="DboTSActHint.h">
+      <Filter>Entity\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="DboTSActInSSM.h">
+      <Filter>Entity\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="DboTSActItem.h">
+      <Filter>Entity\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="DboTSActMiniNarration.h">
+      <Filter>Entity\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="DboTSActNPCConv.h">
+      <Filter>Entity\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="DboTSActObjConv.h">
+      <Filter>Entity\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="DboTSActObjState.h">
+      <Filter>Entity\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="DboTSActObjWPS.h">
+      <Filter>Entity\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="DboTSActOPCam.h">
+      <Filter>Entity\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="DboTSActOpenWindow.h">
+      <Filter>Entity\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="DboTSActOPObject.h">
+      <Filter>Entity\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="DboTSActPCConv.h">
+      <Filter>Entity\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="DboTSActPIDgn.h">
+      <Filter>Entity\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="DboTSActPortal.h">
+      <Filter>Entity\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="DboTSActPSEmpty.h">
+      <Filter>Entity\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="DboTSActPSPop.h">
+      <Filter>Entity\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="DboTSActPSPush.h">
+      <Filter>Entity\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="DboTSActPSToSSM.h">
+      <Filter>Entity\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="DboTSActQItem.h">
+      <Filter>Entity\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="DboTSActRegCTiming.h">
+      <Filter>Entity\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="DboTSActRegQInfo.h">
+      <Filter>Entity\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="DboTSActRmvCoupon.h">
+      <Filter>Entity\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="DboTSActSendSvrEvt.h">
+      <Filter>Entity\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="DboTSActSkipCont.h">
+      <Filter>Entity\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="DboTSAcTSSMToPS.h">
+      <Filter>Entity\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="DboTSAcTSToCEvt.h">
+      <Filter>Entity\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="DboTSActSWProbSF.h">
+      <Filter>Entity\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="DboTSActTelecast.h">
+      <Filter>Entity\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="DboTSActTelMinorMatch.h">
+      <Filter>Entity\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="DboTSActTelMudosa.h">
+      <Filter>Entity\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="DboTSActTLQ.h">
+      <Filter>Entity\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="DboTSActTMQInfoShow.h">
+      <Filter>Entity\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="DboTSActTMQStage.h">
+      <Filter>Entity\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="DboTSActTMQTimeBonus.h">
+      <Filter>Entity\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="DboTSActTObjFriendly.h">
+      <Filter>Entity\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="DboTSActTSState.h">
+      <Filter>Entity\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="DboTSActTWaitTS.h">
+      <Filter>Entity\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="DboTSActWorldPlayScript.h">
+      <Filter>Entity\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="DboTSContEnd.h">
+      <Filter>Entity\Container</Filter>
+    </ClInclude>
+    <ClInclude Include="DboTSContGAct.h">
+      <Filter>Entity\Container</Filter>
+    </ClInclude>
+    <ClInclude Include="DboTSContGCond.h">
+      <Filter>Entity\Container</Filter>
+    </ClInclude>
+    <ClInclude Include="DboTSContNarration.h">
+      <Filter>Entity\Container</Filter>
+    </ClInclude>
+    <ClInclude Include="DboTSContProposal.h">
+      <Filter>Entity\Container</Filter>
+    </ClInclude>
+    <ClInclude Include="DboTSContReward.h">
+      <Filter>Entity\Container</Filter>
+    </ClInclude>
+    <ClInclude Include="DboTSContStart.h">
+      <Filter>Entity\Container</Filter>
+    </ClInclude>
+    <ClInclude Include="DboTSContSwitch.h">
+      <Filter>Entity\Container</Filter>
+    </ClInclude>
+    <ClInclude Include="DboTSContSyncAct.h">
+      <Filter>Entity\Container</Filter>
+    </ClInclude>
+    <ClInclude Include="DboTSContUnifiedNarration.h">
+      <Filter>Entity\Container</Filter>
+    </ClInclude>
+    <ClInclude Include="DboTSContUsrSel.h">
+      <Filter>Entity\Container</Filter>
+    </ClInclude>
+    <ClInclude Include="DboTSCore.h">
+      <Filter>Global</Filter>
+    </ClInclude>
+    <ClInclude Include="DboTSCoreDefine.h">
+      <Filter>Global</Filter>
+    </ClInclude>
+    <ClInclude Include="DboTSEMBindStone.h">
+      <Filter>Control\Event Mapper</Filter>
+    </ClInclude>
+    <ClInclude Include="DboTSEMBudokai.h">
+      <Filter>Control\Event Mapper</Filter>
+    </ClInclude>
+    <ClInclude Include="DboTSEMColRgn.h">
+      <Filter>Control\Event Mapper</Filter>
+    </ClInclude>
+    <ClInclude Include="DboTSEMFreeBattle.h">
+      <Filter>Control\Event Mapper</Filter>
+    </ClInclude>
+    <ClInclude Include="DboTSEMHoipoiMix.h">
+      <Filter>Control\Event Mapper</Filter>
+    </ClInclude>
+    <ClInclude Include="DboTSEMItem.h">
+      <Filter>Control\Event Mapper</Filter>
+    </ClInclude>
+    <ClInclude Include="DboTSEMItemIdentity.h">
+      <Filter>Control\Event Mapper</Filter>
+    </ClInclude>
+    <ClInclude Include="DboTSEMItemUpgrade.h">
+      <Filter>Control\Event Mapper</Filter>
+    </ClInclude>
+    <ClInclude Include="DboTSEMMob.h">
+      <Filter>Control\Event Mapper</Filter>
+    </ClInclude>
+    <ClInclude Include="DboTSEMNPC.h">
+      <Filter>Control\Event Mapper</Filter>
+    </ClInclude>
+    <ClInclude Include="DboTSEMObject.h">
+      <Filter>Control\Event Mapper</Filter>
+    </ClInclude>
+    <ClInclude Include="DboTSEMParty.h">
+      <Filter>Control\Event Mapper</Filter>
+    </ClInclude>
+    <ClInclude Include="DboTSEMPrivateShop.h">
+      <Filter>Control\Event Mapper</Filter>
+    </ClInclude>
+    <ClInclude Include="DboTSEMRB.h">
+      <Filter>Control\Event Mapper</Filter>
+    </ClInclude>
+    <ClInclude Include="DboTSEMSearchQuest.h">
+      <Filter>Control\Event Mapper</Filter>
+    </ClInclude>
+    <ClInclude Include="DboTSEMSkill.h">
+      <Filter>Control\Event Mapper</Filter>
+    </ClInclude>
+    <ClInclude Include="DboTSEMSlotMachine.h">
+      <Filter>Control\Event Mapper</Filter>
+    </ClInclude>
+    <ClInclude Include="DboTSEMSvrEvt.h">
+      <Filter>Control\Event Mapper</Filter>
+    </ClInclude>
+    <ClInclude Include="DboTSEMTeleport.h">
+      <Filter>Control\Event Mapper</Filter>
+    </ClInclude>
+    <ClInclude Include="DboTSEMUseMail.h">
+      <Filter>Control\Event Mapper</Filter>
+    </ClInclude>
+    <ClInclude Include="DboTSCtrlFactory.h">
+      <Filter>Control\Factory</Filter>
+    </ClInclude>
+    <ClInclude Include="DboTSCtrlFactoryType.h">
+      <Filter>Control\Factory</Filter>
+    </ClInclude>
+    <ClInclude Include="DboTSQCtrl.h">
+      <Filter>Control\Controller</Filter>
+    </ClInclude>
+    <ClInclude Include="DboTSTCtrl.h">
+      <Filter>Control\Controller</Filter>
+    </ClInclude>
+    <ClInclude Include="DboTSCompleteQInfo.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="DboTSUIFactory.h">
+      <Filter>UI\Factory</Filter>
+    </ClInclude>
+    <ClInclude Include="DboTSUIFactoryType.h">
+      <Filter>UI\Factory</Filter>
+    </ClInclude>
+    <ClInclude Include="DboTSQAgency.h">
+      <Filter>UI\Agency</Filter>
+    </ClInclude>
+    <ClInclude Include="DboTSTAgency.h">
+      <Filter>UI\Agency</Filter>
+    </ClInclude>
+    <ClInclude Include="DboTSMain.h">
+      <Filter>UI\Main</Filter>
+    </ClInclude>
+    <ClInclude Include="DboTSQRecv.h">
+      <Filter>UI\Receiver</Filter>
+    </ClInclude>
+    <ClInclude Include="DboTSTRecv.h">
+      <Filter>UI\Receiver</Filter>
+    </ClInclude>
+    <ClInclude Include="DboTSActOutMsg.h">
+      <Filter>Entity\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="DboTSActWPSFD.h">
+      <Filter>Entity\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="DboTSActMail.h">
+      <Filter>Entity\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="DboTSClickSideIcon.h">
+      <Filter>Entity\Event</Filter>
+    </ClInclude>
+    <ClInclude Include="DboTSActAvatarDead.h">
+      <Filter>Entity\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="DboTSDialogOpen.h">
+      <Filter>Entity\Event</Filter>
+    </ClInclude>
+    <ClInclude Include="DboTSQuest.h">
+      <Filter>Entity\Event</Filter>
+    </ClInclude>
+    <ClInclude Include="DboTSLevelCheck.h">
+      <Filter>Entity\Event</Filter>
+    </ClInclude>
+    <ClInclude Include="DboTSActSkyDgn.h">
+      <Filter>Entity\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="DboTSEMDialogOpen.h">
+      <Filter>Control\Event Mapper</Filter>
+    </ClInclude>
+    <ClInclude Include="DboTSEMFLink.h">
+      <Filter>Control\Event Mapper</Filter>
+    </ClInclude>
+    <ClInclude Include="DboTSEMLevelCheck.h">
+      <Filter>Control\Event Mapper</Filter>
+    </ClInclude>
+    <ClInclude Include="DboTSEMQuest.h">
+      <Filter>Control\Event Mapper</Filter>
+    </ClInclude>
+    <ClInclude Include="DboTSEMSideIcon.h">
+      <Filter>Control\Event Mapper</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,402 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="소스 파일">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="소스 파일\ImageSrc">
+      <UniqueIdentifier>{855224c1-a422-4926-b78c-633f335d85d4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\ControlSrc">
+      <UniqueIdentifier>{b3720bb1-6b59-4cd0-9bc8-6589d8556efb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\ControlSrc\PropertySrc">
+      <UniqueIdentifier>{494270e4-48da-4b3f-a558-98f0f7bccb14}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\MiscSrc">
+      <UniqueIdentifier>{37293f8b-5190-4202-9c82-209fc6070102}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\LayerSrc">
+      <UniqueIdentifier>{568ff105-3e52-4212-af2e-96a3c34ecfab}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\LayerSrc\Resource">
+      <UniqueIdentifier>{55de1da6-dcbd-4ae7-9c13-659b16a4ea4a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\LayerSrc\Surface">
+      <UniqueIdentifier>{b5c8bd21-134a-4a44-8dbd-bb4ffe44c62e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="헤더 파일">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="헤더 파일\ImageHd">
+      <UniqueIdentifier>{d023f4d4-6add-496a-938c-c710afd96947}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="헤더 파일\ControlHd">
+      <UniqueIdentifier>{0e932f9c-7175-4228-b3c5-aa700acc15dd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="헤더 파일\ControlHd\PropertyHd">
+      <UniqueIdentifier>{88320611-ce29-4046-9d70-f636164d19a5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="헤더 파일\MiscHd">
+      <UniqueIdentifier>{240da4e5-9703-41c5-bf19-c1e7b752ea24}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="헤더 파일\LayerHd">
+      <UniqueIdentifier>{ee7d9a40-8d0a-47dc-bfd3-b5785071cfe7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="헤더 파일\LayerHd\Resource">
+      <UniqueIdentifier>{2bb90a62-530b-4c63-a6d1-a703662ca68a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="헤더 파일\LayerHd\Surface">
+      <UniqueIdentifier>{e363d436-555d-45fc-b3ff-ce74723c6301}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="리소스 파일">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx</Extensions>
+    </Filter>
+    <Filter Include="Renderware">
+      <UniqueIdentifier>{91622c10-c443-4c6e-aaab-0b4cacd4045e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Renderware\lib">
+      <UniqueIdentifier>{0a268261-2b58-4a0f-8195-145dbb52c759}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Renderware\include">
+      <UniqueIdentifier>{8ad2132c-0473-4b66-940d-09ee6255b85c}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="GUIControlView.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="GUIDebugView.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="GUIEditor.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="GUIEditorDoc.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="GUIFileInfoView.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="GUIFileView.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="GUIResourceView.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="MainFrm.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="CDevIL.cpp">
+      <Filter>소스 파일\ImageSrc</Filter>
+    </ClCompile>
+    <ClCompile Include="CDevILMFCMemDC.cpp">
+      <Filter>소스 파일\ImageSrc</Filter>
+    </ClCompile>
+    <ClCompile Include="KMMFCMemDC.cpp">
+      <Filter>소스 파일\ImageSrc</Filter>
+    </ClCompile>
+    <ClCompile Include="Control\AutoFont.cpp">
+      <Filter>소스 파일\ControlSrc</Filter>
+    </ClCompile>
+    <ClCompile Include="Control\BtnST.cpp">
+      <Filter>소스 파일\ControlSrc</Filter>
+    </ClCompile>
+    <ClCompile Include="Control\Dib.cpp">
+      <Filter>소스 파일\ControlSrc</Filter>
+    </ClCompile>
+    <ClCompile Include="DirTreeCtrl.cpp">
+      <Filter>소스 파일\ControlSrc</Filter>
+    </ClCompile>
+    <ClCompile Include="Control\RollupCtrl.cpp">
+      <Filter>소스 파일\ControlSrc</Filter>
+    </ClCompile>
+    <ClCompile Include="Control\Sizecbar.cpp">
+      <Filter>소스 파일\ControlSrc</Filter>
+    </ClCompile>
+    <ClCompile Include="Control\SizingTabCtrlBar.cpp">
+      <Filter>소스 파일\ControlSrc</Filter>
+    </ClCompile>
+    <ClCompile Include="SortStringArray.cpp">
+      <Filter>소스 파일\ControlSrc</Filter>
+    </ClCompile>
+    <ClCompile Include="Control\SXbutton.cpp">
+      <Filter>소스 파일\ControlSrc</Filter>
+    </ClCompile>
+    <ClCompile Include="Control\WBButton.cpp">
+      <Filter>소스 파일\ControlSrc</Filter>
+    </ClCompile>
+    <ClCompile Include="Control\N3Slider.cpp">
+      <Filter>소스 파일\ControlSrc\PropertySrc</Filter>
+    </ClCompile>
+    <ClCompile Include="Control\PropTree.cpp">
+      <Filter>소스 파일\ControlSrc\PropertySrc</Filter>
+    </ClCompile>
+    <ClCompile Include="Control\PropTreeInfo.cpp">
+      <Filter>소스 파일\ControlSrc\PropertySrc</Filter>
+    </ClCompile>
+    <ClCompile Include="Control\PropTreeItem.cpp">
+      <Filter>소스 파일\ControlSrc\PropertySrc</Filter>
+    </ClCompile>
+    <ClCompile Include="Control\PropTreeItemColor.cpp">
+      <Filter>소스 파일\ControlSrc\PropertySrc</Filter>
+    </ClCompile>
+    <ClCompile Include="Control\PropTreeItemCombo.cpp">
+      <Filter>소스 파일\ControlSrc\PropertySrc</Filter>
+    </ClCompile>
+    <ClCompile Include="Control\PropTreeItemEdit.cpp">
+      <Filter>소스 파일\ControlSrc\PropertySrc</Filter>
+    </ClCompile>
+    <ClCompile Include="Control\PropTreeItemSlider.cpp">
+      <Filter>소스 파일\ControlSrc\PropertySrc</Filter>
+    </ClCompile>
+    <ClCompile Include="Control\PropTreeItemStatic.cpp">
+      <Filter>소스 파일\ControlSrc\PropertySrc</Filter>
+    </ClCompile>
+    <ClCompile Include="Control\PropTreeList.cpp">
+      <Filter>소스 파일\ControlSrc\PropertySrc</Filter>
+    </ClCompile>
+    <ClCompile Include="CoordManager.cpp">
+      <Filter>소스 파일\MiscSrc</Filter>
+    </ClCompile>
+    <ClCompile Include="DataManager.cpp">
+      <Filter>소스 파일\MiscSrc</Filter>
+    </ClCompile>
+    <ClCompile Include="DirTreeCtrlMSC.cpp">
+      <Filter>소스 파일\MiscSrc</Filter>
+    </ClCompile>
+    <ClCompile Include="ExtFilter.cpp">
+      <Filter>소스 파일\MiscSrc</Filter>
+    </ClCompile>
+    <ClCompile Include="KMSelectBox.cpp">
+      <Filter>소스 파일\MiscSrc</Filter>
+    </ClCompile>
+    <ClCompile Include="FileViewDlg.cpp">
+      <Filter>소스 파일\LayerSrc</Filter>
+    </ClCompile>
+    <ClCompile Include="LayerMisc.cpp">
+      <Filter>소스 파일\LayerSrc</Filter>
+    </ClCompile>
+    <ClCompile Include="ResourceAttributeDlg.cpp">
+      <Filter>소스 파일\LayerSrc\Resource</Filter>
+    </ClCompile>
+    <ClCompile Include="ResourceLayer.cpp">
+      <Filter>소스 파일\LayerSrc\Resource</Filter>
+    </ClCompile>
+    <ClCompile Include="ResourceListDlg.cpp">
+      <Filter>소스 파일\LayerSrc\Resource</Filter>
+    </ClCompile>
+    <ClCompile Include="RectInfoDlg.cpp">
+      <Filter>소스 파일\LayerSrc\Surface</Filter>
+    </ClCompile>
+    <ClCompile Include="SurfaceAttributeDlg.cpp">
+      <Filter>소스 파일\LayerSrc\Surface</Filter>
+    </ClCompile>
+    <ClCompile Include="SurfaceLayer.cpp">
+      <Filter>소스 파일\LayerSrc\Surface</Filter>
+    </ClCompile>
+    <ClCompile Include="SurfaceListDlg.cpp">
+      <Filter>소스 파일\LayerSrc\Surface</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="GUIControlView.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="GUIDebugView.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="GUIEditor.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="GUIEditorDoc.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="GUIFileInfoView.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="GUIFileView.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="GUIResourceView.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="MainFrm.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="CDevIL.h">
+      <Filter>헤더 파일\ImageHd</Filter>
+    </ClInclude>
+    <ClInclude Include="CDevILMFCMemDC.h">
+      <Filter>헤더 파일\ImageHd</Filter>
+    </ClInclude>
+    <ClInclude Include="KMMFCMemDC.h">
+      <Filter>헤더 파일\ImageHd</Filter>
+    </ClInclude>
+    <ClInclude Include="Control\AutoFont.h">
+      <Filter>헤더 파일\ControlHd</Filter>
+    </ClInclude>
+    <ClInclude Include="Control\btnst.h">
+      <Filter>헤더 파일\ControlHd</Filter>
+    </ClInclude>
+    <ClInclude Include="Control\Dib.h">
+      <Filter>헤더 파일\ControlHd</Filter>
+    </ClInclude>
+    <ClInclude Include="DirTreeCtrl.h">
+      <Filter>헤더 파일\ControlHd</Filter>
+    </ClInclude>
+    <ClInclude Include="Control\RollupCtrl.h">
+      <Filter>헤더 파일\ControlHd</Filter>
+    </ClInclude>
+    <ClInclude Include="Control\Sizecbar.h">
+      <Filter>헤더 파일\ControlHd</Filter>
+    </ClInclude>
+    <ClInclude Include="Control\SizingTabCtrlBar.h">
+      <Filter>헤더 파일\ControlHd</Filter>
+    </ClInclude>
+    <ClInclude Include="SortStringArray.h">
+      <Filter>헤더 파일\ControlHd</Filter>
+    </ClInclude>
+    <ClInclude Include="Control\SXbutton.h">
+      <Filter>헤더 파일\ControlHd</Filter>
+    </ClInclude>
+    <ClInclude Include="Control\WBButton.h">
+      <Filter>헤더 파일\ControlHd</Filter>
+    </ClInclude>
+    <ClInclude Include="Control\N3Slider.h">
+      <Filter>헤더 파일\ControlHd\PropertyHd</Filter>
+    </ClInclude>
+    <ClInclude Include="Control\PropTree.h">
+      <Filter>헤더 파일\ControlHd\PropertyHd</Filter>
+    </ClInclude>
+    <ClInclude Include="Control\PropTreeInfo.h">
+      <Filter>헤더 파일\ControlHd\PropertyHd</Filter>
+    </ClInclude>
+    <ClInclude Include="Control\PropTreeItem.h">
+      <Filter>헤더 파일\ControlHd\PropertyHd</Filter>
+    </ClInclude>
+    <ClInclude Include="Control\PropTreeItemColor.h">
+      <Filter>헤더 파일\ControlHd\PropertyHd</Filter>
+    </ClInclude>
+    <ClInclude Include="Control\PropTreeItemCombo.h">
+      <Filter>헤더 파일\ControlHd\PropertyHd</Filter>
+    </ClInclude>
+    <ClInclude Include="Control\PropTreeItemEdit.h">
+      <Filter>헤더 파일\ControlHd\PropertyHd</Filter>
+    </ClInclude>
+    <ClInclude Include="Control\PropTreeItemSlider.h">
+      <Filter>헤더 파일\ControlHd\PropertyHd</Filter>
+    </ClInclude>
+    <ClInclude Include="Control\PropTreeItemStatic.h">
+      <Filter>헤더 파일\ControlHd\PropertyHd</Filter>
+    </ClInclude>
+    <ClInclude Include="Control\PropTreeList.h">
+      <Filter>헤더 파일\ControlHd\PropertyHd</Filter>
+    </ClInclude>
+    <ClInclude Include="CoordManager.h">
+      <Filter>헤더 파일\MiscHd</Filter>
+    </ClInclude>
+    <ClInclude Include="DataManager.h">
+      <Filter>헤더 파일\MiscHd</Filter>
+    </ClInclude>
+    <ClInclude Include="DirTreeCtrlMSC.h">
+      <Filter>헤더 파일\MiscHd</Filter>
+    </ClInclude>
+    <ClInclude Include="ExtFilter.h">
+      <Filter>헤더 파일\MiscHd</Filter>
+    </ClInclude>
+    <ClInclude Include="KMSelectBox.h">
+      <Filter>헤더 파일\MiscHd</Filter>
+    </ClInclude>
+    <ClInclude Include="FileViewDlg.h">
+      <Filter>헤더 파일\LayerHd</Filter>
+    </ClInclude>
+    <ClInclude Include="LayerMisc.h">
+      <Filter>헤더 파일\LayerHd</Filter>
+    </ClInclude>
+    <ClInclude Include="ResourceAttributeDlg.h">
+      <Filter>헤더 파일\LayerHd\Resource</Filter>
+    </ClInclude>
+    <ClInclude Include="ResourceLayer.h">
+      <Filter>헤더 파일\LayerHd\Resource</Filter>
+    </ClInclude>
+    <ClInclude Include="ResourceListDlg.h">
+      <Filter>헤더 파일\LayerHd\Resource</Filter>
+    </ClInclude>
+    <ClInclude Include="RectInfoDlg.h">
+      <Filter>헤더 파일\LayerHd\Surface</Filter>
+    </ClInclude>
+    <ClInclude Include="SurfaceAttributeDlg.h">
+      <Filter>헤더 파일\LayerHd\Surface</Filter>
+    </ClInclude>
+    <ClInclude Include="SurfaceLayer.h">
+      <Filter>헤더 파일\LayerHd\Surface</Filter>
+    </ClInclude>
+    <ClInclude Include="SurfaceListDlg.h">
+      <Filter>헤더 파일\LayerHd\Surface</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\bitmap1.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\expanddown.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\expanddown_blue.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\expandleft.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\expandleft_blue.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\GUIEditor.ico">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\GUIEditorDoc.ico">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\Icon.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\Toolbar.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\fpoint.cur">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\GUIEditor.rc2">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\spliter.cur">
+      <Filter>리소스 파일</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="GUIEditor.rc">
+      <Filter>리소스 파일</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="res\GUIEditor.manifest" />
+  </ItemGroup>
+</Project>

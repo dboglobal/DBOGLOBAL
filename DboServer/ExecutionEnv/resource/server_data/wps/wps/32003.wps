@@ -1,0 +1,55 @@
+-- stage 1
+-- That run on object
+-- (Runs when you click the upper gas pump)
+-- When hunting mob underworld upper gate open
+
+GameStage(0)
+--[
+	-- dummy로 spawn되어 있던 npc제거
+	Action( "remove npc" )
+	--[
+		Param( "index", 7081106 )
+		Param( "type", "clear" )
+	--]
+	End()
+
+	Action( "remove npc" )
+	--[
+		Param( "index", 7081107 )
+		Param( "type", "clear" )
+	--]
+	End()
+
+	Action( "remove npc" )
+	--[
+		Param( "index", 7083101 )
+		Param( "type", "clear" )
+	--]
+	End()
+
+	Action( "add mobgroup" )
+	--[
+		Param( "group", 103 )
+		Param( "no spawn wait", "true" )
+	--]
+	End()
+
+	Action( "wait" )
+	--[
+		Condition( "check mobgroup" )
+		--[
+			Param( "group", 103 )
+			Param( "count", 0 ) 
+		--]
+		End()
+	--]
+	End()
+
+	Action( "change object state" )
+	--[
+		Param( "index", 27 )
+		Param( "state", 1 )
+	--]
+	End()
+--]
+End()

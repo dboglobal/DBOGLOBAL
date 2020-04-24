@@ -1,0 +1,22 @@
+-- 2층
+-- 오브젝트에서 실행됨
+-- 2층 첫번째 방 안쪽의 스위치를 작동시켰을 때 시스템 메세지 띄움
+
+GameStage(0)
+--[
+	-- 시스템 메세지 "키리 정제소의 보안장치가 차단됩니다"
+	Action( "system message" )
+	--[
+		Param( "notify", "action" )
+		Param( "text index", 9 )
+	--]
+	End()
+	
+	Action( "system message" )
+	--[
+		Param( "notify", "system" )
+		Param( "text index", 9 )
+	--]
+	End()
+--]
+End()

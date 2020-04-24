@@ -1,0 +1,73 @@
+GameStage(0)
+--[
+
+	Action( "add mob" )
+	--[
+		Param( "index", 11831301 )
+		Param( "group", 291001 )
+		Param( "loc x", 2253.996)
+		Param( "loc y", -83.195)
+		Param( "loc z", -2315.004)
+		Param( "dir x", -0.558)
+	 	Param( "dir z", 0.830)
+	 	Param( "no spawn wait", "true" )
+	--]
+	End()
+	
+	Action( "add mob" )
+	--[
+		Param( "index", 11831301 )
+		Param( "group", 291001 )
+		Param( "loc x", 2251.730)
+		Param( "loc y", -83.291)
+		Param( "loc z", -2315.778)
+		Param( "dir x", -0.151)
+	 	Param( "dir z", 0.988)
+	 	Param( "no spawn wait", "true" )
+	--]
+	End()
+	
+	Action( "function" )
+	--[
+		Condition( "child" )
+		--[
+			Action( "wait" )
+			--[
+				Condition( "check time" )
+				--[
+					Param( "time", 300 )
+				--]
+				End()
+				
+				Action( "wps fail" )
+				--[
+				--]
+				End()
+			--]
+			End()
+		--]
+		End()
+		
+		Action( "wait")
+		--[
+		
+			Condition( "check mobgroup" )
+			--[
+				Param( "group", 291001 )
+				Param( "count", 2)
+			--]
+			End()
+		--]
+		End()
+	--]
+	End()
+	
+	Action( "send event to ts" )
+	--[
+		Param( "trigger type", "quest" )
+		Param( "apply type", "register all" )
+		Param( "event id", 694 )
+	--]
+	End()
+--]
+End()

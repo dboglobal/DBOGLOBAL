@@ -1,0 +1,14 @@
+RWECODE(E_RP_WORLD_INVSPHERE,
+		"The sphere is invalid")
+RWECODE(E_RP_WORLD_INVINTERSECTION,
+		"Invalid Intersection type")
+RWECODE(E_RP_WORLD_MATRANGE,
+		"Material requested was not within a valid range")
+RWECODE(E_RP_WORLD_CLUMPINWORLD,
+		"Clump already in a World")
+RWECODE(E_RP_WORLD_CLUMPNOTINWORLD,
+		"Clump is not currently in a World")
+RWECODE(E_RP_WORLD_ATOMICNOFRAME,
+		"The atomic does not have a frame attached")
+RWECODE(E_RP_WORLD_TOOMANYVERTICES,
+                "There are too many vertices for this operation")

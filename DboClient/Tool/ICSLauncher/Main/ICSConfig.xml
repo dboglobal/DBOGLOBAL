@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ICS_CONFIG>
+<MODE>CLIENT</MODE> <!-- CLIENT , SERVER -->
+<SERVER IP ="10.0.0.163" PORT ="8888" />
+<LAUNCHER>C:\NetMarble\DBO_Korea_Dev\DBOLauncher.exe</LAUNCHER>
+</ICS_CONFIG>

@@ -1,0 +1,23 @@
+GameStage(0)
+--[
+
+	Action("add mobgroup")
+	--[
+		Param("group", 1)
+		Param("no spawn wait", "true")
+		Param("respawn", "true")
+	--]
+	End()
+
+	Action("wait")
+	--[
+		Condition("recv event from ts")
+		--[
+			Param("trigger type", "quest")
+			Param("event id", 6456)-- 666
+		--]
+		End()
+	--]
+	End()
+--]
+End()

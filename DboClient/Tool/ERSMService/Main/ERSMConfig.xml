@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ERSM_CONIFG>
+  <ERS_FOLDER>D:\BugReport</ERS_FOLDER>
+  <ERSM_RUNTIME>30</ERSM_RUNTIME>
+  
+  <!--메일 전송기능은 현재 구현되지 않는다.(차후 구현 예정)-->
+  <SMTP_SERVER></SMTP_SERVER>
+  <SMTP_ID></SMTP_ID>  
+  <SMTP_PASSWORD></SMTP_PASSWORD>
+  <SMTP_RUNTIME>3</SMTP_RUNTIME>
+  <SMTP_SENDER>ERSM@ntl-inc.com</SMTP_SENDER>
+</ERSM_CONIFG>

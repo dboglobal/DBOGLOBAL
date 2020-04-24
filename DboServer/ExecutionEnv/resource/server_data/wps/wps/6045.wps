@@ -1,0 +1,51 @@
+
+GameStage( 0 )
+--[
+	Action( "change object state" )
+	--[
+		Param( "index", 10 )
+		Param( "state", 0 )
+		Param( "substate show", 1 )
+	--]
+	End()
+
+	Action( "change object state" )
+	--[
+		Param( "index", 11 )
+		Param( "state", 0 )
+		Param( "substate show", 1 )
+	--]
+	End()
+
+	Action( "wait" )
+	--[
+		Condition( "recv event from ts" )
+		--[
+			Param( "trigger type", "object" )
+			Param( "event id", 413 )
+		--]
+		End()
+	--]
+	End()
+--]
+End()
+
+GameFailed()
+--[
+	Action( "change object state" )
+	--[
+		Param( "index", 10 )
+		Param( "state", 1 )
+		Param( "substate show", 0 )
+	--]
+	End()
+
+	Action( "change object state" )
+	--[
+		Param( "index", 11 )
+		Param( "state", 1 )
+		Param( "substate show", 0 )
+	--]
+	End()
+--]
+End()

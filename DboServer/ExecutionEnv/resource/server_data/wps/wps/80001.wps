@@ -1,0 +1,1084 @@
+-- Summer vacation Event
+
+GameStage(0)
+--[
+	--- 여름방학 이벤트 시작공지 1 ---
+	Action("system message")
+	--[
+		Param("notify",	"notice")
+		Param("text index", 89)
+	--]
+	End()
+
+	Action("wait")
+	--[
+		Condition("check time")
+		--[
+			Param("time", 60 )
+		--]
+		End()
+	--]
+	End()
+	
+	--- 여름방학 이벤트 시작공지 2 ---
+	Action("system message")
+	--[
+		Param("notify",	"notice")
+		Param("text index", 90)
+	--]
+	End()
+
+	Action("wait")
+	--[
+		Condition("check time")
+		--[
+			Param("time", 60 )
+		--]
+		End()
+	--]
+	End()
+	
+	--- 여름방학 이벤트 시작공지 3 ---
+	Action("system message")
+	--[
+		Param("notify",	"notice")
+		Param("text index", 91)
+	--]
+	End()
+
+	Action("wait")
+	--[
+		Condition("check time")
+		--[
+			Param("time", 60 )
+		--]
+		End()
+	--]
+	End()
+	
+	--- 여름방학 이벤트 시작공지 4 ---
+	Action("system message")
+	--[
+		Param("notify",	"notice")
+		Param("text index", 92)
+	--]
+	End()
+
+	Action("wait")
+	--[
+		Condition("check time")
+		--[
+			Param("time", 60 )
+		--]
+		End()
+	--]
+	End()
+	
+	--- 여름방학 이벤트 시작공지 5 ---
+	Action("system message")
+	--[
+		Param("notify",	"notice")
+		Param("text index", 93)
+	--]
+	End()
+
+	Action("wait")
+	--[
+		Condition("check time")
+		--[
+			Param("time", 60 )
+		--]
+		End()
+	--]
+	End()
+	
+	--- 여름방학 이벤트 시작 ---
+	Action("function")
+	--[
+		Action("calculate")
+		--[
+			Param("declare", "int BossA = 0	, int BossB = 0, int Over = 1")
+		--]
+		End()
+		
+		Action("calculate")
+		--[
+			Param("declare", "vector mLoc =	Vector(0,0,0) ,	vector mDir = Vector(0,0,0)")
+		--]
+		End()
+		
+		Action("calculate")
+		--[
+			Param("declare", "vector nLoc =	Vector(0,0,0) ,	vector nDir = Vector(0,0,0)")
+		--]
+		End()
+		
+		Condition("child")
+		--[
+			--- 몬스터 전체	시간 체크 ---
+			Action("wait")
+	 		--[
+				Condition("check time")
+				--[
+		  			Param( "time", 3600 )
+		  		--]
+		  		End()
+			--]
+			End()
+			
+			Action("remove mobgroup")
+			--[
+				Param("group", 8000101)
+				Param("type", "clear")
+			--]
+			End()
+			
+			Action("remove mobgroup")
+			--[
+				Param("group", 8000102)
+				Param("type", "clear")
+			--]
+			End()
+			
+			Action("remove mobgroup")
+			--[
+				Param("group", 8000103)
+				Param("type", "clear")
+			--]
+			End()
+			
+			Action("remove mobgroup")
+			--[
+				Param("group", 8000104)
+				Param("type", "clear")
+			--]
+			End()
+			
+			Action("remove mobgroup")
+			--[
+				Param("group", 8000105)
+				Param("type", "clear")
+			--]
+			End()
+			
+			Action("remove mobgroup")
+			--[
+				Param("group", 8000106)
+				Param("type", "clear")
+			--]
+			End()
+			
+			Action("wait")
+	 		--[
+				Condition("check time")
+				--[
+		  			Param( "time", 600 )
+		  		--]
+		  		End()
+			--]
+			End()
+
+			--- 시간 경과시	wps 종료 ---
+			Action("wps fail")
+       			--[
+			--]
+			End()
+		--]
+		End()
+		
+		--- 몬스터 소환	---
+		Condition("child")
+		--[
+			Action("calculate")
+			--[ 
+				Param("declare", "int bbRand = 0")
+				Param("express", "bbRand = RandomRange(1, 2)")
+			--]
+			End()
+			
+			Action("switch")
+			--[
+				Param("compare variable", "bbRand")
+				--- 보스 이벤트	케이스 1 ---
+				Action("case")
+				--[
+					Param("value", 1)
+					
+					--- 첫번째 보스	등장 메세지 ---
+					Action("system message")
+					--[
+						Param("notify",	"notice")
+						Param("text index", 84)
+					--]
+					End()
+
+					--- 첫번째 보스	소환 ---
+					Action("add mob")
+			       	    	--[
+			 			Param("index", 15761201)
+			      		Param("group", 8000101)
+			  			Param("loc x", 7575.48)
+			   			Param("loc y", -96.14)
+			 			Param("loc z", -616.89)
+						Param("dir x", 0.00)
+			   			Param("dir z", 1.00)
+						Param("no spawn wait", "true")
+					--]
+					End()
+						
+			    	      --- 몬스터 사망 체크 ---
+			  		Action("wait")
+			   		--[
+			   			Condition("check mobgroup")
+						--[
+							Param("group", 8000101)
+							Param("count", 0)
+			 			--]
+			   			End()
+			     		--]
+			    		End()
+				    							
+					--- 첫번째 보스	사망 메세지 ---
+				  	Action("system message")
+				     	--[
+			      			Param("notify",	"notice")
+			  			Param("text index", 85)
+			    		--]
+			    		End()
+								
+			     		--- 5초대기 ---
+			     		Action("wait")
+				    	--[
+	       			    		Condition("check time")
+				  		--[
+			     				Param("time", 5)
+			     			--]
+			       			End()
+			    		--]
+			     		End()
+				       	 
+				    	--- 두번째 보스	소환 ---
+				   	Action("get faint location")
+				  	--[
+			   			Param("target type", "mob")
+			    			Param("target index", 8000101)
+			  			Param("loc var", "mLoc")
+			     			Param("dir var", "mDir")
+						Param("default", "Loc( 7575.48,	-96.14,	-616.89) , Dir(	0.00, 0.00, 1.00)")
+				    	--]
+				    	End()
+					    	 	
+			   		Action(	"add mob")
+			   		--[	
+			     			Param("index", 15763201)
+			   			Param("group", 8000102)
+						Param("use loc var", "true")
+				   		Param("loc var", "mLoc")
+		       				Param("dir var", "mDir")
+						Param("no spawn wait", "true")
+			       	 	--]
+			      		End()
+					
+			     		-- 몬스터 사망	체크 ---
+				  	Action("wait")
+				   	--[
+				   		Condition("check mobgroup")
+			     			--[
+			     				Param("group", 8000102)
+			   				Param("count", 0)
+			   			--]
+			   			End()
+				    	--]
+				    	End()
+				       	 
+				   	--- 두번째 보스	사망 메세지 ---
+				   	Action("system message")
+				   	--[
+			   			Param("notify",	"notice")
+			  			Param("text index", 86)
+			   		--]
+			 		End()
+											
+				    	--- 5초대기 ---
+				    	Action("wait")
+				     	--[
+			      			Condition("check time")
+			     			--[
+			    				Param("time", 5)
+			    			--]
+			 			End()
+				 	--]
+				    	End()
+					
+			   		--- 세번째 보스	소환 ---
+			   		Action("get faint location")
+			  		--[
+			    			Param("target type", "mob")
+			 			Param("target index", 8000102)
+				  		Param("loc var", "mLoc")
+				 		Param("dir var", "mDir")
+				 		Param("default", "Loc( 7575.48,	-96.14,	-616.89) , Dir(	0.00, 0.00, 1.00)")
+			 		--]
+			   		End()
+				       	
+			   		Action(	"add mob")
+				    	--[
+				    		Param("index", 15764201)
+				     		Param("group", 8000103)
+			   			Param("use loc var", "true")
+			      			Param("loc var", "mLoc")
+			  			Param("dir var", "mDir")
+			     			Param("no spawn wait", "true")
+					--]
+				       	End()
+					
+				      	-- 몬스터 사망	체크 ---
+				    	Action("wait")
+				  	--[
+			   			Condition("check mobgroup")
+			  			--[
+			  				Param("group", 8000103)
+			   				Param("count", 0)
+			   			--]
+				 		End()
+				  	--]
+					End()
+							
+			 		--- 세번째 보스	사망 메세지 ---
+			   		Action("system message")
+			 		--[
+						Param("notify",	"notice")
+				  		Param("text index", 87)
+				    	--]
+				    	End()
+						
+			   		--- 5초대기 ---
+			   		Action("wait")
+			    		--[
+				 		Condition("check time")
+				   		--[
+				    			Param("time", 5)
+			 			--]
+			  			End()
+			  		--]
+			     		End()
+
+				  	Action("get faint location")
+					--[
+						Param("target type", "mob")
+			 			Param("target index", 8000103)
+			      		Param("loc var", "mLoc")
+			   			Param("dir var", "mDir")
+			       		Param("default", "Loc( 7575.48,	-96.14,	-616.89) , Dir(	0.00, 0.00, 1.00)")
+			       	--]
+					End()
+					    	
+				 	Action("add npc")
+			   		--[
+			    			Param("index", 1131108)
+			 			Param("use loc var", "true")
+			    			Param("loc var", "mLoc")
+			     			Param("dir var", "mDir")
+			     		--]	
+			      		End()
+			      		
+			      		Action("calculate")
+					--[
+						Param("express", "BossA	= BossA	+ Over")
+					--]
+					End()
+			      		
+			      		Action("wait")
+			      		--[
+			      			Condition("check time")
+			      			--[
+			      				Param("time", 600)
+			      			--]
+			      			End()
+			      		--]
+			      		End()
+							
+			    	  	Action("remove npc" )
+			   	    	--[
+			   	    		Param( "index",	1131108	)
+			       			Param( "type", "clear" )
+			    	   	--]
+				 	End()
+		   		--]
+				End()
+					
+	 		       	--- 보스 이벤트	케이스 2 ---
+	      		 	Action("case")
+	    		  	--[
+	   		   		Param("value", 2)
+		
+	       				--- 첫번째 보스	등장 메세지 ---
+	      			  	Action("system message")
+	       				--[
+	    			  		Param("notify",	"notice")
+				      		Param("text index", 84)
+				      	--]
+			       		End()
+					
+				       	--- 첫번째 보스	소환 ---
+					Action("add mob")
+					--[
+				      		Param("index", 15761201)
+			      			Param("group", 8000101)
+			       			Param("loc x", 4610.86)
+			     			Param("loc y", -89.00)
+			       			Param("loc z", 2444.25)
+			      			Param("dir x", -0.05)
+				      		Param("dir z", 1.00)
+				       		Param("no spawn wait", "true")
+				       	--]
+			       		End()
+			      						
+			       		--- 몬스터 사망	체크 ---
+			      		 Action("wait")
+			       		--[
+				      		Condition("check mobgroup")
+				       		--[
+				     			Param("group", 8000101)
+			      				Param("count", 0)
+			      			--]
+			       			End()
+			      		--]
+				       	End()
+			      					
+				       	--- 첫번째 보스	사망 메세지 ---
+					Action("system message")
+			  	     	--[
+			  	     		Param("notify",	"notice")
+			 	      		Param("text index", 85)
+			 	     	--]
+					End()
+										
+					--- 5초대기 ---
+		    		    	Action("wait")
+		   		    	--[
+		    		   		Condition("check time")
+		   		   		--[
+		   		    			Param("time", 5)
+		 			     	--]
+					       	End()
+	       			 	--]
+		 		      	End()
+						
+		  			--- 두번째 보스	소환 ---
+					Action("get faint location")
+		  		      	--[
+				 		Param("target type", "mob")
+				      		Param("target index", 8000101)
+				     		Param("loc var", "mLoc")
+		       		     		Param("dir var", "mDir")
+		     		     		Param("default", "Loc( 4610.86,	-89.00,	2444.25) , Dir(	-0.05, 0.00, 1.00)")
+		    			 --]
+					 End()
+	      		
+				   	Action(	"add mob")
+			  	 	--[
+			 	    		Param("index", 15763201)
+		      		       		Param("group", 8000102)
+		      		     		Param("use loc var", "true")
+		    		      		Param("loc var", "mLoc")
+		    		      		Param("dir var", "mDir")
+		      			     	Param("no spawn wait", "true")
+					 --]
+					 End()
+			
+			       		--- 몬스터 사망	체크 ---
+				       	Action("wait")
+				   	--[
+				  		Condition("check mobgroup")
+				       		--[
+			 				Param("group", 8000102)
+							Param("count", 0)
+			 			--]
+						End()
+					--]
+				     	End()
+						
+			       		--- 두번째 보스	사망 메세지 ---
+			 		Action("system message")
+					--[
+						Param("notify",	"notice")
+				      		Param("text index", 86)
+				       	--]
+					End()
+											
+					--- 5초대기 ---
+					Action("wait")
+					--[
+						Condition("check time")
+						--[
+							Param("time", 5)
+						--]
+						End()
+					--]
+					End()
+						
+					--- 세번째 보스	소환 ---
+					Action("get faint location")
+					--[
+			      			Param("target type", "mob")
+		       				Param("target index", 8000102)
+				      		Param("loc var", "mLoc")
+			       		       	Param("dir var", "mDir")
+		     		     		Param("default", "Loc( 4610.86,	-89.00,	2444.25) , Dir(	-0.05, 0.00, 1.00)")
+				       	--]
+			       		End()
+							
+			      		Action(	"add mob")
+				       	--[
+				      		Param("index", 15764201)
+				       		Param("group", 8000103)
+			      			Param("use loc var", "true")
+			       			Param("loc var", "mLoc")
+			       			Param("dir var", "mDir")
+			      			Param("no spawn wait", "true")
+			       		--]
+				      	End()
+					
+				       	--- 몬스터 사망	체크 ---
+				     	Action("wait")
+				     	--[
+			      			Condition("check mobgroup")
+			      			--[
+			       				Param("group", 8000103)
+			     				Param("count", 0)
+			       			--]
+			       			End()
+				      	--]
+					End()
+	
+					--- 세번째 보스	사망 메세지 ---
+				      	Action("system message")
+			      		--[
+			      			Param("notify",	"notice")
+			      			Param("text index", 87)
+			       		--]
+				      	End()
+					
+					--- 5초대기 ---
+					Action("wait")
+				       	--[
+			      			Condition("check time")
+		       				--[
+			     				Param("time", 5)
+			      			--]
+				    		End()
+				      	--]
+					End()
+
+					Action("get faint location")
+					--[
+						Param("target type", "mob")
+			      			Param("target index", 8000103)
+			       			Param("loc var", "mLoc")
+			       			Param("dir var", "mDir")
+		     		     		Param("default", "Loc( 4610.86,	-89.00,	2444.25) , Dir(	-0.05, 0.00, 1.00)")
+				      	--]
+					End()
+							
+					Action("add npc")
+			      		--[
+			      			Param("index", 1131108)
+			      			Param("use loc var", "true")
+			       			Param("loc var", "mLoc")
+			      			Param("dir var", "mDir")
+					--]
+					End()
+					
+					Action("calculate")
+					--[
+						Param("express", "BossA	= BossA	+ Over")
+					--]
+					End()
+			      					
+					Action("wait")
+				       	--[
+						Condition("check time")
+				       		--[
+			      				Param("time", 600)
+			       			--]
+				       		End()
+				       	--]
+				      	End()
+			      					
+				      	Action(	"remove npc" )
+				       	--[
+				       		Param( "index",	1131108	)
+			       			Param( "type", "clear" )
+			       		--]
+				       	End()
+				--]
+				End()
+			--]
+			End()
+		--]
+		End()
+
+		--- 몬스터 소환	---
+		Condition("child")
+		--[
+			Action("calculate")
+			--[ 
+				Param("declare", "int bcRand = 0")
+				Param("express", "bcRand = RandomRange(1, 2)")
+			--]
+			End()
+		
+			Action("switch")
+			--[
+				Param("compare variable", "bcRand")
+	
+				--- 보스 이벤트	케이스 1 ---
+				Action("case")
+				--[
+					Param("value", 1)
+					--- 첫번째 보스	소환 ---
+					Action("add mob")
+					--[
+						Param("index", 18211301)
+						Param("group", 8000104)
+						Param("loc x", 3491.03)
+						Param("loc y", -113.10)
+						Param("loc z", -585.41)
+						Param("dir x", 0.00)
+						Param("dir z", 1.00)
+						Param("no spawn wait", "true")
+					--]
+					End()
+					
+					--- 몬스터 사망	체크 ---
+					Action("wait")
+					--[
+						Condition("check mobgroup")
+						--[
+							Param("group", 8000104)
+							Param("count", 0)
+						--]
+						End()
+					--]
+					End()
+					
+					--- 첫번째 보스	사망 메세지 ---
+					Action("system message")
+					--[
+						Param("notify",	"notice")
+						Param("text index", 85)
+					--]
+					End()
+								
+					--- 5초대기 ---
+					Action("wait")
+					--[
+						Condition("check time")
+						--[
+							Param("time", 5)
+						--]
+						End()
+					--]
+					End()
+			
+					--- 두번째 보스	소환 ---
+					Action("get faint location")
+					--[
+						Param("target type", "mob")
+						Param("target index", 8000104)
+						Param("loc var", "nLoc")
+						Param("dir var", "nDir")
+						Param("default", "Loc( 3491.03,	-113.10, -585.41) , Dir( 0.00, 0.00, 1.00)")
+					--]
+					End()
+				
+					Action(	"add mob")
+					--[
+						Param("index", 18213201)
+						Param("group", 8000105)
+						Param("use loc var", "true")
+						Param("loc var", "nLoc")
+						Param("dir var", "nDir")
+						Param("no spawn wait", "true")
+					--]
+					End()
+								
+					--- 몬스터 사망	체크 ---
+					Action("wait")
+					--[
+						Condition("check mobgroup")
+						--[
+							Param("group", 8000105)
+							Param("count", 0)
+						--]
+						End()
+					--]
+					End()
+			
+					--- 두번째 보스	사망 메세지 ---
+					Action("system message")
+					--[
+						Param("notify",	"notice")
+						Param("text index", 86)
+					--]
+					End()
+					
+					--- 5초대기 ---
+					Action("wait")
+					--[
+						Condition("check time")
+						--[
+							Param("time", 5)
+						--]
+						End()
+					--]
+					End()
+				
+					--- 세번째 보스	소환 ---
+					Action("get faint location")
+					--[
+						Param("target type", "mob")
+						Param("target index", 8000105)
+						Param("loc var", "nLoc")
+						Param("dir var", "nDir")
+						Param("default", "Loc( 3491.03,	-113.10, -585.41) , Dir( 0.00, 0.00, 1.00)")
+					--]
+					End()
+				
+					Action(	"add mob")
+					--[
+						Param("index", 11742401)
+						Param("group", 8000106)
+						Param("use loc var", "true")
+						Param("loc var", "nLoc")
+						Param("dir var", "nDir")
+						Param("no spawn wait", "true")
+					--]
+					End()
+			
+					--- 몬스터 사망	체크 ---
+					Action("wait")
+					--[
+						Condition("check mobgroup")
+						--[
+							Param("group", 8000106)
+							Param("count", 0)
+						--]
+						End()
+					--]
+					End()
+								
+		 			--- 세번째 보스	사망 메세지 ---
+		   			Action("system message")
+		 			--[
+						Param("notify",	"notice")
+			  			Param("text index", 88)
+			    		--]
+			    		End()
+					
+		  			--- 5초대기 ---
+		   			Action("wait")
+		    			--[
+			 			Condition("check time")
+			   			--[
+			    				Param("time", 5)
+		 				--]
+		  				End()
+		  			--]
+		     			End()
+
+			  		Action("get faint location")
+			 		--[
+			    			Param("target type", "mob")
+						Param("target index", 8000106)
+						Param("loc var", "nLoc")
+						Param("dir var", "nDir")
+						Param("default", "Loc( 3491.03,	-113.10, -585.41) , Dir( 0.00, 0.00, 1.00)")
+		       			--]
+			   		End()
+
+			 		Action("add npc")
+		   			--[
+		    				Param("index", 1131109)
+		 				Param("use loc var", "true")
+		    				Param("loc var", "nLoc")
+		     				Param("dir var", "nDir")
+			    		--]	
+			       		End()
+			       		
+			       		Action("calculate")
+					--[
+						Param("express", "BossB	= BossB	+ Over")
+					--]
+					End()
+					
+					Action("wait")
+					--[
+						Condition("check time")
+						--[
+							Param("time", 600)
+						--]
+						End()
+					--]
+					End()
+
+		      			Action(	"remove npc" )
+		       			--[
+		       				Param( "index",	1131109	)
+		       				Param( "type", "clear" )
+		       			--]
+			       		End()
+      				--]
+   		       		End()
+
+     	       			--- 보스 이벤트	케이스 2 ---
+				Action("case")
+				--[
+					Param("value", 2)
+
+			       		--- 첫번째 보스	소환 ---
+			       		Action("add mob")
+			      		--[
+						Param("index", 18211301)
+						Param("group", 8000104)
+						Param("loc x", 2051.67)
+						Param("loc y", -106.03)
+						Param("loc z", 879.40)
+						Param("dir x", 0.00)
+						Param("dir z", 1.00)
+						Param("no spawn wait", "true")
+			       		--]
+		       			End()
+
+    					--- 몬스터 사망	체크 ---
+		      			Action("wait")
+		       			--[
+			      			Condition("check mobgroup")
+			       			--[
+			       				Param("group", 8000104)
+		      					Param("count", 0)
+		      				--]
+		       				End()
+		      			--]
+			       		End()
+
+			       		--- 첫번째 보스	사망 메세지 ---
+			      		Action("system message")
+		       			--[
+		       				Param("notify",	"notice")
+		       				Param("text index", 85)
+		      			--]
+			       		End()
+
+			      		--- 5초대기 ---
+			       		Action("wait")
+		       			--[
+		       				Condition("check time")
+		      				--[
+		       					Param("time", 5)
+			      			--]
+			       			End()
+			      		--]
+		       			End()
+
+			      		--- 두번째 보스	소환 ---
+			       		Action("get faint location")
+			      		--[
+		       				Param("target type", "mob")
+						Param("target index", 8000104)
+						Param("loc var", "nLoc")
+						Param("dir var", "nDir")
+						Param("default", "Loc( 2051.67,	-106.03, 879.40) , Dir(	0.00, 0.00, 1.00)")
+			 		--]
+			   		End()
+
+			   		Action(	"add mob")
+		   			--[
+						Param("index", 18213201)
+						Param("group", 8000105)
+		   				Param("use loc var", "true")
+		  				Param("loc var", "nLoc")
+		  				Param("dir var", "nDir")
+			   			Param("no spawn wait", "true")
+			    		--]
+			  		End()
+
+		       			--- 몬스터 사망	체크 ---
+			       		Action("wait")
+			   		--[
+			  			Condition("check mobgroup")
+			       			--[
+		 					Param("group", 8000105)
+							Param("count", 0)
+		 				--]
+						End()
+					--]
+			     		End()
+
+		       			-- 두번째 보스	사망 메세지 ---
+		 			Action("system message")
+					--[
+						Param("notify",	"notice")
+			      			Param("text index", 86)
+			       		--]
+					End()
+
+					--- 5초대기 ---
+					Action("wait")
+					--[
+						Condition("check time")
+						--[
+							Param("time", 5)
+						--]
+						End()
+					--]
+					End()
+
+					--- 세번째 보스	소환 ---
+					Action("get faint location")
+					--[
+						Param("target type", "mob")
+						Param("target index", 8000105)
+						Param("loc var", "nLoc")
+						Param("dir var", "nDir")
+						Param("default", "Loc( 1984.36,	-105.28, 804.13) , Dir(	0.00, 0.00, 1.00)")
+					--]
+		       			End()
+
+		      			Action(	"add mob")
+			       		--[
+						Param("index", 11742401)
+						Param("group", 8000106)
+						Param("use loc var", "true")
+						Param("loc var", "nLoc")
+						Param("dir var", "nDir")
+						Param("no spawn wait", "true")
+		       			--]
+			      		End()
+
+			       		--- 몬스터 사망	체크 ---
+			     		Action("wait")
+			      		--[
+		      				Condition("check mobgroup")
+		      				--[
+		       					Param("group", 8000106)
+		     					Param("count", 0)
+		       				--]
+		       				End()
+			      		--]
+			       		End()
+
+			       		--- 세번째 보스	사망 메세지 ---
+		      			Action("system message")
+		      			--[
+		      				Param("notify",	"notice")
+		      				Param("text index", 88)
+		       			--]
+			      		End()
+
+			       		--- 5초대기 ---
+			      		Action("wait")
+		       			--[
+		      				Condition("check time")
+	       					--[
+		     					Param("time", 5)
+		      				--]
+			    			End()
+			      		--]
+			       		End()
+
+			       		Action("get faint location")
+			       		--[
+						Param("target type", "mob")
+						Param("target index", 8000106)
+						Param("loc var", "nLoc")
+						Param("dir var", "nDir")
+						Param("default", "Loc( 1984.36,	-105.28, 804.13) , Dir(	0.00, 0.00, 1.00)")
+		      			--]
+			       		End()
+
+			       		Action("add npc")
+		      			--[
+		      				Param("index", 1131109)
+		      				Param("use loc var", "true")
+		       				Param("loc var", "nLoc")
+		      				Param("dir var", "nDir")
+					--]
+			       		End()
+			       		
+			       		Action("calculate")
+					--[
+						Param("express", "BossB	= BossB	+ Over")
+					--]
+					End()
+
+       					Action("wait")
+		       			--[
+						Condition("check time")
+		       				--[
+		      					Param("time", 600)
+		       				--]
+			       			End()
+			       		--]
+			      		End()
+
+		      			Action(	"remove npc" )
+		       			--[
+		       				Param( "index",	1131109	)
+		       				Param( "type", "clear" )
+		       			--]
+			       		End()
+			       	--]
+			      	End()
+			--]
+			End()
+		--]
+		End()
+		
+		Action("wait")
+		--[
+			Param("operation", "and")
+			
+			Condition("compare")
+			--[
+				Param("express", "BossA	== Over")
+			--]
+			End()
+
+			Condition("compare")
+			--[
+				Param("express", "BossB	== Over")
+			--]
+			End()
+		--]
+		End()
+		
+		Action("wait")
+		--[
+			Condition("check time")
+			--[
+				Param("time", 600)
+			--]
+			End()
+		--]
+		End()
+		
+		Action(	"remove npc" )
+		--[
+			Param( "index",	1131109	)
+		       	Param( "type", "clear" )
+		--]
+		End()
+		
+		Action(	"remove npc" )
+		--[
+			Param( "index",	1131108	)
+			Param( "type", "clear" )
+		--]
+		End()
+	--]
+	End()
+--]
+End()
+

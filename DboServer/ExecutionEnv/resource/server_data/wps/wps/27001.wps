@@ -1,0 +1,65 @@
+-- New Battle Script podongyi
+GameStage(0)
+--[
+	-- 신 포동이 소환
+	Action( "add mobgroup" )
+	--[
+		Param( "group", 6 )
+		Param( "no spawn wait", "true" )
+	--]
+	End()
+
+	-- 육탄 로보 소환
+	Action( "add mobgroup" )
+	--[
+		Param( "group", 7 )
+		Param( "no spawn wait", "true" )
+		Param( "respawn", "true" )
+	--]
+	End()
+
+	-- 육탄 로보 소환
+	Action( "add mobgroup" )
+	--[
+		Param( "group", 8 )
+		Param( "no spawn wait", "true" )
+		Param( "respawn", "true" )
+	--]
+	End()
+
+	-- 신 포동이 사망 체크
+	Action( "wait" )
+	--[
+		Condition( "check mobgroup" )
+		--[
+			Param( "group", 6 )
+			Param( "count", 1 )
+		--]
+		End()
+	--]
+	End()
+
+	-- 신 포동이 사망시 육탄 로보 디스폰
+	Action( "remove mobgroup" )
+	--[
+		Param( "group", 7 )
+		Param( "type", "clear" )
+	--]
+	End()
+
+	-- 신 포동이 사망시 육탄 로보 디스폰
+	Action( "remove mobgroup" )
+	--[
+		Param( "group", 8 )
+		Param( "type", "clear" )
+	--]
+	End()
+
+	Action( "send event to wps" )
+	--[
+		Param( "wps index", 27002 )
+		Param( "event id", 431 )
+	--]
+	End()
+--]
+End()

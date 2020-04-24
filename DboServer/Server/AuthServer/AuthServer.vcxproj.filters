@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="stdafx">
+      <UniqueIdentifier>{4abf431c-a4b8-4a84-a1dd-d0ea81c5fa7a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AuthPacket">
+      <UniqueIdentifier>{6667ab49-1253-42c8-8b78-d7753f7d388a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Session">
+      <UniqueIdentifier>{009c1f47-0935-4496-ad55-f16e8b1b5900}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Session\ClientSession">
+      <UniqueIdentifier>{cb8cb81c-ed43-4c43-a0af-4011ac06ea63}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Server">
+      <UniqueIdentifier>{e801d95d-ef75-45dc-9b36-6d2977a33f13}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Server\MasterServer">
+      <UniqueIdentifier>{cbee1933-cb45-4cec-b954-56b626aa78e5}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>stdafx</Filter>
+    </ClCompile>
+    <ClCompile Include="PacketAuthServer.cpp">
+      <Filter>AuthPacket</Filter>
+    </ClCompile>
+    <ClCompile Include="ClientSession.cpp">
+      <Filter>Session\ClientSession</Filter>
+    </ClCompile>
+    <ClCompile Include="AuthServer.cpp" />
+    <ClCompile Include="MasterServerSession.cpp">
+      <Filter>Server\MasterServer</Filter>
+    </ClCompile>
+    <ClCompile Include="MasterServerPacket.cpp">
+      <Filter>Server\MasterServer</Filter>
+    </ClCompile>
+    <ClCompile Include="SubNeighborServerInfoManager.cpp">
+      <Filter>Server</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="stdafx.h">
+      <Filter>stdafx</Filter>
+    </ClInclude>
+    <ClInclude Include="ClientSession.h">
+      <Filter>Session\ClientSession</Filter>
+    </ClInclude>
+    <ClInclude Include="SessionFactory.h">
+      <Filter>Session</Filter>
+    </ClInclude>
+    <ClInclude Include="PacketAuthServer.h">
+      <Filter>AuthPacket</Filter>
+    </ClInclude>
+    <ClInclude Include="AuthServer.h" />
+    <ClInclude Include="MasterServerSession.h">
+      <Filter>Server\MasterServer</Filter>
+    </ClInclude>
+    <ClInclude Include="SubNeighborServerInfoManager.h">
+      <Filter>Server</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

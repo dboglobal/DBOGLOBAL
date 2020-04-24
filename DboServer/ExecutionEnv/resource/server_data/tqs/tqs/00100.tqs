@@ -1,0 +1,508 @@
+------------------------------------------------------
+-- tutorial
+--
+-- Begin : 2008-12-3
+--
+-- Copyright : ⓒ NTL-Inc Co., Ltd
+--
+-- Author : Author : YeoHyeonJoon (souled@ntl-inc.com)
+--
+-- Changes: removed "respawn" from monsters to fix the drop
+------------------------------------------------------
+
+GameBegin()
+--[
+
+--tl.lua로 발동된 Cinematic 종료 시 까지 대기
+	Action("wait")
+	--[
+		Condition( "recv ts event" )
+		--[
+			Param( "trigger type", "quest" );
+			Param( "event id", 1100011)
+		--]
+		End()
+   	--]
+	End()
+
+--BGM Play
+	Action( "play bgm" )
+	--[
+		Param( "play", "true")
+		Param( "name", "BGM\\BGM_TUTORIAL.ogg")
+		Param( "loop", "true")
+	--]
+	End()
+
+--스카우터  사용하기 설명 종료까지 대기
+	Action("wait")
+	--[
+		Condition( "recv ts event" )
+		--[
+			Param( "trigger type", "quest" );
+			Param( "event id", 1100001)
+		--]
+		End()
+   	--]
+	End()
+	
+--스카우터 사용 튜토리얼 위한 몹 스폰 loc_x -105 loc_z -155
+	Action( "add mobgroup" )
+	--[
+		Param( "group", 1 )
+      	--Param("respawn","true")
+   	--]
+   	End()
+
+--몬스터의 방향 표시
+	Action( "direction indicate" )
+	--[
+		Param( "apply", "true" )
+		Param( "indicate type", "point" )
+		Param( "loc x", -105)
+		Param( "loc z", -155)
+	--]
+	End()
+
+-- 몹잡기 전까지 대기
+	Action("wait")
+	--[
+		Condition( "recv ts event" )
+		--[
+			Param( "trigger type", "quest" );
+			Param( "event id", 1100101)
+		--]
+		End()
+	--]
+	End()
+
+--방향 표시 제거
+	Action( "direction indicate" )
+	--[
+		Param( "apply", "false" )
+		Param( "indicate type", "point" )
+	--]
+	End()	
+	
+--몬스터 확인사살	
+	Action( "remove mobgroup" )
+	--[
+		Param( "group", 1 ) -- 1411107
+		Param( "type", "faint" )
+	--]
+	End()
+
+--몬스터 부르기 명령 전까지 대기
+	Action("wait")
+	--[
+		Condition( "recv ts event" )
+		--[
+			Param( "trigger type", "quest" );
+			Param( "event id", 1100201)
+		--]
+		End()
+	--]
+	End()
+
+--몬스터의 방향 표시
+	Action( "direction indicate" )
+	--[
+		Param( "apply", "true" )
+		Param( "indicate type", "point" )
+		Param( "loc x", -95.86)
+		Param( "loc z", -157.37)
+	--]
+	End()
+	
+--노멀공격 튜토리얼 위한 몹 부르기 -- here we have to use a skill.. So better make monster immortal
+	Action( "add mobgroup" )
+	--[
+		Param( "group", 2 )
+		Param("immortal","normal")
+	--]
+	End()
+
+--몹 죽기 전까지 대기
+	Action("wait")
+	--[
+		Condition( "recv ts event" )
+		--[
+			Param( "trigger type", "quest" );
+			Param( "event id", 1100301)
+		--]
+		End()
+	--]
+	End()
+
+--방향 표시 제거
+	Action( "direction indicate" )
+	--[
+		Param( "apply", "false" )
+		Param( "indicate type", "point" )
+	--]
+	End()
+	
+--몹 확인사살
+	Action( "remove mobgroup" )
+	--[
+		Param( "group", 2 )
+		Param( "type", "faint" )
+	--]
+	End()
+
+--몹 죽기 전까지 대기
+	Action("wait")
+	--[
+		Condition( "recv ts event" )
+		--[
+			Param( "trigger type", "quest" );
+			Param( "event id", 1100401)
+		--]
+		End()
+	--]
+	End()
+
+--몬스터의 방향 표시
+	Action( "direction indicate" )
+	--[
+		Param( "apply", "true" )
+		Param( "indicate type", "point" )
+		Param( "loc x", -83.46)
+		Param( "loc z", -157.59)
+	--]
+	End()
+	
+--루팅 가르치기 위한 몹 스폰
+	
+	Action( "add mobgroup" )
+	--[
+		Param( "group", 3 )
+		--Param("respawn","true")
+	--]
+	End()
+
+--루팅까지 대기
+	Action("wait")
+	--[
+		Condition( "recv ts event" )
+		--[
+			Param( "trigger type", "quest" );
+			Param( "event id", 1100501)
+		--]
+		End()
+	End()
+
+--방향 표시 제거
+	Action( "direction indicate" )
+	--[
+		Param( "apply", "false" )
+		Param( "indicate type", "point" )
+	--]
+	End()	
+	
+--루팅용 몹 삭제
+	Action( "remove mobgroup" )
+	--[ 
+		Param( "group", 3 ) -- 1411104
+		Param( "type", "faint" )
+	--]
+	End()
+
+--거북이 부르기까지 대기
+	Action("wait")
+	--[
+		Condition( "recv ts event" )
+		--[
+			Param( "trigger type", "quest" );
+			Param( "event id", 1100601)
+		--]
+		End()
+	--]
+	End()
+	
+--거북이의 방향 표시
+	Action( "direction indicate" )
+	--[
+		Param( "apply", "true" )
+		Param( "indicate type", "point" )
+		Param( "loc x", -77.78)
+		Param( "loc z", -138.33)
+	--]
+	End()
+	
+--거북이 스폰
+	Action( "add npc" )
+	--[ 
+		Param( "index", 7611104)
+		Param( "loc x", -77.78)
+		Param( "loc z", -138.33)
+		Param( "dir x", -0.34)
+		Param( "dir z", -0.94)
+	--]
+	End()
+
+--거북이 제거명령 까지 대기
+	Action("wait")
+	--[
+		Condition( "recv ts event" )
+		--[
+			Param( "trigger type", "quest" );
+			Param( "event id", 1101401)
+		--]
+		End()
+	--]
+	End()
+	
+--BGM Play
+	Action( "play bgm" )
+	--[
+		Param( "play", "true")
+		Param( "name", "BGM\\BGM_TMQ_BOSS.ogg")
+		Param( "loop", "true")
+	--]
+	End()
+	
+--거북이 제거
+	Action( "remove npc" )
+	--[
+		Param( "index", 7611104 )
+		Param( "type", "clear" )
+	--]
+	End()
+	
+--거북이 스폰
+	Action( "add npc" )
+	--[ 
+		Param( "index", 7611104)
+		Param( "loc x", -77.78)
+		Param( "loc z", -138.33)
+		Param( "dir x", -0.34)
+		Param( "dir z", -0.94)
+	--]
+	End()
+	
+--트랭크스 스폰까지대기
+	Action("wait")
+	--[
+		Condition( "recv ts event" )
+		--[
+			Param( "trigger type", "quest" );
+			Param( "event id", 1100801)
+		--]
+		End()
+	--]
+	End()
+
+--BGM Play
+	Action( "play bgm" )
+	--[
+		Param( "play", "true")
+		Param( "name", "BGM\\BGM_TUTORIAL.ogg")
+		Param( "loop", "true")
+	--]
+	End()
+	
+-- 트랭크스 스폰
+	Action( "add npc" )
+	--[ 
+	Param( "index", 7511101)
+	Param( "loc x", -101.64)
+	Param( "loc z", -143.82)
+	Param( "dir x", 0.5)
+	Param( "dir z", 0.0)
+	Param( "play script", 7511101 )
+	Param( "play scene", 14 )
+	Param( "char condition", "direct play" )
+	--]
+	End()
+
+--트랭크스의 방향 표시
+	Action( "direction indicate" )
+	--[
+		Param( "apply", "true" )
+		Param( "indicate type", "point" )
+		Param( "loc x", -101.64)
+		Param( "loc z", -143.82)
+	--]
+	End()
+
+--트랭크스 퀘스트 완료, Cinematic 직전까지 대기
+	Action("wait")
+	--[
+		Condition( "recv ts event" )
+		--[
+			Param( "trigger type", "quest" );
+			Param( "event id", 1100901)
+		--]
+		End()
+	--]
+	End()
+
+--BGM Play
+	Action( "play bgm" )
+	--[
+		Param( "play", "false")
+		Param( "name", "BGM\\BGM_TUTORIAL.ogg")
+		Param( "loop", "false")
+	--]
+	End()
+
+--GBT호프 스폰까지 대기
+	Action("wait")
+	--[
+		Condition( "recv ts event" )
+		--[
+			Param( "trigger type", "quest" );
+			Param( "event id", 1101001)
+		--]
+		End()
+	--]
+	End()
+
+--방향 표시 제거
+	Action( "direction indicate" )
+	--[
+		Param( "apply", "false" )
+		Param( "indicate type", "point" )
+	--]
+	End()
+	
+--GBT-Hope 생성
+	Action( "add npc" )
+	--[ 
+		Param( "index", 2413107)
+		Param( "loc x", -111.25)
+		Param( "loc z", -96.93)
+		Param( "dir x", 0.23)
+		Param( "dir z",-0.97)
+	--]
+	End()
+
+--BGM Play
+	Action( "play bgm" )
+	--[
+		Param( "play", "true")
+		Param( "name", "BGM\\BGM_TUTORIAL.ogg")
+		Param( "loop", "true")
+	--]
+	End()
+
+-- 트랭크스 이동명령까지 대기
+	Action("wait")
+	--[
+		Condition( "recv ts event" )
+		--[
+			Param( "trigger type", "quest" );
+			Param( "event id", 1101101)
+		--]
+		End()
+	--]
+	End()
+
+-- 타임머신 보이게 하기
+	Action( "change object state" )
+	--[
+		Param( "index", 3)
+		Param( "state", 1 )
+		Param( "substate show", 1 )
+	--]
+	End()
+	
+-- 트랭크스 이동명령
+	Action( "send tqs event" )
+	--[
+		Param( "target type", "npc" )
+		Param( "target index", 7511101)
+		Param( "event id", 1101102 )
+	--]
+	End()
+
+--호프의 방향 표시
+	Action( "direction indicate" )
+	--[
+		Param( "apply", "true" )
+		Param( "indicate type", "point" )
+		Param( "loc x", -111.25)
+		Param( "loc z", -96.93)
+	--]
+	End()
+	
+--타임머신 탑승까지 대기
+	Action("wait")
+	--[
+		Condition( "recv ts event" )
+		--[
+			Param( "trigger type", "quest" );
+			Param( "event id", 1101301)
+		--]
+		End()
+	--]
+	End()
+
+--BGM Play
+	Action( "play bgm" )
+	--[
+		Param( "play", "false" )
+		--Param( "name", "BGM\\BGM_TUTORIAL.ogg")
+		--Param( "loop", "false")
+	--]
+	End()
+
+--자, 이제 TS종료하십셔
+	Action( "send ts event" )
+	--[
+		Param( "trigger type", "quest" );
+		Param( "event id", 1101302)
+	--]
+	End()
+
+--TS에 잘 갔습니까?
+	Action("wait")
+	--[
+		Condition( "recv ts event" )
+		--[
+			Param( "trigger type", "quest" );
+			Param( "event id", 1101303)
+		--]
+		End()
+	--]
+	End()
+
+--방향 표시 제거
+	Action( "direction indicate" )
+	--[
+		Param( "apply", "false" )
+		Param( "indicate type", "point" )
+	--]
+	End()
+	
+--트랭크스 제거
+	Action( "remove npc" )
+	--[
+		Param( "index", 7511101 )
+		Param( "type", "clear" )
+	--]
+	End()
+
+--지비티 제거
+	Action( "remove npc" )
+	--[
+		Param( "index", 2413107 )
+		Param( "type", "clear" )
+	--]
+	End()
+
+	Action( "change stage" )
+	--[
+		Param( "stage", 255)
+	--]
+	End()
+
+--]
+End()
+
+GameEnd()
+--[
+	
+--]
+End()

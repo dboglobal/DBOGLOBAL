@@ -1,0 +1,116 @@
+-- UD6
+-- Root
+
+-- 34000 UD6 WPS Root
+-- 34001 로비
+
+-- 34002 Boss Stage 하층 - 드데카민 공급 구역
+-- 34003 Boss Stage 하층 - 나메크리스탈 구역
+-- 34004 Boss Stage 하층 - 키리 공급 구역
+-- 34005 Boss Stage 상층 - 암흑선두 재배소
+-- 34006 Boss Stage 상층 - 키리 정제소
+-- 34007 Boss Stage 상층 - 가멜란 권좌
+
+-- 34008 Normal Mob Stage 하층 - 드데카민 공급 구역
+-- 34009 Normal Mob Stage 하층 - 나메크리스탈 구역
+-- 34010 Normal Mob Stage 하층 - 키리 공급 구역
+-- 34011 Normal Mob Stage 상층 - 암흑선두 재배소
+-- 34012 Normal Mob Stage 상층 - 키리 정제소
+-- 34013 Normal Mob Stage 상층 - 가멜란 권좌
+
+-- 34014 Normal Mob Stage 상층 - 암흑선두 재배소(4개의 스위치)
+-- 34015 Normal Mob Stage 상층 - 암흑선두 재배소(4개의 스위치)
+
+GameStage(0)
+--[
+	Action( "exec wps" )
+	--[
+		Param( "wps tblidx", 34001 )
+	--]
+	End()
+
+	Action( "exec wps" )
+	--[
+		Param( "wps tblidx", 34002 )
+	--]
+	End()
+
+	Action( "exec wps" )
+	--[
+		Param( "wps tblidx", 34003 )
+	--]
+	End()
+
+	Action( "exec wps" )
+	--[
+		Param( "wps tblidx", 34004 )
+	--]
+	End()
+
+	Action( "exec wps" )
+	--[
+		Param( "wps tblidx", 34005 )
+	--]
+	End()
+
+	Action( "exec wps" )
+	--[
+		Param( "wps tblidx", 34006 )
+	--]
+	End()
+
+	Action( "exec wps" )
+	--[
+		Param( "wps tblidx", 34007 )
+	--]
+	End()
+
+	Action( "exec wps" )
+	--[
+		Param( "wps tblidx", 34008 )
+	--]
+	End()
+
+	Action( "exec wps" )
+	--[
+		Param( "wps tblidx", 34009 )
+	--]
+	End()
+
+	Action( "exec wps" )
+	--[
+		Param( "wps tblidx", 34010 )
+	--]
+	End()
+
+	Action( "exec wps" )
+	--[
+		Param( "wps tblidx", 34011 )
+	--]
+	End()
+
+	Action( "exec wps" )
+	--[
+		Param( "wps tblidx", 34012 )
+	--]
+	End()
+
+	Action( "exec wps" )
+	--[
+		Param( "wps tblidx", 34013 )
+	--]
+	End()
+
+	Action( "exec wps" )
+	--[
+		Param( "wps tblidx", 34014 )
+	--]
+	End()
+
+	Action( "exec wps" )
+	--[
+		Param( "wps tblidx", 34015 )
+	--]
+	End()
+--]
+End()

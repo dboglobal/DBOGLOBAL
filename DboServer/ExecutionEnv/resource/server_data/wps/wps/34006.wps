@@ -1,0 +1,1029 @@
+-- UD6
+-- Boss Stage
+-- 키리 정제소
+-- 미스터 포코포코
+
+GameStage(0)
+--[
+	-- Normal Stage Clear 될 때까지 대기
+	 Action("wait")
+	 --[
+		  Condition("recv event from wps")
+		  --[
+			   Param("wps index", 34012)
+			   Param("event id", 973)
+		  --]
+		  End()
+	 --]
+	 End()
+	
+	--- 미스터 포코포코 소환 ---
+	Action("add mob")
+	--[
+		Param("index", 26633101)
+		Param("group", 3400601)
+		Param("loc x", -621.51)
+		Param("loc y", 125.21)
+		Param("loc z", 926.71)
+		Param("dir x", 0)
+		Param("dir z", 1)
+		Param( "nest type", "fix" )
+		Param( "nest range", 33 )
+		Param("no spawn wait", "true")
+	--]
+	End()
+	
+	Action("function")
+	--[
+		Condition("child")
+		--[
+			Action("while")
+			--[
+				Action("loop")
+				--[
+					--- 포코포코의 좌표 등록 ---
+					Action("calculate")
+					--[
+						Param("declare", "vector PoLoc=Vector(0,0,0) , vector PoDir=Vector(0,0,0)")
+					--]
+					End()
+					
+					--- 포코포코가 전투에 돌입 ---
+					Action("wait")
+					--[
+						Condition("check battle")
+						--[
+							Param("type","mob")
+							Param("group", 3400601)
+							Param("is battle", "true")
+						--]
+						End()
+					--]
+					End()
+					
+					--- 시간 제한이 지났거나, 전투가 풀렸거나
+					--- Checktime	만 하면 --- 
+					Action("wait")
+					--[
+						Param("operation", "or")
+						
+						--- 시간 오버	---
+						Condition("check time")
+						--[
+							Param("time",	600)
+						--]
+						End()
+						
+						--- 전투가 풀림 ---
+						Condition("check battle")
+						--[
+							Param("type", "mob")
+							Param("group", 3400601)
+							Param("is battle", "false")
+						--]
+						End()
+					--]
+					End()
+					
+					--- Because what determines whether or not to check, whether or not the battle that WPS is in progress ---
+					Action("if")
+					--[
+						Condition("check battle")
+						--[
+							Param("type", "mob")
+							Param("group", 3400601)
+							Param("is battle", "true")
+						--]
+						End()
+						
+						--- During the battle it was in progress, because time is over. Poco Poco geodaehwa ---
+						Action("then")
+						--[
+							Action("get location")
+							--[
+								Param("target type", "mob")
+								Param("target index", 3400601)
+								Param("loc var", "PoLoc")
+								Param("dir var", "PoDir")
+								Param("default", "Loc(-621.51, 125.21, 926.71), Dir(0,0,1)")
+							--]
+							End()
+							
+							Action("remove mobgroup")
+							--[
+								Param("group", 3400601)
+								Param("type",	"despawn")
+							--]
+							End()
+							
+							Action("add mob")
+							--[
+								Param("index", 26633201)
+								Param("group", 3400601)
+								Param("use loc var",	"true")
+								Param("loc var", "PoLoc")
+								Param("dir var", "PoDir")
+								Param("no spawn wait", "true")
+							--]
+							End()
+							
+							--- 거대화 포코포코가 전투에 들어가는지 확인 ---
+							Action("wait")
+							--[
+								Condition("check battle")
+								--[
+									Param("type",	"mob")
+									Param("group", 3400601)
+									Param("is battle", "true")
+								--]
+								End()
+							--]
+							End()
+							
+							Action("wait")
+							--[
+								Condition("check battle")
+								--[
+									Param("type",	"mob")
+									Param("group", 3400601)
+									Param("is battle", "false")
+								--]
+								End()
+							--]
+							End()
+							
+							--- 거대화 포코포코의 전투가 끝나면 원래 포코포코가 생성 ---
+							Action("remove mobgroup")
+							--[   
+								Param("group", 3400601)
+								Param("type",	"despawn")
+							--]
+							End()
+							
+							Action("remove mobgroup")
+							--[   
+								Param("group", 3400602)
+								Param("type",	"despawn")
+							--]
+							End()
+							
+							Action("add mob")
+							--[
+								Param("index", 26633101)
+								Param("group", 3400601)
+								Param("loc x", -621.51)
+								Param("loc y", 125.21)
+								Param("loc z", 926.71)
+								Param("dir x", 0)
+								Param("dir z", 1)
+								Param( "nest type", "fix" )
+								Param( "nest range", 33 )
+								Param("no spawn wait", "true")
+							--]
+							End()
+						--]
+						End()
+						
+						--- 전투가 풀림. 다시 원래대로 초기화 ---
+						Action("else")
+						--[
+							Action("remove mobgroup")
+							--[
+								Param("group", 3400601)
+								Param("type",	"despawn")
+							--]
+							End()
+							
+							Action("remove mobgroup")
+							--[
+								Param("group", 3400602)
+								Param("type",	"despawn")
+							--]
+							End()
+							
+							Action("remove mobgroup")
+							--[
+								Param("group", 3400604)
+								Param("type",	"despawn")
+							--]
+							End()
+							
+							Action("add mob")
+							--[
+								Param("index", 26633101)
+								Param("group", 3400601)
+								Param("loc x", -621.51)
+								Param("loc y", 125.21)
+								Param("loc z", 926.71)
+								Param("dir x", 0)
+								Param("dir z", 1)
+								Param( "nest type", "fix" )
+								Param( "nest range", 33 )
+								Param("no spawn wait", "true")
+							--]
+							End()
+						--]
+						End()
+					--]
+					End()
+				--]
+				End()
+			--]
+			End()
+		--]
+		End()
+		
+		Condition("child")
+		--[
+			Action("while")
+			--[
+				Action("loop")
+				--[
+					Action("wait")
+					--[
+						Condition("check battle")
+						--[
+							Param("type","mob")
+							Param("group", 3400601)
+							Param("is battle", "true")
+						--]
+						End()
+					--]
+					End()
+					
+					--- 버프캡슐 동,서,남,북 중	랜덤으로 결정	---
+					Action("calculate")
+					--[
+						Param("declare", "int BCRand = 0")
+						Param("express", "BCRand = RandomRange(1,4)")
+					--]
+					End()
+					
+					--- 버프캡슐 공,물크 두개 중 랜덤으로 결정 ---
+					Action("calculate")
+					--[
+						Param("declare", "int BBRand = 0")
+						Param("express", "BBRand = RandomRange (1, 2)")
+					--]
+					End()
+					     
+					Action("switch")
+					--[
+						Param("compare variable", "BCRand")
+						
+						--- 남쪽에서 등장 ---
+						Action("case")
+						--[
+							Param("value", 1)
+							
+							Action("switch")
+							--[
+								Param("compare variable", "BBRand")
+								
+								Action("case")
+								--[
+									Param("value", 1)
+									
+									--- 공격력 증가 캡슐	스폰 ---
+						 			Action("add mob")
+						 			--[
+										Param("index", 22162101)
+										Param("group", 3400602)
+										Param("loc x", -643.45)
+										Param("loc y", 125.21)
+										Param("loc z", 904.67)
+										Param("dir x", 0)
+										Param("dir z", 1)
+										Param("no spawn wait", "true")
+									--]
+									End()
+								--]
+								End()
+								
+								Action("case")
+								--[
+									Param("value", 2)
+						 			
+						 			--- 크리티컬 증가 캡슐 스폰 ---
+						 			Action("add mob")
+									--[
+										Param("index", 22162201)
+										Param("group", 3400602)
+										Param("loc x", -643.45)
+										Param("loc y", 125.21)
+										Param("loc z", 904.67)
+										Param("dir x", 0)
+										Param("dir z", 1)
+										Param("no spawn wait", "true")
+									 --]
+						 			End()
+					  			--]
+					  			End()
+							--]
+							End()
+						--]
+						End()
+						
+						--- 동쪽에서 등장 ---
+						Action("case")
+						--[
+							Param("value", 2)
+							
+							Action("switch")
+							--[
+								Param("compare variable", "BBRand")
+								
+								Action("case")
+								--[
+									Param("value", 1)
+									
+									--- 공격력 증가 캡슐	스폰 ---
+						 			Action("add mob")
+						 			--[
+										Param("index", 22162101)
+										Param("group", 3400602)
+										Param("loc x", -643.45)
+										Param("loc y", 125.21)
+										Param("loc z", 948.56)
+										Param("dir x", 0)
+										Param("dir z", 1)
+										Param("no spawn wait", "true")
+									--]
+									End()
+								--]
+								End()
+								
+								Action("case")
+								--[
+									Param("value", 2)
+						 			
+						 			--- 크리티컬 증가 캡슐 스폰 ---
+						 			Action("add mob")
+									--[
+										Param("index", 22162201)
+										Param("group", 3400602)
+										Param("loc x", -643.45)
+										Param("loc y", 125.21)
+										Param("loc z", 948.56)
+										Param("dir x", 0)
+										Param("dir z", 1)
+										Param("no spawn wait", "true")
+									 --]
+						 			End()
+					  			--]
+					  			End()
+							--]
+							End()
+						--]
+						End()
+						
+						--- 북쪽에서 등장 ---
+						Action("case")
+						--[
+							Param("value", 3)
+							
+							Action("switch")
+							--[
+								Param("compare variable", "BBRand")
+								
+								Action("case")
+								--[
+									Param("value", 1)
+									
+									--- 공격력 증가 캡슐	스폰 ---
+						 			Action("add mob")
+						 			--[
+										Param("index", 22162101)
+										Param("group", 3400602)
+										Param("loc x", -599.56)
+										Param("loc y", 125.21)
+										Param("loc z", 948.56)
+										Param("dir x", 0)
+										Param("dir z", 1)
+										Param("no spawn wait", "true")
+									--]
+									End()
+								--]
+								End()
+								
+								Action("case")
+								--[
+									Param("value", 2)
+						 			
+						 			--- 크리티컬 증가 캡슐 스폰 ---
+						 			Action("add mob")
+									--[
+										Param("index", 22162201)
+										Param("group", 3400602)
+										Param("loc x", -599.56)
+										Param("loc y", 125.21)
+										Param("loc z", 948.56)
+										Param("dir x", 0)
+										Param("dir z", 1)
+										Param("no spawn wait", "true")
+									 --]
+						 			End()
+					  			--]
+					  			End()
+							--]
+							End()
+						--]
+						End()
+						
+						--- 서쪽에서 등장 ---
+						Action("case")
+						--[
+							Param("value", 4)
+							
+							Action("switch")
+							--[
+								Param("compare variable", "BBRand")
+								
+								Action("case")
+								--[
+									Param("value", 1)
+									
+									--- 공격력 증가 캡슐	스폰 ---
+						 			Action("add mob")
+						 			--[
+										Param("index", 22162101)
+										Param("group", 3400602)
+										Param("loc x", -599.56)
+										Param("loc y", 125.21)
+										Param("loc z", 904.67)
+										Param("dir x", 0)
+										Param("dir z", 1)
+										Param("no spawn wait", "true")
+									--]
+									End()
+								--]
+								End()
+								
+								Action("case")
+								--[
+									Param("value", 2)
+						 			
+						 			--- 크리티컬 증가 캡슐 스폰 ---
+						 			Action("add mob")
+									--[
+										Param("index", 22162201)
+										Param("group", 3400602)
+										Param("loc x", -599.56)
+										Param("loc y", 125.21)
+										Param("loc z", 904.67)
+										Param("dir x", 0)
+										Param("dir z", 1)
+										Param("no spawn wait", "true")
+									 --]
+						 			End()
+					  			--]
+					  			End()
+							--]
+							End()
+						--]
+						End()
+					--]
+					End()
+					
+					Action("wait")
+					--[
+						Condition("check mobgroup")
+						--[
+							Param("group", 3400602)
+							Param("count", 0)
+						--]
+						End()
+					--]
+					End()
+					
+					Action("wait")
+					--[
+						Condition("check time")
+						--[
+							Param("time", 10)
+						--]
+						End()
+					--]
+					End()
+				--]
+				End()
+			--]
+			End()
+		--]
+		End()
+		
+		---- 포코 전투 시, 문이 닫힘 ---
+		Condition("child")
+		--[
+			Action("while")
+			--[
+				Action("loop")
+				--[
+					Action("wait")
+					--[
+						Condition("check battle")
+						--[
+							Param("type","mob")
+							Param("group", 3400601)
+							Param("is battle", "true")
+						--]
+						End()
+					--]
+					End()
+					
+					Action("wait")
+					--[
+					     Condition("check time")
+					     --[
+						      Param("time", 5)
+					     --]
+					     End()
+					--]
+					End()
+					
+					---전투에 돌입 시, 바깥 문이 닫힘.	안쪽 문은 열림.
+					Action("change object state")
+					--[
+						Param("index", 35)
+						Param("state", 0)
+						Param("substate show", 1)
+					--]
+					End()
+					
+					Action("change object state")
+					--[
+						Param("index", 36)
+						Param("state", 0)
+						Param("substate show", 1)
+					--]
+					End()
+					
+					Action("change object state")
+					--[
+						Param("index", 76)
+						Param("state", 1)
+						Param("substate show", 1)
+					--]
+					End()
+					
+					Action("change object state")
+					--[
+						Param("index", 77)
+						Param("state", 1)
+						Param("substate show", 1)
+					--]
+					End()
+					
+					Action("change object state")
+					--[
+						Param("index", 78)
+						Param("state", 1)
+						Param("substate show", 1)
+					--]
+					End()
+					
+					Action("change object state")
+					--[
+						Param("index", 79)
+						Param("state", 1)
+						Param("substate show", 1)
+					--]
+					End()
+					
+					-- 전투가 끝나면 다시 바깥 문이 열림, 안쪽 문 두개는 다시 닫힘	 ---
+					Action("wait")
+					--[
+						Condition("check battle")
+						--[
+							Param("type",	"mob")
+							Param("group", 3400601)
+							Param("is battle", "false")
+						--]
+						End()
+					--]
+					End()
+					
+					Action("change object state")
+					--[
+						Param("index",35)
+						Param("state", 1)
+						Param("substate show", 1)
+					--]
+					End()
+					
+					Action("change object state")
+					--[
+						Param("index",36)
+						Param("state", 1)
+						Param("substate show", 1)
+					--]
+					End()
+					
+					Action("change object state")
+					--[
+						Param("index", 78)
+						Param("state", 0)
+						Param("substate show", 1)
+					--]
+					End()
+					
+					Action("change object state")
+					--[
+						Param("index", 79)
+						Param("state", 0)
+						Param("substate show", 1)
+					--]
+					End()
+				--]
+				End()
+			--]
+			End()
+		--]
+		End()
+		
+		---- 스킬 사용 불가 캡슐 스폰 ---
+		Condition("child")
+		--[
+			Action("while")
+			--[
+				Action("loop")
+				--[
+					Action("wait")
+					--[
+						Condition("check battle")
+						--[
+							Param("type",	"mob")
+							Param("group", 3400601)
+							Param("is battle", "true")
+						--]
+						End()
+					--]
+					End()
+					
+					Action("wait")
+					--[
+						Condition("check lp")
+						--[
+							Param("type",	"mob")
+							Param("group", 3400601)
+							Param("lp", 70)
+						--]
+						End()
+					--]
+					End()
+					
+					--- 1~4 랜덤,	각각 숫자에 따라 방향이 틀림 ---
+					Action("calculate")
+					     --[
+						     Param("declare", "int LpRand = 0")
+						     Param("express", "LpRand = RandomRange(1 ,	4)" )
+					     --]
+					     End()
+					     
+					     Action("switch")
+					     --[
+						     Param("compare variable", "LpRand")
+						     
+						     ---- 남쪽에서 등장 ---
+						     Action("case")
+						     --[
+							     Param("value", 1)
+							     
+							     Action("change object state")
+							     --[
+								Param("index", 134)
+								Param("state", 1)
+								Param("substate show", 1)
+							     --]
+							     End()
+							     
+							     Action("add mob")
+							     --[
+								     Param("index", 22161101)
+								     Param("group", 3400604)
+								     Param("loc x", -568.57)
+								     Param("loc y", 125.21)
+								     Param("loc z", 979.79)
+								     Param("dir x", -0.81)
+								     Param("dir z", -0.59)
+								     Param("ais script", 22161101)
+								     Param("ais scene", 1)
+								     Param("no spawn wait", "true")
+							     --]
+							     End()
+							     
+							     Action("wait")
+							     --[
+								     Condition("check mobgroup")
+								     --[
+									     Param("group", 3400604)
+									     Param("count", 0)
+								     --]
+								     End()
+							     --]
+							     End()
+							     
+							     Action("change object state")
+							--[
+								Param("index", 134)
+								Param("state", 0)
+								Param("substate show", 1)
+							--]
+							End()
+						     --]
+						     End()
+						     
+						     --- 동쪽에서 등장 ---
+						     Action("case")
+						     --[
+							     Param("value", 2)
+							     
+							     Action("change object state")
+							--[
+								Param("index", 135)
+								Param("state", 1)
+								Param("substate show", 1)
+							--]
+							End()
+							     
+							     Action("add mob")
+							     --[
+								     Param("index", 22161101)
+								     Param("group", 3400604)
+								     Param("loc x", -568.17)
+								     Param("loc y", 125.21)
+								     Param("loc z", 872.91)
+								     Param("dir x", -0.75)
+								     Param("dir z", 0.66)
+								     Param("ais script", 22161101)
+								     Param("ais scene", 1)
+								     Param("no spawn wait", "true")
+							     --]
+							     End()
+							     
+							     Action("wait")
+							     --[
+								     Condition("check mobgroup")
+								     --[
+									     Param("group", 3400604)
+									     Param("count", 0)
+								     --]
+								     End()
+							     --]
+							     End()
+							     
+							     Action("change object state")
+							--[
+								Param("index", 135)
+								Param("state", 0)
+								Param("substate show", 1)
+							--]
+							End()
+						     --]
+						     End()
+						     
+						     --- 북쪽에서 등장 ---
+						     Action("case")
+						     --[
+							     Param("value", 3)
+							     
+							     Action("change object state")
+							--[
+								Param("index", 136)
+								Param("state", 1)
+								Param("substate show", 1)
+							--]
+							End()
+							     
+							     Action("add mob")
+							     --[
+								     Param("index", 22161101)
+								     Param("group", 3400604)
+								     Param("loc x", -674.93)
+								     Param("loc y", 125.21)
+								     Param("loc z", 872.91)
+								     Param("dir x", 0.69)
+								     Param("dir z", 0.72)
+								     Param("ais script", 22161101)
+								     Param("ais scene", 1)
+								     Param("no spawn wait", "true")
+							     --]
+							     End()
+							     
+							     Action("wait")
+							     --[
+								     Condition("check mobgroup")
+								     --[
+									     Param("group", 3400604)
+									     Param("count", 0)
+								     --]
+								     End()
+							     --]
+							     End()
+							     
+							     Action("change object state")
+							--[
+								Param("index", 136)
+								Param("state", 0)
+								Param("substate show", 1)
+							--]
+							End()
+						     --]
+						     End()
+						     
+						     --- 서족에서 등장
+						     Action("case")
+						     --[
+							     Param("value", 4)
+							     
+							     Action("change object state")
+							--[
+								Param("index", 137)
+								Param("state", 1)
+								Param("substate show", 1)
+							--]
+							End()
+							     
+							     Action("add mob")
+							     --[
+								     Param("index", 22161101)
+								     Param("group", 3400604)
+								     Param("loc x", -674.93)
+								     Param("loc y", 125.21)
+								     Param("loc z", 979.65)
+								     Param("dir x", 0.67)
+								     Param("dir z", -0.74)
+								     Param("ais script", 22161101)
+								     Param("ais scene", 1)
+								     Param("no spawn wait", "true")
+							     --]
+							     End()
+							     
+							     Action("wait")
+							     --[
+								     Condition("check mobgroup")
+								     --[
+									     Param("group", 3400604)
+									     Param("count", 0)
+								     --]
+								     End()
+							     --]
+							     End()
+							     
+							     Action("change object state")
+							--[
+								Param("index", 137)
+								Param("state", 0)
+								Param("substate show", 1)
+							--]
+							End()
+						     --]
+						     End()
+					     --]
+					     End()
+					     
+					     Action("wait")
+					     --[
+						     Condition("check time")
+						     --[
+							     Param("time", 15)
+						     --]
+						     End()
+					     --]
+					     End()
+				--]
+				End()
+			--]
+			End()
+		--]
+		End()
+		
+		Action("wait")
+		--[
+			Condition("check mobgroup")
+			--[
+				Param("group", 3400601)
+				Param("count", 1)
+			--]
+			End()
+		--]
+		End()
+		
+		Action("remove mobgroup")
+		--[
+			Param("group", 3400602)
+			Param("type",	"clear")
+		--]
+		End()
+		
+		Action("remove mobgroup")
+		--[
+			Param("group", 3400604)
+			Param("type", "clear")
+		--]
+		End()
+	--]
+	End()
+	
+	--- 포코포코의 소지품 등장 ---
+	Action("add mob")
+	--[
+		Param("index", 21756204)
+		Param("group", 3400603)
+		Param("loc x", -621.51)
+		Param("loc y", 125.21)
+		Param("loc z", 926.71)
+		Param("dir x", 0)
+		Param("dir z", 1)
+		Param("no spawn wait", "true")
+	--]
+	End()
+	 
+	 ----- LP 캡슐 알려주는 오브젝트 안보이 도록 ---
+	 Action("change object state")
+	 --[
+		  Param("index", 134)
+		  Param("state", 0)
+		  Param("substate show", 1)
+	 --]
+	 End()
+	 
+	 Action("change object state")
+	 --[
+		  Param("index", 135)
+		  Param("state", 0)
+		  Param("substate show", 1)
+	 --]
+	 End()
+	 
+	 Action("change object state")
+	 --[
+		  Param("index", 136)
+		  Param("state", 0)
+		  Param("substate show", 1)
+	 --]
+	 End()
+	 
+	 Action("change object state")
+	 --[
+		  Param("index", 137)
+		  Param("state", 0)
+		  Param("substate show", 1)
+	 --]
+	 End()
+	
+	---- 보스를 잡으면, 기존 이동하는 문, 가멜란으로	가는 문이 열림 ----
+	 Action("change object state")
+	 --[
+		  Param("index", 35)
+		  Param("state", 1)
+		  Param("substate show", 1)
+	 --]
+	 End()
+	 
+	 Action("change object state")
+	 --[
+		  Param("index", 36)
+		  Param("state", 1)
+		  Param("substate show", 1)
+	 --]
+	 End()
+	 
+	 Action("change object state")
+	 --[
+		  Param("index", 37)
+		  Param("state", 1)
+		  Param("substate show", 1)
+	 --]
+	 End()
+	 
+	 Action("change object state")
+	 --[
+		  Param("index", 79)
+		  Param("state", 1)
+		  Param("substate show", 1)
+	 --]
+	 End()
+
+	 Action("wait")
+	 --[
+		  Condition("check mobgroup")
+		  --[
+			   Param("group", 3400603)
+			   Param("count", 1)
+		  --]
+		  End()
+	 --]
+	 End()
+	 
+	 Action("wait")
+	 --[
+		  Condition("check time")
+		  --[
+			   Param("time", 60)
+		  --]
+		  End()
+	 --]
+	 End()
+--]
+End()

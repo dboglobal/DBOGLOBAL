@@ -1,0 +1,634 @@
+-- UD6
+-- Boss Stage
+-- 키리 공급 구역
+-- 서스
+
+GameStage(0)
+--[
+	
+	Action( "function" )
+	--[
+		Condition( "child" )
+		--[
+ 			-- Normal Stage Clear 될 때까지 대기
+			Action( "wait" )
+			--[
+				Condition( "recv event from wps" )
+				--[
+					Param( "wps index", 34010 )
+					Param( "event id", 920 )
+				--]
+				End()
+			--]
+			End()
+			
+			-- 서스 spawn
+			Action( "add mob" )
+			--[
+				Param( "index", 27116201 )
+				Param( "group", 3400401 )
+				Param( "loc x", 1039.83 )
+				Param( "loc y", 44.47 )
+				Param( "loc z", -769.84 )
+				Param( "dir x", -0.97 )
+				Param( "dir z", -0.22 )
+				Param( "nest type", "fix" )
+				Param( "nest range", 35 )
+				Param( "no spawn wait", "true" )
+			--]
+			End()
+			
+			Action( "function" )
+			--[
+				Condition( "child" )
+				--[
+					Action( "while" )
+					--[
+						Action( "loop" )
+						--[
+							-- 서스 전투에 들어가면
+							Action( "wait" )
+							--[
+								Condition( "check battle" )
+								--[
+									Param( "type", "mob" )
+									Param( "group", 3400401 )
+									Param( "is battle", "true" )
+								--]
+								End()
+							--]
+							End()
+							
+							-- boss stage 입구 닫음
+							Action( "change object state" )
+							--[
+								Param( "index", 129 )
+								Param( "state", 3 )
+								Param( "substate show", 1)
+							--]
+							End()
+							
+							-- 서스 전투 풀리면
+							Action( "wait" )
+							--[
+								Condition( "check battle" )
+								--[
+									Param( "type", "mob" )
+									Param( "group", 3400401 )
+									Param( "is battle", "false" )
+								--]
+								End()
+							--]
+							End()
+							
+							-- boss stage 입구 열음
+							Action( "change object state" )
+							--[
+								Param( "index", 129 )
+								Param( "state", 1 )
+								Param( "substate show", 1 )
+							--]
+							End()
+						-- loop end
+						--]
+						End()
+					-- whild end
+					--]
+					End()
+				-- child end
+				--]
+				End()
+				
+				-- 펜스, 펜션 소환
+				Condition( "child" )
+				--[
+					Action( "while" )
+					--[
+						Action( "loop" )
+						--[
+							-- 서스 전투에 들어가면
+							Action( "wait" )
+							--[
+								Condition( "check battle" )
+								--[
+									Param( "type", "mob" )
+									Param( "group", 3400401 )
+									Param( "is battle", "true" )
+								--]
+								End()
+							--]
+							End()
+							
+							-- 서스의 LP가 80% 이하가 되면
+							Action( "wait" )
+							--[
+								Condition( "check lp" )
+								--[
+									Param( "type", "mob" )
+									Param( "group", 3400401 )
+									Param( "lp", 80 )
+								--]
+								End()
+							--]
+							End()
+							
+							-- 서스에게 무적 버프
+							Action( "register buff" )
+							--[
+								Param( "target type", "mob" )
+								Param( "target index", 3400401 )
+								Param( "buff index", 2385 )
+							--]
+							End()
+							
+							-- 펜션 spawn
+							Action( "add mob" )
+							--[
+								Param( "index", 27651201 )
+								Param( "group", 3400402 )
+								Param( "loc x", 1043.12 )
+								Param( "loc y", 44.47 )
+								Param( "loc z", -772.71 )
+								Param( "dir x", -0.97 )
+								Param( "dir z", -0.22 )
+								Param( "no spawn wait", "true" )
+							--]
+							End()
+							
+							-- 펜스 spawn
+							Action( "add mob" )
+							--[
+								Param( "index", 27653201 )
+								Param( "group", 3400403 )
+								Param( "loc x", 1043.36 )
+								Param( "loc y", 44.47 )
+								Param( "loc z", -765.93 )
+								Param( "dir x", -0.97 )
+								Param( "dir z", -0.22 )
+								Param( "no spawn wait", "true" )
+							--]
+							End()
+							
+							Action( "wait" )
+							--[
+								Param( "operation", "or" )
+								
+								-- 서스의 전투가 풀리거나
+								Condition( "check battle" )
+								--[
+									Param( "type", "mob" )
+									Param( "group", 3400401 )
+									Param( "is battle", "false" )
+								--]
+								End()
+								
+								-- 펜션과 펜스가 죽으면
+								Condition( "wait condition" )
+								--[
+									Param( "operation", "and" )
+									
+									Condition( "check mobgroup" )
+									--[
+										Param( "group", 3400402 )
+										Param( "count", 0 )
+									--]
+									End()
+									
+									Condition( "check mobgroup" )
+									--[
+										Param( "group", 3400403 )
+										Param( "count", 0 )
+									--]
+									End()
+								--]
+								End()
+							--]
+							End()
+							
+							--------------------------------------------------------------------
+							-- Check if Sous is in combat
+							-- In battle, the pension and fence are dead, so wait for the time to pass.
+							-- If it is not a battle, remove the fence and the pension because the battle is over.
+							-- Invincible buff off
+							--------------------------------------------------------------------
+							Action( "if" )
+							--[
+								Param( "reverse", "false" )
+								
+								-- 서스가 전투상태이면
+								Condition( "check battle" )
+								--[
+									Param( "type", "mob" )
+									Param( "group", 3400401 )
+									Param( "is battle", "true" )
+								--]
+								End()
+								
+								-- 서스가 전투상태이면
+								Action( "then" )
+								--[
+									-- 서스의 무적 버프 해제
+									Action( "unregister buff" )
+									--[
+										Param( "target type", "mob" )
+										Param( "target index", 3400401 )
+										Param( "buff index", 2385 )
+									--]
+									End()
+									
+									-- 25초 대기
+									Action( "wait" )
+									--[
+										Condition( "check time" )
+										--[
+											Param( "time", 25 )
+										--]
+										End()
+									--]
+									End()
+								--]
+								End()
+								
+								-- 서스가 전투상태가 아니면
+								Action( "else" )
+								--[
+									-- 서스의 무적 버프 해제
+									Action( "unregister buff" )
+									--[
+										Param( "target type", "mob" )
+										Param( "target index", 3400401 )
+										Param( "buff index", 2385 )
+									--]
+									End()
+									
+									-- boss stage 입구 열어줌
+									Action( "change object state" )
+									--[
+										Param( "index", 129 )
+										Param( "state", 1 )
+										Param( "substate show", 1 )
+									--]
+									End()
+									
+									-- 펜션 despawn
+									Action( "remove mobgroup" )
+									--[
+										Param( "group", 3400402 )
+										Param( "type", "despawn" )
+									--]
+									End()
+									
+									-- 펜스 despawn
+									Action( "remove mobgroup" )
+									--[
+										Param( "group", 3400403 )
+										Param( "type", "despawn" )
+									--]
+									End()
+								--]
+								End()
+							--]
+							End()
+						--]
+						End()
+					--]
+					End()
+				--]
+				End()
+				
+				-- 서스 죽으면
+				Action( "wait" )
+				--[
+					Condition( "check mobgroup" )
+					--[
+						Param( "group", 3400401 )
+						Param( "count", 1 )
+					--]
+					End()
+				--]
+				End()
+			--]
+			End()
+			
+			-- 펜션 despawn
+			Action( "remove mobgroup" )
+			--[
+				Param( "group", 3400402 )
+				Param( "type", "despawn" )
+			--]
+			End()
+			
+			-- 펜스 despawn
+			Action( "remove mobgroup" )
+			--[
+				Param( "group", 3400403 )
+				Param( "type", "despawn" )
+			--]
+			End()
+			
+			-- 서스의 캡슐키트 spawn
+			Action( "add mob" )
+			--[
+			      Param( "index", 21759401 )
+			      Param( "group", 3400404 )
+			      Param( "loc x", 1039.83 )
+			      Param( "loc y", 44.47 )
+			      Param( "loc z", -769.84 )
+			      Param( "dir x", -0.97 )
+			      Param( "dir z", -0.22 )
+			      Param( "no spawn wait", "true" )
+			--]
+			End()
+			
+			-- boss stage 입구 열어줌
+			Action( "change object state" )
+			--[
+				Param( "index", 129 )
+				Param( "state", 1 )
+				Param( "substate show", 1 )
+			--]
+			End()
+			
+			-- boss stage 출구 열어줌
+			Action( "change object state" )
+			--[
+				Param( "index", 131 )
+				Param( "state", 1 )
+				Param( "substate show", 1 )
+			--]
+			End()
+			
+			-- 파이프 파괴, 파이프 복도 파괴
+			Action( "change object state" )
+			--[
+				Param( "index", 99 )
+				Param( "state", 1 )
+				Param( "substate show", 1 )
+			--]
+			End()
+			
+			-- 키리 공급 구역이 폐쇄되었습니다.
+			Action( "system message" )
+			--[
+				Param( "notify", "notice" )
+				Param( "text index", 81 )
+			--]
+			End()
+			
+			-- 파이프 복도 출구 열어줌
+			Action( "change object state" )
+			--[
+				Param( "index", 7 )
+				Param( "state", 1 )
+				Param( "substate show", 1 )
+			--]
+			End()
+			
+			-- 승천의 구슬 근처 스위치 작동시키고 uncheck
+			Action( "change object state" )
+			--[
+				Param( "index", 81 )
+				Param( "state", 1 )
+				Param( "substate show", 1 )
+				Param( "substate unselect", 1 )
+			--]
+			End()
+			
+			-- 파이프 복도 옆 스위치 작동시키고 uncheck
+			Action( "change object state" )
+			--[
+				Param( "index", 102 )
+				Param( "state", 1 )
+				Param( "substate show", 1 )
+				Param( "substate unselect", 1 )
+			--]
+			End()
+			
+			-- 로비로 event 보냄
+			Action( "send event to wps" )
+			--[
+				Param( "wps index", 34001 )
+				Param( "event id", 921 )
+			--]
+			End()
+			
+			-- 서스의 캡슐키트 죽을 때 까지 대기
+			Action( "wait" )
+			--[
+			      Condition( "check mobgroup" )
+			      --[
+				     Param( "group", 3400404 )
+				     Param( "count", 0 )
+			      --]
+			      End()
+			--]
+			End()
+				
+			Action( "wait" )
+			--[
+				Condition( "check time" )
+				--[
+					Param( "time", 10 )
+				--]
+				End()
+			--]
+			End()
+		--]
+		End()
+		
+		-- 승천의 구슬 근처 스위치가 작동되면
+		-- Object 8151에서 이벤트가 옴
+		Action( "wait" )
+		--[
+			Condition( "recv event from ts" )
+			--[
+				Param( "trigger type", "object" )
+				Param( "event id", 874 )
+			--]
+			End()
+		--]
+		End()
+	--]
+	End()
+	
+	------------------------------------------------------------
+	-- Normal Stage의 모든 mob을 despawn하고, 모든 문을 열어준다
+	------------------------------------------------------------
+	Action( "remove mobgroup" )
+	--[
+		Param( "group", 301 )
+		Param( "type", "clear" )
+	--]
+	End()
+	
+	Action( "remove mobgroup" )
+	--[
+		Param( "group", 302 )
+		Param( "type", "clear" )
+	--]
+	End()
+	
+	Action( "remove mobgroup" )
+	--[
+		Param( "group", 303 )
+		Param( "type", "clear" )
+	--]
+	End()
+	
+	Action( "remove mobgroup" )
+	--[
+		Param( "group", 304 )
+		Param( "type", "clear" )
+	--]
+	End()
+	
+	Action( "remove mobgroup" )
+	--[
+		Param( "group", 305 )
+		Param( "type", "clear" )
+	--]
+	End()
+	
+	Action( "remove mobgroup" )
+	--[
+		Param( "group", 306 )
+		Param( "type", "clear" )
+	--]
+	End()
+	
+	Action( "remove mobgroup" )
+	--[
+		Param( "group", 307 )
+		Param( "type", "clear" )
+	--]
+	End()
+	
+	Action( "remove mobgroup" )
+	--[
+		Param( "group", 308 )
+		Param( "type", "clear" )
+	--]
+	End()
+	
+	Action( "change object state" )
+	--[
+		Param( "index", 90 )
+		Param( "state", 1 )
+		Param( "substate show", 1 )
+	--]
+	End()
+	
+	Action( "change object state" )
+	--[
+		Param( "index", 91 )
+		Param( "state", 1 )
+		Param( "substate show", 1 )
+	--]
+	End()
+	
+	Action( "change object state" )
+	--[
+		Param( "index", 92 )
+		Param( "state", 1 )
+		Param( "substate show", 1 )
+	--]
+	End()
+	
+	Action( "change object state" )
+	--[
+		Param( "index", 93 )
+		Param( "state", 1 )
+		Param( "substate show", 1 )
+	--]
+	End()
+	
+	Action( "change object state" )
+	--[
+		Param( "index", 94 )
+		Param( "state", 1 )
+		Param( "substate show", 1 )
+	--]
+	End()
+	
+	Action( "change object state" )
+	--[
+		Param( "index", 95 )
+		Param( "state", 1 )
+		Param( "substate show", 1 )
+	--]
+	End()
+	
+	Action( "change object state" )
+	--[
+		Param( "index", 96 )
+		Param( "state", 1 )
+		Param( "substate show", 1 )
+	--]
+	End()
+	
+	Action( "change object state" )
+	--[
+		Param( "index", 97 )
+		Param( "state", 1 )
+		Param( "substate show", 1 )
+	--]
+	End()
+	
+	Action( "change object state" )
+	--[
+		Param( "index", 98 )
+		Param( "state", 1 )
+		Param( "substate show", 1 )
+	--]
+	End()
+	
+	Action( "change object state" )
+	--[
+		Param( "index", 129 )
+		Param( "state", 1 )
+		Param( "substate show", 1 )
+	--]
+	End()
+	
+	Action( "change object state" )
+	--[
+		Param( "index", 131 )
+		Param( "state", 1 )
+		Param( "substate show", 1 )
+	--]
+	End()
+	
+	Action( "change object state" )
+	--[
+		Param( "index", 75 )
+		Param( "state", 1 )
+		Param( "substate show", 1 )
+	--]
+	End()
+	
+	Action( "change object state" )
+	--[
+		Param( "index", 99 )
+		Param( "state", 1 )
+		Param( "substate show", 1 )
+	--]
+	End()
+	
+	Action( "change object state" )
+	--[
+		Param( "index", 81 )
+		Param( "state", 1 )
+		Param( "substate show", 1 )
+		Param( "substate unselect", 1 )
+	--]
+	End()
+	
+	Action( "change object state" )
+	--[
+		Param( "index", 7 )
+		Param( "state", 1 )
+		Param( "substate show", 1 )
+	--]
+	End()
+--]
+End()

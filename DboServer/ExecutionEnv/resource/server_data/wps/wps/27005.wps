@@ -1,0 +1,52 @@
+-- 1번방 3구역 몹 전부 사망시 문 열음
+
+GameStage( 0 )
+--[
+	Action( "wait" )
+	--[
+		Condition( "recv event from ts" )
+		--[
+			Param( "trigger type", "object" )
+			Param( "event id", 437 )
+		--]
+		End()
+	--]
+	End()
+	
+	Action( "add mobgroup" )
+	--[
+		Param( "group", 3 )
+		Param( "no spawn wait", "true" )
+	--]
+	End()
+
+	Action( "wait" )
+	--[
+		Condition( "check mobgroup" )
+		--[
+			Param( "group", 3 )
+			Param( "count", 13 )
+		--]
+		End()
+	--]
+	End()
+
+	Action( "wait" )
+	--[
+		Condition( "check time" )
+		--[
+			Param( "time", 2 )
+		--]
+		End()
+	--]
+	End()
+
+	Action( "change object state" )
+	--[
+		Param( "index", 9 )
+		Param( "state", 1 )
+		Param( "substate show", 1 )
+	--]
+	End()
+--]
+End()

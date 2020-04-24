@@ -1,0 +1,127 @@
+GameStage(0)
+--[
+	Action( "add npc" )
+	--[
+		Param( "index", 1511402 )
+		Param( "loc x", -1767.12 )
+		Param( "loc y", -73.92 )
+		Param( "loc z", -3736.84 )
+		Param( "dir x", 0.62 )
+		Param( "dir z", 0.79 )
+		Param( "play script", 1511402 )
+		Param( "play scene", 1 )
+		Param( "no spawn wait", "true" )
+	--]
+	End()
+
+	Action( "function" )
+	--[
+		Condition( "child" )
+		--[
+			Action( "wait" )
+			--[
+				Condition( "npc faint" )
+				--[
+					Param( "npc index", 1511402 )
+				--]
+				End()
+			--]
+			End()
+
+			Action( "wps fail" )
+			--[
+			--]
+			End()
+		--]
+		End()
+
+		Action( "wait" )
+		--[
+			Condition( "recv event from sps" )
+			--[
+				Param( "object type", "npc" )
+				Param( "object index", 1511402 )
+				Param( "event id", 520 )
+			--]
+			End()
+		--]
+		End()
+	--]
+	End()
+
+	-- 부온성인 탐사병 소환
+	Action( "add mob" )
+	--[
+		Param( "index", 1831101 )
+		Param( "group", 257101 )
+		Param( "loc x", -1686.39 )
+		Param( "loc y", -90.81 )
+		Param( "loc z", -3456.29 )
+		Param( "dir x", 0.00 )
+		Param( "dir z", 1.00 )
+		Param( "no spawn wait", "true" )
+	--]
+	End()
+
+	Action( "add mob" )
+	--[
+		Param( "index", 1831101 )
+		Param( "group", 257101 )
+		Param( "loc x", -1697.18 )
+		Param( "loc y", -92.05 )
+		Param( "loc z", -3444.89 )
+		Param( "dir x", 0.97 )
+		Param( "dir z", -0.24 )
+		Param( "no spawn wait", "true" )
+	--]
+	End()
+	
+	-- 부온성인 탐사병 모두 사냥할 때 까지 대기
+	Action( "wait" )
+	--[
+		Condition( "check mobgroup" )
+		--[
+			Param( "group", 257101 )
+			Param( "count", 0 )
+		--]
+		End()
+	--]
+	End()
+	
+	Action( "send event to ts" )
+	--[
+		Param( "trigger type", "quest" )
+		Param( "apply type", "register all" )
+		Param( "event id", 521 )
+	--]
+	End()
+
+	Action( "wait" )
+	--[
+		Condition( "check time" )
+		--[
+			Param( "time", 3 )
+		--]
+		End()
+	--]
+	End()
+
+	Action( "remove npc" )
+	--[
+		Param( "index", 1511402 )
+		Param( "type", "clear" )
+	--]
+	End()
+--]
+End()
+
+GameFailed()
+--[
+	Action( "remove npc" )
+	--[
+		Param( "index", 1511402 )
+		Param( "type", "clear" )
+	--]
+	End()
+--]
+End()

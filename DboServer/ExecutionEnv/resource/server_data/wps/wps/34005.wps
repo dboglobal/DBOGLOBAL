@@ -1,0 +1,366 @@
+-- UD6
+-- Boss Stage
+-- 암흑선두 재배소
+-- 초콜레이님
+
+GameStage(0)
+--[
+ 	-- Normal Stage Clear 될 때까지 대기
+	Action( "wait" )
+	--[	
+		Condition( "recv event from wps" )
+		--[
+			Param( "wps index", 34011 )
+			Param( "event id", 940 )
+		--]
+		End()
+	--]
+	End()
+
+	-- 초콜레이님 spawn
+	Action( "add mob" )
+	--[
+		Param( "index", 21952101 )
+		Param( "group", 3400502 )
+		Param( "loc x", -771.41 )
+		Param( "loc y", 88.38 )
+		Param( "loc z", 765.59 )
+		Param( "dir x", 0.56 )
+		Param( "dir z", -0.83 )
+		Param( "nest type", "fix" )
+		Param( "nest range", 25 )
+		Param( "no spawn wait", "true" )
+	--]
+	End()
+	
+	Action( "function" )
+	--[
+		Condition( "child" )
+		--[
+			Action( "while" )
+			--[
+				Action( "loop" )
+				--[
+					-- 초콜레이 님이 전투에 들어가면
+					Action( "wait" )
+					--[
+						Condition( "check battle" )
+						--[
+							Param( "type", "mob" )
+							Param( "group", 3400502 )
+							Param( "is battle", "true" )
+						--]
+						End()
+					--]
+					End()
+					
+					-- 초콜레이님의 LP가 50% 이하가 되면
+					Action( "wait" )
+					--[
+						Condition( "check lp" )
+						--[
+							Param( "type", "mob" )
+							Param( "group", 3400502 )
+							Param( "lp", 50 )
+						--]
+						End()
+					--]
+					End()
+					
+					Action( "function" )
+					--[
+						-- 뒤쪽에 3마리 스폰
+						Condition( "child" )
+						--[
+							Action( "add mob" )
+							--[
+								Param( "index", 28432101 )
+								Param( "group", 3400501 )
+								Param( "loc x", -768.57 )
+								Param( "loc y", 88.38 )
+								Param( "loc z", 788.91 )
+								Param( "dir x", 0.26 )
+								Param( "dir z", -0.97 )
+								Param( "no spawn wait", "true" )
+							--]
+							End()
+						--]
+						End()
+						
+						Condition( "child" )
+						--[
+							Action( "add mob" )
+							--[
+								Param( "index", 28432101 )
+								Param( "group", 3400501 )
+								Param( "loc x", -781.01 )
+								Param( "loc y", 88.38 )
+								Param( "loc z", 780.85 )
+								Param( "dir x", 0.83 )
+								Param( "dir z", -0.56 )
+								Param( "no spawn wait", "true" )
+							--]
+							End()
+						--]
+						End()
+						
+						Condition( "child" )
+						--[
+						
+    							Action( "add mob" )
+    							--[
+								Param( "index", 28432101 )
+								Param( "group", 3400501 )
+								Param( "loc x", -789.90 )
+								Param( "loc y", 88.38 )
+								Param( "loc z", 768.94 )
+								Param( "dir x", 1 )
+								Param( "dir z", -0.09 )
+								Param( "no spawn wait", "true" )
+								--]
+							End()
+						--]
+						End()
+						
+						Action( "wait" )
+						--[
+							Condition( "check time" )
+							--[
+								Param( "time", 25 )
+							--]
+							End()
+						--]
+						End()
+					--]
+					End()
+					
+					Action( "function" )
+					--[
+						-- 앞쪽에 3마리 스폰
+						Condition( "child" )
+						--[
+							Action( "add mob" )
+							--[
+								Param( "index", 28432101 )
+								Param( "group", 3400501 )
+								Param( "loc x", -750.64 )
+								Param( "loc y", 88.38 )
+								Param( "loc z", 760.53 )
+								Param( "dir x", -0.82 )
+								Param( "dir z", 0.57 )
+								Param( "no spawn wait", "true" )
+							--]
+							End()
+						--]
+						End()
+						
+						Condition( "child" )
+						--[
+							Action( "add mob" )
+							--[
+								Param( "index", 28432101 )
+								Param( "group", 3400501 )
+								Param( "loc x", -763.50 )
+								Param( "loc y", 88.38 )
+								Param( "loc z", 752.82 )
+								Param( "dir x", -0.59 )
+								Param( "dir z", 0.81 )
+								Param( "no spawn wait", "true" )
+							--]
+							End()
+						--]
+						End()
+						
+						Condition( "child" )
+  		  				--[
+						
+							Action( "add mob" )
+							--[
+								Param( "index", 28432101 )
+								Param( "group", 3400501 )
+								Param( "loc x", -776.29 )
+								Param( "loc y", 88.38 )
+								Param( "loc z", 749.30 )
+								Param( "dir x", 0.34 )
+								Param( "dir z", 0.94 )
+								Param( "no spawn wait", "true" )
+							--]
+							End()
+						--]
+						End()
+						
+						Action( "wait" )
+						--[
+							Condition( "check time" )
+							--[
+								Param( "time", 25 )
+							--]
+							End()
+						--]
+						End()
+					--]
+					End()
+				--]
+				End()
+			--]
+			End()
+		--]
+		End()
+		
+		-- 전투가 종료	될 경우, 원래 위치로 돌아가도록
+		Condition( "child" )
+		--[
+			Action( "while" )
+			--[
+				Action( "loop" )
+				--[
+					Action( "wait" )
+					--[
+						Condition( "check battle" )
+						--[
+							Param( "type", "mob" )
+							Param( "group", 3400502 )
+							Param( "is battle", "true" )
+						--]
+						End()
+					--]
+					End()
+					
+					Action( "change object state" )
+					--[
+						Param( "index", 30 )
+						Param( "state", 0 )
+						Param( "substate show", 1)
+					--]
+					End()
+					
+					-- 초콜레이님 전투가 종료 하게	될 경우
+					Action( "wait" )
+					--[
+						Condition( "check battle" )
+						--[
+							Param( "type", "mob" )
+							Param( "group", 3400502 )
+							Param( "is battle", "false" )
+						--]
+						End()
+					--]
+					End()
+					
+					Action( "change object state" )
+					--[
+						Param( "index", 30 )
+						Param( "state", 1 )
+						Param( "substate show", 1)
+					--]
+					End()
+					
+					-- 초콜레이님과 쵸코레일락을 지우고 초콜레이를	다시 스폰
+					Action( "remove mobgroup" )
+					--[
+						Param( "group", 3400502 )
+						Param( "type", "clear" )
+					--]
+					End()
+					
+					Action( "remove mobgroup" )
+					--[
+						Param( "group", 3400501 )
+						Param( "type", "clear" )
+					--]
+					End()
+					
+					Action( "add mob" )
+					--[
+	      		      			Param( "index", 21952101 )
+			    			Param( "group", 3400502 )
+			    			Param( "loc x", -771.41 )
+			    			Param( "loc y", 88.38 )
+			    			Param( "loc z", 765.59 )
+			    			Param( "dir x", 0.56 )
+			    			Param( "dir z", -0.83 )
+			    			Param( "nest type", "fix" )
+			    			Param( "nest range", 25 )
+			    			Param( "no spawn wait", "true" )
+			    		--]
+			    		End()
+				--]
+				End()
+			--]
+			End()
+		--]
+		End()
+		
+		-- 초콜레이님이 죽으면	끝
+		Action( "wait" )
+		--[
+			Condition( "check mobgroup" )
+			--[
+				Param( "group", 3400502 )
+				Param( "count", 1 )
+			--]
+			End()
+		--]
+		End()
+		
+		Action( "remove mobgroup" )
+		--[
+			Param( "group", 3400501 )
+			Param( "type", "despawn" )
+		--]
+		End()
+	--]
+	End()
+	
+	-- 쵸콜레이의 보상품 나옴
+	Action( "add mob" )
+	--[
+		Param( "index", 21756201 )
+		Param( "group", 3400503 )
+		Param( "loc x", -771.41 )
+		Param( "loc y", 88.38 )
+		Param( "loc z", 765.59 )
+		Param( "dir x", 0.56 )
+		Param( "dir z", -0.83 )
+		Param( "no spawn wait", "true" )
+	--]
+	End()
+	
+	Action( "change object state" )
+	--[
+		Param( "index", 30 )
+		Param( "state", 1 )
+		Param( "substate show", 1 )
+	--]
+	End()
+	
+	Action( "change object state" )
+	--[
+		Param( "index", 32 )
+		Param( "state", 1 )
+		Param( "substate show", 1 )
+	--]
+	End()
+	
+	Action( "wait" )
+	--[
+		Condition( "check mobgroup" )
+		--[
+			Param( "group", 3400503 )
+			Param( "count", 1 )
+		--]
+		End()
+	--]
+	End()
+	
+	Action( "wait" )
+	--[
+		Condition( "check time" )
+		--[
+			Param( "time", 60 )
+		--]
+		End()
+	--]
+	End()
+--]
+End()

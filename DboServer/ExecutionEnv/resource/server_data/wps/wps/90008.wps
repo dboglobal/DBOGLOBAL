@@ -1,0 +1,233 @@
+---------------------------------------------------------------------
+-- Bus
+-- Begin : 2009-06-30
+-- Copyright : ⓒ NTL-Inc Co., Ltd
+-- Author : Ju-hyeong Lee
+---------------------------------------------------------------------
+
+-- 사용 Path:
+-- 90008	용용강 - 부드 농장1
+-- 90009	용용강 - 부드 농장2
+
+-- 출발지: 용용강
+-- 도착지: 부드 농장
+
+-- 사용 버스 수: 5
+-- 사용 버스 Code: A1
+-- 사용 버스 NPC 인덱스: 1531125,1531126,1531127,1531128,1531129
+
+
+
+GameStage(0)
+--[
+	Action( "while" )
+	--[
+		-- 다음과 같이 사용하면 무한 루프를 돌게 된다.
+		Condition( "loop cond" )
+		--[
+			Param( "reverse", "false" )
+			Param( "operation", "true" )
+		--]
+		End()
+
+		Action( "loop" )
+		--[
+
+---------------------------------------------------------------------
+			-- 버스 1
+			Action( "wait" )
+			--[
+				Condition( "npc faint" )
+				--[
+					Param( "npc index", 1531125 )
+				--]
+				End()
+			--]
+			End()
+
+			Action( "add npc" )
+			--[
+				Param( "index", 1531125 )
+				Param( "loc x", 5863.16 )
+				Param( "loc y", -83.05 )
+				Param( "loc z", 3118.43 )
+				Param( "dir x", 0.97 )
+				Param( "dir z", 0.26 )
+				Param( "play script", 90008 )
+				Param( "play scene", 1)
+			--]
+			End()
+
+			-- 60초 만큼 대기
+			Action( "wait" )
+			--[
+				Condition( "check time" )
+				--[
+					Param( "time", 60 )
+				--]
+				End()
+			--]
+			End()
+
+---------------------------------------------------------------------
+			-- 버스 2
+			Action( "wait" )
+			--[
+				Condition( "npc faint" )
+				--[
+					Param( "npc index", 1531126 )
+				--]
+				End()
+			--]
+			End()
+
+			Action( "add npc" )
+			--[
+				Param( "index", 1531126 )
+				Param( "loc x", 5863.16 )
+				Param( "loc y", -83.05 )
+				Param( "loc z", 3118.43 )
+				Param( "dir x", 0.97 )
+				Param( "dir z", 0.26 )
+				Param( "play script", 90008 )
+				Param( "play scene", 1)
+			--]
+			End()
+
+			-- 60초 만큼 대기
+			Action( "wait" )
+			--[
+				Condition( "check time" )
+				--[
+					Param( "time", 60 )
+				--]
+				End()
+			--]
+			End()
+
+---------------------------------------------------------------------
+			-- 버스 3
+			Action( "wait" )
+			--[
+				Condition( "npc faint" )
+				--[
+					Param( "npc index", 1531127 )
+				--]
+				End()
+			--]
+			End()
+
+			Action( "add npc" )
+			--[
+				Param( "index", 1531127 )
+				Param( "loc x", 5863.16 )
+				Param( "loc y", -83.05 )
+				Param( "loc z", 3118.43 )
+				Param( "dir x", 0.97 )
+				Param( "dir z", 0.26 )
+				Param( "play script", 90008 )
+				Param( "play scene", 1)
+			--]
+			End()
+
+			-- 60초 만큼 대기
+			Action( "wait" )
+			--[
+				Condition( "check time" )
+				--[
+					Param( "time", 60 )
+				--]
+				End()
+			--]
+			End()
+
+---------------------------------------------------------------------
+			-- 버스 4
+			Action( "wait" )
+			--[
+				Condition( "npc faint" )
+				--[
+					Param( "npc index", 1531128 )
+				--]
+				End()
+			--]
+			End()
+
+			Action( "add npc" )
+			--[
+				Param( "index", 1531128 )
+				Param( "loc x", 5863.16 )
+				Param( "loc y", -83.05 )
+				Param( "loc z", 3118.43 )
+				Param( "dir x", 0.97 )
+				Param( "dir z", 0.26 )
+				Param( "play script", 90008 )
+				Param( "play scene", 1)
+			--]
+			End()
+
+			-- 60초 만큼 대기
+			Action( "wait" )
+			--[
+				Condition( "check time" )
+				--[
+					Param( "time", 60 )
+				--]
+				End()
+			--]
+			End()
+
+---------------------------------------------------------------------
+			-- 버스 5
+			Action( "wait" )
+			--[
+				Condition( "npc faint" )
+				--[
+					Param( "npc index", 1531129 )
+				--]
+				End()
+			--]
+			End()
+
+			Action( "add npc" )
+			--[
+				Param( "index", 1531129 )
+				Param( "loc x", 5863.16 )
+				Param( "loc y", -83.05 )
+				Param( "loc z", 3118.43 )
+				Param( "dir x", 0.97 )
+				Param( "dir z", 0.26 )
+				Param( "play script", 90008 )
+				Param( "play scene", 1)
+			--]
+			End()
+
+			-- 60초 만큼 대기
+			Action( "wait" )
+			--[
+				Condition( "check time" )
+				--[
+					Param( "time", 60 )
+				--]
+				End()
+			--]
+			End()
+
+
+---------------------------------------------------------------------
+
+		--]
+		End()
+		-- end loop
+
+	--]
+	End()
+	-- end while
+--]
+End()
+
+GameFailed()
+--[
+
+--]
+End()

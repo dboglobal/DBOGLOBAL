@@ -1,0 +1,230 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Release4Client|Win32">
+      <Configuration>Release4Client</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release4Tools|Win32">
+      <Configuration>Release4Tools</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release4Server|x64">
+      <Configuration>Release4Server</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{5229F8AE-A505-4077-B6D3-5CE0164DFE73}</ProjectGuid>
+    <RootNamespace>Util</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release4Client|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <PlatformToolset>v80</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release4Tools|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <PlatformToolset>v80</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release4Server|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Release4Server|x64'">
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release4Client|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release4Tools|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release4Server|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.40219.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release4Client|Win32'">$(OutDir)/</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release4Tools|Win32'">$(OutDir)/</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release4Server|x64'">$(OutDir)/</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release4Client|Win32'">$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release4Tools|Win32'">$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release4Server|x64'">$(Configuration)\</IntDir>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Release4Client|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Release4Tools|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Release4Server|x64'">AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release4Client|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>..\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_LIB;_CRT_SECURE_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <TreatWarningAsError>false</TreatWarningAsError>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <Optimization>MaxSpeed</Optimization>
+      <MinimalRebuild>false</MinimalRebuild>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <IntrinsicFunctions>false</IntrinsicFunctions>
+      <WholeProgramOptimization>true</WholeProgramOptimization>
+      <FunctionLevelLinking>
+      </FunctionLevelLinking>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <OmitFramePointers>false</OmitFramePointers>
+      <StringPooling>
+      </StringPooling>
+      <FloatingPointModel>Precise</FloatingPointModel>
+      <BufferSecurityCheck>true</BufferSecurityCheck>
+    </ClCompile>
+    <Lib>
+      <IgnoreAllDefaultLibraries>
+      </IgnoreAllDefaultLibraries>
+    </Lib>
+    <PostBuildEvent>
+      <Command>
+      </Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release4Tools|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>..\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_LIB;_CRT_SECURE_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <TreatWarningAsError>false</TreatWarningAsError>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <Optimization>MaxSpeed</Optimization>
+      <MinimalRebuild>false</MinimalRebuild>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <IntrinsicFunctions>false</IntrinsicFunctions>
+      <WholeProgramOptimization>true</WholeProgramOptimization>
+      <FunctionLevelLinking>
+      </FunctionLevelLinking>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <OmitFramePointers>false</OmitFramePointers>
+      <StringPooling>
+      </StringPooling>
+      <FloatingPointModel>Precise</FloatingPointModel>
+      <BufferSecurityCheck>true</BufferSecurityCheck>
+    </ClCompile>
+    <Lib>
+      <IgnoreAllDefaultLibraries>
+      </IgnoreAllDefaultLibraries>
+    </Lib>
+    <PostBuildEvent>
+      <Command>
+      </Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release4Server|x64'">
+    <Midl>
+      <TargetEnvironment>X64</TargetEnvironment>
+    </Midl>
+    <ClCompile>
+      <AdditionalIncludeDirectories>..\;lua\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN64;_LIB;_CRT_SECURE_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level4</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4334;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <StringPooling>false</StringPooling>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
+      <FloatingPointModel>Fast</FloatingPointModel>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="CallBack.h" />
+    <ClInclude Include="CFixedStringList.h" />
+    <ClInclude Include="CFixedStringListA.h" />
+    <ClInclude Include="CFixedStringListW.h" />
+    <ClInclude Include="CFixedString.h" />
+    <ClInclude Include="CFixedStringA.h" />
+    <ClInclude Include="CFixedStringW.h" />
+    <ClInclude Include="FixedStringBase.h" />
+    <ClInclude Include="CBaseQueue.h" />
+    <ClInclude Include="CLogMessageManager.h" />
+    <ClInclude Include="LokiExport.h" />
+    <ClInclude Include="Singleton.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="AESCipher.h" />
+    <ClInclude Include="Blowfish.h" />
+    <ClInclude Include="CDes.h" />
+    <ClInclude Include="Cipher.h" />
+    <ClInclude Include="Constant.h" />
+    <ClInclude Include="CryptRSA.h" />
+    <ClInclude Include="md5.h" />
+    <ClInclude Include="NtlCipher.h" />
+    <ClInclude Include="Threads.h" />
+    <ClInclude Include="TripleDes.h" />
+    <ClInclude Include="TwofishCipher.h" />
+    <ClInclude Include="NtlNaviData.h" />
+    <ClInclude Include="NtlNaviDataDefine.h" />
+    <ClInclude Include="NtlNaviDataMng.h" />
+    <ClInclude Include="NtlBitFlag.h" />
+    <ClInclude Include="NtlBitFlagManager.h" />
+    <ClInclude Include="NtlConvexHull.h" />
+    <ClInclude Include="NtlFileSerializer.h" />
+    <ClInclude Include="NtlHex.h" />
+    <ClInclude Include="NtlSerializer.h" />
+    <ClInclude Include="NtlStringHandler.h" />
+    <ClInclude Include="NtlTokenizer.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="CallBack.cpp" />
+    <ClCompile Include="CFixedStringListA.cpp" />
+    <ClCompile Include="CFixedStringListW.cpp" />
+    <ClCompile Include="CFixedStringA.cpp" />
+    <ClCompile Include="CFixedStringA_Format.cpp" />
+    <ClCompile Include="CFixedStringW.cpp" />
+    <ClCompile Include="CFixedStringW_Format.cpp" />
+    <ClCompile Include="CBaseQueue.cpp" />
+    <ClCompile Include="CLogMessageManager.cpp" />
+    <ClCompile Include="CLogMessageManager_Format.cpp" />
+    <ClCompile Include="CLogMessageManager_GlobalError.cpp" />
+    <ClCompile Include="CLogMessageManager_GlobalLog.cpp" />
+    <ClCompile Include="CLogMessageManager_GlobalTrace.cpp" />
+    <ClCompile Include="Singleton.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release4Client|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release4Tools|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release4Server|x64'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="AESCipher.cpp" />
+    <ClCompile Include="Blowfish.cpp" />
+    <ClCompile Include="CDes.cpp" />
+    <ClCompile Include="Cipher.cpp" />
+    <ClCompile Include="CryptRSA.cpp" />
+    <ClCompile Include="NtlCipher.cpp" />
+    <ClCompile Include="TripleDes.cpp" />
+    <ClCompile Include="TwofishCipher.cpp" />
+    <ClCompile Include="NtlNaviData.cpp" />
+    <ClCompile Include="NtlNaviDataMng.cpp" />
+    <ClCompile Include="NtlBitFlagManager.cpp" />
+    <ClCompile Include="NtlFileSerializer.cpp" />
+    <ClCompile Include="NtlHex.cpp" />
+    <ClCompile Include="NtlSerializer.cpp" />
+    <ClCompile Include="NtlStringHandler.cpp" />
+    <ClCompile Include="NtlTokenizer.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

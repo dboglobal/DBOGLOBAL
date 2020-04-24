@@ -1,0 +1,482 @@
+-- UD6
+-- Normal Mob Stage
+-- 암흑선두 재배소
+-- 스위치 4개 중 2개 근처에 있으면 열리는 문
+
+GameStage(0)
+--[
+	-- @teleport -815 671
+	-- 24, 25, 26, 27 4개의 오브젝트(스위치) 근처에 user가 각각 다가가면, 각 오브젝트가 반응하고,
+	-- 그 중 24 & 25 혹은26 & 27 이 반응하고 있을 때 133(문)이 열려서 다른 user들이 지나갈 수 있게 된다.
+	
+	Action( "calculate" )
+	--[
+		Param( "declare", "int bitFlag133 = 0, int press24 = 1, int press25 = 2, int press26 = 4, int press27 = 8" )
+	--]
+	End()
+	
+	Action( "function" )
+	--[
+		-- No. 24 object
+		Condition( "child" )
+		--[
+			Action( "while" )
+			--[
+				Action( "loop" )
+				--[
+					-- Wait until user move to the switch
+					Action( "wait" )
+					--[
+						Condition( "area enter" )
+						--[
+							Param( "origin x", -840.08 )
+							Param( "origin z", 672.89 )
+							Param( "radius", 2 )
+							Param( "all member", "false" )
+						--]
+						End()
+					--]
+					End()
+					
+					-- change switch state (activate)
+					Action( "change object state" )
+					--[
+						Param( "index", 24 )
+						Param( "state", 1 )
+						Param( "substate show", 1 )
+					--]
+					End()
+					
+					-- add bitflag
+					Action( "calculate" )
+					--[
+						Param( "express", "bitFlag133 = bitFlag133 + press24" )
+					--]
+					End()
+					
+					-- When the user moves away from the switch
+					Action( "while" )
+					--[
+						Condition( "loop cond" )
+						--[
+							Condition( "area enter" )
+							--[
+								Param( "origin x", -840.08 )
+								Param( "origin z", 672.89 )
+								Param( "radius", 2 )
+								Param( "all member", "false" )
+							--]
+							End()
+						--]
+						End()
+						
+						Action( "loop" )
+						--[
+						--]
+						End()
+					-- while 닫음
+					--]
+					End()
+					
+					-- change switch state (inactivated)
+					Action( "change object state" )
+					--[
+						Param( "index", 24 )
+						Param( "state", 3 )
+						Param( "substate show", 1 )
+					--]
+					End()
+					
+					-- remove bitflag
+					Action( "calculate" )
+					--[
+						Param( "express", "bitFlag133 = bitFlag133 - press24" )
+					--]
+					End()
+				-- loop 닫음
+				--]
+				End()
+				
+			-- while 닫음
+			--]
+			End()
+		-- child 닫음
+		--]
+		End()
+		
+		-- 25번 오브젝트
+		-- 상세 설명은 24번과 동일
+		Condition( "child" )
+		--[
+			Action( "while" )
+			--[
+				Action( "loop" )
+				--[
+					Action( "wait" )
+					--[
+						Condition( "area enter" )
+						--[
+							Param( "origin x", -832.11 )
+							Param( "origin z", 672.2 )
+							Param( "radius", 2 )
+							Param( "all member", "false" )
+						--]
+						End()
+					--]
+					End()
+					
+					Action( "change object state" )
+					--[
+						Param( "index", 25 )
+						Param( "state", 1 )
+						Param( "substate show", 1 )
+					--]
+					End()
+					
+					Action( "calculate" )
+					--[
+						Param( "express", "bitFlag133 = bitFlag133 + press25" )
+					--]
+					End()
+					
+					Action( "while" )
+					--[
+						Condition( "loop cond" )
+						--[
+							Condition( "area enter" )
+							--[
+								Param( "origin x", -832.11 )
+								Param( "origin z", 672.2 )
+								Param( "radius", 2 )
+								Param( "all member", "false" )
+							--]
+							End()
+						--]
+						End()
+						
+						Action( "loop" )
+						--[
+						--]
+						End()
+					-- while 닫음
+					--]
+					End()
+					
+					Action( "change object state" )
+					--[
+						Param( "index", 25 )
+						Param( "state", 3 )
+						Param( "substate show", 1 )
+					--]
+					End()
+					
+					Action( "calculate" )
+					--[
+						Param( "express", "bitFlag133 = bitFlag133 - press25" )
+					--]
+					End()
+				-- loop 닫음
+				--]
+				End()
+				
+			-- while 닫음
+			--]
+			End()
+		-- child 닫음
+		--]
+		End()
+		
+		-- 26번 오브젝트
+		-- 상세 설명은 24번과 동일
+		Condition( "child" )
+		--[
+			Action( "while" )
+			--[
+				Action( "loop" )
+				--[
+					Action( "wait" )
+					--[
+						Condition( "area enter" )
+						--[
+							Param( "origin x", -841.4 )
+							Param( "origin z", 661.74 )
+							Param( "radius", 2 )
+							Param( "all member", "false" )
+						--]
+						End()
+					--]
+					End()
+					
+					Action( "change object state" )
+					--[
+						Param( "index", 26 )
+						Param( "state", 1 )
+						Param( "substate show", 1 )
+					--]
+					End()
+					
+					Action( "calculate" )
+					--[
+						Param( "express", "bitFlag133 = bitFlag133 + press26" )
+					--]
+					End()
+					
+					Action( "while" )
+					--[
+						Condition( "loop cond" )
+						--[
+							Condition( "area enter" )
+							--[
+								Param( "origin x", -841.4 )
+								Param( "origin z", 661.74 )
+								Param( "radius", 2 )
+								Param( "all member", "false" )
+							--]
+							End()
+						--]
+						End()
+						
+						Action( "loop" )
+						--[
+						--]
+						End()
+					-- while 닫음
+					--]
+					End()
+					
+					Action( "change object state" )
+					--[
+						Param( "index", 26 )
+						Param( "state", 3 )
+						Param( "substate show", 1 )
+					--]
+					End()
+					
+					Action( "calculate" )
+					--[
+						Param( "express", "bitFlag133 = bitFlag133 - press26" )
+					--]
+					End()
+				-- loop 닫음
+				--]
+				End()
+				
+			-- while 닫음
+			--]
+			End()
+		-- child 닫음
+		--]
+		End()
+		
+		-- 27번 오브젝트
+		-- 상세 설명은 24번과 동일
+		Condition( "child" )
+		--[
+			Action( "while" )
+			--[
+				Action( "loop" )
+				--[
+					Action( "wait" )
+					--[
+						Condition( "area enter" )
+						--[
+							Param( "origin x", -833.43 )
+							Param( "origin z", 660.89 )
+							Param( "radius", 2 )
+							Param( "all member", "false" )
+						--]
+						End()
+					--]
+					End()
+					
+					Action( "change object state" )
+					--[
+						Param( "index", 27 )
+						Param( "state", 1 )
+						Param( "substate show", 1 )
+					--]
+					End()
+					
+					Action( "calculate" )
+					--[
+						Param( "express", "bitFlag133 = bitFlag133 + press27" )
+					--]
+					End()
+					
+					Action( "while" )
+					--[
+						Condition( "loop cond" )
+						--[
+							Condition( "area enter" )
+							--[
+								Param( "origin x", -833.43 )
+								Param( "origin z", 660.89 )
+								Param( "radius", 2 )
+								Param( "all member", "false" )
+							--]
+							End()
+						--]
+						End()
+						
+						Action( "loop" )
+						--[
+						--]
+						End()
+					-- while 닫음
+					--]
+					End()
+					
+					Action( "change object state" )
+					--[
+						Param( "index", 27 )
+						Param( "state", 3 )
+						Param( "substate show", 1 )
+					--]
+					End()
+					
+					Action( "calculate" )
+					--[
+						Param( "express", "bitFlag133 = bitFlag133 - press27" )
+					--]
+					End()
+				-- loop 닫음
+				--]
+				End()
+			-- while 닫음
+			--]
+			End()
+		-- child 닫음
+		--]
+		End()
+		
+		-- 133번 오브젝트(문)
+		Condition( "child" )
+		--[
+			Action( "while" )
+			--[
+				Action( "loop" )
+				--[
+					-- 24 & 25 혹은 26 & 27 스위치가 눌려졌을 때
+					Action( "wait" )
+					--[
+						Param( "operation", "or" )
+						
+						Condition( "compare" )
+						--[
+							Param( "express", "bitFlag133 == 3" )
+						--]
+						End()
+						
+						Condition( "compare" )
+						--[
+							Param( "express", "bitFlag133 == 12" )
+						--]
+						End()
+					--]
+					End()
+					
+					-- 133(문) 열어줌
+					Action( "change object state" )
+					--[
+						Param( "index", 133 )
+						Param( "state", 1 )
+						Param( "substate show", 1 )
+					--]
+					End()
+					
+					-- 24 & 25 혹은 26 & 27 스위치가 눌려지지 않았을 때
+					Action( "wait" )
+					--[
+						Param( "operation", "and" )
+						
+						Condition( "compare" )
+						--[
+							Param( "express", "bitFlag133 != 3" )
+						--]
+						End()
+						
+						Condition( "compare" )
+						--[
+							Param( "express", "bitFlag133 != 12" )
+						--]
+						End()
+					--]
+					End()
+					
+					-- 133(문) 닫아줌
+					Action( "change object state" )
+					--[
+						Param( "index", 133 )
+						Param( "state", 3 )
+						Param( "substate show", 1 )
+					--]
+					End()
+				--]
+				End()
+			--]
+			End()		
+		--]
+		End()
+		
+		-- If you do not put the following statement is proceeding leading cattle grown since the rise in the darkness I can not die alone
+		-- If you proceed seconds later stage kolreyi's abandoned open the door and hold all four switches
+		
+		-- leave function(all loop) when receive wps event
+		Action( "wait" )
+		--[
+			Condition( "recv event from wps" )
+			--[
+				Param( "wps index", 34011 )
+				Param( "event id", 942 )
+			--]
+			End()
+		--]
+		End()
+	-- function 닫음
+	--]
+	End()
+	
+	-- 스위치 4개 모두 눌러버림
+	Action( "change object state" )
+	--[
+		Param( "index", 24 )
+		Param( "state", 1 )
+		Param( "substate show", 1 )
+	--]
+	End()
+	
+	Action( "change object state" )
+	--[
+		Param( "index", 25 )
+		Param( "state", 1 )
+		Param( "substate show", 1 )
+	--]
+	End()
+	
+	Action( "change object state" )
+	--[
+		Param( "index", 26 )
+		Param( "state", 1 )
+		Param( "substate show", 1 )
+	--]
+	End()
+	
+	Action( "change object state" )
+	--[
+		Param( "index", 27 )
+		Param( "state", 1 )
+		Param( "substate show", 1 )
+	--]
+	End()
+	
+	-- 133(문) 열어줌
+	Action( "change object state" )
+	--[
+		Param( "index", 133 )
+		Param( "state", 1 )
+		Param( "substate show", 1 )
+	--]
+	End()
+	
+--]
+End()

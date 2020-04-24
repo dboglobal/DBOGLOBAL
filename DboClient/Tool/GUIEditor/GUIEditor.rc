@@ -1,0 +1,475 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Korean resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENG)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_DEFAULT
+#pragma code_page(949)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENG)\r\n"
+    "LANGUAGE 18, 1\r\n"
+    "#pragma code_page(949)\r\n"
+    "#include ""res\\GUIEditor.rc2""  // Microsoft Visual C++에서 편집되지 않은 리소스\r\n"
+    "#include ""afxres.rc""         // 표준 구성 요소\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\GUIEditor.ico"
+IDR_GUIEditorTYPE       ICON                    "res\\GUIEditorDoc.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDR_MAINFRAME           BITMAP                  "res\\Toolbar.bmp"
+IDB_EXPANDDOWN_BITMAP   BITMAP                  "res\\expanddown.bmp"
+IDB_EXPANDDOWN_BLUE_BITMAP BITMAP                  "res\\expanddown_blue.bmp"
+IDB_EXPANDLEFT_BITMAP   BITMAP                  "res\\expandleft.bmp"
+IDB_EXPANDLEFT_BLUE_BITMAP BITMAP                  "res\\expandleft_blue.bmp"
+IDB_TABIMAGE            BITMAP                  "res\\Icon.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Toolbar
+//
+
+IDR_MAINFRAME TOOLBAR  16, 15
+BEGIN
+    BUTTON      ID_FILE_NEW
+    BUTTON      ID_FILE_OPEN
+    BUTTON      ID_FILE_SAVE
+    SEPARATOR
+    BUTTON      ID_EDIT_CUT
+    BUTTON      ID_EDIT_COPY
+    BUTTON      ID_EDIT_PASTE
+    SEPARATOR
+    BUTTON      ID_FILE_PRINT
+    BUTTON      ID_APP_ABOUT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAINFRAME MENU 
+BEGIN
+    POPUP "File(&F)"
+    BEGIN
+        MENUITEM "New\tCtrl+N(&N)",          ID_FILE_NEW
+        MENUITEM "Open\tCtrl+O(&O)",           ID_FILE_OPEN
+        MENUITEM "Save\tCtrl+S(&S)",              ID_FILE_SAVE
+        MENUITEM "Save As(&A)...",           ID_FILE_SAVE_AS
+        MENUITEM SEPARATOR
+        MENUITEM "No Idea",                  ID_FILE_MRU_FILE1, GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "Exit(&X)",                     ID_APP_EXIT
+    END
+    POPUP "Edit(&E)"
+    BEGIN
+        MENUITEM "Undo\tCtrl+Z(&U)",           ID_EDIT_UNDO
+        MENUITEM SEPARATOR
+        MENUITEM "Cut\tCtrl+X(&T)",            ID_EDIT_CUT
+        MENUITEM "Copy\tCtrl+C(&C)",              ID_EDIT_COPY
+        MENUITEM "Paste\tCtrl+V(&P)",            ID_EDIT_PASTE
+    END
+    POPUP "View(&V)"
+    BEGIN
+        MENUITEM "Toolbar(&T)",                   ID_VIEW_TOOLBAR
+        MENUITEM "Statusbar(&S)",                  ID_VIEW_STATUS_BAR
+    END
+    POPUP "Help(&H)"
+    BEGIN
+        MENUITEM "GUIEditor About(&A)...",         ID_APP_ABOUT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_MAINFRAME ACCELERATORS 
+BEGIN
+    "N",            ID_FILE_NEW,            VIRTKEY, CONTROL
+    "O",            ID_FILE_OPEN,           VIRTKEY, CONTROL
+    "S",            ID_FILE_SAVE,           VIRTKEY, CONTROL
+    "Z",            ID_EDIT_UNDO,           VIRTKEY, CONTROL
+    "X",            ID_EDIT_CUT,            VIRTKEY, CONTROL
+    "C",            ID_EDIT_COPY,           VIRTKEY, CONTROL
+    "V",            ID_EDIT_PASTE,          VIRTKEY, CONTROL
+    VK_BACK,        ID_EDIT_UNDO,           VIRTKEY, ALT
+    VK_DELETE,      ID_EDIT_CUT,            VIRTKEY, SHIFT
+    VK_INSERT,      ID_EDIT_COPY,           VIRTKEY, CONTROL
+    VK_INSERT,      ID_EDIT_PASTE,          VIRTKEY, SHIFT
+    VK_F6,          ID_NEXT_PANE,           VIRTKEY 
+    VK_F6,          ID_PREV_PANE,           VIRTKEY, SHIFT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 235, 55
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "GUIEditor"
+FONT 9, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,17,20,20
+    LTEXT           "GUIEditor Version 1.0",IDC_STATIC,40,10,119,8,SS_NOPREFIX
+    LTEXT           "Copyright (C) 2006",IDC_STATIC,40,25,119,8
+    DEFPUSHBUTTON   "확인",IDOK,178,7,50,16,WS_GROUP
+    EDITTEXT        IDC_EDIT1,124,34,40,14,ES_AUTOHSCROLL
+    CONTROL         "",IDC_RICHEDIT21,"RichEdit20A",ES_AUTOHSCROLL | WS_BORDER | WS_TABSTOP,170,34,40,14
+END
+
+IDD_FORMVIEW DIALOGEX 0, 0, 185, 93
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD
+FONT 9, "View", 0, 0, 0x0
+BEGIN
+    LTEXT           "TODO: Static",IDC_STATIC,54,42,95,9
+END
+
+IDD_FILEVIEWDLG DIALOGEX 0, 0, 147, 123
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_BORDER | WS_SYSMENU
+FONT 9, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    CONTROL         "",IDC_TREE1,"SysTreeView32",TVS_HASBUTTONS | TVS_HASLINES | TVS_LINESATROOT | TVS_SHOWSELALWAYS | WS_BORDER | WS_TABSTOP,0,0,146,122,WS_EX_ACCEPTFILES
+END
+
+IDD_RESOURCELISTDLG DIALOGEX 0, 0, 179, 175
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_CHILD | WS_SYSMENU
+FONT 9, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    GROUPBOX        "",IDC_PROPERTY_STATIC,0,0,176,158
+    PUSHBUTTON      "Remove resource list",IDC_REMOVE_RESOURCELIST,0,160,50,14
+    PUSHBUTTON      "Save resource list",IDC_SAVE_RESOURCELIST,52,160,50,14
+    PUSHBUTTON      "Clear resource list",IDC_CLEAR_RESOURCELIST,104,160,50,14
+END
+
+IDD_RESOURCEATTRIBUTEDLG DIALOGEX 0, 0, 187, 99
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_CHILD | WS_SYSMENU
+FONT 9, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    GROUPBOX        "",IDC_PROPERTY_STATIC,0,0,186,83
+    PUSHBUTTON      "퇐dd Resource list",IDC_ADD_RESOURCELIST,0,84,49,14
+    PUSHBUTTON      "Fix Resource list",IDC_FIX_RESOURCELIST,50,84,49,14
+END
+
+IDD_SURFACEATTRIBUTEDLG DIALOGEX 0, 0, 175, 242
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_CHILD | WS_SYSMENU
+FONT 9, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    GROUPBOX        "",IDC_PROPERTY_STATIC,0,0,174,226
+    PUSHBUTTON      "Add Surface list",IDC_ADD_SURFACELIST,0,228,49,14
+    PUSHBUTTON      "Fix Surface list",IDC_FIX_SURFACELIST,50,228,49,14
+END
+
+IDD_SURFACELISTDLG DIALOGEX 0, 0, 187, 122
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_CHILD | WS_SYSMENU
+FONT 9, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    GROUPBOX        "",IDC_PROPERTY_STATIC,0,0,186,106
+    PUSHBUTTON      "Remove surface",IDC_REMOVE_SURFACELIST,0,108,49,14
+    PUSHBUTTON      "Safe Surface",IDC_SAVE_SURFACELIST,50,108,49,14
+    PUSHBUTTON      "Clear Surface",IDC_CLEAR_SURFACELIST,100,108,49,14
+END
+
+IDD_RECTINFODLG DIALOGEX 0, 0, 187, 83
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_CHILD | WS_SYSMENU
+FONT 9, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    GROUPBOX        "",IDC_PROPERTY_RECTINFO,0,0,186,82
+END
+
+IDD_FILEINFOVIEW DIALOGEX 0, 0, 229, 67
+STYLE DS_SETFONT | WS_CHILD
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    LTEXT           "Rsr File :",IDC_STATIC,4,4,30,8
+    LTEXT           "Srf File  :",IDC_STATIC,4,16,30,8
+    LTEXT           "Frm File :",IDC_STATIC,4,28,30,8
+    LTEXT           "",IDC_STATIC_RSRFILE,40,4,145,8
+    LTEXT           "",IDC_STATIC_SRFFILE,40,16,145,8
+    LTEXT           "",IDC_STATIC_FRMFILE,40,28,145,8
+    LTEXT           "Work Dir",IDC_STATIC,4,39,28,8
+    LTEXT           "",IDC_STATIC_WORKDIR,6,52,217,8
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "041203b5"
+        BEGIN
+            VALUE "CompanyName", "DBO GLOBAL"
+            VALUE "FileDescription", "Gui editor by dbo global"
+            VALUE "FileVersion", "1.0.0.0"
+            VALUE "InternalName", "GUIEditor.exe"
+            VALUE "LegalCopyright", "DBOG (C).  All rights reserved."
+            VALUE "OriginalFilename", "GUIEditor.exe"
+            VALUE "ProductName", "GuiEditor"
+            VALUE "ProductVersion", "1.0.0.0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Version", 0x412, 949
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 228
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 48
+    END
+
+    IDD_RESOURCELISTDLG, DIALOG
+    BEGIN
+        RIGHTMARGIN, 178
+        BOTTOMMARGIN, 174
+    END
+
+    IDD_RESOURCEATTRIBUTEDLG, DIALOG
+    BEGIN
+        BOTTOMMARGIN, 98
+    END
+
+    IDD_SURFACELISTDLG, DIALOG
+    BEGIN
+        BOTTOMMARGIN, 115
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Cursor
+//
+
+IDC_FPOINT              CURSOR                  "res\\fpoint.cur"
+IDC_SPLITER             CURSOR                  "res\\spliter.cur"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDR_MAINFRAME           "GUIEditor\n\nGUIEditor\n\n\nGUIEditor.Document\nGUIEditor.Document"
+    IDS_TRUE                "TRUE"
+    IDS_FALSE               "FALSE"
+    IDS_NOITEMSEL           "No Item Selected"
+    IDS_SELFORINFO          "Select an item to see its description"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_APP_TITLE       "GUIEditor"
+    AFX_IDS_IDLEMESSAGE     "Idle"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_INDICATOR_EXT        "EXT"
+    ID_INDICATOR_CAPS       "CAP"
+    ID_INDICATOR_NUM        "NUM"
+    ID_INDICATOR_SCRL       "SCRL"
+    ID_INDICATOR_OVR        "OVR"
+    ID_INDICATOR_REC        "REC"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_FILE_NEW             "New"
+    ID_FILE_OPEN            "Open"
+    ID_FILE_CLOSE           "Close"
+    ID_FILE_SAVE            "Save"
+    ID_FILE_SAVE_AS         "Save As"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_APP_ABOUT            "About"
+    ID_APP_EXIT             "Exit"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_FILE_MRU_FILE1       "MRU File 1"
+    ID_FILE_MRU_FILE2       "MRU File 2"
+    ID_FILE_MRU_FILE3       "MRU File 3"
+    ID_FILE_MRU_FILE4       "MRU File 4"
+    ID_FILE_MRU_FILE5       "MRU File 5"
+    ID_FILE_MRU_FILE6       "MRU File 6"
+    ID_FILE_MRU_FILE7       "MRU File 7"
+    ID_FILE_MRU_FILE8       "MRU File 8"
+    ID_FILE_MRU_FILE9       "MRU File 9"
+    ID_FILE_MRU_FILE10      "MRU File 10"
+    ID_FILE_MRU_FILE11      "MRU File 11"
+    ID_FILE_MRU_FILE12      "MRU File 12"
+    ID_FILE_MRU_FILE13      "MRU File 13"
+    ID_FILE_MRU_FILE14      "MRU File 14"
+    ID_FILE_MRU_FILE15      "MRU File 15"
+    ID_FILE_MRU_FILE16      "MRU File 16"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_NEXT_PANE            "Next Pane"
+    ID_PREV_PANE            "Prev Pane"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_WINDOW_SPLIT         "Window Split"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_EDIT_CLEAR           "Clear"
+    ID_EDIT_CLEAR_ALL       "Clear All"
+    ID_EDIT_COPY            "Copy"
+    ID_EDIT_CUT             "Cut"
+    ID_EDIT_FIND            "Find"
+    ID_EDIT_PASTE           "Paste"
+    ID_EDIT_REPEAT          "Repeat"
+    ID_EDIT_REPLACE         "Replace"
+    ID_EDIT_SELECT_ALL      "Select All"
+    ID_EDIT_UNDO            "Undo"
+    ID_EDIT_REDO            "Redo"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_VIEW_TOOLBAR         "Toolbar"
+    ID_VIEW_STATUS_BAR      "Status bar"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_SCSIZE          "SC Size"
+    AFX_IDS_SCMOVE          "SC Move"
+    AFX_IDS_SCMINIMIZE      "SC Minimize"
+    AFX_IDS_SCMAXIMIZE      "SC Maximize"
+    AFX_IDS_SCNEXTWINDOW    "SC Next Window"
+    AFX_IDS_SCPREVWINDOW    "SC Prev Window"
+    AFX_IDS_SCCLOSE         "SC Close"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_SCRESTORE       "SC Restore"
+    AFX_IDS_SCTASKLIST      "SC Tasklist"
+END
+
+#endif    // Korean resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENG)
+LANGUAGE 18, 1
+#pragma code_page(949)
+#include "res\GUIEditor.rc2"  // Microsoft Visual C++에서 편집되지 않은 리소스
+#include "afxres.rc"         // 표준 구성 요소
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

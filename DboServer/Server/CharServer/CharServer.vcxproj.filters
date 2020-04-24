@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="stdafx">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Player">
+      <UniqueIdentifier>{0fa8ea36-1fa0-42f9-bbf3-6b627e7bc93d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Server">
+      <UniqueIdentifier>{e044b8a0-e826-4240-9423-0bcd1e27ba54}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Player\Session">
+      <UniqueIdentifier>{896a1fa8-eb84-4767-b45f-96f9cfdcd06e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Player\Manager">
+      <UniqueIdentifier>{d016ee4b-bc04-4276-99cd-ea03c299e2f8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Server\MasterServer">
+      <UniqueIdentifier>{07293d66-ad49-4970-9c9d-c6e270116ea7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="QueueSystem">
+      <UniqueIdentifier>{e0667d2d-7ff4-4918-9b7a-4a902b030deb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Server\SessionFactory">
+      <UniqueIdentifier>{dae67acb-3ce2-4f5f-8165-d62c67cf1fa4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Server\QueryServer">
+      <UniqueIdentifier>{92f4f55e-d283-4421-b027-41fcf7def29a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Player\Session\uc_opcodes">
+      <UniqueIdentifier>{97bc7000-9412-4f58-8bd9-52304f7cd360}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Server\MasterServer\mc_opcodes">
+      <UniqueIdentifier>{a966cc84-2ead-4e7c-a7e1-c07e4d3ca0f0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Server\QueryServer\qc_opcodes">
+      <UniqueIdentifier>{ccfa3fdb-f3f7-48c3-a665-ed18691185ce}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>stdafx</Filter>
+    </ClCompile>
+    <ClCompile Include="CharServer.cpp" />
+    <ClCompile Include="ClientSession.cpp">
+      <Filter>Player\Session</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayerManager.cpp">
+      <Filter>Player\Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="MasterServerPacket.cpp">
+      <Filter>Server\MasterServer</Filter>
+    </ClCompile>
+    <ClCompile Include="MasterServerSession.cpp">
+      <Filter>Server\MasterServer</Filter>
+    </ClCompile>
+    <ClCompile Include="QueueManager.cpp">
+      <Filter>QueueSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="QueryServerSession.cpp">
+      <Filter>Server\QueryServer</Filter>
+    </ClCompile>
+    <ClCompile Include="QueryServerPacket.cpp">
+      <Filter>Server\QueryServer</Filter>
+    </ClCompile>
+    <ClCompile Include="SubNeighborServerInfoManager.cpp">
+      <Filter>Server</Filter>
+    </ClCompile>
+    <ClCompile Include="uc_opcodes.cpp">
+      <Filter>Player\Session\uc_opcodes</Filter>
+    </ClCompile>
+    <ClCompile Include="Player.cpp">
+      <Filter>Player</Filter>
+    </ClCompile>
+    <ClCompile Include="PacketCharServer.cpp">
+      <Filter>Player\Session</Filter>
+    </ClCompile>
+    <ClCompile Include="mc_opcodes.cpp">
+      <Filter>Server\MasterServer\mc_opcodes</Filter>
+    </ClCompile>
+    <ClCompile Include="qc_opcodes.cpp">
+      <Filter>Server\QueryServer\qc_opcodes</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="stdafx.h">
+      <Filter>stdafx</Filter>
+    </ClInclude>
+    <ClInclude Include="CharServer.h" />
+    <ClInclude Include="ClientSession.h">
+      <Filter>Player\Session</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayerManager.h">
+      <Filter>Player\Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="MasterServerSession.h">
+      <Filter>Server\MasterServer</Filter>
+    </ClInclude>
+    <ClInclude Include="QueueManager.h">
+      <Filter>QueueSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="GameSessionFactory.h">
+      <Filter>Server\SessionFactory</Filter>
+    </ClInclude>
+    <ClInclude Include="QueryServerSession.h">
+      <Filter>Server\QueryServer</Filter>
+    </ClInclude>
+    <ClInclude Include="SubNeighborServerInfoManager.h">
+      <Filter>Server</Filter>
+    </ClInclude>
+    <ClInclude Include="uc_opcodes.h">
+      <Filter>Player\Session\uc_opcodes</Filter>
+    </ClInclude>
+    <ClInclude Include="Player.h">
+      <Filter>Player</Filter>
+    </ClInclude>
+    <ClInclude Include="mc_opcodes.h">
+      <Filter>Server\MasterServer\mc_opcodes</Filter>
+    </ClInclude>
+    <ClInclude Include="qc_opcodes.h">
+      <Filter>Server\QueryServer\qc_opcodes</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<Emblem>
+  <!-- Emblem palette는 32개이다. 갯수를 조절하려면 GUI, 클라이언트 담당자와 반드시 협의해야 한다 -->
+  <!-- 쓰이는 곳 도복, 엠블렘 팔레트 -->
+	<element R="158" G="11" B="15" />
+  <element R="238" G="28" B="36" />
+  <element R="255" G="70" B="70" />
+  <element R="255" G="102" B="0" />
+  <element R="255" G="186" B="0" />
+  <element R="255" G="245" B="118" />
+  <element R="159" G="220" B="71" />
+  <element R="88" G="255" B="152" />
+  <!--  -->
+  <element R="75" G="134" B="9" />
+  <element R="0" G="108" B="33" />
+  <element R="60" G="186" B="146" />
+  <element R="0" G="115" B="106" />
+  <element R="1" G="255" B="255" />
+  <element R="0" G="174" B="239" />
+  <element R="0" G="84" B="165" />
+  <element R="0" G="0" B="190" />
+  <!--  -->
+  <element R="133" G="95" B="168" />
+  <element R="145" G="39" B="143" />
+  <element R="143" G="35" B="244" />
+  <element R="237" G="0" B="140" />
+  <element R="158" G="0" B="92" />
+  <element R="48" G="0" B="74" />
+  <element R="149" G="149" B="149" />
+  <element R="85" G="85" B="85" />
+  <!--  -->
+  <element R="140" G="98" B="58" />
+  <element R="96" G="56" B="17" />
+  <element R="172" G="66" B="70" />
+  <element R="255" G="146" B="187" />
+  <element R="128" G="89" B="113" />
+  <element R="58" G="66" B="52" />
+  <element R="255" G="255" B="255" />
+  <element R="0" G="0" B="0" />
+</Emblem>

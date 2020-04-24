@@ -1,0 +1,53 @@
+
+GameStage(0)
+--[
+	Action( "exec wps" )
+	--[
+		Param( "wps tblidx", 27001 )
+	--]
+	End()
+
+	Action( "exec wps" )
+	--[
+		Param( "wps tblidx", 27002 )
+	--]
+	End()
+
+	Action( "exec wps" )
+	--[
+		Param( "wps tblidx", 27003 )
+	--]
+	End()
+
+	Action( "exec wps" )
+	--[
+		Param( "wps tblidx", 27004 )
+	--]
+	End()
+	
+	Action( "exec wps" )
+	--[
+		Param( "wps tblidx", 27005 )
+	--]
+	End()
+
+	Action( "exec wps" )
+	--[
+		Param( "wps tblidx", 27006 )
+	--]
+	End()
+
+	Action( "exec wps" )
+	--[
+		Param( "wps tblidx", 27007 )
+	--]
+	End()
+
+	Action( "exec wps" )
+	--[
+		Param( "wps tblidx", 27008 )
+	--]
+	End()
+
+--]
+End()

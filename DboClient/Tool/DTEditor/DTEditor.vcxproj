@@ -1,0 +1,387 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Release4Client|Win32">
+      <Configuration>Release4Client</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release4Tools|Win32">
+      <Configuration>Release4Tools</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{68079AEE-6A59-4D51-97AA-5FA253CEDBEE}</ProjectGuid>
+    <RootNamespace>DTEditor</RootNamespace>
+    <Keyword>MFCProj</Keyword>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v80</PlatformToolset>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release4Client|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v80</PlatformToolset>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release4Tools|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v80</PlatformToolset>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release4Client|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release4Tools|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>14.0.25431.1</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release4Client|Win32'">
+    <OutDir>$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release4Tools|Win32'">
+    <OutDir>E:\DBOG\DBO\DBOG UNPACKED\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <ValidateAllParameters>false</ValidateAllParameters>
+    </Midl>
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release4Client|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <ValidateAllParameters>false</ValidateAllParameters>
+    </Midl>
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <AdditionalIncludeDirectories>$(SolutionDir)Renderware\Include;$(SolutionDir)Lib\NtlCore;$(SolutionDir)..\DboShared\NtlNetwork;$(SolutionDir)Lib\NtlPresentation;$(SolutionDir)Lib\NtlFramework;$(SolutionDir)..\NtlLib\Shared\NtlXMLLoader;$(SolutionDir)..\DboShared\NtlShared2;$(SolutionDir)..\DboShared\NtlShared;$(SolutionDir)Lib\NtlSimulation;..\..\Client\Main;..\..\Client\Stage;..\..\Client\Camera;$(SolutionDir)..\NtlLib\Client\NtlClientNet;$(SolutionDir)..\NtlLib\Shared\NtlTrigger;$(SolutionDir)..\NtlLib\Shared;.\;.\property;..\..\..\DboShared\NtlGameTable;$(SolutionDir)Lib\NtlSound;$(SolutionDir)..\NtlLib\Shared\util;$(SolutionDir)..\Xtreme ToolkitPro v13.2.1\Source;$(DXSDK_DIR)Include;$(SolutionDir)Lib\NtlGui;$(SolutionDir)..\DboShared\DboTrigger;$(SolutionDir)..\NtlLib\Shared\Lua;$(SolutionDir)Client\Addin\Devil;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <TargetMachine>MachineX86</TargetMachine>
+      <AdditionalDependencies>ddraw.lib;Ws2_32.lib;Winmm.lib;Imm32.lib;rtdict.lib;rtcharse.lib;rtfsyst.lib;rtbmp.lib;rtpng.lib;rtintsec.lib;rtpick.lib;rttoc.lib;rpworld.lib;rtanim.lib;rphanim.lib;rtquat.lib;rplogo.lib;rpusrdat.lib;rpid.lib;rpmatfx.lib;rpuvanim.lib;rpprtstd.lib;rpprtadv.lib;rpptank.lib;rpskintoon.lib;rprandom.lib;rtimport.lib;rtgcond.lib;rtwing.lib;rtray.lib;rplodatm.lib;strmiids.lib;libgfx.lib;libgrenderer_d3d9.lib;libjpeg.lib;zlib.lib;d3dx9.lib;d3d9.lib;Devil.lib;rppvs.lib;rpltmap.lib;rtltmap.lib;rpmipkl.lib;rtpitexd.lib;rtbary.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)Renderware\Lib\Release;$(SolutionDir)BugTrap;$(SolutionDir)DirectShow;$(SolutionDir)Lib/Localize/Lib;$(DXSDK_DIR)Lib\x86;$(SolutionDir)Release4Client;$(GFXSDK)3rdParty\expat-2.0.1\lib;$(SolutionDir)Lib\NtlFlasher\GFx SDK 3.3\Lib\$(PlatformName)\Msvc80\Release;$(SolutionDir)Lib\NtlFlasher\GFx SDK 3.3\3rdParty\jpeg-6b\lib\$(PlatformName)\Msvc80\Release;$(SolutionDir)Client\Addin\Devil;$(SolutionDir)..\Xtreme ToolkitPro v13.2.1\Lib\vc80;$(SolutionDir)Lib\NtlSound\fmod;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreSpecificDefaultLibraries>libcmt.lib</IgnoreSpecificDefaultLibraries>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release4Tools|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <ValidateAllParameters>false</ValidateAllParameters>
+    </Midl>
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <AdditionalIncludeDirectories>$(SolutionDir)Renderware\Include;$(SolutionDir)Lib\NtlCore;$(SolutionDir)..\DboShared\NtlNetwork;$(SolutionDir)Lib\NtlPresentation;$(SolutionDir)Lib\NtlFramework;$(SolutionDir)..\NtlLib\Shared\NtlXMLLoader;$(SolutionDir)..\DboShared\NtlShared2;$(SolutionDir)..\DboShared\NtlShared;$(SolutionDir)Lib\NtlSimulation;..\..\Client\Main;..\..\Client\Stage;..\..\Client\Camera;$(SolutionDir)..\NtlLib\Client\NtlClientNet;$(SolutionDir)..\NtlLib\Shared\NtlTrigger;$(SolutionDir)..\NtlLib\Shared;.\;.\property;..\..\..\DboShared\NtlGameTable;$(SolutionDir)Lib\NtlSound;$(SolutionDir)..\NtlLib\Shared\util;$(SolutionDir)..\Xtreme ToolkitPro v13.2.1\Source;$(DXSDK_DIR)Include;$(SolutionDir)Lib\NtlGui;$(SolutionDir)..\DboShared\DboTrigger;$(SolutionDir)..\NtlLib\Shared\Lua;$(SolutionDir)Client\Addin\Devil;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <TargetMachine>MachineX86</TargetMachine>
+      <AdditionalDependencies>ddraw.lib;Ws2_32.lib;Winmm.lib;Imm32.lib;rtdict.lib;rtcharse.lib;rtfsyst.lib;rtbmp.lib;rtpng.lib;rtintsec.lib;rtpick.lib;rttoc.lib;rpworld.lib;rtanim.lib;rphanim.lib;rtquat.lib;rplogo.lib;rpusrdat.lib;rpid.lib;rpmatfx.lib;rpuvanim.lib;rpprtstd.lib;rpprtadv.lib;rpptank.lib;rpskintoon.lib;rprandom.lib;rtimport.lib;rtgcond.lib;rtwing.lib;rtray.lib;rplodatm.lib;strmiids.lib;libgfx.lib;libgrenderer_d3d9.lib;libjpeg.lib;zlib.lib;d3dx9.lib;d3d9.lib;Devil.lib;rppvs.lib;rpltmap.lib;rtltmap.lib;rpmipkl.lib;rtpitexd.lib;rtbary.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)Renderware\Lib\Release;$(SolutionDir)BugTrap;$(SolutionDir)DirectShow;$(SolutionDir)Lib/Localize/Lib;$(DXSDK_DIR)Lib\x86;$(SolutionDir)Release4Client;$(GFXSDK)3rdParty\expat-2.0.1\lib;$(SolutionDir)Lib\NtlFlasher\GFx SDK 3.3\Lib\$(PlatformName)\Msvc80\Release;$(SolutionDir)Lib\NtlFlasher\GFx SDK 3.3\3rdParty\jpeg-6b\lib\$(PlatformName)\Msvc80\Release;$(SolutionDir)Client\Addin\Devil;$(SolutionDir)..\Xtreme ToolkitPro v13.2.1\Lib\vc80;$(SolutionDir)Lib\NtlSound\fmod;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreSpecificDefaultLibraries>libcmt.lib</IgnoreSpecificDefaultLibraries>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <Reference Include="System">
+      <CopyLocalSatelliteAssemblies>true</CopyLocalSatelliteAssemblies>
+      <ReferenceOutputAssembly>true</ReferenceOutputAssembly>
+    </Reference>
+    <Reference Include="System.Data">
+      <CopyLocalSatelliteAssemblies>true</CopyLocalSatelliteAssemblies>
+      <ReferenceOutputAssembly>true</ReferenceOutputAssembly>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <CopyLocalSatelliteAssemblies>true</CopyLocalSatelliteAssemblies>
+      <ReferenceOutputAssembly>true</ReferenceOutputAssembly>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <CopyLocalSatelliteAssemblies>true</CopyLocalSatelliteAssemblies>
+      <ReferenceOutputAssembly>true</ReferenceOutputAssembly>
+    </Reference>
+    <Reference Include="System.Xml">
+      <CopyLocalSatelliteAssemblies>true</CopyLocalSatelliteAssemblies>
+      <ReferenceOutputAssembly>true</ReferenceOutputAssembly>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\AdobeTab.bmp" />
+    <Image Include="res\bitmap3.bmp" />
+    <Image Include="res\bmp00001.bmp" />
+    <Image Include="res\bmp00002.bmp" />
+    <Image Include="res\bmp00003.bmp" />
+    <Image Include="res\bmp00004.bmp" />
+    <Image Include="res\ControlPane.bmp" />
+    <Image Include="res\DTEditor.ico" />
+    <Image Include="res\DTEditorDoc.ico" />
+    <Image Include="res\paneicons.bmp" />
+    <Image Include="res\PaneObj.bmp" />
+    <Image Include="res\PaneToobarsTreeIcons.bmp" />
+    <Image Include="res\rulerdo.bmp" />
+    <Image Include="res\rulerdom.bmp" />
+    <Image Include="res\SciptPane.bmp" />
+    <Image Include="res\Toolbar.bmp" />
+    <Image Include="res\toolbar5.bmp" />
+    <Image Include="res\ToolbarAlpha.bmp" />
+    <Image Include="res\Transform.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="DTEditor.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\DTEditor.rc2" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="ActorPane.cpp" />
+    <ClCompile Include="BotPane.cpp" />
+    <ClCompile Include="CinematicGui.cpp" />
+    <ClCompile Include="CinematicNodePane.cpp" />
+    <ClCompile Include="ControlPane.cpp" />
+    <ClCompile Include="ControlPointView.cpp" />
+    <ClCompile Include="CreatePropDlg.cpp" />
+    <ClCompile Include="CustomItems.cpp" />
+    <ClCompile Include="DirectApp.cpp" />
+    <ClCompile Include="DirectionPane.cpp" />
+    <ClCompile Include="DirectionPropController.cpp" />
+    <ClCompile Include="DirectionPropEffect.cpp" />
+    <ClCompile Include="DirectionPropRefreeView.cpp" />
+    <ClCompile Include="DirectionPropSound.cpp" />
+    <ClCompile Include="DockingPaneCustomTheme.cpp" />
+    <ClCompile Include="DTEditor.cpp" />
+    <ClCompile Include="DTEditorDoc.cpp" />
+    <ClCompile Include="DTEditorGlobal.cpp" />
+    <ClCompile Include="DTEditorView.cpp" />
+    <ClCompile Include="DTServer.cpp" />
+    <ClCompile Include="MainFrm.cpp" />
+    <ClCompile Include="Msjexhnd.cpp" />
+    <ClCompile Include="ObjectPane.cpp" />
+    <ClCompile Include="OutputPane.cpp" />
+    <ClCompile Include="PointAttrDlg.cpp" />
+    <ClCompile Include="PointCustomEditDlg.cpp" />
+    <ClCompile Include="PointEditDlg.cpp" />
+    <ClCompile Include="PointRotateEditDlg.cpp" />
+    <ClCompile Include="PointShapeDlg.cpp" />
+    <ClCompile Include="PropertyPane.cpp" />
+    <ClCompile Include="RenamePropDlg.cpp" />
+    <ClCompile Include="ScriptPane.cpp" />
+    <ClCompile Include="SequenceGraphDlg.cpp" />
+    <ClCompile Include="SkillPane.cpp" />
+    <ClCompile Include="SoundOption.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release4Client|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release4Tools|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="ViewControlDlg.cpp" />
+    <ClCompile Include="WayPointPane.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ActorPane.h" />
+    <ClInclude Include="BotPane.h" />
+    <ClInclude Include="CinematicGui.h" />
+    <ClInclude Include="CinematicNodePane.h" />
+    <ClInclude Include="ControlPane.h" />
+    <ClInclude Include="ControlPointView.h" />
+    <ClInclude Include="CreatePropDlg.h" />
+    <ClInclude Include="CustomItems.h" />
+    <ClInclude Include="DirectApp.h" />
+    <ClInclude Include="DirectionPane.h" />
+    <ClInclude Include="DirectionPropController.h" />
+    <ClInclude Include="DirectionPropEffect.h" />
+    <ClInclude Include="DirectionPropRefreeView.h" />
+    <ClInclude Include="DirectionPropSound.h" />
+    <ClInclude Include="DockingPaneCustomTheme.h" />
+    <ClInclude Include="DTDefine.h" />
+    <ClInclude Include="DTEditor.h" />
+    <ClInclude Include="DTEditorDoc.h" />
+    <ClInclude Include="DTEditorGlobal.h" />
+    <ClInclude Include="DTEditorView.h" />
+    <ClInclude Include="DTServer.h" />
+    <ClInclude Include="MainFrm.h" />
+    <ClInclude Include="Msjexhnd.h" />
+    <ClInclude Include="ObjectPane.h" />
+    <ClInclude Include="OutputPane.h" />
+    <ClInclude Include="PointAttrDlg.h" />
+    <ClInclude Include="PointCustomEditDlg.h" />
+    <ClInclude Include="PointEditDlg.h" />
+    <ClInclude Include="PointRotateEditDlg.h" />
+    <ClInclude Include="PointShapeDlg.h" />
+    <ClInclude Include="PropertyPane.h" />
+    <ClInclude Include="RenamePropDlg.h" />
+    <ClInclude Include="Resource.h" />
+    <ClInclude Include="ScriptPane.h" />
+    <ClInclude Include="SequenceGraphDlg.h" />
+    <ClInclude Include="SkillPane.h" />
+    <ClInclude Include="SoundOption.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="ViewControlDlg.h" />
+    <ClInclude Include="WayPointPane.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\DboShared\DboTrigger\DboTrigger.vcxproj">
+      <Project>{3bee299b-d145-4030-81dd-d8b9ade8b767}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\DboShared\NtlGameTable\NtlGameTable.vcxproj">
+      <Project>{9a4dc8e8-16ef-463b-8f14-77f447a782cc}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\DboShared\NtlShared2\NtlShared.vcxproj">
+      <Project>{573eb1e4-7620-479e-8ccf-def06491545b}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\NtlLib\Client\NtlClientNet\NtlClientNet.vcxproj">
+      <Project>{c54a01c8-8482-4ef8-b259-06dff4fd4dbe}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\NtlLib\Shared\Lua\Lua.vcxproj">
+      <Project>{f7291b35-71f2-47c4-ae77-f3c4ab3b43a0}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\NtlLib\Shared\NtlTrigger\NtlTrigger.vcxproj">
+      <Project>{31832309-d436-4c40-913d-87aaf73ffc99}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\NtlLib\Shared\NtlXMLLoader\NtlXMLLoader.vcxproj">
+      <Project>{9d941cac-4183-44e3-aec3-817c0a32d1dd}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\NtlLib\Shared\Util\Util.vcxproj">
+      <Project>{5229f8ae-a505-4077-b6d3-5ce0164dfe73}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Lib\NtlCore\NtlCore.vcxproj">
+      <Project>{2d91cafc-1814-4cb4-b844-4e55f937d051}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Lib\NtlFlasher\NtlFlasher.vcxproj">
+      <Project>{de6f78c4-d4bd-4594-b1f0-e7fe85e30ee5}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Lib\NtlFramework\NtlFramework.vcxproj">
+      <Project>{a2e4d1ec-1758-44e0-b3c9-955c286f84be}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Lib\NtlGui\NtlGui.vcxproj">
+      <Project>{4cacaf6f-333c-4ac8-bb0e-ce8eee4b44a3}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Lib\NtlPresentation\NtlPresentation.vcxproj">
+      <Project>{0ec8e06b-8138-4bfd-8af7-9cad1f2f65ac}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Lib\NtlSimulation\NtlSimulation.vcxproj">
+      <Project>{7bb7020c-506b-47f4-b54b-c91c6f5246ca}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Lib\NtlSound\NtlSound.vcxproj">
+      <Project>{ac4b3632-113d-40e1-b22f-0e6d9d1fd15a}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Lib\Ntl_Plugin_Collis\Ntl_Plugin_Collis.vcxproj">
+      <Project>{4bd7b6fb-4afc-4880-a136-3b59f384ed9e}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Lib\Ntl_Plugin_Toon\Ntl_Plugin_Toon.vcxproj">
+      <Project>{0a07ccc0-9f5d-4e94-b7d6-68bd00dfd37d}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Lib\Ntl_Plugin_World\Ntl_Plugin_World.vcxproj">
+      <Project>{837e47aa-e57b-46ff-b42f-26f23bcba8df}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties RESOURCE_FILE="DTEditor.rc" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

@@ -1,0 +1,54 @@
+-- 2층
+-- 던젼 시작하자마자 실행됨
+-- 멋쟁이 전산병 사냥하면 방 문 열리고, 문 뒤의 mob spawn
+
+GameStage(0)
+--[
+	Action( "add mobgroup" )
+	--[
+		Param( "group", 5 )
+		Param( "no spawn wait", "true" )
+	--]
+	End()
+	
+	Action( "wait" )
+	--[
+		Condition( "check mobgroup" )
+		--[
+			Param( "group", 5 )
+			Param( "count", 0 )
+		--]
+		End()
+	--]
+	End()
+	
+	-- 문을 연다
+	Action( "change object state" )
+	--[
+		Param( "index", 31 )
+		Param( "state", 1 )
+		Param( "substate show", 1 )
+	--]
+	End()
+	
+	-- 문 뒤의 mob spawn
+	Action( "add mobgroup" )
+	--[
+		Param( "group", 13 )
+		Param( "no spawn wait", "true" )
+	--]
+	End()
+	
+	-- mob 모두 잡을 때 까지 wps 종료하지 않고 대기
+	Action( "wait" )
+	--[
+		Condition( "check mobgroup" )
+		--[
+			Param( "group", 13 )
+			Param( "count", 0 )
+		--]
+		End()
+	--]
+	End()
+--]
+End()

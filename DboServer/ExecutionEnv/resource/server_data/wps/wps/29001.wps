@@ -1,0 +1,125 @@
+-- 1층
+-- 오브젝트에서 실행됨
+-- 동력실 스위치를 켜면, 전기가 들어오고 몹이 움직이는 연출. 몹을 잡으면 문이 열릴 수 있는 상태가 된다.
+
+GameStage(0)
+--[
+	-- 시스템 메세지 "로봇 격납고에 전기가 공급되기 시작합니다"
+	Action( "system message" )
+	--[
+		Param( "notify", "action" )
+		Param( "text index", 7 )
+	--]
+	End()
+
+	Action( "system message" )
+	--[
+		Param( "notify", "system" )
+		Param( "text index", 7 )
+	--]
+	End()
+	
+	-- 벽의 대형 기어가 움직임
+	Action( "change object state" )
+	--[
+		Param( "index", 3 )
+		Param( "state", 1 )
+		Param( "substate show", 1 )
+	--]
+	End()
+
+	-- 고철 포크포크, 녹슨 찌리찌리 mob model의 오브젝트 안 보이게 함
+	Action( "change object state" )
+	--[
+		Param( "index", 25 )
+		Param( "state", 1 )
+		Param( "substate show", 1 )
+	--]
+	End()
+	
+	Action( "change object state" )
+	--[
+		Param( "index", 26 )
+		Param( "state", 1 )
+		Param( "substate show", 1 )
+	--]
+	End()
+	
+	Action( "change object state" )
+	--[
+		Param( "index", 27 )
+		Param( "state", 1 )
+		Param( "substate show", 1 )
+	--]
+	End()
+	
+	Action( "change object state" )
+	--[
+		Param( "index", 28 )
+		Param( "state", 1 )
+		Param( "substate show", 1 )
+	--]
+	End()
+
+	-- 오브젝트가 사라진 자리에 mob 스폰
+	Action( "add mobgroup" )
+	--[
+		Param( "group", 1 )
+		Param( "no spawn wait", "true" )
+	--]
+	End()
+	
+	-- mob 모두 잡을 때 까지 wps 종료 하지 않고 대기
+	Action( "wait" )
+	--[
+		Condition( "check mobgroup" )
+		--[
+			Param( "group", 1 )
+			Param( "count", 0 )
+		--]
+		End()
+	--]
+	End()
+
+	-- 문을 4번상태(열 수 있는 상태)로 바꿈
+	Action( "change object state" )
+	--[
+		Param( "index", 4 )
+		Param( "state", 4 )
+		Param( "substate show", 1 )
+	--]
+	End()
+	
+	-- 문이 열릴 때 까지 대기
+	Action( "wait" )
+	--[
+		Condition( "recv event from ts" )
+		--[
+			Param( "trigger type", "object" )
+			Param( "event id", 861 )
+		--]
+		End()
+	--]
+	End()
+	
+	-- 문 뒤에 mob spawn
+	Action( "add mobgroup" )
+	--[
+		Param( "group", 3 )
+		Param( "no spawn wait", "true" )
+	--]
+	End()
+	
+	-- mob이 모두 죽을 때 까지 wps 종료 안 하고 대기
+	Action( "wait" )
+	--[
+		Condition( "check mobgroup" )
+		--[
+			Param( "group", 3 )
+			Param( "count", 0 )
+		--]
+		End()
+	--]
+	End()
+--]
+End()

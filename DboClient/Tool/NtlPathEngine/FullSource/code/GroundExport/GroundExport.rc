@@ -1,0 +1,207 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_UV_PANEL, DIALOG
+    BEGIN
+        LEFTMARGIN, 6
+        RIGHTMARGIN, 102
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 357
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 3,0,0,0
+ PRODUCTVERSION 3,0,0,0
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x40004L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "FileDescription", "Ground mesh export."
+            VALUE "FileVersion", "3.0.0.0"
+            VALUE "OriginalFilename", "GroundExport.dlu"
+            VALUE "ProductName", "3D Studio MAX"
+            VALUE "ProductVersion", "3.0.0.0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_UV_PANEL DIALOGEX 0, 0, 109, 364
+STYLE DS_SETFONT | WS_CHILD | WS_VISIBLE
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    PUSHBUTTON      "Export selected",IDC_EXPORT_SELECTED,16,203,75,14,
+                    BS_MULTILINE
+    CTEXT           "0 Objects Selected",IDC_SEL,12,191,83,8
+    CTEXT           "********************",IDC_VERSION,6,352,96,8
+    CONTROL         "Tokenise",IDC_TOKENISE,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,11,110,78,10
+    CONTROL         "Add mapping to 2d",IDC_ADD_MAPPING,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,11,98,78,10
+    LTEXT           "Export ground mesh:",IDC_EXPORT_DESCRIPTION,6,38,70,10
+    LTEXT           "Import (autodetected):",IDC_IMPORT_HEADING,6,309,88,10
+    PUSHBUTTON      "Import",IDC_IMPORT_VALIDATED,16,335,75,14,BS_MULTILINE
+    CONTROL         "Set surface types",IDC_MATERIALIDS,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,11,50,78,10
+    CONTROL         "Add anchors",IDC_ADD_ANCHORS,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,11,74,78,10
+    CONTROL         "Set section IDs",IDC_SETTERRAINLAYER,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,11,62,78,10
+    CONTROL         "Process connections",IDC_PROCESS_CONNECTIONS,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,11,86,78,10
+    PUSHBUTTON      "Export named ground",IDC_EXPORT_NAMED_GROUND,16,220,75,
+                    14,BS_MULTILINE
+    CONTROL         "",IDC_SCALE,"CustEdit",WS_TABSTOP,35,4,27,10
+    CONTROL         "",IDC_SCALE_SPINNER,"SpinnerControl",0x0,63,4,7,10
+    RTEXT           "Scale:",IDC_STATIC,9,4,24,8
+    CONTROL         "Filter faces by slope",IDC_FILTER_FACES_BY_SLOPE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,11,134,78,10
+    CONTROL         "",IDC_MAX_SLOPE,"CustEdit",WS_TABSTOP,57,147,27,10
+    CONTROL         "",IDC_MAX_SLOPE_SPINNER,"SpinnerControl",0x0,85,147,7,
+                    10
+    CONTROL         "Max slope:",IDC_STATIC,"Static",SS_LEFTNOWORDWRAP | 
+                    WS_GROUP,18,147,35,8
+    CONTROL         "Optimise",IDC_OPTIMISE,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,11,161,43,10
+    CONTROL         "",IDC_MAX_ERROR,"CustEdit",WS_TABSTOP,57,174,27,10
+    CONTROL         "",IDC_MAX_ERROR_SPINNER,"SpinnerControl",0x0,85,174,7,
+                    10
+    CONTROL         "Max error:",IDC_STATIC,"Static",SS_LEFTNOWORDWRAP | 
+                    WS_GROUP,17,174,32,8
+    CONTROL         "Save source content",IDC_SAVE_SOURCE_CONTENT,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,11,122,78,10
+    LTEXT           "Export content chunk:",IDC_EXPORT_CHUNK_NAMED,6,242,70,
+                    10
+    PUSHBUTTON      "Export named chunk",IDC_EXPORT_NAMED_CHUNK,16,289,75,14,
+                    BS_MULTILINE
+    CONTROL         "Pre-validate",IDC_PREVALIDATE,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,11,254,53,10
+    CONTROL         "",IDC_MAX_SCALE,"CustEdit",WS_TABSTOP,58,265,27,10
+    CONTROL         "",IDC_MAX_SCALE_SPINNER,"SpinnerControl",0x0,86,265,7,
+                    10
+    CONTROL         "Max scale:",IDC_STATIC,"Static",SS_LEFTNOWORDWRAP | 
+                    WS_GROUP,18,265,35,8
+    CONTROL         "",IDC_RANGE,"CustEdit",WS_TABSTOP,58,276,27,10
+    CONTROL         "",IDC_RANGE_SPINNER,"SpinnerControl",0x0,86,276,7,10
+    CONTROL         "Range:",IDC_STATIC,"Static",SS_LEFTNOWORDWRAP | 
+                    WS_GROUP,18,276,24,8
+    CONTROL         "",IDC_ANCHOR_HEIGHT,"CustEdit",WS_TABSTOP,60,322,27,10
+    CONTROL         "",IDC_ANCHOR_HEIGHT_SPINNER,"SpinnerControl",0x0,88,322,
+                    7,10
+    LTEXT           "Anchor height:",IDC_STATIC,9,322,48,8
+    CONTROL         "Log errors",IDC_LOG_ERRORS,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,12,16,78,10
+    CONTROL         "Negate Y coordinate",IDC_NEGATE_Y,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,12,27,78,10
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_LIBDESCRIPTION      "Ground Mesh Export (PathEngine)"
+    IDS_CLASS_NAME          "GroundMeshExport"
+    IDS_PARAMS              "Parameters"
+    IDS_UV_NAME             "Ground Mesh Export"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

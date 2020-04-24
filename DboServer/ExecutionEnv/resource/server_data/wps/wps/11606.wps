@@ -1,0 +1,741 @@
+------------------------------------------------------------------------------------------------------------
+-- Time Leap Quest 3 Ver 0.1
+--
+-- Begin : 2009-01-08
+--
+-- Copyright : ⓒ NTL-Inc Co., Ltd
+--
+-- Author : YeoHyeonJoon (souled@ntl-inc.com)
+------------------------------------------------------------------------------------------------------------
+
+GameStage(0)
+--[
+
+--시네마틱 발동명령까지 대기
+	Action("wait")
+	--[
+		Condition( "recv event from ts" )
+		--[
+			Param( "trigger type", "quest" )
+			Param( "event id", 16711 )
+		--]
+		End()
+	--]
+	End()
+
+--BGM Play
+	Action( "play bgm" )
+	--[
+		Param( "play", "true")
+		Param( "name", "BGM\\BGM_TMQ_EVENT.ogg")
+		Param( "loop", "true")
+	--]
+	End()
+	
+--cinematic 찌찌 등장 씨네마틱
+	Action( "direct play" )
+	--[
+		Param( "type", "cinematic" )
+		Param( "id", 1041 )
+		Param("sync","true")
+	--] 
+	End()
+	
+--시네마틱 종료 알림
+	Action( "send event to ts" )
+	--[
+		Param( "trigger type", "quest" )
+		Param( "apply type", "register all")
+		Param( "event id",16712)
+	--]
+	End()
+	
+--spawn chi-chi
+	Action( "add npc" )
+	--[
+		Param( "index", 1701101)
+		Param( "loc x", -123.44)
+		Param( "loc y", 22)
+		Param( "loc z", -16.34)
+		Param( "dir x", 0.52)
+		Param( "dir z", 0.86)
+		Param( "play script", 1701101 )
+		Param( "play scene", 1 )
+	--]
+	End()
+	
+--찌찌 이동 완료까지 대기
+--	Action("wait")
+--	--[
+--		Condition( "recv event from sps" )
+--		--[
+--			Param( "object type", "npc" )
+--			Param( "object index", 1701101 )
+--			Param( "event id", 16713 )
+--		--]
+--		End()
+--	--]
+--	End()
+	
+--불량배 스폰 명령까지 대기
+	Action("wait")
+	--[
+		Condition( "recv event from ts" )
+		--[
+			Param( "trigger type", "quest" )
+			Param( "event id", 16715 )
+		--]
+		End()
+	--]
+	End()
+
+--불량배 스폰
+	Action( "add mobgroup" )
+	--[
+		Param( "group", 1 )
+	--]
+	End()
+
+--불량배 지우기	
+	Action( "remove npc" )
+	--[
+		Param( "index", 3251101 )
+		Param( "type", "clear" )
+	--]
+	End()
+	
+	Action( "remove npc" )
+	--[
+		Param( "index", 3252101 )
+		Param( "type", "clear" )
+	--]
+	End()
+	
+--불량배 전멸 체크
+	Action( "wait" )
+	--[ 
+		Condition( "check mobgroup" )
+		--[   
+			Param( "group", 1)
+			Param( "count", 2)
+		--]
+		End()
+	--]
+	End()
+
+--BGM Play
+	Action( "play bgm" )
+	--[
+		Param( "play", "true")
+		Param( "name", "BGM\\BGM_TLQ1.ogg")
+		Param( "loop", "true")
+	--]
+	End()
+	
+--불량배 전멸 알림
+	Action( "send event to ts" )
+	--[
+		Param( "trigger type", "quest" )
+		Param( "apply type", "register all")
+		Param( "event id",16960)
+	--]
+	End()
+	
+--아가씨가 주는 단서 종료까지 대기
+	Action("wait")
+	--[
+		Condition( "recv event from ts" )
+		--[
+			Param( "trigger type", "quest" )
+			Param( "event id", 16760 )
+		--]
+		End()
+	--]
+	End()
+	
+--Fake Goku spawn
+	Action( "add npc" )
+	--[
+		Param( "index", 2761801)
+		Param( "loc x", 40.05)
+		Param( "loc y", 22)
+		Param( "loc z", -40.15)
+		Param( "dir x", 0.87)
+		Param( "dir z", -0.48)
+		Param( "play script", 2761801 )
+		Param( "play scene", 1 )
+	--]
+	End()
+	
+--변신명령까지 대기
+	Action("wait")
+	--[
+		Condition( "recv event from ts" )
+		--[
+			Param( "trigger type", "quest" )
+			Param( "event id", 16780 )
+		--]
+		End()
+	--]
+	End()
+	
+--Remove Fake Goku
+	Action( "remove npc" )
+	--[
+		Param( "index", 2761801 )
+		Param( "type", "clear" )
+	--]
+	End()
+	
+--cinematic 오룡 변신 씨네마틱
+	Action( "direct play" )
+	--[
+		Param( "type", "cinematic" )
+		Param( "id", 1044 )
+		Param("sync","true")
+	--] 
+	End()
+	
+--시네마틱 종료 알림
+	Action( "send event to ts" )
+	--[
+		Param( "trigger type", "quest" )
+		Param( "apply type", "register all")
+		Param( "event id",16790)
+	--]
+	End()
+	
+--Spawn pig(Oolong)
+	Action( "add npc" )
+	--[
+		Param( "index", 8671101)
+		Param( "loc x", -123.44)
+		Param( "loc y", 22)
+		Param( "loc z", -13.67)
+		Param( "dir x", 0.00)
+		Param( "dir z", -1.00)
+	--]
+	End()
+	
+--찌찌 대사 종료까지 대기
+	Action("wait")
+	--[
+		Condition( "recv event from ts" )
+		--[
+			Param( "trigger type", "quest" )
+			Param( "event id", 16810 )
+		--]
+		End()
+	--]
+	End()
+	
+--찌찌 이동시키기
+	Action( "send event to sps" )
+	--[
+		Param( "target type", "npc" )
+		Param( "target index", 1701101)
+		Param( "event id", 16820)
+	--]
+	End()
+	
+--찌찌 이동 완료까지 대기
+	Action("wait")
+	--[
+		Condition( "recv event from sps" )
+		--[
+			Param( "object type", "npc" )
+			Param( "object index", 1701101 )
+			Param( "event id", 17000 )
+		--]
+		End()
+	--]
+	End()
+
+--찌찌 도착을 퀘스트에 알림
+	Action( "send event to ts" )
+	--[
+		Param( "trigger type", "quest" )
+		Param( "apply type", "register all")
+		Param( "event id",16840)
+	--]
+	End()
+	
+--찌찌 대쉬도 몰라? 대사 종료까지 대기
+	Action("wait")
+	--[
+		Condition( "recv event from ts" )
+		--[
+			Param( "trigger type", "quest" )
+			Param( "event id", 16850 )
+		--]
+		End()
+	--]
+	End()
+	
+--오룡 지우기	
+	Action( "remove npc" )
+	--[
+		Param( "index", 8671101 )
+		Param( "type", "clear" )
+	--]
+	End()
+	
+--불량한 무도가 스폰
+	Action( "add npc" )
+	--[
+		Param( "index", 3251101)
+		Param( "loc x", -76.19)
+		Param( "loc y", 22)
+		Param( "loc z", -12.47)
+		Param( "dir x", 0.00)
+		Param( "dir z", 1.00)
+		Param( "play script", 3251101 )
+		Param( "play scene", 2 )
+	--]
+	End()
+	
+--불량한 기공사 스폰
+	Action( "add npc" )
+	--[
+		Param( "index", 3252101)
+		Param( "loc x", -76.22)
+		Param( "loc y", 22)
+		Param( "loc z", -13.82)
+		Param( "dir x", 0.00)
+		Param( "dir z", 1.00)
+		Param( "play script", 3252101 )
+		Param( "play scene", 1 )
+	--]
+	End()
+	
+--시네마틱 발동명령까지 대기
+	Action("wait")
+	--[
+		Condition( "recv event from ts" )
+		--[
+			Param( "trigger type", "quest" )
+			Param( "event id", 16855 )
+		--]
+		End()
+	--]
+	End()
+
+--BGM Play
+	Action( "play bgm" )
+	--[
+		Param( "play", "true")
+		Param( "name", "BGM\\BGM_TMQ_EVENT.ogg")
+		Param( "loop", "true")
+	--]
+	End()
+	
+--cinematic 두목등장 씨네마틱
+	Action( "direct play" )
+	--[
+		Param( "type", "cinematic" )
+		Param( "id", 1042 )
+		Param("sync","true")
+	--] 
+	End()
+	
+--시네마틱 종료 알림
+	Action( "send event to ts" )
+	--[
+		Param( "trigger type", "quest" )
+		Param( "apply type", "register all")
+		Param( "event id",16856)
+	--]
+	End()
+	
+--불량배 두목 스폰
+	Action( "add npc" )
+	--[
+		Param( "index", 1331101)
+		Param( "loc x", -79.45)
+		Param( "loc y", 22)
+		Param( "loc z", 3.70)
+		Param( "dir x", -0.62)
+		Param( "dir z", 0.79)
+	--]
+	End()
+	
+--찌찌 다덤벼 대사 종료까지 대기
+	Action("wait")
+	--[
+		Condition( "recv event from ts" )
+		--[
+			Param( "trigger type", "quest" )
+			Param( "event id", 16860 )
+		--]
+		End()
+	--]
+	End()
+	
+--불량배 스폰
+	Action( "add mobgroup" )
+	--[
+		Param( "group", 2 )
+		Param( "spawn func", "no spawn wait" )
+	--]
+	End()
+	
+--불량배들 지우기	
+	Action( "remove npc" )
+	--[
+		Param( "index", 3251101 )
+		Param( "type", "clear" )
+	--]
+	End()
+	
+	Action( "remove npc" )
+	--[
+		Param( "index", 3252101 )
+		Param( "type", "clear" )
+	--]
+	End()
+	
+	Action( "remove npc" )
+	--[
+		Param( "index", 1331101 )
+		Param( "type", "clear" )
+	--]
+	End()
+	
+--Check if bullies dead
+	Action( "wait" )
+	--[ 
+		Condition( "check mobgroup" )
+		--[   
+			Param( "group", 2)
+			Param( "count", 3)
+		--]
+		End()
+	--]
+	End()
+
+--BGM Play
+	Action( "play bgm" )
+	--[
+		Param( "play", "true")
+		Param( "name", "BGM\\BGM_TLQ1.ogg")
+		Param( "loop", "true")
+	--]
+	End()
+	
+--Bully wiped out notifications
+	Action( "send event to ts" )
+	--[
+		Param( "trigger type", "quest" )
+		Param( "apply type", "register all")
+		Param( "event id",16990)
+	--]
+	End()
+	
+--찌찌 다시 가자 대사 종료까지 대기
+	Action("wait")
+	--[
+		Condition( "recv event from ts" )
+		--[
+			Param( "trigger type", "quest" )
+			Param( "event id", 16860 )
+		--]
+		End()
+	--]
+	End()
+	
+--Move chi chi to the other guys
+	Action( "send event to sps" )
+	--[
+		Param( "target type", "npc" )
+		Param( "target index", 1701101)
+		Param( "event id",16870)
+	--]
+	End()
+	
+--마쥬니어 스폰
+	Action( "add npc" )
+	--[
+		Param( "index", 5551105)
+		Param( "loc x", 89.36)
+		Param( "loc y", 22.20)
+		Param( "loc z", -100.93)
+		Param( "dir x", 0.95)
+		Param( "dir z", 0.33)
+	--]
+	End()
+	
+--천진반 스폰
+	Action( "add npc" )
+	--[
+		Param( "index", 7042101)
+		Param( "loc x", 111.61)
+		Param( "loc y", 22.20)
+		Param( "loc z", -102.32)
+		Param( "dir x", -0.96)
+		Param( "dir z", 0.28)
+	--]
+	End()
+	
+--손오공 스폰
+	Action( "add npc" )
+	--[
+		Param( "index", 2761801)
+		Param( "loc x", 110.86)
+		Param( "loc y", 22.20)
+		Param( "loc z", -100.63)
+		Param( "dir x", -0.99)
+		Param( "dir z", -0.10)
+	--]
+	End()
+	
+--크리링 스폰
+	Action( "add npc" )
+	--[
+		Param( "index", 3511104)
+		Param( "loc x", 112.32)
+		Param( "loc y", 22.20)
+		Param( "loc z", -101.15)
+		Param( "dir x", -0.91)
+		Param( "dir z", 0.42)
+	--]
+	End()
+	
+--차오즈 스폰
+	Action( "add npc" )
+	--[
+		Param( "index", 1582101)
+		Param( "loc x", 112.55)
+		Param( "loc y", 22.20)
+		Param( "loc z", -100.50)
+		Param( "dir x", -1.00)
+		Param( "dir z", -0.07)
+	--]
+	End()
+	
+--야무치 스폰
+	Action( "add npc" )
+	--[
+		Param( "index", 9042101)
+		Param( "loc x", 113.03)
+		Param( "loc y", 22.20)
+		Param( "loc z", -101.72)
+		Param( "dir x", -1.00)
+		Param( "dir z", 0.02)
+	--]
+	End()
+	
+--Wait until chi chi movement completed
+	Action("wait")
+	--[
+		Condition( "recv event from sps" )
+		--[
+			Param( "object type", "npc" )
+			Param( "object index", 1701101 )
+			Param( "event id", 17010 )
+		--]
+		End()
+	--]
+	End()
+	
+--찌찌 이동 완료 알림
+	Action( "send event to ts" )
+	--[
+		Param( "trigger type", "quest" )
+		Param( "apply type", "register all")
+		Param( "event id",16880)
+	--]
+	End()
+	
+--시네마틱 발동명령까지 대기
+	Action("wait")
+	--[
+		Condition( "recv event from ts" )
+		--[
+			Param( "trigger type", "quest" )
+			Param( "event id", 16885 )
+		--]
+		End()
+	--]
+	End()
+
+--오공들 지우기	
+	Action( "remove npc" )
+	--[
+		Param( "index", 5551105)
+		Param( "type", "clear" )
+	--]
+	End()
+
+	Action( "remove npc" )
+	--[
+		Param( "index", 7042101)
+		Param( "type", "clear" )
+	--]
+	End()
+
+	Action( "remove npc" )
+	--[
+		Param( "index", 2761801)
+		Param( "type", "clear" )
+	--]
+	End()
+
+	Action( "remove npc" )
+	--[
+		Param( "index", 3511104)
+		Param( "type", "clear" )
+	--]
+	End()
+
+	Action( "remove npc" )
+	--[
+		Param( "index", 1582101)
+		Param( "type", "clear" )
+	--]
+	End()
+
+	Action( "remove npc" )
+	--[
+		Param( "index", 9042101)
+		Param( "type", "clear" )
+	--]
+	End()
+	
+--BGM Play
+	Action( "play bgm" )
+	--[
+		Param( "play", "true")
+		Param( "name", "BGM\\BGM_TMQ_COMMON.ogg")
+		Param( "loop", "true")
+	--]
+	End()
+	
+--cinematic 마쥬니어 씨네마틱
+	Action( "direct play" )
+	--[
+		Param( "type", "cinematic" )
+		Param( "id", 1043 )
+		Param("sync","true")
+	--] 
+	End()
+	
+--BGM Play
+	Action( "play bgm" )
+	--[
+		Param( "play", "true")
+		Param( "name", "BGM\\BGM_TLQ1.ogg")
+		Param( "loop", "true")
+	--]
+	End()
+	
+--천진반 스폰
+	Action( "add npc" )
+	--[
+		Param( "index", 7042101)
+		Param( "loc x", 111.61)
+		Param( "loc y", 22.20)
+		Param( "loc z", -102.32)
+		Param( "dir x", -0.96)
+		Param( "dir z", 0.28)
+	--]
+	End()
+	
+--손오공 스폰
+	Action( "add npc" )
+	--[
+		Param( "index", 2761801)
+		Param( "loc x", 110.86)
+		Param( "loc y", 22.20)
+		Param( "loc z", -100.63)
+		Param( "dir x", -0.99)
+		Param( "dir z", -0.10)
+	--]
+	End()
+	
+--크리링 스폰
+	Action( "add npc" )
+	--[
+		Param( "index", 3511104)
+		Param( "loc x", 112.32)
+		Param( "loc y", 22.20)
+		Param( "loc z", -101.15)
+		Param( "dir x", -0.91)
+		Param( "dir z", 0.42)
+	--]
+	End()
+	
+--차오즈 스폰
+	Action( "add npc" )
+	--[
+		Param( "index", 1582101)
+		Param( "loc x", 112.55)
+		Param( "loc y", 22.20)
+		Param( "loc z", -100.50)
+		Param( "dir x", -1.00)
+		Param( "dir z", -0.07)
+	--]
+	End()
+	
+--야무치 스폰
+	Action( "add npc" )
+	--[
+		Param( "index", 9042101)
+		Param( "loc x", 113.03)
+		Param( "loc y", 22.20)
+		Param( "loc z", -101.72)
+		Param( "dir x", -1.00)
+		Param( "dir z", 0.02)
+	--]
+	End()
+	
+--시네마틱 종료 알림
+	Action( "send event to ts" )
+	--[
+		Param( "trigger type", "quest" )
+		Param( "apply type", "register all")
+		Param( "event id",16886)
+	--]
+	End()
+	
+--찌찌 이동 완료까지 대기
+	Action("wait")
+	--[
+		Condition( "recv event from sps" )
+		--[
+			Param( "object type", "npc" )
+			Param( "object index", 1701101 )
+			Param( "event id", 17020 )
+		--]
+		End()
+	--]
+	End()
+	
+--찌찌 이동 완료 알림
+	Action( "send event to ts" )
+	--[
+		Param( "trigger type", "quest" )
+		Param( "apply type", "register all")
+		Param( "event id",16900)
+	--]
+	End()
+	
+--wps Standby Shutdown command
+	Action("wait")
+	--[
+		Condition( "recv event from ts" )
+		--[
+			Param( "trigger type", "quest" )
+			Param( "event id", 17030 )
+		--]
+		End()
+	--]
+	End()
+	
+--]
+End()
+
+GameFailed()
+--[
+
+--]
+End()

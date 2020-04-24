@@ -1,0 +1,143 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Packet">
+      <UniqueIdentifier>{78de80f2-aa9d-4b75-a76d-9b363b494c2f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Core">
+      <UniqueIdentifier>{ee78a8f1-3175-42f4-b901-f35feeef39f7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Socket">
+      <UniqueIdentifier>{5af5bec5-0d50-4f2f-af5e-887ad555c7a9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Session">
+      <UniqueIdentifier>{c3b7449f-2f6f-4a1b-8c03-12b676182679}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Packet\new">
+      <UniqueIdentifier>{5850b077-70b2-4176-a573-e98b8b05e051}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="NtlNetBuffer.h">
+      <Filter>Packet</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlPacket.h">
+      <Filter>Packet</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlPacketEncoder.h">
+      <Filter>Packet</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlPacketSYS.h">
+      <Filter>Packet</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlAcceptor.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlConnection.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlConnector.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlIOCP.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlNetwork.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlNetworkProcessor.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlSockAddr.h">
+      <Filter>Socket</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlSocket.h">
+      <Filter>Socket</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlSession.h">
+      <Filter>Session</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlSessionFactory.h">
+      <Filter>Session</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlSessionList.h">
+      <Filter>Session</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlSessionMap.h">
+      <Filter>Session</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="PeekerQueue.h">
+      <Filter>Packet\new</Filter>
+    </ClInclude>
+    <ClInclude Include="Peeker.h">
+      <Filter>Packet\new</Filter>
+    </ClInclude>
+    <ClInclude Include="PacketBlock.h">
+      <Filter>Packet\new</Filter>
+    </ClInclude>
+    <ClInclude Include="MemStream.h">
+      <Filter>Packet\new</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlSessionListBase.h">
+      <Filter>Session</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlAcceptingSessionList.h">
+      <Filter>Session</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="NtlPacket.cpp">
+      <Filter>Packet</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlPacketEncoder.cpp">
+      <Filter>Packet</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlAcceptor.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlConnection.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlConnector.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlIOCP.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlNetwork.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlNetworkProcessor.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlSocket.cpp">
+      <Filter>Socket</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlSession.cpp">
+      <Filter>Session</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlSessionList.cpp">
+      <Filter>Session</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp" />
+    <ClCompile Include="PeekerQueue.cpp">
+      <Filter>Packet\new</Filter>
+    </ClCompile>
+    <ClCompile Include="Peeker.cpp">
+      <Filter>Packet\new</Filter>
+    </ClCompile>
+    <ClCompile Include="PacketBlock.cpp">
+      <Filter>Packet\new</Filter>
+    </ClCompile>
+    <ClCompile Include="MemStream.cpp">
+      <Filter>Packet\new</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlSessionListBase.cpp">
+      <Filter>Session</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlAcceptingSessionList.cpp">
+      <Filter>Session</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

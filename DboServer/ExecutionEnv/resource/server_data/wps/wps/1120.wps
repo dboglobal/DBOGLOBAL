@@ -1,0 +1,48 @@
+GameStage(0)
+--[
+
+	Action("add mobgroup")
+	--[
+		Param("group", 1493)
+		Param("no spawn wait","true")
+	--]
+	End()
+
+	Action("wait")
+	--[
+		Param("operation","or")
+
+		Condition("check mobgroup")
+		--[
+			Param("group", 1493)
+			Param("count", 1)
+		--]
+		End()
+
+		Condition("child")
+		--[
+			Action("wait")
+			--[
+				Condition("check time")
+				--[
+					Param("time",300)
+				--]
+				End()
+			--]
+			End()
+
+			Action("wps fail")
+			--[
+			--]
+			End()
+		--]
+		End()
+	--]
+	End()
+--]
+End()
+
+GameFailed()
+--[
+--]
+End()

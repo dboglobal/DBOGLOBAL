@@ -1,0 +1,79 @@
+-- UD1 LEGENDARY
+
+GameStage(0)
+--[
+
+	Action("exec wps")
+	--[
+		Param("wps tblidx", 26001)
+	--]
+	End()
+
+	Action("exec wps")
+	--[
+		Param("wps tblidx", 26002)
+	--]
+	End()
+
+	Action("exec wps")
+	--[
+		Param("wps tblidx", 26003)
+	--]
+	End()
+
+	Action("exec wps")
+	--[
+		Param("wps tblidx", 26004)
+	--]
+	End()
+
+	Action("exec wps")
+	--[
+		Param("wps tblidx", 26005)
+	--]
+	End()
+
+	Action("exec wps")
+	--[
+		Param("wps tblidx", 26006)
+	--]
+	End()
+
+	Action("exec wps")
+	--[
+		Param("wps tblidx", 26007)
+	--]
+	End()
+
+	Action("exec wps")
+	--[
+		Param("wps tblidx", 26010)
+	--]
+	End()
+
+	Action("exec wps")
+	--[
+		Param("wps tblidx", 26011)
+	--]
+	End()
+
+	Action("exec wps")
+	--[
+		Param("wps tblidx", 26012)
+	--]
+	End()
+
+	Action("exec wps")
+	--[
+		Param("wps tblidx", 26013)
+	--]
+	End()
+
+	Action("exec wps")
+	--[
+		Param("wps tblidx", 26015)
+	--]
+	End()
+
+--]
+End()

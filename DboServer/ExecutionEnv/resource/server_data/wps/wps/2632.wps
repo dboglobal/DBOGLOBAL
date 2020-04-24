@@ -1,0 +1,188 @@
+GameStage(0)
+--[
+	-- 원래 모델 despawn하고 N_DAI_A1 모델로 변신
+	Action( "remove npc" )
+	--[
+		Param( "index", 5313102 )
+		Param( "type", "clear" )
+	--]
+	End()
+
+	Action( "add npc" )
+	--[
+		Param( "index", 1751109 )
+		Param( "loc x", 227.49 )
+		Param( "loc y", -74.33 )
+		Param( "loc z", -3843.87 )
+		Param( "dir x", 0.00 )
+		Param( "dir z", 1.00 )
+		Param( "no spawn wait", "true" )
+	--]
+	End()
+
+	Action( "wait" )
+	--[
+		Condition( "check time" )
+		--[
+			Param( "time", 4 )
+		--]
+		End()
+	--]
+	End()
+
+
+	-- N_DGA_A1 모델로 변신
+	Action( "remove npc" )
+	--[
+		Param( "index", 1751109 )
+		Param( "type", "clear" )
+	--]
+	End()
+
+	Action( "add npc" )
+	--[
+		Param( "index", 1781119 )
+		Param( "loc x", 227.49 )
+		Param( "loc y", -74.33 )
+		Param( "loc z", -3843.87 )
+		Param( "dir x", 0.00 )
+		Param( "dir z", 1.00 )
+		Param( "no spawn wait", "true" )
+	--]
+	End()
+
+	Action( "wait" )
+	--[
+		Condition( "check time" )
+		--[
+			Param( "time", 4 )
+		--]
+		End()
+	--]
+	End()
+
+
+
+	-- N_GRA_A3 모델로 변신
+	Action( "remove npc" )
+	--[
+		Param( "index", 1781119 )
+		Param( "type", "clear" )
+	--]
+	End()
+
+	Action( "add npc" )
+	--[
+		Param( "index", 2951309 )
+		Param( "loc x", 227.49 )
+		Param( "loc y", -74.33 )
+		Param( "loc z", -3843.87 )
+		Param( "dir x", 0.00 )
+		Param( "dir z", 1.00 )
+		Param( "no spawn wait", "true" )
+	--]
+	End()
+
+	Action( "wait" )
+	--[
+		Condition( "check time" )
+		--[
+			Param( "time", 4 )
+		--]
+		End()
+	--]
+	End()
+
+
+
+	-- N_HFI_F_B2 모델로 변신
+	Action( "remove npc" )
+	--[
+		Param( "index", 2951309 )
+		Param( "type", "clear" )
+	--]
+	End()
+
+	Action( "add npc" )
+	--[
+		Param( "index", 3172207 )
+		Param( "loc x", 227.49 )
+		Param( "loc y", -74.33 )
+		Param( "loc z", -3843.87 )
+		Param( "dir x", 0.00 )
+		Param( "dir z", 1.00 )
+		Param( "no spawn wait", "true" )
+	--]
+	End()
+
+	Action( "wait" )
+	--[
+		Condition( "check time" )
+		--[
+			Param( "time", 4 )
+		--]
+		End()
+	--]
+	End()
+
+
+
+	-- N_HFI_M_D1 모델로 변신
+	Action( "remove npc" )
+	--[
+		Param( "index", 3172207 )
+		Param( "type", "clear" )
+	--]
+	End()
+
+	Action( "add npc" )
+	--[
+		Param( "index", 3184105 )
+		Param( "loc x", 227.49 )
+		Param( "loc y", -74.33 )
+		Param( "loc z", -3843.87 )
+		Param( "dir x", 0.00 )
+		Param( "dir z", 1.00 )
+		Param( "no spawn wait", "true" )
+	--]
+	End()
+
+	Action( "wait" )
+	--[
+		Condition( "check time" )
+		--[
+			Param( "time", 4 )
+		--]
+		End()
+	--]
+	End()
+
+
+
+	-- 원래 N_OOC_C1 모델로 돌아감
+	Action( "remove npc" )
+	--[
+		Param( "index", 3184105 )
+		Param( "type", "clear" )
+	--]
+	End()
+
+	Action( "add npc" )
+	--[
+		Param( "index", 5313102 )
+		Param( "loc x", 227.49 )
+		Param( "loc y", -74.33 )
+		Param( "loc z", -3843.87 )
+		Param( "dir x", 0.00 )
+		Param( "dir z", 1.00 )
+		Param( "no spawn wait", "true" )
+		Param( "stand alone", "true" )
+	--]
+	End()
+--]
+End()
+
+GameFailed()
+--[
+--]
+End()

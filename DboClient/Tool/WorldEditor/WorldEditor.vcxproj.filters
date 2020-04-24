@@ -1,0 +1,1390 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Global Files">
+      <UniqueIdentifier>{0c625bef-4a1b-434d-bc59-e44be6c82300}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Editor">
+      <UniqueIdentifier>{c87d5975-52ed-4f38-b985-edcce6bd1d82}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Editor\Global">
+      <UniqueIdentifier>{fcde6513-04cd-498c-ac89-2c2b697d8cb1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Editor\Global\Fixed String">
+      <UniqueIdentifier>{f0398fbd-b6c4-4ea8-8c59-d2861717ce6a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Editor\Global\Serializer">
+      <UniqueIdentifier>{121b61ae-8dc4-4fc3-905c-b4615a6a2ebc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Editor\Global\Position">
+      <UniqueIdentifier>{db845434-0ad0-4d97-b162-6d7b137f8579}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Editor\Global\Color">
+      <UniqueIdentifier>{1627bbb3-8d3c-4274-a9a9-156e9d02035e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Editor\Global\HashTable">
+      <UniqueIdentifier>{8281308a-87aa-46ab-bbad-c7c44305748a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Editor\Global\HashTable\HashSlot">
+      <UniqueIdentifier>{5e1bb1c3-8785-4d22-8001-a6bd696aebac}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Editor\Global\Type">
+      <UniqueIdentifier>{7ff98a66-a911-423b-8e76-82643e9f70e2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Editor\3D Object">
+      <UniqueIdentifier>{035a8995-d5d2-4a87-a718-a6376a205d49}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Editor\3D Object\Entity">
+      <UniqueIdentifier>{da6f6b4d-132c-4cf8-978b-8d18d34c3d7c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Editor\3D Object\Entity\Atomic">
+      <UniqueIdentifier>{ffffd155-426b-459f-8603-5bc1f91b9461}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Editor\3D Object\Entity\Clump">
+      <UniqueIdentifier>{7fd7e8b3-df12-4f08-97fe-1014c1b2b610}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Editor\3D Object\Entity\Light">
+      <UniqueIdentifier>{96c9583a-7423-4f9f-9776-ae2ef1c514b5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Editor\3D Object\Entity\Camera">
+      <UniqueIdentifier>{53701781-3657-428a-9f72-28362087f814}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Editor\3D Object\Entity\World">
+      <UniqueIdentifier>{50bb98cc-d7dd-461c-bb6c-60b9ffbc509a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Editor\3D Object\Entity\WorldSector">
+      <UniqueIdentifier>{637ca362-96d5-4c73-b0f3-4e1d263805bd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Editor\3D Object\Entity\Fog">
+      <UniqueIdentifier>{86717d55-f6b7-4f96-a1bd-4fd2865d6018}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Editor\3D Object\Entity\Sky">
+      <UniqueIdentifier>{c90769d1-4eea-499d-9d22-2dfbc37ff8bc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Editor\3D Object\Entity\Animation">
+      <UniqueIdentifier>{14e4aba0-0686-4436-a327-f32741c62f41}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Editor\3D Object\Entity\Mesh">
+      <UniqueIdentifier>{67d037fa-c128-4dc5-a25e-b7811cba47f1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Editor\3D Object\Property">
+      <UniqueIdentifier>{5d159c29-39fc-4f90-bb21-96eb78c56b37}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Editor\3D Object\Property\Atomic">
+      <UniqueIdentifier>{6cd5c243-a6e4-4e3f-bafa-883bfe3950b6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Editor\3D Object\Property\Clump">
+      <UniqueIdentifier>{904300b2-b865-4db4-b171-7b9f03d82ad1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Editor\3D Object\Property\Light">
+      <UniqueIdentifier>{3a84f2e2-6b2b-4de5-a718-8aee9e2679f8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Editor\3D Object\Property\Camera">
+      <UniqueIdentifier>{45bf69eb-b3be-40e6-99d3-87adffe64881}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Editor\3D Object\Property\World">
+      <UniqueIdentifier>{434e123a-d04c-4aa9-b30e-d81061ebaf94}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Editor\3D Object\Property\WorldSector">
+      <UniqueIdentifier>{a955113d-c326-42f3-bf86-ea6c8e3b3d80}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Editor\3D Object\Property\Fog">
+      <UniqueIdentifier>{71907da9-439b-4594-89c7-96202923d64c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Editor\3D Object\Property\Sky">
+      <UniqueIdentifier>{cc770af9-663a-4719-8450-87efecc80732}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Editor\3D Object\Property\Animation">
+      <UniqueIdentifier>{b396d943-e7b6-4ad9-93d0-e2a935e34dd4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Editor\3D Object\Property\Mesh">
+      <UniqueIdentifier>{9cfaefc9-c1ff-45db-bccb-dd32a3509d66}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Editor\3D Object\Container">
+      <UniqueIdentifier>{6b2306ab-8be3-47ce-bee9-0e2ad94788da}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Editor\3D Object\Container\List">
+      <UniqueIdentifier>{b85554db-0356-476a-9d12-3352ca769bc4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Editor\3D Object\Container\Cube">
+      <UniqueIdentifier>{19fbc61e-8373-4231-aaf2-0a13a38f5774}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Editor\3D Object\Container\HashMap">
+      <UniqueIdentifier>{293e33af-b8fb-4bec-920e-4074253c9c21}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Editor\3D Object\Container\HashTable">
+      <UniqueIdentifier>{e7346e74-8882-4c8f-9f98-ebe784fd5579}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Editor\3D Object\Container\PropertySortTable">
+      <UniqueIdentifier>{4cbc74f7-0e0c-4396-9b6a-06d8bc67bfbe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Editor\3D Object\Factory">
+      <UniqueIdentifier>{c54a06c5-f421-43f5-bb46-086ffb3c8b59}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Editor\3D Object\SceneManager">
+      <UniqueIdentifier>{88ea5232-8e5d-4812-b892-0d9f0ebb5620}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Editor\3D Object\Resource">
+      <UniqueIdentifier>{6e21ccf5-7096-4f3b-8ac6-688f1a5c55d4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Editor\3D Object\Collision">
+      <UniqueIdentifier>{ba0e779e-85a8-4714-bb9d-9c1a84ce1431}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Editor\3D Object\Collision\EntityCollision">
+      <UniqueIdentifier>{21e6a2dc-0331-4c8b-aa09-93723cb6d686}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Editor\3D Object\Helper">
+      <UniqueIdentifier>{ac4d483c-a2b9-4e50-ad85-32e165cf645c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Editor\3D Object\Event">
+      <UniqueIdentifier>{4d7cb685-a608-4ce2-a3ce-03d0d4e5554a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Editor\3D Object\Event\Queue">
+      <UniqueIdentifier>{4d7e92c4-c84d-45a7-a473-5690c1d7c1e1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Editor\3D Object\EntityRenderer">
+      <UniqueIdentifier>{39c42e68-0568-4c69-ae16-48d5aeb9090f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Editor\3D Object\EntityRenderer\TerrainEntityRenderer">
+      <UniqueIdentifier>{38fae7f1-4e8b-461c-b307-d963b21e7517}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Editor\3D Object\EntityRenderer\SkyEntityRenderer">
+      <UniqueIdentifier>{e0bdfaec-258b-41a1-8552-0756bb70a22a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Editor\3D Object\EntityRenderer\TreeEntityRenderer">
+      <UniqueIdentifier>{22bd4472-4e45-4048-bea1-6d2527d8bd5d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Editor\3D Object\EntityRenderer\DefaultEntityRenderer">
+      <UniqueIdentifier>{839087f8-6772-48f1-8c32-d6627c9cba6f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Editor\3D Object\RenderManager">
+      <UniqueIdentifier>{9550bf7a-b432-4671-998c-8ba00751b62c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Editor\3D Object\LightMap">
+      <UniqueIdentifier>{c6cda2ac-0263-4473-8814-84fb746d6782}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Editor\Import/Export">
+      <UniqueIdentifier>{fe446b17-79cd-4b1a-a223-7d209485c5fe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Editor\Import/Export\Command">
+      <UniqueIdentifier>{63a924f6-ab3f-4885-bb1b-3afbd81405ca}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Editor\Input">
+      <UniqueIdentifier>{4059b250-ab74-47cc-908a-10e0023231d8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Editor\GlobalIndicator">
+      <UniqueIdentifier>{f5705860-c0da-4e63-9a3d-b932fd5fd833}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MFC Files">
+      <UniqueIdentifier>{1ed42746-27a9-46e5-ba0c-76dc3d0e9111}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MFC Files\MainControlBar">
+      <UniqueIdentifier>{4b915242-a969-4cb3-9449-cb970de19beb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MFC Files\MainControlBar\InstanceView">
+      <UniqueIdentifier>{4c8c422d-9e6e-4402-93f6-e6e9b83ad2ea}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MFC Files\MainControlBar\InstanceView\TreeView">
+      <UniqueIdentifier>{fb373b20-5710-4101-84e3-937073e043eb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MFC Files\MainControlBar\InstanceView\TreeView\Dialog">
+      <UniqueIdentifier>{c50d5d53-fb16-4146-8fdf-55af886fd8b3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MFC Files\MainControlBar\InstanceView\TreeView\TreeCtrl">
+      <UniqueIdentifier>{1aeb618a-3127-4357-9508-c9917be88908}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MFC Files\MainControlBar\InstanceView\PropertyView">
+      <UniqueIdentifier>{26affb5c-3de6-4691-b990-4a9cfb3be24d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MFC Files\MainControlBar\InstanceView\PropertyView\Tree">
+      <UniqueIdentifier>{366f8a6d-b38e-4fc9-bb3a-63b0ec080782}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MFC Files\MainControlBar\InstanceView\PropertyView\Tree\Entity">
+      <UniqueIdentifier>{36865d9d-1159-4aa9-980c-6ced026ef0d5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MFC Files\MainControlBar\InstanceView\PropertyView\Tree\Entity\Light">
+      <UniqueIdentifier>{eab11adb-93a5-4c7b-8ead-bea5f70914d5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MFC Files\MainControlBar\InstanceView\PropertyView\Tree\Entity\Atomic">
+      <UniqueIdentifier>{e68f5565-53c0-46cb-b5a3-0ceb661f4fdb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MFC Files\MainControlBar\InstanceView\PropertyView\Tree\Entity\Clump">
+      <UniqueIdentifier>{e1891e54-2731-41c4-9ea9-f6bac311dd01}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MFC Files\MainControlBar\InstanceView\PropertyView\Tree\Entity\Camera">
+      <UniqueIdentifier>{8f8bec0a-41a3-4524-9641-3b577f1286f4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MFC Files\MainControlBar\InstanceView\PropertyView\Tree\Entity\Animation">
+      <UniqueIdentifier>{0c33af3b-82b8-43e8-a010-2ead0de70846}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MFC Files\MainControlBar\InstanceView\PropertyView\Dialog">
+      <UniqueIdentifier>{92b964dd-3ee4-47de-95dd-e33f1a37c661}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MFC Files\Consol Dialog">
+      <UniqueIdentifier>{50dc57af-f3d8-476f-81fd-c2fac946fb2f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MFC Files\Consol Dialog\Command Edit">
+      <UniqueIdentifier>{1bc0b18c-95c1-4b3b-a62e-08885f2ab07b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MFC Files\Resource View">
+      <UniqueIdentifier>{22a05a0b-74ee-4ebe-9f43-6d6fb245360c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MFC Files\Template">
+      <UniqueIdentifier>{b9bdaed0-8b49-427c-bfd0-9306fcd5a096}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MFC Files\Template\SizingControlBar">
+      <UniqueIdentifier>{36ff7cef-931a-48a0-b40d-2b4f71cebbc9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MFC Files\Template\SizingTabControlBar">
+      <UniqueIdentifier>{77f1845c-cb2c-4a40-95a9-130f3f74e9af}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MFC Files\Template\PropertyTree">
+      <UniqueIdentifier>{fb645409-6d7d-45c7-97b1-95d95f529076}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MFC Files\Frameworks">
+      <UniqueIdentifier>{ca4ab514-a9e1-4fec-a83c-e20074bf0c75}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MFC Files\Frameworks\App Files">
+      <UniqueIdentifier>{d81ae6ee-28d2-4f90-816a-388af3391c2a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MFC Files\Frameworks\MainFrame Files">
+      <UniqueIdentifier>{12ccd9f9-0587-4113-9fe8-a5002d5d7a79}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MFC Files\Frameworks\View Files">
+      <UniqueIdentifier>{0dcd9c6c-d970-417d-bc7c-10f4b6950846}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MFC Files\Frameworks\Doc Files">
+      <UniqueIdentifier>{4d009b14-8a9f-4965-99e9-69003233b49a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Lib Header">
+      <UniqueIdentifier>{3ce3ce2a-6a65-4268-821b-be11ce700855}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Etcs">
+      <UniqueIdentifier>{f66d432d-3832-4c7d-85f0-8b5cbcd9c12a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Etcs\Document Files">
+      <UniqueIdentifier>{279cba75-b985-4783-ab23-e466e45f787a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Etcs\리소스 파일">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx</Extensions>
+    </Filter>
+    <Filter Include="Renderware">
+      <UniqueIdentifier>{036a4c4e-5f71-4120-a3ae-f76fcc0d0b10}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Renderware\Include">
+      <UniqueIdentifier>{62c2d4e2-ee95-467c-9577-c8fb4dde2788}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Renderware\Lib">
+      <UniqueIdentifier>{8b291c14-1fd6-4d39-8072-26b3afcd5399}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="DebugEx.h">
+      <Filter>Global Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>Global Files</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>Global Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CEditorApplication.h">
+      <Filter>Editor</Filter>
+    </ClInclude>
+    <ClInclude Include="BaseType.h">
+      <Filter>Editor\Global</Filter>
+    </ClInclude>
+    <ClInclude Include="BaseType_RenderWare.h">
+      <Filter>Editor\Global</Filter>
+    </ClInclude>
+    <ClInclude Include="BaseType_VirtualKey.h">
+      <Filter>Editor\Global</Filter>
+    </ClInclude>
+    <ClInclude Include="CFixedString.h">
+      <Filter>Editor\Global\Fixed String</Filter>
+    </ClInclude>
+    <ClInclude Include="CFixedStringList.h">
+      <Filter>Editor\Global\Fixed String</Filter>
+    </ClInclude>
+    <ClInclude Include="CSerializer.h">
+      <Filter>Editor\Global\Serializer</Filter>
+    </ClInclude>
+    <ClInclude Include="SWordNode.h">
+      <Filter>Editor\Global\Serializer</Filter>
+    </ClInclude>
+    <ClInclude Include="BaseType_Position.h">
+      <Filter>Editor\Global\Position</Filter>
+    </ClInclude>
+    <ClInclude Include="BaseType_Color.h">
+      <Filter>Editor\Global\Color</Filter>
+    </ClInclude>
+    <ClInclude Include="CHashTable.h">
+      <Filter>Editor\Global\HashTable</Filter>
+    </ClInclude>
+    <ClInclude Include="CHashSlot.h">
+      <Filter>Editor\Global\HashTable\HashSlot</Filter>
+    </ClInclude>
+    <ClInclude Include="BaseType_Type.h">
+      <Filter>Editor\Global\Type</Filter>
+    </ClInclude>
+    <ClInclude Include="CEntity.h">
+      <Filter>Editor\3D Object\Entity</Filter>
+    </ClInclude>
+    <ClInclude Include="CAtomicEntity.h">
+      <Filter>Editor\3D Object\Entity\Atomic</Filter>
+    </ClInclude>
+    <ClInclude Include="CClumpEntity.h">
+      <Filter>Editor\3D Object\Entity\Clump</Filter>
+    </ClInclude>
+    <ClInclude Include="CLightEntity.h">
+      <Filter>Editor\3D Object\Entity\Light</Filter>
+    </ClInclude>
+    <ClInclude Include="CCameraEntity.h">
+      <Filter>Editor\3D Object\Entity\Camera</Filter>
+    </ClInclude>
+    <ClInclude Include="CWorldEntity.h">
+      <Filter>Editor\3D Object\Entity\World</Filter>
+    </ClInclude>
+    <ClInclude Include="CWorldSectorEntity.h">
+      <Filter>Editor\3D Object\Entity\WorldSector</Filter>
+    </ClInclude>
+    <ClInclude Include="CFogEntity.h">
+      <Filter>Editor\3D Object\Entity\Fog</Filter>
+    </ClInclude>
+    <ClInclude Include="CSkyEntity.h">
+      <Filter>Editor\3D Object\Entity\Sky</Filter>
+    </ClInclude>
+    <ClInclude Include="CAnimationEntity.h">
+      <Filter>Editor\3D Object\Entity\Animation</Filter>
+    </ClInclude>
+    <ClInclude Include="CMeshEntity.h">
+      <Filter>Editor\3D Object\Entity\Mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="CEntityProperty.h">
+      <Filter>Editor\3D Object\Property</Filter>
+    </ClInclude>
+    <ClInclude Include="CAtomicEntityProperty.h">
+      <Filter>Editor\3D Object\Property\Atomic</Filter>
+    </ClInclude>
+    <ClInclude Include="CClumpEntityProperty.h">
+      <Filter>Editor\3D Object\Property\Clump</Filter>
+    </ClInclude>
+    <ClInclude Include="CLightEntityProperty.h">
+      <Filter>Editor\3D Object\Property\Light</Filter>
+    </ClInclude>
+    <ClInclude Include="CCameraEntityProperty.h">
+      <Filter>Editor\3D Object\Property\Camera</Filter>
+    </ClInclude>
+    <ClInclude Include="CWorldEntityProperty.h">
+      <Filter>Editor\3D Object\Property\World</Filter>
+    </ClInclude>
+    <ClInclude Include="CWorldSectorEntityProperty.h">
+      <Filter>Editor\3D Object\Property\WorldSector</Filter>
+    </ClInclude>
+    <ClInclude Include="CFogEntityProperty.h">
+      <Filter>Editor\3D Object\Property\Fog</Filter>
+    </ClInclude>
+    <ClInclude Include="CSkyEntityProperty.h">
+      <Filter>Editor\3D Object\Property\Sky</Filter>
+    </ClInclude>
+    <ClInclude Include="CAnimationEntityProperty.h">
+      <Filter>Editor\3D Object\Property\Animation</Filter>
+    </ClInclude>
+    <ClInclude Include="CMeshEntityProperty.h">
+      <Filter>Editor\3D Object\Property\Mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="CEntityContainer.h">
+      <Filter>Editor\3D Object\Container</Filter>
+    </ClInclude>
+    <ClInclude Include="CEntityListContainer.h">
+      <Filter>Editor\3D Object\Container\List</Filter>
+    </ClInclude>
+    <ClInclude Include="CEntityCubeContainer.h">
+      <Filter>Editor\3D Object\Container\Cube</Filter>
+    </ClInclude>
+    <ClInclude Include="CEntityHashContainer.h">
+      <Filter>Editor\3D Object\Container\HashMap</Filter>
+    </ClInclude>
+    <ClInclude Include="CEntityHashTableContainer.h">
+      <Filter>Editor\3D Object\Container\HashTable</Filter>
+    </ClInclude>
+    <ClInclude Include="CEntityPropertySortContainer.h">
+      <Filter>Editor\3D Object\Container\PropertySortTable</Filter>
+    </ClInclude>
+    <ClInclude Include="CEntityFactory.h">
+      <Filter>Editor\3D Object\Factory</Filter>
+    </ClInclude>
+    <ClInclude Include="CSceneManager.h">
+      <Filter>Editor\3D Object\SceneManager</Filter>
+    </ClInclude>
+    <ClInclude Include="CEntityResource.h">
+      <Filter>Editor\3D Object\Resource</Filter>
+    </ClInclude>
+    <ClInclude Include="CEntityResourceManager.h">
+      <Filter>Editor\3D Object\Resource</Filter>
+    </ClInclude>
+    <ClInclude Include="CHeightMap.h">
+      <Filter>Editor\3D Object\Collision</Filter>
+    </ClInclude>
+    <ClInclude Include="Collision.h">
+      <Filter>Editor\3D Object\Collision</Filter>
+    </ClInclude>
+    <ClInclude Include="CEntityCollision.h">
+      <Filter>Editor\3D Object\Collision\EntityCollision</Filter>
+    </ClInclude>
+    <ClInclude Include="CEntityCollisionList.h">
+      <Filter>Editor\3D Object\Collision\EntityCollision</Filter>
+    </ClInclude>
+    <ClInclude Include="Helper.h">
+      <Filter>Editor\3D Object\Helper</Filter>
+    </ClInclude>
+    <ClInclude Include="CEntityEvent.h">
+      <Filter>Editor\3D Object\Event</Filter>
+    </ClInclude>
+    <ClInclude Include="CEntityEventQueue.h">
+      <Filter>Editor\3D Object\Event\Queue</Filter>
+    </ClInclude>
+    <ClInclude Include="CEntityRenderer.h">
+      <Filter>Editor\3D Object\EntityRenderer</Filter>
+    </ClInclude>
+    <ClInclude Include="CTerrainEntityRenderer.h">
+      <Filter>Editor\3D Object\EntityRenderer\TerrainEntityRenderer</Filter>
+    </ClInclude>
+    <ClInclude Include="CSkyEntityRenderer.h">
+      <Filter>Editor\3D Object\EntityRenderer\SkyEntityRenderer</Filter>
+    </ClInclude>
+    <ClInclude Include="CTreeEntityRenderer.h">
+      <Filter>Editor\3D Object\EntityRenderer\TreeEntityRenderer</Filter>
+    </ClInclude>
+    <ClInclude Include="CDefaultEntityRenderer.h">
+      <Filter>Editor\3D Object\EntityRenderer\DefaultEntityRenderer</Filter>
+    </ClInclude>
+    <ClInclude Include="CRenderManager.h">
+      <Filter>Editor\3D Object\RenderManager</Filter>
+    </ClInclude>
+    <ClInclude Include="CLightMapManager.h">
+      <Filter>Editor\3D Object\LightMap</Filter>
+    </ClInclude>
+    <ClInclude Include="CEntityCommand.h">
+      <Filter>Editor\Import/Export\Command</Filter>
+    </ClInclude>
+    <ClInclude Include="CInput.h">
+      <Filter>Editor\Input</Filter>
+    </ClInclude>
+    <ClInclude Include="SKeyState.h">
+      <Filter>Editor\Input</Filter>
+    </ClInclude>
+    <ClInclude Include="CGlobalIndicator.h">
+      <Filter>Editor\GlobalIndicator</Filter>
+    </ClInclude>
+    <ClInclude Include="CEditorMainControlBar.h">
+      <Filter>MFC Files\MainControlBar</Filter>
+    </ClInclude>
+    <ClInclude Include="CInstanceView.h">
+      <Filter>MFC Files\MainControlBar\InstanceView</Filter>
+    </ClInclude>
+    <ClInclude Include="CInstanceDialog.h">
+      <Filter>MFC Files\MainControlBar\InstanceView\TreeView\Dialog</Filter>
+    </ClInclude>
+    <ClInclude Include="CInstanceTreeCtrl.h">
+      <Filter>MFC Files\MainControlBar\InstanceView\TreeView\TreeCtrl</Filter>
+    </ClInclude>
+    <ClInclude Include="CEntityPropertyTree.h">
+      <Filter>MFC Files\MainControlBar\InstanceView\PropertyView\Tree\Entity</Filter>
+    </ClInclude>
+    <ClInclude Include="CLightEntityPropertyTree.h">
+      <Filter>MFC Files\MainControlBar\InstanceView\PropertyView\Tree\Entity\Light</Filter>
+    </ClInclude>
+    <ClInclude Include="CAtomicEntityPropertyTree.h">
+      <Filter>MFC Files\MainControlBar\InstanceView\PropertyView\Tree\Entity\Atomic</Filter>
+    </ClInclude>
+    <ClInclude Include="CClumpEntityPropertyTree.h">
+      <Filter>MFC Files\MainControlBar\InstanceView\PropertyView\Tree\Entity\Clump</Filter>
+    </ClInclude>
+    <ClInclude Include="CCameraEntityPropertyTree.h">
+      <Filter>MFC Files\MainControlBar\InstanceView\PropertyView\Tree\Entity\Camera</Filter>
+    </ClInclude>
+    <ClInclude Include="CAnimationEntityPropertyTree.h">
+      <Filter>MFC Files\MainControlBar\InstanceView\PropertyView\Tree\Entity\Animation</Filter>
+    </ClInclude>
+    <ClInclude Include="CInstancePropertyDialog.h">
+      <Filter>MFC Files\MainControlBar\InstanceView\PropertyView\Dialog</Filter>
+    </ClInclude>
+    <ClInclude Include="ConsoleDialog.h">
+      <Filter>MFC Files\Consol Dialog</Filter>
+    </ClInclude>
+    <ClInclude Include="CommandEdit.h">
+      <Filter>MFC Files\Consol Dialog\Command Edit</Filter>
+    </ClInclude>
+    <ClInclude Include="AssetObjectDlg.h">
+      <Filter>MFC Files\Resource View</Filter>
+    </ClInclude>
+    <ClInclude Include="AssetObjectTreeCtrl.h">
+      <Filter>MFC Files\Resource View</Filter>
+    </ClInclude>
+    <ClInclude Include="AssetObjectView.h">
+      <Filter>MFC Files\Resource View</Filter>
+    </ClInclude>
+    <ClInclude Include="UserMsg.h">
+      <Filter>MFC Files\Resource View</Filter>
+    </ClInclude>
+    <ClInclude Include="CSizingControlBar.h">
+      <Filter>MFC Files\Template\SizingControlBar</Filter>
+    </ClInclude>
+    <ClInclude Include="CSizingTabControlBar.h">
+      <Filter>MFC Files\Template\SizingTabControlBar</Filter>
+    </ClInclude>
+    <ClInclude Include="PropTree.h">
+      <Filter>MFC Files\Template\PropertyTree</Filter>
+    </ClInclude>
+    <ClInclude Include="PropTreeInfo.h">
+      <Filter>MFC Files\Template\PropertyTree</Filter>
+    </ClInclude>
+    <ClInclude Include="PropTreeItem.h">
+      <Filter>MFC Files\Template\PropertyTree</Filter>
+    </ClInclude>
+    <ClInclude Include="PropTreeItemColor.h">
+      <Filter>MFC Files\Template\PropertyTree</Filter>
+    </ClInclude>
+    <ClInclude Include="PropTreeItemCombo.h">
+      <Filter>MFC Files\Template\PropertyTree</Filter>
+    </ClInclude>
+    <ClInclude Include="PropTreeItemEdit.h">
+      <Filter>MFC Files\Template\PropertyTree</Filter>
+    </ClInclude>
+    <ClInclude Include="PropTreeItemStatic.h">
+      <Filter>MFC Files\Template\PropertyTree</Filter>
+    </ClInclude>
+    <ClInclude Include="PropTreeList.h">
+      <Filter>MFC Files\Template\PropertyTree</Filter>
+    </ClInclude>
+    <ClInclude Include="WorldEditor.h">
+      <Filter>MFC Files\Frameworks\App Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MainFrm.h">
+      <Filter>MFC Files\Frameworks\MainFrame Files</Filter>
+    </ClInclude>
+    <ClInclude Include="WorldEditorView.h">
+      <Filter>MFC Files\Frameworks\View Files</Filter>
+    </ClInclude>
+    <ClInclude Include="WorldEditorDoc.h">
+      <Filter>MFC Files\Frameworks\Doc Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CLogMessageManager.h">
+      <Filter>Lib Header</Filter>
+    </ClInclude>
+    <ClInclude Include="CScriptFileExtractor.h">
+      <Filter>Lib Header</Filter>
+    </ClInclude>
+    <ClInclude Include="UserDefinedAssert.h">
+      <Filter>Lib Header</Filter>
+    </ClInclude>
+    <ClInclude Include="WorldMonitor.h">
+      <Filter>Lib Header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Renderware\Include\rpadc.h">
+      <Filter>Renderware\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Renderware\Include\rpanisot.h">
+      <Filter>Renderware\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Renderware\Include\rpcollis.h">
+      <Filter>Renderware\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Renderware\Include\rpcriter.h">
+      <Filter>Renderware\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Renderware\Include\rpcrowd.h">
+      <Filter>Renderware\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Renderware\Include\rpdbgerr.h">
+      <Filter>Renderware\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Renderware\Include\rpdmorph.h">
+      <Filter>Renderware\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Renderware\Include\rpdpvs.h">
+      <Filter>Renderware\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Renderware\Include\rpenv.h">
+      <Filter>Renderware\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Renderware\Include\rperror.h">
+      <Filter>Renderware\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Renderware\Include\rphanim.h">
+      <Filter>Renderware\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Renderware\Include\rpid.h">
+      <Filter>Renderware\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Renderware\Include\rplodatm.h">
+      <Filter>Renderware\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Renderware\Include\rplogo.h">
+      <Filter>Renderware\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Renderware\Include\rpltmap.h">
+      <Filter>Renderware\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Renderware\Include\rpmatfx.h">
+      <Filter>Renderware\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Renderware\Include\rpmipkl.h">
+      <Filter>Renderware\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Renderware\Include\rpmorph.h">
+      <Filter>Renderware\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Renderware\Include\rpnormmap.h">
+      <Filter>Renderware\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Renderware\Include\rppatch.h">
+      <Filter>Renderware\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Renderware\Include\rpprtadv.h">
+      <Filter>Renderware\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Renderware\Include\rpprtstd.h">
+      <Filter>Renderware\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Renderware\Include\rpptank.h">
+      <Filter>Renderware\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Renderware\Include\rppvs.h">
+      <Filter>Renderware\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Renderware\Include\rprandom.h">
+      <Filter>Renderware\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Renderware\Include\rpskin.h">
+      <Filter>Renderware\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Renderware\Include\rpspline.h">
+      <Filter>Renderware\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Renderware\Include\rpteam.h">
+      <Filter>Renderware\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Renderware\Include\rptoon.h">
+      <Filter>Renderware\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Renderware\Include\rpusrdat.h">
+      <Filter>Renderware\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Renderware\Include\rpuvanim.h">
+      <Filter>Renderware\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Renderware\Include\rpworld.h">
+      <Filter>Renderware\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Renderware\Include\rt2d.h">
+      <Filter>Renderware\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Renderware\Include\rt2danim.h">
+      <Filter>Renderware\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Renderware\Include\rtanim.h">
+      <Filter>Renderware\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Renderware\Include\rtbary.h">
+      <Filter>Renderware\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Renderware\Include\rtbezpat.h">
+      <Filter>Renderware\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Renderware\Include\rtbmp.h">
+      <Filter>Renderware\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Renderware\Include\rtcharse.h">
+      <Filter>Renderware\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Renderware\Include\rtcmpkey.h">
+      <Filter>Renderware\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Renderware\Include\rtdict.h">
+      <Filter>Renderware\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Renderware\Include\rtfsyst.h">
+      <Filter>Renderware\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Renderware\Include\rtgcond.h">
+      <Filter>Renderware\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Renderware\Include\rtgncpip.h">
+      <Filter>Renderware\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Renderware\Include\rtimport.h">
+      <Filter>Renderware\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Renderware\Include\rtintsec.h">
+      <Filter>Renderware\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Renderware\Include\rtltmap.h">
+      <Filter>Renderware\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Renderware\Include\rtltmapcnv.h">
+      <Filter>Renderware\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Renderware\Include\rtmipk.h">
+      <Filter>Renderware\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Renderware\Include\rtnormmap.h">
+      <Filter>Renderware\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Renderware\Include\rtpick.h">
+      <Filter>Renderware\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Renderware\Include\rtpitexd.h">
+      <Filter>Renderware\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Renderware\Include\rtpng.h">
+      <Filter>Renderware\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Renderware\Include\rtquat.h">
+      <Filter>Renderware\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Renderware\Include\rtras.h">
+      <Filter>Renderware\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Renderware\Include\rtray.h">
+      <Filter>Renderware\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Renderware\Include\rtskinsp.h">
+      <Filter>Renderware\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Renderware\Include\rtslerp.h">
+      <Filter>Renderware\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Renderware\Include\rtsplpvs.h">
+      <Filter>Renderware\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Renderware\Include\rttiff.h">
+      <Filter>Renderware\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Renderware\Include\rttilerd.h">
+      <Filter>Renderware\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Renderware\Include\rttoc.h">
+      <Filter>Renderware\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Renderware\Include\rttoon.h">
+      <Filter>Renderware\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Renderware\Include\rtvcat.h">
+      <Filter>Renderware\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Renderware\Include\rtwing.h">
+      <Filter>Renderware\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Renderware\Include\rtworld.h">
+      <Filter>Renderware\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Renderware\Include\rwcore.h">
+      <Filter>Renderware\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Renderware\Include\rwplcore.h">
+      <Filter>Renderware\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Renderware\Include\rwversion.h">
+      <Filter>Renderware\Include</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Global Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CEditorApplication.cpp">
+      <Filter>Editor</Filter>
+    </ClCompile>
+    <ClCompile Include="CEditorApplication_Command.cpp">
+      <Filter>Editor</Filter>
+    </ClCompile>
+    <ClCompile Include="CEditorApplication_File.cpp">
+      <Filter>Editor</Filter>
+    </ClCompile>
+    <ClCompile Include="CEditorApplication_Input.cpp">
+      <Filter>Editor</Filter>
+    </ClCompile>
+    <ClCompile Include="BaseType.cpp">
+      <Filter>Editor\Global</Filter>
+    </ClCompile>
+    <ClCompile Include="CFixedString.cpp">
+      <Filter>Editor\Global\Fixed String</Filter>
+    </ClCompile>
+    <ClCompile Include="CFixedStringList.cpp">
+      <Filter>Editor\Global\Fixed String</Filter>
+    </ClCompile>
+    <ClCompile Include="CSerializer.cpp">
+      <Filter>Editor\Global\Serializer</Filter>
+    </ClCompile>
+    <ClCompile Include="SWordNode.cpp">
+      <Filter>Editor\Global\Serializer</Filter>
+    </ClCompile>
+    <ClCompile Include="BaseType_Position.cpp">
+      <Filter>Editor\Global\Position</Filter>
+    </ClCompile>
+    <ClCompile Include="BaseType_Color.cpp">
+      <Filter>Editor\Global\Color</Filter>
+    </ClCompile>
+    <ClCompile Include="CHashTable.cpp">
+      <Filter>Editor\Global\HashTable</Filter>
+    </ClCompile>
+    <ClCompile Include="CHashSlot.cpp">
+      <Filter>Editor\Global\HashTable\HashSlot</Filter>
+    </ClCompile>
+    <ClCompile Include="CEntity.cpp">
+      <Filter>Editor\3D Object\Entity</Filter>
+    </ClCompile>
+    <ClCompile Include="CAtomicEntity.cpp">
+      <Filter>Editor\3D Object\Entity\Atomic</Filter>
+    </ClCompile>
+    <ClCompile Include="CAtomicEntity_Render.cpp">
+      <Filter>Editor\3D Object\Entity\Atomic</Filter>
+    </ClCompile>
+    <ClCompile Include="CAtomicEntity_RpAtomic.cpp">
+      <Filter>Editor\3D Object\Entity\Atomic</Filter>
+    </ClCompile>
+    <ClCompile Include="CAtomicEntity_RwInstanceEx.cpp">
+      <Filter>Editor\3D Object\Entity\Atomic</Filter>
+    </ClCompile>
+    <ClCompile Include="CAtomicEntity_VertexColor.cpp">
+      <Filter>Editor\3D Object\Entity\Atomic</Filter>
+    </ClCompile>
+    <ClCompile Include="CClumpEntity.cpp">
+      <Filter>Editor\3D Object\Entity\Clump</Filter>
+    </ClCompile>
+    <ClCompile Include="CClumpEntity_RwInstanceEx.cpp">
+      <Filter>Editor\3D Object\Entity\Clump</Filter>
+    </ClCompile>
+    <ClCompile Include="CLightEntity.cpp">
+      <Filter>Editor\3D Object\Entity\Light</Filter>
+    </ClCompile>
+    <ClCompile Include="CLightEntity_RwInstanceEx.cpp">
+      <Filter>Editor\3D Object\Entity\Light</Filter>
+    </ClCompile>
+    <ClCompile Include="CCameraEntity.cpp">
+      <Filter>Editor\3D Object\Entity\Camera</Filter>
+    </ClCompile>
+    <ClCompile Include="CCameraEntity_RwCamera.cpp">
+      <Filter>Editor\3D Object\Entity\Camera</Filter>
+    </ClCompile>
+    <ClCompile Include="CWorldEntity.cpp">
+      <Filter>Editor\3D Object\Entity\World</Filter>
+    </ClCompile>
+    <ClCompile Include="CWorldEntity_RpWorld.cpp">
+      <Filter>Editor\3D Object\Entity\World</Filter>
+    </ClCompile>
+    <ClCompile Include="CWorldEntity_RwInstanceEx.cpp">
+      <Filter>Editor\3D Object\Entity\World</Filter>
+    </ClCompile>
+    <ClCompile Include="CWorldSectorEntity.cpp">
+      <Filter>Editor\3D Object\Entity\WorldSector</Filter>
+    </ClCompile>
+    <ClCompile Include="CWorldSectorEntity_RpWorldSector.cpp">
+      <Filter>Editor\3D Object\Entity\WorldSector</Filter>
+    </ClCompile>
+    <ClCompile Include="CWorldSectorEntity_RwInstanceEx.cpp">
+      <Filter>Editor\3D Object\Entity\WorldSector</Filter>
+    </ClCompile>
+    <ClCompile Include="CFogEntity.cpp">
+      <Filter>Editor\3D Object\Entity\Fog</Filter>
+    </ClCompile>
+    <ClCompile Include="CSkyEntity.cpp">
+      <Filter>Editor\3D Object\Entity\Sky</Filter>
+    </ClCompile>
+    <ClCompile Include="CAnimationEntity.cpp">
+      <Filter>Editor\3D Object\Entity\Animation</Filter>
+    </ClCompile>
+    <ClCompile Include="CMeshEntity.cpp">
+      <Filter>Editor\3D Object\Entity\Mesh</Filter>
+    </ClCompile>
+    <ClCompile Include="CMeshEntity_RwInstanceEx.cpp">
+      <Filter>Editor\3D Object\Entity\Mesh</Filter>
+    </ClCompile>
+    <ClCompile Include="CEntityProperty.cpp">
+      <Filter>Editor\3D Object\Property</Filter>
+    </ClCompile>
+    <ClCompile Include="CAtomicEntityProperty.cpp">
+      <Filter>Editor\3D Object\Property\Atomic</Filter>
+    </ClCompile>
+    <ClCompile Include="CClumpEntityProperty.cpp">
+      <Filter>Editor\3D Object\Property\Clump</Filter>
+    </ClCompile>
+    <ClCompile Include="CLightEntityProperty.cpp">
+      <Filter>Editor\3D Object\Property\Light</Filter>
+    </ClCompile>
+    <ClCompile Include="CCameraEntityProperty.cpp">
+      <Filter>Editor\3D Object\Property\Camera</Filter>
+    </ClCompile>
+    <ClCompile Include="CWorldEntityProperty.cpp">
+      <Filter>Editor\3D Object\Property\World</Filter>
+    </ClCompile>
+    <ClCompile Include="CWorldSectorEntityProperty.cpp">
+      <Filter>Editor\3D Object\Property\WorldSector</Filter>
+    </ClCompile>
+    <ClCompile Include="CFogEntityProperty.cpp">
+      <Filter>Editor\3D Object\Property\Fog</Filter>
+    </ClCompile>
+    <ClCompile Include="CSkyEntityProperty.cpp">
+      <Filter>Editor\3D Object\Property\Sky</Filter>
+    </ClCompile>
+    <ClCompile Include="CAnimationEntityProperty.cpp">
+      <Filter>Editor\3D Object\Property\Animation</Filter>
+    </ClCompile>
+    <ClCompile Include="CMeshEntityProperty.cpp">
+      <Filter>Editor\3D Object\Property\Mesh</Filter>
+    </ClCompile>
+    <ClCompile Include="CEntityContainer.cpp">
+      <Filter>Editor\3D Object\Container</Filter>
+    </ClCompile>
+    <ClCompile Include="CEntityListContainer.cpp">
+      <Filter>Editor\3D Object\Container\List</Filter>
+    </ClCompile>
+    <ClCompile Include="CEntityCubeContainer.cpp">
+      <Filter>Editor\3D Object\Container\Cube</Filter>
+    </ClCompile>
+    <ClCompile Include="CEntityHashContainer.cpp">
+      <Filter>Editor\3D Object\Container\HashMap</Filter>
+    </ClCompile>
+    <ClCompile Include="CEntityHashTableContainer.cpp">
+      <Filter>Editor\3D Object\Container\HashTable</Filter>
+    </ClCompile>
+    <ClCompile Include="CEntityPropertySortContainer.cpp">
+      <Filter>Editor\3D Object\Container\PropertySortTable</Filter>
+    </ClCompile>
+    <ClCompile Include="CEntityFactory.cpp">
+      <Filter>Editor\3D Object\Factory</Filter>
+    </ClCompile>
+    <ClCompile Include="CSceneManager.cpp">
+      <Filter>Editor\3D Object\SceneManager</Filter>
+    </ClCompile>
+    <ClCompile Include="CSceneManager_Collision.cpp">
+      <Filter>Editor\3D Object\SceneManager</Filter>
+    </ClCompile>
+    <ClCompile Include="CEntityResource.cpp">
+      <Filter>Editor\3D Object\Resource</Filter>
+    </ClCompile>
+    <ClCompile Include="CEntityResource_RwInstance.cpp">
+      <Filter>Editor\3D Object\Resource</Filter>
+    </ClCompile>
+    <ClCompile Include="CEntityResourceManager.cpp">
+      <Filter>Editor\3D Object\Resource</Filter>
+    </ClCompile>
+    <ClCompile Include="CHeightMap.cpp">
+      <Filter>Editor\3D Object\Collision</Filter>
+    </ClCompile>
+    <ClCompile Include="Collision.cpp">
+      <Filter>Editor\3D Object\Collision</Filter>
+    </ClCompile>
+    <ClCompile Include="CEntityCollision.cpp">
+      <Filter>Editor\3D Object\Collision\EntityCollision</Filter>
+    </ClCompile>
+    <ClCompile Include="CEntityCollisionList.cpp">
+      <Filter>Editor\3D Object\Collision\EntityCollision</Filter>
+    </ClCompile>
+    <ClCompile Include="Helper_Cone.cpp">
+      <Filter>Editor\3D Object\Helper</Filter>
+    </ClCompile>
+    <ClCompile Include="CEntityEvent.cpp">
+      <Filter>Editor\3D Object\Event</Filter>
+    </ClCompile>
+    <ClCompile Include="CEntityEventQueue.cpp">
+      <Filter>Editor\3D Object\Event\Queue</Filter>
+    </ClCompile>
+    <ClCompile Include="CEntityRenderer.cpp">
+      <Filter>Editor\3D Object\EntityRenderer</Filter>
+    </ClCompile>
+    <ClCompile Include="CTerrainEntityRenderer.cpp">
+      <Filter>Editor\3D Object\EntityRenderer\TerrainEntityRenderer</Filter>
+    </ClCompile>
+    <ClCompile Include="CSkyEntityRenderer.cpp">
+      <Filter>Editor\3D Object\EntityRenderer\SkyEntityRenderer</Filter>
+    </ClCompile>
+    <ClCompile Include="CTreeEntityRenderer.cpp">
+      <Filter>Editor\3D Object\EntityRenderer\TreeEntityRenderer</Filter>
+    </ClCompile>
+    <ClCompile Include="CDefaultEntityRenderer.cpp">
+      <Filter>Editor\3D Object\EntityRenderer\DefaultEntityRenderer</Filter>
+    </ClCompile>
+    <ClCompile Include="CRenderManager.cpp">
+      <Filter>Editor\3D Object\RenderManager</Filter>
+    </ClCompile>
+    <ClCompile Include="CLightMapManager.cpp">
+      <Filter>Editor\3D Object\LightMap</Filter>
+    </ClCompile>
+    <ClCompile Include="CEntityCommand.cpp">
+      <Filter>Editor\Import/Export\Command</Filter>
+    </ClCompile>
+    <ClCompile Include="CEntityCommand_Excute.cpp">
+      <Filter>Editor\Import/Export\Command</Filter>
+    </ClCompile>
+    <ClCompile Include="CEntityCommand_Parse.cpp">
+      <Filter>Editor\Import/Export\Command</Filter>
+    </ClCompile>
+    <ClCompile Include="CEntityCommand_Parse_Create.cpp">
+      <Filter>Editor\Import/Export\Command</Filter>
+    </ClCompile>
+    <ClCompile Include="CInput.cpp">
+      <Filter>Editor\Input</Filter>
+    </ClCompile>
+    <ClCompile Include="CGlobalIndicator.cpp">
+      <Filter>Editor\GlobalIndicator</Filter>
+    </ClCompile>
+    <ClCompile Include="CEditorMainControlBar.cpp">
+      <Filter>MFC Files\MainControlBar</Filter>
+    </ClCompile>
+    <ClCompile Include="CInstanceView.cpp">
+      <Filter>MFC Files\MainControlBar\InstanceView</Filter>
+    </ClCompile>
+    <ClCompile Include="CInstanceDialog.cpp">
+      <Filter>MFC Files\MainControlBar\InstanceView\TreeView\Dialog</Filter>
+    </ClCompile>
+    <ClCompile Include="CInstanceTreeCtrl.cpp">
+      <Filter>MFC Files\MainControlBar\InstanceView\TreeView\TreeCtrl</Filter>
+    </ClCompile>
+    <ClCompile Include="CEntityPropertyTree.cpp">
+      <Filter>MFC Files\MainControlBar\InstanceView\PropertyView\Tree\Entity</Filter>
+    </ClCompile>
+    <ClCompile Include="CLightEntityPropertyTree.cpp">
+      <Filter>MFC Files\MainControlBar\InstanceView\PropertyView\Tree\Entity\Light</Filter>
+    </ClCompile>
+    <ClCompile Include="CAtomicEntityPropertyTree.cpp">
+      <Filter>MFC Files\MainControlBar\InstanceView\PropertyView\Tree\Entity\Atomic</Filter>
+    </ClCompile>
+    <ClCompile Include="CClumpEntityPropertyTree.cpp">
+      <Filter>MFC Files\MainControlBar\InstanceView\PropertyView\Tree\Entity\Clump</Filter>
+    </ClCompile>
+    <ClCompile Include="CCameraEntityPropertyTree.cpp">
+      <Filter>MFC Files\MainControlBar\InstanceView\PropertyView\Tree\Entity\Camera</Filter>
+    </ClCompile>
+    <ClCompile Include="CAnimationEntityPropertyTree.cpp">
+      <Filter>MFC Files\MainControlBar\InstanceView\PropertyView\Tree\Entity\Animation</Filter>
+    </ClCompile>
+    <ClCompile Include="CInstancePropertyDialog.cpp">
+      <Filter>MFC Files\MainControlBar\InstanceView\PropertyView\Dialog</Filter>
+    </ClCompile>
+    <ClCompile Include="ConsoleDialog.cpp">
+      <Filter>MFC Files\Consol Dialog</Filter>
+    </ClCompile>
+    <ClCompile Include="CommandEdit.cpp">
+      <Filter>MFC Files\Consol Dialog\Command Edit</Filter>
+    </ClCompile>
+    <ClCompile Include="AssetObjectDlg.cpp">
+      <Filter>MFC Files\Resource View</Filter>
+    </ClCompile>
+    <ClCompile Include="AssetObjectTreeCtrl.cpp">
+      <Filter>MFC Files\Resource View</Filter>
+    </ClCompile>
+    <ClCompile Include="AssetObjectView.cpp">
+      <Filter>MFC Files\Resource View</Filter>
+    </ClCompile>
+    <ClCompile Include="UserMsg.cpp">
+      <Filter>MFC Files\Resource View</Filter>
+    </ClCompile>
+    <ClCompile Include="CSizingControlBar.cpp">
+      <Filter>MFC Files\Template\SizingControlBar</Filter>
+    </ClCompile>
+    <ClCompile Include="CSizingTabControlBar.cpp">
+      <Filter>MFC Files\Template\SizingTabControlBar</Filter>
+    </ClCompile>
+    <ClCompile Include="PropTree.cpp">
+      <Filter>MFC Files\Template\PropertyTree</Filter>
+    </ClCompile>
+    <ClCompile Include="PropTreeInfo.cpp">
+      <Filter>MFC Files\Template\PropertyTree</Filter>
+    </ClCompile>
+    <ClCompile Include="PropTreeItem.cpp">
+      <Filter>MFC Files\Template\PropertyTree</Filter>
+    </ClCompile>
+    <ClCompile Include="PropTreeItemColor.cpp">
+      <Filter>MFC Files\Template\PropertyTree</Filter>
+    </ClCompile>
+    <ClCompile Include="PropTreeItemCombo.cpp">
+      <Filter>MFC Files\Template\PropertyTree</Filter>
+    </ClCompile>
+    <ClCompile Include="PropTreeItemEdit.cpp">
+      <Filter>MFC Files\Template\PropertyTree</Filter>
+    </ClCompile>
+    <ClCompile Include="PropTreeItemStatic.cpp">
+      <Filter>MFC Files\Template\PropertyTree</Filter>
+    </ClCompile>
+    <ClCompile Include="PropTreeList.cpp">
+      <Filter>MFC Files\Template\PropertyTree</Filter>
+    </ClCompile>
+    <ClCompile Include="WorldEditor.cpp">
+      <Filter>MFC Files\Frameworks\App Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MainFrm.cpp">
+      <Filter>MFC Files\Frameworks\MainFrame Files</Filter>
+    </ClCompile>
+    <ClCompile Include="WorldEditorView.cpp">
+      <Filter>MFC Files\Frameworks\View Files</Filter>
+    </ClCompile>
+    <ClCompile Include="WorldEditorDoc.cpp">
+      <Filter>MFC Files\Frameworks\Doc Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt">
+      <Filter>Etcs\Document Files</Filter>
+    </Text>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\Toolbar.bmp">
+      <Filter>Etcs\리소스 파일</Filter>
+    </Image>
+    <Image Include="res\WorldEditor.ico">
+      <Filter>Etcs\리소스 파일</Filter>
+    </Image>
+    <Image Include="res\WorldEditorDoc.ico">
+      <Filter>Etcs\리소스 파일</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="WorldEditor.rc">
+      <Filter>Etcs\리소스 파일</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\WorldEditor.rc2">
+      <Filter>Etcs\리소스 파일</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="..\..\Renderware\Lib\debug\rpadc.lib">
+      <Filter>Renderware\Lib</Filter>
+    </Library>
+    <Library Include="..\..\Renderware\Lib\debug\rpanisot.lib">
+      <Filter>Renderware\Lib</Filter>
+    </Library>
+    <Library Include="..\..\Renderware\Lib\debug\rpcollis.lib">
+      <Filter>Renderware\Lib</Filter>
+    </Library>
+    <Library Include="..\..\Renderware\Lib\debug\rpcrowd.lib">
+      <Filter>Renderware\Lib</Filter>
+    </Library>
+    <Library Include="..\..\Renderware\Lib\debug\rpdmorph.lib">
+      <Filter>Renderware\Lib</Filter>
+    </Library>
+    <Library Include="..\..\Renderware\Lib\debug\rpdpvs.lib">
+      <Filter>Renderware\Lib</Filter>
+    </Library>
+    <Library Include="..\..\Renderware\Lib\debug\rpdpvscw.lib">
+      <Filter>Renderware\Lib</Filter>
+    </Library>
+    <Library Include="..\..\Renderware\Lib\debug\rpenv.lib">
+      <Filter>Renderware\Lib</Filter>
+    </Library>
+    <Library Include="..\..\Renderware\Lib\debug\rphanim.lib">
+      <Filter>Renderware\Lib</Filter>
+    </Library>
+    <Library Include="..\..\Renderware\Lib\debug\rpid.lib">
+      <Filter>Renderware\Lib</Filter>
+    </Library>
+    <Library Include="..\..\Renderware\Lib\debug\rplodatm.lib">
+      <Filter>Renderware\Lib</Filter>
+    </Library>
+    <Library Include="..\..\Renderware\Lib\debug\rplogo.lib">
+      <Filter>Renderware\Lib</Filter>
+    </Library>
+    <Library Include="..\..\Renderware\Lib\debug\rpltmap.lib">
+      <Filter>Renderware\Lib</Filter>
+    </Library>
+    <Library Include="..\..\Renderware\Lib\debug\rpmatfx.lib">
+      <Filter>Renderware\Lib</Filter>
+    </Library>
+    <Library Include="..\..\Renderware\Lib\debug\rpmipkl.lib">
+      <Filter>Renderware\Lib</Filter>
+    </Library>
+    <Library Include="..\..\Renderware\Lib\debug\rpmorph.lib">
+      <Filter>Renderware\Lib</Filter>
+    </Library>
+    <Library Include="..\..\Renderware\Lib\debug\rpnormmap.lib">
+      <Filter>Renderware\Lib</Filter>
+    </Library>
+    <Library Include="..\..\Renderware\Lib\debug\rpnormmapskin.lib">
+      <Filter>Renderware\Lib</Filter>
+    </Library>
+    <Library Include="..\..\Renderware\Lib\debug\rppatch.lib">
+      <Filter>Renderware\Lib</Filter>
+    </Library>
+    <Library Include="..\..\Renderware\Lib\debug\rppatchmatfx.lib">
+      <Filter>Renderware\Lib</Filter>
+    </Library>
+    <Library Include="..\..\Renderware\Lib\debug\rppatchskin.lib">
+      <Filter>Renderware\Lib</Filter>
+    </Library>
+    <Library Include="..\..\Renderware\Lib\debug\rppatchskinmatfx.lib">
+      <Filter>Renderware\Lib</Filter>
+    </Library>
+    <Library Include="..\..\Renderware\Lib\debug\rpprtadv.lib">
+      <Filter>Renderware\Lib</Filter>
+    </Library>
+    <Library Include="..\..\Renderware\Lib\debug\rpprtstd.lib">
+      <Filter>Renderware\Lib</Filter>
+    </Library>
+    <Library Include="..\..\Renderware\Lib\debug\rpptank.lib">
+      <Filter>Renderware\Lib</Filter>
+    </Library>
+    <Library Include="..\..\Renderware\Lib\debug\rppvs.lib">
+      <Filter>Renderware\Lib</Filter>
+    </Library>
+    <Library Include="..\..\Renderware\Lib\debug\rprandom.lib">
+      <Filter>Renderware\Lib</Filter>
+    </Library>
+    <Library Include="..\..\Renderware\Lib\debug\rpskin.lib">
+      <Filter>Renderware\Lib</Filter>
+    </Library>
+    <Library Include="..\..\Renderware\Lib\debug\rpskinmatfx.lib">
+      <Filter>Renderware\Lib</Filter>
+    </Library>
+    <Library Include="..\..\Renderware\Lib\debug\rpskinmatfxtoon.lib">
+      <Filter>Renderware\Lib</Filter>
+    </Library>
+    <Library Include="..\..\Renderware\Lib\debug\rpskintoon.lib">
+      <Filter>Renderware\Lib</Filter>
+    </Library>
+    <Library Include="..\..\Renderware\Lib\debug\rpspline.lib">
+      <Filter>Renderware\Lib</Filter>
+    </Library>
+    <Library Include="..\..\Renderware\Lib\debug\rpteam.lib">
+      <Filter>Renderware\Lib</Filter>
+    </Library>
+    <Library Include="..\..\Renderware\Lib\debug\rptoon.lib">
+      <Filter>Renderware\Lib</Filter>
+    </Library>
+    <Library Include="..\..\Renderware\Lib\debug\rpusrdat.lib">
+      <Filter>Renderware\Lib</Filter>
+    </Library>
+    <Library Include="..\..\Renderware\Lib\debug\rpuvanim.lib">
+      <Filter>Renderware\Lib</Filter>
+    </Library>
+    <Library Include="..\..\Renderware\Lib\debug\rpworld.lib">
+      <Filter>Renderware\Lib</Filter>
+    </Library>
+    <Library Include="..\..\Renderware\Lib\debug\rt2d.lib">
+      <Filter>Renderware\Lib</Filter>
+    </Library>
+    <Library Include="..\..\Renderware\Lib\debug\rt2danim.lib">
+      <Filter>Renderware\Lib</Filter>
+    </Library>
+    <Library Include="..\..\Renderware\Lib\debug\rtanim.lib">
+      <Filter>Renderware\Lib</Filter>
+    </Library>
+    <Library Include="..\..\Renderware\Lib\debug\rtbary.lib">
+      <Filter>Renderware\Lib</Filter>
+    </Library>
+    <Library Include="..\..\Renderware\Lib\debug\rtbezpat.lib">
+      <Filter>Renderware\Lib</Filter>
+    </Library>
+    <Library Include="..\..\Renderware\Lib\debug\rtbmp.lib">
+      <Filter>Renderware\Lib</Filter>
+    </Library>
+    <Library Include="..\..\Renderware\Lib\debug\rtcharse.lib">
+      <Filter>Renderware\Lib</Filter>
+    </Library>
+    <Library Include="..\..\Renderware\Lib\debug\rtcmpkey.lib">
+      <Filter>Renderware\Lib</Filter>
+    </Library>
+    <Library Include="..\..\Renderware\Lib\debug\rtdict.lib">
+      <Filter>Renderware\Lib</Filter>
+    </Library>
+    <Library Include="..\..\Renderware\Lib\debug\rtfsyst.lib">
+      <Filter>Renderware\Lib</Filter>
+    </Library>
+    <Library Include="..\..\Renderware\Lib\debug\rtgcond.lib">
+      <Filter>Renderware\Lib</Filter>
+    </Library>
+    <Library Include="..\..\Renderware\Lib\debug\rtgncpip.lib">
+      <Filter>Renderware\Lib</Filter>
+    </Library>
+    <Library Include="..\..\Renderware\Lib\debug\rtimport.lib">
+      <Filter>Renderware\Lib</Filter>
+    </Library>
+    <Library Include="..\..\Renderware\Lib\debug\rtintsec.lib">
+      <Filter>Renderware\Lib</Filter>
+    </Library>
+    <Library Include="..\..\Renderware\Lib\debug\rtltmap.lib">
+      <Filter>Renderware\Lib</Filter>
+    </Library>
+    <Library Include="..\..\Renderware\Lib\debug\rtltmapcnv.lib">
+      <Filter>Renderware\Lib</Filter>
+    </Library>
+    <Library Include="..\..\Renderware\Lib\debug\rtmipk.lib">
+      <Filter>Renderware\Lib</Filter>
+    </Library>
+    <Library Include="..\..\Renderware\Lib\debug\rtmipkmatfx.lib">
+      <Filter>Renderware\Lib</Filter>
+    </Library>
+    <Library Include="..\..\Renderware\Lib\debug\rtmipkpatch.lib">
+      <Filter>Renderware\Lib</Filter>
+    </Library>
+    <Library Include="..\..\Renderware\Lib\debug\rtmipkpatchmatfx.lib">
+      <Filter>Renderware\Lib</Filter>
+    </Library>
+    <Library Include="..\..\Renderware\Lib\debug\rtnormmap.lib">
+      <Filter>Renderware\Lib</Filter>
+    </Library>
+    <Library Include="..\..\Renderware\Lib\debug\rtpick.lib">
+      <Filter>Renderware\Lib</Filter>
+    </Library>
+    <Library Include="..\..\Renderware\Lib\debug\rtpitexd.lib">
+      <Filter>Renderware\Lib</Filter>
+    </Library>
+    <Library Include="..\..\Renderware\Lib\debug\rtpng.lib">
+      <Filter>Renderware\Lib</Filter>
+    </Library>
+    <Library Include="..\..\Renderware\Lib\debug\rtpngcw.lib">
+      <Filter>Renderware\Lib</Filter>
+    </Library>
+    <Library Include="..\..\Renderware\Lib\debug\rtquat.lib">
+      <Filter>Renderware\Lib</Filter>
+    </Library>
+    <Library Include="..\..\Renderware\Lib\debug\rtras.lib">
+      <Filter>Renderware\Lib</Filter>
+    </Library>
+    <Library Include="..\..\Renderware\Lib\debug\rtray.lib">
+      <Filter>Renderware\Lib</Filter>
+    </Library>
+    <Library Include="..\..\Renderware\Lib\debug\rtskinsp.lib">
+      <Filter>Renderware\Lib</Filter>
+    </Library>
+    <Library Include="..\..\Renderware\Lib\debug\rtslerp.lib">
+      <Filter>Renderware\Lib</Filter>
+    </Library>
+    <Library Include="..\..\Renderware\Lib\debug\rtsplpvs.lib">
+      <Filter>Renderware\Lib</Filter>
+    </Library>
+    <Library Include="..\..\Renderware\Lib\debug\rttiff.lib">
+      <Filter>Renderware\Lib</Filter>
+    </Library>
+    <Library Include="..\..\Renderware\Lib\debug\rttilerd.lib">
+      <Filter>Renderware\Lib</Filter>
+    </Library>
+    <Library Include="..\..\Renderware\Lib\debug\rttoc.lib">
+      <Filter>Renderware\Lib</Filter>
+    </Library>
+    <Library Include="..\..\Renderware\Lib\debug\rttoon.lib">
+      <Filter>Renderware\Lib</Filter>
+    </Library>
+    <Library Include="..\..\Renderware\Lib\debug\rtvcat.lib">
+      <Filter>Renderware\Lib</Filter>
+    </Library>
+    <Library Include="..\..\Renderware\Lib\debug\rtwing.lib">
+      <Filter>Renderware\Lib</Filter>
+    </Library>
+    <Library Include="..\..\Renderware\Lib\debug\rtworld.lib">
+      <Filter>Renderware\Lib</Filter>
+    </Library>
+    <Library Include="..\..\Renderware\Lib\debug\rwcore.lib">
+      <Filter>Renderware\Lib</Filter>
+    </Library>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="res\WorldEditor.manifest">
+      <Filter>Etcs\Document Files</Filter>
+    </CustomBuild>
+  </ItemGroup>
+</Project>

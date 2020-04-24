@@ -1,0 +1,91 @@
+-- UD1 Normal
+
+GameStage(0)
+--[
+
+	Action("exec wps")
+	--[
+		Param("wps tblidx", 24001)
+	--]
+	End()
+
+	Action("exec wps")
+	--[
+		Param("wps tblidx", 24002)
+	--]
+	End()
+
+	Action("exec wps")
+	--[
+		Param("wps tblidx", 24003)
+	--]
+	End()
+	
+	Action("exec wps")
+	--[
+		Param("wps tblidx", 24004)
+	--]
+	End()
+	
+	Action("exec wps")
+	--[
+		Param("wps tblidx", 24005)
+	--]
+	End()
+
+	Action("exec wps")
+	--[
+		Param("wps tblidx", 24006)
+	--]
+	End()
+	
+	Action("exec wps")
+	--[
+		Param("wps tblidx", 24007)
+	--]
+	End()
+
+	Action("exec wps")
+	--[
+		Param("wps tblidx", 24010)
+	--]
+	End()
+	
+	Action("exec wps")
+	--[
+		Param("wps tblidx", 24011)
+	--]
+	End()
+
+	Action("exec wps")
+	--[
+		Param("wps tblidx", 24012)
+	--]
+	End()
+
+	Action("exec wps")
+	--[
+		Param("wps tblidx", 24013)
+	--]
+	End()
+
+	Action("exec wps")
+	--[
+		Param("wps tblidx", 24015)
+	--]
+	End()
+	
+	Action("exec wps")
+	--[
+		Param("wps tblidx", 24016)
+	--]
+	End()
+	
+	Action("exec wps")
+	--[
+		Param("wps tblidx", 24017)
+	--]
+	End()
+	
+--]
+End()

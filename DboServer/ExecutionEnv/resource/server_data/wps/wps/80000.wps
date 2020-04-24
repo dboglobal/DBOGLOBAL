@@ -1,0 +1,174 @@
+---------------------------------------------------------------------
+-- Main World Executer
+-- Begin : 2009-06-30
+-- Copyright : ⓒ NTL-Inc Co., Ltd
+-- Author : Ju-hyeong Lee
+---------------------------------------------------------------------
+
+GameStage(0)
+--[
+
+-- It helps to start the server and waits for a certain period of time.
+	Action("wait")
+	--[
+		Condition( "check time" )
+		--[
+			Param( "time", 60 )
+		--]
+		End()
+	--]
+	End()
+
+
+-- 버스 코스 등록
+	Action( "exec wps" )
+	--[
+		Param( "wps tblidx", 90000 )
+	--]
+	End()
+
+	Action( "exec wps" )
+	--[
+		Param( "wps tblidx", 90002 )
+	--]
+	End()	
+
+	Action( "exec wps" )
+	--[
+		Param( "wps tblidx", 90004 )
+	--]
+	End()
+
+	Action( "exec wps" )
+	--[
+		Param( "wps tblidx", 90006 )
+	--]
+	End()	
+
+	Action( "exec wps" )
+	--[
+		Param( "wps tblidx", 90008 )
+	--]
+	End()
+
+	Action( "exec wps" )
+	--[
+		Param( "wps tblidx", 90010 )
+	--]
+	End()
+
+	Action( "exec wps" )
+	--[
+		Param( "wps tblidx", 90012 )
+	--]
+	End()
+
+	Action( "exec wps" )
+	--[
+		Param( "wps tblidx", 90014 )
+	--]
+	End()
+
+	Action( "exec wps" )
+	--[
+		Param( "wps tblidx", 90016 )
+	--]
+	End()
+
+	Action( "exec wps" )
+	--[
+		Param( "wps tblidx", 90018 )
+	--]
+	End()
+
+	Action( "exec wps" )
+	--[
+		Param( "wps tblidx", 90020 )
+	--]
+	End()
+
+	Action( "exec wps" )
+	--[
+		Param( "wps tblidx", 90022 )
+	--]
+	End()
+
+	Action( "exec wps" )
+	--[
+		Param( "wps tblidx", 90024 )
+	--]
+	End()
+
+	Action( "exec wps" )
+	--[
+		Param( "wps tblidx", 90026 )
+	--]
+	End()
+
+	Action( "exec wps" )
+	--[
+		Param( "wps tblidx", 90028 )
+	--]
+	End()
+
+	Action( "exec wps" )
+	--[
+		Param( "wps tblidx", 90030 )
+	--]
+	End()
+
+	Action( "exec wps" )
+	--[
+		Param( "wps tblidx", 90033 )
+	--]
+	End()
+
+	Action( "exec wps" )
+	--[
+		Param( "wps tblidx", 90034 )
+	--]
+	End()
+
+	Action( "exec wps" )
+	--[
+		Param( "wps tblidx", 2925 )
+	--]
+	End()
+
+	Action( "exec wps" )
+	--[
+		Param( "wps tblidx", 2963 )
+	--]
+	End()
+
+	Action( "exec wps" )
+	--[
+		Param( "wps tblidx", 2931 )
+	--]
+	End()
+	
+	Action( "exec wps" )
+	--[
+		Param( "wps tblidx", 150000 )
+	--]
+	End()
+
+
+---------
+-- With the change of bus policy, the Karin Forest bus route was abolished (10 WPS removal: 90036 ~ 90054)
+-- 2009.11.13
+---------
+
+---------
+-- Abolition of Westland bus route by bus policy change (removal of 12 WPS: 90056 ~ 90078)
+-- 2009.08.23
+---------
+
+--]
+End()
+
+GameFailed()
+--[
+
+--]
+End()

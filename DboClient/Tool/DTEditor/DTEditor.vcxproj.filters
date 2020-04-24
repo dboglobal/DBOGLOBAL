@@ -1,0 +1,352 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="리소스 파일">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav</Extensions>
+    </Filter>
+    <Filter Include="MFC">
+      <UniqueIdentifier>{871909a5-7f63-4a67-8c31-1159a312efab}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MFC\Pane">
+      <UniqueIdentifier>{690e71af-5a66-4b67-9a5a-89a38e96a6e6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MFC\Pane\Pane">
+      <UniqueIdentifier>{e36da1aa-eced-40bc-937b-3c206f51a18c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MFC\Pane\Pane\Properties">
+      <UniqueIdentifier>{4fb582c9-c2f7-4a6f-a136-95828e57b92d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MFC\Pane\CustomView">
+      <UniqueIdentifier>{c05858bc-c070-48ee-b305-7c6940893f5b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MFC\Frame">
+      <UniqueIdentifier>{42f0ec10-e1db-42fc-b498-05dbf0cd2937}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MFC\Dlg">
+      <UniqueIdentifier>{1cf57ea3-7908-487b-94e1-da345a19e092}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MFC\View">
+      <UniqueIdentifier>{3802fbd6-45be-44be-9351-97ddb4123856}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MFC\Gui">
+      <UniqueIdentifier>{beb4a48d-4e57-4b07-9985-6ac576661892}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MFC\CustomToolKit">
+      <UniqueIdentifier>{d4ac9780-48c5-41bd-80b8-e2032ab1d9a4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Main">
+      <UniqueIdentifier>{854b204b-6633-4554-a3b8-ae443d982eb5}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\AdobeTab.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\bitmap3.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\bmp00001.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\bmp00002.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\bmp00003.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\bmp00004.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\ControlPane.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\DTEditor.ico">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\DTEditorDoc.ico">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\paneicons.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\PaneObj.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\PaneToobarsTreeIcons.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\rulerdo.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\rulerdom.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\SciptPane.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\Toolbar.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\toolbar5.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\ToolbarAlpha.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\Transform.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="DTEditor.rc">
+      <Filter>리소스 파일</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\DTEditor.rc2">
+      <Filter>리소스 파일</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="ActorPane.cpp">
+      <Filter>MFC\Pane\Pane</Filter>
+    </ClCompile>
+    <ClCompile Include="BotPane.cpp">
+      <Filter>MFC\Pane\Pane</Filter>
+    </ClCompile>
+    <ClCompile Include="CinematicNodePane.cpp">
+      <Filter>MFC\Pane\Pane</Filter>
+    </ClCompile>
+    <ClCompile Include="ControlPane.cpp">
+      <Filter>MFC\Pane\Pane</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjectPane.cpp">
+      <Filter>MFC\Pane\Pane</Filter>
+    </ClCompile>
+    <ClCompile Include="OutputPane.cpp">
+      <Filter>MFC\Pane\Pane</Filter>
+    </ClCompile>
+    <ClCompile Include="PropertyPane.cpp">
+      <Filter>MFC\Pane\Pane</Filter>
+    </ClCompile>
+    <ClCompile Include="ScriptPane.cpp">
+      <Filter>MFC\Pane\Pane</Filter>
+    </ClCompile>
+    <ClCompile Include="SkillPane.cpp">
+      <Filter>MFC\Pane\Pane</Filter>
+    </ClCompile>
+    <ClCompile Include="WayPointPane.cpp">
+      <Filter>MFC\Pane\Pane</Filter>
+    </ClCompile>
+    <ClCompile Include="DirectionPane.cpp">
+      <Filter>MFC\Pane\Pane\Properties</Filter>
+    </ClCompile>
+    <ClCompile Include="DirectionPropController.cpp">
+      <Filter>MFC\Pane\Pane\Properties</Filter>
+    </ClCompile>
+    <ClCompile Include="DirectionPropEffect.cpp">
+      <Filter>MFC\Pane\Pane\Properties</Filter>
+    </ClCompile>
+    <ClCompile Include="DirectionPropRefreeView.cpp">
+      <Filter>MFC\Pane\Pane\Properties</Filter>
+    </ClCompile>
+    <ClCompile Include="DirectionPropSound.cpp">
+      <Filter>MFC\Pane\Pane\Properties</Filter>
+    </ClCompile>
+    <ClCompile Include="ControlPointView.cpp">
+      <Filter>MFC\Pane\CustomView</Filter>
+    </ClCompile>
+    <ClCompile Include="DockingPaneCustomTheme.cpp">
+      <Filter>MFC\Pane\CustomView</Filter>
+    </ClCompile>
+    <ClCompile Include="PointAttrDlg.cpp">
+      <Filter>MFC\Pane\CustomView</Filter>
+    </ClCompile>
+    <ClCompile Include="PointCustomEditDlg.cpp">
+      <Filter>MFC\Pane\CustomView</Filter>
+    </ClCompile>
+    <ClCompile Include="PointEditDlg.cpp">
+      <Filter>MFC\Pane\CustomView</Filter>
+    </ClCompile>
+    <ClCompile Include="PointRotateEditDlg.cpp">
+      <Filter>MFC\Pane\CustomView</Filter>
+    </ClCompile>
+    <ClCompile Include="PointShapeDlg.cpp">
+      <Filter>MFC\Pane\CustomView</Filter>
+    </ClCompile>
+    <ClCompile Include="SequenceGraphDlg.cpp">
+      <Filter>MFC\Pane\CustomView</Filter>
+    </ClCompile>
+    <ClCompile Include="DTEditor.cpp">
+      <Filter>MFC\Frame</Filter>
+    </ClCompile>
+    <ClCompile Include="DTEditorDoc.cpp">
+      <Filter>MFC\Frame</Filter>
+    </ClCompile>
+    <ClCompile Include="DTEditorGlobal.cpp">
+      <Filter>MFC\Frame</Filter>
+    </ClCompile>
+    <ClCompile Include="DTEditorView.cpp">
+      <Filter>MFC\Frame</Filter>
+    </ClCompile>
+    <ClCompile Include="MainFrm.cpp">
+      <Filter>MFC\Frame</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>MFC\Frame</Filter>
+    </ClCompile>
+    <ClCompile Include="CreatePropDlg.cpp">
+      <Filter>MFC\Dlg</Filter>
+    </ClCompile>
+    <ClCompile Include="RenamePropDlg.cpp">
+      <Filter>MFC\Dlg</Filter>
+    </ClCompile>
+    <ClCompile Include="SoundOption.cpp">
+      <Filter>MFC\Dlg</Filter>
+    </ClCompile>
+    <ClCompile Include="ViewControlDlg.cpp">
+      <Filter>MFC\Dlg</Filter>
+    </ClCompile>
+    <ClCompile Include="CinematicGui.cpp">
+      <Filter>MFC\Gui</Filter>
+    </ClCompile>
+    <ClCompile Include="CustomItems.cpp">
+      <Filter>MFC\CustomToolKit</Filter>
+    </ClCompile>
+    <ClCompile Include="DirectApp.cpp">
+      <Filter>Main</Filter>
+    </ClCompile>
+    <ClCompile Include="DTServer.cpp">
+      <Filter>Main</Filter>
+    </ClCompile>
+    <ClCompile Include="Msjexhnd.cpp">
+      <Filter>Main</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ActorPane.h">
+      <Filter>MFC\Pane\Pane</Filter>
+    </ClInclude>
+    <ClInclude Include="BotPane.h">
+      <Filter>MFC\Pane\Pane</Filter>
+    </ClInclude>
+    <ClInclude Include="CinematicNodePane.h">
+      <Filter>MFC\Pane\Pane</Filter>
+    </ClInclude>
+    <ClInclude Include="ControlPane.h">
+      <Filter>MFC\Pane\Pane</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjectPane.h">
+      <Filter>MFC\Pane\Pane</Filter>
+    </ClInclude>
+    <ClInclude Include="OutputPane.h">
+      <Filter>MFC\Pane\Pane</Filter>
+    </ClInclude>
+    <ClInclude Include="PropertyPane.h">
+      <Filter>MFC\Pane\Pane</Filter>
+    </ClInclude>
+    <ClInclude Include="ScriptPane.h">
+      <Filter>MFC\Pane\Pane</Filter>
+    </ClInclude>
+    <ClInclude Include="SkillPane.h">
+      <Filter>MFC\Pane\Pane</Filter>
+    </ClInclude>
+    <ClInclude Include="WayPointPane.h">
+      <Filter>MFC\Pane\Pane</Filter>
+    </ClInclude>
+    <ClInclude Include="DirectionPane.h">
+      <Filter>MFC\Pane\Pane\Properties</Filter>
+    </ClInclude>
+    <ClInclude Include="DirectionPropController.h">
+      <Filter>MFC\Pane\Pane\Properties</Filter>
+    </ClInclude>
+    <ClInclude Include="DirectionPropEffect.h">
+      <Filter>MFC\Pane\Pane\Properties</Filter>
+    </ClInclude>
+    <ClInclude Include="DirectionPropRefreeView.h">
+      <Filter>MFC\Pane\Pane\Properties</Filter>
+    </ClInclude>
+    <ClInclude Include="DirectionPropSound.h">
+      <Filter>MFC\Pane\Pane\Properties</Filter>
+    </ClInclude>
+    <ClInclude Include="ControlPointView.h">
+      <Filter>MFC\Pane\CustomView</Filter>
+    </ClInclude>
+    <ClInclude Include="DockingPaneCustomTheme.h">
+      <Filter>MFC\Pane\CustomView</Filter>
+    </ClInclude>
+    <ClInclude Include="PointAttrDlg.h">
+      <Filter>MFC\Pane\CustomView</Filter>
+    </ClInclude>
+    <ClInclude Include="PointCustomEditDlg.h">
+      <Filter>MFC\Pane\CustomView</Filter>
+    </ClInclude>
+    <ClInclude Include="PointEditDlg.h">
+      <Filter>MFC\Pane\CustomView</Filter>
+    </ClInclude>
+    <ClInclude Include="PointRotateEditDlg.h">
+      <Filter>MFC\Pane\CustomView</Filter>
+    </ClInclude>
+    <ClInclude Include="PointShapeDlg.h">
+      <Filter>MFC\Pane\CustomView</Filter>
+    </ClInclude>
+    <ClInclude Include="SequenceGraphDlg.h">
+      <Filter>MFC\Pane\CustomView</Filter>
+    </ClInclude>
+    <ClInclude Include="DTEditor.h">
+      <Filter>MFC\Frame</Filter>
+    </ClInclude>
+    <ClInclude Include="DTEditorDoc.h">
+      <Filter>MFC\Frame</Filter>
+    </ClInclude>
+    <ClInclude Include="DTEditorGlobal.h">
+      <Filter>MFC\Frame</Filter>
+    </ClInclude>
+    <ClInclude Include="DTEditorView.h">
+      <Filter>MFC\Frame</Filter>
+    </ClInclude>
+    <ClInclude Include="MainFrm.h">
+      <Filter>MFC\Frame</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>MFC\Frame</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>MFC\Frame</Filter>
+    </ClInclude>
+    <ClInclude Include="CreatePropDlg.h">
+      <Filter>MFC\Dlg</Filter>
+    </ClInclude>
+    <ClInclude Include="RenamePropDlg.h">
+      <Filter>MFC\Dlg</Filter>
+    </ClInclude>
+    <ClInclude Include="SoundOption.h">
+      <Filter>MFC\Dlg</Filter>
+    </ClInclude>
+    <ClInclude Include="ViewControlDlg.h">
+      <Filter>MFC\Dlg</Filter>
+    </ClInclude>
+    <ClInclude Include="CinematicGui.h">
+      <Filter>MFC\Gui</Filter>
+    </ClInclude>
+    <ClInclude Include="CustomItems.h">
+      <Filter>MFC\CustomToolKit</Filter>
+    </ClInclude>
+    <ClInclude Include="DirectApp.h">
+      <Filter>Main</Filter>
+    </ClInclude>
+    <ClInclude Include="DTDefine.h">
+      <Filter>Main</Filter>
+    </ClInclude>
+    <ClInclude Include="DTServer.h">
+      <Filter>Main</Filter>
+    </ClInclude>
+    <ClInclude Include="Msjexhnd.h">
+      <Filter>Main</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+</Project>

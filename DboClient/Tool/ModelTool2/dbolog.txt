@@ -1,0 +1,88 @@
+[04:32:59 AM]	CModelToolApplication::Update (519) : [WARNING] m_pCamera CAMERA IS NULL
+
+[04:32:59 AM]	CModelToolApplication::Update (519) : [WARNING] m_pCamera CAMERA IS NULL
+
+[04:32:59 AM]	CModelToolApplication::Update (519) : [WARNING] m_pCamera CAMERA IS NULL
+
+[04:32:59 AM]	CModelToolApplication::Update (519) : [WARNING] m_pCamera CAMERA IS NULL
+
+[04:32:59 AM]	CModelToolApplication::Update (519) : [WARNING] m_pCamera CAMERA IS NULL
+
+[04:32:59 AM]	CModelToolApplication::Update (519) : [WARNING] m_pCamera CAMERA IS NULL
+
+[04:32:59 AM]	CModelToolApplication::Update (519) : [WARNING] m_pCamera CAMERA IS NULL
+
+[04:32:59 AM]	CModelToolApplication::Update (519) : [WARNING] m_pCamera CAMERA IS NULL
+
+[04:32:59 AM]	CModelToolApplication::Update (519) : [WARNING] m_pCamera CAMERA IS NULL
+
+[04:32:59 AM]	CModelToolApplication::Update (519) : [WARNING] m_pCamera CAMERA IS NULL
+
+[04:32:59 AM]	CModelToolApplication::Update (519) : [WARNING] m_pCamera CAMERA IS NULL
+
+[04:32:59 AM]	CModelToolApplication::Update (519) : [WARNING] m_pCamera CAMERA IS NULL
+
+[04:32:59 AM]	CModelToolApplication::Update (519) : [WARNING] m_pCamera CAMERA IS NULL
+
+[04:32:59 AM]	CModelToolApplication::Update (519) : [WARNING] m_pCamera CAMERA IS NULL
+
+[04:32:59 AM]	CModelToolApplication::Update (519) : [WARNING] m_pCamera CAMERA IS NULL
+
+[04:32:59 AM]	CModelToolApplication::Update (519) : [WARNING] m_pCamera CAMERA IS NULL
+
+[04:32:59 AM]	CModelToolApplication::Update (519) : [WARNING] m_pCamera CAMERA IS NULL
+
+[04:32:59 AM]	CModelToolApplication::Update (519) : [WARNING] m_pCamera CAMERA IS NULL
+
+[04:32:59 AM]	CModelToolApplication::Update (519) : [WARNING] m_pCamera CAMERA IS NULL
+
+[04:32:59 AM]	CModelToolApplication::Update (519) : [WARNING] m_pCamera CAMERA IS NULL
+
+[04:32:59 AM]	CModelToolApplication::Update (519) : [WARNING] m_pCamera CAMERA IS NULL
+
+[04:32:59 AM]	CModelToolApplication::Update (519) : [WARNING] m_pCamera CAMERA IS NULL
+
+[04:32:59 AM]	CModelToolApplication::Update (519) : [WARNING] m_pCamera CAMERA IS NULL
+
+[04:32:59 AM]	CModelToolApplication::Update (519) : [WARNING] m_pCamera CAMERA IS NULL
+
+[04:32:59 AM]	CModelToolApplication::Update (519) : [WARNING] m_pCamera CAMERA IS NULL
+
+[04:32:59 AM]	CModelToolApplication::Update (519) : [WARNING] m_pCamera CAMERA IS NULL
+
+[04:32:59 AM]	CModelToolApplication::Update (519) : [WARNING] m_pCamera CAMERA IS NULL
+
+[04:32:59 AM]	CModelToolApplication::Update (519) : [WARNING] m_pCamera CAMERA IS NULL
+
+[04:32:59 AM]	CModelToolApplication::Update (519) : [WARNING] m_pCamera CAMERA IS NULL
+
+[04:32:59 AM]	CModelToolApplication::Update (519) : [WARNING] m_pCamera CAMERA IS NULL
+
+[04:32:59 AM]	CModelToolApplication::Update (519) : [WARNING] m_pCamera CAMERA IS NULL
+
+[04:32:59 AM]	CModelToolApplication::Update (519) : [WARNING] m_pCamera CAMERA IS NULL
+
+[04:32:59 AM]	CModelToolApplication::Update (519) : [WARNING] m_pCamera CAMERA IS NULL
+
+[04:32:59 AM]	CModelToolApplication::Update (519) : [WARNING] m_pCamera CAMERA IS NULL
+
+[04:33:36 AM]	SetToonDefaultAllAtomics (13) : [ASSERT] [ASSERT] pData->pToonInk != 0 Failed
+
+[04:47:17 AM]	CModelToolApplication::CreateSubSystem (153) : [ASSERT] Create camera fail
+
+[04:50:36 AM]	CModelToolApplication::CreateSubSystem (154) : [ASSERT] Create camera fail
+
+[04:55:24 AM]	CNtlPostEffectCamera::Create (250) : [WARNING] CreateEffect FAIL
+
+[04:55:24 AM]	CModelToolApplication::CreateSubSystem (154) : [ASSERT] Create camera fail
+
+[04:59:03 AM]	CNtlPostEffectCamera::CreateEffect (417) : [WARNING] m_lpEffect == NULL
+
+[04:59:03 AM]	CNtlPostEffectCamera::Create (250) : [WARNING] CreateEffect FAIL
+
+[04:59:03 AM]	CModelToolApplication::CreateSubSystem (154) : [ASSERT] Create camera fail
+
+[05:01:25 AM]	CNtlPLPropertyContainer::LoadSerialize (1728) : [WARNING] load waterproperty fail..
+
+[05:01:25 AM]	CModelToolApplication::CreateSubSystem (144) : [ASSERT] Property container load fail
+

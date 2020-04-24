@@ -1,0 +1,34 @@
+-- 구리스 가스 포동
+-- 50% 이상 데미지를 입으면 동료가 spawn되는 곳 근처로 이동
+
+Scene(1, "Moving" )
+--[
+	State( "fight" )
+	--[
+		Condition( "himself check" )
+		--[
+			Param( "event type", "lp" )
+			Param( "%", 50 )
+			
+			Action( "say" )
+			--[
+				Param( "tblidx", 3049 )
+			--]
+			End()
+			
+			Action( "point move" )
+			--[
+				Param( "loc x", 240.63 )
+				Param( "loc y", 17.49 )
+				Param( "loc z", 304.75 )
+				Param( "dir x", -0.74 )
+				Param( "dir z", 0.67 )
+				Param( "run mode", 1 )
+			--]
+			End()
+		--]     
+		End()
+	--]     
+	End()
+--]     
+End()

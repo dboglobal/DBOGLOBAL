@@ -1,0 +1,1020 @@
+-- UD6
+-- Boss Stage
+-- 나메크리스탈 구역
+-- 탄타
+
+GameStage(0)
+--[
+	Action( "function" )
+	--[
+		Condition( "child" )
+		--[
+			-- Normal Stage Clear 될 때까지 대기
+			Action( "wait" )
+			--[
+				Condition( "recv event from wps" )
+				--[
+					Param( "wps index", 34009 )
+					Param( "event id", 900 )
+				--]
+				End()
+			--]
+			End()
+			
+			-- 통합탄타 spawn
+			Action( "add mob" )
+			--[
+				Param( "index", 25862201 )
+				Param( "group", 3400301 )
+				Param( "loc x", 628.94 )
+				Param( "loc y", 44.53 )
+				Param( "loc z", -532.31 )
+				Param( "dir x", -0.98 )
+				Param( "dir z", 0.17 )
+				Param( "nest type", "fix" )
+				Param( "nest range", 35 )
+				Param( "no spawn wait", "true" )
+			--]
+			End()
+			
+			-- 탄타의 위치
+			Action( "calculate" )
+			--[
+				Param( "declare", "vector tntLoc = Vector(0,0,0), vector tntDir = Vector(0,0,0)" )
+			--]
+			End()
+			
+			-- 타격 탄타의 위치
+			Action( "calculate" )
+			--[
+				Param( "declare", "vector phstntLoc = Vector(0,0,0), vector phstntDir = Vector(0,0,0)" )
+			--]
+			End()
+			
+			-- 기공 탄타의 위치
+			Action( "calculate" )
+			--[
+				Param( "declare", "vector enrtntLoc = Vector(0,0,0), vector enrtntDir = Vector(0,0,0)" )
+			--]
+			End()
+			
+			Action( "calculate" )
+			--[
+				Param( "declare", "int noBattle = 0, int tnt2Dead = 0, int TRUE = 1, int FALSE = 0" )
+				Param( "express", "noBattle = 0" )
+			--]
+			End()
+			
+			Action( "function" )
+			--[
+				--Integration and separation tanta tanta and the Dragon Corps
+				Condition( "child" )
+				--[
+					Action( "while" )
+					--[
+						Action( "loop" )
+						--[
+							Action( "function" )
+							--[
+								--드래곤 봉사단
+								Condition( "child" )
+								--[
+									Action( "while" )
+									--[
+										Action( "loop" )
+										--[
+											-- Integrated carbon entering the battle Tagawa
+											Action( "wait" )
+											--[
+												Condition( "check battle" )
+												--[
+													Param( "type", "mob" )
+													Param( "group", 3400301 )
+													Param( "is battle", "true" )
+												--]
+												End()
+											--]
+											End()
+											
+											-- 60초 후
+											Action( "wait" )
+											--[
+												Condition( "check time" )
+												--[
+													Param( "time", 60 )
+												--]
+												End()
+											--]
+											End()
+											
+											-- 드래곤 자원봉사단 9마리 spawn
+											Action( "add mob" )
+											--[
+												Param( "index", 24853101 )
+												Param( "group", 3400302 )
+												Param( "loc x", 594.38 )
+												Param( "loc y", 44.51 )
+												Param( "loc z", -534.19 )
+												Param( "dir x", 0.97 )
+												Param( "dir z", 0.22 )
+												Param( "play script", 24853101 )
+												Param( "play scene", 1 )
+												Param( "no spawn wait", "true" )
+											--]
+											End()
+											
+											Action( "add mob" )
+											--[
+												Param( "index", 24853101 )
+												Param( "group", 3400302 )
+												Param( "loc x", 663.57 )
+												Param( "loc y", 44.51 )
+												Param( "loc z", -530.66 )
+												Param( "dir x", -0.99 )
+												Param( "dir z", 0.16 )
+												Param( "no spawn wait", "true" )
+											--]
+											End()
+											
+											Action( "add mob" )
+											--[
+												Param( "index", 24853101 )
+												Param( "group", 3400302 )
+												Param( "loc x", 616.47 )
+												Param( "loc y", 44.50 )
+												Param( "loc z", -500.04 )
+												Param( "dir x", 0.44 )
+												Param( "dir z", -0.90 )
+												Param( "no spawn wait", "true" )
+											--]
+											End()
+											
+											Action( "add mob" )
+											--[
+												Param( "index", 24853101 )
+												Param( "group", 3400302 )
+												Param( "loc x", 619.87 )
+												Param( "loc y", 44.51 )
+												Param( "loc z", -566.02 )
+												Param( "dir x", 0.10 )
+												Param( "dir z", 0.99 )
+												Param( "no spawn wait", "true" )
+											--]
+											End()
+											
+											Action( "add mob" )
+											--[
+												Param( "index", 24853101 )
+												Param( "group", 3400302 )
+												Param( "loc x", 658.12 )
+												Param( "loc y", 44.60 )
+												Param( "loc z", -551.37 )
+												Param( "dir x", -0.85 )
+												Param( "dir z", 0.53 )
+												Param( "no spawn wait", "true" )
+											--]
+											End()
+											
+											Action( "add mob" )
+											--[
+												Param( "index", 24853101 )
+												Param( "group", 3400302 )
+												Param( "loc x", 599.82 )
+												Param( "loc y", 44.52 )
+												Param( "loc z", -513.51 )
+												Param( "dir x", 0.80 )
+												Param( "dir z", -0.60 )
+												Param( "no spawn wait", "true" )
+											--]
+											End()
+											
+											Action( "add mob" )
+											--[
+												Param( "index", 24853101 )
+												Param( "group", 3400302 )
+												Param( "loc x", 641.25 )
+												Param( "loc y", 44.51 )
+												Param( "loc z", -564.84 )
+												Param( "dir x", -0.52 )
+												Param( "dir z", 0.86 )
+												Param( "no spawn wait", "true" )
+											--]
+											End()
+											
+											Action( "add mob" )
+											--[
+												Param( "index", 24853101 )
+												Param( "group", 3400302 )
+												Param( "loc x", 637.99 )
+												Param( "loc y", 44.51 )
+												Param( "loc z", -498.67 )
+												Param( "dir x", -0.17 )
+												Param( "dir z", -0.98 )
+												Param( "no spawn wait", "true" )
+											--]
+											End()
+											
+											Action( "add mob" )
+											--[
+												Param( "index", 24853101 )
+												Param( "group", 3400302 )
+												Param( "loc x", 601.81 )
+												Param( "loc y", 44.51 )
+												Param( "loc z", -554.09 )
+												Param( "dir x", 0.75 )
+												Param( "dir z", 0.66)
+												Param( "no spawn wait", "true" )
+											--]
+											End()
+											
+											-- 60초 후
+											Action( "wait" )
+											--[
+												Condition( "check time" )
+												--[
+													Param( "time", 60 )
+												--]
+												End()
+											--]
+											End()
+											
+											-- 드래곤 자원봉사단 9마리 spawn
+											Action( "add mob" )
+											--[
+												Param( "index", 24853101 )
+												Param( "group", 3400302 )
+												Param( "loc x", 647.95 )
+												Param( "loc y", 44.53 )
+												Param( "loc z", -503.29 )
+												Param( "dir x", -0.53 )
+												Param( "dir z", -0.85 )
+												Param( "play script", 24853101 )
+												Param( "play scene", 2 )
+												Param( "no spawn wait", "true" )
+											--]
+											End()
+											
+											Action( "add mob" )
+											--[
+												Param( "index", 24853101 )
+												Param( "group", 3400302 )
+												Param( "loc x", 596.42 )
+												Param( "loc y", 44.51 )
+												Param( "loc z", -544.71 )
+												Param( "dir x", 0.93 )
+												Param( "dir z", 0.37 )
+												Param( "no spawn wait", "true" )
+											--]
+											End()
+											
+											Action( "add mob" )
+											--[
+												Param( "index", 24853101 )
+												Param( "group", 3400302 )
+												Param( "loc x", 650.45 )
+												Param( "loc y", 44.51 )
+												Param( "loc z", -559.19 )
+												Param( "dir x", -0.64 )
+												Param( "dir z", 0.77 )
+												Param( "no spawn wait", "true" )
+											--]
+											End()
+											
+											Action( "add mob" )
+											--[
+												Param( "index", 24853101 )
+												Param( "group", 3400302 )
+												Param( "loc x", 607.10 )
+												Param( "loc y", 44.51 )
+												Param( "loc z", -505.30 )
+												Param( "dir x", 0.64 )
+												Param( "dir z", -0.77 )
+												Param( "no spawn wait", "true" )
+											--]
+											End()
+											
+											Action( "add mob" )
+											--[
+												Param( "index", 24853101 )
+												Param( "group", 3400302 )
+												Param( "loc x", 609.75 )
+												Param( "loc y", 44.51 )
+												Param( "loc z", -561.49 )
+												Param( "dir x", 0.56 )
+												Param( "dir z", 0.83 )
+												Param( "no spawn wait", "true" )
+											--]
+											End()
+											
+											Action( "add mob" )
+											--[
+												Param( "index", 24853101 )
+												Param( "group", 3400302 )
+												Param( "loc x", 627.13 )
+												Param( "loc y", 44.51 )
+												Param( "loc z", -497.72 )
+												Param( "dir x", 0.03 )
+												Param( "dir z", -1.00 )
+												Param( "no spawn wait", "true" )
+											--]
+											End()
+											
+											Action( "add mob" )
+											--[
+												Param( "index", 24853101 )
+												Param( "group", 3400302 )
+												Param( "loc x", 630.54 )
+												Param( "loc y", 44.51 )
+												Param( "loc z", -567.24 )
+												Param( "dir x", -0.07 )
+												Param( "dir z", 1.00 )
+												Param( "no spawn wait", "true" )
+											--]
+											End()
+											
+											Action( "add mob" )
+											--[
+												Param( "index", 24853101 )
+												Param( "group", 3400302 )
+												Param( "loc x", 595.48 )
+												Param( "loc y", 44.52 )
+												Param( "loc z", -523.36 )
+												Param( "dir x", 0.95 )
+												Param( "dir z", -0.31 )
+												Param( "no spawn wait", "true" )
+											--]
+											End()
+											
+											Action( "add mob" )
+											--[
+												Param( "index", 24853101 )
+												Param( "group", 3400302 )
+												Param( "loc x", 662.40 )
+												Param( "loc y", 44.27 )
+												Param( "loc z", -541.33 )
+												Param( "dir x", -0.96 )
+												Param( "dir z", 0.29 )
+												Param( "no spawn wait", "true" )
+											--]
+											End()
+										--]
+										End()
+									--]
+									End()
+								--]
+								End()
+								
+								--Tanta integration or separation Tan battle Tagawa
+								Condition( "child" )
+								--[
+									Action( "while" )
+									--[
+										Action( "loop" )
+										--[
+											-- 통합탄타가 전투에 들어가면
+											Action( "wait" )
+											--[
+												Condition( "check battle" )
+												--[
+													Param( "type", "mob" )
+													Param( "group", 3400301 )
+													Param( "is battle", "true" )
+												--]
+												End()
+											--]
+											End()
+											
+											-- boss stage 입구를 닫는다
+											Action( "change object state" )
+											--[
+												Param( "index", 126 )
+												Param( "state", 3 )
+												Param( "substate show", 1)
+											--]
+											End()
+											
+											Action( "function" )
+											--[
+												Condition( "child" )
+												--[
+													-- Tan unhooked from the integrated battle Tagawa
+													Action( "wait" )
+													--[
+														Condition( "check battle" )
+														--[
+															Param( "type", "mob" )
+															Param( "group", 3400301 )
+															Param( "is battle", "false" )
+														--]
+														End()
+													--]
+													End()
+													
+													-- 전투풀림 상태 표시
+													Action( "calculate" )
+													--[
+														Param( "express", "noBattle = TRUE" )
+													--]
+													End()
+												--]
+												End()
+												
+												-- When one LP tanta 80%
+												Action( "wait" )
+												--[
+													Condition( "check lp" )
+													--[
+														Param( "type", "mob" )
+														Param( "group", 3400301 )
+														Param( "lp", 80 )
+													--]
+													End()
+												--]
+												End()
+												
+												-- Grasshopper guys, let me show you this!
+												Action( "system message" )
+												--[
+													Param( "notify", "notice" )
+													Param( "text index", 69 )
+												--]
+												End()
+											--]
+											End()
+											
+											-- Get location
+											Action( "get location" )
+											--[
+												Param( "target type", "mob" )
+												Param( "target index", 3400301)
+												Param( "loc var", "tntLoc" )
+												Param( "dir var", "tntDir" )
+												Param( "default", "Loc(662.40, 44.27, -541.33), Dir(-0.96, 0.00, 0.29)" )
+											--]
+											End()
+											
+											Action( "calculate" )
+											--[
+												Param( "express", "phstntDir = tntDir" )
+											--]
+											End()
+											
+											Action( "calculate" )
+											--[
+												Param( "express", "enrtntDir = tntDir" )
+											--]
+											End()
+											
+											-- Tanta blow to the integrated rudder left and right 1st shots meters and pore tanta spawn
+											Action( "calculate" )
+											--[
+												Param( "express", "phstntLoc = RelativeCoord(tntLoc, tntDir, 90, 1)" )
+											--]
+											End()
+											
+											Action( "calculate" )
+											--[
+												Param( "express", "enrtntLoc = RelativeCoord(tntLoc, tntDir, 270, 1)" )
+											--]
+											End()
+											
+											-- Integrated tanta respawn
+											Action( "remove mobgroup" )
+											--[
+												Param( "group", 3400301 )
+												Param( "type", "clear" )
+											--]
+											End()
+											
+											-- Tanta hit spawn
+											Action( "add mob" )
+											--[
+												Param( "index", 25862301 )
+												Param( "group", 3400303 )
+												Param( "use loc var", "true" )
+												Param( "loc var", "phstntLoc" )
+												Param( "dir var", "phstntDir" )
+												Param( "no spawn wait", "true" )
+											--]
+											End()
+											
+											-- Tanta pore spawn
+											Action( "add mob" )
+											--[
+												Param( "index", 25862401 )
+												Param( "group", 3400304 )
+												Param( "use loc var", "true" )
+												Param( "loc var", "enrtntLoc" )
+												Param( "dir var", "enrtntDir" )
+												Param( "no spawn wait", "true" )
+											--]
+											End()
+											
+											Action( "function" )
+											--[
+												Condition( "child" )
+												--[
+													-- 타격탄타와 기공탄타가 둘 다 전투에 들어가고
+													Action( "wait" )
+													--[
+														Param( "operation", "and" )
+														
+														Condition( "check battle" )
+														--[
+															Param( "type", "mob" )
+															Param( "group", 3400303 )
+															Param( "is battle", "true" )
+														--]
+														End()
+														
+														Condition( "check battle" )
+														--[
+															Param( "type", "mob" )
+															Param( "group", 3400304 )
+															Param( "is battle", "true" )
+														--]
+														End()
+													--]
+													End()
+													
+													-- Tanta shot hit the pores Tagawa both battle unprotected
+													Action( "wait" )
+													--[
+														Param( "operation", "and" )
+														
+														Condition( "check battle" )
+														--[
+															Param( "type", "mob" )
+															Param( "group", 3400303 )
+															Param( "is battle", "false" )
+														--]
+														End()
+														
+														Condition( "check battle" )
+														--[
+															Param( "type", "mob" )
+															Param( "group", 3400304 )
+															Param( "is battle", "false" )
+														--]
+														End()
+													--]
+													End()
+													
+													-- Battle loosening status
+													Action( "calculate" )
+													--[
+														Param( "express", "noBattle = TRUE" )
+													--]
+													End()
+												--]
+												End()
+												
+												-- 타격탄타와 기공탄타가 둘 다 죽으면
+												Action( "wait" )
+												--[
+													Param( "operation", "and" )
+													
+													Condition( "check mobgroup" )
+													--[
+														Param( "group", 3400303 )
+														Param( "count", 1)
+													--]
+													End()
+													
+													Condition( "check mobgroup" )
+													--[
+														Param( "group", 3400304 )
+														Param( "count", 1)
+													--]
+													End()
+												--]
+												End()
+												
+												-- 타격&기공탄타 사망 상태 표시
+												Action( "calculate" )
+												--[
+													Param( "express", "tnt2Dead = TRUE" )
+												--]
+												End()
+											-- function end
+											--]
+											End()
+											
+										-- loop end
+										--]
+										End()
+									-- while end
+									--]
+									End()
+								-- child end
+								--]
+								End()
+								
+								-- 전투풀림 상태가 되면
+								Action( "wait" )
+								--[
+									Condition( "compare" )
+									--[
+										Param( "express", "noBattle == TRUE" )
+									--]
+									End()
+								--]
+								End()
+							-- function end
+							--]
+							End()
+							
+							-- boss stage 입구 열어줌
+							Action( "change object state" )
+							--[
+								Param( "index", 126 )
+								Param( "state", 1 )
+								Param( "substate show", 1 )
+							--]
+							End()
+							
+							-- 전투풀림 상태 해제
+							Action( "calculate" )
+							--[
+								Param( "express", "noBattle = FALSE" )
+							--]
+							End()
+							
+							-- 통합탄타 despawn
+							Action( "remove mobgroup" )
+							--[
+								Param( "group", 3400301 )
+								Param( "type", "clear" )
+							--]
+							End()
+							
+							-- 타격탄타 despawn
+							Action( "remove mobgroup" )
+							--[
+								Param( "group", 3400303 )
+								Param( "type", "clear" )
+							--]
+							End()
+							
+							-- 기공탄타 despawn
+							Action( "remove mobgroup" )
+							--[
+								Param( "group", 3400304 )
+								Param( "type", "clear" )
+							--]
+							End()
+							
+							-- 드래곤 자원봉사단 despawn
+							Action( "remove mobgroup" )
+							--[
+								Param( "group", 3400302 )
+								Param( "type", "clear" )
+							--]
+							End()
+							
+							-- 통합탄타 spawn
+							Action( "add mob" )
+							--[
+								Param( "index", 25862201 )
+								Param( "group", 3400301 )
+								Param( "loc x", 628.94 )
+								Param( "loc y", 44.53 )
+								Param( "loc z", -532.31 )
+								Param( "dir x", -0.98 )
+								Param( "dir z", 0.17 )
+								Param( "nest type", "fix" )
+								Param( "nest range", 35 )
+								Param( "no spawn wait", "true" )
+							--]
+							End()
+						--]
+						End()
+					--]
+					End()
+				--]
+				End()
+				
+				-- 타격&기공탄타 사망 상태가 되면
+				Action( "wait" )
+				--[
+					Condition( "compare" )
+					--[
+						Param( "express", "tnt2Dead == TRUE" )
+					--]
+					End()
+				--]
+				End()
+				
+				-- 드래곤 자원봉사단 despawn
+				Action( "remove mobgroup" )
+				--[
+					Param( "group", 3400302 )
+					Param( "type", "faint" )
+				--]
+				End()
+			--]
+			End()
+			
+			-- 탄타의 소지품 spawn
+			Action( "add mob" )
+			--[
+				Param( "index", 21756101 )
+				Param( "group", 3400305 )
+				Param( "loc x", 628.94 )
+				Param( "loc y", 44.53 )
+				Param( "loc z", -532.31 )
+				Param( "dir x", -0.98 )
+				Param( "dir z", 0.17 )
+				Param( "no spawn wait", "true" )
+			--]
+			End()
+			
+			-- 로비로 event 보냄
+			Action( "send event to wps" )
+			--[
+				Param( "wps index", 34001 )
+				Param( "event id", 903 )
+			--]
+			End()
+			
+			-- boss stage 출구 열어줌
+			Action( "change object state" )
+			--[
+				Param( "index", 128 )
+				Param( "state", 1 )
+				Param( "substate show", 1 )
+			--]
+			End()
+			
+			-- 2초 대기
+			Action( "wait" )
+			--[
+				Condition( "check time" )
+				--[
+					Param( "time", 2 )
+				--]
+				End()
+			--]
+			End()
+			
+			-- 파이프 파괴, 파이프 복도 파괴
+			Action( "change object state" )
+			--[
+				Param( "index", 89 )
+				Param( "state", 1 )
+				Param( "substate show", 1 )
+			--]
+			End()
+			
+			-- 나메크리스탈 정제수 공급 구역이 폐쇄되었습니다.
+			Action( "system message" )
+			--[
+				Param( "notify", "notice" )
+				Param( "text index", 80 )
+			--]
+			End()
+			
+			Action( "wait" )
+			--[
+				Condition( "check time" )
+				--[
+					Param( "time", 2 )
+				--]
+				End()
+			--]
+			End()
+			
+			-- 파이프 복도 출구 열어줌
+			Action( "change object state" )
+			--[
+				Param( "index", 5 )
+				Param( "state", 1 )
+				Param( "substate show", 1 )
+			--]
+			End()
+			
+			-- 승천의 구슬 근처 스위치 작동시키고 uncheck
+			Action( "change object state" )
+			--[
+				Param( "index", 83 )
+				Param( "state", 1 )
+				Param( "substate show", 1 )
+				Param( "substate unselect", 1 )
+			--]
+			End()
+			
+			-- 파이프 복도 옆 스위치 작동시키고 uncheck
+			Action( "change object state" )
+			--[
+				Param( "index", 101 )
+				Param( "state", 1 )
+				Param( "substate show", 1 )
+				Param( "substate unselect", 1 )
+			--]
+			End()
+		--]
+		End()
+		
+		-- 승천의 구슬 근처 스위치가 작동되면
+		-- Object 8153에서 이벤트가 옴
+		Action( "wait" )
+		--[
+			Condition( "recv event from ts" )
+			--[
+				Param( "trigger type", "object" )
+				Param( "event id", 878 )
+			--]
+			End()
+		--]
+		End()
+	--]
+	End()
+	
+	------------------------------------------------------------
+	-- Normal Stage의 모든 mob을 despawn하고, 모든 문을 열어준다
+	------------------------------------------------------------
+	Action( "remove mobgroup" )
+	--[
+		Param( "group", 201 )
+		Param( "type", "clear" )
+	--]
+	End()
+	
+	Action( "remove mobgroup" )
+	--[
+		Param( "group", 202 )
+		Param( "type", "clear" )
+	--]
+	End()
+	
+	Action( "remove mobgroup" )
+	--[
+		Param( "group", 203 )
+		Param( "type", "clear" )
+	--]
+	End()
+	
+	Action( "remove mobgroup" )
+	--[
+		Param( "group", 204 )
+		Param( "type", "clear" )
+	--]
+	End()
+	
+	Action( "remove mobgroup" )
+	--[
+		Param( "group", 205 )
+		Param( "type", "clear" )
+	--]
+	End()
+	
+	Action( "remove mobgroup" )
+	--[
+		Param( "group", 206 )
+		Param( "type", "clear" )
+	--]
+	End()
+	
+	Action( "remove mobgroup" )
+	--[
+		Param( "group", 207 )
+		Param( "type", "clear" )
+	--]
+	End()
+	
+	Action( "remove mobgroup" )
+	--[
+		Param( "group", 208 )
+		Param( "type", "clear" )
+	--]
+	End()
+	
+	Action( "remove mobgroup" )
+	--[
+		Param( "group", 209 )
+		Param( "type", "clear" )
+	--]
+	End()
+	
+	Action( "change object state" )
+	--[
+		Param( "index", 66 )
+		Param( "state", 1 )
+		Param( "substate show", 1 )
+	--]
+	End()
+	
+	Action( "change object state" )
+	--[
+		Param( "index", 67 )
+		Param( "state", 1 )
+		Param( "substate show", 1 )
+	--]
+	End()
+	
+	Action( "change object state" )
+	--[
+		Param( "index", 68 )
+		Param( "state", 1 )
+		Param( "substate show", 1 )
+	--]
+	End()
+	
+	Action( "change object state" )
+	--[
+		Param( "index", 69 )
+		Param( "state", 1 )
+		Param( "substate show", 1 )
+	--]
+	End()
+	
+	Action( "change object state" )
+	--[
+		Param( "index", 70 )
+		Param( "state", 1 )
+		Param( "substate show", 1 )
+	--]
+	End()
+	
+	Action( "change object state" )
+	--[
+		Param( "index", 71 )
+		Param( "state", 1 )
+		Param( "substate show", 1 )
+	--]
+	End()
+	
+	Action( "change object state" )
+	--[
+		Param( "index", 72 )
+		Param( "state", 1 )
+		Param( "substate show", 1 )
+	--]
+	End()
+	
+	Action( "change object state" )
+	--[
+		Param( "index", 73 )
+		Param( "state", 1 )
+		Param( "substate show", 1 )
+	--]
+	End()
+	
+	Action( "change object state" )
+	--[
+		Param( "index", 126 )
+		Param( "state", 1 )
+		Param( "substate show", 1 )
+	--]
+	End()
+	
+	Action( "change object state" )
+	--[
+		Param( "index", 128 )
+		Param( "state", 1 )
+		Param( "substate show", 1 )
+	--]
+	End()
+	
+	Action( "change object state" )
+	--[
+		Param( "index", 89 )
+		Param( "state", 1 )
+		Param( "substate show", 1 )
+	--]
+	End()
+	
+	Action( "change object state" )
+	--[
+		Param( "index", 5 )
+		Param( "state", 1 )
+		Param( "substate show", 1 )
+	--]
+	End()
+	
+	Action( "change object state" )
+	--[
+		Param( "index", 65 )
+		Param( "state", 1 )
+		Param( "substate show", 1 )
+	--]
+	End()
+	
+	Action( "change object state" )
+	--[
+		Param( "index", 83 )
+		Param( "state", 1 )
+		Param( "substate show", 1 )
+		Param( "substate unselect", 1 )
+	--]
+	End()
+	
+	Action( "change object state" )
+	--[
+		Param( "index", 101 )
+		Param( "state", 1 )
+		Param( "substate show", 1 )
+	--]
+	End()
+--]
+End()

@@ -1,0 +1,38 @@
+>contentChunkPlacement
+	[# note that index zero is reserved for terrain-stand in, so instance indices start here at 1 #]
+	>chunk .name chunk1 .rotation 0 .scale 10 .x 0 .y -10000 .z 0 <
+	>chunk .name chunk1 .rotation 1 .scale 10 .x -10000 .y -10000 .z 0 <
+	>chunk .name chunk1 .rotation 2 .scale 10 .x 10000 .y -10000 .z 0 <
+	>chunk .name chunk1 .rotation 16 .scale 12 .x -20000 .y 0 .z 0 <
+	>chunk .name chunk1 .rotation 17 .scale 12 .x -20000 .y 12000 .z 0 <
+	>chunk .name chunk1 .rotation 32 .scale 11 .x 0 .y 20000 .z 0 <
+	>chunk .name chunk1 .rotation 32 .scale 11 .x 12000 .y 20000 .z 0 <
+	>chunk .name chunk1 .rotation 48 .scale 9 .x 20000 .y 0 .z 0 <
+	>chunk .name chunk2 .rotation 0 .scale 10 .x 0 .y -50000 .z 1000 <
+	>chunk .name chunk2 .rotation 4 .scale 11 .x -6300 .y -49100 .z 990 <
+	>chunk .name chunk2 .rotation 8 .scale 12 .x -12500 .y -46000 .z 980 <
+	>chunk .name chunk2 .rotation 12 .scale 13 .x -15800 .y -41500 .z 970 <
+	>chunk .name chunk2 .rotation 0 .scale 10 .x 50000 .y -48000 .z 1000 <
+	>chunk .name chunk2 .rotation 4 .scale 11 .x 43700 .y -47100 .z 990 <
+	>chunk .name chunk2 .rotation 8 .scale 12 .x 37500 .y -44000 .z 980 <
+	>chunk .name chunk2 .rotation 12 .scale 13 .x 34200 .y -39500 .z 970 <
+	>chunk .name chunk2 .rotation 0 .scale 10 .x 31000 .y -35000 .z 1000 <
+	>chunk .name chunk2 .rotation 4 .scale 11 .x 25700 .y -34100 .z 990 <
+	>chunk .name chunk2 .rotation 8 .scale 12 .x 19500 .y -31000 .z 980 <
+	>chunk .name chunk2 .rotation 12 .scale 13 .x 16200 .y -26500 .z 970 <
+	>chunk .name chunk3 .rotation 48 .scale 9 .x 5000 .y -35000 .z 0 <
+
+	[# pair of buildings with connecting edges #]
+	>chunk .name chunk5 .rotation 0 .scale 10 .x 35000 .y 5000 .z 0 <
+	>chunk .name chunk5 .rotation 32 .scale 10 .x 26240 .y 17800 .z 0 <
+	
+	[# pair of buildings with connecting edges #]
+	>chunk .name chunk5 .rotation 0 .scale 10 .x 35100 .y -12000 .z 0 <
+	>chunk .name chunk5 .rotation 32 .scale 10 .x 26240 .y 400 .z 0 <
+
+	[# a building with an unconnected edge #]
+	>chunk .name chunk5 .rotation 16 .scale 8 .x 45000 .y -30000 .z 0 <
+	
+	>edgeToEdgeConnection .fromInstance 22 .fromEdgeIndex 0 .toInstance 23 .toEdgeIndex 0 <
+	>edgeToEdgeConnection .fromInstance 24 .fromEdgeIndex 0 .toInstance 25 .toEdgeIndex 0 <
+<

@@ -1,0 +1,56 @@
+GameStage(0)
+--[
+
+	-- DISABLED BY DANEOS. NO QUEST/OBJ EXIST WHICH SEND EVENT ID 67
+	--Action("wait")
+	--[
+	--	Condition("recv ts event")
+		--[
+	--		Param("trigger type", "quest")
+	--		Param("event id", 67)
+		--]
+	--	End()
+	--]
+	--End()
+
+	Action( "add mobgroup" )
+	--[
+		Param( "group", 86 )
+	--]
+	End()   
+	
+	Action("wait")
+	--[
+
+		Param( "operation", "or" )
+
+		Condition( "check mobgroup" )
+		 --[   
+			Param( "group", 86 )
+			Param( "count", 4 )
+		--]
+		End() 
+
+		Condition( "check time" )
+		--[
+			Param( "time", 600 )
+		--]
+		End()
+	--]
+	End()
+
+	Action( "remove mobgroup" )
+	--[
+		Param( "group", 86 )
+		Param( "type", "faint" )
+	--]
+	End()
+
+--]
+End()
+
+
+GameFailed()
+--[
+--]
+End()

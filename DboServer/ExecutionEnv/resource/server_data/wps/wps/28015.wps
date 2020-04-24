@@ -1,0 +1,51 @@
+-- First floor
+-- Infinite spawn on the front of the conveyor belt
+
+GameStage(0)
+--[
+	Action( "while" )
+	--[
+		-- 다음과 같이 사용하면 무한 루프를 돌게 된다.
+		Condition( "loop cond" )
+		--[
+			Param( "reverse", "false" )
+			Param( "operation", "true" )
+		--]
+		End()
+
+		Action( "loop" )
+		--[
+			Action( "add mob" )
+			--[
+				Param( "index", 3593104 )
+				Param( "group", 2801401 )
+				Param( "loc x", -228.62 )
+				Param( "loc y", 0.05 )
+				Param( "loc z", -438.74 )
+				Param( "dir x", 1.00 )
+				Param( "dir z", -0.05 )
+				Param( "play script", 3593104 )
+				Param( "play scene", 2 )
+			--]
+			End()
+
+			-- 9초 만큼 대기
+			Action( "wait" )
+			--[
+				Condition( "check time" )
+				--[
+					Param( "time", 9 )
+				--]
+				End()
+			--]
+			End()
+			
+		-- loop 닫음
+		--]
+		End()
+		
+	-- while 닫음
+	--]
+	End()
+--]
+End()

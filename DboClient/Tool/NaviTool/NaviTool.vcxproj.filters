@@ -1,0 +1,150 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Dialog">
+      <UniqueIdentifier>{786572c3-bee9-483e-9ddc-b9b7206b12ef}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Document">
+      <UniqueIdentifier>{058e52da-d165-476f-b7af-4d72512703ee}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework">
+      <UniqueIdentifier>{b34cf9f2-0abb-486e-b658-9e1a507adc2d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework\MFC">
+      <UniqueIdentifier>{720e23da-441b-45ed-a39c-acec66fa0f25}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework\PathEngine">
+      <UniqueIdentifier>{691f51c0-d0c9-4de7-b155-eede8908e89d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework\NaviTestBed">
+      <UniqueIdentifier>{bdf1edfd-be77-4f27-aafe-328f77fceb88}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework\Util">
+      <UniqueIdentifier>{80b3d1e9-3829-403a-aeeb-c163a592d982}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource">
+      <UniqueIdentifier>{ff60c3ee-a7ad-4afb-b190-617c4fd2c7a9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Precompile">
+      <UniqueIdentifier>{619f227a-09b2-40a2-a4b0-e3255e673499}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Control">
+      <UniqueIdentifier>{f39cab17-0609-423b-96d3-6e72440f8715}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Control\EditListCtrl">
+      <UniqueIdentifier>{7218e7c7-150e-4073-bd48-5a735ebbd5e3}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="DirDialog.cpp">
+      <Filter>Dialog</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgPathExport.cpp">
+      <Filter>Dialog</Filter>
+    </ClCompile>
+    <ClCompile Include="MainFrm.cpp">
+      <Filter>Framework\MFC</Filter>
+    </ClCompile>
+    <ClCompile Include="NaviTool.cpp">
+      <Filter>Framework\MFC</Filter>
+    </ClCompile>
+    <ClCompile Include="NaviToolDoc.cpp">
+      <Filter>Framework\MFC</Filter>
+    </ClCompile>
+    <ClCompile Include="NaviToolView.cpp">
+      <Filter>Framework\MFC</Filter>
+    </ClCompile>
+    <ClCompile Include="PathEngine.cpp">
+      <Filter>Framework\PathEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="dxutil.cpp">
+      <Filter>Framework\NaviTestBed</Filter>
+    </ClCompile>
+    <ClCompile Include="NaviTestBed.cpp">
+      <Filter>Framework\NaviTestBed</Filter>
+    </ClCompile>
+    <ClCompile Include="NaviToolUtil.cpp">
+      <Filter>Framework\Util</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Precompile</Filter>
+    </ClCompile>
+    <ClCompile Include="EditListCtrl.cpp">
+      <Filter>Control\EditListCtrl</Filter>
+    </ClCompile>
+    <ClCompile Include="InPlaceEdit.cpp">
+      <Filter>Control\EditListCtrl</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="DirDialog.h">
+      <Filter>Dialog</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgPathExport.h">
+      <Filter>Dialog</Filter>
+    </ClInclude>
+    <ClInclude Include="BaseType_VirtualKey.h">
+      <Filter>Framework</Filter>
+    </ClInclude>
+    <ClInclude Include="MainFrm.h">
+      <Filter>Framework\MFC</Filter>
+    </ClInclude>
+    <ClInclude Include="NaviTool.h">
+      <Filter>Framework\MFC</Filter>
+    </ClInclude>
+    <ClInclude Include="NaviToolDoc.h">
+      <Filter>Framework\MFC</Filter>
+    </ClInclude>
+    <ClInclude Include="NaviToolView.h">
+      <Filter>Framework\MFC</Filter>
+    </ClInclude>
+    <ClInclude Include="PathEngine.h">
+      <Filter>Framework\PathEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="dxutil.h">
+      <Filter>Framework\NaviTestBed</Filter>
+    </ClInclude>
+    <ClInclude Include="NaviTestBed.h">
+      <Filter>Framework\NaviTestBed</Filter>
+    </ClInclude>
+    <ClInclude Include="NaviToolUtil.h">
+      <Filter>Framework\Util</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>Resource</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>Precompile</Filter>
+    </ClInclude>
+    <ClInclude Include="EditListCtrl.h">
+      <Filter>Control\EditListCtrl</Filter>
+    </ClInclude>
+    <ClInclude Include="InPlaceEdit.h">
+      <Filter>Control\EditListCtrl</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Document\PathEngine.doc">
+      <Filter>Document</Filter>
+    </None>
+    <None Include="res\NaviTool.rc2">
+      <Filter>Resource</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\NaviTool.ico">
+      <Filter>Resource</Filter>
+    </Image>
+    <Image Include="res\NaviToolDoc.ico">
+      <Filter>Resource</Filter>
+    </Image>
+    <Image Include="res\Toolbar.bmp">
+      <Filter>Resource</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="NaviTool.rc">
+      <Filter>Resource</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>

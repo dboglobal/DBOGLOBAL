@@ -1,0 +1,3 @@
+start ChatServer.exe
+
+exit

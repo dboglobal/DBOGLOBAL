@@ -1,0 +1,72 @@
+-- 2층
+-- 오브젝트에서 실행됨
+-- 첫번째 방 안쪽 에서 몹 뛰쳐나옴
+
+GameStage(0)
+--[
+	Action( "add mob" )
+	--[
+		Param( "index", 21251101 )
+		Param( "group", 2900701 )
+		Param( "loc x", -29.09 )
+		Param( "loc y", 0.11 )
+		Param( "loc z", 141.60 )
+		Param( "dir x", 0.71 )
+		Param( "dir z", 0.71 )
+		Param( "play script", 21251101 )
+		Param( "play scene", 1 )
+		Param( "no spawn wait", "true" )
+	--]
+	End()
+	
+	Action( "add mob" )
+	--[
+		Param( "index", 21251101 )
+		Param( "group", 2900701 )
+		Param( "loc x", -24.12 )
+		Param( "loc y", 0.11 )
+		Param( "loc z", 138.55 )
+		Param( "dir x", 0.00 )
+		Param( "dir z", 1.00 )
+		Param( "play script", 21251102 )
+		Param( "play scene", 1 )
+		Param( "no spawn wait", "true" )
+	--]
+	End()
+	
+	Action( "add mob" )
+	--[
+		Param( "index", 21251101 )
+		Param( "group", 2900701 )
+		Param( "loc x", -18.76 )
+		Param( "loc y", 0.11 )
+		Param( "loc z", 141.49 )
+		Param( "dir x", -0.36 )
+		Param( "dir z", 0.93 )
+		Param( "play script", 21251103 )
+		Param( "play scene", 1 )
+		Param( "no spawn wait", "true" )
+	--]
+	End()
+	
+	-- 2층 1-2방 벽에 붙은 mob들은 문이 열릴 때 spawn시켜 준다
+	Action( "add mobgroup" )
+	--[
+		Param( "group", 12 )
+		Param( "no spawn wait", "true" )
+	--]
+	End()
+	
+	-- spawn한 mob모두 잡을 때 까지 wps유지
+	Action( "wait" )
+	--[
+		Condition( "check mobgroup" )
+		--[
+			Param( "group", 12 )
+			Param( "count", 0 )
+		--]
+		End()
+	--]
+	End()
+--]
+End()

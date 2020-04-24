@@ -1,0 +1,30 @@
+resource "rsrButton"
+{
+	handle	= 0;
+	file	= "test.png";
+}
+
+resource "balloon"
+{
+	handle	= 0;
+	file	= "BalloonImage.bmp";
+}
+
+resource "rsrTabButton"
+{
+	handle	= 0;
+	file	= "bigwindow.bmp";
+}
+
+resource "rsrDialog"
+{
+	handle	= 0;
+	file	= "dialogtest.png";
+}
+
+resource "rsrCommon_1"
+{
+	handle	= 0;
+	file	= "common_1.png";
+}
+

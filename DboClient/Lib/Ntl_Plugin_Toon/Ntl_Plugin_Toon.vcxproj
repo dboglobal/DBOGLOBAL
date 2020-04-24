@@ -1,0 +1,138 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Release4Client|Win32">
+      <Configuration>Release4Client</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release4Tools|Win32">
+      <Configuration>Release4Tools</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{0A07CCC0-9F5D-4E94-B7D6-68BD00DFD37D}</ProjectGuid>
+    <RootNamespace>NtlToon</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release4Client|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v80</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release4Tools|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v80</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release4Client|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release4Tools|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>14.0.25431.1</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release4Client|Win32'">
+    <OutDir>$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release4Tools|Win32'">
+    <OutDir>$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release4Client|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(SolutionDir)Renderware\Include;$(SolutionDir)Lib\Ntl_Plugin_Toon\toon;$(DXSDK_DIR)\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_LIB;_CRT_SECURE_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <PrecompiledHeader />
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4312;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <BufferSecurityCheck>true</BufferSecurityCheck>
+      <MinimalRebuild>false</MinimalRebuild>
+      <WholeProgramOptimization>true</WholeProgramOptimization>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Lib>
+      <OutputFile>$(OutDir)RpToon.lib</OutputFile>
+      <IgnoreAllDefaultLibraries>true</IgnoreAllDefaultLibraries>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release4Tools|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(SolutionDir)Renderware\Include;$(SolutionDir)Lib\Ntl_Plugin_Toon\toon;$(DXSDK_DIR)Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_LIB;_CRT_SECURE_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4312;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <BufferSecurityCheck>true</BufferSecurityCheck>
+      <MinimalRebuild>false</MinimalRebuild>
+      <WholeProgramOptimization>true</WholeProgramOptimization>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Lib>
+      <OutputFile>$(OutDir)RpToon.lib</OutputFile>
+      <IgnoreAllDefaultLibraries>true</IgnoreAllDefaultLibraries>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\Renderware\Include\rpdbgerr.c" />
+    <ClCompile Include="toon\d3d9\brutesilhouette.c" />
+    <ClCompile Include="toon\d3d9\crease.c" />
+    <ClCompile Include="toon\d3d9\d3d9paint.c" />
+    <ClCompile Include="toon\d3d9\edgerender.c" />
+    <ClCompile Include="toon\NtlMaterialExt.c" />
+    <ClCompile Include="toon\rptoon.c" />
+    <ClCompile Include="toon\toongeo.c" />
+    <ClCompile Include="toon\toonink.c" />
+    <ClCompile Include="toon\toonmaterial.c" />
+    <ClCompile Include="toon\toonpaint.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\Renderware\Include\rpdbgerr.h" />
+    <ClInclude Include="toon\d3d9\brutesilhouette.h" />
+    <ClInclude Include="toon\d3d9\crease.h" />
+    <ClInclude Include="toon\d3d9\d3d9toon.h" />
+    <ClInclude Include="toon\d3d9\edgerender.h" />
+    <ClInclude Include="toon\d3d9\toonpixelshader.h" />
+    <ClInclude Include="toon\d3d9\toonpixelshadernobase.h" />
+    <ClInclude Include="toon\d3d9\toonpixelshadernobasenocolor.h" />
+    <ClInclude Include="toon\d3d9\toonpixelshadernocolor.h" />
+    <ClInclude Include="toon\d3d9\toonplatform.h" />
+    <ClInclude Include="toon\d3d9\toonsilhouettevertexshader.h" />
+    <ClInclude Include="toon\d3d9\toonvertexshader.h" />
+    <ClInclude Include="toon\d3d9\toonvertexshaderflat.h" />
+    <ClInclude Include="toon\NtlMaterialExt.h" />
+    <ClInclude Include="toon\pipes.h" />
+    <ClInclude Include="toon\rpplugin.h" />
+    <ClInclude Include="toon\toon.h" />
+    <ClInclude Include="toon\toonapi.h" />
+    <ClInclude Include="toon\toongeo.h" />
+    <ClInclude Include="toon\toonink.h" />
+    <ClInclude Include="toon\toonmaterial.h" />
+    <ClInclude Include="toon\toonpaint.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="toon\rperror.def" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

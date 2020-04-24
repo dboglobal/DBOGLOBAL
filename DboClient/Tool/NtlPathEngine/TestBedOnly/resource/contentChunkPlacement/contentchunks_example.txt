@@ -1,0 +1,55 @@
+>contentChunkPlacement
+	[# 4 instances of a simple two floor building placed around the origin #]
+
+	>chunk
+	 .name chunk1
+	 .rotation 0 [# no rotation - facing north #]
+	 .scale 10 [# no effective scale (since building scale = world scale / 10) #]
+	 [# at origin #]
+	 .x 0
+	 .y 0
+	 .z 0
+	<
+	>chunk
+	 .name chunk1
+	 .rotation 32 [# 180 degree rotation - facing south #]
+	 .scale 11 [# slightly larger than modelled #]
+	 [# 20 metres north of origin #]
+	 .x 0
+	 .y 20000
+	 .z 0
+	<
+	>chunk
+	 .name chunk1
+	 .rotation 16 [# 90 degree rotation - facing east #]
+	 .scale 20 [# twice the size modelled #]
+	 [# 20 metres west of origin #]
+	 .x -20000
+	 .y 0
+	 .z 0
+	<
+	>chunk
+	 .name chunk1
+	 .rotation 48 [# 270 degree rotation - facing west #]
+	 .scale 5 [# half the size modelled #]
+	 [# 20 metres east of origin #]
+	 .x 20000
+	 .y 0
+	 .z 0
+	<
+
+	[# some huts in a semi-circle on a hill to the south #]
+
+	>chunk .name chunk2 .rotation 0 .scale 10 .x 0 .y -50000 .z 10000 <
+	>chunk .name chunk2 .rotation 4 .scale 11 .x -6300 .y -49100 .z 9900 <
+	>chunk .name chunk2 .rotation 8 .scale 12 .x -12500 .y -46000 .z 9800 <
+	>chunk .name chunk2 .rotation 12 .scale 13 .x -15800 .y -41500 .z 9700 <
+
+	[# a bridge over the buildings near the origin #]
+
+	>chunk .name chunk3 .rotation 48 .scale 50 .x 70000 .y 0 .z 0 <
+
+	[# a funny building with a big portal #]
+
+	>chunk .name chunk4 .rotation 32 .scale 10 .x 0 .y 50000 .z 0 <
+<

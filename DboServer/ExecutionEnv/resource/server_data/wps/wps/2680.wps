@@ -1,0 +1,189 @@
+GameStage(0)
+--[
+	Action( "wait" )
+	--[
+		Condition( "check time" )
+		--[
+			Param( "time", 2 )
+		--]
+		End()
+	--]
+	End()
+
+	Action( "remove npc" )
+	--[
+		Param( "index", 2792102 )
+		Param( "type", "clear" )
+	--]
+	End()
+
+	Action( "add npc" )
+	--[
+		Param( "index", 2792104 )
+		Param( "loc x", -159.53 )
+		Param( "loc y", 107.09 )
+		Param( "loc z", 109.88 )
+		Param( "dir x", 0.00 )
+		Param( "dir z", 1.00 )
+		Param( "play script", 2792104 )
+		Param( "play scene", 1 )
+	--]
+	End()
+
+	Action( "wait" )
+	--[
+		Condition( "check time" )
+		--[
+			Param( "time", 2 )
+		--]
+		End()
+	--]
+	End()
+
+	-- 누케가란드 경비병
+	Action( "add mob" )
+	--[
+		Param( "index", 7114413 )
+		Param( "group", 268001 )
+		Param( "loc x", -151.91 )
+		Param( "loc y", 101.89 )
+		Param( "loc z", 113.13 )
+		Param( "dir x", -0.88 )
+		Param( "dir z", -0.47 )
+		Param( "no spawn wait", "true" )
+	--]
+	End()
+
+	-- 누케가란드 호위로보
+	Action( "add mob" )
+	--[
+		Param( "index", 7773116 )
+		Param( "group", 268001 )
+		Param( "loc x", -158.64 )
+		Param( "loc y", 103.42 )
+		Param( "loc z", 118.46 )
+		Param( "dir x", -0.37 )
+		Param( "dir z", -0.93 )
+		Param( "no spawn wait", "true" )
+	--]
+	End()
+
+	-- 누케가란드 호위로보
+	Action( "add mob" )
+	--[
+		Param( "index", 7773116 )
+		Param( "group", 268001 )
+		Param( "loc x", -151.73 )
+		Param( "loc y", 104.10 )
+		Param( "loc z", 105.36 )
+		Param( "dir x", -0.86 )
+		Param( "dir z", 0.52 )
+		Param( "no spawn wait", "true" )
+	--]
+	End()
+
+	Action( "function" )
+	--[
+		Condition( "child" )
+		--[
+			Action( "wait" )
+			--[
+				Param( "operation", "or" )
+				
+				Condition( "npc faint" )
+				--[
+					Param( "npc index", 2792104 )
+				--]
+				End()
+				
+				Condition( "check time" )
+				--[
+					Param( "time", 300 )
+				--]
+				End()
+			--]
+			End()
+
+			Action( "wps fail" )
+			--[
+			--]
+			End()
+		--]
+		End()
+
+		Action( "wait" )
+		--[
+			Condition( "check mobgroup" )
+			--[
+				Param( "group", 268001 )
+				Param( "count", 0 )
+			--]
+			End()
+		--]
+		End()
+	--]
+	End()
+
+	Action( "send event to ts" )
+	--[
+		Param( "trigger type", "quest" )
+		Param( "apply type", "register all" )
+		Param( "event id", 533 )
+	--]
+	End()
+
+	Action( "wait" )
+	--[
+		Condition( "check time" )
+		--[
+			Param( "time", 3 )
+		--]
+		End()
+	--]
+	End()
+
+	Action( "remove npc" )
+	--[
+		Param( "index", 2792104 )
+		Param( "type", "clear" )
+	--]
+	End()
+
+	Action( "add npc" )
+	--[
+		Param( "index", 2792102 )
+		Param( "loc x", -159.53 )
+		Param( "loc y", 107.09 )
+		Param( "loc z", 109.88 )
+		Param( "dir x", 0.00 )
+		Param( "dir z", 1.00 )
+		Param( "no spawn wait", "true" )
+		Param( "stand alone", "true" )
+	--]
+	End()
+--]
+End()
+
+GameFailed()
+--[
+	Action( "remove npc" )
+	--[
+		Param( "index", 2792104 )
+		Param( "type", "clear" )
+	--]
+	End()
+
+	Action( "add npc" )
+	--[
+		Param( "index", 2792102 )
+		Param( "loc x", -159.53 )
+		Param( "loc y", 107.09 )
+		Param( "loc z", 109.88 )
+		Param( "dir x", 0.00 )
+		Param( "dir z", 1.00 )
+		Param( "no spawn wait", "true" )
+		Param( "stand alone", "true" )
+	--]
+	End()
+--]
+End()

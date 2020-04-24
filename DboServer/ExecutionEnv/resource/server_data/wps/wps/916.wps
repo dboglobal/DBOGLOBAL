@@ -1,0 +1,47 @@
+--ver01 ¹Ì»ç¿ë
+
+GameStage(0)
+--[
+	Action("add mob")
+	--[
+		Param("index", 3611122)
+		Param("group", 91601)
+		Param("loc x", 3927.41)
+		Param("loc y", -117)
+		Param("loc z", 685.34)
+		Param("dir x", 0.529)
+		Param("dir z", 0.849)
+		Param( "no spawn wait", "true" )
+	--]
+	End()
+	
+	Action("wait")
+	--[
+		Param( "operation", "or" )	
+
+
+		Condition("check mobgroup")
+		--[
+			Param("group", 91601)
+			Param("count", 1)
+		--]
+		End()
+
+		Condition( "check time" )
+		--[
+			Param( "time", 180 )
+		--]
+		End()
+	--]
+	End()
+
+	Action( "remove mobgroup" )
+	--[
+		Param( "group", 91601 )
+		Param( "type", "clear" )
+	--]
+	End()
+
+--]
+End()
+

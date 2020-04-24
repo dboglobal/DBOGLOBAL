@@ -1,0 +1,33 @@
+
+GameStage( 0 )
+--[
+	Action( "wait" )
+	--[
+		Condition( "recv event from wps" )
+		--[
+			Param( "wps index", 21007 )
+			Param( "event id", 400 )
+		--]
+		End()
+	--]
+	End()
+
+	Action( "wait" )
+	--[
+		Condition( "check time" )
+		--[
+			Param( "time", 3 )
+		--]
+		End()
+	--]
+	End()
+
+	Action( "change object state" )
+	--[
+		Param( "index", 32 )
+		Param( "state", 1 )
+		Param( "substate show", 1 )
+	--]
+	End()
+--]
+End()

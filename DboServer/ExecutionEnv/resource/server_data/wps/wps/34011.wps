@@ -1,0 +1,386 @@
+-- UD6
+-- Normal Mob Stage
+-- 암흑선두 재배소
+-- 
+
+GameStage(0)
+--[
+
+	Action("add mobgroup")
+	--[
+		Param("group", 401)
+		Param("no spawn wait", "true")
+	--]
+	End()
+	
+	Action("wait")
+	--[
+		Condition("check mobgroup")
+		--[
+			Param("group", 401)
+			Param("count", 5)
+		--]
+		End()
+	--]
+	End()
+	
+	Action("change object state")
+	--[
+		Param("index", 10)
+		Param("state", 1)
+		Param("substate show", 1)
+	--]
+	End()
+	
+	Action("add mobgroup")
+	--[
+		Param("group", 402)
+		Param("no spawn wait", "true")
+	--]
+	End()
+	
+	Action("wait")
+	--[
+		Condition("check mobgroup")
+		--[
+			Param("group", 402)
+			Param("count", 5)
+		--]
+		End()
+	--]
+	End()
+	
+	Action("change object state")
+	--[
+		Param("index", 11)
+		Param("state", 1)
+		Param("substate show", 1)
+	--]
+	End()
+	
+	Action("add mobgroup")
+	--[
+		Param("group", 403)
+		Param("no spawn wait", "true")
+	--]
+	End()
+	
+	Action("wait")
+	--[
+		Condition("check mobgroup")
+		--[
+			Param("group", 403)
+			Param("count", 11)
+		--]
+		End()
+	--]
+	End()
+	
+	Action("change object state")
+	--[
+		Param("index", 12)
+		Param("state", 1)
+		Param("substate show", 1)
+	--]
+	End()
+	
+	Action("add mobgroup")
+	--[
+		Param("group", 404)
+		Param("no spawn wait", "true")
+	--]
+	End()
+	
+	Action("wait")
+	--[
+		Condition("check mobgroup")
+		--[
+			Param("group", 404)
+			Param("count", 12)
+		--]
+		End()
+	--]
+	End()
+
+	Action("change object state")
+	--[
+		Param("index", 13)
+		Param("state", 1)
+		Param("substate show", 1)
+	--]
+	End()
+	
+	Action("add mobgroup")
+	--[
+		Param("group", 405)
+		Param("no spawn wait", "true")
+	--]
+	End()
+	
+	Action("wait")
+	--[
+		Condition("check mobgroup")
+		--[
+			Param("group", 405)
+			Param("count", 10)
+		--]
+		End()
+	--]
+	End()
+	
+	-- 스위치 4개 눌러야 열리는 문
+	-- 별도의 script에서 조작함
+--	Action("change object state")
+--	--[
+--		Param("index", 18)
+--		Param("state", 1)
+--		Param("substate show", 1)
+--	--]
+--	End()
+
+	-- 주석처리 하지 않으면 mob이 add됨
+--	Action("add mobgroup")
+--	--[
+--		Param("group", 406)
+--		Param("no spawn wait", "true")
+--	--]
+--	End()
+	
+--	Action("wait")
+--	--[
+--		Condition("check mobgroup")
+--		--[
+--			Param("group", 406)
+--			Param("count", 5)
+--		--]
+--		End()
+--	--]
+--	End()
+	
+	Action("change object state")
+	--[
+		Param("index", 19)
+		Param("state", 1)
+		Param("substate show", 1)
+	--]
+	End()
+	
+	Action("add mobgroup")
+	--[
+		Param("group", 413)
+		Param("no spawn wait", "true")
+	--]
+	End()
+	
+	Action("wait")
+	--[
+		Condition("check mobgroup")
+		--[
+			Param("group", 413)
+			Param("count", 0)
+		--]
+		End()
+	--]
+	End()
+	
+	Action("change object state")
+	--[
+		Param("index", 20)
+		Param("state", 1)
+		Param("substate show", 1)
+	--]
+	End()
+	
+	Action("change object state")
+	--[
+		Param("index", 21)
+		Param("state", 1)
+		Param("substate show", 1)
+	--]
+	End()
+	
+	Action("add mobgroup")
+	--[
+		Param("group", 407)
+		Param("no spawn wait", "true")
+	--]
+	End()
+	
+	Action("wait")
+	--[
+		Condition("check mobgroup")
+		--[
+			Param("group", 407)
+			Param("count", 6)
+		--]
+		End()
+	--]
+	End()
+	
+	Action("change object state")
+	--[
+		Param("index", 22)
+		Param("state", 1)
+		Param("substate show", 1)
+	--]
+	End()
+	
+	Action("add mobgroup")
+	--[
+		Param("group", 408)
+		Param("no spawn wait", "true")
+	--]
+	End()
+	
+	Action("wait")
+	--[
+		Condition("check mobgroup")
+		--[
+			Param("group", 408)
+			Param("count", 5)
+		--]
+		End()
+	--]
+	End()
+	
+	Action("change object state")
+	--[
+		Param("index", 23)
+		Param("state", 1)
+		Param("substate show", 1)
+	--]
+	End()
+	
+	Action("add mobgroup")
+	--[
+		Param("group", 414)
+		Param("no spawn wait", "true")
+	--]
+	End()
+	
+	Action("wait")
+	--[
+		Condition("check mobgroup")
+		--[
+			Param("group", 414)
+			Param("count", 11)
+		--]
+		End()
+	--]
+	End()
+	
+	-- 스위치 4개 눌러야 열리는 문
+	-- 별도의 script에서 조작함
+--	Action("change object state")
+--	--[
+--		Param("index", 133)
+--		Param("state", 1)
+--		Param("substate show", 1)
+--	--]
+--	End()
+	
+	-- 주석처리 하지 않으면 mob이 add됨
+--	Action("add mobgroup")
+--	--[
+--		Param("group", 409)
+--		Param("no spawn wait", "true")
+--	--]
+--	End()
+	
+--	Action("wait")
+--	--[
+--		Condition("check mobgroup")
+--		--[
+--			Param("group", 409)
+--			Param("count", 10)
+--		--]
+--		End()
+--	--]
+--	End()
+	
+	Action("change object state")
+	--[
+		Param("index", 28)
+		Param("state", 1)
+		Param("substate show", 1)
+	--]
+	End()
+	
+	Action("add mobgroup")
+	--[
+		Param("group", 410)
+		Param("no spawn wait", "true")
+	--]
+	End()
+	
+	Action("wait")
+	--[
+		Condition("check mobgroup")
+		--[
+			Param("group", 410)
+			Param("count", 11)
+		--]
+		End()
+	--]
+	End()
+	
+	Action("change object state")
+	--[
+		Param("index", 29)
+		Param("state", 1)
+		Param("substate show", 1)
+	--]
+	End()
+	
+	Action("add mobgroup")
+	--[
+		Param("group", 411)
+		Param("no spawn wait", "true")
+	--]
+	End()
+	
+	Action("wait")
+	--[
+		Condition("check mobgroup")
+		--[
+			Param("group", 411)
+			Param("count", 10)
+		--]
+		End()
+	--]
+	End()
+	
+	Action("change object state")
+	--[
+		Param("index", 30)
+		Param("state", 1)
+		Param("substate show", 1)
+	--]
+	End()
+	
+	-- 스위치 4개와 문 열리는 script에 작동 정지하고 문 열어두라고 지시함
+	Action( "send event to wps" )
+	--[
+		Param( "wps index", 34014 )
+		Param( "event id", 941 )
+	--]
+	End()
+	
+	-- 스위치 4개와 문 열리는 script에 작동 정지하고 문 열어두라고 지시함
+	Action( "send event to wps" )
+	--[
+		Param( "wps index", 34015 )
+		Param( "event id", 942 )
+	--]
+	End()
+	
+	-- 초콜레이님 boss script에 normal mob stage 끝난 것을 알려줌
+	Action("send event to wps")
+	--[
+		Param("wps index", 34005)
+		Param("event id", 940)	
+	--]
+	End()
+	
+--]
+End()

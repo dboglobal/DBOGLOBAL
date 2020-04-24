@@ -1,0 +1,430 @@
+-- 3rd Floor
+-- Kindle blowing Step 1 battle
+
+-- Note: The first round targeting (loop inside) and the second round after the attack (loop outside) is different from the index of the mob to spawn.
+-- (It is set differently from the Ambassador of the mob)
+
+GameStage(0)
+--[
+	-- 왼쪽의 이글이글 포탑 spawn (무한 spawn)
+	Action( "add mobgroup" )
+	--[
+		Param( "group", 14 )
+		Param( "no spawn wait", "true" )
+		Param( "respawn", "true" )
+	--]
+	End()
+	
+	-- 오른쪽의 이글이글 포탑 spawn (무한 spawn)
+	Action( "add mobgroup" )
+	--[
+		Param( "group", 15 )
+		Param( "no spawn wait", "true" )
+		Param( "respawn", "true" )
+	--]
+	End()
+	
+	Action( "function" )
+	--[
+		Condition( "child" )
+		--[
+			--------------
+			-- 1회차 공략
+			--------------
+
+			-- 100% 불고킨 전투용 스폰 (mob)
+			-- 대사 "요 귀여운 녀석들! 감히 내가 누군지 알고 덤비는 거야! 으어엉!"
+			Action( "add mob" )
+			--[
+				Param( "index", 1762201 )
+				Param( "group", 2801201 )
+				Param( "loc x", 218.16 )
+				Param( "loc y", 0.55 )
+				Param( "loc z", -301.03 )
+				Param( "dir x", -0.09 )
+				Param( "dir z", -1.00 )
+				Param( "play script", 1762201 )
+				Param( "play scene", 1 )
+				Param( "no spawn wait", "true" )
+			--]
+			End()
+
+			-- LP blowing more than 100% but 60% of Kin
+			Action( "wait" )
+			--[
+				Condition( "check lp" )
+				--[
+					Param( "type", "mob" )
+					Param( "group", 2801201 )
+					Param( "index", 1762201 )
+					Param( "lp", 60 )
+				--]
+				End()
+			--]
+			End()
+
+			-- 100% 불고킨 제거
+			Action( "remove mobgroup" )
+			--[
+				Param( "group", 2801201 )
+				Param( "type", "clear" )
+			--]
+			End()
+
+			-- 100% 불고킨 연출용 스폰 (npc)
+			Action( "add npc" )
+			--[
+				Param( "index", 1452201 )
+				Param( "loc x", 218.16 )
+				Param( "loc y", 0.55 )
+				Param( "loc z", -301.03 )
+				Param( "dir x", -0.09 )
+				Param( "dir z", -1.00 )
+				Param( "play script", 1452201 )
+				Param( "play scene", 1 )
+				Param( "no spawn wait", "true" )
+			--]
+			End()
+			
+			-- 스위치를 클릭 가능한 상태(스위치 위에 느낌표가 막 뜨는 상태)로 바꿈
+			Action( "change object state" )
+			--[
+				Param( "index", 35 )
+				Param( "state", 1 )
+				Param( "substate show", 1 )
+			--]
+			End()
+			
+			-- 가운데 키리 추출 장치를 빙빙 돌린다
+			Action( "change object state" )
+			--[
+				Param( "index", 37 )
+				Param( "state", 1 )
+				Param( "substate show", 1 )
+			--]
+			End()
+			
+			-- 시스템 메세지 "불고킨이 키리 에너지를 충전받고 있습니다"
+			Action( "system message" )
+			--[
+				Param( "notify", "caution" )
+				Param( "text index", 11 )
+			--]
+			End()
+
+			Action( "system message" )
+			--[
+				Param( "notify", "system" )
+				Param( "text index", 11 )
+			--]
+			End()
+			
+			-- 9초간 키리 추출을 기다린다. (이 기간동안 스위치 오브젝트를 클릭할 수 있음)
+			Action( "wait" )
+			--[
+				Condition( "check time" )
+				--[
+					Param( "time", 9 )
+				--]
+				End()
+			--]
+			End()
+			
+			-- 9초 이후, 스위치를 클릭 불가능한 상태로 바꿈
+			Action( "change object state" )
+			--[
+				Param( "index", 35 )
+				Param( "state", 0 )
+				Param( "substate show", 1 )
+			--]
+			End()
+			
+			-- 4초간 추가로 기다린다. (스위치 오브젝트 작동시간 3초 + 여분으로 1초)
+			Action( "wait" )
+			--[
+				Condition( "check time" )
+				--[
+					Param( "time", 4 )
+				--]
+				End()
+			--]
+			End()
+			
+			-- 추출 실패시, 가운데 키리 추출 장치를 돌리던 것을 멈춘다
+			Action( "change object state" )
+			--[
+				Param( "index", 37 )
+				Param( "state", 0 )
+				Param( "substate show", 1 )
+			--]
+			End()
+			
+			-- 100% 불고킨 연출용(npc) despawn
+			Action( "remove npc" )
+			--[
+				Param( "index", 1452201 )
+				Param( "type", "clear" )
+			--]
+			End()
+			
+			------------------
+			-- 2회차 공략 이후
+			------------------
+			Action( "while" )
+			--[
+				Action( "loop" )
+				--[
+					-- 100% 불고킨 전투용 스폰 (mob)
+					-- 대사 "신사~ 숙녀 녀석들아! 오래 기다렸지? 진짜 힘을 보여주마!"
+					Action( "add mob" )
+					--[
+						Param( "index", 1762204 )
+						Param( "group", 2801202 )
+						Param( "loc x", 218.16 )
+						Param( "loc y", 0.55 )
+						Param( "loc z", -301.03 )
+						Param( "dir x", -0.09 )
+						Param( "dir z", -1.00 )
+						Param( "play script", 1762204 )
+						Param( "play scene", 1 )
+					--]
+					End()
+					
+					-- 시스템 메세지 "불고킨이 성공적으로 키리 에너지를 충전받았습니다"
+					Action( "system message" )
+					--[
+						Param( "notify", "caution" )
+						Param( "text index", 24 )
+					--]
+					End()
+					
+					Action( "system message" )
+					--[
+						Param( "notify", "system" )
+						Param( "text index", 24 )
+					--]
+					End()
+
+					-- 100% 불고킨의 LP가 60%만 남으면
+					Action( "wait" )
+					--[
+						Condition( "check lp" )
+						--[
+							Param( "type", "mob" )
+							Param( "group", 2801202 )
+							Param( "index", 1762204 )
+							Param( "lp", 60 )
+						--]
+						End()
+					--]
+					End()
+
+					-- 100% 불고킨 제거
+					Action( "remove mobgroup" )
+					--[
+						Param( "group", 2801202 )
+						Param( "type", "clear" )
+					--]
+					End()
+
+					-- 100% 불고킨 연출용 스폰 (npc)
+					Action( "add npc" )
+					--[
+						Param( "index", 1452201 )
+						Param( "loc x", 218.16 )
+						Param( "loc y", 0.55 )
+						Param( "loc z", -301.03 )
+						Param( "dir x", -0.09 )
+						Param( "dir z", -1.00 )
+						Param( "play script", 1452201 )
+						Param( "play scene", 1 )
+						Param( "no spawn wait", "true" )
+					--]
+					End()
+					
+					-- 스위치를 클릭 가능한 상태(스위치 위에 느낌표가 막 뜨는 상태)로 바꿈
+					Action( "change object state" )
+					--[
+						Param( "index", 35 )
+						Param( "state", 1 )
+						Param( "substate show", 1 )
+					--]
+					End()
+					
+					-- 가운데 키리 추출 장치를 빙빙 돌린다
+					Action( "change object state" )
+					--[
+						Param( "index", 37 )
+						Param( "state", 1 )
+						Param( "substate show", 1 )
+					--]
+					End()
+					
+					-- 시스템 메세지 "불고킨이 키리 에너지를 충전받고 있습니다"
+					Action( "system message" )
+					--[
+						Param( "notify", "caution" )
+						Param( "text index", 11 )
+					--]
+					End()
+
+					Action( "system message" )
+					--[
+						Param( "notify", "system" )
+						Param( "text index", 11 )
+					--]
+					End()
+					
+					-- 9초간 키리 추출을 기다린다. (이 기간동안 스위치 오브젝트를 클릭할 수 있음)
+					Action( "wait" )
+					--[
+						Condition( "check time" )
+						--[
+							Param( "time", 9 )
+						--]
+						End()
+					--]
+					End()
+					
+					-- 9초 이후, 스위치를 클릭 불가능한 상태로 바꿈
+					Action( "change object state" )
+					--[
+						Param( "index", 35 )
+						Param( "state", 0 )
+						Param( "substate show", 1 )
+					--]
+					End()
+					
+					-- 4초간 추가로 기다린다. (스위치 오브젝트 작동시간 3초 + 여분으로 1초)
+					Action( "wait" )
+					--[
+						Condition( "check time" )
+						--[
+							Param( "time", 4 )
+						--]
+						End()
+					--]
+					End()
+					
+					-- 추출 실패시, 가운데 키리 추출 장치를 돌리던 것을 멈춘다
+					Action( "change object state" )
+					--[
+						Param( "index", 37 )
+						Param( "state", 0 )
+						Param( "substate show", 1 )
+					--]
+					End()
+					
+					-- 100% 불고킨 연출용(npc) despawn
+					Action( "remove npc" )
+					--[
+						Param( "index", 1452201 )
+						Param( "type", "clear" )
+					--]
+					End()
+
+				-- loop 닫음
+				--]
+				End()	
+
+			-- while 닫음
+			--]
+			End()
+
+		-- child 닫음	
+		--]
+		End()
+		
+		-- 불고킨 충전상태에서 10초 내로 스위치 클릭시, 이벤트를 받고 function 내 loop에서 탈출
+		Action( "wait" )
+		--[
+			Condition( "recv event from ts" )
+			--[
+				Param( "trigger type", "object" )
+				Param( "event id", 471 )
+			--]
+			End()
+		--]
+		End()
+
+	-- function 닫음
+	--]
+	End()
+
+
+	-- 시스템 메세지 "불고킨으로부터 키리 에너지가 일부 추출되었습니다"
+	Action( "system message" )
+	--[
+		Param( "notify", "action" )
+		Param( "text index", 12 )
+	--]
+	End()
+	
+	Action( "system message" )
+	--[
+		Param( "notify", "system" )
+		Param( "text index", 12 )
+	--]
+	End()
+	
+	-- 100% 불고킨 연출용(npc) despawn
+	Action( "remove npc" )
+	--[
+		Param( "index", 1452201 )
+		Param( "type", "clear" )
+	--]
+	End()
+
+	-- 100% 불고킨 전투용(mob) despawn (1회차 공략)
+	Action( "remove mobgroup" )
+	--[
+		Param( "group", 2801201 )
+		Param( "type", "clear" )
+	--]
+	End()
+
+	-- 100% 불고킨 전투용(mob) despawn (2회차 공략)
+	Action( "remove mobgroup" )
+	--[
+		Param( "group", 2801202 )
+		Param( "type", "clear" )
+	--]
+	End()
+	
+	-- 왼쪽의 이글이글 포탑 despawn
+	Action( "remove mobgroup" )
+	--[
+		Param( "group", 14 )
+		Param( "type", "clear" )
+	--]
+	End()
+
+	-- 불고킨 2단계 전투 wps 실행시킴
+	Action( "exec wps" )
+	--[
+		Param( "wps tblidx", 28013 )
+	--]
+	End()
+
+	-- 불고킨 키리 에너지 완전히 추출될 때 까지 대기
+	Action( "wait" )
+	--[
+		Condition( "recv event from wps" )
+		--[
+			Param( "wps index", 28013 )
+			Param( "event id", 474 )
+		--]
+		End()
+	--]
+	End()
+	
+	-- 오른쪽의 이글이글 포탑 despawn
+	Action( "remove mobgroup" )
+	--[
+		Param( "group", 15 )
+		Param( "type", "clear" )
+	--]
+	End()
+	
+--]
+End()

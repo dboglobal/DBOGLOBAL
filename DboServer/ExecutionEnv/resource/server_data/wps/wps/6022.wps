@@ -1,0 +1,142 @@
+
+GameStage( 0 )
+--[
+	Action( "add npc" )
+	--[
+		Param( "index", 3332303 )
+		Param( "loc x", -7.208 )
+		Param( "loc y", 69.290 )
+		Param( "loc z", -18.373 )
+		Param( "dir x", 0.998 )
+		Param( "dir z", -0.058 )
+		Param( "stand alone", "true" )	
+		Param( "no spawn wait", "true" )
+	--]
+	End()
+
+	Action( "add mob" )
+	--[
+		Param( "index", 4311110 )
+		Param( "group", 60221 )
+		Param( "loc x", 0.604 )
+		Param( "loc y", 71.004 )
+		Param( "loc z", 7.234 )
+		Param( "dir x", -0.072 )
+		Param( "dir z", -0.997 )
+		Param( "no spawn wait", "true" )
+	--]
+	End()
+
+	Action( "add mob" )
+	--[
+		Param( "index", 4311110 )
+		Param( "group", 60221 )
+		Param( "loc x", -1.264 )
+		Param( "loc y", 71.004 )
+		Param( "loc z", 8.946 )
+		Param( "dir x", -0.037 )
+		Param( "dir z", -0.999 )
+		Param( "no spawn wait", "true" )
+	--]
+	End()
+
+	Action( "add mob" )
+	--[
+		Param( "index", 4311110 )
+		Param( "group", 60221 )
+		Param( "loc x", 2.528 )
+		Param( "loc y", 71.004 )
+		Param( "loc z", 9.017 )
+		Param( "dir x", -0.150 )
+		Param( "dir z", -0.989 )
+		Param( "no spawn wait", "true" )
+	--]
+	End()
+
+	Action( "add mob" )
+	--[
+		Param( "index", 4311110 )
+		Param( "group", 60221 )
+		Param( "loc x", 0.644 )
+		Param( "loc y", 71.004 )
+		Param( "loc z", 9.039 )
+		Param( "dir x", -0.056 )
+		Param( "dir z", -0.998 )
+		Param( "no spawn wait", "true" )
+	--]
+	End()
+
+	Action( "add mob" )
+	--[
+		Param( "index", 4311110 )
+		Param( "group", 60221 )
+		Param( "loc x", 2.438 )
+		Param( "loc y", 71.004 )
+		Param( "loc z", 5.300 )
+		Param( "dir x", -0.116 )
+		Param( "dir z", -0.993 )
+		Param( "no spawn wait", "true" )
+	--]
+	End()
+
+	Action( "add mob" )
+	--[
+		Param( "index", 4311110 )
+		Param( "group", 60221 )
+		Param( "loc x", -1.192 )
+		Param( "loc y", 71.004 )
+		Param( "loc z", 5.374 )
+		Param( "dir x", -0.046 )
+		Param( "dir z", -0.999 )
+		Param( "no spawn wait", "true" )
+	--]
+	End()
+
+	Action( "add mob" )
+	--[
+		Param( "index", 4311110 )
+		Param( "group", 60221 )
+		Param( "loc x", -3.094 )
+		Param( "loc y", 71.004 )
+		Param( "loc z", 7.189 )
+		Param( "dir x", -0.107 )
+		Param( "dir z", -0.994 )
+		Param( "no spawn wait", "true" )
+	--]
+	End()
+
+	Action( "add mob" )
+	--[
+		Param( "index", 4311110 )
+		Param( "group", 60221 )
+		Param( "loc x", 4.279 )
+		Param( "loc y", 71.004 )
+		Param( "loc z", 7.131 )
+		Param( "dir x", -0.029 )
+		Param( "dir z", -1.000 )
+		Param( "no spawn wait", "true" )
+	--]
+	End()
+
+	Action( "wait" )
+	--[
+		Condition( "check mobgroup" )
+		--[
+			Param( "group", 60221 )
+			Param( "count", 8 )
+		--]
+		End()
+	--]
+	End()
+
+	Action(	"send event to ts" )
+	--[
+		Param( "trigger type", "quest"	)
+		Param( "apply type", "register all" )
+		Param( "event id", 419 )
+	--]
+	End()
+
+
+--]
+End()

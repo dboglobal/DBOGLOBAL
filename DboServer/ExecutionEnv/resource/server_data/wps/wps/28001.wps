@@ -1,0 +1,125 @@
+-- First floor
+-- Which runs on the object
+-- When you turn on the power switch rooms, directing electricity is coming mob is moving. Catch the monster is a state in which the door can be opened.
+
+GameStage(0)
+--[
+	-- System message "to the hangar robot begins to electricity supply"
+	Action( "system message" )
+	--[
+		Param( "notify", "action" )
+		Param( "text index", 7 )
+	--]
+	End()
+
+	Action( "system message" )
+	--[
+		Param( "notify", "system" )
+		Param( "text index", 7 )
+	--]
+	End()
+	
+	-- 벽의 대형 기어가 움직임
+	Action( "change object state" )
+	--[
+		Param( "index", 3 )
+		Param( "state", 1 )
+		Param( "substate show", 1 )
+	--]
+	End()
+
+	-- Scrap metal fork, Do not look rusty blackbird Ricci Lee mob model of the object
+	Action( "change object state" )
+	--[
+		Param( "index", 25 )
+		Param( "state", 1 )
+		Param( "substate show", 1 )
+	--]
+	End()
+	
+	Action( "change object state" )
+	--[
+		Param( "index", 26 )
+		Param( "state", 1 )
+		Param( "substate show", 1 )
+	--]
+	End()
+	
+	Action( "change object state" )
+	--[
+		Param( "index", 27 )
+		Param( "state", 1 )
+		Param( "substate show", 1 )
+	--]
+	End()
+	
+	Action( "change object state" )
+	--[
+		Param( "index", 28 )
+		Param( "state", 1 )
+		Param( "substate show", 1 )
+	--]
+	End()
+
+	-- mob spawns in place the object disappeared
+	Action( "add mobgroup" )
+	--[
+		Param( "group", 1 )
+		Param( "no spawn wait", "true" )
+	--]
+	End()
+	
+	-- Mob waiting until it all without leaving wps
+	Action( "wait" )
+	--[
+		Condition( "check mobgroup" )
+		--[
+			Param( "group", 1 )
+			Param( "count", 0 )
+		--]
+		End()
+	--]
+	End()
+
+	-- Four times to break the door status (open Wed state)
+	Action( "change object state" )
+	--[
+		Param( "index", 4 )
+		Param( "state", 4 )
+		Param( "substate show", 1 )
+	--]
+	End()
+	
+	-- Wait until the door is opened
+	Action( "wait" )
+	--[
+		Condition( "recv event from ts" )
+		--[
+			Param( "trigger type", "object" )
+			Param( "event id", 473 )
+		--]
+		End()
+	--]
+	End()
+	
+	-- behind the door mob spawn
+	Action( "add mobgroup" )
+	--[
+		Param( "group", 3 )
+		Param( "no spawn wait", "true" )
+	--]
+	End()
+	
+	-- mob이 모두 죽을 때 까지 wps 종료 안 하고 대기
+	Action( "wait" )
+	--[
+		Condition( "check mobgroup" )
+		--[
+			Param( "group", 3 )
+			Param( "count", 0 )
+		--]
+		End()
+	--]
+	End()
+--]
+End()

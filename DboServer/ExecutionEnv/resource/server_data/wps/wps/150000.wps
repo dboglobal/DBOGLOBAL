@@ -1,0 +1,182 @@
+-- Automated messages
+
+GameStage(0)
+--[
+	Action( "while" )
+	--[
+		-- If you use it like this, you will loop through an infinite loop.
+		Condition( "loop cond" )
+		--[
+			Param( "reverse", "false" )
+			Param( "operation", "true" )
+		--]
+		End()
+
+		Action( "loop" )
+		--[
+
+---------------------------------------------------------------------
+
+			-- Wait 15 Minutes
+			Action( "wait" )
+			--[
+				Condition( "check time" )
+				--[
+					Param( "time", 900 )
+				--]
+				End()
+			--]
+			End()
+			
+			-- Send Message
+			Action( "system message" )
+			--[
+				Param( "notify", "sysnotice" )
+				Param( "text", "Do not share your account. People are getting scammed daily from friends. Sharing accounts is against our rules" )
+			--]
+			End()
+			
+
+---------------------------------------------------------------------
+
+			-- Wait 15 Minutes
+			Action( "wait" )
+			--[
+				Condition( "check time" )
+				--[
+					Param( "time", 900 )
+				--]
+				End()
+			--]
+			End()
+			
+			-- Send Message
+			Action( "system message" )
+			--[
+				Param( "notify", "sysnotice" )
+				Param( "text", "Do not use any system for automatic farm/level. Accounts will be permanently banned." )
+			--]
+			End()
+
+---------------------------------------------------------------------
+
+			-- Wait 15 Minutes
+			Action( "wait" )
+			--[
+				Condition( "check time" )
+				--[
+					Param( "time", 900 )
+				--]
+				End()
+			--]
+			End()
+			
+			-- Send Message
+			Action( "system message" )
+			--[
+				Param( "notify", "sysnotice" )
+				Param( "text", "Do not use any cheat/hack or third party software. Accounts will be permanently banned." )
+			--]
+			End()
+
+---------------------------------------------------------------------
+
+			-- Wait 15 Minutes
+			Action( "wait" )
+			--[
+				Condition( "check time" )
+				--[
+					Param( "time", 900 )
+				--]
+				End()
+			--]
+			End()
+			
+			-- Send Message
+			Action( "system message" )
+			--[
+				Param( "notify", "sysnotice" )
+				Param( "text", "Shenron takes 1 Dragonball if you do not make a wish within time. Be careful!" )
+			--]
+			End()
+
+---------------------------------------------------------------------
+
+			-- Wait 15 Minutes
+			Action( "wait" )
+			--[
+				Condition( "check time" )
+				--[
+					Param( "time", 900 )
+				--]
+				End()
+			--]
+			End()
+			
+			-- Send Message
+			Action( "system message" )
+			--[
+				Param( "notify", "sysnotice" )
+				Param( "text", "Trading accounts is against our terms of service. Accounts will be permanently suspended" )
+			--]
+			End()
+
+---------------------------------------------------------------------
+
+			-- Wait 15 Minutes
+			Action( "wait" )
+			--[
+				Condition( "check time" )
+				--[
+					Param( "time", 900 )
+				--]
+				End()
+			--]
+			End()
+			
+			-- Send Message
+			Action( "system message" )
+			--[
+				Param( "notify", "sysnotice" )
+				Param( "text", "Are you stuck? Use the @unstack chat command to get free" )
+			--]
+			End()
+
+---------------------------------------------------------------------
+
+			-- Wait 15 Minutes
+			Action( "wait" )
+			--[
+				Condition( "check time" )
+				--[
+					Param( "time", 900 )
+				--]
+				End()
+			--]
+			End()
+			
+			-- Send Message
+			Action( "system message" )
+			--[
+				Param( "notify", "sysnotice" )
+				Param( "text", "Buying/selling Zeni. Doing so will result in a permanent ban." )
+			--]
+			End()
+
+---------------------------------------------------------------------
+
+		--]
+		End()
+		-- end loop
+
+	--]
+	End()
+	-- end while
+--]
+End()
+
+GameFailed()
+--[
+
+--]
+End()

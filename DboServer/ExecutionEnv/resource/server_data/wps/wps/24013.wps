@@ -1,0 +1,96 @@
+-- UD1 Normal 4 Door Control
+
+GameStage(0)
+--[
+
+	Action("wait")
+	--[
+		Condition("recv event from wps")
+		--[
+			Param("wps index", 24012)
+			Param("event id", 438)
+		--]
+		End()
+	--]
+	End()
+
+	Action("add mobgroup")
+	--[
+		Param("group", 6)
+		Param("no spawn wait", "true")
+	--]
+	End()
+
+
+	Action("add mobgroup")
+	--[
+		Param("group", 4)
+		Param("no spawn wait", "true")
+	--]
+	End()
+
+	Action("wait")
+	--[
+		Condition("check mobgroup")
+		--[
+			Param("group", 4)
+			Param("count", 0)
+		--]
+		End()
+	--]
+	End()
+	
+	Action("add mobgroup")
+	--[
+		Param("group", 7)
+		Param("no spawn wait", "true")
+	--]
+	End()
+	
+	-- 화이트 장군 2세 전투 script
+	Action("send event to wps")
+	--[
+		Param("wps index", 24016)
+		Param("event id", 613)
+	--]
+	End()
+	
+	-- 타오파이파이 X 전투 script
+	Action("send event to wps")
+	--[
+		Param("wps index", 24017)
+		Param("event id", 614)
+	--]
+	End()
+
+	Action("change object state")
+	--[
+		Param("index", 45)
+		Param("state", 1)
+		Param("substate show", 1)
+	--]
+	End()
+
+	Action("wait")
+	--[
+		Param("operation", "and")
+		
+		Condition("check mobgroup")
+		--[
+			Param("group", 7)
+			Param("count", 0)
+		--]
+		End()
+
+		Condition("check mobgroup")
+		--[
+			Param("group", 6)
+			Param("count", 0)
+		--]
+		End()
+	--]
+	End()
+
+
+--]
+End()

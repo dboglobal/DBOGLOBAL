@@ -1,0 +1,1478 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Event">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Global">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav</Extensions>
+    </Filter>
+    <Filter Include="Object">
+      <UniqueIdentifier>{2294e4c3-c971-4fec-ab83-f2619a3fc33a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object\Instance">
+      <UniqueIdentifier>{7be8deaa-4f7c-4678-9044-1008fdb27b06}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object\Attribute">
+      <UniqueIdentifier>{f4604931-d338-4482-ae1f-e777dafa4546}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object\Etc">
+      <UniqueIdentifier>{02b887c0-28db-4222-8fdf-967a07da5880}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object\Proxy">
+      <UniqueIdentifier>{3337df01-d78b-445c-ac84-185da88664fb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object\Base">
+      <UniqueIdentifier>{e09fde55-6cf1-4739-a488-8c926b73d637}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object\Community">
+      <UniqueIdentifier>{c21f64e2-431b-48a9-9304-116a4bb0e5fe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object\Community\Base">
+      <UniqueIdentifier>{f117a19a-4728-4d51-91e4-5f2fb445f319}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object\Community\Agent">
+      <UniqueIdentifier>{d8c81b09-048f-4232-9a4d-f7dab0f56cdf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Manager">
+      <UniqueIdentifier>{260cd1b8-b00d-4da1-93b2-df24bb3ab83a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Input">
+      <UniqueIdentifier>{40a76b78-7c49-475f-8bee-24d1700041af}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Network">
+      <UniqueIdentifier>{7ac1828f-e6e2-4543-9c32-daaff5e40c61}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Logic">
+      <UniqueIdentifier>{ab456072-7499-4e93-bfed-35fe8794923e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fsm">
+      <UniqueIdentifier>{78d449fc-ffbf-4ed9-a127-f02673deb90d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fsm\Base">
+      <UniqueIdentifier>{5212a87b-f8aa-4102-bb0e-cf1121d2546a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fsm\CharFsm">
+      <UniqueIdentifier>{76a710cd-63c0-4c56-af99-cf4773684d86}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fsm\LookAtManager">
+      <UniqueIdentifier>{4e2ff618-c61a-43d4-a094-b8346f55f66d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fsm\Util">
+      <UniqueIdentifier>{615e4209-2a24-4152-a95b-c99152b7f298}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fsm\VehicleFsm">
+      <UniqueIdentifier>{3883ae7a-ad89-46eb-8233-dcb2357c84fe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Behavior">
+      <UniqueIdentifier>{d2e07e4e-54e1-46c2-8972-6a0fe4a36f8d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Behavior\CharBehavior">
+      <UniqueIdentifier>{06db296e-3439-461c-9c7a-49e0bf40a530}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Behavior\CharBehavior\Move">
+      <UniqueIdentifier>{f6eca0c9-e6a8-454e-9d39-be42ae16b310}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Behavior\Base">
+      <UniqueIdentifier>{3afb2a9c-fc45-46c9-afc5-3a989f336ad6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Behavior\ProjectileBehavior">
+      <UniqueIdentifier>{bd303405-fdaf-4b0d-9968-f9821e0a8c5f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Behavior\VehicleBehavior">
+      <UniqueIdentifier>{b859fa53-b8a6-43ed-9c39-4986a9cc8030}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Helpers">
+      <UniqueIdentifier>{2faaf8f9-71d4-4d45-a740-67f256144255}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Lua Glue">
+      <UniqueIdentifier>{41272be1-0469-49e7-90bf-c679a57a789d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Precompile">
+      <UniqueIdentifier>{6d036c33-83a0-4f81-b78d-1dda78b54d8d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Controller">
+      <UniqueIdentifier>{ba72d765-c956-4102-ae1d-cce2a4f54621}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Controller\CameraController">
+      <UniqueIdentifier>{d9c698b6-84de-4afc-a823-5df74d1ceee0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Controller\ElapsedController">
+      <UniqueIdentifier>{3ab06b3f-fa13-4628-aa02-cf47dd8f84ee}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Controller\PerformanceController">
+      <UniqueIdentifier>{98bbefb7-efc4-4f5b-9aaa-dbf88368e18e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="TS">
+      <UniqueIdentifier>{0694bff7-ceb4-41f1-9c34-d7fb2b393a06}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="TS\Factory">
+      <UniqueIdentifier>{88e8acde-4dba-434a-a669-5d5a30a66cf6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="TS\Quest">
+      <UniqueIdentifier>{6e57260f-c0dc-44c0-a156-884109c8f5fc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="TS\Trigger">
+      <UniqueIdentifier>{890925fb-12c7-4e95-807f-f808095a1c98}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="TS\Object">
+      <UniqueIdentifier>{8542531f-f38f-461e-955b-4d5dc0813dcf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="TriggerDirectSync">
+      <UniqueIdentifier>{9c900990-e793-400c-9294-0661989124ae}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Direct">
+      <UniqueIdentifier>{c28d8b29-e314-4c14-aacd-d69487019c1e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Direct\CrowdEffect">
+      <UniqueIdentifier>{1b4b0396-d85c-434b-8edd-f978766577ef}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Direct\SoundMood">
+      <UniqueIdentifier>{daa78514-494a-4998-b996-cb92f4c82e69}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Direct\Cinematic">
+      <UniqueIdentifier>{94a4a592-1e8c-4d7e-8ad2-7ee321fcb46c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Clock">
+      <UniqueIdentifier>{4ce7a244-b8c3-40dd-a956-218673e0fe02}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="WorldConcept">
+      <UniqueIdentifier>{215c8666-c0f5-4188-bccb-3abf6668e603}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="WorldConcept\Controller">
+      <UniqueIdentifier>{976ac59e-1965-4273-b47e-0d902161388d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="WorldConcept\ControllerBase">
+      <UniqueIdentifier>{3047268c-7297-4e4b-88ff-6815fcef7a1a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Serialize">
+      <UniqueIdentifier>{b87b5fb5-eeea-453f-84ab-379a6e8c2d94}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Serialize\Group">
+      <UniqueIdentifier>{df09b80d-a0a9-4e2c-94b3-a53f2b3937a5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Serialize\StorageSerializer">
+      <UniqueIdentifier>{368598e2-44cd-415a-a449-76f4a792cbe4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Serialize\MappingTable">
+      <UniqueIdentifier>{75a7f3d2-3ea6-4911-99f6-3bef9b01cff5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Tutorial">
+      <UniqueIdentifier>{e86d8a7a-ff76-4e67-a9e2-96bf0732ec4c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Tutorial\ConditionCheck">
+      <UniqueIdentifier>{0860c26c-0f1e-46ca-ae88-07a7a3689bc7}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="NtlSLEvent.cpp">
+      <Filter>Event</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlSLEventFunc.cpp">
+      <Filter>Event</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlSLEventHandler.cpp">
+      <Filter>Event</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlSLApi.cpp">
+      <Filter>Global</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlSLGlobal.cpp">
+      <Filter>Global</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlSobActionSkill.cpp">
+      <Filter>Object\Instance</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlSobActionSkillIcon.cpp">
+      <Filter>Object\Instance</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlSobAvatar.cpp">
+      <Filter>Object\Instance</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlSobBuff.cpp">
+      <Filter>Object\Instance</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlSobBuffIcon.cpp">
+      <Filter>Object\Instance</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlSobDynamicObject.cpp">
+      <Filter>Object\Instance</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlSobEventObject.cpp">
+      <Filter>Object\Instance</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlSobFeelingActor.cpp">
+      <Filter>Object\Instance</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlSobHTBSkill.cpp">
+      <Filter>Object\Instance</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlSobHTBSkillIcon.cpp">
+      <Filter>Object\Instance</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlSobIcon.cpp">
+      <Filter>Object\Instance</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlSobInfluence.cpp">
+      <Filter>Object\Instance</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlSobItem.cpp">
+      <Filter>Object\Instance</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlSobItemIcon.cpp">
+      <Filter>Object\Instance</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlSobMonster.cpp">
+      <Filter>Object\Instance</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlSobNpc.cpp">
+      <Filter>Object\Instance</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlSobPet.cpp">
+      <Filter>Object\Instance</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlSobPlayer.cpp">
+      <Filter>Object\Instance</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlSobProjectile.cpp">
+      <Filter>Object\Instance</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlSobQuestItem.cpp">
+      <Filter>Object\Instance</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlSobQuestItemIcon.cpp">
+      <Filter>Object\Instance</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlSobSkill.cpp">
+      <Filter>Object\Instance</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlSobSkillIcon.cpp">
+      <Filter>Object\Instance</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlSobSyncStatus.cpp">
+      <Filter>Object\Instance</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlSobTriggerObject.cpp">
+      <Filter>Object\Instance</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlSobVehicle.cpp">
+      <Filter>Object\Instance</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlSobWorldItem.cpp">
+      <Filter>Object\Instance</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlSobActionSkillAttr.cpp">
+      <Filter>Object\Attribute</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlSobAttr.cpp">
+      <Filter>Object\Attribute</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlSobAttrFactory.cpp">
+      <Filter>Object\Attribute</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlSobAvatarAttr.cpp">
+      <Filter>Object\Attribute</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlSobBuffAttr.cpp">
+      <Filter>Object\Attribute</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlSobDynamicObjectAttr.cpp">
+      <Filter>Object\Attribute</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlSobHTBSkillAttr.cpp">
+      <Filter>Object\Attribute</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlSobItemAttr.cpp">
+      <Filter>Object\Attribute</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlSobMonsterAttr.cpp">
+      <Filter>Object\Attribute</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlSobNpcAttr.cpp">
+      <Filter>Object\Attribute</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlSobPetAttr.cpp">
+      <Filter>Object\Attribute</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlSobPlayerAttr.cpp">
+      <Filter>Object\Attribute</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlSobProjectileAttr.cpp">
+      <Filter>Object\Attribute</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlSobQuestItemAttr.cpp">
+      <Filter>Object\Attribute</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlSobSkillAttr.cpp">
+      <Filter>Object\Attribute</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlSobTriggerObjectAttr.cpp">
+      <Filter>Object\Attribute</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlSobVehicleAttr.cpp">
+      <Filter>Object\Attribute</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlSobWorldItemAttr.cpp">
+      <Filter>Object\Attribute</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlBuffContainer.cpp">
+      <Filter>Object\Etc</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlGuildWarehouse.cpp">
+      <Filter>Object\Etc</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlInventory.cpp">
+      <Filter>Object\Etc</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlOtherParam.cpp">
+      <Filter>Object\Etc</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlSkillContainer.cpp">
+      <Filter>Object\Etc</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlSLDojo.cpp">
+      <Filter>Object\Etc</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlSLHoipoiMix.cpp">
+      <Filter>Object\Etc</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlSLMailSystem.cpp">
+      <Filter>Object\Etc</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlSLPrivateShop.cpp">
+      <Filter>Object\Etc</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlSLRankBattle.cpp">
+      <Filter>Object\Etc</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlSLTBudokai.cpp">
+      <Filter>Object\Etc</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlWareHouse.cpp">
+      <Filter>Object\Etc</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlShareTargetMark.cpp">
+      <Filter>Object\Proxy</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlSobCharProxy.cpp">
+      <Filter>Object\Proxy</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlSobCharProxyDecoration.cpp">
+      <Filter>Object\Proxy</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlSobCharProxyEquip.cpp">
+      <Filter>Object\Proxy</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlSobCharProxyTransform.cpp">
+      <Filter>Object\Proxy</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlSobDynamicObjectProxy.cpp">
+      <Filter>Object\Proxy</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlSobEventObjectProxy.cpp">
+      <Filter>Object\Proxy</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlSobProxy.cpp">
+      <Filter>Object\Proxy</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlSobProxySystemEffect.cpp">
+      <Filter>Object\Proxy</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlSobTriggerObjectProxy.cpp">
+      <Filter>Object\Proxy</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlSobVehicleProxy.cpp">
+      <Filter>Object\Proxy</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlSobWorldItemProxy.cpp">
+      <Filter>Object\Proxy</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlSob.cpp">
+      <Filter>Object\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlSobActor.cpp">
+      <Filter>Object\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlSobActorCtrlData.cpp">
+      <Filter>Object\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlSobFactory.cpp">
+      <Filter>Object\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlSobGroup.cpp">
+      <Filter>Object\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlSLBlackList.cpp">
+      <Filter>Object\Community</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlSLFriendList.cpp">
+      <Filter>Object\Community</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlSLGuild.cpp">
+      <Filter>Object\Community</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlSLParty.cpp">
+      <Filter>Object\Community</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlSLCommunityAgent.cpp">
+      <Filter>Object\Community\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlSLCommunityGroup.cpp">
+      <Filter>Object\Community\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlSLTMQ.cpp">
+      <Filter>Object\Community\Agent</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlSobManager.cpp">
+      <Filter>Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlSobStatusAnimSyncManager.cpp">
+      <Filter>Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="ActionMap.cpp">
+      <Filter>Input</Filter>
+    </ClCompile>
+    <ClCompile Include="InputActionMap.cpp">
+      <Filter>Input</Filter>
+    </ClCompile>
+    <ClCompile Include="InputHandler.cpp">
+      <Filter>Input</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlNetSender.cpp">
+      <Filter>Network</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlPacketGenerator.cpp">
+      <Filter>Network</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlPacketHandler.cpp">
+      <Filter>Network</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlPacketLockManager.cpp">
+      <Filter>Network</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlSLPacketGenerator.cpp">
+      <Filter>Network</Filter>
+    </ClCompile>
+    <ClCompile Include="DboMovingAlgorithm.cpp">
+      <Filter>Logic</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlSLLogic.cpp">
+      <Filter>Logic</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlSLLogicApply.cpp">
+      <Filter>Logic</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlSLVisualLogic.cpp">
+      <Filter>Logic</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlFSMAgent.cpp">
+      <Filter>Fsm\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlFSMBase.cpp">
+      <Filter>Fsm\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlFSMEventQueue.cpp">
+      <Filter>Fsm\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlFSMEventQueuingHelper.cpp">
+      <Filter>Fsm\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlFSMLayer.cpp">
+      <Filter>Fsm\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlFSMStateBase.cpp">
+      <Filter>Fsm\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlFSMCharAct.cpp">
+      <Filter>Fsm\CharFsm</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlFSMCharActAgent.cpp">
+      <Filter>Fsm\CharFsm</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlFSMCharActEventProc.cpp">
+      <Filter>Fsm\CharFsm</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlFSMCharActLayer.cpp">
+      <Filter>Fsm\CharFsm</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlFSMCharActState.cpp">
+      <Filter>Fsm\CharFsm</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlFSMCharActStateBase.cpp">
+      <Filter>Fsm\CharFsm</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlFSMCharController.cpp">
+      <Filter>Fsm\CharFsm</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlFSMCharControllerAI.cpp">
+      <Filter>Fsm\CharFsm</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlFSMCharControllerUtil.cpp">
+      <Filter>Fsm\CharFsm</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlFSMLookAtManager.cpp">
+      <Filter>Fsm\LookAtManager</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlFSMUtil.cpp">
+      <Filter>Fsm\Util</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlFSMVehicleAct.cpp">
+      <Filter>Fsm\VehicleFsm</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlFSMVehicleActAgent.cpp">
+      <Filter>Fsm\VehicleFsm</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlFSMVehicleActLayer.cpp">
+      <Filter>Fsm\VehicleFsm</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlFSMVehicleActState.cpp">
+      <Filter>Fsm\VehicleFsm</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlFSMVehicleActStateBase.cpp">
+      <Filter>Fsm\VehicleFsm</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlFSMVehicleController.cpp">
+      <Filter>Fsm\VehicleFsm</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlVehicleHelper.cpp">
+      <Filter>Fsm\VehicleFsm</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlBehaviorChar.cpp">
+      <Filter>Behavior\CharBehavior</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlBehaviorCharIdlePattern.cpp">
+      <Filter>Behavior\CharBehavior</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlBehaviorCharAdjustMove.cpp">
+      <Filter>Behavior\CharBehavior\Move</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlBehaviorCharGroundMove.cpp">
+      <Filter>Behavior\CharBehavior\Move</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlBehaviorCharJump.cpp">
+      <Filter>Behavior\CharBehavior\Move</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlBehaviorCharMove.cpp">
+      <Filter>Behavior\CharBehavior\Move</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlBehaviorCharSwimmingMove.cpp">
+      <Filter>Behavior\CharBehavior\Move</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlBehaviorBase.cpp">
+      <Filter>Behavior\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlBehaviorData.cpp">
+      <Filter>Behavior\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlBehaviorProj.cpp">
+      <Filter>Behavior\ProjectileBehavior</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlBehaviorVehicle.cpp">
+      <Filter>Behavior\VehicleBehavior</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlBehaviorVehicleDirHelper.cpp">
+      <Filter>Behavior\VehicleBehavior</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlBehaviorVehicleMove.cpp">
+      <Filter>Behavior\VehicleBehavior</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlSLHelpers.cpp">
+      <Filter>Helpers</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlSLLuaGlue.cpp">
+      <Filter>Lua Glue</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlSLLuaGlueStuff.cpp">
+      <Filter>Lua Glue</Filter>
+    </ClCompile>
+    <ClCompile Include="precomp_ntlsimulation.cpp">
+      <Filter>Precompile</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlCameraController.cpp">
+      <Filter>Controller\CameraController</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlCameraManager.cpp">
+      <Filter>Controller\CameraController</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlSobElapsedController.cpp">
+      <Filter>Controller\ElapsedController</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlSobCharPerfController.cpp">
+      <Filter>Controller\PerformanceController</Filter>
+    </ClCompile>
+    <ClCompile Include="DBODirectorIndicate.cpp">
+      <Filter>TS</Filter>
+    </ClCompile>
+    <ClCompile Include="DboTSCMain.cpp">
+      <Filter>TS</Filter>
+    </ClCompile>
+    <ClCompile Include="DboTSDefine.cpp">
+      <Filter>TS</Filter>
+    </ClCompile>
+    <ClCompile Include="DboTSEntityFastFinder.cpp">
+      <Filter>TS</Filter>
+    </ClCompile>
+    <ClCompile Include="DboUnifiedQuestNarration.cpp">
+      <Filter>TS</Filter>
+    </ClCompile>
+    <ClCompile Include="DboTSFactory.cpp">
+      <Filter>TS\Factory</Filter>
+    </ClCompile>
+    <ClCompile Include="DboTSFactoryType.cpp">
+      <Filter>TS\Factory</Filter>
+    </ClCompile>
+    <ClCompile Include="DboTSCQAgency.cpp">
+      <Filter>TS\Quest</Filter>
+    </ClCompile>
+    <ClCompile Include="DboTSCQCtrl.cpp">
+      <Filter>TS\Quest</Filter>
+    </ClCompile>
+    <ClCompile Include="DboTSCQRecv.cpp">
+      <Filter>TS\Quest</Filter>
+    </ClCompile>
+    <ClCompile Include="DboTSCTAgency.cpp">
+      <Filter>TS\Trigger</Filter>
+    </ClCompile>
+    <ClCompile Include="DboTSCTCtrl.cpp">
+      <Filter>TS\Trigger</Filter>
+    </ClCompile>
+    <ClCompile Include="DboTSCTRecv.cpp">
+      <Filter>TS\Trigger</Filter>
+    </ClCompile>
+    <ClCompile Include="DboTSCObjAgency.cpp">
+      <Filter>TS\Object</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlTriggerDirectSync.cpp">
+      <Filter>TriggerDirectSync</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlSLCENode.cpp">
+      <Filter>Direct\CrowdEffect</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlSLTBCrowdController.cpp">
+      <Filter>Direct\CrowdEffect</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlSLTBCrowdManager.cpp">
+      <Filter>Direct\CrowdEffect</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlRangeBGM.cpp">
+      <Filter>Direct\SoundMood</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlSoundMoodManager.cpp">
+      <Filter>Direct\SoundMood</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlThemeBGM.cpp">
+      <Filter>Direct\SoundMood</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlDTCinematicManager.cpp">
+      <Filter>Direct\Cinematic</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlDTCinematicNode.cpp">
+      <Filter>Direct\Cinematic</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlDTNode.cpp">
+      <Filter>Direct\Cinematic</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlDTProp.cpp">
+      <Filter>Direct\Cinematic</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlClock.cpp">
+      <Filter>Clock</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlWorldConcept.cpp">
+      <Filter>WorldConcept</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlWorldConceptDBC.cpp">
+      <Filter>WorldConcept\Controller</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlWorldConceptDirect.cpp">
+      <Filter>WorldConcept\Controller</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlWorldConceptDuel.cpp">
+      <Filter>WorldConcept\Controller</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlWorldConceptNPCCommu.cpp">
+      <Filter>WorldConcept\Controller</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlWorldConceptPartyDungeon.cpp">
+      <Filter>WorldConcept\Controller</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlWorldConceptPrivateShop.cpp">
+      <Filter>WorldConcept\Controller</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlWorldConceptPVP.cpp">
+      <Filter>WorldConcept\Controller</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlWorldConceptRB.cpp">
+      <Filter>WorldConcept\Controller</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlWorldConceptScramble.cpp">
+      <Filter>WorldConcept\Controller</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlWorldConceptTB.cpp">
+      <Filter>WorldConcept\Controller</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlWorldConceptTLQ.cpp">
+      <Filter>WorldConcept\Controller</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlWorldConceptTMQ.cpp">
+      <Filter>WorldConcept\Controller</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlWorldConceptTrade.cpp">
+      <Filter>WorldConcept\Controller</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlWorldConceptTutorial.cpp">
+      <Filter>WorldConcept\Controller</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlWorldConceptController.cpp">
+      <Filter>WorldConcept\ControllerBase</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlStorageDefine.cpp">
+      <Filter>Serialize</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlStorageManager.cpp">
+      <Filter>Serialize</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlStorageUnit.cpp">
+      <Filter>Serialize</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlStorageGroup.cpp">
+      <Filter>Serialize\Group</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlStorageGroupAccount.cpp">
+      <Filter>Serialize\Group</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlStorageGroupCharacter.cpp">
+      <Filter>Serialize\Group</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlStorageGroupGameInfo.cpp">
+      <Filter>Serialize\Group</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlStorageGroupQuest.cpp">
+      <Filter>Serialize\Group</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlStorageGroupScouter.cpp">
+      <Filter>Serialize\Group</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlStorageGroupSystem.cpp">
+      <Filter>Serialize\Group</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlStorageBinarySerializer.cpp">
+      <Filter>Serialize\StorageSerializer</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlStorageSerializer.cpp">
+      <Filter>Serialize\StorageSerializer</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlStorageTextSerializer.cpp">
+      <Filter>Serialize\StorageSerializer</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlStorageMTContainer.cpp">
+      <Filter>Serialize\MappingTable</Filter>
+    </ClCompile>
+    <ClCompile Include="DboTLController.cpp">
+      <Filter>Tutorial</Filter>
+    </ClCompile>
+    <ClCompile Include="DboTLEntity.cpp">
+      <Filter>Tutorial</Filter>
+    </ClCompile>
+    <ClCompile Include="DboTLLoader.cpp">
+      <Filter>Tutorial</Filter>
+    </ClCompile>
+    <ClCompile Include="DboTLSystem.cpp">
+      <Filter>Tutorial</Filter>
+    </ClCompile>
+    <ClCompile Include="DboTLConditionCheck.cpp">
+      <Filter>Tutorial\ConditionCheck</Filter>
+    </ClCompile>
+    <ClCompile Include="DboTLConditionCheckState.cpp">
+      <Filter>Tutorial\ConditionCheck</Filter>
+    </ClCompile>
+    <ClCompile Include="ResultCodeString.cpp">
+      <Filter>Global</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlBehaviorCharAirMove.cpp">
+      <Filter>Behavior\CharBehavior\Move</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlWorldConceptFreePvpZone.cpp">
+      <Filter>WorldConcept\Controller</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlWorldConceptCCBD.cpp">
+      <Filter>WorldConcept\Controller</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlSLCCBD.cpp">
+      <Filter>Object\Etc</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="NtlSLEvent.h">
+      <Filter>Event</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlSLEventFunc.h">
+      <Filter>Event</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlSLEventHandler.h">
+      <Filter>Event</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlSLApi.h">
+      <Filter>Global</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlSLDef.h">
+      <Filter>Global</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlSLGlobal.h">
+      <Filter>Global</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlSLServerDeclear.h">
+      <Filter>Global</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlSLVisualDeclear.h">
+      <Filter>Global</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlSobActionSkill.h">
+      <Filter>Object\Instance</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlSobActionSkillIcon.h">
+      <Filter>Object\Instance</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlSobAvatar.h">
+      <Filter>Object\Instance</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlSobBuff.h">
+      <Filter>Object\Instance</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlSobBuffIcon.h">
+      <Filter>Object\Instance</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlSobDynamicObject.h">
+      <Filter>Object\Instance</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlSobEventObject.h">
+      <Filter>Object\Instance</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlSobFeelingActor.h">
+      <Filter>Object\Instance</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlSobHTBSkill.h">
+      <Filter>Object\Instance</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlSobHTBSkillIcon.h">
+      <Filter>Object\Instance</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlSobIcon.h">
+      <Filter>Object\Instance</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlSobInfluence.h">
+      <Filter>Object\Instance</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlSobItem.h">
+      <Filter>Object\Instance</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlSobItemIcon.h">
+      <Filter>Object\Instance</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlSobMonster.h">
+      <Filter>Object\Instance</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlSobNpc.h">
+      <Filter>Object\Instance</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlSobPet.h">
+      <Filter>Object\Instance</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlSobPlayer.h">
+      <Filter>Object\Instance</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlSobProjectile.h">
+      <Filter>Object\Instance</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlSobQuestItem.h">
+      <Filter>Object\Instance</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlSobQuestItemIcon.h">
+      <Filter>Object\Instance</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlSobSkill.h">
+      <Filter>Object\Instance</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlSobSkillIcon.h">
+      <Filter>Object\Instance</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlSobSyncStatus.h">
+      <Filter>Object\Instance</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlSobTriggerObject.h">
+      <Filter>Object\Instance</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlSobVehicle.h">
+      <Filter>Object\Instance</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlSobWorldItem.h">
+      <Filter>Object\Instance</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlSobActionSkillAttr.h">
+      <Filter>Object\Attribute</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlSobAttr.h">
+      <Filter>Object\Attribute</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlSobAttrFactory.h">
+      <Filter>Object\Attribute</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlSobAvatarAttr.h">
+      <Filter>Object\Attribute</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlSobBuffAttr.h">
+      <Filter>Object\Attribute</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlSobDynamicObjectAttr.h">
+      <Filter>Object\Attribute</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlSobHTBSkillAttr.h">
+      <Filter>Object\Attribute</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlSobItemAttr.h">
+      <Filter>Object\Attribute</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlSobMonsterAttr.h">
+      <Filter>Object\Attribute</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlSobNpcAttr.h">
+      <Filter>Object\Attribute</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlSobPetAttr.h">
+      <Filter>Object\Attribute</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlSobPlayerAttr.h">
+      <Filter>Object\Attribute</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlSobProjectileAttr.h">
+      <Filter>Object\Attribute</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlSobQuestItemAttr.h">
+      <Filter>Object\Attribute</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlSobSkillAttr.h">
+      <Filter>Object\Attribute</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlSobTriggerObjectAttr.h">
+      <Filter>Object\Attribute</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlSobVehicleAttr.h">
+      <Filter>Object\Attribute</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlSobWorldItemAttr.h">
+      <Filter>Object\Attribute</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlBuffContainer.h">
+      <Filter>Object\Etc</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlGuildWarehouse.h">
+      <Filter>Object\Etc</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlInventory.h">
+      <Filter>Object\Etc</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlOtherParam.h">
+      <Filter>Object\Etc</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlSkillContainer.h">
+      <Filter>Object\Etc</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlSLDojo.h">
+      <Filter>Object\Etc</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlSLHoipoiMix.h">
+      <Filter>Object\Etc</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlSLMailSystem.h">
+      <Filter>Object\Etc</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlSLPrivateShop.h">
+      <Filter>Object\Etc</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlSLRankBattle.h">
+      <Filter>Object\Etc</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlSLTBudokai.h">
+      <Filter>Object\Etc</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlWareHouse.h">
+      <Filter>Object\Etc</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlShareTargetMark.h">
+      <Filter>Object\Proxy</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlSobCharProxy.h">
+      <Filter>Object\Proxy</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlSobCharProxyDecoration.h">
+      <Filter>Object\Proxy</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlSobCharProxyEquip.h">
+      <Filter>Object\Proxy</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlSobCharProxyTransform.h">
+      <Filter>Object\Proxy</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlSobDynamicObjectProxy.h">
+      <Filter>Object\Proxy</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlSobEventObjectProxy.h">
+      <Filter>Object\Proxy</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlSobProxy.h">
+      <Filter>Object\Proxy</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlSobProxyDef.h">
+      <Filter>Object\Proxy</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlSobProxySystemEffect.h">
+      <Filter>Object\Proxy</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlSobTriggerObjectProxy.h">
+      <Filter>Object\Proxy</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlSobVehicleProxy.h">
+      <Filter>Object\Proxy</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlSobWorldItemProxy.h">
+      <Filter>Object\Proxy</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlSob.h">
+      <Filter>Object\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlSobActor.h">
+      <Filter>Object\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlSobActorCtrlData.h">
+      <Filter>Object\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlSobFactory.h">
+      <Filter>Object\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlSobGroup.h">
+      <Filter>Object\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlSLBlackList.h">
+      <Filter>Object\Community</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlSLFriendList.h">
+      <Filter>Object\Community</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlSLGuild.h">
+      <Filter>Object\Community</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlSLParty.h">
+      <Filter>Object\Community</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlSLCommunityAgent.h">
+      <Filter>Object\Community\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlSLCommunityGroup.h">
+      <Filter>Object\Community\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlSLTMQ.h">
+      <Filter>Object\Community\Agent</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlSobManager.h">
+      <Filter>Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlSobStatusAnimSyncManager.h">
+      <Filter>Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="ActionMap.h">
+      <Filter>Input</Filter>
+    </ClInclude>
+    <ClInclude Include="InputActionMap.h">
+      <Filter>Input</Filter>
+    </ClInclude>
+    <ClInclude Include="InputHandler.h">
+      <Filter>Input</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlActionMapDef.h">
+      <Filter>Input</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlNetSender.h">
+      <Filter>Network</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlPacketGenerator.h">
+      <Filter>Network</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlPacketHandler.h">
+      <Filter>Network</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlPacketLockManager.h">
+      <Filter>Network</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlSLPacketGenerator.h">
+      <Filter>Network</Filter>
+    </ClInclude>
+    <ClInclude Include="DboMovingAlgorithm.h">
+      <Filter>Logic</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlSLLogic.h">
+      <Filter>Logic</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlSLLogicDef.h">
+      <Filter>Logic</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlSLVisualLogic.h">
+      <Filter>Logic</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlFSMDef.h">
+      <Filter>Fsm\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlFSMEventQueue.h">
+      <Filter>Fsm\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlFSMEventQueuingHelper.h">
+      <Filter>Fsm\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlFSMStateBase.h">
+      <Filter>Fsm\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlFSMCharActEventProc.h">
+      <Filter>Fsm\CharFsm</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlFSMCharActState.h">
+      <Filter>Fsm\CharFsm</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlFSMCharActStateBase.h">
+      <Filter>Fsm\CharFsm</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlFSMCharController.h">
+      <Filter>Fsm\CharFsm</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlFSMLookAtManager.h">
+      <Filter>Fsm\LookAtManager</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlFSMUtil.h">
+      <Filter>Fsm\Util</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlFSMVehicleAct.h">
+      <Filter>Fsm\VehicleFsm</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlFSMVehicleActAgent.h">
+      <Filter>Fsm\VehicleFsm</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlFSMVehicleActLayer.h">
+      <Filter>Fsm\VehicleFsm</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlFSMVehicleActState.h">
+      <Filter>Fsm\VehicleFsm</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlFSMVehicleActStateBase.h">
+      <Filter>Fsm\VehicleFsm</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlFSMVehicleController.h">
+      <Filter>Fsm\VehicleFsm</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlVehicleHelper.h">
+      <Filter>Fsm\VehicleFsm</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlBehaviorChar.h">
+      <Filter>Behavior\CharBehavior</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlBehaviorCharIdlePattern.h">
+      <Filter>Behavior\CharBehavior</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlBehaviorCharAdjustMove.h">
+      <Filter>Behavior\CharBehavior\Move</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlBehaviorCharGroundMove.h">
+      <Filter>Behavior\CharBehavior\Move</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlBehaviorCharJump.h">
+      <Filter>Behavior\CharBehavior\Move</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlBehaviorCharMove.h">
+      <Filter>Behavior\CharBehavior\Move</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlBehaviorCharSwimmingMove.h">
+      <Filter>Behavior\CharBehavior\Move</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlBehaviorData.h">
+      <Filter>Behavior\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlBehaviorDef.h">
+      <Filter>Behavior\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlBehaviorProj.h">
+      <Filter>Behavior\ProjectileBehavior</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlBehaviorVehicle.h">
+      <Filter>Behavior\VehicleBehavior</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlBehaviorVehicleDirHelper.h">
+      <Filter>Behavior\VehicleBehavior</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlBehaviorVehicleMove.h">
+      <Filter>Behavior\VehicleBehavior</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlSLHelpers.h">
+      <Filter>Helpers</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlSLLuaGlue.h">
+      <Filter>Lua Glue</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlSLLuaGlueStuff.h">
+      <Filter>Lua Glue</Filter>
+    </ClInclude>
+    <ClInclude Include="precomp_ntlsimulation.h">
+      <Filter>Precompile</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlCameraController.h">
+      <Filter>Controller\CameraController</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlCameraManager.h">
+      <Filter>Controller\CameraController</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlSobElapsedController.h">
+      <Filter>Controller\ElapsedController</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlSobCharPerfController.h">
+      <Filter>Controller\PerformanceController</Filter>
+    </ClInclude>
+    <ClInclude Include="DBODirectorIndicate.h">
+      <Filter>TS</Filter>
+    </ClInclude>
+    <ClInclude Include="DboTSCMain.h">
+      <Filter>TS</Filter>
+    </ClInclude>
+    <ClInclude Include="DboTSDefine.h">
+      <Filter>TS</Filter>
+    </ClInclude>
+    <ClInclude Include="DboTSEntityFastFinder.h">
+      <Filter>TS</Filter>
+    </ClInclude>
+    <ClInclude Include="DboUnifiedQuestNarration.h">
+      <Filter>TS</Filter>
+    </ClInclude>
+    <ClInclude Include="DboTSFactory.h">
+      <Filter>TS\Factory</Filter>
+    </ClInclude>
+    <ClInclude Include="DboTSFactoryType.h">
+      <Filter>TS\Factory</Filter>
+    </ClInclude>
+    <ClInclude Include="DboTSCQAgency.h">
+      <Filter>TS\Quest</Filter>
+    </ClInclude>
+    <ClInclude Include="DboTSCQCtrl.h">
+      <Filter>TS\Quest</Filter>
+    </ClInclude>
+    <ClInclude Include="DboTSCQRecv.h">
+      <Filter>TS\Quest</Filter>
+    </ClInclude>
+    <ClInclude Include="DboTSCTAgency.h">
+      <Filter>TS\Trigger</Filter>
+    </ClInclude>
+    <ClInclude Include="DboTSCTCtrl.h">
+      <Filter>TS\Trigger</Filter>
+    </ClInclude>
+    <ClInclude Include="DboTSCTRecv.h">
+      <Filter>TS\Trigger</Filter>
+    </ClInclude>
+    <ClInclude Include="DboTSCObjAgency.h">
+      <Filter>TS\Object</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlTriggerDirectSync.h">
+      <Filter>TriggerDirectSync</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlSLCENode.h">
+      <Filter>Direct\CrowdEffect</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlSLTBCrowdController.h">
+      <Filter>Direct\CrowdEffect</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlSLTBCrowdManager.h">
+      <Filter>Direct\CrowdEffect</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlRangeBGM.h">
+      <Filter>Direct\SoundMood</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlSoundMoodManager.h">
+      <Filter>Direct\SoundMood</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlSoundNode.h">
+      <Filter>Direct\SoundMood</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlThemeBGM.h">
+      <Filter>Direct\SoundMood</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlDTCinematicManager.h">
+      <Filter>Direct\Cinematic</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlDTCinematicNode.h">
+      <Filter>Direct\Cinematic</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlDTNode.h">
+      <Filter>Direct\Cinematic</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlDTProp.h">
+      <Filter>Direct\Cinematic</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlClock.h">
+      <Filter>Clock</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlWorldConcept.h">
+      <Filter>WorldConcept</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlWorldConceptDefine.h">
+      <Filter>WorldConcept</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlWorldConceptDBC.h">
+      <Filter>WorldConcept\Controller</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlWorldConceptDirect.h">
+      <Filter>WorldConcept\Controller</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlWorldConceptDuel.h">
+      <Filter>WorldConcept\Controller</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlWorldConceptNPCCommu.h">
+      <Filter>WorldConcept\Controller</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlWorldConceptPartyDungeon.h">
+      <Filter>WorldConcept\Controller</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlWorldConceptPrivateShop.h">
+      <Filter>WorldConcept\Controller</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlWorldConceptPVP.h">
+      <Filter>WorldConcept\Controller</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlWorldConceptRB.h">
+      <Filter>WorldConcept\Controller</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlWorldConceptScramble.h">
+      <Filter>WorldConcept\Controller</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlWorldConceptTB.h">
+      <Filter>WorldConcept\Controller</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlWorldConceptTLQ.h">
+      <Filter>WorldConcept\Controller</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlWorldConceptTMQ.h">
+      <Filter>WorldConcept\Controller</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlWorldConceptTrade.h">
+      <Filter>WorldConcept\Controller</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlWorldConceptTutorial.h">
+      <Filter>WorldConcept\Controller</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlWorldConceptController.h">
+      <Filter>WorldConcept\ControllerBase</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlStorageDefine.h">
+      <Filter>Serialize</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlStorageManager.h">
+      <Filter>Serialize</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlStorageUnit.h">
+      <Filter>Serialize</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlStorageGroup.h">
+      <Filter>Serialize\Group</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlStorageGroupAccount.h">
+      <Filter>Serialize\Group</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlStorageGroupCharacter.h">
+      <Filter>Serialize\Group</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlStorageGroupGameInfo.h">
+      <Filter>Serialize\Group</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlStorageGroupQuest.h">
+      <Filter>Serialize\Group</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlStorageGroupScouter.h">
+      <Filter>Serialize\Group</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlStorageGroupSystem.h">
+      <Filter>Serialize\Group</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlStorageBinarySerializer.h">
+      <Filter>Serialize\StorageSerializer</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlStorageSerializer.h">
+      <Filter>Serialize\StorageSerializer</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlStorageTextSerializer.h">
+      <Filter>Serialize\StorageSerializer</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlStorageMTContainer.h">
+      <Filter>Serialize\MappingTable</Filter>
+    </ClInclude>
+    <ClInclude Include="DboTLController.h">
+      <Filter>Tutorial</Filter>
+    </ClInclude>
+    <ClInclude Include="DboTLDefine.h">
+      <Filter>Tutorial</Filter>
+    </ClInclude>
+    <ClInclude Include="DboTLEntity.h">
+      <Filter>Tutorial</Filter>
+    </ClInclude>
+    <ClInclude Include="DboTLLoader.h">
+      <Filter>Tutorial</Filter>
+    </ClInclude>
+    <ClInclude Include="DboTLSystem.h">
+      <Filter>Tutorial</Filter>
+    </ClInclude>
+    <ClInclude Include="DboTLConditionCheck.h">
+      <Filter>Tutorial\ConditionCheck</Filter>
+    </ClInclude>
+    <ClInclude Include="DboTLConditionCheckState.h">
+      <Filter>Tutorial\ConditionCheck</Filter>
+    </ClInclude>
+    <ClInclude Include="ResultCodeString.h">
+      <Filter>Global</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlBehaviorCharAirMove.h">
+      <Filter>Behavior\CharBehavior\Move</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlWorldConceptFreePvpZone.h">
+      <Filter>WorldConcept\Controller</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlWorldConceptCCBD.h">
+      <Filter>WorldConcept\Controller</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlSLCCBD.h">
+      <Filter>Object\Etc</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="NtlFSMAgent.h">
+      <Filter>Fsm\Base</Filter>
+    </CustomBuild>
+    <CustomBuild Include="NtlFSMBase.h">
+      <Filter>Fsm\Base</Filter>
+    </CustomBuild>
+    <CustomBuild Include="NtlFSMController.h">
+      <Filter>Fsm\Base</Filter>
+    </CustomBuild>
+    <CustomBuild Include="NtlFSMLayer.h">
+      <Filter>Fsm\Base</Filter>
+    </CustomBuild>
+    <CustomBuild Include="NtlFSMCharAct.h">
+      <Filter>Fsm\CharFsm</Filter>
+    </CustomBuild>
+    <CustomBuild Include="NtlFSMCharActAgent.h">
+      <Filter>Fsm\CharFsm</Filter>
+    </CustomBuild>
+    <CustomBuild Include="NtlFSMCharActLayer.h">
+      <Filter>Fsm\CharFsm</Filter>
+    </CustomBuild>
+    <CustomBuild Include="NtlBehaviorBase.h">
+      <Filter>Behavior\Base</Filter>
+    </CustomBuild>
+  </ItemGroup>
+</Project>

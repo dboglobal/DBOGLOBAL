@@ -1,0 +1,108 @@
+
+GameStage( 0 )
+--[
+	Action( "add npc" )
+	--[
+		Param( "index", 2804129 )
+		Param( "loc x", -7.208 )
+		Param( "loc y", 69.290 )
+		Param( "loc z", -18.373 )
+		Param( "dir x", 0.998 )
+		Param( "dir z", -0.058 )
+		Param( "stand alone", "true" )	
+		Param( "no spawn wait", "true" )
+	--]
+	End()
+
+	Action( "add mob" )
+	--[
+		Param( "index", 8471110 )
+		Param( "group", 60121 )
+		Param( "loc x", -6.963 )
+		Param( "loc y", 71.004 )
+		Param( "loc z", 3.598 )
+		Param( "dir x", 0.597 )
+		Param( "dir z", -0.802 )
+		Param( "no spawn wait", "true" )
+	--]
+	End()
+
+	Action( "add mob" )
+	--[
+		Param( "index", 8471110 )
+		Param( "group", 60121 )
+		Param( "loc x", -3.092 )
+		Param( "loc y", 71.004 )
+		Param( "loc z", 7.299 )
+		Param( "dir x", -0.059 )
+		Param( "dir z", -0.998 )
+		Param( "no spawn wait", "true" )
+	--]
+	End()
+
+	Action( "add mob" )
+	--[
+		Param( "index", 3604104  )
+		Param( "group", 60122 )
+		Param( "loc x", 0.644 )
+		Param( "loc y", 71.004 )
+		Param( "loc z", 9.039 )
+		Param( "dir x", -0.056 )
+		Param( "dir z", -0.998 )
+		Param( "no spawn wait", "true" )
+	--]
+	End()
+	
+	Action( "add mob" )
+	--[
+		Param( "index", 8471110 )
+		Param( "group", 60121 )
+		Param( "loc x", 4.271 )
+		Param( "loc y", 71.004 )
+		Param( "loc z", 7.129 )
+		Param( "dir x", -0.085 )
+		Param( "dir z", -0.996 )
+		Param( "no spawn wait", "true" )
+	--]
+	End()
+
+	Action( "add mob" )
+	--[
+		Param( "index", 8471110 )
+		Param( "group", 60121 )
+		Param( "loc x", 8.147 )
+		Param( "loc y", 71.004 )
+		Param( "loc z", 3.396 )
+		Param( "dir x", -0.909 )
+		Param( "dir z", -0.417 )
+		Param( "no spawn wait", "true" )
+	--]
+	End()
+
+	Action( "wait" )
+	--[
+		Condition( "check mobgroup" )
+		--[
+			Param( "group", 60122 )
+			Param( "count", 1 )
+		--]
+		End()
+	--]
+	End()
+
+	Action(	"send event to ts" )
+	--[
+		Param( "trigger type", "quest"	)
+		Param( "apply type", "register all" )
+		Param( "event id", 417 )
+	--]
+	End()
+
+	Action( "remove mobgroup" )
+	--[
+		Param( "group", 60121 )
+		Param( "type", "faint" )
+	--]
+	End()
+--]
+End()

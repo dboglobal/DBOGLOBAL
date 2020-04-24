@@ -1,0 +1,41 @@
+--1531quest 사용안함
+
+GameStage(0)
+--[
+
+--머쉬룸 갱 파괴자 스폰(인덱스((더미), 그룹, 좌표 미정)
+	Action( "add mob" )
+	--[
+		Param( "index", 8441301)
+		Param( "group", 1531)
+		Param( "loc x", 881.062)
+		Param( "loc y", -113)
+		Param( "loc z", -1002.777)
+		Param( "dir x", -0.650)
+		Param( "dir z", -0.760)
+	--]
+	End()
+
+--퀘스트 완료까지 대기
+	Action("wait")
+	--[
+		Param( "operation", "or" )
+	   
+		Condition( "recv ts event" )
+		--[
+			Param( "trigger type", "quest" );
+			Param( "event id", 135 )
+		--]
+		End()
+		
+		Condition( "check time" )
+		--[
+			Param( "time", 600 )
+		--]
+		End()
+		
+	--]
+	End()
+	
+--]
+End()

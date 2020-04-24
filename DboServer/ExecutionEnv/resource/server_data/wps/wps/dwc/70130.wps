@@ -1,0 +1,85 @@
+GameStage(0)
+--[
+	-- 제일 처음 지역 :: 바다거북과 대화하는 구간 --
+	-- 도마뱀들 필드위로 스폰 --
+	Action("add mobgroup")
+	--[
+		Param("group", 1)
+		Param("no spawn wait", "true")
+	--]
+	End()
+	
+	-- 산적의 늑대 스폰 --
+	Action("add mobgroup")
+	--[
+		Param("group", 2)
+		Param("no spawn wait", "true")
+	--]
+	End()
+	
+	-- 늑대 스폰 --
+	Action("add mobgroup")
+	--[
+		Param("group", 3)
+		Param("no spawn wait", "true")
+	--]
+	End()
+	
+	-- 두번 째 지역 :: Player가 바다거북을 호위하는 구간 --
+	-- 산적 스폰 --
+	Action("add mobgroup")
+	--[
+		Param("group", 4)
+		Param("no spawn wait", "true")
+	--]
+	End()
+	
+	-- 산적의 늑대 스폰 --
+	Action("add mobgroup")
+	--[
+		Param("group", 5)
+		Param("no spawn wait", "true")
+	--]
+	End()
+	
+	-- 늑대 스폰 --
+	Action("add mobgroup")
+	--[
+		Param("group", 6)
+		Param("no spawn wait", "true")
+	--]
+	End()
+	
+	-- 산적들을 잡으면 해변가 늑대 스폰 --
+	Action("wait")
+	--[
+		Condition("check mobgroup")
+		--[
+			Param("group", 4)
+			Param("count", 4)
+		--]
+		End()
+	--]
+	End()
+	
+	--- 해변가 가는 길 늑대 스폰--
+	Action("add mobgroup")
+	--[
+		Param("group", 10)
+		Param("no spawn wait", "true")
+	--]
+	End()
+	
+	-- 거북선인에게 대결 승리할때 까지, 대기 --
+	Action("wait")
+	--[
+		Condition("check mobgroup")
+		--[
+			Param("group", 11)
+			Param("count", 1)
+		--]
+		End()
+	--]
+	End()
+--]
+End()

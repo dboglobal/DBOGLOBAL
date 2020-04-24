@@ -1,0 +1,70 @@
+
+GameStage(0)
+--[
+	Action( "change sps scene" )
+	--[
+		Param( "index", 5062102)
+		Param( "play script", 5062102)
+		Param( "play scene", 1)
+	--]
+	End()
+
+	Action( "change sps scene")
+	--[
+		Param("index",4141105)
+		Param("play script",4141105)
+		Param("play scene",1)
+	--]
+	End()
+
+	Action( "wait" )
+	--[
+		Condition( "recv event from sps" )
+		--[
+			Param( "object type", "npc" )
+			Param( "object index", 4141105)
+			Param( "event id", 278)
+		--]
+		End()
+	--]
+	End()
+
+	Action("send event to sps")
+	--[
+		Param("target type", "npc")
+		Param("target index", 5062102)
+		Param("event id", 279)
+	--]
+	End()
+
+	Action( "send event to sps" )
+	--[
+		Param( "target type", "npc" )
+		Param( "target index", 4141105)
+		Param( "event id", 280)
+	--]
+	End()
+--]
+End()
+
+GameFailed()
+--[
+	Action("send event to sps")
+	--[
+		Param("target type", "npc")
+		Param("target index", 5062102)
+		Param("event id", 279)
+	--]
+	End()
+
+	Action( "send event to sps" )
+	--[
+		Param( "target type", "npc" )
+		Param( "target index", 4141105)
+		Param( "event id", 280)
+	--]
+	End()
+--]
+End()
+		
+	

@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Precomp">
+      <UniqueIdentifier>{03a3bc33-8ca2-46b0-8681-44ead6985744}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="NeighborServerInfoManager">
+      <UniqueIdentifier>{edd8659d-19ea-45a8-b745-eb1dd3504a82}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Event">
+      <UniqueIdentifier>{1d9196f7-47a3-4c9d-be96-e4953d1409cd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Packet">
+      <UniqueIdentifier>{3897b26a-b538-44b7-ac55-94b86068db74}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="stdafx.h">
+      <Filter>Precomp</Filter>
+    </ClInclude>
+    <ClInclude Include="NeighborServerInfoManager.h">
+      <Filter>NeighborServerInfoManager</Filter>
+    </ClInclude>
+    <ClInclude Include="EventableObject.h">
+      <Filter>Event</Filter>
+    </ClInclude>
+    <ClInclude Include="EventMgr.h">
+      <Filter>Event</Filter>
+    </ClInclude>
+    <ClInclude Include="opcodes.h">
+      <Filter>Packet</Filter>
+    </ClInclude>
+    <ClInclude Include="PacketEvent.h">
+      <Filter>Packet</Filter>
+    </ClInclude>
+    <ClInclude Include="PacketEventObj.h">
+      <Filter>Packet</Filter>
+    </ClInclude>
+    <ClInclude Include="ReserveName.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Precomp</Filter>
+    </ClCompile>
+    <ClCompile Include="NeighborServerInfoManager.cpp">
+      <Filter>NeighborServerInfoManager</Filter>
+    </ClCompile>
+    <ClCompile Include="EventableObject.cpp">
+      <Filter>Event</Filter>
+    </ClCompile>
+    <ClCompile Include="EventMgr.cpp">
+      <Filter>Event</Filter>
+    </ClCompile>
+    <ClCompile Include="PacketEvent.cpp">
+      <Filter>Packet</Filter>
+    </ClCompile>
+    <ClCompile Include="ReserveName.cpp" />
+  </ItemGroup>
+</Project>

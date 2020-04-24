@@ -1,0 +1,103 @@
+
+GameStage(0)
+--[
+	Action( "add mob" )
+	--[
+		Param( "index", 1831307 )
+		Param( "group", 2417 )
+		Param( "loc x", 739.522 )
+		Param( "loc y", 2.431 )
+		Param( "loc z", 388.153 )
+		Param( "dir x", 0.989 )
+		Param( "dir z", 0.147 )
+		Param( "play script", 1831307 )
+		Param( "play scene", 1 )
+		Param( "no spawn wait", "true" )
+	--]
+	End()
+
+	Action( "add mob" )
+	--[
+		Param( "index", 7111216 )
+		Param( "group", 2417 )
+		Param( "loc x", 737.165 )
+		Param( "loc y", 2.225 )
+		Param( "loc z", 392.203 )
+		Param( "dir x", 0.991 )
+		Param( "dir z", 0.133 )
+		Param( "play script", 7111216 )
+		Param( "play scene", 1 )
+		Param( "no spawn wait", "true" )
+	--]
+	End()
+
+	Action( "add mob" )
+	--[
+		Param( "index", 7111216 )
+		Param( "group", 2417 )
+		Param( "loc x", 741.631 )
+		Param( "loc y", 2.504 )
+		Param( "loc z", 382.565 )
+		Param( "dir x", 0.997 )
+		Param( "dir z", 0.082 )
+		Param( "play script", 7111216 )
+		Param( "play scene", 2 )
+		Param( "no spawn wait", "true" )
+	--]
+	End()
+
+	Action( "function" )
+	--[
+		Condition( "child" )
+		--[
+			Action( "wait" )
+			--[
+				Condition( "check time" )
+				--[
+					Param( "time", 300 )
+				--]
+				End()
+			--]
+			End()
+
+			Action( "wps fail" )
+			--[
+		
+			--]
+			End()
+		--]
+		End()
+
+		Action( "wait" )
+		--[
+			Condition( "check mobgroup" )
+			--[
+				Param( "group", 2417 )
+				Param( "count", 3 )
+			--]
+			End()
+		--]
+		End()
+	--]
+	End()
+
+	Action( "send event to ts" )
+	--[
+		Param( "trigger type", "quest" )
+		Param( "apply type", "register all" )
+		Param( "event id", 546 )
+	--]
+	End()
+--]
+End()
+
+GameFailed()
+--[
+	Action( "remove mobgroup" )
+	--[
+		Param( "group", 2417 )
+		Param( "type", "clear" )
+	--]
+	End()
+--]
+End()

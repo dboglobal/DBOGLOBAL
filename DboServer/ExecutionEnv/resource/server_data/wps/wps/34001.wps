@@ -1,0 +1,370 @@
+-- UD6
+-- lobby
+-- If npc click into the lobby area with its door open
+
+GameStage(0)
+--[
+	-- If you do not wait seven seconds in the first npc this change sps scene doebeorinda before the spawn.
+	Action( "wait" )
+	--[
+		Condition( "check time" )
+		--[
+			Param( "time", 7 )
+		--]
+		End()
+	--]
+	End()
+	
+	-- 모든 입장 npc에게 sps 붙임
+	Action( "change sps scene" )
+	--[
+		Param( "index", 1657103 )
+		Param( "play script", 1657103 )
+		Param( "play scene", 1 )
+	--]
+	End()
+	
+	Action( "change sps scene" )
+	--[
+		Param( "index", 4512501 )
+		Param( "play script", 4512501 )
+		Param( "play scene", 1 )
+	--]
+	End()
+	
+	Action( "change sps scene" )
+	--[
+		Param( "index", 1501105 )
+		Param( "play script", 1501105 )
+		Param( "play scene", 1 )
+	--]
+	End()
+	
+	Action( "function" )
+	--[
+		-- DE entrance to Big Numbers Supply area
+		-- Being triggered when "tracker paella" click
+		Condition( "child" )
+		--[
+			Action( "wait" )
+			--[
+				Condition( "recv event from ts" )
+				--[
+					Param( "trigger type", "pc" )
+					Param( "event id", 867 )
+				--]
+				End()
+			--]
+			End()
+			
+			-- 입구 열어줌
+			Action( "change object state" )
+			--[
+				Param( "index", 74 )
+				Param( "state", 1 )
+				Param( "substate show", 0 )
+				Param( "substate unselect", 0 )
+			--]
+			End()
+			
+			-- 드데카민 지역 wps 시작되도록 함
+			Action( "send event to wps" )
+			--[
+				Param( "wps index", 34008 )
+				Param( "event id", 879 )
+			--]
+			End()
+			
+			-- 파에리아의 추적자 ui disable 으로 변경
+			Action( "send event to sps" )
+			--[
+				Param( "target type", "npc" )
+				Param( "target index", 1657103 )
+				Param( "event id", 887 )
+			--]
+			End()
+		--]
+		End()
+		
+		-- 나메크리스탈 구역 입구
+		-- "카주" click하면 발동됨
+		Condition( "child" )
+		--[
+			Action( "wait" )
+			--[
+				Condition( "recv event from ts" )
+				--[
+					Param( "trigger type", "pc" )
+					Param( "event id", 868 )
+				--]
+				End()
+			--]
+			End()
+			
+			-- 입구 열어줌
+			Action( "change object state" )
+			--[
+				Param( "index", 65 )
+				Param( "state", 1 )
+				Param( "substate show", 0 )
+				Param( "substate unselect", 0 )
+			--]
+			End()
+			
+			-- 나라크 지역 wps 시작되도록 함
+			Action( "send event to wps" )
+			--[
+				Param( "wps index", 34009 )
+				Param( "event id", 1000 )
+			--]
+			End()
+			
+			-- "카주" ui disable 으로 변경
+			Action( "send event to sps" )
+			--[
+				Param( "target type", "npc" )
+				Param( "target index", 4512501 )
+				Param( "event id", 888 )
+			--]
+			End()
+		--]
+		End()
+		
+		-- 키리 공급 구역 입구
+		-- "스니크" click하면 발동됨
+		Condition( "child" )
+		--[
+			Action( "wait" )
+			--[
+				Condition( "recv event from ts" )
+				--[
+					Param( "trigger type", "pc" )
+					Param( "event id", 869)
+				--]
+				End()
+			--]
+			End()
+			
+			-- 입구 열어줌
+			Action( "change object state" )
+			--[
+				Param( "index", 75 )
+				Param( "state", 1 )
+				Param( "substate show", 0 )
+				Param( "substate unselect", 0 )
+			--]
+			End()
+			
+			-- 키리 지역 wps 시작되도록 함
+			Action( "send event to wps" )
+			--[
+				Param( "wps index", 34010 )
+				Param( "event id", 1001 )
+			--]
+			End()
+			
+			-- "스니크" ui disable 으로 변경
+			Action( "send event to sps" )
+			--[
+				Param( "target type", "npc" )
+				Param( "target index", 1501105 )
+				Param( "event id", 889 )
+			--]
+			End()
+		--]
+		End()
+		
+		-- 3개 구역을 모두 clear하면, 상층으로 보내주는 "승천의 구슬" spawn 시킴
+		Condition( "child" )
+		--[
+			-- 3개 구역 모두 clear 될 때 까지 대기
+			Action( "wait" )
+			--[
+				Param( "operation", "and" )
+				
+				Condition( "wait condition" )
+				--[
+					Param( "operation", "or" )
+					
+					Condition( "recv event from ts" )
+					--[
+						Param( "trigger type", "object" )
+						Param( "event id", 870 )
+					--]
+					End()
+					
+					Condition( "recv event from wps" )
+					--[
+						Param( "wps index", 34004 )
+						Param( "event id", 921 )
+					--]
+					End()
+				--]
+				End()
+				
+				Condition( "wait condition" )
+				--[
+					Param( "operation", "or" )
+					
+					Condition( "recv event from ts" )
+					--[
+						Param( "trigger type", "object" )
+						Param( "event id", 871 )
+					--]
+					End()
+					
+					Condition( "recv event from wps" )
+					--[
+						Param( "wps index", 34002 )
+						Param( "event id", 881 )
+					--]
+					End()
+				--]
+				End()
+				
+				Condition( "wait condition" )
+				--[
+					Param( "operation", "or" )
+					
+					Condition( "recv event from ts" )
+					--[
+						Param( "trigger type", "object" )
+						Param( "event id", 872 )
+					--]
+					End()
+					
+					Condition( "recv event from wps" )
+					--[
+						Param( "wps index", 34003 )
+						Param( "event id", 903 )
+					--]
+					End()
+				--]
+				End()
+			--]
+			End()
+			
+-- The following statement was despawn with all the npc pc trigger, pc trigger without Sikkim spawn the npc.
+-- But in every time it sps pc trigger to activate each of the npc, so ui disable, we believe the syntax is not required.
+-- But perhaps you do not know without deleting the script for stability just doom.
+			
+			-- pc trigger 가진 입장 npc 모두 despawn
+			Action( "remove npc" )
+			--[
+				Param( "index", 1657103 )
+				Param( "type", "clear" )
+			--]
+			End()
+			
+			Action( "remove npc" )
+			--[
+				Param( "index", 1501105 )
+				Param( "type", "clear" )
+			--]
+			End()
+			
+			Action( "remove npc" )
+			--[
+				Param( "index", 4512501 )
+				Param( "type", "clear" )
+			--]
+			End()
+			
+			-- pc trigger 없는 입장 npc spawn
+			Action( "add npc" )
+			--[
+				Param( "index", 1657104 )
+				Param( "loc x", 715.32 )
+				Param( "loc y", 34.48 )
+				Param( "loc z", -728.66 )
+				Param( "dir x", -0.89 )
+				Param( "dir z", 0.45 )
+				Param( "no spawn wait", "true" )
+				Param( "stand alone", "true" )
+			--]
+			End()
+			
+			Action( "add npc" )
+			--[
+				Param( "index", 1501106 )
+				Param( "loc x", 810.23 )
+				Param( "loc y", 34.48 )
+				Param( "loc z", -818.48 )
+				Param( "dir x", 0.14 )
+				Param( "dir z", 0.99 )
+				Param( "no spawn wait", "true" )
+				Param( "stand alone", "true" )
+			--]
+			End()
+			
+			Action( "add npc" )
+			--[
+				Param( "index", 4512502 )
+				Param( "loc x", 825.92 )
+				Param( "loc y", 34.48 )
+				Param( "loc z", -743.57 )
+				Param( "dir x", -0.98 )
+				Param( "dir z", -0.21 )
+				Param( "no spawn wait", "true" )
+				Param( "stand alone", "true" )
+			--]
+			End()
+			
+			-- "승천의 구술" 받침대 pop-up 됨
+			Action( "change object state" )
+			--[
+				Param( "index", 80 )
+				Param( "state", 1 )
+				Param( "substate show", 1)
+			--]
+			End()
+			
+			-- 승천의 구슬 spawn
+			Action( "add npc" )
+			--[
+				Param( "index", 5781101 )
+				Param( "loc x", 794.89 )
+				Param( "loc y", 45.10 )
+				Param( "loc z", -671.76 )
+				Param( "dir x", -0.36 )
+				Param( "dir z", -0.93 )
+			--]
+			End()
+			
+			-- If you use a key item in view of the waiting time for waiting for the system message out
+			-- 5초간 대기
+			Action( "wait" )
+			--[
+				Condition( "check time"	)
+				--[
+					Param( "time", 5 )
+				--]
+				End()
+			--]
+			End()
+			
+			-- It has broken all of the energy supply of the second kolreyi tower. You can now climb to the top of the tower.
+			Action( "system message" )
+			--[
+				Param( "notify", "notice" )
+				Param( "text index", 82 )
+			--]
+			End()
+		--]
+		End()
+		
+		-- wps Sikkim continued until 666 to receive event
+		Action( "wait" )
+		--[
+			Condition( "recv event from ts" )
+			--[
+				Param( "trigger type", "quest" )
+				Param( "event id", 666 )
+			--]
+			End()
+		--]
+		End()
+	--]
+	End()
+--]
+End()

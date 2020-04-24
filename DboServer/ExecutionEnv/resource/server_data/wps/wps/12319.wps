@@ -1,0 +1,712 @@
+GameStage(0)
+--[
+	Action( "add mob" )
+	--[
+		Param( "index", 31853601 )
+		Param( "group", 12319 )
+		Param( "loc x", 306.481 )
+		Param( "loc y", 145.129 )
+		Param( "loc z", 61.451 )
+		Param( "dir x", 0.50 )
+		Param( "dir z", 0.87 )
+		Param( "no spawn wait", "true" )
+	--]
+	End()
+
+	Action( "function" )
+	--[
+		Condition( "child" )
+		--[
+			Action( "while" )
+			--[
+				Action( "loop" )
+				--[
+					Action( "wait" )
+					--[
+						Condition( "check battle" )
+						--[
+							Param( "type", "mob" )
+							Param( "group", 12319 )
+							Param( "is battle", "true" )
+						--]
+						End()
+					--]
+					End()
+
+					Action( "change object state" )
+					--[
+						Param( "index", 8 )
+						Param( "state", 3 )
+						Param( "substate show", 1 )
+					--]
+					End()
+
+					Action( "calculate" )
+					--[
+						Param( "declare", "int toc = 0" )
+						Param( "express", "toc = RandomRange( 1, 4 )" )
+					--]
+					End()
+
+					Action( "switch" )
+					--[
+						Param( "compare variable", "toc" )
+
+						Action( "case" )
+						--[
+							Param( "value", 1 )
+
+							Action( "change object state" )
+							--[
+								Param( "index", 13 )
+								Param( "state", 0 )
+								Param( "substate show", 1 )
+								Param( "substate unselect", 0 )
+							--]
+							End()
+
+							Action( "change object state" )
+							--[
+								Param( "index", 17 )
+								Param( "state", 0 )
+								Param( "substate show", 1 )
+								Param( "substate unselect", 0 )
+							--]
+							End()
+
+							Action( "change object state" )
+							--[
+								Param( "index", 21 )
+								Param( "state", 0 )
+								Param( "substate show", 1 )
+								Param( "substate unselect", 0 )
+							--]
+							End()
+
+							Action( "change object state" )
+							--[
+								Param( "index", 25 )
+								Param( "state", 0 )
+								Param( "substate show", 1 )
+								Param( "substate unselect", 0 )
+							--]
+							End()
+						--]
+						End()
+		
+						Action( "case" )
+						--[
+							Param( "value", 2 )
+
+							Action( "change object state" )
+							--[
+								Param( "index", 14 )
+								Param( "state", 0 )
+								Param( "substate show", 1 )
+								Param( "substate unselect", 0 )
+							--]
+							End()
+
+							Action( "change object state" )
+							--[
+								Param( "index", 18 )
+								Param( "state", 0 )
+								Param( "substate show", 1 )
+								Param( "substate unselect", 0 )
+							--]
+							End()
+
+							Action( "change object state" )
+							--[
+								Param( "index", 22 )
+								Param( "state", 0 )
+								Param( "substate show", 1 )
+								Param( "substate unselect", 0 )
+							--]
+							End()
+
+							Action( "change object state" )
+							--[
+								Param( "index", 26 )
+								Param( "state", 0 )
+								Param( "substate show", 1 )
+								Param( "substate unselect", 0 )
+							--]
+							End()
+						--]
+						End()
+
+						Action( "case" )
+						--[
+							Param( "value", 3 )
+
+							Action( "change object state" )
+							--[
+								Param( "index", 15 )
+								Param( "state", 0 )
+								Param( "substate show", 1 )
+								Param( "substate unselect", 0 )
+							--]
+							End()
+
+							Action( "change object state" )
+							--[
+								Param( "index", 19 )
+								Param( "state", 0 )
+								Param( "substate show", 1 )
+								Param( "substate unselect", 0 )
+							--]
+							End()
+
+							Action( "change object state" )
+							--[
+								Param( "index", 23 )
+								Param( "state", 0 )
+								Param( "substate show", 1 )
+								Param( "substate unselect", 0 )
+							--]
+							End()
+
+							Action( "change object state" )
+							--[
+								Param( "index", 27 )
+								Param( "state", 0 )
+								Param( "substate show", 1 )
+								Param( "substate unselect", 0 )
+							--]
+							End()
+						--]
+						End()
+
+						Action( "case" )
+						--[
+							Param( "value", 4 )
+
+							Action( "change object state" )
+							--[
+								Param( "index", 16 )
+								Param( "state", 0 )
+								Param( "substate show", 1 )
+								Param( "substate unselect", 0 )
+							--]
+							End()
+
+							Action( "change object state" )
+							--[
+								Param( "index", 20 )
+								Param( "state", 0 )
+								Param( "substate show", 1 )
+								Param( "substate unselect", 0 )
+							--]
+							End()
+
+							Action( "change object state" )
+							--[
+								Param( "index", 24 )
+								Param( "state", 0 )
+								Param( "substate show", 1 )
+								Param( "substate unselect", 0 )
+							--]
+							End()
+
+							Action( "change object state" )
+							--[
+								Param( "index", 28 )
+								Param( "state", 0 )
+								Param( "substate show", 1 )
+								Param( "substate unselect", 0 )
+							--]
+							End()
+						--]
+						End()
+					--]
+					End()
+				
+					Action( "function" )
+					--[
+						Condition( "child" )
+						--[
+							Action( "wait" )
+							--[
+								Param( "operation", "and" )
+								
+								Condition( "recv event from ts" )
+								--[
+									Param( "trigger type", "object" )
+									Param( "event id", 23620 )
+								--]
+								End()
+
+								Condition( "recv event from ts" )
+								--[
+									Param( "trigger type", "object" )
+									Param( "event id", 23630 )
+								--]
+								End()
+
+								Condition( "recv event from ts" )
+								--[
+									Param( "trigger type", "object" )
+									Param( "event id", 23640 )
+								--]
+								End()
+
+								Condition( "recv event from ts" )
+								--[
+									Param( "trigger type", "object" )
+									Param( "event id", 23650 )
+								--]
+								End()
+							--]
+							End()
+							
+							Action( "calculate" )
+							--[
+								Param( "declare", "int toc2 = 0" )
+								Param( "express", "toc2 = RandomRange( 1, 4 )" )
+							--]
+							End()
+
+							Action( "switch" )
+							--[
+								Param( "compare variable", "toc2" )
+
+								Action( "case" )
+								--[
+									Param( "value", 1 )
+
+									Action( "change object state" )
+									--[
+										Param( "index", 13 )
+										Param( "state", 0 )
+										Param( "substate show", 1 )
+										Param( "substate unselect", 0 )
+									--]
+									End()
+
+									Action( "change object state" )
+									--[
+										Param( "index", 17 )
+										Param( "state", 0 )
+										Param( "substate show", 1 )
+										Param( "substate unselect", 0 )
+									--]
+									End()
+
+									Action( "change object state" )
+									--[
+										Param( "index", 21 )
+										Param( "state", 0 )
+										Param( "substate show", 1 )
+										Param( "substate unselect", 0 )
+									--]
+									End()
+
+									Action( "change object state" )
+									--[
+										Param( "index", 25 )
+										Param( "state", 0 )
+										Param( "substate show", 1 )
+										Param( "substate unselect", 0 )
+									--]
+									End()
+								--]
+								End()
+		
+								Action( "case" )
+								--[
+									Param( "value", 2 )
+
+									Action( "change object state" )
+									--[
+										Param( "index", 14 )
+										Param( "state", 0 )
+										Param( "substate show", 1 )
+										Param( "substate unselect", 0 )
+									--]
+									End()
+
+									Action( "change object state" )
+									--[
+										Param( "index", 18 )
+										Param( "state", 0 )
+										Param( "substate show", 1 )
+										Param( "substate unselect", 0 )
+									--]
+									End()
+
+									Action( "change object state" )
+									--[
+										Param( "index", 22 )
+										Param( "state", 0 )
+										Param( "substate show", 1 )
+										Param( "substate unselect", 0 )
+									--]
+									End()
+
+									Action( "change object state" )
+									--[
+										Param( "index", 26 )
+										Param( "state", 0 )
+										Param( "substate show", 1 )
+										Param( "substate unselect", 0 )
+									--]
+									End()
+								--]
+								End()
+
+								Action( "case" )
+								--[
+									Param( "value", 3 )
+
+									Action( "change object state" )
+									--[
+										Param( "index", 15 )
+										Param( "state", 0 )
+										Param( "substate show", 1 )
+										Param( "substate unselect", 0 )
+									--]
+									End()
+
+									Action( "change object state" )
+									--[
+										Param( "index", 19 )
+										Param( "state", 0 )
+										Param( "substate show", 1 )
+										Param( "substate unselect", 0 )
+									--]
+									End()
+
+									Action( "change object state" )
+									--[
+										Param( "index", 23 )
+										Param( "state", 0 )
+										Param( "substate show", 1 )
+										Param( "substate unselect", 0 )
+									--]
+									End()
+
+									Action( "change object state" )
+									--[
+										Param( "index", 27 )
+										Param( "state", 0 )
+										Param( "substate show", 1 )
+										Param( "substate unselect", 0 )
+									--]
+									End()
+								--]
+								End()
+
+								Action( "case" )
+								--[
+									Param( "value", 4 )
+
+									Action( "change object state" )
+									--[
+										Param( "index", 16 )
+										Param( "state", 0 )
+										Param( "substate show", 1 )
+										Param( "substate unselect", 0 )
+									--]
+									End()
+
+									Action( "change object state" )
+									--[
+										Param( "index", 20 )
+										Param( "state", 0 )
+										Param( "substate show", 1 )
+										Param( "substate unselect", 0 )
+									--]
+									End()
+
+									Action( "change object state" )
+									--[
+										Param( "index", 24 )
+										Param( "state", 0 )
+										Param( "substate show", 1 )
+										Param( "substate unselect", 0 )
+									--]
+									End()
+
+									Action( "change object state" )
+									--[
+										Param( "index", 28 )
+										Param( "state", 0 )
+										Param( "substate show", 1 )
+										Param( "substate unselect", 0 )
+									--]
+									End()
+								--]
+								End()
+							--]
+							End()
+						--]
+						End()
+
+						Action( "wait" )
+						--[
+							Condition( "check battle" )
+							--[
+								Param( "type", "mob" )
+								Param( "group", 12319 )
+								Param( "is battle", "false" )
+							--]
+							End()
+						--]
+						End()
+					--]
+					End()
+				--]
+				End()
+			--]
+			End()
+		--]
+		End()
+
+		Condition( "child" )
+		--[
+			Action( "while" )
+			--[
+				Action( "loop" )
+				--[
+					Action( "wait" )
+					--[
+						Condition( "check battle" )
+						--[
+							Param( "type", "mob" )
+							Param( "group", 12319 )
+							Param( "is battle", "true" )
+						--]
+						End() 
+					--]
+					End()
+
+					Action( "wait" )
+					--[
+						Condition( "check battle" )
+						--[
+							Param( "type", "mob" )
+							Param( "group", 12319 )
+							Param( "is battle", "false" )
+						--]
+						End() 
+					--]
+					End()
+
+					Action( "remove mobgroup" )
+					--[
+						Param( "group", 12319 )
+						Param( "type", "clear" )
+					--]
+					End()
+
+					Action( "add mob" )
+					--[
+						Param( "index", 31853601 )
+						Param( "group", 12319 )
+						Param( "loc x", 306.481 )
+						Param( "loc y", 145.129 )
+						Param( "loc z", 61.451 )
+						Param( "dir x", 0.50 )
+						Param( "dir z", 0.87 )
+						Param( "no spawn wait", "true" )
+					--]
+					End()
+
+					Action( "change object state" )
+					--[
+						Param( "index", 13 )
+						Param( "state", 3 )
+						Param( "substate show", 0 )
+						Param( "substate unselect", 1 )
+					--]
+					End()
+
+					Action( "change object state" )
+					--[
+						Param( "index", 14 )
+						Param( "state", 3 )
+						Param( "substate show", 0 )
+						Param( "substate unselect", 1 )
+					--]
+					End()
+
+					Action( "change object state" )
+					--[
+						Param( "index", 15 )
+						Param( "state", 3 )
+						Param( "substate show", 0 )
+						Param( "substate unselect", 1 )
+					--]
+					End()
+
+					Action( "change object state" )
+					--[
+						Param( "index", 16 )
+						Param( "state", 3 )
+						Param( "substate show", 0 )
+						Param( "substate unselect", 1 )
+					--]
+					End()
+
+					Action( "change object state" )
+					--[
+						Param( "index", 17 )
+						Param( "state", 3 )
+						Param( "substate show", 0 )
+						Param( "substate unselect", 1 )
+					--]
+					End()
+
+					Action( "change object state" )
+					--[
+						Param( "index", 18 )
+						Param( "state", 3 )
+						Param( "substate show", 0 )
+						Param( "substate unselect", 1 )
+					--]
+					End()
+
+					Action( "change object state" )
+					--[
+						Param( "index", 19 )
+						Param( "state", 3 )
+						Param( "substate show", 0 )
+						Param( "substate unselect", 1 )
+					--]
+					End()
+
+					Action( "change object state" )
+					--[
+						Param( "index", 20 )
+						Param( "state", 3 )
+						Param( "substate show", 0 )
+						Param( "substate unselect", 1 )
+					--]
+					End()
+
+					Action( "change object state" )
+					--[
+						Param( "index", 21 )
+						Param( "state", 3 )
+						Param( "substate show", 0 )
+						Param( "substate unselect", 1 )
+					--]
+					End()
+
+					Action( "change object state" )
+					--[
+						Param( "index", 22 )
+						Param( "state", 3 )
+						Param( "substate show", 0 )
+						Param( "substate unselect", 1 )
+					--]
+					End()
+
+					Action( "change object state" )
+					--[
+						Param( "index", 23 )
+						Param( "state", 3 )
+						Param( "substate show", 0 )
+						Param( "substate unselect", 1 )
+					--]
+					End()
+
+					Action( "change object state" )
+					--[
+						Param( "index", 24 )
+						Param( "state", 3 )
+						Param( "substate show", 0 )
+						Param( "substate unselect", 1 )
+					--]
+					End()
+
+					Action( "change object state" )
+					--[
+						Param( "index", 25 )
+						Param( "state", 3 )
+						Param( "substate show", 0 )
+						Param( "substate unselect", 1 )
+					--]
+					End()
+
+					Action( "change object state" )
+					--[
+						Param( "index", 26 )
+						Param( "state", 3 )
+						Param( "substate show", 0 )
+						Param( "substate unselect", 1 )
+					--]
+					End()
+
+					Action( "change object state" )
+					--[
+						Param( "index", 27 )
+						Param( "state", 3 )
+						Param( "substate show", 0 )
+						Param( "substate unselect", 1 )
+					--]
+					End()
+
+					Action( "change object state" )
+					--[
+						Param( "index", 28 )
+						Param( "state", 3 )
+						Param( "substate show", 0 )
+						Param( "substate unselect", 1 )
+					--]
+					End()
+
+					Action( "change object state" )
+					--[
+						Param( "index", 8 )
+						Param( "state", 1 )
+						Param( "substate show", 1 )
+					--]
+					End()
+				--]
+				End()
+			--]
+			End()
+		--]
+		End()
+
+		Action( "wait" )
+		--[
+			Condition( "check mobgroup" )
+			--[
+				Param( "group", 12319 )
+				Param( "count", 1 )
+			--]
+			End()
+		--]
+		End()
+
+		Action( "send event to ts" )
+		--[
+			Param( "trigger type", "quest" )
+			Param( "apply type", "register all" )
+			Param( "event id", 23480 )
+		--]
+		End()
+
+		Action( "change object state" )
+		--[
+			Param( "index", 8 )
+			Param( "state", 1 )
+			Param( "substate show", 1 )
+		--]
+		End()
+
+		Action( "change object state" )
+		--[
+			Param( "index", 9 )
+			Param( "state", 1 )
+			Param( "substate show", 1 )
+		--]
+		End()
+	--]
+	End()
+--]
+End()
+

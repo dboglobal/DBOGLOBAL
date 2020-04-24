@@ -1,0 +1,310 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Release4Client|Win32">
+      <Configuration>Release4Client</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release4Tools|Win32">
+      <Configuration>Release4Tools</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{837E47AA-E57B-46FF-B42F-26F23BCBA8DF}</ProjectGuid>
+    <RootNamespace>Ntl_Plugin_World</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release4Client|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v80</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release4Tools|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v80</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release4Client|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release4Tools|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>14.0.25431.1</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release4Client|Win32'">
+    <OutDir>$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release4Tools|Win32'">
+    <OutDir>$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release4Client|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(SolutionDir)Renderware\Include;$(ProjectDir)src\plcore;$(ProjectDir)os\win;$(ProjectDir)driver\d3d9;$(ProjectDir)\driver\common;$(ProjectDir)src;$(ProjectDir)src\pipe\p2\d3d9;$(ProjectDir)src\pipe\p2;$(ProjectDir)world\pipe\p2;$(ProjectDir)world\pipe\p2\d3d9;$(ProjectDir)world;$(DXSDK_DIR)Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_LIB;NOASM;d3d9;_CRT_SECURE_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <PrecompiledHeader />
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4311;4312;4267;4244;4267;4333;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <BufferSecurityCheck>true</BufferSecurityCheck>
+      <MinimalRebuild>false</MinimalRebuild>
+      <WholeProgramOptimization>true</WholeProgramOptimization>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release4Tools|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(SolutionDir)Renderware\Include;$(ProjectDir)src\plcore;$(ProjectDir)os\win;$(ProjectDir)driver\d3d9;$(ProjectDir)\driver\common;$(ProjectDir)src;$(ProjectDir)src\pipe\p2\d3d9;$(ProjectDir)src\pipe\p2;$(ProjectDir)world\pipe\p2;$(ProjectDir)world\pipe\p2\d3d9;$(ProjectDir)world;$(DXSDK_DIR)Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_LIB;NOASM;d3d9;_CRT_SECURE_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4311;4312;4267;4244;4267;4333;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <BufferSecurityCheck>true</BufferSecurityCheck>
+      <MinimalRebuild>false</MinimalRebuild>
+      <WholeProgramOptimization>true</WholeProgramOptimization>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="driver\common\cpuext.c" />
+    <ClCompile Include="driver\common\datblkcb.c" />
+    <ClCompile Include="driver\common\imrascnv.c" />
+    <ClCompile Include="driver\common\palquant.c" />
+    <ClCompile Include="driver\common\ssematml.c" />
+    <ClCompile Include="driver\d3d9\d3d92drend.c" />
+    <ClCompile Include="driver\d3d9\d3d9convrt.c" />
+    <ClCompile Include="driver\d3d9\d3d9device.c" />
+    <ClCompile Include="driver\d3d9\d3d9dxttex.c" />
+    <ClCompile Include="driver\d3d9\d3d9dxttex_add.c" />
+    <ClCompile Include="driver\d3d9\d3d9metric.c" />
+    <ClCompile Include="driver\d3d9\d3d9raster.c" />
+    <ClCompile Include="driver\d3d9\d3d9rendst.c" />
+    <ClCompile Include="driver\d3d9\d3d9texdic.c" />
+    <ClCompile Include="driver\d3d9\d3d9vertexbuffer.c" />
+    <ClCompile Include="driver\d3d9\drvequat.c" />
+    <ClCompile Include="os\win\osintf.c" />
+    <ClCompile Include="src\babbox.c" />
+    <ClCompile Include="src\babincam.c" />
+    <ClCompile Include="src\babinfrm.c" />
+    <ClCompile Include="src\babintex.c" />
+    <ClCompile Include="src\bacamera.c" />
+    <ClCompile Include="src\bacamval.c" />
+    <ClCompile Include="src\badevice.c" />
+    <ClCompile Include="src\baframe.c" />
+    <ClCompile Include="src\baim3doc.c" />
+    <ClCompile Include="src\baimage.c" />
+    <ClCompile Include="src\baimras.c" />
+    <ClCompile Include="src\baraster.c" />
+    <ClCompile Include="src\baresamp.c" />
+    <ClCompile Include="src\basync.c" />
+    <ClCompile Include="src\batextur.c" />
+    <ClCompile Include="src\batypehf.c" />
+    <ClCompile Include="src\pipe\p2\baim3d.c" />
+    <ClCompile Include="src\pipe\p2\bapipe.c" />
+    <ClCompile Include="src\pipe\p2\d3d9\im3dpipe.c" />
+    <ClCompile Include="src\pipe\p2\d3d9\nodeD3D9SubmitNoLight.c" />
+    <ClCompile Include="src\pipe\p2\p2altmdl.c" />
+    <ClCompile Include="src\pipe\p2\p2core.c" />
+    <ClCompile Include="src\pipe\p2\p2define.c" />
+    <ClCompile Include="src\pipe\p2\p2dep.c" />
+    <ClCompile Include="src\pipe\p2\p2heap.c" />
+    <ClCompile Include="src\pipe\p2\p2macros.c" />
+    <ClCompile Include="src\pipe\p2\p2renderstate.c" />
+    <ClCompile Include="src\pipe\p2\p2resort.c" />
+    <ClCompile Include="src\pipe\p2\p2stdcls.c" />
+    <ClCompile Include="src\pipe\p2\pipequat.c" />
+    <ClCompile Include="src\plcore\babinary.c" />
+    <ClCompile Include="src\plcore\babinmtx.c" />
+    <ClCompile Include="src\plcore\bacolor.c" />
+    <ClCompile Include="src\plcore\badebug.c" />
+    <ClCompile Include="src\plcore\baerr.c" />
+    <ClCompile Include="src\plcore\baimmedi.c" />
+    <ClCompile Include="src\plcore\balist.c" />
+    <ClCompile Include="src\plcore\bamatrix.c" />
+    <ClCompile Include="src\plcore\bamemory.c" />
+    <ClCompile Include="src\plcore\baresour.c" />
+    <ClCompile Include="src\plcore\bastream.c" />
+    <ClCompile Include="src\plcore\batkbin.c" />
+    <ClCompile Include="src\plcore\batkreg.c" />
+    <ClCompile Include="src\plcore\bavector.c" />
+    <ClCompile Include="src\plcore\resmem.c" />
+    <ClCompile Include="src\plcore\rpdbgerr.c">
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release4Client|Win32'">$(IntDir)%(Filename)1.obj</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release4Tools|Win32'">$(IntDir)%(Filename)1.obj</ObjectFileName>
+      <XMLDocumentationFileName Condition="'$(Configuration)|$(Platform)'=='Release4Client|Win32'">$(IntDir)%(Filename)1.xdc</XMLDocumentationFileName>
+      <XMLDocumentationFileName Condition="'$(Configuration)|$(Platform)'=='Release4Tools|Win32'">$(IntDir)%(Filename)1.xdc</XMLDocumentationFileName>
+    </ClCompile>
+    <ClCompile Include="src\plcore\rwdbgerr.c" />
+    <ClCompile Include="src\plcore\rwgrp.c" />
+    <ClCompile Include="src\plcore\rwstring.c" />
+    <ClCompile Include="src\rwdbgwor.c" />
+    <ClCompile Include="world\babinwor.c" />
+    <ClCompile Include="world\baclump.c" />
+    <ClCompile Include="world\bageomet.c" />
+    <ClCompile Include="world\balight.c" />
+    <ClCompile Include="world\bamateri.c" />
+    <ClCompile Include="world\bamatlst.c" />
+    <ClCompile Include="world\bamesh.c" />
+    <ClCompile Include="world\bameshop.c" />
+    <ClCompile Include="world\basector.c" />
+    <ClCompile Include="world\baworld.c" />
+    <ClCompile Include="world\baworobj.c" />
+    <ClCompile Include="world\NtlPluginWorldGlobal.c" />
+    <ClCompile Include="world\pipe\p2\bapipew.c" />
+    <ClCompile Include="world\pipe\p2\d3d9\D3D9lights.c" />
+    <ClCompile Include="world\pipe\p2\d3d9\D3D9pipe.c" />
+    <ClCompile Include="world\pipe\p2\d3d9\d3d9usage.c" />
+    <ClCompile Include="world\pipe\p2\d3d9\d3d9vertexdeclaration.c" />
+    <ClCompile Include="world\pipe\p2\d3d9\d3d9vertexshader.c" />
+    <ClCompile Include="world\pipe\p2\d3d9\d3d9vertexshaderutils.c" />
+    <ClCompile Include="world\pipe\p2\d3d9\native.c" />
+    <ClCompile Include="world\pipe\p2\d3d9\nodeD3D9AtomicAllInOne.c" />
+    <ClCompile Include="world\pipe\p2\d3d9\nodeD3D9WorldSectorAllInOne.c" />
+    <ClCompile Include="world\pipe\p2\d3d9\wrldpipe.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="driver\common\baequ.h" />
+    <ClInclude Include="driver\common\baprocfp.h" />
+    <ClInclude Include="driver\common\barwasmm.h" />
+    <ClInclude Include="driver\common\barwtyp.h" />
+    <ClInclude Include="driver\common\cpuext.h" />
+    <ClInclude Include="driver\common\datblkcb.h" />
+    <ClInclude Include="driver\common\imrascnv.h" />
+    <ClInclude Include="driver\common\palquant.h" />
+    <ClInclude Include="driver\common\ssematml.h" />
+    <ClInclude Include="driver\common\x86matml.h" />
+    <ClInclude Include="driver\common\x86matvc.h" />
+    <ClInclude Include="driver\d3d9\d3d92drend.h" />
+    <ClInclude Include="driver\d3d9\d3d9convrt.h" />
+    <ClInclude Include="driver\d3d9\d3d9device.h" />
+    <ClInclude Include="driver\d3d9\d3d9dxttex.h" />
+    <ClInclude Include="driver\d3d9\d3d9dxttex_add.h" />
+    <ClInclude Include="driver\d3d9\d3d9metric.h" />
+    <ClInclude Include="driver\d3d9\d3d9raster.h" />
+    <ClInclude Include="driver\d3d9\d3d9rendst.h" />
+    <ClInclude Include="driver\d3d9\d3d9texdic.h" />
+    <ClInclude Include="driver\d3d9\d3d9vertexbuffer.h" />
+    <ClInclude Include="driver\d3d9\dds.h" />
+    <ClInclude Include="driver\d3d9\drvfns.h" />
+    <ClInclude Include="driver\d3d9\drvmodel.h" />
+    <ClInclude Include="os\win\osintf.h" />
+    <ClInclude Include="os\win\ostypes.h" />
+    <ClInclude Include="src\babbox.h" />
+    <ClInclude Include="src\babincam.h" />
+    <ClInclude Include="src\babinfrm.h" />
+    <ClInclude Include="src\babintex.h" />
+    <ClInclude Include="src\bacamera.h" />
+    <ClInclude Include="src\bacamval.h" />
+    <ClInclude Include="src\baframe.h" />
+    <ClInclude Include="src\baim3doc.h" />
+    <ClInclude Include="src\baimage.h" />
+    <ClInclude Include="src\baimras.h" />
+    <ClInclude Include="src\baraster.h" />
+    <ClInclude Include="src\baresamp.h" />
+    <ClInclude Include="src\basync.h" />
+    <ClInclude Include="src\batextur.h" />
+    <ClInclude Include="src\batypehf.h" />
+    <ClInclude Include="src\pipe\p2\baim3d.h" />
+    <ClInclude Include="src\pipe\p2\bapipe.h" />
+    <ClInclude Include="src\pipe\p2\d3d9\im3dpipe.h" />
+    <ClInclude Include="src\pipe\p2\d3d9\nodeD3D9SubmitNoLight.h" />
+    <ClInclude Include="src\pipe\p2\d3d9\pip2model.h" />
+    <ClInclude Include="src\pipe\p2\p2altmdl.h" />
+    <ClInclude Include="src\pipe\p2\p2core.h" />
+    <ClInclude Include="src\pipe\p2\p2define.h" />
+    <ClInclude Include="src\pipe\p2\p2dep.h" />
+    <ClInclude Include="src\pipe\p2\p2heap.h" />
+    <ClInclude Include="src\pipe\p2\p2macros.h" />
+    <ClInclude Include="src\pipe\p2\p2renderstate.h" />
+    <ClInclude Include="src\pipe\p2\p2resort.h" />
+    <ClInclude Include="src\pipe\p2\p2stdcls.h" />
+    <ClInclude Include="src\plcore\babinary.h" />
+    <ClInclude Include="src\plcore\babinmtx.h" />
+    <ClInclude Include="src\plcore\bacolor.h" />
+    <ClInclude Include="src\plcore\badebug.h" />
+    <ClInclude Include="src\plcore\badevice.h" />
+    <ClInclude Include="src\plcore\baerr.h" />
+    <ClInclude Include="src\plcore\baimmedi.h" />
+    <ClInclude Include="src\plcore\balibtyp.h" />
+    <ClInclude Include="src\plcore\balist.h" />
+    <ClInclude Include="src\plcore\bamath.h" />
+    <ClInclude Include="src\plcore\bamatrix.h" />
+    <ClInclude Include="src\plcore\bamemory.h" />
+    <ClInclude Include="src\plcore\baresour.h" />
+    <ClInclude Include="src\plcore\bastream.h" />
+    <ClInclude Include="src\plcore\batkbin.h" />
+    <ClInclude Include="src\plcore\batkreg.h" />
+    <ClInclude Include="src\plcore\batype.h" />
+    <ClInclude Include="src\plcore\batypes.h" />
+    <ClInclude Include="src\plcore\bavector.h" />
+    <ClInclude Include="src\plcore\resmem.h" />
+    <ClInclude Include="src\plcore\rpcriter.h" />
+    <ClInclude Include="src\plcore\rpdbgerr.h" />
+    <ClInclude Include="src\plcore\rperror.h" />
+    <ClInclude Include="src\plcore\rwdbgerr.h" />
+    <ClInclude Include="src\plcore\rwgrp.h" />
+    <ClInclude Include="src\plcore\rwstring.h" />
+    <ClInclude Include="src\plcore\rwversion.h" />
+    <ClInclude Include="world\babinwor.h" />
+    <ClInclude Include="world\baclump.h" />
+    <ClInclude Include="world\bageomet.h" />
+    <ClInclude Include="world\balight.h" />
+    <ClInclude Include="world\bamateri.h" />
+    <ClInclude Include="world\bamatlst.h" />
+    <ClInclude Include="world\bamesh.h" />
+    <ClInclude Include="world\bameshop.h" />
+    <ClInclude Include="world\basector.h" />
+    <ClInclude Include="world\baworld.h" />
+    <ClInclude Include="world\baworobj.h" />
+    <ClInclude Include="world\NtlPluginWorldGlobal.h" />
+    <ClInclude Include="world\pipe\p2\bapipew.h" />
+    <ClInclude Include="world\pipe\p2\d3d9\D3D9lights.h" />
+    <ClInclude Include="world\pipe\p2\d3d9\D3D9pipe.h" />
+    <ClInclude Include="world\pipe\p2\d3d9\d3d9usage.h" />
+    <ClInclude Include="world\pipe\p2\d3d9\d3d9vertexdeclaration.h" />
+    <ClInclude Include="world\pipe\p2\d3d9\d3d9vertexshader.h" />
+    <ClInclude Include="world\pipe\p2\d3d9\d3d9vertexshaderdefs.h" />
+    <ClInclude Include="world\pipe\p2\d3d9\d3d9vertexshaderutils.h" />
+    <ClInclude Include="world\pipe\p2\d3d9\native.h" />
+    <ClInclude Include="world\pipe\p2\d3d9\nodeD3D9AtomicAllInOne.h" />
+    <ClInclude Include="world\pipe\p2\d3d9\nodeD3D9WorldSectorAllInOne.h" />
+    <ClInclude Include="world\pipe\p2\d3d9\wrldpipe.h" />
+    <ClInclude Include="world\rpplugin.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="driver\common\baprocfp.asm" />
+    <None Include="driver\common\barwasmm.asm" />
+    <None Include="driver\common\iammx.inc" />
+    <None Include="driver\common\x86matml.asm" />
+    <None Include="driver\common\x86matvc.asm" />
+    <None Include="world\rperror.def" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\NtlPresentation\NtlPresentation.vcxproj">
+      <Project>{0ec8e06b-8138-4bfd-8af7-9cad1f2f65ac}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

@@ -1,0 +1,183 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="fmod">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="fmod\include">
+      <UniqueIdentifier>{fcaef5e2-ca19-4198-9781-528bf09c168e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Precompile">
+      <UniqueIdentifier>{eedfb6b8-8eae-4186-8634-7664b1835f4b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ChannelGroup">
+      <UniqueIdentifier>{427e7743-5723-4615-a855-2bbbed896b8f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Define">
+      <UniqueIdentifier>{f2572108-bb33-40e0-8740-3d0505cacaf2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Effect">
+      <UniqueIdentifier>{14fd1423-118f-4fc2-9ede-0fae37a92cf6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Main">
+      <UniqueIdentifier>{c96d5ed9-f9ad-4f82-8c07-0a969bea2cfb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Event">
+      <UniqueIdentifier>{face68c6-473b-44cc-98b8-cc848eaec494}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Helper">
+      <UniqueIdentifier>{1012194c-d785-4064-9fb2-15b49a688f33}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="precomp_ntlsound.h">
+      <Filter>Precompile</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlBGMGroup.h">
+      <Filter>ChannelGroup</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlChannelGroup.h">
+      <Filter>ChannelGroup</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlJingleGroup.h">
+      <Filter>ChannelGroup</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlMusicGroup.h">
+      <Filter>ChannelGroup</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlObjectGroup.h">
+      <Filter>ChannelGroup</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlWeatherGroup.h">
+      <Filter>ChannelGroup</Filter>
+    </ClInclude>
+    <ClInclude Include="GUISoundDefine.h">
+      <Filter>Define</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlSound.h">
+      <Filter>Define</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlSoundDefines.h">
+      <Filter>Define</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlSoundMessage.h">
+      <Filter>Define</Filter>
+    </ClInclude>
+    <ClInclude Include="WorldSoundDefine.h">
+      <Filter>Define</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlFadeInOut.h">
+      <Filter>Effect</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlSoundDSP.h">
+      <Filter>Effect</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlFMODSoundPool.h">
+      <Filter>Main</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlSoundGlobal.h">
+      <Filter>Main</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlSoundLogic.h">
+      <Filter>Main</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlSoundSubSystem.h">
+      <Filter>Main</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlSoundEvent.h">
+      <Filter>Event</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlSoundEventGenerator.h">
+      <Filter>Event</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlSoundEventHandler.h">
+      <Filter>Event</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlBGMPlayList.h">
+      <Filter>Helper</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlSoundManager.h" />
+    <ClInclude Include="fmod\fmod.h">
+      <Filter>fmod\include</Filter>
+    </ClInclude>
+    <ClInclude Include="fmod\fmod.hpp">
+      <Filter>fmod\include</Filter>
+    </ClInclude>
+    <ClInclude Include="fmod\fmod_codec.h">
+      <Filter>fmod\include</Filter>
+    </ClInclude>
+    <ClInclude Include="fmod\fmod_common.h">
+      <Filter>fmod\include</Filter>
+    </ClInclude>
+    <ClInclude Include="fmod\fmod_dsp.h">
+      <Filter>fmod\include</Filter>
+    </ClInclude>
+    <ClInclude Include="fmod\fmod_dsp_effects.h">
+      <Filter>fmod\include</Filter>
+    </ClInclude>
+    <ClInclude Include="fmod\fmod_errors.h">
+      <Filter>fmod\include</Filter>
+    </ClInclude>
+    <ClInclude Include="fmod\fmod_output.h">
+      <Filter>fmod\include</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="precomp_ntlsound.cpp">
+      <Filter>Precompile</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlBGMGroup.cpp">
+      <Filter>ChannelGroup</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlChannelGroup.cpp">
+      <Filter>ChannelGroup</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlJingleGroup.cpp">
+      <Filter>ChannelGroup</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlMusicGroup.cpp">
+      <Filter>ChannelGroup</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlObjectGroup.cpp">
+      <Filter>ChannelGroup</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlWeatherGroup.cpp">
+      <Filter>ChannelGroup</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlSound.cpp">
+      <Filter>Define</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlFadeInOut.cpp">
+      <Filter>Effect</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlSoundDSP.cpp">
+      <Filter>Effect</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlFMODSoundPool.cpp">
+      <Filter>Main</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlSoundGlobal.cpp">
+      <Filter>Main</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlSoundLogic.cpp">
+      <Filter>Main</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlSoundSubSystem.cpp">
+      <Filter>Main</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlSoundEvent.cpp">
+      <Filter>Event</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlSoundEventGenerator.cpp">
+      <Filter>Event</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlSoundEventHandler.cpp">
+      <Filter>Event</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlBGMPlayList.cpp">
+      <Filter>Helper</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlSoundManager.cpp" />
+  </ItemGroup>
+</Project>

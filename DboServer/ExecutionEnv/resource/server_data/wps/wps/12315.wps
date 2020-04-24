@@ -1,0 +1,63 @@
+GameStage(0)
+--[
+	Action( "add mobgroup" )
+	--[
+		Param( "group", 6 )
+		Param( "no spawn wait", "true" )
+	--]
+	End()
+
+	Action( "add mobgroup" )
+	--[
+		Param( "group", 7 )
+		Param( "no spawn wait", "true" )
+	--]
+	End()
+
+	Action( "wait" )
+	--[
+		Condition( "check mobgroup" )
+		--[
+			Param( "group", 7 )
+			Param( "count", 0 )
+		--]
+		End()
+	--]
+	End()
+
+	Action( "wait" )
+	--[
+		Condition( "check time" )
+		--[
+			Param( "time", 3 )
+		--]
+		End()
+	--]
+	End()
+
+	Action( "send event to ts" )
+	--[
+		Param( "trigger type", "quest" )
+		Param( "apply type", "register all" )
+		Param( "event id", 23300 )
+	--]
+	End()
+
+	Action( "send event to ts" )
+	--[
+		Param( "trigger type", "quest" )
+		Param( "apply type", "register all" )
+		Param( "event id", 23310 )
+	--]
+	End()
+
+	Action( "send event to ts" )
+	--[
+		Param( "trigger type", "quest" )
+		Param( "apply type", "register all" )
+		Param( "event id", 23320 )
+	--]
+	End()
+--]
+End()
+

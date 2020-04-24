@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Main">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Precomp">
+      <UniqueIdentifier>{b96ea135-42b3-48e4-b6e3-c361b548ceb9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Timer">
+      <UniqueIdentifier>{566e839f-c9d7-47d1-ba8a-e9bc5b317751}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="TestPathEngine.cpp">
+      <Filter>Main</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Precomp</Filter>
+    </ClCompile>
+    <ClCompile Include="TestTimer.cpp">
+      <Filter>Timer</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="stdafx.h">
+      <Filter>Precomp</Filter>
+    </ClInclude>
+    <ClInclude Include="TestTimer.h">
+      <Filter>Timer</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

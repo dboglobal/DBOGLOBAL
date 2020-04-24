@@ -1,0 +1,63 @@
+------------------------------------------------------------------------------------------------------------
+-- Time Leap Quest 1 Ver 0.1
+--
+-- Begin : 2008-08-25
+--
+-- Copyright : ⓒ NTL-Inc Co., Ltd
+--
+-- Author : YeoHyeonJoon (souled@ntl-inc.com)
+------------------------------------------------------------------------------------------------------------
+-- bgm 규칙
+-- BGM_TLQ1 : 기본 배경음
+-- BGM_TMQ_COMMON :  전투가 없는 시네마틱
+-- BGM_TMQ_EVENT :  전투로 이어지는 시네마틱, 이어지는 전투가 종료될 때까지 틈
+-- BGM_TMQ_BOSS :  중간보스 및 보스전.
+-- BGM_MIRA_THEME :  미라 등장 시
+------------------------------------------------------------------------------------------------------------
+
+GameStage(0)
+--[
+
+--BGM Play
+	Action( "play bgm" )
+	--[
+		Param( "play", "true")
+		Param( "name", "BGM\\BGM_TLQ1.ogg")
+		Param( "loop", "true")
+	--]
+	End()
+
+--손오반 등장
+	Action( "add npc" )
+	--[
+		Param( "index", 6201101)
+		Param( "loc x", 915.43)
+		Param( "loc y", 9)
+		Param( "loc z", -963.71)
+		Param( "dir x", -0.22)
+		Param( "dir z", -0.97)
+		Param( "play script", 6201101 )
+		Param( "play scene", 1 )
+	--]
+	End()
+	
+--Pile event wait (we dont want the script to end unless player leave tlq thatswhy endless wait)
+	Action("wait")
+	--[
+		Condition( "recv ts event" )
+		--[
+			Param( "trigger type", "quest" );
+			Param( "event id", 16020 )
+		--]
+		End()
+	--]
+	End()
+	
+--]
+End()
+
+GameFailed()
+--[
+
+--]
+End()

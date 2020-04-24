@@ -1,0 +1,96 @@
+
+GameStage(0)
+--[
+        Action( "change sps scene" )
+        --[
+                Param( "index", 4151112 )
+                Param( "play script", 4151112 )
+                Param( "play scene", 1 )
+        --]
+        End()
+        
+        Action( "change sps scene" )
+        --[
+                Param( "index", 4651106 )
+                Param( "play script", 4651106 )
+                Param( "play scene", 1 )
+        --]
+        End()
+        
+        Action( "change sps scene" )
+        --[
+                Param( "index", 6313111 )
+                Param( "play script", 6313111 )
+                Param( "play scene", 1 )
+        --]
+        End()
+        
+        Action( "function" )
+        --[
+                Condition( "child" )
+                --[
+                        Action( "wait" )
+                        --[
+                                Condition( "check time" )
+                                --[
+                                        Param( "time", 600 )
+                                --]
+                                End()
+                        --]
+                        End()
+                        
+                        Action( "wps fail" )
+                        --[
+                        
+                        --]
+                        End()
+                --]
+                End()
+                
+                Action( "wait" )
+                --[
+                        Param( "operation", "and" )
+                        
+                        Condition( "recv event from sps" )
+                        --[
+                                Param( "object type", "npc" )
+                                Param( "object index", 4151112 )
+                                Param( "event id", 539 )
+                        --]
+                        End()
+                        
+                        Condition( "recv event from sps" )
+                        --[
+                                Param( "object type", "npc" )
+                                Param( "object index", 4651106 )
+                                Param( "event id", 540 )
+                        --]
+                        End()
+                        
+                        Condition( "recv event from sps" )
+                        --[
+                                Param( "object type", "npc" )
+                                Param( "object index", 6313111 )
+                                Param( "event id", 541 )
+                        --]
+                        End()
+                --]
+                End()
+
+                Action( "send event to ts" )
+                --[
+                        Param( "trigger type", "quest" )
+                        Param( "apply type", "register all" )
+                        Param( "event id", 542 )
+                --]
+                End()            
+        --]
+        End()
+--]
+End()
+
+GameFailed()
+--[
+	
+--]
+End()

@@ -1,0 +1,120 @@
+-- UD2 Normal
+-- 개조 피라후 머신 사망시 문 열음
+
+GameStage( 0 )
+--[
+	Action( "function" )
+	--[
+		Condition( "child" )
+		--[
+			Action( "while" )
+			--[
+				Action( "loop" )
+				--[
+
+					-- 개조 피라후 머신 spawn
+					Action("add mobgroup")
+					--[
+						Param("group", 5)
+						Param("no spawn wait", "true")
+					--]
+					End()
+									
+					-- 부하 spawn
+					Action("add mobgroup")
+					--[
+						Param("group", 13)
+						Param("no spawn wait", "true")
+					--]
+					End()
+
+
+					-- The battle went on
+					Action( "wait" )
+					--[
+						Condition( "check battle" )
+						--[
+							Param( "type", "mob" )
+							Param( "group", 5 )
+							Param( "is battle", "true" )
+						--]
+						End()
+					--]
+					End()
+					
+					-- When the battle is released
+					Action( "wait" )
+					--[
+						Condition( "check battle" )
+						--[
+							Param( "type", "mob" )
+							Param( "group", 5 )
+							Param( "is battle", "false" )
+						--]
+						End()
+					--]
+					End()
+					
+					-- mob을 모두 지우고
+					Action( "remove mobgroup" )
+					--[
+						Param( "group", 5 )
+						Param( "type", "clear" )
+					--]
+					End()
+					
+					Action( "remove mobgroup" )
+					--[
+						Param( "group", 13 )
+						Param( "type", "clear" )
+					--]
+					End()
+					
+					-- loop가 한바퀴 돌아 mob을 다시 spawn한다
+				-- loop end
+				--]
+				End()
+			--while end
+			--]
+			End()
+		--child end
+		--]
+		End()
+		
+		-- The modified Pirafu machine dies and exits from the loop.
+		-- Note: count must be 1. If 0 is set, it recognizes the process of erasing in the loop
+		-- I get out of the loop when I do not want it.
+		Action( "wait" )
+		--[
+			Condition( "check mobgroup" )
+			--[
+				Param( "group", 5 )
+				Param( "count", 1 ) 
+			--]
+			End()
+		--]
+		End()
+		
+	-- function end
+	--]
+	End()
+	
+	Action( "wait" )
+	--[
+		Condition( "check time" )
+		--[
+			Param( "time", 2 )
+		--]
+		End()
+	--]
+	End()
+	
+	Action( "change object state" )
+	--[
+		Param( "index", 11 )
+		Param( "state", 1 )
+		Param( "substate show", 1 )
+	--]
+	End()
+--]
+End()

@@ -1,0 +1,164 @@
+GameStage(0)
+--[
+	Action( "add mob" )
+	--[
+		Param( "index", 1515104 )
+		Param( "group", 257601 )
+		Param( "loc x", -1217.88 )
+		Param( "loc y", -132.22 )
+		Param( "loc z", -3638.49 )
+		Param( "dir x", 0.72 )
+		Param( "dir z", -0.69 )
+		Param( "play script", 1515104 )
+		Param( "play scene", 1 )
+	--]
+	End()
+
+	Action( "add mob" )
+	--[
+		Param( "index", 1515104 )
+		Param( "group", 257601 )
+		Param( "loc x", -1207.91 )
+		Param( "loc y", -132.52 )
+		Param( "loc z", -3635.23 )
+		Param( "dir x", -0.59 )
+		Param( "dir z", -0.81 )
+		Param( "play script", 1515104 )
+		Param( "play scene", 1 )
+	--]
+	End()
+
+	Action( "wait" )
+	--[
+		Condition( "check time" )
+		--[
+			Param( "time", 3 )
+		--]
+		End()
+	--]
+	End()
+
+	Action( "remove npc" )
+	--[
+		Param( "index", 4371316 )
+		Param( "type", "clear" )
+	--]
+	End()
+
+	Action( "add npc" )
+	--[
+		Param( "index", 4371317 )
+		Param( "loc x", -1211.71 )
+		Param( "loc y", -132.37 )
+		Param( "loc z", -3641.26 )
+		Param( "dir x", 0.00 )
+		Param( "dir z", 1.00 )
+		Param( "no spawn wait", "true" )
+	--]
+	End()
+
+	Action( "function" )
+	--[
+		Condition( "child" )
+		--[
+			Action( "wait" )
+			--[
+				Param( "operation", "or" )
+				
+				Condition( "npc faint" )
+				--[
+					Param( "npc index", 4371317 )
+				--]
+				End()
+				
+				Condition( "check time" )
+				--[
+					Param( "time", 300 )
+				--]
+				End()
+			--]
+			End()
+
+			Action( "wps fail" )
+			--[
+			--]
+			End()
+		--]
+		End()
+
+		Action( "wait" )
+		--[
+			Condition( "check mobgroup" )
+			--[
+				Param( "group", 257601 )
+				Param( "count", 0 )
+			--]
+			End()
+		--]
+		End()
+	--]
+	End()
+
+	Action( "send event to ts" )
+	--[
+		Param( "trigger type", "quest" )
+		Param( "apply type", "register all" )
+		Param( "event id", 528 )
+	--]
+	End()
+
+	Action( "wait" )
+	--[
+		Condition( "check time" )
+		--[
+			Param( "time", 3 )
+		--]
+		End()
+	--]
+	End()
+
+	Action( "remove npc" )
+	--[
+		Param( "index", 4371317 )
+		Param( "type", "clear" )
+	--]
+	End()
+
+	Action( "add npc" )
+	--[
+		Param( "index", 4371316 )
+		Param( "loc x", -1211.71 )
+		Param( "loc y", -132.37 )
+		Param( "loc z", -3641.26 )
+		Param( "dir x", 0.00 )
+		Param( "dir z", 1.00 )
+		Param( "no spawn wait", "true" )
+		Param( "stand alone", "true" )
+	--]
+	End()
+--]
+End()
+
+GameFailed()
+--[
+	Action( "remove npc" )
+	--[
+		Param( "index", 4371317 )
+		Param( "type", "clear" )
+	--]
+	End()
+
+	Action( "add npc" )
+	--[
+		Param( "index", 4371316 )
+		Param( "loc x", -1211.71 )
+		Param( "loc y", -132.37 )
+		Param( "loc z", -3641.26 )
+		Param( "dir x", 0.00 )
+		Param( "dir z", 1.00 )
+		Param( "no spawn wait", "true" )
+		Param( "stand alone", "true" )
+	--]
+	End()
+--]
+End()

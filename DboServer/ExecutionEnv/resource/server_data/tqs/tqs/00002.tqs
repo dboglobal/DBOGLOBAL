@@ -1,0 +1,1608 @@
+------------------------------------------------------
+-- Time Machine Quest 1 - Easy
+--
+-- Begin : 2009-4-17
+--
+-- Copyright : ⓒ NTL-Inc Co., Ltd
+--
+-- Author : 여현준
+--
+------------------------------------------------------------------------------------------------------------
+-- bgm 규칙
+-- BGM_TMQ_MAIN1 : 기본 배경음
+-- BGM_TMQ_COMMON :  전투가 없는 시네마틱
+-- BGM_TMQ_EVENT :  전투로 이어지는 시네마틱, 이어지는 전투가 종료될 때까지 틈
+-- BGM_TMQ_BOSS :  중간보스 및 보스전.
+-- BGM_MIRA_THEME :  미라 등장 시
+------------------------------------------------------------------------------------------------------------
+
+GameBegin()
+--[
+
+-- Main BGM
+	Action( "play bgm" )
+	--[
+		Param( "play", "true")
+		Param( "name", "BGM\\BGM_TMQ1.ogg")
+		Param( "loop", "true")
+	--]
+	End()
+
+-- Stage Start Message를 발동 시킨다.
+	Action( "progress message" )
+	--[
+		Param( "progress type", "tmq" )
+		Param( "message type", "start" )
+		Param( "message value", 0 )
+	--]
+	End()
+	
+--전역조건
+	Action( "register condition" )
+	--[
+		Condition( "all player faint" )
+		--[   
+			Param( "tmq fail", "true" )
+		--]
+		End()
+	--]
+	End()
+	
+--레진 재배대 스폰
+	Action( "add mobgroup" )
+	--[
+		Param( "group", 1 )
+		Param("respawn","false")
+	--]
+	End()
+	
+--spawn saibaman which attack trunks
+	Action( "add mobgroup" )
+	--[
+		Param( "group", 2 )
+		Param("respawn","true")
+	--]
+	End()
+	
+--GBT 등장
+	Action( "add npc" )
+	--[
+		Param( "index", 2413109)
+		Param( "loc x", 747.71)
+		Param( "loc z", -950.54)
+		Param( "dir x", 0.22)
+		Param( "dir z", 0.97)
+		Param( "char condition", "click disable" )
+	--]
+	End()
+	
+--트랭크스 등장
+	Action( "add npc" )
+	--[
+		Param( "index", 7511102)
+		Param( "loc x", 758.57)
+		Param( "loc z", -909.41)
+		Param( "dir x", 0.14)
+		Param( "dir z", -0.99)
+		Param( "play script", 7511102 )
+		Param( "play scene", 1 )
+	--]
+	End()
+	
+	Action( "change stage" )
+	--[
+		Param( "stage", 1)
+	--]
+	End()
+	
+--]
+End()
+
+
+------------------------------------------------------------------------------------------------------------
+
+
+GameStage(1)
+--[
+	
+--전역조건
+	Action( "register condition" )
+	--[
+		Condition( "all player faint" )
+		--[   
+			Param( "tmq fail", "true" )
+		--]
+		End()
+		
+		Condition( "npc faint" )
+		--[   
+			Param( "npc index",7511102)
+			Param( "tmq fail","true")
+		--]
+		End()
+		
+	--]
+	End()
+	
+--Starts the Quest of the Trunks Crisis (11101).
+	Action( "send ts event" )
+	--[
+		Param( "trigger type", "quest" )
+		Param( "event id",11000)
+	--]
+	End()
+
+--모두 나래이션 읽기 전 까지 대기
+	Action("wait")
+	--[
+		Condition( "recv ts event" )
+		--[
+			Param( "trigger type", "quest" );
+			Param( "event id", 11010)
+			Param( "sync", "true" )
+		--]
+		End()
+	--]
+	End()
+
+-- Stage Start! BGM
+	Action( "play jingle" )
+	--[
+		Param( "name", "BGM\\JINGLE_STAGE_START.ogg")
+	--]
+	End()
+	
+-- stage 1 시작 메시지
+	Action( "progress message" )
+	--[
+		Param( "progress type", "tmq stage" )
+		Param( "message type", "start" )
+		Param( "message value", 1 )
+	--]
+	End()
+	
+--Stage 설명
+	Action( "information" )
+	--[
+		Param( "info type", "stage" )
+	--]
+	End()
+	
+--레진 재배대 카운트
+	Action( "wait" )
+	--[ 
+		Condition( "check mobgroup" )
+		--[
+			Param( "group", 1)
+			Param( "count", 2)
+		--]
+		End() 
+	--]
+	End()
+
+--시간 대기
+	Action("wait")
+	--[
+		Condition( "check time" )
+		--[
+			Param( "time", 5 )
+		--]
+		End()
+	--]
+	End()
+
+--BGM Play
+	Action( "play bgm" )
+	--[
+		Param( "play", "true")
+		Param( "name", "BGM\\BGM_TMQ_EVENT.ogg")
+		Param( "loop", "true")
+	--]
+	End()
+	
+--트랭크스 위기일발 퀘스트(11101) 종료.
+	Action( "send ts event" )
+	--[
+		Param( "trigger type", "quest" )
+		Param( "event id",11015)
+	--]
+	End()
+
+--세뇌 콩 재배맨 삭제
+	Action( "remove mobgroup" )
+	--[
+		Param( "group", 2 )
+		Param( "type", "faint" )
+	--]
+	End()
+
+-- Stage Clear! BGM
+	Action( "play jingle" )
+	--[
+		Param( "name", "BGM\\JINGLE_TB_RESULT.ogg")
+	--]
+	End()
+	
+-- stage 1 클리어 메시지
+	Action( "progress message" )
+	--[
+		Param( "progress type", "tmq stage" )
+		Param( "message type", "clear" )
+		Param( "message value", 1 )
+	--]
+	End()
+	
+--시간 대기
+	Action("wait")
+	--[
+		Condition( "check time" )
+		--[
+			Param( "time", 5 )
+		--]
+		End()
+	--]
+	End()
+
+-- Main BGM
+	Action( "play bgm" )
+	--[
+		Param( "play", "true")
+		Param( "name", "BGM\\BGM_TMQ1.ogg")
+		Param( "loop", "true")
+	--]
+	End()
+
+--트랭크스를따르라퀘스트(11102) 시작.
+	Action( "send ts event" )
+	--[
+		Param( "trigger type", "quest" )
+		Param( "event id",11020)
+	--]
+	End()
+	
+--한명이라도 나래이션 읽기 전 까지 대기
+	Action("wait")
+	--[
+		Condition( "recv ts event" )
+		--[
+			Param( "trigger type", "quest" );
+			Param( "event id", 11030)
+			Param( "sync", "false" )
+		--]
+		End()
+	--]
+	End()
+	
+-- 트랭크스 게이트로 이동 명령
+	Action( "send tqs event" )
+	--[
+		Param( "target type", "npc" )
+		Param( "target index", 7511102)
+		Param( "event id",11040)
+	--]
+	End()
+	
+--트랭크스 이동 완료까지 대기
+	Action("wait")
+	--[
+		Condition( "recv sps event" )
+		--[
+			Param( "target index", 7511102 )
+			Param( "event id", 11050)
+		--]
+		End()
+	--]
+	End()
+	
+--트랭크스 모두 이쪽으로 말풍선 띄우기
+	Action( "send ts event" )
+	--[
+		Param( "trigger type", "quest" )
+		Param( "event id",11060)
+	--]
+	End()
+	
+--트랭크스의 방향 표시
+	Action( "direction indicate" )
+	--[
+		Param( "apply", "true" )
+		Param( "indicate type", "point" )
+		Param( "loc x", 794.57)
+		Param( "loc z", -792.68)
+	--]
+	End()
+	
+--1명이라도 진입까지 대기
+	Action("wait")
+	--[
+		Condition( "area enter" )
+		--[   
+			Param( "origin x", 794.57)
+			Param( "origin z", -792.68)
+			Param( "radius",10)
+			Param( "tmq fail", "false" )
+			Param( "all member", "false" )
+		--]
+	    End()
+	--]
+	End()
+	
+--트랭크스 모두 이쪽으로 말풍선 지울겸 트랭크스를 따르라 퀘스트 종료시키기
+	Action( "send ts event" )
+	--[
+		Param( "trigger type", "quest" )
+		Param( "event id",11065)
+	--]
+	End()
+	
+--Eliminate direction indication of trunks
+	Action( "direction indicate" )
+	--[
+		Param( "apply", "false" )
+		Param( "indicate type", "point" )
+		Param( "loc x", 794.57)
+		Param( "loc z", -792.68)
+	--]
+	End()
+	
+--BGM Play
+	Action( "play bgm" )
+	--[
+		Param( "play", "true")
+		Param( "name", "BGM\\BGM_TMQ_COMMON.ogg")
+		Param( "prev bgm fadeout", "false" )
+		Param( "loop", "true")
+	--]
+	End()
+	
+--라데츠 도착 시네마틱
+	Action( "direct play" )
+	--[
+		Param( "type", "cinematic" )
+		Param( "id", 1004 )
+		Param("sync","true")
+		Param( "skip","true" )
+	--]  
+	End()
+	
+-- 노그 생성
+	Action( "add npc" )
+	--[ 
+		Param( "index",5061401)
+		Param( "loc x", 894.05)
+		Param( "loc z", -744.59)
+		Param( "dir x",0.95 )
+		Param( "dir z", 0.18)
+		Param( "play script", 5061401)
+		Param( "play scene", 1 )
+		Param( "char condition", "direct play" )
+	--]
+	End()
+	
+--인조인간 등장
+	Action( "add npc" )
+	--[
+		Param( "index", 3292101)
+		Param( "loc x", 793.28)
+		Param( "loc z", -755.79)
+		Param( "dir x", 0.03)
+		Param( "dir z", 1.00)
+		Param( "play script", 3292101 )
+		Param( "play scene", 1 )
+	--]
+	End()
+	
+--레진 재배대 스폰
+	Action( "add mobgroup" )
+	--[
+		Param( "group", 3 )
+		Param("respawn","false")
+	--]
+	End()
+	
+--레진 재배대 스폰
+	Action( "add mobgroup" )
+	--[
+		Param( "group", 4 )
+		Param("respawn","false")
+	--]
+	End()
+	
+--어설픈 함정 돌파 퀘스트(11103) 시작.
+	Action( "send ts event" )
+	--[
+		Param( "trigger type", "quest" )
+		Param( "event id",11070)
+	--]
+	End()
+	
+	Action( "send ts event" )
+	--[
+		Param( "trigger type", "quest" )
+		Param( "event id",11071)
+	--]
+	End()
+	
+	Action( "send ts event" )
+	--[
+		Param( "trigger type", "quest" )
+		Param( "event id",11072)
+	--]
+	End()
+	
+--인조인간 8000 작전 지시 종료까지 대기
+	Action("wait")
+	--[
+		Condition( "recv ts event" )
+		--[
+			Param( "trigger type", "quest" );
+			Param( "event id", 11080)
+			Param( "sync", "true" )
+		--]
+		End()
+	--]
+	End()
+	
+--인조인간8000  퇴장명령
+	Action( "send tqs event" )
+	--[
+		Param( "target type", "npc" )
+		Param( "target index", 3292101)
+		Param( "event id",11090)
+	--]
+	End()
+	
+--트랭크스 퇴장명령
+	Action( "send tqs event" )
+	--[
+		Param( "target type", "npc" )
+		Param( "target index", 7511102)
+		Param( "event id",11100)
+	--]
+	End()
+	
+	Action( "change stage" )
+	--[
+		Param( "stage", 2)
+	--]
+	End()
+	
+--]
+End()
+
+
+------------------------------------------------------------------------------------------------------------
+
+
+GameStage(2)
+--[
+	
+--Time Machine Count started
+	Action( "time countdown" )
+	--[
+		Param("mode","start")
+	--]
+	End()
+	
+--전역조건
+	Action( "register condition" )
+	--[
+		Condition( "all player faint" )
+		--[   
+			Param( "tmq fail", "true" )
+		--]
+		End()
+	--]
+	End()
+	
+--문 열기
+	Action( "change object state" )
+	--[
+		Param( "index", 48 )
+		Param( "state", 1 )
+		Param( "substate show", 1 )
+	--]
+	End()
+	
+-- Stage Start! BGM
+	Action( "play jingle" )
+	--[
+		Param( "name", "BGM\\JINGLE_STAGE_START.ogg")
+	--]
+	End()
+	
+-- stage 2 시작 메시지
+	Action( "progress message" )
+	--[
+		Param( "progress type", "tmq stage" )
+		Param( "message type", "start" )
+		Param( "message value", 2 )
+	--]
+	End()
+	
+--Stage 설명
+	Action( "information" )
+	--[
+		Param( "info type", "stage" )
+	--]
+	End()
+
+-- BGM 플레이 용 시간 대기
+	Action("wait")
+	--[
+		Condition( "check time" )
+		--[
+			Param( "time", 5 )
+		--]
+		End()
+	--]
+	End()
+
+-- Main BGM
+	Action( "play bgm" )
+	--[
+		Param( "play", "true")
+		Param( "name", "BGM\\BGM_TMQ1.ogg")
+		Param( "loop", "true")
+	--]
+	End()
+	
+--타임브레이커 전멸까지 대기
+	Action( "wait" )
+	--[ 
+		
+		Param( "operation", "and" )
+		
+		Condition( "recv ts event" )
+		--[
+			Param( "trigger type", "quest" );
+			Param( "event id", 11110)
+--			Param( "sync", "true" )
+		--]
+		End()
+		
+		Condition( "recv ts event" )
+		--[
+			Param( "trigger type", "quest" );
+			Param( "event id", 11120)
+--			Param( "sync", "true" )
+		--]
+		End()
+		
+	--]
+	End()
+	
+-- stage 2 클리어 메시지
+	Action( "progress message" )
+	--[
+		Param( "progress type", "tmq stage" )
+		Param( "message type", "clear" )
+		Param( "message value", 2 )
+	--]
+	End()
+
+-- Stage Clear! BGM
+	Action( "play jingle" )
+	--[
+		Param( "name", "BGM\\JINGLE_TB_RESULT.ogg")
+	--]
+	End()
+
+--트랭크스 등장
+	Action( "add npc" )
+	--[
+		Param( "index", 7511101)
+		Param( "loc x", 638.01)
+		Param( "loc z", -534.93)
+		Param( "dir x", 0.73)
+		Param( "dir z", -0.68)
+		Param( "play script", 7511101 )
+		Param( "play scene", 2 )
+	--]
+	End()
+	
+--트랭크스의 호출
+	Action( "broad message" )
+	--[
+		Param( "execution type", "time")
+		Param( "broad type", "normal")
+		Param( "showhide type", "fade" )
+		Param( "ballon shape type", "normal" )
+		Param( "speech dir type", "line" )
+		Param( "owner condition", "condition_1" )
+		Param( "owner type", "npc" )
+		Param( "owner tblidx", 7511101 )
+		Param( "speech index", 1100538 )
+		Param( "display time", 5 )
+	--]
+	End()
+	
+--트랭크스의 방향 표시
+	Action( "direction indicate" )
+	--[
+		Param( "apply", "true" )
+		Param( "indicate type", "point" )
+		Param( "loc x", 638.01)
+		Param( "loc z", -534.93)
+	--]
+	End()
+	
+--(더미)트랭크스 클릭 퀘스트11106 활성화
+	Action( "send ts event" )
+	--[
+		Param( "trigger type", "quest" )
+		Param( "event id",11130)
+	--]
+	End()	
+	
+--아무나 트랭크스 클릭까지 대기
+	Action("wait")
+	--[
+		Condition( "recv ts event" )
+		--[
+			Param( "trigger type", "quest" );
+			Param( "event id", 11150)
+			Param( "sync", "false" )
+		--]
+		End()
+	--]
+	End()
+	
+--트랭크스의 방향 표시 제거
+	Action( "direction indicate" )
+	--[
+		Param( "apply", "false" )
+		Param( "indicate type", "point" )
+		Param( "loc x", 638.01)
+		Param( "loc z", -534.93)
+	--]
+	End()
+	
+--(대화)트랭크스 클릭 퀘스트11108 시작
+	Action( "send ts event" )
+	--[
+		Param( "trigger type", "quest" )
+		Param( "event id",11160)
+	--]
+	End()
+	
+--(대화)트랭크스 클릭 퀘스트11108 종료까지 대기
+	Action("wait")
+	--[
+		Condition( "recv ts event" )
+		--[
+			Param( "trigger type", "quest" );
+			Param( "event id", 11170)
+			Param( "sync", "true" )
+		--]
+		End()
+	--]
+	End()
+	
+--트랭크스 퇴장명령
+	Action( "send tqs event" )
+	--[
+		Param( "target type", "npc" )
+		Param( "target index", 7511101)
+		Param( "event id",11175)
+	--]
+	End()
+	
+	Action( "change stage" )
+	--[
+		Param( "stage", 3)
+	--]
+	End()
+	
+--]
+End()
+
+
+------------------------------------------------------------------------------------------------------------
+
+
+GameStage(3)
+--[
+
+--전역조건
+	Action( "register condition" )
+	--[
+		Condition( "all player faint" )
+		--[   
+			Param( "tmq fail", "true" )
+		--]
+		End()
+	--]
+	End()
+
+	
+-- stage 3 시작 메시지
+	Action( "progress message" )
+	--[
+		Param( "progress type", "tmq stage" )
+		Param( "message type", "start" )
+		Param( "message value", 3 )
+	--]
+	End()
+
+-- Stage Start! BGM
+	Action( "play jingle" )
+	--[
+		Param( "name", "BGM\\JINGLE_STAGE_START.ogg")
+	--]
+	End()
+
+--Stage 설명
+	Action( "information" )
+	--[
+		Param( "info type", "stage" )
+	--]
+	End()
+	
+--스마일 농장 마을 해방 작전 퀘스트11109, 11110시작
+	Action( "send ts event" )
+	--[
+		Param( "trigger type", "quest" )
+		Param( "event id",11180)
+	--]
+	End()
+	
+	Action( "send ts event" )
+	--[
+		Param( "trigger type", "quest" )
+		Param( "event id",11181)
+	--]
+	End()
+	
+--타임브레이커 스폰
+	Action( "add mobgroup" )
+	--[
+		Param( "group", 5 )
+		Param("respawn","false")
+	--]
+	End()
+
+-- BGM 플레이 용 시간 대기
+	Action("wait")
+	--[
+		Condition( "check time" )
+		--[
+			Param( "time", 4 )
+		--]
+		End()
+	--]
+	End()	
+
+-- Main BGM
+	Action( "play bgm" )
+	--[
+		Param( "play", "true")
+		Param( "name", "BGM\\BGM_TMQ_EVENT.ogg")
+		Param( "loop", "true")
+	--]
+	End()
+
+--스마일 농장 마을 해방 작전 퀘스트 퀘스트11109, 11110 종료까지 대기
+	Action("wait")
+	--[
+		Param( "operation", "and" )
+		
+		Condition( "recv ts event" )
+		--[
+			Param( "trigger type", "quest" )
+			Param( "event id", 11190)
+			Param( "time", 240)
+			Param( "tmq fail", "true" )
+		--]
+		End()
+		
+		Condition( "recv ts event" )
+		--[
+			Param( "trigger type", "quest" )
+			Param( "event id", 11191)
+		--]
+		End()		
+	--]
+	End()
+
+--불꽃놀이 퀘스트11119 시작
+	Action( "send ts event" )
+	--[
+		Param( "trigger type", "quest" )
+		Param( "event id",11200)
+	--]
+	End()
+	
+--타임브레이커 스폰
+	Action( "add mobgroup" )
+	--[
+		Param( "group", 8 )
+		Param( "respawn" , "true" )
+	--]
+	End()
+	
+--시한폭탄 나타내기
+	Action( "change object state" )
+	--[
+		Param( "index", 50 )
+		Param( "state", 0 )
+		Param( "substate show", 1 )
+	--]
+	End()
+	
+--시한폭탄의 방향 표시
+	Action( "direction indicate" )
+	--[
+		Param( "apply", "true" )
+		Param( "indicate type", "point" )
+		Param( "loc x", 726.26)
+		Param( "loc z", -359.61)
+	--]
+	End()
+	
+--시한폭탄 해체까지 대기
+	Action("wait")
+	--[
+		Condition( "recv ts event" )
+		--[
+			Param( "trigger type", "object" )
+			Param( "event id", 11210)
+			Param( "time", 180)
+			Param( "tmq fail", "true" )
+		--]
+		End()
+	--]
+	End()
+
+--불꽃놀이 퀘스트11119 종료시키기
+	Action( "send ts event" )
+	--[
+		Param( "trigger type", "quest" )
+		Param( "event id",11220)
+	--]
+	End()
+	
+--타임 브레이커 삭제
+	Action( "remove mobgroup" )
+	--[
+		Param( "group", 8 )
+		Param( "type", "faint" )
+	--]
+	End()
+	
+--마을사람 쫀쫀 생성
+	Action( "add npc" )
+	--[
+		Param( "index", 5592103)
+		Param( "loc x", 716.99)
+		Param( "loc z", -456.83)
+		Param( "dir x", 0.96)
+		Param( "dir z", -0.28)
+	--]
+	End()
+	
+--마을사람 메헤헤 생성
+	Action( "add npc" )
+	--[
+		Param( "index", 2801111)
+		Param( "loc x", 757.07)
+		Param( "loc z", -411.84)
+		Param( "dir x", -0.72)
+		Param( "dir z", 0.69)
+	--]
+	End()
+	
+--마을사람 나야 생성
+	Action( "add npc" )
+	--[
+		Param( "index", 2951201)
+		Param( "loc x", 826.27)
+		Param( "loc z", -426.30)
+		Param( "dir x", -0.69)
+		Param( "dir z", 0.72)
+	--]
+	End()
+	
+--마을사람 밀밀 생성
+	Action( "add npc" )
+	--[
+		Param( "index", 3131207)
+		Param( "loc x", 808.97)
+		Param( "loc z", -341.02)
+		Param( "dir x", -0.93)
+		Param( "dir z", -0.36)
+	--]
+	End()
+	
+--마을사람 닥스 경찰관 생성
+	Action( "add npc" )
+	--[
+		Param( "index", 4072120)
+		Param( "loc x", 740.78)
+		Param( "loc z", -348.81)
+		Param( "dir x", -0.72)
+		Param( "dir z", -0.69)
+	--]
+	End()
+	
+	
+--마을사람 딜라이트 생성
+	Action( "add npc" )
+	--[
+		Param( "index", 3142208)
+		Param( "loc x", 659.27)
+		Param( "loc z", -327.54)
+		Param( "dir x", 0.93)
+		Param( "dir z", -0.36)
+	--]
+	End()
+	
+--시한폭탄의 방향 표시 제거
+	Action( "direction indicate" )
+	--[
+		Param( "apply", "false" )
+		Param( "indicate type", "point" )
+		Param( "loc x", 726.26)
+		Param( "loc z", -359.61)
+	--]
+	End()
+	
+-- stage 3 클리어 메시지
+	Action( "progress message" )
+	--[
+		Param( "progress type", "tmq stage" )
+		Param( "message type", "clear" )
+		Param( "message value", 3 )
+	--]
+	End()
+	
+-- Stage Clear! BGM
+	Action( "play jingle" )
+	--[
+		Param( "name", "BGM\\JINGLE_TB_RESULT.ogg")
+	--]
+	End()
+	
+--트랭크스 등장
+	Action( "add npc" )
+	--[
+		Param( "index", 7511101)
+		Param( "loc x", 712.90)
+		Param( "loc z", -304.23)
+		Param( "dir x", 0.39)
+		Param( "dir z", -0.92)
+		Param( "play script", 7511101 )
+		Param( "play scene", 3 )
+	--]
+	End()
+	
+--인조인간 등장
+	Action( "add npc" )
+	--[
+		Param( "index", 3292101)
+		Param( "loc x", 680.97)
+		Param( "loc z", -214.34)
+		Param( "dir x", -0.73)
+		Param( "dir z", 0.68)
+		Param( "play script", 3292101 )
+		Param( "play scene", 2 )
+	--]
+	End()
+	
+--레진 재배대 스폰
+	Action( "add mobgroup" )
+	--[
+		Param( "group", 9 )
+		Param("respawn","false")
+	--]
+	End()
+	
+--트랭크스의 호출
+	Action( "broad message" )
+	--[
+		Param( "execution type", "time")
+		Param( "broad type", "normal")
+		Param( "showhide type", "fade" )
+		Param( "ballon shape type", "normal" )
+		Param( "speech dir type", "line" )
+		Param( "owner condition", "condition_1" )
+		Param( "owner type", "npc" )
+		Param( "owner tblidx", 7511101 )
+		Param( "speech index", 1100538 )
+		Param( "display time", 5 )
+	--]
+	End()
+	
+--트랭크스의 방향 표시
+	Action( "direction indicate" )
+	--[
+		Param( "apply", "true" )
+		Param( "indicate type", "point" )
+		Param( "loc x", 712.90)
+		Param( "loc z", -304.23)
+	--]
+	End()
+	
+--(더미)트랭크스 클릭 퀘스트11120 활성화
+	Action( "send ts event" )
+	--[
+		Param( "trigger type", "quest" )
+		Param( "event id",11230)
+	--]
+	End()	
+	
+--아무나 트랭크스 클릭까지 대기
+	Action("wait")
+	--[
+		Condition( "recv ts event" )
+		--[
+			Param( "trigger type", "quest" );
+			Param( "event id", 11250)
+			Param( "sync", "false" )
+		--]
+		End()
+	--]
+	End()
+
+-- Main BGM
+	Action( "play bgm" )
+	--[
+		Param( "play", "true")
+		Param( "name", "BGM\\BGM_TMQ1.ogg")
+		Param( "loop", "true")
+	--]
+	End()
+
+--트랭크스의 방향 표시 제거
+	Action( "direction indicate" )
+	--[
+		Param( "apply", "false" )
+		Param( "indicate type", "point" )
+		Param( "loc x", 712.90)
+		Param( "loc z", -304.23)
+	--]
+	End()
+	
+--(대화)트랭크스 클릭 퀘스트11122 시작
+	Action( "send ts event" )
+	--[
+		Param( "trigger type", "quest" )
+		Param( "event id",11260)
+	--]
+	End()
+	
+--(대화)트랭크스 클릭 퀘스트11122 종료까지 대기
+	Action("wait")
+	--[
+		Condition( "recv ts event" )
+		--[
+			Param( "trigger type", "quest" );
+			Param( "event id", 11270)
+			Param( "sync", "true" )
+		--]
+		End()
+	--]
+	End()
+	
+--인조인간8000의 행방 퀘스트11123 시작
+	Action( "send ts event" )
+	--[
+		Param( "trigger type", "quest" )
+		Param( "event id",11275)
+	--]
+	End()
+	
+--트랭크스 이동 명령
+	Action( "send tqs event" )
+	--[
+		Param( "target type", "npc" )
+		Param( "target index", 7511101)
+		Param( "event id",11280)
+	--]
+	End()
+	
+--방향 표시
+	Action( "direction indicate" )
+	--[
+		Param( "apply", "true" )
+		Param( "indicate type", "point" )
+		Param( "loc x", 692.64)
+		Param( "loc z", -241.86)
+	--]
+	End()
+	
+--1명이라도 진입까지 대기
+	Action("wait")
+	--[
+		Condition( "area enter" )
+		--[   
+			Param( "origin x", 692.64)
+			Param( "origin z", -241.86)
+			Param( "radius",10)
+			Param( "tmq fail", "false" )
+			Param( "all member", "false" )
+		--]
+	    End()
+	--]
+	End()
+	
+--(대화)트랭크스 클릭 퀘스트 종료시키기
+	Action( "send ts event" )
+	--[
+		Param( "trigger type", "quest" )
+		Param( "event id",11305)
+	--]
+	End()
+	
+--방향 표시 제거
+	Action( "direction indicate" )
+	--[
+		Param( "apply", "false" )
+		Param( "indicate type", "point" )
+		Param( "loc x", 692.64)
+		Param( "loc z", -241.86)
+	--]
+	End()
+	
+--인조인간8000 대화 듣기 시작
+	Action( "send ts event" )
+	--[
+		Param( "trigger type", "quest" )
+		Param( "event id",11310)
+	--]
+	End()
+	
+--인조인간 이동 명령까지 대기
+	Action("wait")
+	--[
+		Condition( "recv ts event" )
+		--[
+			Param( "trigger type", "quest" );
+			Param( "event id", 11320)
+			Param( "sync", "true" )
+		--]
+		End()
+	--]
+	End()
+	
+--인조인간 이동
+	Action( "send tqs event" )
+	--[
+		Param( "target type", "npc" )
+		Param( "target index", 3292101)
+		Param( "event id",11325)
+	--]
+	End()
+	
+--문 열기
+	Action( "change object state" )
+	--[
+		Param( "index", 47 )
+		Param( "state", 1 )
+		Param( "substate show", 1 )
+	--]
+	End()
+	
+	Action( "change stage" )
+	--[
+		Param( "stage", 4)
+	--]
+	End()
+	
+--]
+End()
+
+
+------------------------------------------------------------------------------------------------------------
+
+
+GameStage(4)
+--[
+
+--전역조건
+	Action( "register condition" )
+	--[
+		Condition( "all player faint" )
+		--[   
+			Param( "tmq fail", "true" )
+		--]
+		End()
+	--]
+	End()
+
+
+--gbt 지우기	
+	Action( "remove npc" )
+	--[
+		Param( "index", 2413109 )
+		Param( "type", "clear" )
+	--]
+	End()	
+
+-- stage 4 시작 메시지
+	Action( "progress message" )
+	--[
+		Param( "progress type", "tmq stage" )
+		Param( "message type", "start" )
+		Param( "message value", 4 )
+	--]
+	End()
+	
+--Stage 설명
+	Action( "information" )
+	--[
+		Param( "info type", "stage" )
+	--]
+	End()
+	
+-- Stage Start! BGM
+	Action( "play jingle" )
+	--[
+		Param( "name", "BGM\\JINGLE_STAGE_START.ogg")
+	--]
+	End()
+	
+--추격전 퀘스트11124,11125 시작
+	Action( "send ts event" )
+	--[
+		Param( "trigger type", "quest" )
+		Param( "event id",11360)
+	--]
+	End()
+
+	Action( "send ts event" )
+	--[
+		Param( "trigger type", "quest" )
+		Param( "event id",11370)
+	--]
+	End()
+
+--타임브레이커 전멸까지 대기
+	Action( "wait" )
+	--[ 
+		
+		Param( "operation", "and" )
+		
+		Condition( "recv ts event" )
+		--[
+			Param( "trigger type", "quest" );
+			Param( "event id", 11380)
+--			Param( "sync", "true" )
+		--]
+		End()
+		
+		Condition( "recv ts event" )
+		--[
+			Param( "trigger type", "quest" );
+			Param( "event id", 11390)
+--			Param( "sync", "true" )
+		--]
+		End()
+		
+	--]
+	End()
+	
+--오브젝트 상태 변경 GBT Hope
+	Action( "change object state" )
+	--[
+		Param( "index", 52 )
+		Param( "state", 0 )
+		Param( "substate show", 1 )
+	--]
+	End()
+	
+--인조인간의 방향 표시
+	Action( "direction indicate" )
+	--[
+		Param( "apply", "true" )
+		Param( "indicate type", "point" )
+		Param( "loc x", 468.42)
+		Param( "loc z", 52.32)
+	--]
+	End()
+	
+--(사냥퀘1)인조인간8000 시작
+	Action( "send ts event" )
+	--[
+		Param( "trigger type", "quest" )
+		Param( "event id",11440)
+	--]
+	End()
+	
+	Action( "send ts event" )
+	--[
+		Param( "trigger type", "quest" )
+		Param( "event id",11450)
+	--]
+	End()
+	
+--트랭크스 지우기	
+	Action( "remove npc" )
+	--[
+		Param( "index", 7511101 )
+		Param( "type", "clear" )
+	--]
+	End()
+	
+--레진 재배대 스폰
+	Action( "add mobgroup" )
+	--[
+		Param( "group", 10 )
+		Param("respawn","false")
+	--]
+	End()
+	
+--한명이라도 진입까지 대기
+	Action("wait")
+	--[
+		Condition( "area enter" )
+		--[   
+			Param( "origin x", 457.22)
+			Param( "origin z", 107.52)
+			Param( "radius",62)
+			Param( "tmq fail", "false" )
+			Param( "all member", "false" )
+		--]
+	    End()
+	--]
+	End()
+	
+--인조인간의 방향 표시 제거
+	Action( "direction indicate" )
+	--[
+		Param( "apply", "false" )
+		Param( "indicate type", "point" )
+		Param( "loc x", 468.42)
+		Param( "loc z", 52.32)
+	--]
+	End()
+	
+--BGM Play
+	Action( "play bgm" )
+	--[
+		Param( "play", "true")
+		Param( "name", "BGM\\BGM_TMQ_BOSS.ogg")
+		Param( "loop", "true")
+	--]
+	End()
+	
+--인조인간 대사
+	Action( "send ts event" )
+	--[
+		Param( "trigger type", "quest" )
+		Param( "event id",11430)
+	--]
+	End()
+	
+--타임브레이커 전멸까지 대기
+	Action( "wait" )
+	--[ 
+		
+		Param( "operation", "and" )
+		
+		Condition( "recv ts event" )
+		--[
+			Param( "trigger type", "quest" );
+			Param( "event id", 11460)
+--			Param( "sync", "true" )
+		--]
+		End()
+		
+		Condition( "recv ts event" )
+		--[
+			Param( "trigger type", "quest" );
+			Param( "event id", 11470)
+--			Param( "sync", "true" )
+		--]
+		End()
+		
+	--]
+	End()
+
+--Time machine count stop
+	Action( "time countdown" )
+	--[
+		Param("mode","stop")
+	--]
+	End()
+	
+--라데츠 재등장 시네마틱
+	Action( "direct play" )
+	--[
+		Param( "type", "cinematic" )
+		Param( "id", 1005 )
+		Param("sync","true")
+		Param( "skip","true" )
+	--]  
+	End()
+	
+	Action( "change stage" )
+	--[
+		Param( "stage", 255)
+	--]
+	End()
+	
+--]
+End()
+
+
+------------------------------------------------------------------------------------------------------------
+
+GameEnd()
+--[
+
+--BGM Play
+	Action( "play bgm" )
+	--[
+		Param( "play", "true")
+		Param( "name", "BGM\\JINGLE_STAGE_RESULT.ogg")
+		Param( "loop", "true")
+	--]
+	End()
+
+--타고 온 타임머신 감추기
+	Action( "change object state" )
+	--[
+		Param( "index", 46 )
+		Param( "state", 3 )
+		Param( "substate show", 0 )
+	--]
+	End()
+	
+--타고 갈 타임머신 나타남
+	Action( "change object state" )
+	--[
+		Param( "index", 51 )
+		Param( "state", 0 )
+		Param( "substate show", 1 )
+	--]
+	End()
+	
+--시간 대기
+	Action("wait")
+	--[
+		Condition( "check time" )
+		--[
+			Param( "time", 5 )
+		--]
+		End()
+	--]
+	End()
+	
+--트랭크스 등장
+	Action( "add npc" )
+	--[
+		Param( "index", 7511101)
+		Param( "loc x", 384.52)
+		Param( "loc z", 130.36)
+		Param( "dir x", 1.00)
+		Param( "dir z", -0.05)
+	--]
+	End()
+
+--GBT 등장
+	Action( "add npc" )
+	--[
+		Param( "index", 2413109)
+		Param( "loc x", 383.45)
+		Param( "loc z", 132.17)
+		Param( "dir x", 0.98)
+		Param( "dir z", 0.17)
+		Param( "char condition", "click disable" )
+	--]
+	End()
+	
+--트랭크스의 호출
+	Action( "broad message" )
+	--[
+		Param( "execution type", "time")
+		Param( "broad type", "normal")
+		Param( "showhide type", "fade" )
+		Param( "ballon shape type", "normal" )
+		Param( "speech dir type", "line" )
+		Param( "owner condition", "condition_1" )
+		Param( "owner type", "npc" )
+		Param( "owner tblidx", 7511101 )
+		Param( "speech index", 1100538 )
+		Param( "display time", 5 )
+	--]
+	End()
+	
+--트랭크스의 방향 표시
+	Action( "direction indicate" )
+	--[
+		Param( "apply", "true" )
+		Param( "indicate type", "point" )
+		Param( "loc x", 384.52)
+		Param( "loc z", 130.36)
+	--]
+	End()
+	
+--아무나 트랭크스 클릭까지 대기
+	Action("wait")
+	--[
+		Condition( "recv ts event" )
+		--[
+			Param( "trigger type", "quest" );
+			Param( "event id", 11480)
+			Param( "sync", "false" )
+		--]
+		End()
+	--]
+	End()
+	
+--트랭크스의 방향 표시 제거
+	Action( "direction indicate" )
+	--[
+		Param( "apply", "false" )
+		Param( "indicate type", "point" )
+		Param( "loc x", 384.52)
+		Param( "loc z", 130.36)
+	--]
+	End()
+	
+--(대화)트랭크스 클릭 퀘스트11133 시작
+	Action( "send ts event" )
+	--[
+		Param( "trigger type", "quest" )
+		Param( "event id",11490)
+	--]
+	End()
+	
+--(대화)트랭크스 클릭 퀘스트11133 종료까지 대기
+	Action("wait")
+	--[
+		Condition( "recv ts event" )
+		--[
+			Param( "trigger type", "quest" );
+			Param( "event id", 11500)
+			Param( "sync", "true" )
+			Param( "time", 60 )
+		--]
+		End()
+	--]
+	End()
+
+	Action("wait")
+	--[
+		Condition( "check time" )
+		--[
+			Param( "time", 2 )
+		--]
+		End()
+	--]
+	End()	
+
+	Action( "reward" )
+	--[
+		Param( "trigger type", "quest" )
+		Param( "event id", 11510 )      
+		Param( "time", 60 )
+	--]
+	End()
+
+	-- 12/15 Receive Wait Sequence from Mr. Mold
+
+	Action( "wait" )
+	--[
+		Condition( "recv ts event" )
+		--[
+			Param( "trigger type", "quest");
+			Param( "event id", 11999 )
+			Param( "sync", "true" )
+			Param( "time", 30 )
+		--]
+		End()
+	--]
+	End()
+
+-- BGM 끄기
+	Action( "play bgm" )
+	--[
+		Param( "play", "false")
+	--]
+	End()
+
+--]
+End()
+

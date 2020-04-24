@@ -1,0 +1,39 @@
+
+GameStage(0)
+--[
+	Action( "add npc" )
+	--[
+		Param( "index", 1651110 )
+		Param( "loc x", 948.528 )
+		Param( "loc y", -108.859 )
+		Param( "loc z", -1062.203 )
+		Param( "dir x", -0.063 )
+		Param( "dir z", 0.998 )
+		Param( "no spawn wait", "true" )
+	--]
+	End()
+
+	Action( "wait" )
+	--[
+		Condition( "check time" )
+		--[
+			Param( "time", 60 )
+		--]
+		End()
+	--]
+	End()
+
+	Action( "remove npc" )
+	--[
+		Param( "index", 1651110 )
+		Param( "type", "clear" )
+	--]
+	End()
+--]
+End()
+
+GameFailed()
+--[
+	
+--]
+End()

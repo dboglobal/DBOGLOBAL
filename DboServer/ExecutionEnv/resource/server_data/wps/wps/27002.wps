@@ -1,0 +1,34 @@
+-- 신 포동이 사망시 문 한 개 활성화하고 한 개 열음
+
+GameStage( 0 )
+--[
+	Action( "wait" )
+	--[
+		Condition( "recv event from wps" )
+		--[
+			Param( "wps index", 27001 )
+			Param( "event id", 431 )
+		--]
+		End()
+	--]
+	End()
+
+	Action( "wait" )
+	--[
+		Condition( "check time" )
+		--[
+			Param( "time", 3 )
+		--]
+		End()
+	--]
+	End()
+
+	Action( "change object state" )
+	--[
+		Param( "index", 2 )
+		Param( "state", 1 )
+		Param( "substate show", 1 )
+	--]
+	End()
+--]
+End()

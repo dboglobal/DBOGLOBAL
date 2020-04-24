@@ -1,0 +1,195 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Player">
+      <UniqueIdentifier>{a2c2fcb1-feca-4592-be7e-752f02a396b6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Servers">
+      <UniqueIdentifier>{97117da5-ae24-471c-95d2-728c39ebdb27}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Servers\GameServer">
+      <UniqueIdentifier>{d74ed7b1-2044-46ef-880f-8eee74b1b4f8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Player\Player">
+      <UniqueIdentifier>{3aa9419b-51f9-47f9-9e99-e7f770bd88c0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Servers\MasterServer">
+      <UniqueIdentifier>{9064ff20-46c8-45a4-ad09-97a404a23b0d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutionHouse">
+      <UniqueIdentifier>{fedd8a14-5d53-40cd-b724-8f5225c7424d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Guild/Dojo">
+      <UniqueIdentifier>{f34db971-9a1d-4350-8c6b-ace5ee228533}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="TableContainer">
+      <UniqueIdentifier>{77fbcaba-113a-40e0-8741-93de3ba934d6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Servers\QueryServer">
+      <UniqueIdentifier>{48e09eeb-5c7d-403f-a011-f151d3718404}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Servers\SessionFactory">
+      <UniqueIdentifier>{accd7709-5bb6-465e-9672-9eb5ddc7688c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="PARTY">
+      <UniqueIdentifier>{b9eeb683-8375-4acb-90f9-7f152d6620e2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Servers\GameServer\opcodes">
+      <UniqueIdentifier>{2c85b701-f3e3-403a-992b-ba77e4879d00}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="RankBattle">
+      <UniqueIdentifier>{a36ea3fd-ffcb-4c62-aba4-7deb5fa6851a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Player\Session">
+      <UniqueIdentifier>{3c43fa62-4a78-465d-bcd6-f288a801128f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Player\Session\ut_opcodes">
+      <UniqueIdentifier>{176ce133-e3a5-47f0-bf33-821ea1aaf551}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="HLS">
+      <UniqueIdentifier>{98f9cb7d-7a6d-426f-a991-83eae226f12b}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="ChatServer.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Header Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GameServerPacket.cpp">
+      <Filter>Servers\GameServer</Filter>
+    </ClCompile>
+    <ClCompile Include="ServerPassiveSession.cpp">
+      <Filter>Servers\GameServer</Filter>
+    </ClCompile>
+    <ClCompile Include="ClientSession.cpp">
+      <Filter>Player\Session</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayerManager.cpp">
+      <Filter>Player</Filter>
+    </ClCompile>
+    <ClCompile Include="MasterServerSession.cpp">
+      <Filter>Servers\MasterServer</Filter>
+    </ClCompile>
+    <ClCompile Include="AuctionHouse.cpp">
+      <Filter>AutionHouse</Filter>
+    </ClCompile>
+    <ClCompile Include="GuildManager.cpp">
+      <Filter>Guild/Dojo</Filter>
+    </ClCompile>
+    <ClCompile Include="Guild.cpp">
+      <Filter>Guild/Dojo</Filter>
+    </ClCompile>
+    <ClCompile Include="DojoManager.cpp">
+      <Filter>Guild/Dojo</Filter>
+    </ClCompile>
+    <ClCompile Include="Dojo.cpp">
+      <Filter>Guild/Dojo</Filter>
+    </ClCompile>
+    <ClCompile Include="TableContainerManager.cpp">
+      <Filter>TableContainer</Filter>
+    </ClCompile>
+    <ClCompile Include="QueryServerSession.cpp">
+      <Filter>Servers\QueryServer</Filter>
+    </ClCompile>
+    <ClCompile Include="SubNeighborServerInfoManager.cpp">
+      <Filter>Servers</Filter>
+    </ClCompile>
+    <ClCompile Include="Party.cpp">
+      <Filter>PARTY</Filter>
+    </ClCompile>
+    <ClCompile Include="PacketChatServer.cpp">
+      <Filter>Player\Session</Filter>
+    </ClCompile>
+    <ClCompile Include="Player.cpp">
+      <Filter>Player\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="gt_opcodes.cpp">
+      <Filter>Servers\GameServer\opcodes</Filter>
+    </ClCompile>
+    <ClCompile Include="RankBattle.cpp">
+      <Filter>RankBattle</Filter>
+    </ClCompile>
+    <ClCompile Include="ut_opcodes.cpp">
+      <Filter>Player\Session\ut_opcodes</Filter>
+    </ClCompile>
+    <ClCompile Include="DojoWar.cpp">
+      <Filter>Guild/Dojo</Filter>
+    </ClCompile>
+    <ClCompile Include="HlsSlotMachine.cpp">
+      <Filter>HLS</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ChatServer.h" />
+    <ClInclude Include="stdafx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="boost.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GameSessionFactory.h">
+      <Filter>Servers\SessionFactory</Filter>
+    </ClInclude>
+    <ClInclude Include="ServerPassiveSession.h">
+      <Filter>Servers\GameServer</Filter>
+    </ClInclude>
+    <ClInclude Include="ClientSession.h">
+      <Filter>Player\Session</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayerManager.h">
+      <Filter>Player</Filter>
+    </ClInclude>
+    <ClInclude Include="MasterServerSession.h">
+      <Filter>Servers\MasterServer</Filter>
+    </ClInclude>
+    <ClInclude Include="AuctionHouse.h">
+      <Filter>AutionHouse</Filter>
+    </ClInclude>
+    <ClInclude Include="GuildManager.h">
+      <Filter>Guild/Dojo</Filter>
+    </ClInclude>
+    <ClInclude Include="Guild.h">
+      <Filter>Guild/Dojo</Filter>
+    </ClInclude>
+    <ClInclude Include="DojoManager.h">
+      <Filter>Guild/Dojo</Filter>
+    </ClInclude>
+    <ClInclude Include="Dojo.h">
+      <Filter>Guild/Dojo</Filter>
+    </ClInclude>
+    <ClInclude Include="TableContainerManager.h">
+      <Filter>TableContainer</Filter>
+    </ClInclude>
+    <ClInclude Include="QueryServerSession.h">
+      <Filter>Servers\QueryServer</Filter>
+    </ClInclude>
+    <ClInclude Include="SubNeighborServerInfoManager.h">
+      <Filter>Servers</Filter>
+    </ClInclude>
+    <ClInclude Include="Party.h">
+      <Filter>PARTY</Filter>
+    </ClInclude>
+    <ClInclude Include="Player.h">
+      <Filter>Player\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="gt_opcodes.h">
+      <Filter>Servers\GameServer\opcodes</Filter>
+    </ClInclude>
+    <ClInclude Include="RankBattle.h">
+      <Filter>RankBattle</Filter>
+    </ClInclude>
+    <ClInclude Include="ut_opcodes.h">
+      <Filter>Player\Session\ut_opcodes</Filter>
+    </ClInclude>
+    <ClInclude Include="DojoWar.h">
+      <Filter>Guild/Dojo</Filter>
+    </ClInclude>
+    <ClInclude Include="HlsSlotMachine.h">
+      <Filter>HLS</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

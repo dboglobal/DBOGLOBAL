@@ -1,0 +1,490 @@
+------------------------------------------------------------------------------------------------------------
+-- Time Leap Quest 1 Ver 0.1
+--
+-- Begin : 2008-08-25
+--
+-- Copyright : ⓒ NTL-Inc Co., Ltd
+--
+-- Author : YeoHyeonJoon (souled@ntl-inc.com)
+------------------------------------------------------------------------------------------------------------
+-- bgm 규칙
+-- BGM_TLQ1 : 기본 배경음
+-- BGM_TMQ_COMMON :  전투가 없는 시네마틱
+-- BGM_TMQ_EVENT :  전투로 이어지는 시네마틱, 이어지는 전투가 종료될 때까지 틈
+-- BGM_TMQ_BOSS :  중간보스 및 보스전.
+-- BGM_MIRA_THEME :  미라 등장 시
+------------------------------------------------------------------------------------------------------------
+
+GameStage(0)
+--[
+
+--BGM Play
+	Action( "play bgm" )
+	--[
+		Param( "play", "true")
+		Param( "name", "BGM\\BGM_TMQ_EVENT.ogg")
+		Param( "loop", "true")
+	--]
+	End()
+
+--손오반 지우기	
+	Action( "remove npc" )
+	--[
+		Param( "index", 6201101 )
+		Param( "type", "clear" )
+	--]
+	End()
+
+--손오반 스폰
+	Action( "add mobgroup" )
+	--[
+		Param( "group", 2 )
+		Param( "spawn func", "no spawn wait" )
+	--]
+	End()
+	
+--손오반 LP 체크
+	Action( "wait" )
+	--[
+		Condition( "check lp" )
+		--[
+			Param( "type", "mob" )
+			Param("group", 2)
+			Param("lp", 50)
+		--]
+		End()
+	--]
+	End()
+
+--BGM Play
+	Action( "play bgm" )
+	--[
+		Param( "play", "true")
+		Param( "name", "BGM\\BGM_TLQ1.ogg")
+		Param( "loop", "true")
+	--]
+	End()
+	
+--손오반 확인사살
+	Action( "remove mobgroup" )
+	--[
+		Param( "group", 2 )
+		Param( "type", "clear" )
+	--]
+	End()
+	
+--손오반 등장
+	Action( "add npc" )
+	--[
+		Param( "index", 6201101)
+		Param( "loc x", 881.15)
+		Param( "loc y", 5)
+		Param( "loc z", -1002.00)
+		Param( "dir x", -0.69)
+		Param( "dir z", -0.72)
+		Param( "play script", 6201101 )
+		Param( "play scene", 2 )
+	--]
+	End()
+	
+--손오반 대사 시작
+	Action( "send event to ts" )
+	--[
+		Param( "trigger type", "quest" )
+		Param( "apply type", "register all")
+		Param( "event id",16030)
+	--]
+	End()
+	
+--손오반 대사 중료까지 대기
+	Action("wait")
+	--[
+		Condition( "recv ts event" )
+		--[
+			Param( "trigger type", "quest" );
+			Param( "event id", 16040 )
+		--]
+		End()
+	--]
+	End()
+	
+--Get rid transparent walls
+	Action( "change object state" )
+	--[
+		Param( "index", 8 )
+		Param( "state", 0 )
+		Param( "substate show", 0 )
+	--]
+	End()
+	
+--BGM Play
+	Action( "play bgm" )
+	--[
+		Param( "play", "true")
+		Param( "name", "BGM\\BGM_TMQ_COMMON.ogg")
+		Param( "loop", "true")
+	--]
+	End()
+	
+--cinematic Goku spaceship crash
+	Action( "direct play" )
+	--[
+		Param( "type", "cinematic" )
+		Param( "id", 1026 )
+		Param("sync","true")
+	--]  
+	End()
+
+--손오반 대사 시작
+	Action( "send event to ts" )
+	--[
+		Param( "trigger type", "quest" )
+		Param( "apply type", "register all")
+		Param( "event id",16050)
+	--]
+	End()
+
+--손오반 대사 중료까지 대기
+	Action("wait")
+	--[
+		Condition( "recv ts event" )
+		--[
+			Param( "trigger type", "quest" );
+			Param( "event id", 16070 )
+		--]
+		End()
+	--]
+	End()
+	
+--send event to sps
+	Action( "send sps event" )
+	--[
+		Param( "target type", "npc" )
+		Param( "target index", 6201101)
+		Param( "event id",16080)
+	--]
+	End()
+	
+--Wait until grandpa gohan finish moving to gokus spaceship
+	Action("wait")
+	--[
+		Condition( "recv sps event" )
+		--[
+			Param( "target index", "6201101" );
+			Param( "event id", 16090)
+		--]
+		End()
+	--]
+	End()
+	
+--손오반 업기 더미퀘 발동
+	Action( "send event to ts" )
+	--[
+		Param( "trigger type", "quest" )
+		Param( "apply type", "register all")
+		Param( "event id",16100)
+	--]
+	End()
+	
+--오공 우주선에서 빼기 명령까지 대기
+	Action("wait")
+	--[
+		Condition( "recv ts event" )
+		--[
+			Param( "trigger type", "quest" );
+			Param( "event id", 16110 )
+		--]
+		End()
+	--]
+	End()
+	
+--오브젝트 상태 변경 오공 우주선서 없애기
+	Action( "change object state" )
+	--[
+		Param( "index", 6 )
+		Param( "state", 1 )
+		Param( "substate show", 1 )
+	--]
+	End()
+	
+--손오반 이동시키기
+	Action( "send sps event" )
+	--[
+		Param( "target type", "npc" )
+		Param( "target index", 6201101)
+		Param( "event id",16120)
+	--]
+	End()
+
+--손오반 이동 종료까지 대기
+	Action("wait")
+	--[
+		Condition( "recv sps event" )
+		--[
+			Param( "target index", "6201101" );
+			Param( "event id", 16160)
+		--]
+		End()
+	--]
+	End()
+	
+--손오반 지우기	
+	Action( "remove npc" )
+	--[
+		Param( "index", 6201101 )
+		Param( "type", "clear" )
+	--]
+	End()
+	
+--손오공전달 더미퀘 발동
+	Action( "send event to ts" )
+	--[
+		Param( "trigger type", "quest" )
+		Param( "apply type", "register all")
+		Param( "event id",16140)
+	--]
+	End()
+
+--손오반 등장
+	Action( "add npc" )
+	--[
+		Param( "index", 6201101)
+		Param( "loc x", 915.43)
+		Param( "loc y", 9)
+		Param( "loc z", -963.71)
+		Param( "dir x", -0.22)
+		Param( "dir z", -0.97)
+	--]
+	End()
+	
+--늑대들 스폰
+	Action( "add mobgroup" )
+	--[
+		Param( "group", 3 )
+	--]
+	End()
+	
+--손오반 아기안기 명령까지 대기
+	Action("wait")
+	--[
+		Condition( "recv ts event" )
+		--[
+			Param( "trigger type", "quest" );
+			Param( "event id", 16170 )
+		--]
+		End()
+	--]
+	End()
+	
+--BGM Play
+	Action( "play bgm" )
+	--[
+		Param( "play", "true")
+		Param( "name", "BGM\\BGM_TLQ1.ogg")
+		Param( "loop", "true")
+	--]
+	End()
+	
+--손오반 지우기	
+	Action( "remove npc" )
+	--[
+		Param( "index", 6201101 )
+		Param( "type", "clear" )
+	--]
+	End()
+
+--아기 안은 손오반 등장 
+--(위 손오반(6201101)이 아닌 손오반(6202101)임에 유의할 것)
+--(6202101이 아기를 안고 있는 모델이다)
+--(sps는 6201101을 사용하는 것도 유의할 것)
+
+	Action( "add npc" )
+	--[
+		Param( "index", 6202101)
+		Param( "loc x", 915.43)
+		Param( "loc y", 9)
+		Param( "loc z", -963.71)
+		Param( "dir x", -0.22)
+		Param( "dir z", -0.97)
+		Param( "play script", 6201101 )
+		Param( "play scene", 3 )
+	--]
+	End()
+
+
+--------------------
+--RP스킬 사용 관련 추가된 부분 시작
+
+
+--손오반 (아기 안고 집쪽으로) 이동 종료 확인
+	Action("wait")
+	--[
+		Condition( "recv sps event" )
+		--[
+			Param( "target index", "6201101" );
+			Param( "event id", 16250 )
+		--]
+		End()
+	--]
+	End()
+
+
+--손오반 NPC 디스폰 할것
+	Action( "remove npc" )
+	--[
+		Param( "index", 6202101 )
+		Param( "type", "clear" )
+	--]
+	End()
+
+
+
+--손오반 NPC 스폰
+	Action( "add npc" )
+	--[
+		Param( "index", 6201101)
+		Param( "loc x", 915.43)
+		Param( "loc y", 9)
+		Param( "loc z", -963.71)
+		Param( "dir x", -0.22)
+		Param( "dir z", -0.97)
+	--]
+	End()
+
+--ts로 손오반 스폰 종료 확인 이벤트 보냄
+	Action( "send event to ts" )
+	--[
+		Param( "trigger type", "quest" )
+		Param( "apply type", "register all")
+		Param( "event id",16310 )
+	--]
+	End()
+
+
+--손오반 NPC 디스폰 대기 (User가 RP스킬 사용하는 것 확인 위함)
+--RP구슬 사용하기 퀘스트에서 퀘스트 나레이션 끝나고 퀘스트 등록 정보 후 보내준다
+	Action("wait")
+	--[
+		Condition( "recv ts event" )
+		--[
+			Param( "trigger type", "quest" );
+			Param( "event id", 16260 )
+		--]
+		End()
+	--]
+	End()
+
+--손오반 NPC 디스폰
+	Action( "remove npc" )
+	--[
+		Param( "index", 6201101 )
+		Param( "type", "clear" )
+	--]
+	End()
+
+--Granpa Gohan (MOB)
+--(Mob (7451101) and are 'cowards', 'Do not go' property to any other body that the User Dalian above)
+	Action( "add mob")
+	--[
+		Param( "index", 7451107)
+		Param( "group", 4 )
+		Param( "loc x", 915.43)
+		Param( "loc y", 9)
+		Param( "loc z", -963.71)
+		Param( "dir x", -0.22)
+		Param( "dir z", -0.97)
+		Param( "play script", 7451107 )
+		Param( "play scene", 1 )
+		Param( "immortal", "true")
+	--]
+	End()
+
+--Wait until user use Skill with RP on Grandpa Gohan (MOB)
+	Action("wait")
+	--[
+		Condition( "recv ts event" )
+		--[
+			Param( "trigger type", "quest" )
+			Param( "event id", 16270 );
+		--]
+		End()
+	--]
+	End()
+
+--손오반 몹 제거
+	Action( "remove mobgroup" )
+	--[
+		Param( "group", 4 )
+		Param( "type", "clear" )
+	--]
+	End()
+
+--손오반 NPC 스폰 (RP스킬 사용 칭찬하러)
+	Action( "add npc" )
+	--[
+		Param( "index", 6201101)
+		Param( "loc x", 915.43)
+		Param( "loc y", 9)
+		Param( "loc z", -963.71)
+		Param( "dir x", -0.22)
+		Param( "dir z", -0.97)
+		Param( "play script", 6201101 )
+		Param( "play scene", 4 )
+		Param( "stand alone", "true" )
+	--]
+	End()
+
+
+--ts로 손오반 스폰 종료 확인 이벤트 보냄
+	Action( "send event to ts" )
+	--[
+		Param( "trigger type", "quest" )
+		Param( "apply type", "register all")
+		Param( "event id",16320 )
+	--]
+	End()
+
+
+
+
+
+--RP스킬 사용 관련 추가된 부분 끝
+--------------------
+
+
+
+--보상 종료까지 대기
+	Action("wait")
+	--[
+		Condition( "recv ts event" )
+		--[
+			Param( "trigger type", "quest" );
+			Param( "event id", 16190 )
+		--]
+		End()
+	--]
+	End()
+	
+--트랭크스 등장
+	Action( "add npc" )
+	--[
+		Param( "index", 7511101)
+		Param( "loc x", 896.77)
+		Param( "loc y", 7)
+		Param( "loc z", -981.52)
+		Param( "dir x", 0.99)
+		Param( "dir z", 0.16)
+		Param( "play script", 7511101 )
+		Param( "play scene", 1 )
+		Param( "stand alone", "true" )
+	--]
+	End()
+	
+--]
+End()
+
+GameFailed()
+--[
+
+--]
+End()

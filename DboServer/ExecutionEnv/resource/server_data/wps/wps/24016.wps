@@ -1,0 +1,115 @@
+-- UD1 Normal
+-- 화이트 장군 2세 전투 script
+
+GameStage(0)
+--[
+
+	Action("wait")
+	--[
+		Condition("recv event from wps")
+		--[
+			Param("wps index", 24013)
+			Param("event id", 613)
+		--]
+		End()
+	--]
+	End()
+
+	Action( "function" )
+	--[
+		Condition( "child" )
+		--[
+			Action( "while" )
+			--[
+				Action( "loop" )
+				--[
+
+					-- 화이트 장군 2세 spawn
+					Action("add mobgroup")
+					--[
+						Param("group", 9)
+						Param("no spawn wait", "true")
+					--]
+					End()
+									
+					-- 부하 spawn
+					Action("add mobgroup")
+					--[
+						Param("group", 10)
+						Param("no spawn wait", "true")
+					--]
+					End()
+
+
+					-- 전투에 들어갔다가
+					Action( "wait" )
+					--[
+						Condition( "check battle" )
+						--[
+							Param( "type", "mob" )
+							Param( "group", 9 )
+							Param( "is battle", "true" )
+						--]
+						End()
+					--]
+					End()
+					
+					-- 전투가 풀어지면
+					Action( "wait" )
+					--[
+						Condition( "check battle" )
+						--[
+							Param( "type", "mob" )
+							Param( "group", 9 )
+							Param( "is battle", "false" )
+						--]
+						End()
+					--]
+					End()
+					
+					-- mob을 모두 지우고
+					Action( "remove mobgroup" )
+					--[
+						Param( "group", 9 )
+						Param( "type", "clear" )
+					--]
+					End()
+					
+					Action( "remove mobgroup" )
+					--[
+						Param( "group", 10 )
+						Param( "type", "clear" )
+					--]
+					End()
+					
+					-- loop가 한바퀴 돌아 mob을 다시 spawn한다
+				-- loop end
+				--]
+				End()
+			--while end
+			--]
+			End()
+		--child end
+		--]
+		End()
+		
+		-- 화이트 장군 2세가 죽으면 loop에서 빠져나옴
+		-- 주의: count를 반드시 1로 해야 함. 0으로 하면 loop안에서 지우는 과정을 인식하여
+		--       원하지 않는 상황에서 loop에서 빠져나오게 됨.
+		Action( "wait" )
+		--[
+			Condition( "check mobgroup" )
+			--[
+				Param( "group", 9 )
+				Param( "count", 1 ) 
+			--]
+			End()
+		--]
+		End()
+		
+	-- function end
+	--]
+	End()
+
+--]
+End()

@@ -1,0 +1,48 @@
+GameStage(0)
+--[
+
+	Action( "add mobgroup" )
+	--[
+		Param( "group", 4 )
+	--]
+	End()   
+	
+	Action("wait")
+	--[
+		Param( "operation", "or" )
+		Condition( "check time" )
+		--[
+			Param( "time", 600 )
+		--]
+		End()
+
+	       Condition( "check mobgroup" )
+	       --[   
+        	  Param( "group", 4 )
+	          Param( "count", 1 )
+	       --]
+       		End()
+	--]
+	End()
+
+	Action( "remove mobgroup" )
+	--[
+		Param( "group", 4)
+		Param( "type", "faint" )
+	--]
+	End()
+
+	Action("wait")
+	--[
+
+		Condition( "check time" )
+		--[
+			Param( "time", 5 )
+		--]
+		End()
+	--]
+	End()
+
+--]
+End()
+

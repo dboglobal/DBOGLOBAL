@@ -1,0 +1,33 @@
+-- UD1 Legendary 1번 문 제어
+
+GameStage(0)
+--[
+
+	Action("add mobgroup")
+	--[
+		Param("group", 1)
+		Param("no spawn wait", "true")
+	--]
+	End()
+
+	Action("wait")
+	--[
+		Condition("check mobgroup")
+		--[
+			Param("group", 1)
+			Param("count", 0)
+		--]
+		End()
+	--]
+	End()
+
+	Action("change object state")
+	--[
+		Param("index", 58)
+		Param("state", 1)
+		Param("substate show", 1)
+	--]
+	End()
+
+--]
+End()

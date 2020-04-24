@@ -1,0 +1,116 @@
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+#pragma once
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// 커스텀 리얼 타임 타입 인포메이션 입니다.
+// 일단 템플릿, 다중상속 검증 안됬습니다. 일반 상속 완벽 구현되구여
+// 참고 서적은 게임 코딩 컴플릿 이구여
+// 스트링 비교해서 적용하는거니까 실시간은 하지 마시구여
+// 구현은 밑에 보세여
+//
+// 우선 헤더에서여 다음과 같이 너주구여 mfc랑 비슷합니다.
+//   
+//
+/*
+class C호동
+{
+	NTL_RTTI_SYSTEM_DECL;
+};
+
+class C형석 : public C호동
+{
+	NTL_RTTI_SYSTEM_DECL;
+
+	void 호동씨쵝오();
+};
+
+class C우디 : public C호동
+{
+	NTL_RTTI_SYSTEM_DECL;
+
+	void 우동동바보();
+};
+
+class C준철 : public C호동
+{
+	NTL_RTTI_SYSTEM_DECL;
+
+	void 맨날나만가지구머라그래();
+};
+*/
+// 구현부에서는 다음과 같이 해줍니다.
+//
+// 우리는 우동동을 부모로 상속 받았다고 합니다.
+//
+// NTL_RTTI_SYSTEM_IMPL_NOPARENT(C호동);
+// NTL_RTTI_SYSTEM_IMPL(C형석, C호동);
+// NTL_RTTI_SYSTEM_IMPL(C우디, C호동);
+// NTL_RTTI_SYSTEM_IMPL(C준철, C호동);
+
+
+// 이렇게 해놓구여
+// C호동 *pATM1 = new C형석;
+// C호동 *pATM2 = new C우디;
+// C호동 *pATM3 = new C준철;
+//
+// 대충 이렇게 되겠져 그담에 실시간에 임의의 호동포인터가 먼지를 알아내려면
+// 다음과 같습니다.
+//
+// void On호동명령L버튼클릭()
+//{
+//
+//	// 현재 호동 포인터가 준철 포인터진 알려면
+//	if(pATM->GetCRTTIS().DerivesFrom(C준철::s_CRTTIS))
+//  {
+//      // 그리구 여기서 타입 캐스트 하고 준철씨의 함수를 부릅니다.
+//      reinterpret_cast<C준철*>(pATM3)->맨날나만가지구머라그래();
+//	    
+//      // 이렇게 됩니다.
+//  }
+//
+//}
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+#include <string>
+#include <iostream>
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+#define NTL_RTTI_SYSTEM_DECL \
+public:\
+	virtual const CNtlRTTI& GetCRTTIS() const { return s_CRTTIS; }\
+	static const CNtlRTTI s_CRTTIS;
+
+#define NTL_RTTI_SYSTEM_IMPL_NOPARENT(name) \
+const CNtlRTTI name::s_CRTTIS(#name);
+
+#define NTL_RTTI_SYSTEM_IMPL(name, parent) \
+const CNtlRTTI name::s_CRTTIS(#name, parent::s_CRTTIS);
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+class CNtlRTTI
+{
+public:
+	CNtlRTTI(const std::string& className);
+	CNtlRTTI(const std::string& className, const CNtlRTTI& baseRTTI);
+
+public:
+    const std::string& GetClassName() const;
+    bool IsExactly(const CNtlRTTI& rtti) const;
+    bool DerivesFrom(const CNtlRTTI& rtti) const;
+
+private:
+    CNtlRTTI(const CNtlRTTI& obj);
+    CNtlRTTI& operator = (const CNtlRTTI& obj);
+	
+private:
+    const std::string m_className;
+    const CNtlRTTI *m_pBaseRTTI;
+};
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ShowAllFiles>false</ShowAllFiles>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <RemoteDebuggerWorkingDirectory>C:\Users\Administrator\Desktop\DBOG</RemoteDebuggerWorkingDirectory>
+    <DebuggerFlavor>WindowsRemoteDebugger</DebuggerFlavor>
+    <RemoteDebuggerCommandArguments>
+    </RemoteDebuggerCommandArguments>
+    <RemoteDebuggerServerName>78.46.46.169</RemoteDebuggerServerName>
+    <RemoteDebuggerAttach>true</RemoteDebuggerAttach>
+    <RemoteDebuggerCommand>C:\Users\Administrator\Desktop\DBOG</RemoteDebuggerCommand>
+  </PropertyGroup>
+</Project>

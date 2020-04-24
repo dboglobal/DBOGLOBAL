@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Resource">
+      <UniqueIdentifier>{13353af5-1dd3-4895-bbd5-fecf3f9ab100}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework">
+      <UniqueIdentifier>{39c425bf-fb22-43fd-9b0f-3f1481fa859c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Configure">
+      <UniqueIdentifier>{ac3878ba-6f1c-47fe-9d70-79705456be44}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Skin">
+      <UniqueIdentifier>{1adde529-1b7a-41c0-9f7a-8e68ebe7e686}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Patcher">
+      <UniqueIdentifier>{3e331ca3-d7cd-4b35-a887-b06b8dac569f}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Resource.h">
+      <Filter>Resource</Filter>
+    </ClInclude>
+    <ClInclude Include="SimplePatcher.h">
+      <Filter>Framework</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>Framework</Filter>
+    </ClInclude>
+    <ClInclude Include="LocalConfig.h">
+      <Filter>Configure</Filter>
+    </ClInclude>
+    <ClInclude Include="PatchInfo.h">
+      <Filter>Configure</Filter>
+    </ClInclude>
+    <ClInclude Include="SimplePatcherDlg.h">
+      <Filter>Skin</Filter>
+    </ClInclude>
+    <ClInclude Include="Patcher.h">
+      <Filter>Patcher</Filter>
+    </ClInclude>
+    <ClInclude Include="patchwin.h">
+      <Filter>Patcher</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\SimplePatcher.ico">
+      <Filter>Resource</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="SimplePatcher.rc">
+      <Filter>Resource</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\SimplePatcher.rc2">
+      <Filter>Resource</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="SimplePatcher.cpp">
+      <Filter>Framework</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Framework</Filter>
+    </ClCompile>
+    <ClCompile Include="LocalConfig.cpp">
+      <Filter>Configure</Filter>
+    </ClCompile>
+    <ClCompile Include="PatchInfo.cpp">
+      <Filter>Configure</Filter>
+    </ClCompile>
+    <ClCompile Include="SimplePatcherDlg.cpp">
+      <Filter>Skin</Filter>
+    </ClCompile>
+    <ClCompile Include="Patcher.cpp">
+      <Filter>Patcher</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

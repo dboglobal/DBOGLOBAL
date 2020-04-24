@@ -1,0 +1,567 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Release4Client|Win32">
+      <Configuration>Release4Client</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release4Tools|Win32">
+      <Configuration>Release4Tools</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{3A3F62E6-6077-4AF9-838C-C0E655588C93}</ProjectGuid>
+    <RootNamespace>NtlWE</RootNamespace>
+    <Keyword>MFCProj</Keyword>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v80</PlatformToolset>
+    <UseOfMfc>Static</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release4Client|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v80</PlatformToolset>
+    <UseOfMfc>Static</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release4Tools|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v80</PlatformToolset>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release4Client|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release4Tools|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>14.0.25431.1</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>Release\</OutDir>
+    <IntDir>Release\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release4Client|Win32'">
+    <OutDir>Release\</OutDir>
+    <IntDir>Release\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release4Tools|Win32'">
+    <OutDir>E:\DBOG\DBO\DBOG UNPACKED\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+    </Midl>
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(SolutionDir)Lib\NtlFlasher\Include;$(SolutionDir)Lib\NtlFlasher\3rdParty\jpeg-6b;$(SolutionDir)Lib\NtlFlasher\3rdParty\zlib-1.2.3;$(SolutionDir)..\ntllib\Shared;src/ctrl;src/project;$(SolutionDir)Renderware\Include;$(SolutionDir)Lib\NtlCore;$(SolutionDir)Lib\NtlPresentation;$(SolutionDir)Lib\NtlFramework;$(SolutionDir)..\ntllib\Shared\NtlXMLLoader;$(SolutionDir)..\ntllib\Shared\NtlTrigger;$(SolutionDir)Lib\NtlSimulation;$(SolutionDir)..\ntllib\Shared\Util;$(SolutionDir)..\ntllib\client\ntlclientnet;$(SolutionDir)..\dboshared\ntlgametable;$(SolutionDir)..\dboshared\ntlshared2;$(SolutionDir)..\dboshared\DboTrigger;$(SolutionDir)Lib\NtlSound;$(SolutionDir)Lib\NtlGui;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4099;4800;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0412</Culture>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>ddraw.lib;Winmm.lib;Imm32.lib;rtray.lib;d3d9.lib;Nafxcwd.lib;Libcmtd.lib;rtdict.lib;rtcharse.lib;rtfsyst.lib;rtbmp.lib;rtpng.lib;rtintsec.lib;rtpick.lib;rttoc.lib;rpcollis.lib;rpworld.lib;rtanim.lib;rphanim.lib;rtquat.lib;rplogo.lib;rpusrdat.lib;rpid.lib;rpmatfx.lib;rpuvanim.lib;rpprtstd.lib;rpprtadv.lib;rpptank.lib;rpskintoon.lib;rpskinmatfxtoon.lib;rprandom.lib;rtimport.lib;rtgcond.lib;rtwing.lib;GFx.lib;GFx_D3D9.lib;libjpeg.lib;rppvs.lib;rpltmap.lib;rtltmap.lib;rpmipkl.lib;rtpitexd.lib;rtbary.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>..\..\..\..\DBO_Resource\Saber.exe</OutputFile>
+      <AdditionalLibraryDirectories>$(SolutionDir)Renderware\Lib\Release;$(SolutionDir)bugTrap;$(SolutionDir)Lib\NtlFlasher\3rdParty\jpeg-6b\lib\Win32\Msvc80\Release_MT_Static;$(SolutionDir)Lib\NtlFlasher\3rdParty\zlib-1.2.3\lib\win32\Msvc80\Release_MT_Static;$(SolutionDir)Lib\NtlFlasher\Lib\Win32\Msvc80\Release_MT_Static;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
+      <IgnoreSpecificDefaultLibraries>libcp.lib;libcmt.lib;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>..\..\..\..\DBO_Resource\$(TargetName).pdb</ProgramDatabaseFile>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release4Client|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+    </Midl>
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(SolutionDir)Lib\NtlFlasher\Include;$(SolutionDir)Lib\NtlFlasher\3rdParty\jpeg-6b;$(SolutionDir)Lib\NtlFlasher\3rdParty\zlib-1.2.3;$(SolutionDir)..\ntllib\Shared;src/ctrl;src/project;$(SolutionDir)Renderware\Include;$(SolutionDir)Lib\NtlCore;$(SolutionDir)Lib\NtlPresentation;$(SolutionDir)Lib\NtlFramework;$(SolutionDir)..\ntllib\Shared\NtlXMLLoader;$(SolutionDir)..\ntllib\Shared\NtlTrigger;$(SolutionDir)Lib\NtlSimulation;$(SolutionDir)..\ntllib\Shared\Util;$(SolutionDir)..\ntllib\client\ntlclientnet;$(SolutionDir)..\dboshared\ntlgametable;$(SolutionDir)..\dboshared\ntlshared2;$(SolutionDir)..\dboshared\DboTrigger;$(SolutionDir)Lib\NtlSound;$(SolutionDir)Lib\NtlGui;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4099;4800;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0412</Culture>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>ddraw.lib;Winmm.lib;Imm32.lib;rtray.lib;d3d9.lib;Nafxcwd.lib;Libcmtd.lib;rtdict.lib;rtcharse.lib;rtfsyst.lib;rtbmp.lib;rtpng.lib;rtintsec.lib;rtpick.lib;rttoc.lib;rpcollis.lib;rpworld.lib;rtanim.lib;rphanim.lib;rtquat.lib;rplogo.lib;rpusrdat.lib;rpid.lib;rpmatfx.lib;rpuvanim.lib;rpprtstd.lib;rpprtadv.lib;rpptank.lib;rpskintoon.lib;rpskinmatfxtoon.lib;rprandom.lib;rtimport.lib;rtgcond.lib;rtwing.lib;GFx.lib;GFx_D3D9.lib;libjpeg.lib;rppvs.lib;rpltmap.lib;rtltmap.lib;rpmipkl.lib;rtpitexd.lib;rtbary.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>..\..\..\..\DBO_Resource\Saber.exe</OutputFile>
+      <AdditionalLibraryDirectories>$(SolutionDir)Renderware\Lib\Release;$(SolutionDir)bugTrap;$(SolutionDir)Lib\NtlFlasher\3rdParty\jpeg-6b\lib\Win32\Msvc80\Release_MT_Static;$(SolutionDir)Lib\NtlFlasher\3rdParty\zlib-1.2.3\lib\win32\Msvc80\Release_MT_Static;$(SolutionDir)Lib\NtlFlasher\Lib\Win32\Msvc80\Release_MT_Static;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
+      <IgnoreSpecificDefaultLibraries>libcp.lib;libcmt.lib;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>..\..\..\..\DBO_Resource\$(TargetName).pdb</ProgramDatabaseFile>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release4Tools|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+    </Midl>
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(SolutionDir)Renderware\Include;$(SolutionDir)Lib\NtlCore;$(SolutionDir)..\DboShared\NtlNetwork;$(SolutionDir)Lib\NtlPresentation;$(SolutionDir)Lib\NtlFramework;$(SolutionDir)..\NtlLib\Shared\NtlXMLLoader;$(SolutionDir)..\DboShared\NtlShared2;$(SolutionDir)..\DboShared\NtlShared;$(SolutionDir)Lib\NtlSimulation;..\..\Client\Main;..\..\Client\Stage;..\..\Client\Camera;$(SolutionDir)..\NtlLib\Client\NtlClientNet;$(SolutionDir)..\NtlLib\Shared\NtlTrigger;$(SolutionDir)..\NtlLib\Shared;..\..\..\DboShared\NtlGameTable;$(SolutionDir)Lib\NtlSound;$(SolutionDir)..\NtlLib\Shared\util;$(SolutionDir)..\Xtreme ToolkitPro v13.2.1\Source;$(DXSDK_DIR)Include;$(SolutionDir)Lib\NtlGui;$(SolutionDir)..\DboShared\DboTrigger;$(SolutionDir)..\NtlLib\Shared\Lua;$(SolutionDir)Client\Addin\Devil;src/ctrl;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4099;4800;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>ddraw.lib;Ws2_32.lib;Winmm.lib;Imm32.lib;rtdict.lib;rtcharse.lib;rtfsyst.lib;rtbmp.lib;rtpng.lib;rtintsec.lib;rtpick.lib;rttoc.lib;rpworld.lib;rtanim.lib;rphanim.lib;rtquat.lib;rplogo.lib;rpusrdat.lib;rpid.lib;rpmatfx.lib;rpuvanim.lib;rpprtstd.lib;rpprtadv.lib;rpptank.lib;rpskintoon.lib;rprandom.lib;rtimport.lib;rtgcond.lib;rtwing.lib;rtray.lib;rplodatm.lib;strmiids.lib;libgfx.lib;libgrenderer_d3d9.lib;libjpeg.lib;zlib.lib;d3dx9.lib;d3d9.lib;Devil.lib;rppvs.lib;rpltmap.lib;rtltmap.lib;rpmipkl.lib;rtpitexd.lib;rtbary.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+      <AdditionalLibraryDirectories>$(SolutionDir)Renderware\Lib\Release;$(SolutionDir)BugTrap;$(SolutionDir)DirectShow;$(SolutionDir)Lib/Localize/Lib;$(DXSDK_DIR)Lib\x86;$(SolutionDir)Release4Client;$(GFXSDK)3rdParty\expat-2.0.1\lib;$(SolutionDir)Lib\NtlFlasher\GFx SDK 3.3\Lib\$(PlatformName)\Msvc80\Release;$(SolutionDir)Lib\NtlFlasher\GFx SDK 3.3\3rdParty\jpeg-6b\lib\$(PlatformName)\Msvc80\Release;$(SolutionDir)Client\Addin\Devil;$(SolutionDir)..\Xtreme ToolkitPro v13.2.1\Lib\vc80;$(SolutionDir)Lib\NtlSound\fmod;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
+      <IgnoreSpecificDefaultLibraries>libcp.lib;libcmt.lib;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>$(TargetDir)$(TargetName).pdb</ProgramDatabaseFile>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <TargetMachine>MachineX86</TargetMachine>
+      <RandomizedBaseAddress />
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="AppConfigManager.cpp" />
+    <ClCompile Include="BGMPropDlg.cpp" />
+    <ClCompile Include="BloomPropDlg.cpp" />
+    <ClCompile Include="BookmarkDlg.cpp" />
+    <ClCompile Include="Bookmarker.cpp" />
+    <ClCompile Include="CameraAttrDlg.cpp" />
+    <ClCompile Include="DecalIOHandler.cpp" />
+    <ClCompile Include="DojoPropPopup.cpp" />
+    <ClCompile Include="EffectPropPopup.cpp" />
+    <ClCompile Include="FieldColorPropDlg.cpp" />
+    <ClCompile Include="FieldHeatHazeDlg.cpp" />
+    <ClCompile Include="FieldNamePropDlg.cpp" />
+    <ClCompile Include="FieldSearchDlg.cpp" />
+    <ClCompile Include="FieldsInformation.cpp" />
+    <ClCompile Include="FieldSoundPropDlg.cpp" />
+    <ClCompile Include="FieldUIManager.cpp" />
+    <ClCompile Include="FileNewDlg.cpp" />
+    <ClCompile Include="FogPropDlg.cpp" />
+    <ClCompile Include="GamePropDlg.cpp" />
+    <ClCompile Include="GamePropVisibleDlg.cpp" />
+    <ClCompile Include="LightPropDlg.cpp" />
+    <ClCompile Include="MaterialPropDlg.cpp" />
+    <ClCompile Include="MergeManager.cpp" />
+    <ClCompile Include="MergeUIManager.cpp" />
+    <ClCompile Include="MiniMapManager.cpp" />
+    <ClCompile Include="MiniMapPropDlg.cpp" />
+    <ClCompile Include="NtlCameraHelper.cpp" />
+    <ClCompile Include="NtlCameraTop.cpp" />
+    <ClCompile Include="NtlGameCamera.cpp" />
+    <ClCompile Include="NtlHistoryController.cpp" />
+    <ClCompile Include="NtlMTXml.cpp" />
+    <ClCompile Include="NtlWE.cpp" />
+    <ClCompile Include="NtlWEApplication.cpp" />
+    <ClCompile Include="NtlWeAvatarController.cpp" />
+    <ClCompile Include="NtlWeController.cpp" />
+    <ClCompile Include="NtlWeControlUi.cpp" />
+    <ClCompile Include="NtlWEDoc.cpp" />
+    <ClCompile Include="NtlWEFrm.cpp" />
+    <ClCompile Include="NtlWEPropContainer.cpp" />
+    <ClCompile Include="NtlWEUtil.cpp" />
+    <ClCompile Include="NtlWEView.cpp" />
+    <ClCompile Include="NtlWorldEntityPreview.cpp" />
+    <ClCompile Include="NtlWorldPropBaseTemplate.cpp" />
+    <ClCompile Include="NtlWorldPropBaseTemplateEx.cpp" />
+    <ClCompile Include="NtlWorldPropMaterialController.cpp" />
+    <ClCompile Include="NtlWorldPropNMapController.cpp" />
+    <ClCompile Include="NtlWorldPropSMapController.cpp" />
+    <ClCompile Include="NtlWorldPropUtil.cpp" />
+    <ClCompile Include="ObjPropPopUp.cpp" />
+    <ClCompile Include="PaletteDecalDlg.cpp" />
+    <ClCompile Include="PaletteDecalVolumeDlg.cpp" />
+    <ClCompile Include="PaletteDojoDlg.cpp" />
+    <ClCompile Include="PaletteEffect.cpp" />
+    <ClCompile Include="PaletteFieldUI.cpp" />
+    <ClCompile Include="PaletteGameProperty.cpp" />
+    <ClCompile Include="PaletteHeatHazeDlg.cpp" />
+    <ClCompile Include="PaletteLightAndShadow.cpp" />
+    <ClCompile Include="PaletteLightMode.cpp" />
+    <ClCompile Include="PaletteLightObject.cpp" />
+    <ClCompile Include="PaletteNMProp.cpp" />
+    <ClCompile Include="PaletteOrnament.cpp" />
+    <ClCompile Include="PaletteOrnamentTabDlg.cpp" />
+    <ClCompile Include="PalettePerformance.cpp" />
+    <ClCompile Include="PalettePerformanceImposter.cpp" />
+    <ClCompile Include="PalettePerformanceOcclusion.cpp" />
+    <ClCompile Include="PalettePerformancePVS.cpp" />
+    <ClCompile Include="PalettePerformanceSectorCull.cpp" />
+    <ClCompile Include="PalettePlantDlg.cpp" />
+    <ClCompile Include="PaletteRegion.cpp" />
+    <ClCompile Include="PaletteSE.cpp" />
+    <ClCompile Include="PaletteShadow.cpp" />
+    <ClCompile Include="PaletteShoreLine.cpp" />
+    <ClCompile Include="PaletteSkyFloatingEntityDlg.cpp" />
+    <ClCompile Include="PaletteSoftSpot.cpp" />
+    <ClCompile Include="PaletteSpawn.cpp" />
+    <ClCompile Include="PaletteSpawnBase.cpp" />
+    <ClCompile Include="PaletteSpawnMacro.cpp" />
+    <ClCompile Include="PaletteSpawnMacroModify.cpp" />
+    <ClCompile Include="PaletteSpawnPath.cpp" />
+    <ClCompile Include="PaletteSpawnSearch.cpp" />
+    <ClCompile Include="PaletteTerrain.cpp" />
+    <ClCompile Include="PaletteTrigger.cpp" />
+    <ClCompile Include="PaletteUnit.cpp" />
+    <ClCompile Include="PaletteWater.cpp" />
+    <ClCompile Include="PaletteWaterTab.cpp" />
+    <ClCompile Include="PaletteWorldLight.cpp" />
+    <ClCompile Include="PathEngineExportDlg.cpp" />
+    <ClCompile Include="PathHandler.cpp" />
+    <ClCompile Include="PathMeshFindDlg.cpp" />
+    <ClCompile Include="PeHeightPopup.cpp" />
+    <ClCompile Include="PlanetIOHandler.cpp" />
+    <ClCompile Include="SaberTestDlg.cpp" />
+    <ClCompile Include="SaberView1.cpp" />
+    <ClCompile Include="SaberView2.cpp" />
+    <ClCompile Include="SaberView3.cpp" />
+    <ClCompile Include="ShoreLineAGenerator.cpp" />
+    <ClCompile Include="ShoreLineCP.cpp" />
+    <ClCompile Include="ShoreLineIOHandler.cpp" />
+    <ClCompile Include="ShoreLinePGenerator.cpp" />
+    <ClCompile Include="SkyPropDlg.cpp" />
+    <ClCompile Include="SLPropDlg.cpp" />
+    <ClCompile Include="SpawnGroupBasedPropDlg.cpp" />
+    <ClCompile Include="SpawnManager.cpp" />
+    <ClCompile Include="SpawnMergeDlg.cpp" />
+    <ClCompile Include="SpawnNestDlg.cpp" />
+    <ClCompile Include="SpawnPopupDlg.cpp" />
+    <ClCompile Include="src\ctrl\CheckComboBox.cpp" />
+    <ClCompile Include="src\ctrl\ColourPicker.cpp" />
+    <ClCompile Include="src\ctrl\ColourPopup.cpp">
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)%(Filename)1.obj</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release4Client|Win32'">$(IntDir)%(Filename)1.obj</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release4Tools|Win32'">$(IntDir)%(Filename)1.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="src\ctrl\ProgressWnd.cpp" />
+    <ClCompile Include="src\ctrl\SkinProgress.cpp" />
+    <ClCompile Include="src\ctrl\SplashScreenEx.cpp" />
+    <ClCompile Include="src\ctrl\SplashScreenFx.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release4Client|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release4Tools|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="UpdateEvent.cpp" />
+    <ClCompile Include="UpdateEventCompass.cpp" />
+    <ClCompile Include="UpdateEventDojoPalette.cpp" />
+    <ClCompile Include="UpdateEventLightObjectPalette.cpp" />
+    <ClCompile Include="UpdateEventShortKey.cpp" />
+    <ClCompile Include="UpdateEventTerrainPalette.cpp" />
+    <ClCompile Include="UpdateEventThumbnail.cpp" />
+    <ClCompile Include="VisibilityDistPropDlg.cpp" />
+    <ClCompile Include="WeatherDlg.cpp" />
+    <ClCompile Include="WorldViewDlg.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\ModelTool2\NtlMTXml.h" />
+    <ClInclude Include="AppConfigManager.h" />
+    <ClInclude Include="BGMPropDlg.h" />
+    <ClInclude Include="BloomPropDlg.h" />
+    <ClInclude Include="BookmarkDlg.h" />
+    <ClInclude Include="Bookmarker.h" />
+    <ClInclude Include="CameraAttrDlg.h" />
+    <ClInclude Include="DecalIOHandler.h" />
+    <ClInclude Include="DojoPropPopup.h" />
+    <ClInclude Include="EffectPropPopup.h" />
+    <ClInclude Include="FieldColorPropDlg.h" />
+    <ClInclude Include="FieldHeatHazeDlg.h" />
+    <ClInclude Include="FieldNamePropDlg.h" />
+    <ClInclude Include="FieldSearchDlg.h" />
+    <ClInclude Include="FieldsInformation.h" />
+    <ClInclude Include="FieldSoundPropDlg.h" />
+    <ClInclude Include="FieldUIManager.h" />
+    <ClInclude Include="FileNewDlg.h" />
+    <ClInclude Include="FogPropDlg.h" />
+    <ClInclude Include="GamePropDlg.h" />
+    <ClInclude Include="GamePropVisibleDlg.h" />
+    <ClInclude Include="LightPropDlg.h" />
+    <ClInclude Include="MaterialPropDlg.h" />
+    <ClInclude Include="MergeManager.h" />
+    <ClInclude Include="MergeUIManager.h" />
+    <ClInclude Include="MiniMapManager.h" />
+    <ClInclude Include="MiniMapPropDlg.h" />
+    <ClInclude Include="NtlCameraHelper.h" />
+    <ClInclude Include="NtlCameraTop.h" />
+    <ClInclude Include="NtlGameCamera.h" />
+    <ClInclude Include="NtlHistoryController.h" />
+    <ClInclude Include="NtlWE.h" />
+    <ClInclude Include="NtlWEApplication.h" />
+    <ClInclude Include="NtlWeAvatarController.h" />
+    <ClInclude Include="NtlWeController.h" />
+    <ClInclude Include="NtlWeControlUi.h" />
+    <ClInclude Include="NtlWEDoc.h" />
+    <ClInclude Include="NtlWEFrm.h" />
+    <ClInclude Include="NtlWEPropContainer.h" />
+    <ClInclude Include="NtlWEUtil.h" />
+    <ClInclude Include="NtlWEView.h" />
+    <ClInclude Include="NtlWorldEntityPreview.h" />
+    <ClInclude Include="NtlWorldPropBaseTemplate.h" />
+    <ClInclude Include="NtlWorldPropBaseTemplateEx.h" />
+    <ClInclude Include="NtlWorldPropMaterialController.h" />
+    <ClInclude Include="NtlWorldPropNMapController.h" />
+    <ClInclude Include="NtlWorldPropSMapController.h" />
+    <ClInclude Include="NtlWorldPropUtil.h" />
+    <ClInclude Include="ObjPropPopUp.h" />
+    <ClInclude Include="PaletteDecalDlg.h" />
+    <ClInclude Include="PaletteDecalVolumeDlg.h" />
+    <ClInclude Include="PaletteDojoDlg.h" />
+    <ClInclude Include="PaletteEffect.h" />
+    <ClInclude Include="PaletteFieldUI.h" />
+    <ClInclude Include="PaletteGameProperty.h" />
+    <ClInclude Include="PaletteHeatHazeDlg.h" />
+    <ClInclude Include="PaletteLightAndShadow.h" />
+    <ClInclude Include="PaletteLightMode.h" />
+    <ClInclude Include="PaletteLightObject.h" />
+    <ClInclude Include="PaletteNMProp.h" />
+    <ClInclude Include="PaletteOrnament.h" />
+    <ClInclude Include="PaletteOrnamentTabDlg.h" />
+    <ClInclude Include="PalettePerformance.h" />
+    <ClInclude Include="PalettePerformanceImposter.h" />
+    <ClInclude Include="PalettePerformanceOcclusion.h" />
+    <ClInclude Include="PalettePerformancePVS.h" />
+    <ClInclude Include="PalettePerformanceSectorCull.h" />
+    <ClInclude Include="PalettePlantDlg.h" />
+    <ClInclude Include="PaletteRegion.h" />
+    <ClInclude Include="PaletteSE.h" />
+    <ClInclude Include="PaletteShadow.h" />
+    <ClInclude Include="PaletteShoreLine.h" />
+    <ClInclude Include="PaletteSkyFloatingEntityDlg.h" />
+    <ClInclude Include="PaletteSoftSpot.h" />
+    <ClInclude Include="PaletteSpawn.h" />
+    <ClInclude Include="PaletteSpawnBase.h" />
+    <ClInclude Include="PaletteSpawnMacro.h" />
+    <ClInclude Include="PaletteSpawnMacroModify.h" />
+    <ClInclude Include="PaletteSpawnPath.h" />
+    <ClInclude Include="PaletteSpawnSearch.h" />
+    <ClInclude Include="PaletteTerrain.h" />
+    <ClInclude Include="PaletteTrigger.h" />
+    <ClInclude Include="PaletteUnit.h" />
+    <ClInclude Include="PaletteWater.h" />
+    <ClInclude Include="PaletteWaterTab.h" />
+    <ClInclude Include="PaletteWorldLight.h" />
+    <ClInclude Include="PathEngineExportDlg.h" />
+    <ClInclude Include="PathHandler.h" />
+    <ClInclude Include="PathMeshFindDlg.h" />
+    <ClInclude Include="PeHeightPopup.h" />
+    <ClInclude Include="PlanetIOHandler.h" />
+    <ClInclude Include="Resource.h" />
+    <ClInclude Include="SaberTestDlg.h" />
+    <ClInclude Include="SaberView1.h" />
+    <ClInclude Include="SaberView2.h" />
+    <ClInclude Include="SaberView3.h" />
+    <ClInclude Include="ShoreLineAGenerator.h" />
+    <ClInclude Include="ShoreLineCP.h" />
+    <ClInclude Include="ShoreLineIOHandler.h" />
+    <ClInclude Include="ShoreLinePGenerator.h" />
+    <ClInclude Include="SkyPropDlg.h" />
+    <ClInclude Include="SLPropDlg.h" />
+    <ClInclude Include="SpawnGroupBasedPropDlg.h" />
+    <ClInclude Include="SpawnManager.h" />
+    <ClInclude Include="SpawnMergeDlg.h" />
+    <ClInclude Include="SpawnNestDlg.h" />
+    <ClInclude Include="SpawnPopupDlg.h" />
+    <ClInclude Include="src\ctrl\CheckComboBox.h" />
+    <ClInclude Include="src\ctrl\ColourPicker.h" />
+    <ClInclude Include="src\ctrl\ColourPopup.h" />
+    <ClInclude Include="src\ctrl\ProgressWnd.h" />
+    <ClInclude Include="src\ctrl\SkinProgress.h" />
+    <ClInclude Include="src\ctrl\SplashScreenEx.h" />
+    <ClInclude Include="src\ctrl\SplashScreenFx.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="UpdateEvent.h" />
+    <ClInclude Include="UpdateEventCompass.h" />
+    <ClInclude Include="UpdateEventDojoPalette.h" />
+    <ClInclude Include="UpdateEventLightObjectPalette.h" />
+    <ClInclude Include="UpdateEventShortKey.h" />
+    <ClInclude Include="UpdateEventTerrainPalette.h" />
+    <ClInclude Include="UpdateEventThumbnail.h" />
+    <ClInclude Include="VisibilityDistPropDlg.h" />
+    <ClInclude Include="WeatherDlg.h" />
+    <ClInclude Include="WorldViewDlg.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\Heightfield\CustomEditD.bmp" />
+    <Image Include="res\Heightfield\CustomEditU.bmp" />
+    <Image Include="res\heightfield\CustomizeD.bmp" />
+    <Image Include="res\heightfield\CustomizeU.bmp" />
+    <Image Include="res\heightfield\JustD.bmp" />
+    <Image Include="res\heightfield\JustU.bmp" />
+    <Image Include="res\heightfield\LowerD.bmp" />
+    <Image Include="res\heightfield\LowerU.bmp" />
+    <Image Include="res\heightfield\NoiseD.bmp" />
+    <Image Include="res\heightfield\NoiseU.bmp" />
+    <Image Include="res\heightfield\PlateauD.bmp" />
+    <Image Include="res\heightfield\PlateauU.bmp" />
+    <Image Include="res\Heightfield\RaiseD.bmp" />
+    <Image Include="res\heightfield\RaiseU.bmp" />
+    <Image Include="res\heightfield\RoadD.bmp" />
+    <Image Include="res\heightfield\RoadU.bmp" />
+    <Image Include="res\Heightfield\SlopeD.bmp" />
+    <Image Include="res\Heightfield\SlopeU.bmp" />
+    <Image Include="res\heightfield\SmoothD.bmp" />
+    <Image Include="res\heightfield\SmoothRangeD.bmp" />
+    <Image Include="res\heightfield\SmoothRangeU.bmp" />
+    <Image Include="res\heightfield\SmoothU.bmp" />
+    <Image Include="res\icon1.ico" />
+    <Image Include="res\NtlWE.ico" />
+    <Image Include="res\NtlWEDoc.ico" />
+    <Image Include="res\Splash\BarAqua.bmp" />
+    <Image Include="res\Splash\BarLuna.bmp" />
+    <Image Include="res\Splash\BarPhoton.bmp" />
+    <Image Include="res\Splash\SAVER_SPLASH00.BMP" />
+    <Image Include="res\Splash\SAVER_SPLASH01.BMP" />
+    <Image Include="res\Toolbar.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="NtlWE.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\NtlWE.rc2" />
+  </ItemGroup>
+  <ItemGroup>
+    <Manifest Include="res\NtlWE.manifest" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\DboShared\DboTrigger\DboTrigger.vcxproj">
+      <Project>{3bee299b-d145-4030-81dd-d8b9ade8b767}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\DboShared\NtlGameTable\NtlGameTable.vcxproj">
+      <Project>{9a4dc8e8-16ef-463b-8f14-77f447a782cc}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\DboShared\NtlShared2\NtlShared.vcxproj">
+      <Project>{573eb1e4-7620-479e-8ccf-def06491545b}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\NtlLib\Client\NtlClientNet\NtlClientNet.vcxproj">
+      <Project>{c54a01c8-8482-4ef8-b259-06dff4fd4dbe}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\NtlLib\Shared\Lua\Lua.vcxproj">
+      <Project>{f7291b35-71f2-47c4-ae77-f3c4ab3b43a0}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\NtlLib\Shared\NtlTrigger\NtlTrigger.vcxproj">
+      <Project>{31832309-d436-4c40-913d-87aaf73ffc99}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\NtlLib\Shared\NtlXMLLoader\NtlXMLLoader.vcxproj">
+      <Project>{9d941cac-4183-44e3-aec3-817c0a32d1dd}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\NtlLib\Shared\Util\Util.vcxproj">
+      <Project>{5229f8ae-a505-4077-b6d3-5ce0164dfe73}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Lib\NtlCore\NtlCore.vcxproj">
+      <Project>{2d91cafc-1814-4cb4-b844-4e55f937d051}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Lib\NtlFlasher\NtlFlasher.vcxproj">
+      <Project>{de6f78c4-d4bd-4594-b1f0-e7fe85e30ee5}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Lib\NtlFramework\NtlFramework.vcxproj">
+      <Project>{a2e4d1ec-1758-44e0-b3c9-955c286f84be}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Lib\NtlGui\NtlGui.vcxproj">
+      <Project>{4cacaf6f-333c-4ac8-bb0e-ce8eee4b44a3}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Lib\NtlPresentation\NtlPresentation.vcxproj">
+      <Project>{0ec8e06b-8138-4bfd-8af7-9cad1f2f65ac}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Lib\NtlSimulation\NtlSimulation.vcxproj">
+      <Project>{7bb7020c-506b-47f4-b54b-c91c6f5246ca}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Lib\NtlSound\NtlSound.vcxproj">
+      <Project>{ac4b3632-113d-40e1-b22f-0e6d9d1fd15a}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Lib\Ntl_Plugin_Collis\Ntl_Plugin_Collis.vcxproj">
+      <Project>{4bd7b6fb-4afc-4880-a136-3b59f384ed9e}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Lib\Ntl_Plugin_Toon\Ntl_Plugin_Toon.vcxproj">
+      <Project>{0a07ccc0-9f5d-4e94-b7d6-68bd00dfd37d}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Lib\Ntl_Plugin_World\Ntl_Plugin_World.vcxproj">
+      <Project>{837e47aa-e57b-46ff-b42f-26f23bcba8df}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties RESOURCE_FILE="NtlWE.rc" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

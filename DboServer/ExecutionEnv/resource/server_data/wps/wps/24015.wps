@@ -1,0 +1,31 @@
+-- UD1 Easy 행크소환
+GameStage(0)
+--[
+	Action("wait")
+	--[
+		Condition("recv event from ts")
+		--[
+			Param("trigger type", "quest")
+			Param("event id", 408)
+		--]
+		End()
+	--]
+	End()
+
+	Action("add npc")
+	--[
+		Param("index", 3251102)
+		Param("loc x", 208.066)
+		Param("loc y", 24.738)
+		Param("loc z", -204.293)
+		Param("dir x", -0.999)
+		Param("dir z", 0.041)
+		Param("play script", 3251102)
+		Param("play scene", 1)
+		Param("no spawn wait", "true")
+		Param("stand alone", "true")
+	--]
+	End()
+
+--]
+End()

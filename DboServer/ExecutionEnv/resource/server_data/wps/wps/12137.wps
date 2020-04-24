@@ -1,0 +1,151 @@
+-- TMQ 2-1 Hard Mode
+
+GameStage( 0 )
+--[
+	Action( "add mobgroup" )	-- 세뇌 도도리아
+	--[
+		Param( "group", 9 )
+		Param( "no spawn wait", "true" )
+	--]
+	End()
+
+	Action( "function" )
+	--[
+		Condition( "child" )
+		--[
+			Action( "while" )
+			--[
+				Action( "loop" )
+				--[
+					Action( "wait" )
+					--[
+						Condition( "check battle" )
+						--[
+							Param( "type", "mob" )
+							Param( "group", 9 )
+							Param( "is battle", "true" )
+						--]
+						End() 
+					--]
+					End()								
+													
+					Action( "add mob" )	
+					--[
+						Param( "index", 32811101 )
+						Param( "group", 20 )
+						Param( "loc x", -73.20 )
+						Param( "loc y", 138.65 )
+						Param( "loc z", 46.52 )
+						Param( "dir x", 0 )
+						Param( "dir z", 0 )
+						Param( "play script", 32811101 )
+						Param( "play scene", 1 )
+						Param( "no spawn wait", "true" )
+					--]
+					End()
+							
+					Action( "wait" )
+					--[
+						Condition( "check time" )
+						--[
+							Param( "time", 13 )
+						--]
+						End()
+					--]	
+					End()	
+
+					Action( "add mob" )
+					--[
+						Param( "index", 32811101 )
+						Param( "group", 20 )
+						Param( "loc x", -63.75 )
+						Param( "loc y", 138.27 )
+						Param( "loc z", 33.55 )
+						Param( "dir x", 0 )
+						Param( "dir z", 0 )
+						Param( "play script", 32811101 )
+						Param( "play scene", 2 )
+						Param( "no spawn wait", "true" )
+					--]
+					End()
+
+					Action( "wait" )
+					--[
+						Condition( "check time" )
+						--[
+							Param( "time", 13 )
+						--]
+						End()
+					--]
+					End()
+					
+					Action( "add mob" )
+					--[
+						Param( "index", 32811101 )
+						Param( "group", 20 )
+						Param( "loc x", -52.83 )
+						Param( "loc y", 137.10 )
+						Param( "loc z", 44.90 )
+						Param( "dir x", 0 )
+						Param( "dir z", 0 )
+						Param( "play script", 32811101 )
+						Param( "play scene", 3 )
+						Param( "no spawn wait", "true" )
+					--]
+					End()				
+							
+					Action( "wait" )
+					--[
+						Condition( "check time" )
+						--[
+							Param( "time", 13 )
+							--]
+						End()
+					--]
+					End()
+
+					Action( "add mob" )
+					--[
+						Param( "index", 32811101 )
+						Param( "group", 20 )
+						Param( "loc x", -62.95 )
+						Param( "loc y", 137.48 )
+						Param( "loc z", 58.34 )
+						Param( "dir x", 0 )
+						Param( "dir z", 0 )
+						Param( "play script", 32811101 )
+						Param( "play scene", 4 )
+						Param( "no spawn wait", "true" )
+					--]
+					End()
+				
+					Action( "wait" )
+					--[
+						Condition( "check time" )
+						--[
+							Param( "time", 13 )
+						--]
+						End()
+					--]
+					End()
+				--]
+				End()
+			--]
+			End()
+		--]
+		End()
+
+		Action( "wait" )
+		--[
+			Condition( "check mobgroup" )
+			--[
+				Param( "group", 9 )
+				Param( "count", 1 )
+			--]
+			End()
+		--]
+		End()
+	--]
+	End()
+--]
+End()

@@ -1,0 +1,6 @@
+^지우시겠습니까?^						^Delete?^
+^이름을 적어라^							^Empty^
+^세이브하시겠습니까?^					^Save?^
+^이미 등록되어 있는 이름입니다^			^Name Error^
+^이미 세팅되어 있는 flag입니다^			^already setting^
+^다른 시스템 타입입니다^				^different system type^

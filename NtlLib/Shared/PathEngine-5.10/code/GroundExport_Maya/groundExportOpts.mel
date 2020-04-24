@@ -1,0 +1,286 @@
+
+proc int LookupOptionValue(string $optionList[], string $name)
+{
+    string $optionBreakDown[];
+	for($index = 0; $index < size($optionList); $index++)
+	{
+		tokenize($optionList[$index], "=", $optionBreakDown);
+		if ($optionBreakDown[0] == $name)
+		{
+			return $optionBreakDown[1];
+		}
+	}
+	return -1;
+}
+
+proc int LookupOptionValue_Float(string $optionList[], string $name, float $result[])
+{
+    string $optionBreakDown[];
+	for($index = 0; $index < size($optionList); $index++)
+	{
+		tokenize($optionList[$index], "=", $optionBreakDown);
+		if ($optionBreakDown[0] == $name)
+		{
+			$result[0] = $optionBreakDown[1];
+			return 1;
+		}
+	}
+	return -1;
+}
+
+proc int LookupOptionValue_Int(string $optionList[], string $name, int $result[])
+{
+    string $optionBreakDown[];
+	for($index = 0; $index < size($optionList); $index++)
+	{
+		tokenize($optionList[$index], "=", $optionBreakDown);
+		if ($optionBreakDown[0] == $name)
+		{
+			$result[0] = $optionBreakDown[1];
+			return 1;
+		}
+	}
+	return -1;
+}
+
+proc string ProcessCheckBox(string $action, string $optionList[], string $name)
+{
+    if ($action == "post")
+    {
+	    $intVal = LookupOptionValue($optionList, $name);
+        if($intVal == 0)
+        { 
+            checkBox -e -v false $name;
+        }
+        else if($intVal == 1)
+        { 
+            checkBox -e -v true $name;
+        }
+        return "";
+	}
+    else
+    if($action == "query")
+    {
+        if(eval("checkBox -q -v " + $name) == 1)
+        {
+            return $name + "=1;";
+        }
+        else
+        {
+            return $name + "=0;";
+        }
+   }
+}				
+
+proc string ProcessRadioButton(string $action, string $optionList[], string $name)
+{
+    if ($action == "post")
+    {
+	    if(LookupOptionValue($optionList, $name) == 1)
+        { 
+            radioButton -e -sl $name;
+        }
+	}
+    else
+    if($action == "query")
+    {
+        if(eval("radioButton -q -sl " + $name))
+        {
+            return $name + "=1;";
+        }
+   }
+   return "";
+}				
+
+proc string ProcessRadioButtonGrp(string $action, string $optionList[], string $name)
+{
+    if ($action == "post")
+    {
+	    $intVal = LookupOptionValue($optionList, $name);
+        if($intVal != -1)
+        { 
+            radioButtonGrp -e -sl $intVal $name;
+        }
+        return "";
+	}
+    else
+    if($action == "query")
+    {
+        return $name + "=" + eval("radioButtonGrp -q -sl " + $name) + ";";
+    }
+}				
+
+proc string ProcessFloatField(string $action, string $optionList[], string $name)
+{
+    if ($action == "post")
+    {
+		float $result[1];
+	    $foundIt = LookupOptionValue_Float($optionList, $name, $result);
+        if($foundIt != -1)
+        { 
+            floatField -e -value $result[0] $name;
+        }
+        return "";
+	}
+    else
+    if($action == "query")
+    {
+        return $name + "=" + eval("floatField -q -value " + $name) + ";";
+   }
+}				
+
+proc string ProcessIntField(string $action, string $optionList[], string $name)
+{
+    if ($action == "post")
+    {
+		int $result[1];
+	    $foundIt = LookupOptionValue_Int($optionList, $name, $result);
+        if($foundIt != -1)
+        { 
+            intField -e -value $result[0] $name;
+        }
+        return "";
+	}
+    else
+    if($action == "query")
+    {
+        return $name + "=" + eval("intField -q -value " + $name) + ";";
+   }
+}				
+
+global proc int GroundExportOpts(string $parent,
+                string $action,
+                string $initialSettings,
+                string $resultCallback )
+{
+    int        $intVal;
+    string    $currentOptions;
+    string    $optionList[];
+    int		$bResult;
+
+    if($action == "post")
+    {
+        if(size($initialSettings) > 0)
+        {
+            tokenize($initialSettings, ";", $optionList);
+        }
+
+        setParent $parent;
+		columnLayout -rs 6 -adj true;
+			text -al left -l "PathEngine file translator options.";
+			frameLayout -l "Common options (import and export)" -bs etchedIn -mw 8 -mh 8;
+				columnLayout;
+					rowLayout -nc 2 -adj 1;
+						text -l "Scale:";
+						floatField -minValue 1 -maxValue 1000000 -value 1 -precision 3 -step 10 scaleField;
+					setParent ..;				
+				setParent ..;
+			setParent ..;
+			frameLayout -l "Export options"  -bs etchedIn -mw 8 -mh 8;
+				columnLayout -rs 4 -adj true;
+					text -al "left" -l "File type and format are normally determined by the filename suffix, as follows:";
+					text -al "left" -fn smallObliqueLabelFont -l "    .xml -> XML format ground mesh ";
+					text -al "left" -fn smallObliqueLabelFont -l "    .tok -> tokenised XML format ground mesh ";
+					text -al "left" -fn smallObliqueLabelFont -l "    sourceContent.xml -> XML format source content snapshot ";
+					text -al "left" -fn smallObliqueLabelFont -l "    sourceContent.tok -> tokenised XML format source content snapshot ";
+					text -al "left" -fn smallObliqueLabelFont -l "    contentChunk.tok -> content chunk (tokenised XML) ";
+					text -al "left" -l "This can also be manually overridden, as follows:";
+					frameLayout -l "Manual file type and format selection" -bs etchedIn -mw 6 -mh 6;
+						columnLayout -rs 4;			
+							checkBox -l "Select file type and format manually" -al "left"
+								-onCommand "radioButton -e -en true selectXMLGroundButton;radioButton -e -en true selectTOKGroundButton;radioButton -e -en true selectXMLContentButton;radioButton -e -en true selectTOKContentButton;radioButton -e -en true selectChunkButton;"
+								-offCommand "radioButton -e -en false selectXMLGroundButton;radioButton -e -en false selectTOKGroundButton;radioButton -e -en false selectXMLContentButton;radioButton -e -en false selectTOKContentButton;radioButton -e -en false selectChunkButton;"
+								manualFormatAndTypeCheckBox;
+							radioCollection;
+							radioButton -al "left" -l "XML ground mesh" -sl -en false selectXMLGroundButton;
+							radioButton -al "left" -l "tokenised XML ground mesh" -en false selectTOKGroundButton;
+							radioButton -al "left" -l "XML source content snapshot" -en false selectXMLContentButton;
+							radioButton -al "left" -l "tokenised XML source content snapshot" -en false selectTOKContentButton;
+							radioButton -al "left" -l "content chunk (tokenised XML)" -en false selectChunkButton;
+						setParent ..;
+					setParent ..;
+					frameLayout -l "Ground mesh export" -bs etchedIn -mw 6 -mh 6;
+						columnLayout -rs 4;			
+							checkBox -l "Add mapping to 2D" -al "left" addMappingCheckBox;
+							rowLayout -nc 2 -adj 1;
+								checkBox -l "Filter faces above the following max slope:" -al "left" -onCommand "floatField -e -en true maxSlopeField;" -offCommand "floatField -e -en false maxSlopeField;" filterFacesCheckBox;
+								floatField -minValue 0 -maxValue 1000 -value 2 -precision 4 -step 0.1 -en false maxSlopeField;
+							setParent ..;				
+							rowLayout -nc 2 -adj 1;
+								checkBox -l "Optimise external edges, with the following maximum error:" -al "left" -onCommand "floatField -e -en true maxErrorField;" -offCommand "floatField -e -en false maxErrorField;" optimiseCheckBox;
+								floatField -minValue 0 -maxValue 1000000 -value 4 -precision 3 -step 1 -en false maxErrorField;
+							setParent ..;			
+						setParent ..;			
+					setParent ..;
+					frameLayout -l "Content chunk export" -bs etchedIn -mw 6 -mh 6;
+						columnLayout -rs 4;			
+							checkBox -l "Pre-validate" -al "left" -onCommand "intField -e -en true preValidateScaleField;intField -e -en true preValidateRangeField;" -offCommand "intField -e -en false preValidateScaleField;intField -e -en false preValidateRangeField;" preValidateCheckBox;
+							rowLayout -nc 2 -adj 1;
+								text -l "Maximum scale at instantiation:";
+								intField -minValue 1 -maxValue 1000000 -value 50 -step 1 -en false preValidateScaleField;
+							setParent ..;
+							rowLayout -nc 2 -adj 1;
+								text -l "Instantiation range:";
+								intField -minValue 0 -maxValue 1000000 -value 1000000 -step 1 -en false preValidateRangeField;
+							setParent ..;
+						setParent ..;
+					setParent ..;
+				setParent ..;
+			setParent ..;
+			frameLayout -l "Import options"  -bs etchedIn -mw 8 -mh 8;
+				columnLayout -rs 4;
+					text -al "left" -l "(File type and format are auto-detected on import.)";
+					rowLayout -nc 2 -adj 1;
+						text -l "Anchor height:";
+						floatField -minValue 0.0001 -maxValue 1000000 -value 10 -step 1 anchorHeightField;
+					setParent ..;
+				setParent ..;
+			setParent ..;
+		setParent ..;
+	}
+
+	$currentOptions += ProcessCheckBox($action, $optionList, "manualFormatAndTypeCheckBox");
+	$currentOptions += ProcessRadioButton($action, $optionList, "selectXMLGroundButton");
+	$currentOptions += ProcessRadioButton($action, $optionList, "selectTOKGroundButton");
+	$currentOptions += ProcessRadioButton($action, $optionList, "selectXMLContentButton");
+	$currentOptions += ProcessRadioButton($action, $optionList, "selectTOKContentButton");
+	$currentOptions += ProcessRadioButton($action, $optionList, "selectChunkButton");
+	$currentOptions += ProcessFloatField($action, $optionList, "scaleField");
+	$currentOptions += ProcessCheckBox($action, $optionList, "addMappingCheckBox");
+	$currentOptions += ProcessCheckBox($action, $optionList, "filterFacesCheckBox");
+	$currentOptions += ProcessFloatField($action, $optionList, "maxSlopeField");
+	$currentOptions += ProcessCheckBox($action, $optionList, "optimiseCheckBox");
+	$currentOptions += ProcessFloatField($action, $optionList, "maxErrorField");
+	$currentOptions += ProcessCheckBox($action, $optionList, "preValidateCheckBox");
+	$currentOptions += ProcessIntField($action, $optionList, "preValidateScaleField");
+	$currentOptions += ProcessIntField($action, $optionList, "preValidateRangeField");
+	$currentOptions += ProcessFloatField($action, $optionList, "anchorHeightField");
+
+	if($action == "post")
+	{
+		if(LookupOptionValue($optionList, "manualFormatAndTypeCheckBox") == 1)
+		{
+			radioButton -e -en true selectXMLGroundButton;
+			radioButton -e -en true selectTOKGroundButton;
+			radioButton -e -en true selectXMLContentButton;
+			radioButton -e -en true selectTOKContentButton;
+			radioButton -e -en true selectChunkButton;
+		}
+		if(LookupOptionValue($optionList, "optimiseCheckBox") == 1)
+		{
+			floatField -e -en true maxErrorField;
+		}
+		if(LookupOptionValue($optionList, "preValidateCheckBox") == 1)
+		{
+			intField -e -en true preValidateScaleField;
+			intField -e -en true preValidateRangeField;
+		}
+		return 1;
+	}
+	if($action == "query")
+	{
+        eval($resultCallback+" \""+$currentOptions+"\"");
+		return 1;	
+	}
+	return 0;
+}

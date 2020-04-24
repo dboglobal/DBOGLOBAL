@@ -1,0 +1,554 @@
+-- UD6
+-- Normal Mob Stage
+-- 키리 공급 구역
+-- 
+
+GameStage(0)
+--[
+
+	Action("function")
+	--[
+		Condition("child")
+		--[
+			Action("wait")
+			--[
+				Condition("recv event from wps")
+				--[
+					Param("wps index", 34001)
+					Param("event id", 1001)
+				--]
+				End()
+			--]
+			End()
+			
+			-- 하층 키리 공급 구역/몹 처치시 문 열림 
+
+			--obj90
+			Action( "add mobgroup" )
+			--[
+				Param( "group", 301 )
+				Param( "no spawn wait", "true" )
+			--]
+			End()
+			
+			Action( "wait" )
+			--[
+				Condition( "check mobgroup" )
+				--[
+					Param( "group", 301 )
+					Param( "count", 0 )
+				--]
+				End()
+			--]
+			End()
+				
+			Action( "wait" )
+			--[
+				Condition( "check time" )
+				--[
+					Param( "time", 2 )
+				--]
+				End()
+			--]
+			End()
+			
+			Action( "change object state" )
+			--[
+				Param( "index", 90 )
+				Param( "state", 1 )
+				Param( "substate show", 1 )
+			--]
+			End()
+			
+			--obj91
+			Action( "add mobgroup" )
+			--[
+				Param( "group", 302 )
+				Param( "no spawn wait", "true" )
+			--]
+			End()
+			
+			Action( "wait" )
+			--[
+				Condition( "check mobgroup" )
+				--[
+					Param( "group", 302 )
+					Param( "count", 0 )
+				--]
+				End()
+			--]
+			End()
+
+			Action( "wait" )
+			--[
+				Condition( "check time" )
+				--[
+					Param( "time", 2 )
+				--]
+				End()
+			--]
+			End()
+
+			Action( "change object state" )
+			--[
+				Param( "index", 91 )
+				Param( "state", 1 )
+				Param( "substate show", 1 )
+			--]
+			End()
+
+			Action( "change object state" )
+			--[
+				Param( "index", 92 )
+				Param( "state", 1 )
+				Param( "substate show", 1 )
+			--]
+			End()
+
+			--obj93
+			Action( "add mobgroup" )
+			--[
+				Param( "group", 303 )
+				Param( "no spawn wait", "true" )
+			--]
+			End()
+
+			Action( "wait" )
+			--[
+				Condition( "check mobgroup" )
+				--[
+					Param( "group", 303 )
+					Param( "count", 0 )
+				--]
+				End()
+			--]
+			End()
+	
+			Action( "wait" )
+			--[
+				Condition( "check time" )
+				--[
+					Param( "time", 2 )
+				--]
+				End()
+			--]
+			End()
+	
+			Action( "change object state" )
+			--[
+				Param( "index", 93 )
+				Param( "state", 1 )
+				Param( "substate show", 1 )
+			--]
+			End()
+	
+			--obj94
+			Action( "add mobgroup" )
+			--[
+				Param( "group", 304 )
+				Param( "no spawn wait", "true" )
+			--]
+			End()
+	
+			Action( "wait" )
+			--[
+				Condition( "check mobgroup" )
+				--[
+					Param( "group", 304 )
+					Param( "count", 0 )
+				--]
+				End()
+			--]
+			End()
+	
+			Action( "wait" )
+			--[
+				Condition( "check time" )
+				--[
+					Param( "time", 2 )
+				--]
+				End()
+			--]
+			End()
+	
+			Action( "change object state" )
+			--[
+				Param( "index", 94 )
+				Param( "state", 1 )
+				Param( "substate show", 1 )
+			--]
+			End()
+	
+			--obj95
+			Action( "add mobgroup" )
+			--[
+				Param( "group", 305 )
+				Param( "no spawn wait", "true" )
+			--]
+			End()
+	
+			Action( "wait" )
+			--[
+				Condition( "check mobgroup" )
+				--[
+					Param( "group", 305 )
+					Param( "count", 0 )
+				--]
+				End()
+			--]
+			End()
+	
+			Action( "wait" )
+			--[
+				Condition( "check time" )
+				--[
+					Param( "time", 2 )
+				--]
+				End()
+			--]
+			End()
+	
+			Action( "change object state" )
+			--[
+				Param( "index", 95 )
+				Param( "state", 1 )
+				Param( "substate show", 1 )
+			--]
+			End()
+	
+			--obj96
+			Action( "add mobgroup" )
+			--[
+				Param( "group", 306 )
+				Param( "no spawn wait", "true" )
+			--]
+			End()
+	
+			Action( "wait" )
+			--[
+				Condition( "check mobgroup" )
+				--[
+					Param( "group", 306 )
+					Param( "count", 0 )
+				--]
+				End()
+			--]
+			End()
+	
+			Action( "wait" )
+			--[
+				Condition( "check time" )
+				--[
+					Param( "time", 2 )
+				--]
+				End()
+			--]
+			End()
+	
+			Action( "change object state" )
+			--[
+				Param( "index", 96 )
+				Param( "state", 1 )
+				Param( "substate show", 1 )
+			--]
+			End()
+	
+			--obj97
+			Action( "add mobgroup" )
+			--[
+				Param( "group", 307 )
+				Param( "no spawn wait", "true" )
+			--]
+			End()
+	
+			Action( "wait" )
+			--[
+				Condition( "check mobgroup" )
+				--[
+					Param( "group", 307 )
+					Param( "count", 0 )
+				--]
+				End()
+			--]
+			End()
+	
+			Action( "wait" )
+			--[
+				Condition( "check time" )
+				--[
+					Param( "time", 2 )
+				--]
+				End()
+			--]
+			End()
+	
+			Action( "change object state" )
+			--[
+				Param( "index", 97 )
+				Param( "state", 1 )
+				Param( "substate show", 1 )
+			--]
+			End()
+	
+			Action( "change object state" )
+			--[
+				Param( "index", 98 )
+				Param( "state", 1 )
+				Param( "substate show", 1 )
+			--]
+			End()
+	
+			--obj129
+			Action( "add mobgroup" )
+			--[
+				Param( "group", 308 )
+				Param( "no spawn wait", "true" )
+			--]
+			End()
+	
+			Action( "wait" )
+			--[
+				Condition( "check mobgroup" )
+				--[
+					Param( "group", 308 )
+					Param( "count", 0 )
+				--]
+				End()
+			--]
+			End()
+	
+			Action( "wait" )
+			--[
+				Condition( "check time" )
+				--[
+					Param( "time", 2 )
+				--]
+				End()
+			--]
+			End()
+	
+			-- 서스 방으로 가는 문이 열렸습니다.
+			Action( "system message" )
+			--[
+				Param( "notify", "notice" )
+				Param( "text index", 96 )
+			--]
+			End()
+			
+			Action( "change object state" )
+			--[
+				Param( "index", 129 )
+				Param( "state", 1 )
+				Param( "substate show", 1 )
+			--]
+			End()
+	
+			Action( "send event to wps" )
+			--[
+				Param( "wps index", 34004 )
+				Param( "event id", 920 )
+			--]
+			End()
+	
+		--]
+		End()
+		
+		Action("wait")
+		--[
+			Condition("recv event from ts")
+			--[
+				Param("trigger type", "object")
+				Param("event id", 873)
+			--]
+			End()
+		--]
+		End()
+	--]
+	End()
+	
+	Action("remove mobgroup")
+	--[
+		Param("group", 301)
+		Param("type", "clear")
+	--]
+	End()
+	
+	Action("remove mobgroup")
+	--[
+		Param("group", 302)
+		Param("type", "clear")
+	--]
+	End()
+	
+	Action("remove mobgroup")
+	--[
+		Param("group", 303)
+		Param("type", "clear")
+	--]
+	End()
+	
+	Action("remove mobgroup")
+	--[
+		Param("group", 304)
+		Param("type", "clear")
+	--]
+	End()
+	
+	Action("remove mobgroup")
+	--[
+		Param("group", 305)
+		Param("type", "clear")
+	--]
+	End()
+	
+	Action("remove mobgroup")
+	--[
+		Param("group", 306)
+		Param("type", "clear")
+	--]
+	End()
+	
+	Action("remove mobgroup")
+	--[
+		Param("group", 307)
+		Param("type", "clear")
+	--]
+	End()
+	
+	Action("remove mobgroup")
+	--[
+		Param("group", 308)
+		Param("type", "clear")
+	--]
+	End()
+	
+	Action( "change object state" )
+	--[
+		Param( "index", 90 )
+		Param( "state", 1 )
+		Param( "substate show", 1 )
+	--]
+	End()
+	
+	Action( "change object state" )
+	--[
+		Param( "index", 91 )
+		Param( "state", 1 )
+		Param( "substate show", 1 )
+	--]
+	End()
+	
+	Action( "change object state" )
+	--[
+		Param( "index", 92 )
+		Param( "state", 1 )
+		Param( "substate show", 1 )
+	--]
+	End()
+	
+	Action( "change object state" )
+	--[
+		Param( "index", 93 )
+		Param( "state", 1 )
+		Param( "substate show", 1 )
+	--]
+	End()
+	
+	Action( "change object state" )
+	--[
+		Param( "index", 94 )
+		Param( "state", 1 )
+		Param( "substate show", 1 )
+	--]
+	End()
+	
+	Action( "change object state" )
+	--[
+		Param( "index", 95 )
+		Param( "state", 1 )
+		Param( "substate show", 1 )
+	--]
+	End()
+	
+	Action( "change object state" )
+	--[
+		Param( "index", 96 )
+		Param( "state", 1 )
+		Param( "substate show", 1 )
+	--]
+	End()
+	
+	Action( "change object state" )
+	--[
+		Param( "index", 97 )
+		Param( "state", 1 )
+		Param( "substate show", 1 )
+	--]
+	End()
+	
+	Action( "change object state" )
+	--[
+		Param( "index", 98 )
+		Param( "state", 1 )
+		Param( "substate show", 1 )
+	--]
+	End()
+	
+	Action( "change object state" )
+	--[
+		Param( "index", 129 )
+		Param( "state", 1 )
+		Param( "substate show", 1 )
+	--]
+	End()
+	
+	Action( "change object state" )
+	--[
+		Param( "index", 131 )
+		Param( "state", 1 )
+		Param( "substate show", 1 )
+	--]
+	End()
+	
+	Action( "change object state" )
+	--[
+		Param( "index", 75 )
+		Param( "state", 1 )
+		Param( "substate show", 1 )
+	--]
+	End()
+	
+	Action( "change object state" )
+	--[
+		Param( "index", 99 )
+		Param( "state", 1 )
+		Param( "substate show", 1 )
+	--]
+	End()
+	
+	Action( "change object state" )
+	--[
+		Param( "index", 81 )
+		Param( "state", 1 )
+		Param( "substate show", 1 )
+		Param( "substate unselect", 1 )
+	--]
+	End()
+	
+	Action( "change object state" )
+	--[
+		Param( "index", 7 )
+		Param( "state", 1 )
+		Param( "substate show", 1 )
+	--]
+	End()
+	
+	Action("system message")
+	--[
+		Param("notify", "notice")
+		Param("text index", 81)
+	--]
+	End()
+
+--]
+End()

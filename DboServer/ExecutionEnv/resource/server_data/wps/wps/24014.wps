@@ -1,0 +1,40 @@
+-- UD1 Easy 인질구출
+GameStage(0)
+--[
+	Action("change sps scene")
+	--[
+		Param("index", 1351216)
+		Param("play script", 1351216)
+		Param("play scene", 1)
+	--]
+	End()
+
+	Action("change sps scene")
+	--[
+		Param("index", 3031301)
+		Param("play script", 3031301)
+		Param("play scene", 1)
+	--]
+	End()
+
+	
+
+	Action("change sps scene")
+	--[
+		Param("index", 4191122)
+		Param("play script", 4191122)
+		Param("play scene", 1)
+	--]
+	End()
+
+	Action("change sps scene")
+	--[
+		Param("index", 3143118)
+		Param("play script", 3143118)
+		Param("play scene", 1)
+	--]
+	End()
+
+	
+--]
+End()

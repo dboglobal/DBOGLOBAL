@@ -1,0 +1,203 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Release4Client|Win32">
+      <Configuration>Release4Client</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release4Tools|Win32">
+      <Configuration>Release4Tools</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{2D91CAFC-1814-4CB4-B844-4E55F937D051}</ProjectGuid>
+    <RootNamespace>NtlCore</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release4Client|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v80</PlatformToolset>
+    <CharacterSet>NotSet</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release4Tools|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v80</PlatformToolset>
+    <CharacterSet>NotSet</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release4Client|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release4Tools|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>14.0.25431.1</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release4Client|Win32'">
+    <OutDir>$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release4Tools|Win32'">
+    <OutDir>$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release4Client|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(SolutionDir)Renderware\Include;$(DXSDK_DIR)Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_LIB;_CRT_SECURE_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>precomp_ntlcore.h</PrecompiledHeaderFile>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4311;4312;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <BufferSecurityCheck>true</BufferSecurityCheck>
+      <MinimalRebuild>false</MinimalRebuild>
+      <WholeProgramOptimization>true</WholeProgramOptimization>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Lib>
+      <AdditionalDependencies>
+      </AdditionalDependencies>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release4Tools|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(SolutionDir)Renderware\Include;$(DXSDK_DIR)Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_LIB;_CRT_SECURE_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>precomp_ntlcore.h</PrecompiledHeaderFile>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4311;4312;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <BufferSecurityCheck>true</BufferSecurityCheck>
+      <MinimalRebuild>false</MinimalRebuild>
+      <WholeProgramOptimization>true</WholeProgramOptimization>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Lib>
+      <AdditionalDependencies>
+      </AdditionalDependencies>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="callstack.cpp" />
+    <ClCompile Include="ceventhandler.cpp" />
+    <ClCompile Include="ceventvisualisation.cpp" />
+    <ClCompile Include="debugmacros.cpp" />
+    <ClCompile Include="debugostream.cpp" />
+    <ClCompile Include="eventhandlerstrfuncs.cpp" />
+    <ClCompile Include="idfromstring.cpp" />
+    <ClCompile Include="memoryhandler.cpp" />
+    <ClCompile Include="memoryprofile.cpp" />
+    <ClCompile Include="NtlAtomic.cpp" />
+    <ClCompile Include="NtlBugTrap.cpp" />
+    <ClCompile Include="NtlCharsetPrint.cpp" />
+    <ClCompile Include="NtlConsole.cpp" />
+    <ClCompile Include="NtlCoreApi.cpp" />
+    <ClCompile Include="NtlCoreLogic.cpp" />
+    <ClCompile Include="NtlCoreRender.cpp" />
+    <ClCompile Include="NtlCoreUtil.cpp" />
+    <ClCompile Include="NtlDeviceRestoreHandler.cpp" />
+    <ClCompile Include="NtlDumpTarget.cpp" />
+    <ClCompile Include="NtlEventQueue.cpp" />
+    <ClCompile Include="NtlFrameSkipScheduler.cpp" />
+    <ClCompile Include="NtlLoadingController.cpp" />
+    <ClCompile Include="NtlLog.cpp" />
+    <ClCompile Include="NtlMath.cpp" />
+    <ClCompile Include="NtlPackImage.cpp" />
+    <ClCompile Include="NtlPaser.cpp" />
+    <ClCompile Include="NtlProfiler.cpp" />
+    <ClCompile Include="NtlSchedule.cpp" />
+    <ClCompile Include="NtlStringUtil.cpp" />
+    <ClCompile Include="NtlSysEvent.cpp" />
+    <ClCompile Include="NtlSystemInfo.cpp" />
+    <ClCompile Include="NtlTokenOption.cpp" />
+    <ClCompile Include="NtlWorldDI.cpp" />
+    <ClCompile Include="NtlWorldMouse.cpp" />
+    <ClCompile Include="PerformanceChecker.cpp" />
+    <ClCompile Include="precomp_ntlcore.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release4Client|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release4Tools|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="profile.cpp" />
+    <ClCompile Include="Registry.cpp" />
+    <ClCompile Include="RTTI.cpp" />
+    <ClCompile Include="streamhandler.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="BTAtlWindow.h" />
+    <ClInclude Include="BTMfcWindow.h" />
+    <ClInclude Include="BTTrace.h" />
+    <ClInclude Include="BugTrap.h" />
+    <ClInclude Include="callstack.h" />
+    <ClInclude Include="ceventhandler.h" />
+    <ClInclude Include="ceventvisualisation.h" />
+    <ClInclude Include="debugmacros.h" />
+    <ClInclude Include="debugostream.h" />
+    <ClInclude Include="idfromstring.h" />
+    <ClInclude Include="iocoercion.h" />
+    <ClInclude Include="memoryhandler.h" />
+    <ClInclude Include="memoryprofile.h" />
+    <ClInclude Include="NtlAtomic.h" />
+    <ClInclude Include="NtlBugTrap.h" />
+    <ClInclude Include="NtlCallbackWidget.h" />
+    <ClInclude Include="NtlCharsetPrint.h" />
+    <ClInclude Include="NtlClientService.h" />
+    <ClInclude Include="NtlConsole.h" />
+    <ClInclude Include="NtlCoreApi.h" />
+    <ClInclude Include="NtlCoreDescription.h" />
+    <ClInclude Include="NtlCoreLogic.h" />
+    <ClInclude Include="NtlCoreRender.h" />
+    <ClInclude Include="NtlCoreUtil.h" />
+    <ClInclude Include="NtlDebug.h" />
+    <ClInclude Include="NtlDeviceRestoreHandler.h" />
+    <ClInclude Include="NtlDumpTarget.h" />
+    <ClInclude Include="NtlEventQueue.h" />
+    <ClInclude Include="NtlFrameSkipScheduler.h" />
+    <ClInclude Include="NtlLoadingController.h" />
+    <ClInclude Include="NtlLog.h" />
+    <ClInclude Include="NtlMath.h" />
+    <ClInclude Include="NtlPackImage.h" />
+    <ClInclude Include="NtlPaser.h" />
+    <ClInclude Include="NtlProfiler.h" />
+    <ClInclude Include="NtlResourceFileManager.h" />
+    <ClInclude Include="NtlSchedule.h" />
+    <ClInclude Include="NtlStringUtil.h" />
+    <ClInclude Include="NtlSysEvent.h" />
+    <ClInclude Include="NtlSystemInfo.h" />
+    <ClInclude Include="NtlTokenOption.h" />
+    <ClInclude Include="NtlWorldDI.h" />
+    <ClInclude Include="NtlWorldMouse.h" />
+    <ClInclude Include="PerformanceChecker.h" />
+    <ClInclude Include="precomp_ntlcore.h" />
+    <ClInclude Include="precomp_ntlplatform.h" />
+    <ClInclude Include="profile.h" />
+    <ClInclude Include="Registry.h" />
+    <ClInclude Include="RTTI.h" />
+    <ClInclude Include="rwsguid.h" />
+    <ClInclude Include="streamhandler.h" />
+    <ClInclude Include="strfunc.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\DboShared\NtlShared2\NtlShared.vcxproj">
+      <Project>{573eb1e4-7620-479e-8ccf-def06491545b}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\NtlLib\Shared\NtlXMLLoader\NtlXMLLoader.vcxproj">
+      <Project>{9d941cac-4183-44e3-aec3-817c0a32d1dd}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

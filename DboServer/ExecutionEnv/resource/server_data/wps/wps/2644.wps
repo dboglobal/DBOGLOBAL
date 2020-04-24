@@ -1,0 +1,129 @@
+
+GameStage(0)
+--[
+	Action( "add mob" )
+	--[
+		Param( "index", 7111488 )
+		Param( "group", 2644 )
+		Param( "loc x", 458.893 )
+		Param( "loc y", -62.577 )
+		Param( "loc z", -2643.207 )
+		Param( "dir x", -0.059 )
+		Param( "dir z", -0.998 )
+		Param( "play script", 7111488 )
+		Param( "play scene", 1 )
+		Param( "no spawn wait", "true" )
+	--]
+	End()
+	
+	Action( "add mob" )
+	--[
+		Param( "index", 7111488 )
+		Param( "group", 2644 )
+		Param( "loc x", 461.958 )
+		Param( "loc y", -62.640 )
+		Param( "loc z", -2643.410 )
+		Param( "dir x", -0.059 )
+		Param( "dir z", -0.998 )
+		Param( "play script", 7111488 )
+		Param( "play scene", 2 )		
+		Param( "no spawn wait", "true" )
+	--]
+	End()
+	
+	Action( "add mob" )
+	--[
+		Param( "index", 2001504 )
+		Param( "group", 2644 )
+		Param( "loc x", 460.111 )
+		Param( "loc y", -62.782 )
+		Param( "loc z", -2636.978 )
+		Param( "dir x", -0.121 )
+		Param( "dir z", -0.993 )
+		Param( "no spawn wait", "true" )
+	--]
+	End()
+
+	Action( "function" )
+	--[
+		Condition( "child" )
+		--[
+			Action( "wait" )
+			--[
+				Condition( "check time" )
+				--[
+					Param( "time",  300 )
+				--]
+				End()
+			--]
+			End()
+			
+			Action( "wps fail" )
+			--[
+			
+			--]
+			End()
+		--]
+		End()
+		
+		Action( "wait" )
+		--[
+			Condition( "check mobgroup" )
+			--[
+				Param( "group", 2644 )
+				Param( "count", 3 )
+			--]
+			End()
+		--]
+		End()
+	--]
+	End()
+	
+	Action( "send event to ts" )
+	--[
+		Param( "trigger type", "quest" )
+		Param( "apply type", "register all" )
+		Param( "event id", 581 )
+	--]
+	End()
+	
+	Action( "add mob" )
+	--[
+		Param( "index", 5791107 )
+		Param( "group", 264401 )
+		Param( "loc x", 460.111 )
+		Param( "loc y", -62.840 )
+		Param( "loc z", -2636.978 )
+		Param( "dir x", -0.05 )
+		Param( "dir z", -0.999 )
+		Param( "no spawn wait", "true" )
+	--]
+	End()
+
+	Action("wait")
+	--[
+		Param("operation", "or")
+
+		Condition("check time")
+		--[
+			Param("time", 60)
+		--]
+		End()
+
+		Condition("check mobgroup")
+		--[
+			Param("group", 264401)
+			Param("count", 0)
+		--]
+		End()
+
+	--]
+	End()
+--]
+End()
+
+GameFailed()
+--[
+
+--]
+End()

@@ -1,0 +1,335 @@
+-- DWC 1 부르마 루트
+
+GameStage(0)
+--[
+	-- 70001에서 부르마 루트 발동시킬 때 까지 대기
+	Action( "wait" )
+	--[
+		Condition( "recv event from wps" )
+		--[
+			Param( "wps index", 70001 )
+			Param( "event id", 671 )
+		--]
+		End()
+	--]
+	End()
+	
+	-- 뿔나로돈이 짐승들을 부르는 나레이션 시작 13006
+	Action("send event to ts")
+	--[
+		Param( "trigger type", "quest" )
+		Param( "apply type", "register all" )
+		Param( "event id", 635 )
+	--]
+	End()
+
+	-- 뿔나로돈이 짐승들을 부르는 나레이션 종료 13006
+	Action( "wait" )
+	--[
+		Condition("recv event from ts")
+		--[
+			Param( "trigger type", "quest" )
+			Param( "event id", 636 )
+		--]
+		End()
+	--]
+	End()
+	
+	-- 늑대 사냥 도중 부르마가 죽으면 dwc fail
+	Action( "function" )
+	--[
+		Condition( "child" )
+		--[
+			-- 실패조건
+			-- 부르마가 죽으면 dwc fail
+			Action( "wait" )
+			--[
+				Condition( "npc faint" )
+				--[
+					Param( "npc index", 1381101 )
+				--]
+				End()
+			--]
+			End()
+			
+			Action( "DWC fail" )
+			--[
+			--]
+			End()
+			
+		--]
+		End()
+
+		-- 배고픈 늑대 소환
+		Action( "add mobgroup" )
+		--[
+			Param( "group", 101 )
+			Param( "no spawn wait", "true" )
+		--]
+		End()
+		
+		-- 부르마 대사 하도록
+		Action( "send event to sps" )
+		--[
+			Param( "target type", "npc" )
+			Param( "target index", 1381101 )
+			Param( "event id", 834 )
+		--]
+		End()
+
+		-------------------------------------------------------------
+		-- 이벤트 등록: 늑대를 물리치기
+		Action( "event status register" )
+		--[
+			Param( "group", 4 )
+			Param( "index", 1 )
+			Param( "text tblidx", 52 )
+			Param( "type", "mob count" )
+			Param( "mob group", 101 )
+			Param( "max count", 6 )
+		--]
+		End()
+		
+		-- 배고픈 늑대 모두 사망전까지 대기
+		Action( "wait" )
+		--[
+			Condition( "check mobgroup" )
+			--[   
+				Param( "group", 101 )
+				Param( "count", 0 )
+			--]
+			End() 
+		--]
+		End()
+
+		-------------------------------------------------------------
+		-- 이벤트 선택: 늑대를 물리치기
+		Action( "event status select" )
+		--[
+			Param( "group", 4 )
+			Param( "index", 1 )
+		--]
+		End()
+		
+		-- 늑대 우두머리를 스폰. 등장하면서 대사 크르릉...
+		Action( "add mob" )
+		--[
+			Param( "index", 48913101 )
+			Param( "group", 7000301 )
+			Param( "loc x", 1608.92 )
+			Param( "loc y", -95.08 )
+			Param( "loc z", -1652.31 )
+			Param( "dir x", 0.09 )
+			Param( "dir z", 1 )
+			Param( "play script", 48913101 )
+			Param( "play scene", 1 )
+			Param( "no spawn wait", "true" )
+		--]
+		End()
+
+		-- 이벤트 등록: 늑대 우두머리를 물리치기
+		Action( "event status register" )
+		--[
+			Param( "group", 8 )
+			Param( "index", 1 )
+			Param( "text tblidx", 64 )
+			Param( "type", "mob count" )
+			Param( "mob group", 7000301 )
+			Param( "max count", 1 )
+		--]
+		End()
+
+		-- 늑대 우두머리 사망전까지 대기
+		Action( "wait" )
+		--[
+			Condition( "check mobgroup" )
+			--[   
+				Param( "group", 7000301 )
+				Param( "count", 0 )
+			--]
+			End() 
+		--]
+		End()
+
+		-------------------------------------------------------------
+		-- 이벤트 선택: 늑대 우두머리를 물리치기
+		Action( "event status select" )
+		--[
+			Param( "group", 8 )
+			Param( "index", 1 )
+		--]
+		End()
+	--]
+	End()
+	
+
+	-- 종료 지점에 check point 보여줌
+	Action( "direction indicate" )
+	--[
+		Param( "apply", "true" )
+		Param( "indicate type", "point" )
+		Param( "loc x", 1603.52 )
+		Param( "loc z", -1689.83 )
+	--]
+	End()
+	
+	-- check point에 들어가면		
+	Action( "wait" )
+	--[
+		Condition( "area enter" )
+		--[
+			Param( "origin x", 1603.52 )
+			Param( "origin z", -1689.83 )
+			Param( "radius", 15 )
+			Param( "all member", "true" )
+		--]
+		End()
+	--]
+	End()
+	
+	-- check point 지워주고
+	Action( "direction indicate" )
+	--[
+		Param( "apply", "false" )
+		Param( "indicate type", "point" )
+	--]
+	End()
+
+	-- 손오공 등장
+	Action( "add npc" )
+	--[
+		Param( "index", 2731101 )
+		Param( "loc x", 1603.04 )
+		Param( "loc y", -82.79 )
+		Param( "loc z", -1701.82 )
+		Param( "dir x", 0.00 )
+		Param( "dir z", 1.00 )
+		Param( "play script", 2731101 )
+		Param( "play scene", 1 )
+		Param( "no spawn wait", "true" )
+	--]
+	End()
+
+	-- 손오공 이동 완료 대기
+	Action( "wait" )
+	--[
+		Condition( "recv event from sps" )
+		--[
+			Param( "object type", "npc" )
+			Param( "object index", 2731101 )
+			Param( "event id", 637 )
+		--]
+		End()
+	--]
+	End()
+
+--	부르마 escort 종료시키는 이벤트 ts로 보내지 않고 
+--	그냥 부르마 삭제시켰다가 다시 spawn시킴
+
+	-- 호위 부르마 npc 삭제
+	Action( "remove npc" )
+	--[
+		Param( "index", 1381101 )
+		Param( "type", "clear" )
+	--]
+	End()
+
+	-- 대사 부르마 spawn
+	Action( "add npc" )
+	--[
+		Param( "index", 1381102 )
+		Param( "loc x", 1599.23 )
+		Param( "loc y", -84.87 )
+		Param( "loc z", -1693.73 )
+		Param( "dir x", 0.69 )
+		Param( "dir z", 0.72 )
+		Param( "no spawn wait", "true" )
+	--]
+	End()
+
+
+	-- 손오공 만남 나레이션 시작
+	Action("send event to ts")
+	--[
+		Param( "trigger type", "quest" )
+		Param( "apply type", "register all" )
+		Param( "event id", 638 )
+	--]
+	End()
+	
+	-- 손오공 만남 나레이션 종료
+	Action( "wait" )
+	--[
+		Condition("recv event from ts")
+		--[
+			Param( "trigger type", "quest" )
+			Param( "event id", 676 )
+		--]
+		End()
+	--]
+	End()
+	
+	-- 플래시: DWC Challenge
+	Action( "flash play" )
+	--[
+		Param( "id", 20000 )
+	--]     
+	End()
+	
+	Action( "wait" )
+	--[
+		Condition( "check time" )
+		--[
+			Param( "time", 3 )
+		--]
+		End()
+	--]
+	End()
+	
+	-- 플래시: Clear
+	Action( "flash play" )
+	--[
+		Param( "id", 20003 )
+	--]     
+	End()
+
+	-- 3초간 대기
+	Action( "wait" )
+	--[
+		Condition( "check time" )
+		--[
+			Param( "time", 3 )
+		--]
+		End()
+	--]
+	End()
+
+	-- 부르마 루트 완료
+	Action( "send event to wps" )
+	--[
+		Param( "wps index", 70001 )
+		Param( "event id", 688 )
+	--]
+	End()
+	
+	-- 부르마 루트 보상 요청
+	Action( "send event to wps" )
+	--[
+		Param( "wps index", 70000 )
+		Param( "event id", 674 )
+	--]
+	End()
+
+	-- 3초간 대기
+	Action( "wait" )
+	--[
+		Condition( "check time" )
+		--[
+			Param( "time", 3 )
+		--]
+		End()
+	--]
+	End()
+	
+--]
+End()

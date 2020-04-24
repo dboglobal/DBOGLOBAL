@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="stdafx">
+      <UniqueIdentifier>{4abf431c-a4b8-4a84-a1dd-d0ea81c5fa7a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Session">
+      <UniqueIdentifier>{009c1f47-0935-4496-ad55-f16e8b1b5900}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Packet">
+      <UniqueIdentifier>{51553ced-53f3-46ac-b698-18fe69969591}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Packet\AuthServer">
+      <UniqueIdentifier>{376d64f2-c55e-4223-bf71-67d8bc9fe91d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Packet\CharServer">
+      <UniqueIdentifier>{527961e4-5b8e-4fcb-b357-7f52e17d4938}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Packet\ChatServer">
+      <UniqueIdentifier>{d628e1fc-56e5-48ca-92c6-7b3d3565be5c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Packet\QueryServer">
+      <UniqueIdentifier>{2a290c17-d1d2-4011-9c7a-1be91ce4c274}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Packet\GameServer">
+      <UniqueIdentifier>{6abad710-e887-4366-b645-9cee8c8f3c60}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Session\Auth">
+      <UniqueIdentifier>{9047f8fa-b333-4d6f-af6d-205b80e5100b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Session\Char">
+      <UniqueIdentifier>{bb44a7ea-118f-4c4f-a13b-87a070bec17d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Session\Chat">
+      <UniqueIdentifier>{ee4071eb-3895-4e87-8467-16fbfd538086}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Session\Game">
+      <UniqueIdentifier>{1551a7d0-e268-44c6-a3ee-2dbd4118d82d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="servermanager">
+      <UniqueIdentifier>{56d912bd-2d4d-400e-9b44-f16043239ca7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Session\WEB">
+      <UniqueIdentifier>{88c03132-4fe5-428a-a586-7ed661602b0b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameEvent">
+      <UniqueIdentifier>{bb886c9b-504d-452c-bed9-3bb8405cea00}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>stdafx</Filter>
+    </ClCompile>
+    <ClCompile Include="AuthPacket.cpp">
+      <Filter>Packet\AuthServer</Filter>
+    </ClCompile>
+    <ClCompile Include="MasterServer.cpp" />
+    <ClCompile Include="CharPacket.cpp">
+      <Filter>Packet\CharServer</Filter>
+    </ClCompile>
+    <ClCompile Include="AuthSession.cpp">
+      <Filter>Session\Auth</Filter>
+    </ClCompile>
+    <ClCompile Include="CharSession.cpp">
+      <Filter>Session\Char</Filter>
+    </ClCompile>
+    <ClCompile Include="ChatSession.cpp">
+      <Filter>Session\Chat</Filter>
+    </ClCompile>
+    <ClCompile Include="GameSession.cpp">
+      <Filter>Session\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="GamePacket.cpp">
+      <Filter>Packet\GameServer</Filter>
+    </ClCompile>
+    <ClCompile Include="SubNeighborServerInfoManager.cpp">
+      <Filter>servermanager</Filter>
+    </ClCompile>
+    <ClCompile Include="WebSession.cpp">
+      <Filter>Session\WEB</Filter>
+    </ClCompile>
+    <ClCompile Include="ChatPacket.cpp">
+      <Filter>Packet\ChatServer</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="stdafx.h">
+      <Filter>stdafx</Filter>
+    </ClInclude>
+    <ClInclude Include="SessionFactory.h">
+      <Filter>Session</Filter>
+    </ClInclude>
+    <ClInclude Include="PacketHead.h">
+      <Filter>Packet</Filter>
+    </ClInclude>
+    <ClInclude Include="MasterServer.h" />
+    <ClInclude Include="AuthSession.h">
+      <Filter>Session\Auth</Filter>
+    </ClInclude>
+    <ClInclude Include="CharSession.h">
+      <Filter>Session\Char</Filter>
+    </ClInclude>
+    <ClInclude Include="ChatSession.h">
+      <Filter>Session\Chat</Filter>
+    </ClInclude>
+    <ClInclude Include="GameSession.h">
+      <Filter>Session\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="SubNeighborServerInfoManager.h">
+      <Filter>servermanager</Filter>
+    </ClInclude>
+    <ClInclude Include="WebSession.h">
+      <Filter>Session\WEB</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

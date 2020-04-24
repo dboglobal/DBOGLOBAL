@@ -1,0 +1,79 @@
+------------------------------------------------------
+--
+-- Goku
+-- Author : YeoHyeonJoon (souled@ntl-inc.com)
+-- Comment: 
+--
+------------------------------------------------------
+
+
+Scene(1, "Test AI" )
+--[
+	State("fight")
+	--[
+		Condition("himself check")
+		--[
+			Param("event type", "lp")
+			Param("%", 90)
+			
+			Action( "say" )
+			--[
+				Param( "text", "Shet! 90% Life. Dat guy is killin me" ) 
+			--]     
+			End()
+			
+			Action( "add mob" )
+			--[
+					Param("index", 9991101)
+					Param("type", "recall")
+			--]
+			End()
+			
+			Action( "add mob" )
+			--[
+					Param("index", 9991101)
+					Param("type", "recall")
+			--]
+			End()
+			
+			Action( "add mob" )
+			--[
+					Param("index", 9991101)
+					Param("type", "recall")
+			--]
+			End()			
+		--]     
+		End()
+		
+		Condition("himself check")
+		--[
+			Param("event type", "lp")
+			Param("%", 70)
+			
+			Action( "say" )
+			--[
+				Param( "text", "lp : 70" ) 
+			--]     
+			End()
+		--]     
+		End()
+		
+		Condition("himself check")
+		--[
+			Param("event type", "lp")
+			Param("%", 40)
+			
+			Action( "say" )
+			--[
+				Param( "text", "lp : 40" ) 
+			--]     
+			End()
+		--]     
+		End()
+	--]
+	End()
+--]
+End()
+
+
+------------------------------------------------------

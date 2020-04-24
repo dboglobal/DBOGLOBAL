@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Panes">
+      <UniqueIdentifier>{e934c4af-801c-4820-a46c-13a333c5146b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="리소스 파일">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav</Extensions>
+    </Filter>
+    <Filter Include="Framework">
+      <UniqueIdentifier>{dda80fed-3485-4bc2-bebe-8e2b778b8bfc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source">
+      <UniqueIdentifier>{4aaa3c8f-865c-4df0-b3f9-7fef156887fe}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="CustomItems.cpp">
+      <Filter>Panes</Filter>
+    </ClCompile>
+    <ClCompile Include="MPPClientCheat.cpp">
+      <Filter>Panes</Filter>
+    </ClCompile>
+    <ClCompile Include="MPPConfigSetting.cpp">
+      <Filter>Panes</Filter>
+    </ClCompile>
+    <ClCompile Include="MPPGraphicPane.cpp">
+      <Filter>Panes</Filter>
+    </ClCompile>
+    <ClCompile Include="MPPLogView.cpp">
+      <Filter>Panes</Filter>
+    </ClCompile>
+    <ClCompile Include="MPPSetItemPane.cpp">
+      <Filter>Panes</Filter>
+    </ClCompile>
+    <ClCompile Include="MPPTestPane.cpp">
+      <Filter>Panes</Filter>
+    </ClCompile>
+    <ClCompile Include="MainFrm.cpp">
+      <Filter>Framework</Filter>
+    </ClCompile>
+    <ClCompile Include="MrPoPo.cpp">
+      <Filter>Framework</Filter>
+    </ClCompile>
+    <ClCompile Include="MrPoPoDoc.cpp">
+      <Filter>Framework</Filter>
+    </ClCompile>
+    <ClCompile Include="MrPoPoView.cpp">
+      <Filter>Framework</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Framework</Filter>
+    </ClCompile>
+    <ClCompile Include="MPPClientEvent.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlScriptEncrypter.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="CustomItems.h">
+      <Filter>Panes</Filter>
+    </ClInclude>
+    <ClInclude Include="MPPClientCheat.h">
+      <Filter>Panes</Filter>
+    </ClInclude>
+    <ClInclude Include="MPPConfigSetting.h">
+      <Filter>Panes</Filter>
+    </ClInclude>
+    <ClInclude Include="MPPGraphicPane.h">
+      <Filter>Panes</Filter>
+    </ClInclude>
+    <ClInclude Include="MPPLogView.h">
+      <Filter>Panes</Filter>
+    </ClInclude>
+    <ClInclude Include="MPPSetItemPane.h">
+      <Filter>Panes</Filter>
+    </ClInclude>
+    <ClInclude Include="MPPTestPane.h">
+      <Filter>Panes</Filter>
+    </ClInclude>
+    <ClInclude Include="MainFrm.h">
+      <Filter>Framework</Filter>
+    </ClInclude>
+    <ClInclude Include="MrPoPo.h">
+      <Filter>Framework</Filter>
+    </ClInclude>
+    <ClInclude Include="MrPoPoDoc.h">
+      <Filter>Framework</Filter>
+    </ClInclude>
+    <ClInclude Include="MrPoPoView.h">
+      <Filter>Framework</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>Framework</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>Framework</Filter>
+    </ClInclude>
+    <ClInclude Include="MPPClientEvent.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="MPPDef.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlScriptEncrypter.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\MrPoPo.ico">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\MrPoPoDoc.ico">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\paneicons.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\Toolbar.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="MrPoPo.rc">
+      <Filter>리소스 파일</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\MrPoPo.rc2">
+      <Filter>리소스 파일</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+</Project>

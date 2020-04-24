@@ -1,0 +1,121 @@
+
+EVALUATION AGREEMENT FOR PATHENGINE LIBRARY
+
+REDISTRIBUTION NOT PERMITTED
+
+1. LICENSE
+
+1.1 License Grant. Subject to the terms of this Evaluation Agreement
+("Agreement"), PathEngine grants you a non-exclusive, non-transferable
+license to use the PathEngine library ("Software") for the
+purpose of evaluating the Software.
+
+1.2 Restrictions. In order to protect PathEngine's trade secrets in
+the Software, except as permitted by applicable law, you agree that
+you will not attempt to reverse engineer, reverse compile,
+disassemble, modify, adapt, translate, create derivative works from,
+rent, lease, loan, time-share, distribute, transmit over a network,
+sublicense or provide service bureau services by using the Software,
+in whole or in part. You shall use best efforts to stop any such
+copying or distribution immediately after such use becomes known.
+
+2. PROPRIETARY RIGHTS
+All right, title and interest, including intellectual property rights,
+in and to the Software are owned by PathEngine and/or its licensors.
+You acknowledge that no title to the intellectual property in the
+Software is transferred to you and you will not acquire any rights to
+the Software except for the license as expressly set forth herein.
+PathEngine reserves all rights not expressly granted hereunder.
+
+3. EVALUATION OF SOFTWARE
+PathEngine may request that you provide it with feedback relating to
+the performance of the Software and any bugs or errors encountered by
+you during your evaluation of the Software. In the event that
+PathEngine so requests, you will promptly provide PathEngine with a
+complete description of any and all problems or difficulties relating
+to such Software. Any ideas or suggestions for modifications or
+enhancements to the Software as well as all information about the
+Software's performance or errors reported by you ("Supportive
+Information") will be the property of PathEngine. You hereby assign
+all right, title and interest in the Supportive Information and the
+related intellectual property rights to PathEngine and agree to assist
+PathEngine, at PathEngine's expense, in perfecting and enforcing such
+rights. Notwithstanding the above, you may use such Supportive
+Information for internal evaluation purposes during the term of this
+Agreement.
+
+4. CONFIDENTIAL INFORMATION
+You agree that you will not make use of, disseminate or in any way
+disclose the Software or any and all technical and non-technical
+information including all intellectual property, trade secrets and
+proprietary information, techniques, sketches, drawings, models,
+inventions, know-how, processes, apparatus, equipment, performance
+testing, software and algorithms related to the Software
+("Confidential Information") to any person, firm or business
+except as part of your evaluation of the Software as contemplated
+herein or for any purpose PathEngine may hereafter authorize in
+writing. You agree that you will treat all Confidential Information
+with the same degree of care as you accord to your own Confidential
+Information, but in no event less than a reasonable degree of care.
+No information of any kind shall be disclosed by you regarding the
+results of the Software evaluation, including but not limited to
+information regarding performance benchmarks, bugs or other problems
+encountered in the use of the Software without the explicit written
+permission of PathEngine.
+
+5. WARRANTY DISCLAIMER
+PathEngine is not obligated to provide any direct support, maintenance,
+new releases, enhancements, or updates of the Software. PATHENGINE MAKES
+NO EXPRESS, STATUTORY OR IMPLIED WARRANTIES OF ANY KIND AND SPECIFICALLY
+DISCLAIMS THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR PARTICULAR
+PURPOSE AND NON-INFRINGEMENT OF THIRD PARTY RIGHTS RELATED TO THE
+SOFTWARE.
+
+6. LIMITATION OF LIABILITY
+IN NO EVENT SHALL PATHENGINE BE LIABLE UNDER ANY THEORY FOR ANY
+DAMAGES SUFFERED BY YOU OR ANY USER OF THE SOFTWARE INCLUDING, BUT NOT
+LIMITED TO, ANY INCIDENTAL, CONSEQUENTIAL, SPECIAL OR EXEMPLARY
+DAMAGES, INCLUDING ANY LOSS OF DATA OR INFORMATION, LOST PROFITS OR
+LOST SAVINGS, REGARDLESS OF THE THEORY ON WHICH ANY SUCH DAMAGES MAY
+BE BASED, EVEN IF PATHENGINE OR ITS LICENSORS HAVE BEEN ADVISED OF THE
+POSSIBILITY OF SUCH DAMAGES, OR FOR ANY CLAIM BY ANY THIRD PARTY.
+
+7. INDEMNIFICATION
+You shall indemnify and hold harmless PathEngine and its licensors
+against any claim, damages, loss, liability or expense, including
+attorneys fees, arising out of your use of the Software in any way
+contrary to this Agreement.
+
+8. TERMINATION
+This Evaluation Agreement and the limited, personal, non-exclusive
+license granted to you are effective from the time you accept the
+terms and conditions of this Agreement until it is terminated. You
+may terminate this Agreement at any time by destroying all copies of
+the Software. This Agreement shall terminate automatically if you
+fail to comply with the limitations described in this license. No
+notice shall be required from PathEngine to effectuate such
+termination. The rights and obligations contained in Sections 1.2, 2,
+4, 5, 7, and 9 shall survive any termination of this Agreement. Upon
+termination you agree to destroy all copies of the Software and cease
+all further use thereof.
+
+9. GENERAL PROVISIONS
+The present Agreement is governed and shall be interpreted according
+to law applicable in the United Kingdom.  The parties agree that
+only tribunals of the United Kingdom judicial district have jurisdiction on
+the present agreement.  If any provision of this Agreement is held to
+be illegal, invalid or unenforceable, the legality, validity and
+enforceability of the remaining provisions of this Agreement shall not
+be affected or impaired thereby. No waiver by any party of any breach
+of any provisions hereof will be valid or binding unless made in
+writing, signed by the party prejudiced thereby. This Agreement
+constitutes the entire agreement with respect to its subject matter
+and supersedes all prior or contemporaneous oral or written agreements
+concerning such subject matter. This Agreement may be amended or
+modified only by mutual agreement of authorized representatives of the
+parties in writing. You may not assign or transfer this Agreement
+without PathEngine's prior written consent. In the event of any breach
+of this Agreement, the prevailing party in any action or proceeding to
+enforce this Agreement shall be entitled to recover its attorneys' and
+experts' fees in addition to such other relief as it may be entitled.
+

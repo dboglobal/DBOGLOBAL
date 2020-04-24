@@ -1,0 +1,47 @@
+-- UD4 Hard Root
+
+GameStage(0)
+--[
+	-- 1층 마지막 방 몹 모두 사냥하면 엘레베이터 내려오고 포탈 활성화
+	Action( "exec wps" )
+	--[
+		Param( "wps tblidx", 29005 )
+	--]
+	End()
+
+	-- 2층 멋쟁이 전산병 사냥하면 방 문 열림
+	Action( "exec wps" )
+	--[
+		Param( "wps tblidx", 29006 )
+	--]
+	End()
+	
+	-- 2층 마지막 방 앞의 불끈불끈 버서커 모두 잡으면, 문 열림
+	Action( "exec wps" )
+	--[
+		Param( "wps tblidx", 29010 )
+	--]
+	End()
+
+	-- 3층 불고킨 1단계 전투 (2단계 전투는 28012에서 실행시킴)
+	Action( "exec wps" )
+	--[
+		Param( "wps tblidx", 29012 )
+	--]
+	End()
+
+	-- 1층 앞쪽 컨베이어 벨트 무한 스폰
+	Action( "exec wps" )
+	--[
+		Param( "wps tblidx", 29014 )
+	--]
+	End()
+
+	-- 1층 뒤쪽 컨베이어 벨트 무한 스폰
+	Action( "exec wps" )
+	--[
+		Param( "wps tblidx", 29015 )
+	--]
+	End()
+--]
+End()

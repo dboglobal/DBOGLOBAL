@@ -1,0 +1,12 @@
+-- BID 1
+GameStage(0)
+--[
+
+	Action("exec wps")
+	--[
+		Param("wps tblidx", 82001)
+	--]
+	End()
+
+--]
+End()

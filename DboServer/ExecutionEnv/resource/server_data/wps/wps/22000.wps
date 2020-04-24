@@ -1,0 +1,54 @@
+-- UD2 Normal
+
+GameStage(0)
+--[
+	Action( "exec wps" )
+	--[
+		Param( "wps tblidx", 22001 )
+	--]
+	End()
+
+	Action( "exec wps" )
+	--[
+		Param( "wps tblidx", 22002 )
+	--]
+	End()
+
+	Action( "exec wps" )
+	--[
+		Param( "wps tblidx", 22003 )
+	--]
+	End()
+
+	Action( "exec wps" )
+	--[
+		Param( "wps tblidx", 22004 )
+	--]
+	End()
+	
+	Action( "exec wps" )
+	--[
+		Param( "wps tblidx", 22005 )
+	--]
+	End()
+
+	Action( "exec wps" )
+	--[
+		Param( "wps tblidx", 22006 )
+	--]
+	End()
+
+	Action( "exec wps" )
+	--[
+		Param( "wps tblidx", 22007 )
+	--]
+	End()
+
+	Action( "exec wps" )
+	--[
+		Param( "wps tblidx", 22008 )
+	--]
+	End()
+
+--]
+End()

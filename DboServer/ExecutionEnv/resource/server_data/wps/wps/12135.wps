@@ -1,0 +1,40 @@
+-- TMQ 2-1 Hard Mode
+
+GameStage(0)	-- 안쓰는거 같다-_-;;
+--[
+	Action( "add mob" )	-- 세뇌 도도리아
+	--[
+		Param( "index", 32642101 )
+		Param( "group", 9 )
+		Param( "loc x", -55.86 )
+		Param( "loc y", 137.13 )
+		Param( "loc z", 47.97 )
+		Param( "dir x", 0.78 )
+		Param( "dir z", -0.63 )
+		Param( "no spawn wait", "true" )
+	--]
+	End()
+	
+	Action( "wait" )
+	--[
+		Condition( "check mobgroup" )
+		--[
+			Param( "group", 9 )
+			Param( "count", 1 )
+		--]
+		End()
+	--]
+	End()
+	
+	-- 안 쓰는 것 같다
+	-- 이벤트를 받는 ts를 찾을 수 없음
+	Action( "send event to ts" )
+	--[
+		Param( "trigger type", "quest" )
+		Param( "apply type", "register all" )
+		Param( "event id", 1042 )
+	--]
+	End()
+	
+--]
+End()

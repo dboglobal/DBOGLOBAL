@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Release4Client|Win32">
+      <Configuration>Release4Client</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release4Tools|Win32">
+      <Configuration>Release4Tools</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{5C632C3B-4EE4-470A-BCC7-0EC83C058CB9}</ProjectGuid>
+    <RootNamespace>NtlPathEngine</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release4Client|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v80</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release4Tools|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v80</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release4Client|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release4Tools|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>14.0.25431.1</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release4Client|Win32'">
+    <OutDir>$(OutDir)/</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release4Tools|Win32'">
+    <OutDir>$(OutDir)/</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release4Client|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <PrecompiledHeaderFile>Precomp_NtlPathEngine.h</PrecompiledHeaderFile>
+      <BufferSecurityCheck>true</BufferSecurityCheck>
+      <MinimalRebuild>false</MinimalRebuild>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <WholeProgramOptimization>true</WholeProgramOptimization>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release4Tools|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <PrecompiledHeaderFile>Precomp_NtlPathEngine.h</PrecompiledHeaderFile>
+      <BufferSecurityCheck>true</BufferSecurityCheck>
+      <MinimalRebuild>false</MinimalRebuild>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <WholeProgramOptimization>true</WholeProgramOptimization>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="PathEngine\i_pathengine.h" />
+    <ClInclude Include="Precomp_NtlPathEngine.h" />
+    <ClInclude Include="Source\NtlFileOutputStream.h" />
+    <ClInclude Include="Source\NtlMesh.h" />
+    <ClInclude Include="Source\NtlMeshFederation.h" />
+    <ClInclude Include="Source\NtlMeshFederationBuilder.h" />
+    <ClInclude Include="Source\NtlMeshFederationContainer.h" />
+    <ClInclude Include="Source\NtlMeshFederationTileGeneratedCallBack.h" />
+    <ClInclude Include="Source\NtlPathCS.h" />
+    <ClInclude Include="Source\NtlPathEngine.h" />
+    <ClInclude Include="Source\NtlPathEngineDef.h" />
+    <ClInclude Include="Source\NtlPathEngineHelper.h" />
+    <ClInclude Include="Source\NtlPathEngineLog.h" />
+    <ClInclude Include="Source\NtlPathSeamlessLoader.h" />
+    <ClInclude Include="Source\NtlPathSeamlessLoadingManager.h" />
+    <ClInclude Include="Source\NtlPathSeamlessManager.h" />
+    <ClInclude Include="Source\NtlSeamlessMesh.h" />
+    <ClInclude Include="Source\NtlSimpleDOM.h" />
+    <ClInclude Include="Source\PerformanceChecker.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Precomp_NtlPathEngine.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release4Client|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release4Tools|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="Source\NtlFileOutputStream.cpp" />
+    <ClCompile Include="Source\NtlMesh.cpp" />
+    <ClCompile Include="Source\NtlMeshFederation.cpp" />
+    <ClCompile Include="Source\NtlMeshFederationBuilder.cpp" />
+    <ClCompile Include="Source\NtlMeshFederationContainer.cpp" />
+    <ClCompile Include="Source\NtlMeshFederationTileGeneratedCallBack.cpp" />
+    <ClCompile Include="Source\NtlPathCS.cpp" />
+    <ClCompile Include="Source\NtlPathEngine.cpp" />
+    <ClCompile Include="Source\NtlPathEngineHelper.cpp" />
+    <ClCompile Include="Source\NtlPathEngineLog.cpp" />
+    <ClCompile Include="Source\NtlPathSeamlessLoader.cpp" />
+    <ClCompile Include="Source\NtlPathSeamlessLoadingManager.cpp" />
+    <ClCompile Include="Source\NtlPathSeamlessManager.cpp" />
+    <ClCompile Include="Source\NtlSeamlessMesh.cpp" />
+    <ClCompile Include="Source\NtlSimpleDOM.cpp" />
+    <ClCompile Include="Source\PerformanceChecker.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

@@ -1,0 +1,668 @@
+GameStage(0)
+--[
+	Action("function")
+	--[
+		Action( "add mob" )
+		--[
+			Param( "index", 33421201 )
+			Param( "group", 1232101 )
+			Param( "loc x", -69.878)
+			Param( "loc y", 141.488)
+			Param( "loc z", 41.857)
+			Param( "dir x", 0.85 )
+			Param( "dir z", 0.53 )
+			Param( "party id", 12321 )
+			Param( "party leader", "true" )
+			Param( "no spawn wait", "true" )
+		--]
+		End()
+			
+		Action( "function" )
+		--[
+			Condition( "child" )
+			--[
+				Action( "while" )
+				--[
+					Action( "loop" )
+					--[
+						Action( "wait" )
+						--[
+							Condition( "check battle" )
+							--[
+								Param( "type", "mob" )
+								Param( "group", 1232101 )
+								Param( "is battle", "true" )
+							--]
+							End()
+						--]
+						End()
+						
+						Action( "function" )
+						--[
+							Condition( "child" )
+							--[
+								Action( "while" )
+								--[
+									Action( "loop" )
+									--[
+										Action( "wait" )
+										--[
+											Condition( "check lp" )
+											--[
+												Param( "type", "mob" )
+												Param( "group", 1232101 )
+												Param( "lp", 99 )
+											--]
+											End()
+										--]
+										End()
+										
+										Action( "calculate" )
+										--[
+											Param( "declare", "int ginyu = 0" )
+											Param( "express", "ginyu = RandomRange( 1, 5 )" )
+										--]
+										End()
+										
+										Action( "switch" )
+										--[
+											Param( "compare variable", "ginyu" )
+										
+											Action( "case" )
+											--[
+												Param( "value", 1 )
+												
+												Action( "remove mobgroup" )
+												--[
+													Param( "group", 1232102 )
+													Param( "type", "clear" )
+												--]
+												End()
+												
+												Action( "remove mobgroup" )
+												--[
+													Param( "group", 15 )
+													Param( "type", "clear" )
+												--]
+												End()
+
+												Action( "add mob" )
+												--[
+													Param( "index", 38812101 )
+													Param( "group", 1232102 )
+													Param( "loc x", -49.27 )
+													Param( "loc y", 140.63 )
+													Param( "loc z", 20.78 )
+													Param( "dir x", -0.73 )
+													Param( "dir z", 0.68 )
+													Param( "no spawn wait", "true" )		
+												--]
+												End()
+
+												Action( "add mobgroup" )
+												--[
+													Param( "group", 15 )
+													Param( "no spawn wait", "true" )
+												--]
+												End()
+
+												Action( "wait" )
+												--[
+													Param( "operation", "or" )
+										
+													Condition( "check mobgroup" )
+													--[
+														Param( "group", 1232102 )
+														Param( "count", 1 )
+													--]
+													End()
+
+													Condition( "check time" )
+													--[
+														Param( "time", 12 )
+													--]
+													End()
+												--]
+												End()
+												
+												Action( "wait" )
+												--[
+													Condition( "check time" )
+													--[
+														Param( "time", 10 )
+													--]
+													End()
+												--]
+												End()
+											--]
+											End()
+											
+											Action( "case" )
+											--[
+												Param( "value", 2 )
+												
+												Action( "remove mobgroup" )
+												--[
+													Param( "group", 1232103 )
+													Param( "type", "clear" )
+												--]
+												End()
+												
+												Action( "remove mobgroup" )
+												--[
+													Param( "group", 16 )
+													Param( "type", "clear" )
+												--]
+												End()
+												
+												Action( "add mob" )
+												--[
+													Param( "index", 38812104 )
+													Param( "group", 1232103 )
+													Param( "loc x", -48 )
+													Param( "loc y", 141.05 )
+													Param( "loc z", 41.69 )
+													Param( "dir x", -0.93 )
+													Param( "dir z", -0.36 )
+													Param( "no spawn wait", "true" )		
+												--]
+												End()
+
+												Action( "add mobgroup" )
+												--[
+													Param( "group", 16 )
+													Param( "no spawn wait", "true" )
+												--]
+												End()
+
+												Action( "wait" )
+												--[
+													Param( "operation", "or" )
+											
+													Condition( "check mobgroup" )
+													--[
+														Param( "group", 1232103 )
+														Param( "count", 1 )
+													--]
+													End()
+
+													Condition( "check time" )
+													--[
+														Param( "time", 12 )
+													--]
+													End()
+												--]
+												End()
+												
+												Action( "wait" )
+												--[
+													Condition( "check time" )
+													--[
+														Param( "time", 10 )
+													--]
+													End()
+												--]
+												End()
+											--]
+											End()
+
+											Action( "case" )
+											--[
+												Param( "value", 3 )
+													
+												Action( "remove mobgroup" )
+												--[
+													Param( "group", 1232104 )
+													Param( "type", "clear" )
+												--]
+												End()
+												
+												Action( "remove mobgroup" )
+												--[
+													Param( "group", 17 )
+													Param( "type", "clear" )
+												--]
+												End()
+													
+												Action( "add mob" )
+												--[
+													Param( "index", 38812107 )
+													Param( "group", 1232104 )
+													Param( "loc x", -65.65 )
+													Param( "loc y", 140.89 )
+													Param( "loc z", 55.77 )
+													Param( "dir x", -0.07 )
+													Param( "dir z", -1 )
+													Param( "no spawn wait", "true" )		
+												--]
+												End()
+
+												Action( "add mobgroup" )
+												--[
+													Param( "group", 17 )
+													Param( "no spawn wait", "true" )
+												--]
+												End()
+
+												Action( "wait" )
+												--[
+													Param( "operation", "or" )
+											
+													Condition( "check mobgroup" )
+													--[
+														Param( "group", 1232104 )
+														Param( "count", 1 )
+													--]
+													End()
+
+													Condition( "check time" )
+													--[
+														Param( "time", 12 )
+													--]
+													End()
+												--]
+												End()
+												
+												Action( "wait" )
+												--[
+													Condition( "check time" )
+													--[
+														Param( "time", 10 )
+													--]
+													End()
+												--]
+												End()
+											--]
+											End()
+												
+											Action( "case" )
+											--[
+												Param( "value", 4 )
+													
+												Action( "remove mobgroup" )
+												--[
+													Param( "group", 1232105 )
+													Param( "type", "clear" )
+												--]
+												End()
+												
+												Action( "remove mobgroup" )
+												--[
+													Param( "group", 18 )
+													Param( "type", "clear" )
+												--]
+												End()
+													
+												Action( "add mob" )
+												--[
+													Param( "index", 38812110 )
+													Param( "group", 1232105 )
+													Param( "loc x", -87.34 )
+													Param( "loc y", 140.92 )
+													Param( "loc z", 50.68 )
+													Param( "dir x", 0.86 )
+													Param( "dir z", -0.52 )
+													Param( "no spawn wait", "true" )		
+												--]
+												End()
+
+												Action( "add mobgroup" )
+												--[
+													Param( "group", 18 )
+													Param( "no spawn wait", "true" )
+												--]
+												End()
+
+												Action( "wait" )
+												--[
+													Param( "operation", "or" )
+											
+													Condition( "check mobgroup" )
+													--[
+														Param( "group", 1232105 )
+														Param( "count", 1 )
+													--]
+													End()
+
+													Condition( "check time" )
+													--[
+														Param( "time", 12 )
+													--]
+													End()
+												--]
+												End()
+												
+												Action( "wait" )
+												--[
+													Condition( "check time" )
+													--[
+														Param( "time", 10 )
+													--]
+													End()
+												--]
+												End()
+											--]
+											End()
+
+											Action( "case" )
+											--[
+												Param( "value", 5 )
+													
+												Action( "remove mobgroup" )
+												--[
+													Param( "group", 1232106 )
+													Param( "type", "clear" )
+												--]
+												End()
+												
+												Action( "remove mobgroup" )
+												--[
+													Param( "group", 19 )
+													Param( "type", "clear" )
+												--]
+												End()
+													
+												Action( "add mob" )
+												--[
+													Param( "index", 38812113 )
+													Param( "group", 1232106 )
+													Param( "loc x", -95.39 )
+													Param( "loc y", 141.58 )
+													Param( "loc z", 34.68 )
+													Param( "dir x", 1 )
+													Param( "dir z", -0.07 )
+													Param( "party id", 12321 )
+													Param( "party leader", "false" )
+													Param( "no spawn wait", "true" )		
+												--]
+												End()
+
+												Action( "add mobgroup" )
+												--[
+													Param( "group", 19 )
+													Param( "no spawn wait", "true" )
+												--]
+												End()
+
+												Action( "wait" )
+												--[
+													Param( "operation", "or" )
+											
+													Condition( "check mobgroup" )
+													--[
+														Param( "group", 1232106 )
+														Param( "count", 1 )
+													--]
+													End()
+
+													Condition( "check time" )
+													--[
+														Param( "time", 12 )
+													--]
+													End()
+												--]
+												End()
+												
+												Action( "wait" )
+												--[
+													Condition( "check time" )
+													--[
+														Param( "time", 10 )
+													--]
+													End()
+												--]
+												End()
+											--]
+											End()
+										--]
+										End()
+									--]
+									End()
+								--]
+								End()
+							--]
+							End()
+								
+							Action( "wait" )
+							--[
+								Condition( "check battle" )
+								--[
+									Param( "type", "mob" )
+									Param( "group", 1232101 )
+									Param( "is battle", "false" )
+								--]
+								End()
+							--]
+							End()
+						--]
+						End()
+					--]
+					End()
+				--]
+				End()
+			--]
+			End()
+				
+			Condition( "child" )	
+			--[
+				Action( "while" )
+				--[
+					Action( "loop" )
+					--[
+						Action( "wait" )
+						--[
+							Condition( "check battle" )
+							--[
+								Param( "type", "mob" )
+								Param( "group", 1232101 )
+								Param( "is battle", "true" )
+							--]
+							End()
+						--]
+						End()
+							
+						Action( "wait" )
+						--[
+							Condition( "check battle" )
+							--[
+								Param( "type", "mob" )
+								Param( "group", 1232101 )
+								Param( "is battle", "false" )
+							--]
+							End()
+						--]
+						End()
+							
+						Action( "remove mobgroup" )
+						--[
+							Param( "group", 1232102 )
+							Param( "type", "clear" )
+						--]
+						End()
+
+							
+						Action( "remove mobgroup" )
+						--[
+							Param( "group", 15 )
+							Param( "type", "clear" )
+						--]
+						End()
+							
+						Action( "remove mobgroup" )
+						--[
+							Param( "group", 1232103 )
+							Param( "type", "clear" )
+						--]
+						End()
+							
+						Action( "remove mobgroup" )
+						--[
+							Param( "group", 16 )
+							Param( "type", "clear" )
+						--]
+						End()
+							
+						Action( "remove mobgroup" )
+						--[
+							Param( "group", 1232104 )
+							Param( "type", "clear" )
+						--]
+						End()
+							
+						Action( "remove mobgroup" )
+						--[
+							Param( "group", 17 )
+							Param( "type", "clear" )
+						--]
+						End()
+							
+						Action( "remove mobgroup" )
+						--[
+							Param( "group", 1232105 )
+							Param( "type", "clear" )
+						--]
+						End()
+							
+						Action( "remove mobgroup" )
+						--[
+							Param( "group", 18 )
+							Param( "type", "clear" )
+						--]
+						End()
+							
+						Action( "remove mobgroup" )
+						--[
+							Param( "group", 1232106 )
+							Param( "type", "clear" )
+						--]
+						End()
+							
+						Action( "remove mobgroup" )
+						--[
+							Param( "group", 19 )
+							Param( "type", "clear" )
+						--]
+						End()
+							
+						Action( "remove mobgroup" )
+						--[
+							Param( "group", 1232101 )
+							Param( "type", "clear" )
+						--]
+						End()
+
+						Action( "add mob" )
+						--[
+							Param( "index", 33421201 )
+							Param( "group", 1232101 )
+							Param( "loc x", -69.878)
+							Param( "loc y", 141.488)
+							Param( "loc z", 41.857)
+							Param( "dir x", 0.85 )
+							Param( "dir z", 0.53 )
+							Param( "party id", 12321 )
+							Param( "party leader", "true" )
+							Param( "no spawn wait", "true" )
+						--]
+						End()
+					--]
+					End()
+				--]
+				End()
+			--]
+			End()
+				
+			Action( "wait" )
+			--[
+				Condition( "check mobgroup" )
+				--[
+					Param( "group", 1232101 )
+					Param( "count", 1 )
+				--]
+				End()
+			--]
+			End()
+
+			Action( "remove mobgroup" )
+			--[
+				Param( "group", 1232102 )
+				Param( "type", "clear" )
+			--]
+			End()
+							
+			Action( "remove mobgroup" )
+			--[
+				Param( "group", 15 )
+				Param( "type", "clear" )
+			--]
+			End()
+					
+			Action( "remove mobgroup" )
+			--[
+				Param( "group", 1232103 )
+				Param( "type", "clear" )
+			--]
+			End()
+							
+			Action( "remove mobgroup" )
+			--[
+				Param( "group", 16 )
+				Param( "type", "clear" )
+			--]
+			End()
+						
+			Action( "remove mobgroup" )
+			--[
+				Param( "group", 1232104 )
+				Param( "type", "clear" )
+			--]
+			End()
+							
+			Action( "remove mobgroup" )
+			--[
+				Param( "group", 17 )
+				Param( "type", "clear" )
+			--]
+			End()
+							
+			Action( "remove mobgroup" )
+			--[
+				Param( "group", 1232105 )
+				Param( "type", "clear" )
+			--]
+			End()
+							
+			Action( "remove mobgroup" )
+			--[
+				Param( "group", 18 )
+				Param( "type", "clear" )
+			--]
+			End()
+
+			Action( "remove mobgroup" )
+			--[
+				Param( "group", 1232106 )
+				Param( "type", "clear" )
+			--]
+			End()
+							
+			Action( "remove mobgroup" )
+			--[
+				Param( "group", 19 )
+				Param( "type", "clear" )
+			--]
+			End()
+
+			Action( "send event to ts" )
+			--[
+				Param( "trigger type", "quest" )
+				Param( "apply type", "register all" )
+				Param( "event id", 23540 )
+			--]
+			End()
+		--]
+		End()
+	--]
+	End()
+--]
+End()

@@ -1,0 +1,22 @@
+-- First floor
+-- Which runs on the object
+-- If you click on the room door without turning on the power switch, the error message
+
+GameStage(0)
+--[
+	-- System Messages "is not the supply of electricity to the door."
+	Action( "system message" )
+	--[
+		Param( "notify", "caution" )
+		Param( "text index", 8 )
+	--]
+	End()
+	
+	Action( "system message" )
+	--[
+		Param( "notify", "system" )
+		Param( "text index", 8 )
+	--]
+	End()
+--]
+End()

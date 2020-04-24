@@ -1,0 +1,66 @@
+-- Second floor
+-- Which runs from 28 010 Zen
+-- The last room hunting mob coming down the elevator mode activation portal
+
+GameStage(0)
+--[
+	-- 방에 잡아야 하는 mob들 spawn
+	Action( "add mobgroup" )
+	--[
+		Param( "group", 11 )
+		Param( "no spawn wait", "true" )
+	--]
+	End()
+	
+	Action( "wait" )
+	--[
+		Param( "operation", "and" )
+		
+		-- spawn된 mob들 잡는 것 대기
+		Condition( "check mobgroup" )
+		--[
+			Param( "group", 11 )
+			Param( "count", 0 )
+		--]
+		End()
+
+		-- 쇠 주먹 머글리 잡는 것 대기
+		Condition( "recv event from wps" )
+		--[
+			Param( "wps index", 28010 )
+			Param( "event id", 589 )
+		--]
+		End()
+	--]
+	End()
+	
+	-- 엘레베이터 내려옴
+	Action( "change object state" )
+	--[
+		Param( "index", 23 )
+		Param( "state", 1 )
+		Param( "substate show", 1 )
+	--]
+	End()
+	
+	-- 엘레베이터 내려오고 문 열릴 때 까지 5초간 대기
+	Action( "wait" )
+	--[
+		Condition( "check time" )
+		--[
+			Param( "time", 5 )
+		--]
+		End()
+	--]
+	End()
+	
+	-- 포탈 활성화
+	Action( "change object state" )
+	--[
+		Param( "index", 24 )
+		Param( "state", 1 )
+		Param( "substate show", 1 )
+	--]
+	End()
+--]
+End()

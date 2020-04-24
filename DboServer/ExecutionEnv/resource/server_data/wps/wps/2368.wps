@@ -1,0 +1,59 @@
+
+GameStage(0)
+--[
+	Action( "change sps scene" )
+	--[
+		Param( "index", 5731106 )
+		Param( "play script", 5731106 )
+		Param( "play scene", 1 )
+	--]
+	End()
+	
+	Action( "wait" )
+	--[
+		Param( "operation", "or" )
+			
+		Condition( "recv event from sps" )
+		--[
+			Param( "object type", "npc" )
+			Param( "object index", 5731106 )
+			Param( "event id", 536 )
+		--]
+		End()
+
+		Condition( "child" )
+		--[
+			Action( "wait" )
+			--[
+				Condition( "check time" )
+				--[
+					Param( "time", 300 )
+				--]
+				End()
+			--]
+			End()
+
+			Action( "wps fail" )
+			--[
+
+			--]
+			End()
+		--]
+		End()
+	--]
+	End()
+
+	Action( "send event to ts" )
+	--[
+		Param( "trigger type", "quest" )
+		Param( "apply type", "register all" )
+		Param( "event id", 537 )
+	--]
+	End()
+--]
+End()
+
+GameFailed()
+--[
+--]
+End()

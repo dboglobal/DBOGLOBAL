@@ -1,0 +1,58 @@
+/*****************************************************************************
+ *
+ * File			: NtlFSMVehicleActLayer.h
+ * Author		: JeongHo, Rho
+ * Copyright	: (주)NTL
+ * Date			: 2008. 11. 12	
+ * Abstract		: fsm vehicle act layer
+ *****************************************************************************
+ * Desc         : 
+ *
+ *****************************************************************************/
+
+#ifndef __NTL_FSM_VEHICLE_LAYER_H__
+#define __NTL_FSM_VEHICLE_LAYER_H__
+
+
+#include "NtlFSMLayer.h"
+
+
+class CNtlFSMVehicleActLayer : public CNtlFSMLayer
+{
+	DECLEAR_MEMORY_POOL( CNtlFSMVehicleActLayer, NTL_DEFAULT_MEMORY_POOL )
+
+private:
+
+	void CreateController( RwUInt32 uiController );
+
+public:
+
+	CNtlFSMVehicleActLayer( void );
+
+	/**
+    *  이 class가 생성된 후 바로 호출하는 함수
+    *
+    */
+	virtual RwBool Create( RwUInt32 uiController );
+
+	/**
+    *  이 class가 소멸되기 전에 호출하는 함수
+    *
+    */
+	virtual void Destroy( void );
+
+	/**
+    *  layer update 함수.
+    *
+    */
+	virtual void Update( RwReal fElapsed );
+
+	/**
+    *  layer event handler 함수.
+    *
+    */
+	virtual RwUInt32 HandleEvents( RWS::CMsg &pMsg );
+};
+
+
+#endif

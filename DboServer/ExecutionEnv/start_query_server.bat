@@ -1,0 +1,3 @@
+start QueryServer.exe
+
+exit

@@ -1,0 +1,206 @@
+-- DWC 1 Root
+
+GameStage(0)
+--[
+	Action( "DWC" )
+	--[
+	--]
+	End()
+	
+	Action( "DWC wait user" )
+	--[
+	--]
+	End()
+	
+	-- DWC 전체 flow 실행
+	Action( "exec wps" )
+	--[
+		Param( "wps tblidx", 70001 )
+	--]
+	End()
+	
+	-- 뿔나로돈 루트 실행
+	Action( "exec wps" )
+	--[
+		Param( "wps tblidx", 70002 )
+	--]
+	End()
+	
+	-- 부르마 루트 실행
+	Action( "exec wps" )
+	--[
+		Param( "wps tblidx", 70003 )
+	--]
+	End()
+	
+	-- 손오공 루트 실행
+	Action( "exec wps" )
+	--[
+		Param( "wps tblidx", 70004 )
+	--]
+	End()
+	
+	-- 보상 대기
+	Action( "function" )
+	--[
+		Condition( "child" )
+		--[
+			-- 조건 1 뿔나로돈 루트
+			Action( "wait" )
+			--[
+				Condition( "recv event from wps" )
+				--[
+					Param( "wps index", 70002 )
+					Param( "event id", 673 )
+				--]
+				End()
+			--]
+			End()
+			
+			-- 뿔나로돈 보상
+			Action( "DWC reward" )
+			--[
+				Param( "dwc tblidx", 1 )
+				Param( "mission index", 1 )
+			--]
+			End()
+			
+			-- DWC System Quest Clear
+			Action("send event to ts")
+			--[
+				Param("trigger type", "quest")
+				Param("apply type", "register all")
+				Param("event id", 660)
+			--]
+			End()
+			
+			-- 10초 카운트다운
+			Action("wait")
+			--[
+				Condition( "check countdown" )
+				--[   
+					Param( "time", 10 )
+				--]
+				End()
+			--]
+			End()
+			
+			-- DWC 종료
+			Action( "DWC leave" )
+			--[
+			--]
+			End()
+			
+		--]
+		End()
+		
+		Condition( "child" )
+		--[
+			-- 조건 2 부르마 루트
+			Action( "wait" )
+			--[
+				Condition( "recv event from wps" )
+				--[
+					Param( "wps index", 70003 )
+					Param( "event id", 674 )
+				--]
+				End()
+			--]
+			End()
+			
+			Action( "DWC reward" )
+			--[
+				Param( "dwc tblidx", 1 )
+				Param( "mission index", 2 )
+			--]
+			End()
+			
+			-- DWC System Quest Clear
+			Action("send event to ts")
+			--[
+				Param("trigger type", "quest")
+				Param("apply type", "register all")
+				Param("event id", 660)
+			--]
+			End()
+			
+			-- 10초 카운트다운
+			Action("wait")
+			--[
+				Condition( "check countdown" )
+				--[   
+					Param( "time", 10 )
+				--]
+				End()
+			--]
+			End()
+
+			-- DWC 종료
+			Action( "DWC leave" )
+			--[
+			--]
+			End()
+
+		--]
+		End()
+
+		-- 조건 3 손오공 루트
+		Action( "wait" )
+		--[
+			Condition( "recv event from wps" )
+			--[
+				Param( "wps index", 70004 )
+				Param( "event id", 675 )
+			--]
+			End()
+		--]
+		End()
+
+		Action( "DWC reward" )
+		--[
+			Param( "dwc tblidx", 1 )
+			Param( "mission index", 3 )
+		--]
+		End()
+		
+		-- DWC System Quest Clear
+		Action("send event to ts")
+		--[
+			Param("trigger type", "quest")
+			Param("apply type", "register all")
+			Param("event id", 660)
+		--]
+		End()
+
+		-- 10초 카운트다운
+		Action("wait")
+		--[
+			Condition( "check countdown" )
+			--[   
+				Param( "time", 10 )
+			--]
+			End()
+		--]
+		End()
+
+		-- DWC 종료
+		Action( "DWC leave" )
+		--[
+		--]
+		End()
+
+	--]
+	End()
+	
+	Action( "wait" )
+	--[
+		Condition( "check time" )
+		--[
+			Param( "time", 3 )
+		--]
+		End()
+	--]
+	End()
+	
+--]
+End()

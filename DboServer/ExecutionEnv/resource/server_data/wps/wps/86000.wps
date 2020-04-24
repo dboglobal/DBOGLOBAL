@@ -1,0 +1,438 @@
+-- BID4 KRAKEN
+-- Eggs:
+--- 86011 (small egg), 86011 (big egg)
+-- Group unused:
+--- 86004(Invincible Machine Octopus), 86006, 86007, 86008, 
+
+
+GameStage(0)
+--[
+
+	-- spawn mob group
+	Action( "add mobgroup" )
+	--[
+		Param( "group", 86002 )
+		Param( "no spawn wait", "true" )
+	--]
+	End()
+	
+	-- check if all mobs defeated
+	Action( "wait" )
+	--[
+		Condition( "check mobgroup" )
+		--[
+			Param( "group", 86002 )
+			Param( "count", 0 )
+		--]
+		End()
+	--]
+	End()
+	
+
+	-- open the gate
+	Action( "change object state" )
+	--[
+		Param( "index", 2 )
+		Param( "state", 1 )
+	--]
+	End()
+	
+	-- spawn boss
+	Action( "add mobgroup" )
+	--[
+		Param( "group", 86001 )
+		Param( "no spawn wait", "true" )
+		Param( "nest type", "fix" )
+	--]
+	End()
+	
+	-- check if boss start battle
+	Action( "wait" )
+	--[
+		Condition( "check battle" )
+		--[
+			Param( "type", "mob" )
+			Param( "group", 86001 )
+			Param( "is battle", "true" )
+		--]
+		End()
+	--]
+	End()
+	
+	-- close the gate
+	Action( "change object state" )
+	--[
+		Param( "index", 2 )
+		Param( "state", 0 )
+	--]
+	End()
+	
+	-- Add mobs
+	Action( "add mobgroup" )
+	--[
+		Param( "group", 86003 )
+		Param( "no spawn wait", "true" )
+	--]
+	End()
+	
+	Action( "function" )
+	--[
+
+		Condition( "child" )
+		--[
+			-- Check if boss is 90% LP
+			Action( "wait" )
+			--[
+				Condition( "check lp" )
+				--[
+					Param( "type", "mob" )
+					Param( "group", 86001 )
+					Param( "index", 15991204 )
+					Param( "lp", 90 )
+				--]
+				End()
+			--]
+			End()
+			
+			-- Spawn Egg
+			Action( "add mobgroup" )
+			--[
+				Param( "group", 86011 )
+				Param( "no spawn wait", "true" )
+			--]
+			End()
+			
+			-- Wait 30 seconds
+			Action( "wait" )
+			--[
+				Condition( "check time" )
+				--[
+					Param( "time", 30 )
+				--]
+				End()
+			--]
+			End()
+			
+			-- Remove Egg
+			Action("remove mobgroup")
+			--[
+				Param( "group", 86011 )
+				Param( "type", "clear" )
+			--]
+			End()
+			
+			-- Spawn Mobs
+			Action( "add mobgroup" )
+			--[
+				Param( "group", 86006 )
+				Param( "no spawn wait", "true" )
+			--]
+			End()		
+		--]
+		End()
+		
+		----
+		
+		Condition( "child" )
+		--[
+			-- Check if boss is 70% LP
+			Action( "wait" )
+			--[
+				Condition( "check lp" )
+				--[
+					Param( "type", "mob" )
+					Param( "group", 86001 )
+					Param( "index", 15991204 )
+					Param( "lp", 70 )
+				--]
+				End()
+			--]
+			End()
+			
+			-- Spawn Egg
+			Action( "add mobgroup" )
+			--[
+				Param( "group", 86011 )
+				Param( "no spawn wait", "true" )
+			--]
+			End()
+			
+			-- Wait 30 seconds
+			Action( "wait" )
+			--[
+				Condition( "check time" )
+				--[
+					Param( "time", 30 )
+				--]
+				End()
+			--]
+			End()
+			
+			-- Remove Egg
+			Action("remove mobgroup")
+			--[
+				Param( "group", 86011 )
+				Param( "type", "clear" )
+			--]
+			End()
+			
+			-- Spawn Mobs
+			Action( "add mobgroup" )
+			--[
+				Param( "group", 86006 )
+				Param( "no spawn wait", "true" )
+			--]
+			End()		
+		--]
+		End()
+		
+		----
+		
+		Condition( "child" )
+		--[
+			-- Check if boss is 50% LP
+			Action( "wait" )
+			--[
+				Condition( "check lp" )
+				--[
+					Param( "type", "mob" )
+					Param( "group", 86001 )
+					Param( "index", 15991204 )
+					Param( "lp", 50 )
+				--]
+				End()
+			--]
+			End()
+			
+			-- Spawn Egg
+			Action( "add mobgroup" )
+			--[
+				Param( "group", 86011 )
+				Param( "no spawn wait", "true" )
+			--]
+			End()
+			
+			-- Wait 30 seconds
+			Action( "wait" )
+			--[
+				Condition( "check time" )
+				--[
+					Param( "time", 30 )
+				--]
+				End()
+			--]
+			End()
+			
+			-- Remove Egg
+			Action("remove mobgroup")
+			--[
+				Param( "group", 86011 )
+				Param( "type", "clear" )
+			--]
+			End()
+			
+			-- Spawn Mobs
+			Action( "add mobgroup" )
+			--[
+				Param( "group", 86006 )
+				Param( "no spawn wait", "true" )
+			--]
+			End()		
+		--]
+		End()
+		
+		----
+		
+		Condition( "child" )
+		--[
+			-- Check if boss is 30% LP
+			Action( "wait" )
+			--[
+				Condition( "check lp" )
+				--[
+					Param( "type", "mob" )
+					Param( "group", 86001 )
+					Param( "index", 15991204 )
+					Param( "lp", 30 )
+				--]
+				End()
+			--]
+			End()
+			
+			-- Spawn Egg
+			Action( "add mobgroup" )
+			--[
+				Param( "group", 86011 )
+				Param( "no spawn wait", "true" )
+			--]
+			End()
+			
+			-- Wait 30 seconds
+			Action( "wait" )
+			--[
+				Condition( "check time" )
+				--[
+					Param( "time", 30 )
+				--]
+				End()
+			--]
+			End()
+			
+			-- Remove Egg
+			Action("remove mobgroup")
+			--[
+				Param( "group", 86011 )
+				Param( "type", "clear" )
+			--]
+			End()
+			
+			-- Spawn Mobs
+			Action( "add mobgroup" )
+			--[
+				Param( "group", 86006 )
+				Param( "no spawn wait", "true" )
+			--]
+			End()		
+		--]
+		End()
+		
+		----
+		
+		Condition( "child" )
+		--[
+			-- Check if boss is 20% LP
+			Action( "wait" )
+			--[
+				Condition( "check lp" )
+				--[
+					Param( "type", "mob" )
+					Param( "group", 86001 )
+					Param( "index", 15991204 )
+					Param( "lp", 20 )
+				--]
+				End()
+			--]
+			End()
+			
+			-- Spawn Egg
+			Action( "add mobgroup" )
+			--[
+				Param( "group", 86011 )
+				Param( "no spawn wait", "true" )
+			--]
+			End()
+			
+			-- Wait 30 seconds
+			Action( "wait" )
+			--[
+				Condition( "check time" )
+				--[
+					Param( "time", 30 )
+				--]
+				End()
+			--]
+			End()
+			
+			-- Remove Egg
+			Action("remove mobgroup")
+			--[
+				Param( "group", 86011 )
+				Param( "type", "clear" )
+			--]
+			End()
+			
+			-- Spawn Mobs
+			Action( "add mobgroup" )
+			--[
+				Param( "group", 86006 )
+				Param( "no spawn wait", "true" )
+			--]
+			End()		
+		--]
+		End()
+		
+		----
+		
+		Condition( "child" )
+		--[
+			-- Check if boss is 10% LP
+			Action( "wait" )
+			--[
+				Condition( "check lp" )
+				--[
+					Param( "type", "mob" )
+					Param( "group", 86001 )
+					Param( "index", 15991204 )
+					Param( "lp", 10 )
+				--]
+				End()
+			--]
+			End()
+			
+			-- Spawn Egg
+			Action( "add mobgroup" )
+			--[
+				Param( "group", 86011 )
+				Param( "no spawn wait", "true" )
+			--]
+			End()
+			
+			-- Wait 30 seconds
+			Action( "wait" )
+			--[
+				Condition( "check time" )
+				--[
+					Param( "time", 30 )
+				--]
+				End()
+			--]
+			End()
+			
+			-- Remove Egg
+			Action("remove mobgroup")
+			--[
+				Param( "group", 86011 )
+				Param( "type", "clear" )
+			--]
+			End()
+			
+			-- Spawn Mobs
+			Action( "add mobgroup" )
+			--[
+				Param( "group", 86006 )
+				Param( "no spawn wait", "true" )
+			--]
+			End()		
+		--]
+		End()
+		
+		
+		----
+		
+	
+		-- check if boss defeated
+		Action( "wait" )
+		--[
+			Condition( "check mobgroup" )
+			--[
+				Param( "group", 86001 )
+				Param( "count", 0 )
+			--]
+			End()
+		--]
+		End()	
+	--]
+	End()
+	
+	
+	-- open the gate
+	Action( "change object state" )
+	--[
+		Param( "index", 2 )
+		Param( "state", 1 )
+	--]
+	End()
+	
+		
+--]
+End()

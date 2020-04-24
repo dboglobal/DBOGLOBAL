@@ -1,0 +1,4629 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Battle%28fight%29">
+      <UniqueIdentifier>{660663a0-9c2a-4288-9019-9ff6e5ba1e34}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Dungeon">
+      <UniqueIdentifier>{9a347033-6a84-47c2-b9f5-069b3dbf714d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Servers">
+      <UniqueIdentifier>{f0c21d93-fbdc-4ff4-a910-92415361385e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Servers\ChatServer">
+      <UniqueIdentifier>{e445cb9f-45d4-488b-ae70-b7d5c47e291f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Item">
+      <UniqueIdentifier>{774378dc-17f6-49fb-82ca-2b2043556a1f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Servers\MasterServer">
+      <UniqueIdentifier>{92153dc8-07e3-474e-8745-da3a56dc100b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Party">
+      <UniqueIdentifier>{fe88c807-f2a1-426d-92e0-0fd09c6d3ee0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Dungeon\TMQ">
+      <UniqueIdentifier>{4480bf66-7ea4-4e06-98f3-cfc8b3e853b6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Dungeon\Ultimate Dungeon %28UD%29">
+      <UniqueIdentifier>{907f0c2d-5c14-4b90-8ff5-5a604f5a1a4d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Servers\ServerSession">
+      <UniqueIdentifier>{775b67f8-4ad0-419d-9dc4-92a1f7018ced}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Guild/DOJO">
+      <UniqueIdentifier>{f8317324-771c-4c5c-a39b-8c5219d6e887}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="character NEW">
+      <UniqueIdentifier>{db732f09-aca5-4f90-a55b-4a9da52cb6c2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="character NEW\SpawnObject">
+      <UniqueIdentifier>{7a9fad97-c17d-409f-a9b2-5244b864d562}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="character NEW\GameObject">
+      <UniqueIdentifier>{2d45dacd-4c37-4912-ba58-ec79e5464293}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="character NEW\MoveableObject">
+      <UniqueIdentifier>{6a75ec20-4b68-490a-b65e-e81aef5d41be}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="character NEW\CharacterObject">
+      <UniqueIdentifier>{2429d392-8b95-4b72-881b-2ccafda166dc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="character NEW\Player">
+      <UniqueIdentifier>{50a0a794-b86f-49ad-8d60-c8ecaf7b109b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="character NEW\Player\TriggerSystem%28TS%29">
+      <UniqueIdentifier>{6542fe91-5092-4997-b519-7b5a9835a786}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="character NEW\Player\Session">
+      <UniqueIdentifier>{e4dc1b7f-530e-444e-9c69-586be9b3a21a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Party\BOT">
+      <UniqueIdentifier>{7eecd56e-ea67-4e3e-b015-1979b2a0da24}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Party\PLAYER">
+      <UniqueIdentifier>{36ade75f-9b6b-4da2-9be9-f710140c1208}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="character NEW\Monster">
+      <UniqueIdentifier>{326026d2-ed42-447e-a829-71b5554d8021}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="character NEW\Monster\Npc">
+      <UniqueIdentifier>{763ed6f6-5c11-4f41-b06d-da19a5c17bce}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="character NEW\Monster\Npc\Shenron">
+      <UniqueIdentifier>{8763ee02-b4ef-4f73-8368-f1488ba8a082}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="character NEW\Monster\BOT AI">
+      <UniqueIdentifier>{100d8cf4-0608-4bb1-97fa-e984f360bfe4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="character NEW\Monster\BOT AI\action">
+      <UniqueIdentifier>{869b23df-13c4-413b-8ba1-d34b2e459720}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="character NEW\Monster\BOT AI\action\main">
+      <UniqueIdentifier>{726d30ad-7cfa-4163-b4c2-f7375c9b5ed2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="character NEW\Monster\BOT AI\condition">
+      <UniqueIdentifier>{092af4f7-74ac-434a-a148-73cc1337f09c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="character NEW\Monster\BOT AI\condition\main">
+      <UniqueIdentifier>{e7b41145-9187-445c-a79f-d9da79b35a6a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="character NEW\Monster\BOT AI\condition\end">
+      <UniqueIdentifier>{99c6120e-e3b6-408e-bdec-e7ed63c03474}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="character NEW\Monster\BOT AI\state">
+      <UniqueIdentifier>{7f57f9f6-112f-4161-aa77-6112b93b5698}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="character NEW\Monster\BOT AI\state\main">
+      <UniqueIdentifier>{51d165dc-1549-4dee-94ef-8b2e51ee9812}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="character NEW\Monster\BOT AI\base">
+      <UniqueIdentifier>{f1651542-3fb0-4c82-904b-1a14d91e438e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="character NEW\Monster\BOT AI\base\main">
+      <UniqueIdentifier>{6d3559b7-29bb-4b90-b55d-619df38c145d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="character NEW\Monster\BOT AI\Control">
+      <UniqueIdentifier>{8bb79769-9c9c-45f0-99ff-b2360d590b00}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="character NEW\Character">
+      <UniqueIdentifier>{81818015-5947-406d-baed-683500f7f474}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="character NEW\Character\TargetManager">
+      <UniqueIdentifier>{82e7d6e0-2beb-4747-abf4-a07f739b362f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="character NEW\Character\MeHaterManager">
+      <UniqueIdentifier>{43d848a3-4f53-47e4-95ae-c60b5766fce7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="character NEW\Character\BotBreakUp">
+      <UniqueIdentifier>{ddfc9fce-4f0f-40dc-b5f1-3609e8752c88}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="character NEW\Monster\Npc\EscortManager">
+      <UniqueIdentifier>{1e9c4dd0-95e8-46af-a6c3-66b021cb9516}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="character NEW\Monster\Npc\HelpMeListManager">
+      <UniqueIdentifier>{b60aded3-cd92-47bd-911a-2741809f132a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="character NEW\Monster\Npc\PathFinder">
+      <UniqueIdentifier>{4c10b4f6-a3b0-4a31-a487-cf508857a7ec}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="character NEW\Character\MeHaterManager\Main">
+      <UniqueIdentifier>{e3e11c72-ca51-4978-aa3a-71df521be193}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="character NEW\Character\ActionPattern">
+      <UniqueIdentifier>{b35715d3-7d86-4295-975c-86e66afc4059}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="character NEW\Character\State System">
+      <UniqueIdentifier>{a0ac4e8f-0e01-4bdb-90ea-5416f5e59d3d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="character NEW\Character\CharacterAttribute">
+      <UniqueIdentifier>{f251671b-64cd-46bc-9e3a-2c19297ed0e6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="utilities">
+      <UniqueIdentifier>{6cdc49a7-6a7f-49e7-a502-611ea3664c1f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="utilities\range-check">
+      <UniqueIdentifier>{c213eddf-4c99-4f2d-bdca-6be090158b67}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="character NEW\Pet">
+      <UniqueIdentifier>{61e268ec-260e-43d9-8b7a-f814cadd17ae}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="character NEW\Monster\Npc\controller">
+      <UniqueIdentifier>{38c09cfa-941b-494c-93e8-146bce27b596}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="character NEW\Character\CharacterAttribute\pc">
+      <UniqueIdentifier>{46ba024d-b458-4243-b39c-aeea36c92273}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="character NEW\Character\CharacterAttribute\bot">
+      <UniqueIdentifier>{86082a8d-0587-460d-90e7-c849cc777e21}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="OBJECT-MSG">
+      <UniqueIdentifier>{ed7d413c-1ead-4e02-bef2-41f9c0d71a7e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="character NEW\Player\private shop">
+      <UniqueIdentifier>{e8d90bd7-ee8c-4f9f-b2bf-571d617a0dfe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="character NEW\Player\Trade">
+      <UniqueIdentifier>{0c5b01e3-775c-4815-a37a-d69e1da34d8b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Item\Drop">
+      <UniqueIdentifier>{f004c05f-f61f-480e-81c1-712533808cfa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Buff">
+      <UniqueIdentifier>{7bf4da59-8790-44ac-a74a-00a9e1ca9ca0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Buff\Base">
+      <UniqueIdentifier>{e0cb7a1d-863b-45c3-b276-753dc70b3927}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Buff\BOT">
+      <UniqueIdentifier>{dcc530e8-f25c-40fd-92f7-357def9efc07}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Buff\PC">
+      <UniqueIdentifier>{aedf58b8-3aa4-4f32-9997-3010811446a1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Skill">
+      <UniqueIdentifier>{b60c9483-b29e-49fb-8a90-06b5020164e2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Skill\Base">
+      <UniqueIdentifier>{a3c0cddb-7401-48ec-8626-3ed39fe0a237}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Skill\BOT">
+      <UniqueIdentifier>{e6bc45d3-93c9-492f-840c-ea3606cf4ebb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Skill\PC">
+      <UniqueIdentifier>{d1586ebf-0df1-4d10-8cd5-40db7d40e932}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="World-System">
+      <UniqueIdentifier>{fffd2758-ee03-4c68-a158-aa6bbd644e0a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="World-System\manager">
+      <UniqueIdentifier>{60a9f2da-25f7-492b-868a-1364b0b7c744}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Skill\BOT\Condition">
+      <UniqueIdentifier>{fb70761f-53c8-48b6-9824-e7d3fb41f74c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="character NEW\Character\State System\base">
+      <UniqueIdentifier>{4977d082-33ea-4f62-ad85-e28b40fecd95}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="character NEW\Character\State System\base\manager">
+      <UniqueIdentifier>{7d193cd0-a6be-4a72-8096-4b32be137541}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="character NEW\Character\State System\base\condition">
+      <UniqueIdentifier>{4179f3ba-7582-4a4e-829c-c960d5003b84}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="character NEW\Character\State System\base\base">
+      <UniqueIdentifier>{4f755aad-7998-4d6e-9522-1c72aea9df2a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Servers\QueryServer">
+      <UniqueIdentifier>{7d7073ec-8087-4250-856d-d1c0efb814bb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Main">
+      <UniqueIdentifier>{5db9728d-da97-4b2a-8224-38e3b8a2d8e7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Main\GameProcessor">
+      <UniqueIdentifier>{3a3ba870-253c-49b9-b58f-cb1648c0b7f3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Main\GameMain">
+      <UniqueIdentifier>{c406a351-b57a-4297-bf92-0fc192a2773d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Main\GameData">
+      <UniqueIdentifier>{6888e2a7-58dd-41d8-a865-4f722d1c0321}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="character NEW\Player\Session\opcodes">
+      <UniqueIdentifier>{cc41227a-b187-46d3-ad42-84f4e3dac8ea}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SCRIPT">
+      <UniqueIdentifier>{b1127f1d-e8f0-44f0-b04d-9134246ca4b3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SCRIPT\AIS">
+      <UniqueIdentifier>{72addd75-e14e-4939-ba51-04ce5dfd14a9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SCRIPT\SPS">
+      <UniqueIdentifier>{ab036bde-b256-4ad3-8494-546b43241e60}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SCRIPT\AIS\Lua">
+      <UniqueIdentifier>{1bb65c43-d1d6-4264-8bae-dd021680ee8c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SCRIPT\SPS\Lua">
+      <UniqueIdentifier>{91d11f04-f3cc-4e3b-971e-37054b3d87a3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SCRIPT\AIS\Main">
+      <UniqueIdentifier>{3f18843d-e235-4f0c-bc92-0128700e1db1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SCRIPT\SPS\Main">
+      <UniqueIdentifier>{61e05c92-0c84-404d-950d-749119fadbaa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SCRIPT\AIS\Main\Factory">
+      <UniqueIdentifier>{97625d56-090a-4f2a-9442-17ce501be067}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SCRIPT\SPS\Main\Factory">
+      <UniqueIdentifier>{a2ac45af-f835-4639-8c0f-ed67a6d0b988}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SCRIPT\AIS\Main\Manager">
+      <UniqueIdentifier>{5a399690-4f4c-424b-9be5-800992d7beaa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SCRIPT\SPS\Main\Manager">
+      <UniqueIdentifier>{daf7688f-352a-41a9-bf3b-81a7b4899c2d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SCRIPT\AIS\Node">
+      <UniqueIdentifier>{78050f7d-8d68-48eb-b223-3c7726f5d069}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SCRIPT\SPS\Node">
+      <UniqueIdentifier>{495410a7-ab20-46fd-b682-96f622f71292}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SCRIPT\AIS\Node\Action">
+      <UniqueIdentifier>{94ae2be2-09fb-4783-b90f-5f377f17a241}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SCRIPT\AIS\Node\Condition">
+      <UniqueIdentifier>{595a14d8-2978-4300-9bd7-33500f8f075b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SCRIPT\AIS\Node\Scene">
+      <UniqueIdentifier>{9b7d06d8-d18f-4ead-a165-ca53807ee4db}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SCRIPT\AIS\Node\State">
+      <UniqueIdentifier>{4452db47-88cc-45c0-bb89-b2c8eddc7a28}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SCRIPT\SPS\Node\Action">
+      <UniqueIdentifier>{ec60e25a-ccbb-4b80-a0a7-1d3e37aec73c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SCRIPT\SPS\Node\Condition">
+      <UniqueIdentifier>{0a8382e3-1c85-4441-b105-46e90408d070}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SCRIPT\SPS\Node\Scene">
+      <UniqueIdentifier>{8b676c23-4207-4f86-8caf-7f17ef184991}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SCRIPT\ControlScript">
+      <UniqueIdentifier>{9999cea5-620c-414d-9303-e928766c036e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SCRIPT\ControlScript\EventMap">
+      <UniqueIdentifier>{c9dde316-4033-40ee-97b6-df266ef2b883}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SCRIPT\ControlScript\Manager">
+      <UniqueIdentifier>{f47ec4c6-d03c-47ad-a2df-9d9d5eff2393}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SCRIPT\ControlScript\Node">
+      <UniqueIdentifier>{bbf42e05-9468-4b4c-ba3b-ddc9eaaf891d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SCRIPT\ControlScript\Node\Action">
+      <UniqueIdentifier>{fc728884-ce06-4647-9100-36058daefe98}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SCRIPT\ControlScript\Node\Condition">
+      <UniqueIdentifier>{5bf1a395-b7a4-45fb-a7c8-c1b02ffa6529}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SCRIPT\ControlScript\Node\Factory">
+      <UniqueIdentifier>{7208eddc-d27a-40b8-b5ba-a30ccb2da63f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SCRIPT\ControlScript\Param">
+      <UniqueIdentifier>{dc9f440c-05b7-43f9-b060-e2d984da44f5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SCRIPT\ControlScript\Param\number">
+      <UniqueIdentifier>{dee8b5ca-cbde-44f2-9a30-868efd0878c3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SCRIPT\ControlScript\Param\string">
+      <UniqueIdentifier>{10f885f7-c2db-4421-ba14-54e13b24b48e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SCRIPT\ControlScript\State">
+      <UniqueIdentifier>{1c72d6e8-d967-4a04-ba71-e16d67717db0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Dungeon\TLQ">
+      <UniqueIdentifier>{df9a0c90-511d-4839-9660-2909286811a0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Dungeon\CCBD">
+      <UniqueIdentifier>{a0cc2793-33e2-4f68-bc9c-e245a4b52788}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SCRIPT\WPS">
+      <UniqueIdentifier>{451a4cd9-6aa2-4991-96bd-5eda437e0cd2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SCRIPT\WPS\LUA">
+      <UniqueIdentifier>{3f11f3e4-a520-4f4b-a3a6-b41ef7414cc8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SCRIPT\WPS\Main">
+      <UniqueIdentifier>{1236bb87-fe58-45e4-a068-ddaa55a1cc72}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SCRIPT\WPS\Node">
+      <UniqueIdentifier>{babec139-bced-4faa-9470-e221af777e06}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SCRIPT\Controller">
+      <UniqueIdentifier>{4fc48094-47de-4fa3-839e-68e228a9ee37}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SCRIPT\Controller\Action">
+      <UniqueIdentifier>{14eefc9c-bf94-4815-bc58-42a27ca2adf0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SCRIPT\Controller\Condition">
+      <UniqueIdentifier>{195ae0a8-67d4-43a4-9069-59e176ff1cd8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SCRIPT\Controller\State">
+      <UniqueIdentifier>{f3278cfe-e282-46b1-af0c-a5ab98db4716}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SCRIPT\Controller\State\Complex">
+      <UniqueIdentifier>{93e5642e-9146-441d-80ba-f2ba18d89126}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SCRIPT\Controller\State\Composite">
+      <UniqueIdentifier>{25cd3348-585c-474e-a15c-dfc83efcaece}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SCRIPT\Controller\State\Factory">
+      <UniqueIdentifier>{1277eeb1-8e59-4cf2-80e9-78b97392a315}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SCRIPT\Controller\State\Main">
+      <UniqueIdentifier>{111d0ceb-9225-4c46-aeaa-93660d48dec2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SCRIPT\Controller\State\Manager">
+      <UniqueIdentifier>{55a47a7f-243e-455e-b69b-5a1976e1380b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SCRIPT\WPS\Node\Action">
+      <UniqueIdentifier>{0df06bc5-2f17-49b2-9467-2edbc6c2765e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SCRIPT\WPS\Node\Condition">
+      <UniqueIdentifier>{9453f1eb-392e-42d1-9cd6-6b176439931f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SCRIPT\WPS\Node\State">
+      <UniqueIdentifier>{9b1e19f6-e77e-4493-83e0-581ac5565fa2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SCRIPT\WPS\Node\State\Failed">
+      <UniqueIdentifier>{78b759bb-af23-484c-90ee-762947dc6374}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SCRIPT\WPS\Node\State\Prepare">
+      <UniqueIdentifier>{41b1d226-1de4-46bc-9c9d-a80a9fdbb00e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SCRIPT\WPS\Node\State\Stage">
+      <UniqueIdentifier>{8487ca38-55b6-452d-afb9-82618d747136}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SCRIPT\WPS\ALGO">
+      <UniqueIdentifier>{b51f205c-624b-48b2-8674-4db7b1ff116f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SCRIPT\WPS\ALGO\Action">
+      <UniqueIdentifier>{2d01200a-6ae9-4d8a-bf9f-f84cef426c00}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SCRIPT\WPS\ALGO\Condition">
+      <UniqueIdentifier>{2c54d4fa-87d5-408c-bcba-b7f693effe84}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SCRIPT\WPS\ALGO\Action\Parent">
+      <UniqueIdentifier>{1992984e-45fe-44d2-874c-64c70ca39e86}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SCRIPT\WPS\ALGO\Condition\Parent">
+      <UniqueIdentifier>{8d979a20-69d2-4189-95e7-c45926a9bf9a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SCRIPT\WPS\Main\Factory">
+      <UniqueIdentifier>{1057356a-28a3-47f0-9885-7f4959cccfd3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Skill\HTB">
+      <UniqueIdentifier>{ab36948c-2245-434b-a767-7c02e98a1a26}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SCRIPT\ALGO">
+      <UniqueIdentifier>{f85e153a-68ef-4036-8816-9f04c50d07dc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SCRIPT\TQS">
+      <UniqueIdentifier>{b960ca97-f43f-4d55-9f71-c7821e82027f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SCRIPT\TQS\Lua">
+      <UniqueIdentifier>{8141c374-e295-45cd-bd85-52a9bad70d16}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SCRIPT\TQS\Main">
+      <UniqueIdentifier>{7d1658a3-0021-4e06-8309-066bb741fb2e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SCRIPT\TQS\Node">
+      <UniqueIdentifier>{37563be5-1e92-4f2c-b5e1-a09e4bf12213}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SCRIPT\TQS\Main\Main">
+      <UniqueIdentifier>{9a51b9b6-6831-47c6-b027-7cbc12092fe8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SCRIPT\TQS\Main\Factory">
+      <UniqueIdentifier>{dc95a12b-6de2-4ca0-a946-98c237d8270c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SCRIPT\TQS\Node\Action">
+      <UniqueIdentifier>{a0aeee27-21d4-4480-9ac1-bc44d51ea556}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SCRIPT\TQS\Node\Condition">
+      <UniqueIdentifier>{73b07df5-abf9-4a37-96a2-b237d3487541}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SCRIPT\TQS\Node\State">
+      <UniqueIdentifier>{ceebe429-ab79-4a9c-9bd3-a12745061e93}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SCRIPT\WPS\ALGO\Object">
+      <UniqueIdentifier>{40681871-a26b-442b-84d8-a22e7d8788a2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="character NEW\Player\GM">
+      <UniqueIdentifier>{92f964e1-a54c-4bd2-bd53-716e5cee6ec6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="character NEW\Player\Item">
+      <UniqueIdentifier>{1964b67d-a008-415a-9ef8-07dd8390ee04}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Main\Header Files">
+      <UniqueIdentifier>{2a49a086-eeb4-41da-8137-5b8ed9aeac53}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Main\TableManager">
+      <UniqueIdentifier>{bf41ce86-637e-453b-88b6-466b73849310}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="In-Game Event System">
+      <UniqueIdentifier>{abaca5e5-dfd4-444b-8620-8d4edd0be27d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="In-Game Event System\Underworld Invasion">
+      <UniqueIdentifier>{bfcfa6d6-53ad-42f0-a5e4-6c8c4b4e9bf8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="In-Game Event System\Dragonball Hunt">
+      <UniqueIdentifier>{24e63d30-6391-4612-909d-a287f50a5a14}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="character NEW\Character\State System\base\aspect">
+      <UniqueIdentifier>{ab9ca751-e105-4904-8663-c39fd41fafd2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="character NEW\Character\State System\base\state">
+      <UniqueIdentifier>{26cafff8-85cb-4beb-bf23-c4e97cd2ce15}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="character NEW\Character\State System\bot">
+      <UniqueIdentifier>{0514fb8f-f682-4946-a537-4307f63c3a3c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="character NEW\Character\State System\conditions">
+      <UniqueIdentifier>{a47a1987-abe9-4367-840d-c3330cb13eb9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="character NEW\Character\State System\states">
+      <UniqueIdentifier>{7bc82c66-36a1-4087-810d-3d1667d9293c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="character NEW\Character\State System\aspects">
+      <UniqueIdentifier>{57c4bf31-921b-4de8-b3bb-fdb252517023}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SCRIPT\WPS\Node\Action\CCBD">
+      <UniqueIdentifier>{18ed46b2-5010-4c51-9465-b716453f4dc7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SCRIPT\WPS\Node\Condition\CCBD">
+      <UniqueIdentifier>{1ce9ec3f-e219-48ef-8a46-28ba0177b0b6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SCRIPT\WPS\ALGO\Action\CCBD">
+      <UniqueIdentifier>{6e257afd-cbe1-4780-9fa9-0989e1ab190a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SCRIPT\WPS\ALGO\Condition\CCBD">
+      <UniqueIdentifier>{a8ef58f1-8f51-4764-b887-e9d0be4e581f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SCRIPT\WPS\ALGO\Stage">
+      <UniqueIdentifier>{b571c464-b47d-4c1e-8f80-c309eaf6c985}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SCRIPT\WPS\ALGO\Stage\Parent">
+      <UniqueIdentifier>{25eaf10f-d357-4d59-b9ac-44ff0cb7c618}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SCRIPT\TQS\ALGO">
+      <UniqueIdentifier>{1c2eae5b-b637-4564-a5cf-8bf22ba79008}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SCRIPT\TQS\ALGO\Action">
+      <UniqueIdentifier>{e522a768-2b2e-4498-820b-24ec3d3e46db}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SCRIPT\TQS\ALGO\Condition">
+      <UniqueIdentifier>{4d75189a-c515-4ea8-bed1-4f9802ba97e8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SCRIPT\TQS\ALGO\Object">
+      <UniqueIdentifier>{f68b93bf-dd22-4c34-85e2-fc6f04251215}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SCRIPT\TQS\ALGO\Stage">
+      <UniqueIdentifier>{7db40619-bc71-4d2a-8ded-1cc339152eb3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SCRIPT\TQS\ALGO\Action\Base">
+      <UniqueIdentifier>{efe3b537-c6ab-490b-b88b-1c9cdf75d8c4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SCRIPT\TQS\ALGO\Stage\Base">
+      <UniqueIdentifier>{9839abeb-b12c-436b-bbc0-ec612a516522}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SCRIPT\TQS\ALGO\Condition\Base">
+      <UniqueIdentifier>{e52b14b3-cd25-474a-b952-f035c472d302}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SCRIPT\TQS\ALGO\Base">
+      <UniqueIdentifier>{5b011d63-0a51-46f1-ad28-56597ba72975}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SCRIPT\WPS\ALGO\Condition\Base">
+      <UniqueIdentifier>{5ce34da9-5322-4e7a-9cad-1b35156856b0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SCRIPT\WPS\ALGO\Action\Base">
+      <UniqueIdentifier>{da7551ce-c32a-49fd-a210-a7f960e51ebb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SCRIPT\WPS\ALGO\Base">
+      <UniqueIdentifier>{a9462973-bfa4-4fc6-8fcc-0945941d73cd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SCRIPT\WPS\ALGO\Stage\Base">
+      <UniqueIdentifier>{85d8f841-b3e1-4d00-bf6f-39df46b626cb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SCRIPT\ALGO\Object">
+      <UniqueIdentifier>{a83542c5-bc9f-47c3-a187-1f7759525969}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SCRIPT\ALGO\Object\Manager">
+      <UniqueIdentifier>{51d3fb12-e878-4d85-9a05-7afc24d49353}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SCRIPT\ALGO\Object\Controller">
+      <UniqueIdentifier>{ddc39227-4411-4161-8689-5cb338ecdb96}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Trigger System">
+      <UniqueIdentifier>{2c328cee-313d-4f85-853f-ba36cefa4c41}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Navi">
+      <UniqueIdentifier>{0141ed2e-4368-4f37-b1d3-851fa6d18473}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Navi\Log">
+      <UniqueIdentifier>{d3ce2e0e-837f-4fd6-a152-b13cf9496b00}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="character NEW\ObjTrigger">
+      <UniqueIdentifier>{62bad8fe-5c69-4c75-b31b-e3e0e6b524e0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SCRIPT\Utility">
+      <UniqueIdentifier>{20ebf50f-d84e-4f83-be11-ce8f2c7d6010}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SCRIPT\Utility\ParameterReader">
+      <UniqueIdentifier>{4a83563c-0f62-4a76-97a0-ce907e86d357}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SCRIPT\Utility\StringSeperator">
+      <UniqueIdentifier>{e6e71440-7ae2-4b96-8f5a-4cd5b023dbf6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SCRIPT\Utility\SvrRcr">
+      <UniqueIdentifier>{c559502d-144f-4367-bbbb-3441cc00a533}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SCRIPT\Utility\SvrRcr\Variable">
+      <UniqueIdentifier>{3f29731a-c9db-4a31-8ab1-dc943e9fc0a5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SCRIPT\Utility\SvrRcr\Formula">
+      <UniqueIdentifier>{53d0a56e-cdb2-485d-a0cd-e67edea24224}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Servers\ChatServer\tg_opcodes">
+      <UniqueIdentifier>{e0e6f402-1dd6-4aef-9c22-d3224b035879}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Servers\QueryServer\qg_opcodes">
+      <UniqueIdentifier>{2c839dba-439c-4888-a12b-401090a48fe5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Servers\MasterServer\mg_opcodes">
+      <UniqueIdentifier>{c9f33709-0603-4d8d-b652-6d8a96a86663}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="character NEW\Character\CharacterAttribute\main">
+      <UniqueIdentifier>{8df74c85-b79b-4056-ad6d-c9dcf1aa9aea}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="In-Game Event System\Budokai">
+      <UniqueIdentifier>{d28ac117-79ff-4d21-abcf-3655d9fa8576}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Rank Battle">
+      <UniqueIdentifier>{0f255d4b-add3-4a16-83ea-0c71fa72d5a7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="In-Game Event System\Exp Event">
+      <UniqueIdentifier>{92561c85-5c6c-4c8b-bd71-f517c6b9e342}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="In-Game Event System\Dragonball Scramble">
+      <UniqueIdentifier>{0756b44c-10d7-4188-8a8e-aca47e1ed63d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ANTI-BOT%28SCS%29">
+      <UniqueIdentifier>{0ff0683d-78c9-4383-a401-b6dbfa257964}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="In-Game Event System\HoneyBee">
+      <UniqueIdentifier>{8027dc10-87ee-4d55-89d5-7d761ed59977}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="BUS SYSTEM">
+      <UniqueIdentifier>{bbe5dce7-73d1-43c1-96cd-e7eb2151c11f}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="ClientSession.cpp">
+      <Filter>character NEW\Player\Session</Filter>
+    </ClCompile>
+    <ClCompile Include="DungeonManager.cpp">
+      <Filter>Dungeon</Filter>
+    </ClCompile>
+    <ClCompile Include="TriggerManager.cpp">
+      <Filter>Trigger System</Filter>
+    </ClCompile>
+    <ClCompile Include="Quest.cpp">
+      <Filter>character NEW\Player\TriggerSystem%28TS%29</Filter>
+    </ClCompile>
+    <ClCompile Include="ChatServerSession.cpp">
+      <Filter>Servers\ChatServer</Filter>
+    </ClCompile>
+    <ClCompile Include="ChatServerPacket.cpp">
+      <Filter>Servers\ChatServer</Filter>
+    </ClCompile>
+    <ClCompile Include="battle.cpp">
+      <Filter>Battle%28fight%29</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Main\Header Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ItemManager.cpp">
+      <Filter>Item</Filter>
+    </ClCompile>
+    <ClCompile Include="freebattle.cpp">
+      <Filter>Battle%28fight%29</Filter>
+    </ClCompile>
+    <ClCompile Include="MasterServerSession.cpp">
+      <Filter>Servers\MasterServer</Filter>
+    </ClCompile>
+    <ClCompile Include="MasterServerPacket.cpp">
+      <Filter>Servers\MasterServer</Filter>
+    </ClCompile>
+    <ClCompile Include="TableContainerManager.cpp">
+      <Filter>Main\TableManager</Filter>
+    </ClCompile>
+    <ClCompile Include="item.cpp">
+      <Filter>Item</Filter>
+    </ClCompile>
+    <ClCompile Include="privateshop.cpp">
+      <Filter>character NEW\Player\private shop</Filter>
+    </ClCompile>
+    <ClCompile Include="CPlayer.cpp">
+      <Filter>character NEW\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="Npc.cpp">
+      <Filter>character NEW\Monster\Npc</Filter>
+    </ClCompile>
+    <ClCompile Include="Monster.cpp">
+      <Filter>character NEW\Monster</Filter>
+    </ClCompile>
+    <ClCompile Include="player_item.cpp">
+      <Filter>character NEW\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="TimeQuest.cpp">
+      <Filter>Dungeon\TMQ</Filter>
+    </ClCompile>
+    <ClCompile Include="player_event.cpp">
+      <Filter>character NEW\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="ShenronManager.cpp">
+      <Filter>character NEW\Monster\Npc\Shenron</Filter>
+    </ClCompile>
+    <ClCompile Include="gm.cpp">
+      <Filter>character NEW\Player\GM</Filter>
+    </ClCompile>
+    <ClCompile Include="DojoManager.cpp">
+      <Filter>Guild/DOJO</Filter>
+    </ClCompile>
+    <ClCompile Include="BotAiAction.cpp">
+      <Filter>character NEW\Monster\BOT AI\action\main</Filter>
+    </ClCompile>
+    <ClCompile Include="BotAiCondition.cpp">
+      <Filter>character NEW\Monster\BOT AI\condition\main</Filter>
+    </ClCompile>
+    <ClCompile Include="BotAiState.cpp">
+      <Filter>character NEW\Monster\BOT AI\state\main</Filter>
+    </ClCompile>
+    <ClCompile Include="BotAiAction_Wander.cpp">
+      <Filter>character NEW\Monster\BOT AI\action</Filter>
+    </ClCompile>
+    <ClCompile Include="BotAiAction_FixLoc.cpp">
+      <Filter>character NEW\Monster\BOT AI\action</Filter>
+    </ClCompile>
+    <ClCompile Include="BotAiAction_Follow.cpp">
+      <Filter>character NEW\Monster\BOT AI\action</Filter>
+    </ClCompile>
+    <ClCompile Include="BotAiAction_EscortFollow.cpp">
+      <Filter>character NEW\Monster\BOT AI\action</Filter>
+    </ClCompile>
+    <ClCompile Include="BotAiAction_PetFollow.cpp">
+      <Filter>character NEW\Monster\BOT AI\action</Filter>
+    </ClCompile>
+    <ClCompile Include="BotAiAction_Patrol.cpp">
+      <Filter>character NEW\Monster\BOT AI\action</Filter>
+    </ClCompile>
+    <ClCompile Include="BotAiAction_FollowMove.cpp">
+      <Filter>character NEW\Monster\BOT AI\action</Filter>
+    </ClCompile>
+    <ClCompile Include="BotAiAction_WanderMove.cpp">
+      <Filter>character NEW\Monster\BOT AI\action</Filter>
+    </ClCompile>
+    <ClCompile Include="BotAiAction_DestMove.cpp">
+      <Filter>character NEW\Monster\BOT AI\action</Filter>
+    </ClCompile>
+    <ClCompile Include="BotAiAction_NavMove.cpp">
+      <Filter>character NEW\Monster\BOT AI\action</Filter>
+    </ClCompile>
+    <ClCompile Include="BotAiAction_ReturnMove.cpp">
+      <Filter>character NEW\Monster\BOT AI\action</Filter>
+    </ClCompile>
+    <ClCompile Include="BotAiBase.cpp">
+      <Filter>character NEW\Monster\BOT AI\base\main</Filter>
+    </ClCompile>
+    <ClCompile Include="BotAiBase_FirstProcList.cpp">
+      <Filter>character NEW\Monster\BOT AI\base</Filter>
+    </ClCompile>
+    <ClCompile Include="BotAiState_Enter.cpp">
+      <Filter>character NEW\Monster\BOT AI\state</Filter>
+    </ClCompile>
+    <ClCompile Include="BotAiState_Spawn.cpp">
+      <Filter>character NEW\Monster\BOT AI\state</Filter>
+    </ClCompile>
+    <ClCompile Include="BotAiState_Idle.cpp">
+      <Filter>character NEW\Monster\BOT AI\state</Filter>
+    </ClCompile>
+    <ClCompile Include="BotAiController.cpp">
+      <Filter>character NEW\Monster\BOT AI\Control</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjectController.cpp">
+      <Filter>character NEW\Monster\Npc\controller</Filter>
+    </ClCompile>
+    <ClCompile Include="EndCondition.cpp">
+      <Filter>character NEW\Monster\BOT AI\condition\end</Filter>
+    </ClCompile>
+    <ClCompile Include="CheckupEndCondition.cpp">
+      <Filter>character NEW\Monster\BOT AI\condition\end</Filter>
+    </ClCompile>
+    <ClCompile Include="EndCondition_TargetFixAttack.cpp">
+      <Filter>character NEW\Monster\BOT AI\condition\end</Filter>
+    </ClCompile>
+    <ClCompile Include="EndCondition_HimSelf_LPCheck.cpp">
+      <Filter>character NEW\Monster\BOT AI\condition\end</Filter>
+    </ClCompile>
+    <ClCompile Include="ActionPattern.cpp">
+      <Filter>character NEW\Character\ActionPattern</Filter>
+    </ClCompile>
+    <ClCompile Include="ActionPatternSystem.cpp">
+      <Filter>character NEW\Character\ActionPattern</Filter>
+    </ClCompile>
+    <ClCompile Include="ActionPatternUnit.cpp">
+      <Filter>character NEW\Character\ActionPattern</Filter>
+    </ClCompile>
+    <ClCompile Include="ContainerActionPatternUnit.cpp">
+      <Filter>character NEW\Character\ActionPattern</Filter>
+    </ClCompile>
+    <ClCompile Include="ContainerActionPatternSet.cpp">
+      <Filter>character NEW\Character\ActionPattern</Filter>
+    </ClCompile>
+    <ClCompile Include="ActionPatternMove.cpp">
+      <Filter>character NEW\Character\ActionPattern</Filter>
+    </ClCompile>
+    <ClCompile Include="ActionPatternIdle1.cpp">
+      <Filter>character NEW\Character\ActionPattern</Filter>
+    </ClCompile>
+    <ClCompile Include="ActionPatternIdle2.cpp">
+      <Filter>character NEW\Character\ActionPattern</Filter>
+    </ClCompile>
+    <ClCompile Include="ActionPatternMIdle1.cpp">
+      <Filter>character NEW\Character\ActionPattern</Filter>
+    </ClCompile>
+    <ClCompile Include="ActionPatternMIdle2.cpp">
+      <Filter>character NEW\Character\ActionPattern</Filter>
+    </ClCompile>
+    <ClCompile Include="FactoryActionPatternUnit.cpp">
+      <Filter>character NEW\Character\ActionPattern</Filter>
+    </ClCompile>
+    <ClCompile Include="BotPathFinder.cpp">
+      <Filter>character NEW\Monster\Npc\PathFinder</Filter>
+    </ClCompile>
+    <ClCompile Include="WayPointList.cpp">
+      <Filter>character NEW\Monster\Npc\PathFinder</Filter>
+    </ClCompile>
+    <ClCompile Include="BotAiCondition_Facing.cpp">
+      <Filter>character NEW\Monster\BOT AI\condition</Filter>
+    </ClCompile>
+    <ClCompile Include="BotAiAction_PlayScene.cpp">
+      <Filter>character NEW\Monster\BOT AI\action</Filter>
+    </ClCompile>
+    <ClCompile Include="BotAiAction_Rotate.cpp">
+      <Filter>character NEW\Monster\BOT AI\action</Filter>
+    </ClCompile>
+    <ClCompile Include="BotAiAction_Attack.cpp">
+      <Filter>character NEW\Monster\BOT AI\action</Filter>
+    </ClCompile>
+    <ClCompile Include="BotAiAction_Chase.cpp">
+      <Filter>character NEW\Monster\BOT AI\action</Filter>
+    </ClCompile>
+    <ClCompile Include="BotAiAction_SkillUse.cpp">
+      <Filter>character NEW\Monster\BOT AI\action</Filter>
+    </ClCompile>
+    <ClCompile Include="BotAiAction_Look.cpp">
+      <Filter>character NEW\Monster\BOT AI\action</Filter>
+    </ClCompile>
+    <ClCompile Include="BotAiAction_RangedAttack.cpp">
+      <Filter>character NEW\Monster\BOT AI\action</Filter>
+    </ClCompile>
+    <ClCompile Include="BotAiAction_Flee.cpp">
+      <Filter>character NEW\Monster\BOT AI\action</Filter>
+    </ClCompile>
+    <ClCompile Include="BotAiAction_Retreat.cpp">
+      <Filter>character NEW\Monster\BOT AI\action</Filter>
+    </ClCompile>
+    <ClCompile Include="BotAiAction_PatrolWait.cpp">
+      <Filter>character NEW\Monster\BOT AI\action</Filter>
+    </ClCompile>
+    <ClCompile Include="BotAiAction_Terror.cpp">
+      <Filter>character NEW\Monster\BOT AI\action</Filter>
+    </ClCompile>
+    <ClCompile Include="BotAiAction_Say.cpp">
+      <Filter>character NEW\Monster\BOT AI\action</Filter>
+    </ClCompile>
+    <ClCompile Include="BotAiAction_DirectPlay.cpp">
+      <Filter>character NEW\Monster\BOT AI\action</Filter>
+    </ClCompile>
+    <ClCompile Include="BotAiAction_DirectTurning.cpp">
+      <Filter>character NEW\Monster\BOT AI\action</Filter>
+    </ClCompile>
+    <ClCompile Include="BotAiAction_SetCharCondition.cpp">
+      <Filter>character NEW\Monster\BOT AI\action</Filter>
+    </ClCompile>
+    <ClCompile Include="BotAiAction_Wait.cpp">
+      <Filter>character NEW\Monster\BOT AI\action</Filter>
+    </ClCompile>
+    <ClCompile Include="BotAiAction_SitDown.cpp">
+      <Filter>character NEW\Monster\BOT AI\action</Filter>
+    </ClCompile>
+    <ClCompile Include="BotAiAction_Leave.cpp">
+      <Filter>character NEW\Monster\BOT AI\action</Filter>
+    </ClCompile>
+    <ClCompile Include="BotAiAction_Escort.cpp">
+      <Filter>character NEW\Monster\BOT AI\action</Filter>
+    </ClCompile>
+    <ClCompile Include="BotAiAction_SPSEnd.cpp">
+      <Filter>character NEW\Monster\BOT AI\action</Filter>
+    </ClCompile>
+    <ClCompile Include="BotAiAction_SendSpsEvent.cpp">
+      <Filter>character NEW\Monster\BOT AI\action</Filter>
+    </ClCompile>
+    <ClCompile Include="BotAiAction_Timid.cpp">
+      <Filter>character NEW\Monster\BOT AI\action</Filter>
+    </ClCompile>
+    <ClCompile Include="BotAiAction_AddMob.cpp">
+      <Filter>character NEW\Monster\BOT AI\action</Filter>
+    </ClCompile>
+    <ClCompile Include="BotAiAction_ChangeCharAttribute.cpp">
+      <Filter>character NEW\Monster\BOT AI\action</Filter>
+    </ClCompile>
+    <ClCompile Include="BotAiAction_ChangeNpcAttribute.cpp">
+      <Filter>character NEW\Monster\BOT AI\action</Filter>
+    </ClCompile>
+    <ClCompile Include="BotAiAction_TargetFixAttack.cpp">
+      <Filter>character NEW\Monster\BOT AI\action</Filter>
+    </ClCompile>
+    <ClCompile Include="BotAiAction_ChangeAiBitFlag.cpp">
+      <Filter>character NEW\Monster\BOT AI\action</Filter>
+    </ClCompile>
+    <ClCompile Include="BotAiAction_ChangeTimidAttribute.cpp">
+      <Filter>character NEW\Monster\BOT AI\action</Filter>
+    </ClCompile>
+    <ClCompile Include="BotAiAction_Function.cpp">
+      <Filter>character NEW\Monster\BOT AI\action</Filter>
+    </ClCompile>
+    <ClCompile Include="BotAiAction_SendEscortEventToTs.cpp">
+      <Filter>character NEW\Monster\BOT AI\action</Filter>
+    </ClCompile>
+    <ClCompile Include="BotAiAction_SendEventToTqs.cpp">
+      <Filter>character NEW\Monster\BOT AI\action</Filter>
+    </ClCompile>
+    <ClCompile Include="BotAiAction_SPS_SendEventToWps.cpp">
+      <Filter>character NEW\Monster\BOT AI\action</Filter>
+    </ClCompile>
+    <ClCompile Include="BotAiAction_AIS_SendEventToWps.cpp">
+      <Filter>character NEW\Monster\BOT AI\action</Filter>
+    </ClCompile>
+    <ClCompile Include="BotAiAction_AIS_SendEventToTqs.cpp">
+      <Filter>character NEW\Monster\BOT AI\action</Filter>
+    </ClCompile>
+    <ClCompile Include="BotAiAction_SPS_SendEventToTs.cpp">
+      <Filter>character NEW\Monster\BOT AI\action</Filter>
+    </ClCompile>
+    <ClCompile Include="BotAiAction_SPS_SendEvent.cpp">
+      <Filter>character NEW\Monster\BOT AI\action</Filter>
+    </ClCompile>
+    <ClCompile Include="BotAiAction_ClearSpsEvent.cpp">
+      <Filter>character NEW\Monster\BOT AI\action</Filter>
+    </ClCompile>
+    <ClCompile Include="BotAiAction_Calculate.cpp">
+      <Filter>character NEW\Monster\BOT AI\action</Filter>
+    </ClCompile>
+    <ClCompile Include="BotAiState_Fight.cpp">
+      <Filter>character NEW\Monster\BOT AI\state</Filter>
+    </ClCompile>
+    <ClCompile Include="BotAiState_BattleScene.cpp">
+      <Filter>character NEW\Monster\BOT AI\state</Filter>
+    </ClCompile>
+    <ClCompile Include="BotAiState_Return.cpp">
+      <Filter>character NEW\Monster\BOT AI\state</Filter>
+    </ClCompile>
+    <ClCompile Include="BotAiState_Faint.cpp">
+      <Filter>character NEW\Monster\BOT AI\state</Filter>
+    </ClCompile>
+    <ClCompile Include="BotAiState_Teleporting.cpp">
+      <Filter>character NEW\Monster\BOT AI\state</Filter>
+    </ClCompile>
+    <ClCompile Include="BotAiState_Despawn.cpp">
+      <Filter>character NEW\Monster\BOT AI\state</Filter>
+    </ClCompile>
+    <ClCompile Include="BotAiState_Leave.cpp">
+      <Filter>character NEW\Monster\BOT AI\state</Filter>
+    </ClCompile>
+    <ClCompile Include="BotAiCondition_HimselfCheck.cpp">
+      <Filter>character NEW\Monster\BOT AI\condition</Filter>
+    </ClCompile>
+    <ClCompile Include="BotAiCondition_Scan.cpp">
+      <Filter>character NEW\Monster\BOT AI\condition</Filter>
+    </ClCompile>
+    <ClCompile Include="BotAiCondition_AIS_RecvEventFromWps.cpp">
+      <Filter>character NEW\Monster\BOT AI\condition</Filter>
+    </ClCompile>
+    <ClCompile Include="BotAiCondition_AIS_RecvEventFromTqs.cpp">
+      <Filter>character NEW\Monster\BOT AI\condition</Filter>
+    </ClCompile>
+    <ClCompile Include="BotAiCondition_AttackTarget.cpp">
+      <Filter>character NEW\Monster\BOT AI\condition</Filter>
+    </ClCompile>
+    <ClCompile Include="BotAiCondition_OutOfNest.cpp">
+      <Filter>character NEW\Monster\BOT AI\condition</Filter>
+    </ClCompile>
+    <ClCompile Include="BotAiCondition_SkillUse.cpp">
+      <Filter>character NEW\Monster\BOT AI\condition</Filter>
+    </ClCompile>
+    <ClCompile Include="BotAiCondition_RangedAttack.cpp">
+      <Filter>character NEW\Monster\BOT AI\condition</Filter>
+    </ClCompile>
+    <ClCompile Include="BotAiCondition_ScanTarget.cpp">
+      <Filter>character NEW\Monster\BOT AI\condition</Filter>
+    </ClCompile>
+    <ClCompile Include="BotAiCondition_Flee.cpp">
+      <Filter>character NEW\Monster\BOT AI\condition</Filter>
+    </ClCompile>
+    <ClCompile Include="BotAiCondition_Speech.cpp">
+      <Filter>character NEW\Monster\BOT AI\condition</Filter>
+    </ClCompile>
+    <ClCompile Include="BotAiCondition_AllianceHelpMe.cpp">
+      <Filter>character NEW\Monster\BOT AI\condition</Filter>
+    </ClCompile>
+    <ClCompile Include="BotAiCondition_Defend.cpp">
+      <Filter>character NEW\Monster\BOT AI\condition</Filter>
+    </ClCompile>
+    <ClCompile Include="BotAiCondition_Retreat.cpp">
+      <Filter>character NEW\Monster\BOT AI\condition</Filter>
+    </ClCompile>
+    <ClCompile Include="BotAiCondition_Timid.cpp">
+      <Filter>character NEW\Monster\BOT AI\condition</Filter>
+    </ClCompile>
+    <ClCompile Include="BotAiCondition_Terror.cpp">
+      <Filter>character NEW\Monster\BOT AI\condition</Filter>
+    </ClCompile>
+    <ClCompile Include="BotAiCondition_Confusion.cpp">
+      <Filter>character NEW\Monster\BOT AI\condition</Filter>
+    </ClCompile>
+    <ClCompile Include="BotAiCondition_Follow_Teleport.cpp">
+      <Filter>character NEW\Monster\BOT AI\condition</Filter>
+    </ClCompile>
+    <ClCompile Include="BotAiCondition_PetFollow.cpp">
+      <Filter>character NEW\Monster\BOT AI\condition</Filter>
+    </ClCompile>
+    <ClCompile Include="BotAiCondition_PetFollow_Teleport.cpp">
+      <Filter>character NEW\Monster\BOT AI\condition</Filter>
+    </ClCompile>
+    <ClCompile Include="BotAiCondition_Child.cpp">
+      <Filter>character NEW\Monster\BOT AI\condition</Filter>
+    </ClCompile>
+    <ClCompile Include="BotAiCondition_SPS_RecvEventFromTs.cpp">
+      <Filter>character NEW\Monster\BOT AI\condition</Filter>
+    </ClCompile>
+    <ClCompile Include="BotAiCondition_SPS_RecvEventFromWps.cpp">
+      <Filter>character NEW\Monster\BOT AI\condition</Filter>
+    </ClCompile>
+    <ClCompile Include="BotAiCondition_SPS_RecvEventFromItem.cpp">
+      <Filter>character NEW\Monster\BOT AI\condition</Filter>
+    </ClCompile>
+    <ClCompile Include="BotAiCondition_RegisterBattleScene.cpp">
+      <Filter>character NEW\Monster\BOT AI\condition</Filter>
+    </ClCompile>
+    <ClCompile Include="BotAiCondition_BSCondition.cpp">
+      <Filter>character NEW\Monster\BOT AI\condition</Filter>
+    </ClCompile>
+    <ClCompile Include="BotAiCondition_BSConditionGroup.cpp">
+      <Filter>character NEW\Monster\BOT AI\condition</Filter>
+    </ClCompile>
+    <ClCompile Include="BotAiCondition_BSFlow.cpp">
+      <Filter>character NEW\Monster\BOT AI\condition</Filter>
+    </ClCompile>
+    <ClCompile Include="BotAiCondition_BSCheckLp.cpp">
+      <Filter>character NEW\Monster\BOT AI\condition</Filter>
+    </ClCompile>
+    <ClCompile Include="TargetListManager.cpp">
+      <Filter>character NEW\Character\TargetManager</Filter>
+    </ClCompile>
+    <ClCompile Include="StateManager.cpp">
+      <Filter>character NEW\Character\State System\base\manager</Filter>
+    </ClCompile>
+    <ClCompile Include="ConditionState.cpp">
+      <Filter>character NEW\Character\State System\base\condition</Filter>
+    </ClCompile>
+    <ClCompile Include="StateBase.cpp">
+      <Filter>character NEW\Character\State System\base\base</Filter>
+    </ClCompile>
+    <ClCompile Include="BotState_Spawning.cpp">
+      <Filter>character NEW\Character\State System\states</Filter>
+    </ClCompile>
+    <ClCompile Include="BotState_Standing.cpp">
+      <Filter>character NEW\Character\State System\states</Filter>
+    </ClCompile>
+    <ClCompile Include="BotState_Sitting.cpp">
+      <Filter>character NEW\Character\State System\states</Filter>
+    </ClCompile>
+    <ClCompile Include="BotState_Fainting.cpp">
+      <Filter>character NEW\Character\State System\states</Filter>
+    </ClCompile>
+    <ClCompile Include="BotState_Camping.cpp">
+      <Filter>character NEW\Character\State System\states</Filter>
+    </ClCompile>
+    <ClCompile Include="BotState_Moving.cpp">
+      <Filter>character NEW\Character\State System\states</Filter>
+    </ClCompile>
+    <ClCompile Include="BotState_DestMove.cpp">
+      <Filter>character NEW\Character\State System\states</Filter>
+    </ClCompile>
+    <ClCompile Include="BotState_Follow.cpp">
+      <Filter>character NEW\Character\State System\states</Filter>
+    </ClCompile>
+    <ClCompile Include="BotState_Falling.cpp">
+      <Filter>character NEW\Character\State System\states</Filter>
+    </ClCompile>
+    <ClCompile Include="BotState_DashPassive.cpp">
+      <Filter>character NEW\Character\State System\states</Filter>
+    </ClCompile>
+    <ClCompile Include="BotState_Teleporting.cpp">
+      <Filter>character NEW\Character\State System\states</Filter>
+    </ClCompile>
+    <ClCompile Include="BotState_Sliding.cpp">
+      <Filter>character NEW\Character\State System\states</Filter>
+    </ClCompile>
+    <ClCompile Include="BotState_Knockdown.cpp">
+      <Filter>character NEW\Character\State System\states</Filter>
+    </ClCompile>
+    <ClCompile Include="BotState_Focusing.cpp">
+      <Filter>character NEW\Character\State System\states</Filter>
+    </ClCompile>
+    <ClCompile Include="BotState_Casting.cpp">
+      <Filter>character NEW\Character\State System\states</Filter>
+    </ClCompile>
+    <ClCompile Include="BotState_SkillAffecting.cpp">
+      <Filter>character NEW\Character\State System\states</Filter>
+    </ClCompile>
+    <ClCompile Include="BotState_KeepingEffect.cpp">
+      <Filter>character NEW\Character\State System\states</Filter>
+    </ClCompile>
+    <ClCompile Include="BotState_CastingItem.cpp">
+      <Filter>character NEW\Character\State System\states</Filter>
+    </ClCompile>
+    <ClCompile Include="BotState_Stunned.cpp">
+      <Filter>character NEW\Character\State System\states</Filter>
+    </ClCompile>
+    <ClCompile Include="BotState_Sleeping.cpp">
+      <Filter>character NEW\Character\State System\states</Filter>
+    </ClCompile>
+    <ClCompile Include="BotState_Paralyzed.cpp">
+      <Filter>character NEW\Character\State System\states</Filter>
+    </ClCompile>
+    <ClCompile Include="BotState_HTB.cpp">
+      <Filter>character NEW\Character\State System\states</Filter>
+    </ClCompile>
+    <ClCompile Include="BotState_Sandbag.cpp">
+      <Filter>character NEW\Character\State System\states</Filter>
+    </ClCompile>
+    <ClCompile Include="BotState_Charging.cpp">
+      <Filter>character NEW\Character\State System\states</Filter>
+    </ClCompile>
+    <ClCompile Include="BotState_Guard.cpp">
+      <Filter>character NEW\Character\State System\states</Filter>
+    </ClCompile>
+    <ClCompile Include="BotState_Despawning.cpp">
+      <Filter>character NEW\Character\State System\states</Filter>
+    </ClCompile>
+    <ClCompile Include="BotState_PrivateShop.cpp">
+      <Filter>character NEW\Character\State System\states</Filter>
+    </ClCompile>
+    <ClCompile Include="BotState_Leaving.cpp">
+      <Filter>character NEW\Character\State System\states</Filter>
+    </ClCompile>
+    <ClCompile Include="BotState_DirectPlay.cpp">
+      <Filter>character NEW\Character\State System\states</Filter>
+    </ClCompile>
+    <ClCompile Include="BotState_Operating.cpp">
+      <Filter>character NEW\Character\State System\states</Filter>
+    </ClCompile>
+    <ClCompile Include="BotState_RideOn.cpp">
+      <Filter>character NEW\Character\State System\states</Filter>
+    </ClCompile>
+    <ClCompile Include="BotState_Turning.cpp">
+      <Filter>character NEW\Character\State System\states</Filter>
+    </ClCompile>
+    <ClCompile Include="BotState_AirJump.cpp">
+      <Filter>character NEW\Character\State System\states</Filter>
+    </ClCompile>
+    <ClCompile Include="BotState_AirDashAccel.cpp">
+      <Filter>character NEW\Character\State System\states</Filter>
+    </ClCompile>
+    <ClCompile Include="SpawnObject.cpp">
+      <Filter>character NEW\SpawnObject</Filter>
+    </ClCompile>
+    <ClCompile Include="GameObject.cpp">
+      <Filter>character NEW\GameObject</Filter>
+    </ClCompile>
+    <ClCompile Include="MoveableObject.cpp">
+      <Filter>character NEW\MoveableObject</Filter>
+    </ClCompile>
+    <ClCompile Include="CharacterObject.cpp">
+      <Filter>character NEW\CharacterObject</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjectManager.cpp">
+      <Filter>character NEW</Filter>
+    </ClCompile>
+    <ClCompile Include="Party.cpp">
+      <Filter>Party\PLAYER</Filter>
+    </ClCompile>
+    <ClCompile Include="PartyMatching.cpp">
+      <Filter>Party\PLAYER</Filter>
+    </ClCompile>
+    <ClCompile Include="NpcPartyManager.cpp">
+      <Filter>Party\BOT</Filter>
+    </ClCompile>
+    <ClCompile Include="NpcParty.cpp">
+      <Filter>Party\BOT</Filter>
+    </ClCompile>
+    <ClCompile Include="PartyPublicSight.cpp">
+      <Filter>Party\BOT</Filter>
+    </ClCompile>
+    <ClCompile Include="PartyHelpData.cpp">
+      <Filter>Party\BOT</Filter>
+    </ClCompile>
+    <ClCompile Include="WorldObjectLinker.cpp">
+      <Filter>World-System</Filter>
+    </ClCompile>
+    <ClCompile Include="World.cpp">
+      <Filter>World-System</Filter>
+    </ClCompile>
+    <ClCompile Include="WorldCell.cpp">
+      <Filter>World-System</Filter>
+    </ClCompile>
+    <ClCompile Include="WorldZone.cpp">
+      <Filter>World-System</Filter>
+    </ClCompile>
+    <ClCompile Include="WorldObjectList.cpp">
+      <Filter>World-System</Filter>
+    </ClCompile>
+    <ClCompile Include="WorldPool.cpp">
+      <Filter>World-System</Filter>
+    </ClCompile>
+    <ClCompile Include="WorldList.cpp">
+      <Filter>World-System</Filter>
+    </ClCompile>
+    <ClCompile Include="WorldIdxList.cpp">
+      <Filter>World-System</Filter>
+    </ClCompile>
+    <ClCompile Include="WorldManager.cpp">
+      <Filter>World-System\manager</Filter>
+    </ClCompile>
+    <ClCompile Include="WorldFactory.cpp">
+      <Filter>World-System</Filter>
+    </ClCompile>
+    <ClCompile Include="char.cpp">
+      <Filter>character NEW\Character</Filter>
+    </ClCompile>
+    <ClCompile Include="ContainerMeHater.cpp">
+      <Filter>character NEW\Character\MeHaterManager</Filter>
+    </ClCompile>
+    <ClCompile Include="HelpMeListManager.cpp">
+      <Filter>character NEW\Monster\Npc\HelpMeListManager</Filter>
+    </ClCompile>
+    <ClCompile Include="BotBreakUp.cpp">
+      <Filter>character NEW\Character\BotBreakUp</Filter>
+    </ClCompile>
+    <ClCompile Include="MeHaterManager.cpp">
+      <Filter>character NEW\Character\MeHaterManager\Main</Filter>
+    </ClCompile>
+    <ClCompile Include="EscortManager.cpp">
+      <Filter>character NEW\Monster\Npc\EscortManager</Filter>
+    </ClCompile>
+    <ClCompile Include="RangeCheck.cpp">
+      <Filter>utilities\range-check</Filter>
+    </ClCompile>
+    <ClCompile Include="CharacterAttPC.cpp">
+      <Filter>character NEW\Character\CharacterAttribute\pc</Filter>
+    </ClCompile>
+    <ClCompile Include="CharacterAtt.cpp">
+      <Filter>character NEW\Character\CharacterAttribute\main</Filter>
+    </ClCompile>
+    <ClCompile Include="CharacterAttBot.cpp">
+      <Filter>character NEW\Character\CharacterAttribute\bot</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjectMsg.cpp">
+      <Filter>OBJECT-MSG</Filter>
+    </ClCompile>
+    <ClCompile Include="trade.cpp">
+      <Filter>character NEW\Player\Trade</Filter>
+    </ClCompile>
+    <ClCompile Include="ItemDrop.cpp">
+      <Filter>Item\Drop</Filter>
+    </ClCompile>
+    <ClCompile Include="BuffLinkedObject.cpp">
+      <Filter>Buff</Filter>
+    </ClCompile>
+    <ClCompile Include="Buff.cpp">
+      <Filter>Buff\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="BuffManager.cpp">
+      <Filter>Buff\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="BuffBot.cpp">
+      <Filter>Buff\BOT</Filter>
+    </ClCompile>
+    <ClCompile Include="BuffManagerBot.cpp">
+      <Filter>Buff\BOT</Filter>
+    </ClCompile>
+    <ClCompile Include="BuffManagerPc.cpp">
+      <Filter>Buff\PC</Filter>
+    </ClCompile>
+    <ClCompile Include="BuffPc.cpp">
+      <Filter>Buff\PC</Filter>
+    </ClCompile>
+    <ClCompile Include="SkillManager.cpp">
+      <Filter>Skill\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="Skill.cpp">
+      <Filter>Skill\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="SkillBot.cpp">
+      <Filter>Skill\BOT</Filter>
+    </ClCompile>
+    <ClCompile Include="SkillManagerBot.cpp">
+      <Filter>Skill\BOT</Filter>
+    </ClCompile>
+    <ClCompile Include="SkillCondition.cpp">
+      <Filter>Skill\BOT\Condition</Filter>
+    </ClCompile>
+    <ClCompile Include="SpellAreaChecker.cpp">
+      <Filter>utilities</Filter>
+    </ClCompile>
+    <ClCompile Include="SkillPc.cpp">
+      <Filter>Skill\PC</Filter>
+    </ClCompile>
+    <ClCompile Include="SkillManagerPc.cpp">
+      <Filter>Skill\PC</Filter>
+    </ClCompile>
+    <ClCompile Include="HitBySkillContainer.cpp">
+      <Filter>utilities</Filter>
+    </ClCompile>
+    <ClCompile Include="char_battle.cpp">
+      <Filter>character NEW</Filter>
+    </ClCompile>
+    <ClCompile Include="QueryServerPacket.cpp">
+      <Filter>Servers\QueryServer</Filter>
+    </ClCompile>
+    <ClCompile Include="QueryServerSession.cpp">
+      <Filter>Servers\QueryServer</Filter>
+    </ClCompile>
+    <ClCompile Include="GameServer.cpp">
+      <Filter>Main</Filter>
+    </ClCompile>
+    <ClCompile Include="GameMain.cpp">
+      <Filter>Main\GameMain</Filter>
+    </ClCompile>
+    <ClCompile Include="GameData.cpp">
+      <Filter>Main\GameData</Filter>
+    </ClCompile>
+    <ClCompile Include="GameProcessor.cpp">
+      <Filter>Main\GameProcessor</Filter>
+    </ClCompile>
+    <ClCompile Include="PacketGameServer.cpp">
+      <Filter>character NEW\Player\Session</Filter>
+    </ClCompile>
+    <ClCompile Include="ItemPet.cpp">
+      <Filter>character NEW\Pet</Filter>
+    </ClCompile>
+    <ClCompile Include="SummonPet.cpp">
+      <Filter>character NEW\Pet</Filter>
+    </ClCompile>
+    <ClCompile Include="SubNeighborServerInfoManager.cpp">
+      <Filter>Servers</Filter>
+    </ClCompile>
+    <ClCompile Include="ControlStateManager.cpp">
+      <Filter>SCRIPT\Controller\State\Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="ControlState.cpp">
+      <Filter>SCRIPT\Controller\State\Main</Filter>
+    </ClCompile>
+    <ClCompile Include="ControlStateEx.cpp">
+      <Filter>SCRIPT\Controller\State\Main</Filter>
+    </ClCompile>
+    <ClCompile Include="ControlStateComposite.cpp">
+      <Filter>SCRIPT\Controller\State\Composite</Filter>
+    </ClCompile>
+    <ClCompile Include="ComplexState.cpp">
+      <Filter>SCRIPT\Controller\State\Complex</Filter>
+    </ClCompile>
+    <ClCompile Include="ControlCondition.cpp">
+      <Filter>SCRIPT\Controller\Condition</Filter>
+    </ClCompile>
+    <ClCompile Include="ControlAction.cpp">
+      <Filter>SCRIPT\Controller\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="AIScript.cpp">
+      <Filter>SCRIPT\AIS\Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="AISNodeFactory.cpp">
+      <Filter>SCRIPT\AIS\Main\Factory</Filter>
+    </ClCompile>
+    <ClCompile Include="AISManager.cpp">
+      <Filter>SCRIPT\AIS\Main\Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="AISNodeAction_SendEventToTQS.cpp">
+      <Filter>SCRIPT\AIS\Node\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="AISNodeAction_SendEventToWPS.cpp">
+      <Filter>SCRIPT\AIS\Node\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="AISNodeAction_AddMob.cpp">
+      <Filter>SCRIPT\AIS\Node\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="AISNodeAction_UseSkill.cpp">
+      <Filter>SCRIPT\AIS\Node\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="AISNodeAction_TargetFixAttack.cpp">
+      <Filter>SCRIPT\AIS\Node\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="AISNodeAction_SetCharCondition.cpp">
+      <Filter>SCRIPT\AIS\Node\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="AISNodeAction_ChangeAiBitFlag.cpp">
+      <Filter>SCRIPT\AIS\Node\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="AISNodeAction_PointMove.cpp">
+      <Filter>SCRIPT\AIS\Node\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="AISNodeAction_Say.cpp">
+      <Filter>SCRIPT\AIS\Node\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="AISNodeCondition_Scan.cpp">
+      <Filter>SCRIPT\AIS\Node\Condition</Filter>
+    </ClCompile>
+    <ClCompile Include="AISNodeCondition_HimselfCheck.cpp">
+      <Filter>SCRIPT\AIS\Node\Condition</Filter>
+    </ClCompile>
+    <ClCompile Include="AISNodeCondition_RecvEventFromTQS.cpp">
+      <Filter>SCRIPT\AIS\Node\Condition</Filter>
+    </ClCompile>
+    <ClCompile Include="AISNodeCondition_RecvEventFromWPS.cpp">
+      <Filter>SCRIPT\AIS\Node\Condition</Filter>
+    </ClCompile>
+    <ClCompile Include="AISNodeScene.cpp">
+      <Filter>SCRIPT\AIS\Node\Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="AISNodeState_Wander.cpp">
+      <Filter>SCRIPT\AIS\Node\State</Filter>
+    </ClCompile>
+    <ClCompile Include="AISNodeState_Teleporting.cpp">
+      <Filter>SCRIPT\AIS\Node\State</Filter>
+    </ClCompile>
+    <ClCompile Include="AISNodeState_Spawn.cpp">
+      <Filter>SCRIPT\AIS\Node\State</Filter>
+    </ClCompile>
+    <ClCompile Include="AISNodeState_NonBattle.cpp">
+      <Filter>SCRIPT\AIS\Node\State</Filter>
+    </ClCompile>
+    <ClCompile Include="AISNodeState_Idle.cpp">
+      <Filter>SCRIPT\AIS\Node\State</Filter>
+    </ClCompile>
+    <ClCompile Include="AISNodeState_Fight.cpp">
+      <Filter>SCRIPT\AIS\Node\State</Filter>
+    </ClCompile>
+    <ClCompile Include="AISNodeState.cpp">
+      <Filter>SCRIPT\AIS\Node\State</Filter>
+    </ClCompile>
+    <ClCompile Include="AISNodeState_Comeback.cpp">
+      <Filter>SCRIPT\AIS\Node\State</Filter>
+    </ClCompile>
+    <ClCompile Include="AIScriptControlFactoy.cpp">
+      <Filter>SCRIPT\AIS</Filter>
+    </ClCompile>
+    <ClCompile Include="AIScriptManager.cpp">
+      <Filter>SCRIPT\AIS</Filter>
+    </ClCompile>
+    <ClCompile Include="ServerAIScript.cpp">
+      <Filter>SCRIPT\AIS</Filter>
+    </ClCompile>
+    <ClCompile Include="ControlScriptEventMap.cpp">
+      <Filter>SCRIPT\ControlScript\EventMap</Filter>
+    </ClCompile>
+    <ClCompile Include="ControlScriptManager.cpp">
+      <Filter>SCRIPT\ControlScript\Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="ControlScriptNodeAction.cpp">
+      <Filter>SCRIPT\ControlScript\Node\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="ControlScriptNodeCondition.cpp">
+      <Filter>SCRIPT\ControlScript\Node\Condition</Filter>
+    </ClCompile>
+    <ClCompile Include="ControlScriptNodeFactory.cpp">
+      <Filter>SCRIPT\ControlScript\Node\Factory</Filter>
+    </ClCompile>
+    <ClCompile Include="ControlScriptNode.cpp">
+      <Filter>SCRIPT\ControlScript\Node</Filter>
+    </ClCompile>
+    <ClCompile Include="ControlScriptNodeParam.cpp">
+      <Filter>SCRIPT\ControlScript\Param</Filter>
+    </ClCompile>
+    <ClCompile Include="ControlScriptNodeParam_Number.cpp">
+      <Filter>SCRIPT\ControlScript\Param\number</Filter>
+    </ClCompile>
+    <ClCompile Include="ControlScriptNodeParam_String.cpp">
+      <Filter>SCRIPT\ControlScript\Param\string</Filter>
+    </ClCompile>
+    <ClCompile Include="ControlScriptNodeState.cpp">
+      <Filter>SCRIPT\ControlScript\State</Filter>
+    </ClCompile>
+    <ClCompile Include="ControlScript.cpp">
+      <Filter>SCRIPT\ControlScript</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayScriptControlFactoy.cpp">
+      <Filter>SCRIPT\SPS</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayScriptManager.cpp">
+      <Filter>SCRIPT\SPS</Filter>
+    </ClCompile>
+    <ClCompile Include="ServerPlayScript.cpp">
+      <Filter>SCRIPT\SPS</Filter>
+    </ClCompile>
+    <ClCompile Include="SPSScript.cpp">
+      <Filter>SCRIPT\SPS\Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="SPSNodeFactory.cpp">
+      <Filter>SCRIPT\SPS\Main\Factory</Filter>
+    </ClCompile>
+    <ClCompile Include="SPSManager.cpp">
+      <Filter>SCRIPT\SPS\Main\Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="SPSNodeAction_SitDown.cpp">
+      <Filter>SCRIPT\SPS\Node\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="SPSNodeAction_Say.cpp">
+      <Filter>SCRIPT\SPS\Node\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="SPSNodeAction_Rotate.cpp">
+      <Filter>SCRIPT\SPS\Node\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="SPSNodeAction_PointMove.cpp">
+      <Filter>SCRIPT\SPS\Node\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="SPSNodeAction_ChangeCharAttribute.cpp">
+      <Filter>SCRIPT\SPS\Node\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="SPSNodeAction_ChangeAiBitFlag.cpp">
+      <Filter>SCRIPT\SPS\Node\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="SPSNodeAction_Calculate.cpp">
+      <Filter>SCRIPT\SPS\Node\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="SPSNodeAction_Wait.cpp">
+      <Filter>SCRIPT\SPS\Node\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="SPSNodeAction_PathMove.cpp">
+      <Filter>SCRIPT\SPS\Node\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="SPSNodeAction_ClearEvent.cpp">
+      <Filter>SCRIPT\SPS\Node\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="SPSNodeAction_SendEvent.cpp">
+      <Filter>SCRIPT\SPS\Node\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="SPSNodeAction_SendEventToTs.cpp">
+      <Filter>SCRIPT\SPS\Node\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="SPSNodeAction_SendEventToWps.cpp">
+      <Filter>SCRIPT\SPS\Node\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="SPSNodeAction_SendEventToTqs.cpp">
+      <Filter>SCRIPT\SPS\Node\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="SPSNodeAction_SendEscortEventToTs.cpp">
+      <Filter>SCRIPT\SPS\Node\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="SPSNodeAction_SendEventToSps.cpp">
+      <Filter>SCRIPT\SPS\Node\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="SPSNodeAction_SendSpsEvent.cpp">
+      <Filter>SCRIPT\SPS\Node\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="SPSNodeAction_Function.cpp">
+      <Filter>SCRIPT\SPS\Node\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="SPSNodeAction_DoWander.cpp">
+      <Filter>SCRIPT\SPS\Node\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="SPSNodeAction_ChangeTimidAttribute.cpp">
+      <Filter>SCRIPT\SPS\Node\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="SPSNodeAction_ChangeNpcAttribute.cpp">
+      <Filter>SCRIPT\SPS\Node\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="SPSNodeAction_SPSEnd.cpp">
+      <Filter>SCRIPT\SPS\Node\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="SPSNodeAction_Leave.cpp">
+      <Filter>SCRIPT\SPS\Node\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="SPSNodeAction_Escort.cpp">
+      <Filter>SCRIPT\SPS\Node\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="SPSNodeAction_DirectTurning.cpp">
+      <Filter>SCRIPT\SPS\Node\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="SPSNodeAction_DirectPlay.cpp">
+      <Filter>SCRIPT\SPS\Node\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="SPSNodeAction_TargetFixAttack.cpp">
+      <Filter>SCRIPT\SPS\Node\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="SPSNodeAction_SkillUse.cpp">
+      <Filter>SCRIPT\SPS\Node\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="SPSNodeAction_SetCharCondition.cpp">
+      <Filter>SCRIPT\SPS\Node\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="SPSNodeCondition_BSCheckNpc.cpp">
+      <Filter>SCRIPT\SPS\Node\Condition</Filter>
+    </ClCompile>
+    <ClCompile Include="SPSNodeCondition_BSCheckMobGroup.cpp">
+      <Filter>SCRIPT\SPS\Node\Condition</Filter>
+    </ClCompile>
+    <ClCompile Include="SPSNodeCondition_BSCheckLp.cpp">
+      <Filter>SCRIPT\SPS\Node\Condition</Filter>
+    </ClCompile>
+    <ClCompile Include="SPSNodeCondition_BSConditionGroup.cpp">
+      <Filter>SCRIPT\SPS\Node\Condition</Filter>
+    </ClCompile>
+    <ClCompile Include="SPSNodeCondition_BSFlow.cpp">
+      <Filter>SCRIPT\SPS\Node\Condition</Filter>
+    </ClCompile>
+    <ClCompile Include="SPSNodeCondition_BSCondition.cpp">
+      <Filter>SCRIPT\SPS\Node\Condition</Filter>
+    </ClCompile>
+    <ClCompile Include="SPSNodeCondition_RegisterBattleScene.cpp">
+      <Filter>SCRIPT\SPS\Node\Condition</Filter>
+    </ClCompile>
+    <ClCompile Include="SPSNodeCondition_RecvEventFromItem.cpp">
+      <Filter>SCRIPT\SPS\Node\Condition</Filter>
+    </ClCompile>
+    <ClCompile Include="SPSNodeCondition_RecvEventFromWps.cpp">
+      <Filter>SCRIPT\SPS\Node\Condition</Filter>
+    </ClCompile>
+    <ClCompile Include="SPSNodeCondition_RecvEventFromTs.cpp">
+      <Filter>SCRIPT\SPS\Node\Condition</Filter>
+    </ClCompile>
+    <ClCompile Include="SPSNodeCondition_Child.cpp">
+      <Filter>SCRIPT\SPS\Node\Condition</Filter>
+    </ClCompile>
+    <ClCompile Include="SPSNodeScene.cpp">
+      <Filter>SCRIPT\SPS\Node\Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="ParameterReader.cpp">
+      <Filter>SCRIPT\Utility\ParameterReader</Filter>
+    </ClCompile>
+    <ClCompile Include="StringSeparator.cpp">
+      <Filter>SCRIPT\Utility\StringSeperator</Filter>
+    </ClCompile>
+    <ClCompile Include="SvrScrFormulaToken.cpp">
+      <Filter>SCRIPT\Utility\SvrRcr\Formula</Filter>
+    </ClCompile>
+    <ClCompile Include="SvrScrFormulaExpress.cpp">
+      <Filter>SCRIPT\Utility\SvrRcr\Formula</Filter>
+    </ClCompile>
+    <ClCompile Include="SvrScrFormulaDeclare.cpp">
+      <Filter>SCRIPT\Utility\SvrRcr\Formula</Filter>
+    </ClCompile>
+    <ClCompile Include="SvrScrFormulaCalc.cpp">
+      <Filter>SCRIPT\Utility\SvrRcr\Formula</Filter>
+    </ClCompile>
+    <ClCompile Include="SvrScrVariableContainer.cpp">
+      <Filter>SCRIPT\Utility\SvrRcr\Variable</Filter>
+    </ClCompile>
+    <ClCompile Include="SvrScrVariableMap.cpp">
+      <Filter>SCRIPT\Utility\SvrRcr\Variable</Filter>
+    </ClCompile>
+    <ClCompile Include="BotAiBattleSceneCondition.cpp">
+      <Filter>character NEW\Monster\BOT AI\condition</Filter>
+    </ClCompile>
+    <ClCompile Include="TimeLeapDungeon.cpp">
+      <Filter>Dungeon\TLQ</Filter>
+    </ClCompile>
+    <ClCompile Include="WorldPlayScriptManager.cpp">
+      <Filter>SCRIPT\WPS</Filter>
+    </ClCompile>
+    <ClCompile Include="ServerWorldPlayScript.cpp">
+      <Filter>SCRIPT\WPS</Filter>
+    </ClCompile>
+    <ClCompile Include="WPSNodeGameFailed.cpp">
+      <Filter>SCRIPT\WPS\Node\State\Failed</Filter>
+    </ClCompile>
+    <ClCompile Include="WPSNodeGamePrepare.cpp">
+      <Filter>SCRIPT\WPS\Node\State\Prepare</Filter>
+    </ClCompile>
+    <ClCompile Include="WPSNodeGameStage.cpp">
+      <Filter>SCRIPT\WPS\Node\State\Stage</Filter>
+    </ClCompile>
+    <ClCompile Include="WPSNodeCondition_NpcFaint.cpp">
+      <Filter>SCRIPT\WPS\Node\Condition</Filter>
+    </ClCompile>
+    <ClCompile Include="WPSNodeCondition_LoopCond.cpp">
+      <Filter>SCRIPT\WPS\Node\Condition</Filter>
+    </ClCompile>
+    <ClCompile Include="WPSNodeCondition_CheckTime.cpp">
+      <Filter>SCRIPT\WPS\Node\Condition</Filter>
+    </ClCompile>
+    <ClCompile Include="WPSNodeCondition_AllPlayerFaint.cpp">
+      <Filter>SCRIPT\WPS\Node\Condition</Filter>
+    </ClCompile>
+    <ClCompile Include="WPSNodeCondition_RecvEventFromItem.cpp">
+      <Filter>SCRIPT\WPS\Node\Condition</Filter>
+    </ClCompile>
+    <ClCompile Include="WPSNodeCondition_RecvEventFromTqs.cpp">
+      <Filter>SCRIPT\WPS\Node\Condition</Filter>
+    </ClCompile>
+    <ClCompile Include="WPSNodeCondition_RecvEventFromWps.cpp">
+      <Filter>SCRIPT\WPS\Node\Condition</Filter>
+    </ClCompile>
+    <ClCompile Include="WPSNodeCondition_RecvEventFromAis.cpp">
+      <Filter>SCRIPT\WPS\Node\Condition</Filter>
+    </ClCompile>
+    <ClCompile Include="WPSNodeCondition_RecvEventFromSps.cpp">
+      <Filter>SCRIPT\WPS\Node\Condition</Filter>
+    </ClCompile>
+    <ClCompile Include="WPSNodeCondition_RecvEventFromTs.cpp">
+      <Filter>SCRIPT\WPS\Node\Condition</Filter>
+    </ClCompile>
+    <ClCompile Include="WPSNodeCondition_RecvSpsEvent.cpp">
+      <Filter>SCRIPT\WPS\Node\Condition</Filter>
+    </ClCompile>
+    <ClCompile Include="WPSNodeCondition_RecvTsEvent.cpp">
+      <Filter>SCRIPT\WPS\Node\Condition</Filter>
+    </ClCompile>
+    <ClCompile Include="WPSNodeCondition_Compare.cpp">
+      <Filter>SCRIPT\WPS\Node\Condition</Filter>
+    </ClCompile>
+    <ClCompile Include="WPSNodeCondition_CheckCountDown.cpp">
+      <Filter>SCRIPT\WPS\Node\Condition</Filter>
+    </ClCompile>
+    <ClCompile Include="WPSNodeCondition_CheckBattle.cpp">
+      <Filter>SCRIPT\WPS\Node\Condition</Filter>
+    </ClCompile>
+    <ClCompile Include="WPSNodeCondition_CheckLP.cpp">
+      <Filter>SCRIPT\WPS\Node\Condition</Filter>
+    </ClCompile>
+    <ClCompile Include="WPSNodeCondition_SpawnedMob.cpp">
+      <Filter>SCRIPT\WPS\Node\Condition</Filter>
+    </ClCompile>
+    <ClCompile Include="WPSNodeCondition_WaitCondition.cpp">
+      <Filter>SCRIPT\WPS\Node\Condition</Filter>
+    </ClCompile>
+    <ClCompile Include="WPSNodeCondition_Child.cpp">
+      <Filter>SCRIPT\WPS\Node\Condition</Filter>
+    </ClCompile>
+    <ClCompile Include="WPSNodeCondition_AreaEnter.cpp">
+      <Filter>SCRIPT\WPS\Node\Condition</Filter>
+    </ClCompile>
+    <ClCompile Include="WPSNodeCondition_CheckMobGroup.cpp">
+      <Filter>SCRIPT\WPS\Node\Condition</Filter>
+    </ClCompile>
+    <ClCompile Include="WPSNodeCondition_SpawnedNpc.cpp">
+      <Filter>SCRIPT\WPS\Node\Condition</Filter>
+    </ClCompile>
+    <ClCompile Include="WPSNodeAction_Wait.cpp">
+      <Filter>SCRIPT\WPS\Node\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="WPSNodeAction_AddNpc.cpp">
+      <Filter>SCRIPT\WPS\Node\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="WPSNodeAction_ExecWps.cpp">
+      <Filter>SCRIPT\WPS\Node\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="WPSNodeAction_Loop.cpp">
+      <Filter>SCRIPT\WPS\Node\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="WPSNodeAction_EventHandler.cpp">
+      <Filter>SCRIPT\WPS\Node\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="WPSNodeAction_UnregisterBuff.cpp">
+      <Filter>SCRIPT\WPS\Node\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="WPSNodeAction_RegisterBuff.cpp">
+      <Filter>SCRIPT\WPS\Node\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="WPSNodeAction_EventStatusClear.cpp">
+      <Filter>SCRIPT\WPS\Node\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="WPSNodeAction_EventStatusSelect.cpp">
+      <Filter>SCRIPT\WPS\Node\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="WPSNodeAction_EventStatusRegister.cpp">
+      <Filter>SCRIPT\WPS\Node\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="WPSNodeAction_ChangeSpsScene.cpp">
+      <Filter>SCRIPT\WPS\Node\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="WPSNodeAction_SendEventToAis.cpp">
+      <Filter>SCRIPT\WPS\Node\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="WPSNodeAction_SendEventToWps.cpp">
+      <Filter>SCRIPT\WPS\Node\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="WPSNodeAction_SendEventToTqs.cpp">
+      <Filter>SCRIPT\WPS\Node\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="WPSNodeAction_SendEventToSps.cpp">
+      <Filter>SCRIPT\WPS\Node\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="WPSNodeAction_SendEventToTs.cpp">
+      <Filter>SCRIPT\WPS\Node\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="WPSNodeAction_SendAISEvent.cpp">
+      <Filter>SCRIPT\WPS\Node\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="WPSNodeAction_SendSPSEvent.cpp">
+      <Filter>SCRIPT\WPS\Node\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="WPSNodeAction_ChangeNpcAttribute.cpp">
+      <Filter>SCRIPT\WPS\Node\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="WPSNodeAction_WpsFail.cpp">
+      <Filter>SCRIPT\WPS\Node\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="WPSNodeAction_GetFaintLocation.cpp">
+      <Filter>SCRIPT\WPS\Node\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="WPSNodeAction_GetLocation.cpp">
+      <Filter>SCRIPT\WPS\Node\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="WPSNodeAction_ChangeCharAttribute.cpp">
+      <Filter>SCRIPT\WPS\Node\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="WPSNodeAction_PlayJingle.cpp">
+      <Filter>SCRIPT\WPS\Node\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="WPSNodeAction_PlayBgm.cpp">
+      <Filter>SCRIPT\WPS\Node\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="WPSNodeAction_Default.cpp">
+      <Filter>SCRIPT\WPS\Node\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="WPSNodeAction_Case.cpp">
+      <Filter>SCRIPT\WPS\Node\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="WPSNodeAction_Switch.cpp">
+      <Filter>SCRIPT\WPS\Node\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="WPSNodeAction_While.cpp">
+      <Filter>SCRIPT\WPS\Node\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="WPSNodeAction_Else.cpp">
+      <Filter>SCRIPT\WPS\Node\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="WPSNodeAction_Then.cpp">
+      <Filter>SCRIPT\WPS\Node\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="WPSNodeAction_If.cpp">
+      <Filter>SCRIPT\WPS\Node\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="WPSNodeAction_Direction_Indicate.cpp">
+      <Filter>SCRIPT\WPS\Node\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="WPSNodeAction_ClearEvent.cpp">
+      <Filter>SCRIPT\WPS\Node\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="WPSNodeAction_ExecAtOnce.cpp">
+      <Filter>SCRIPT\WPS\Node\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="WPSNodeAction_Function.cpp">
+      <Filter>SCRIPT\WPS\Node\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="WPSNodeAction_BroadMessage.cpp">
+      <Filter>SCRIPT\WPS\Node\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="WPSNodeAction_TelecastMessage.cpp">
+      <Filter>SCRIPT\WPS\Node\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="WPSNodeAction_Calculate.cpp">
+      <Filter>SCRIPT\WPS\Node\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="WPSNodeAction_TimeCountdown.cpp">
+      <Filter>SCRIPT\WPS\Node\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="WPSNodeAction_ChangeObjectState.cpp">
+      <Filter>SCRIPT\WPS\Node\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="WPSNodeAction_ChangeStage.cpp">
+      <Filter>SCRIPT\WPS\Node\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="WPSNodeAction_SystemMessage.cpp">
+      <Filter>SCRIPT\WPS\Node\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="WPSNodeAction_FlashPlay.cpp">
+      <Filter>SCRIPT\WPS\Node\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="WPSNodeAction_DirectPlay.cpp">
+      <Filter>SCRIPT\WPS\Node\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="WPSNodeAction_MobList.cpp">
+      <Filter>SCRIPT\WPS\Node\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="WPSNodeAction_RemoveMobGroup.cpp">
+      <Filter>SCRIPT\WPS\Node\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="WPSNodeAction_AddMobGroup.cpp">
+      <Filter>SCRIPT\WPS\Node\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="WPSNodeAction_RemoveNpc.cpp">
+      <Filter>SCRIPT\WPS\Node\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="WPSNodeAction_AddMob.cpp">
+      <Filter>SCRIPT\WPS\Node\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="WPSNodeFactory.cpp">
+      <Filter>SCRIPT\WPS\Main\Factory</Filter>
+    </ClCompile>
+    <ClCompile Include="WPSManager.cpp">
+      <Filter>SCRIPT\WPS\Main</Filter>
+    </ClCompile>
+    <ClCompile Include="WPSScript.cpp">
+      <Filter>SCRIPT\WPS\LUA</Filter>
+    </ClCompile>
+    <ClCompile Include="ScriptAlgoAction_AddNpc.cpp">
+      <Filter>SCRIPT\WPS\ALGO\Action\Parent</Filter>
+    </ClCompile>
+    <ClCompile Include="ScriptAlgoAction_Loop.cpp">
+      <Filter>SCRIPT\WPS\ALGO\Action\Parent</Filter>
+    </ClCompile>
+    <ClCompile Include="ScriptAlgoAction_Wait.cpp">
+      <Filter>SCRIPT\WPS\ALGO\Action\Parent</Filter>
+    </ClCompile>
+    <ClCompile Include="ScriptAlgoAction_While.cpp">
+      <Filter>SCRIPT\WPS\ALGO\Action\Parent</Filter>
+    </ClCompile>
+    <ClCompile Include="ScriptAlgoCondition_NpcFaint.cpp">
+      <Filter>SCRIPT\WPS\ALGO\Condition\Parent</Filter>
+    </ClCompile>
+    <ClCompile Include="ScriptAlgoCondition_CheckTime.cpp">
+      <Filter>SCRIPT\WPS\ALGO\Condition\Parent</Filter>
+    </ClCompile>
+    <ClCompile Include="ScriptAlgoCondition_LoopCond.cpp">
+      <Filter>SCRIPT\WPS\ALGO\Condition\Parent</Filter>
+    </ClCompile>
+    <ClCompile Include="ScriptAlgoCondition_AreaEnter.cpp">
+      <Filter>SCRIPT\WPS\ALGO\Condition\Parent</Filter>
+    </ClCompile>
+    <ClCompile Include="ScriptAlgoAction_AddMob.cpp">
+      <Filter>SCRIPT\WPS\ALGO\Action\Parent</Filter>
+    </ClCompile>
+    <ClCompile Include="ScriptAlgoAction_Calculate.cpp">
+      <Filter>SCRIPT\WPS\ALGO\Action\Parent</Filter>
+    </ClCompile>
+    <ClCompile Include="ScriptAlgoAction_GetLocation.cpp">
+      <Filter>SCRIPT\WPS\ALGO\Action\Parent</Filter>
+    </ClCompile>
+    <ClCompile Include="ScriptAlgoAction_SendEventToTs.cpp">
+      <Filter>SCRIPT\WPS\ALGO\Action\Parent</Filter>
+    </ClCompile>
+    <ClCompile Include="ScriptAlgoAction_RemoveMobGroup.cpp">
+      <Filter>SCRIPT\WPS\ALGO\Action\Parent</Filter>
+    </ClCompile>
+    <ClCompile Include="ScriptAlgoCondition_CheckLp.cpp">
+      <Filter>SCRIPT\WPS\ALGO\Condition\Parent</Filter>
+    </ClCompile>
+    <ClCompile Include="ScriptAlgoCondition_CheckMobGroup.cpp">
+      <Filter>SCRIPT\WPS\ALGO\Condition\Parent</Filter>
+    </ClCompile>
+    <ClCompile Include="ScriptAlgoCondition_Child.cpp">
+      <Filter>SCRIPT\WPS\ALGO\Condition\Parent</Filter>
+    </ClCompile>
+    <ClCompile Include="ScriptAlgoAction_WpsFail.cpp">
+      <Filter>SCRIPT\WPS\ALGO\Action\Parent</Filter>
+    </ClCompile>
+    <ClCompile Include="ScriptAlgoAction_AddMobGroup.cpp">
+      <Filter>SCRIPT\WPS\ALGO\Action\Parent</Filter>
+    </ClCompile>
+    <ClCompile Include="ScriptAlgoAction_BroadMessage.cpp">
+      <Filter>SCRIPT\WPS\ALGO\Action\Parent</Filter>
+    </ClCompile>
+    <ClCompile Include="ScriptAlgoAction_Case.cpp">
+      <Filter>SCRIPT\WPS\ALGO\Action\Parent</Filter>
+    </ClCompile>
+    <ClCompile Include="ScriptAlgoAction_ChangeCharAttribute.cpp">
+      <Filter>SCRIPT\WPS\ALGO\Action\Parent</Filter>
+    </ClCompile>
+    <ClCompile Include="ScriptAlgoAction_ChangeNpcAttribute.cpp">
+      <Filter>SCRIPT\WPS\ALGO\Action\Parent</Filter>
+    </ClCompile>
+    <ClCompile Include="ScriptAlgoAction_ChangeObjectState.cpp">
+      <Filter>SCRIPT\WPS\ALGO\Action\Parent</Filter>
+    </ClCompile>
+    <ClCompile Include="ScriptAlgoAction_ChangeSpsScene.cpp">
+      <Filter>SCRIPT\WPS\ALGO\Action\Parent</Filter>
+    </ClCompile>
+    <ClCompile Include="ScriptAlgoAction_ChangeStage.cpp">
+      <Filter>SCRIPT\WPS\ALGO\Action\Parent</Filter>
+    </ClCompile>
+    <ClCompile Include="ScriptAlgoAction_ClearEvent.cpp">
+      <Filter>SCRIPT\WPS\ALGO\Action\Parent</Filter>
+    </ClCompile>
+    <ClCompile Include="ScriptAlgoAction_Default.cpp">
+      <Filter>SCRIPT\WPS\ALGO\Action\Parent</Filter>
+    </ClCompile>
+    <ClCompile Include="ScriptAlgoAction_Direction_Indicate.cpp">
+      <Filter>SCRIPT\WPS\ALGO\Action\Parent</Filter>
+    </ClCompile>
+    <ClCompile Include="ScriptAlgoAction_DirectPlay.cpp">
+      <Filter>SCRIPT\WPS\ALGO\Action\Parent</Filter>
+    </ClCompile>
+    <ClCompile Include="ScriptAlgoAction_Else.cpp">
+      <Filter>SCRIPT\WPS\ALGO\Action\Parent</Filter>
+    </ClCompile>
+    <ClCompile Include="ScriptAlgoAction_EventHandler.cpp">
+      <Filter>SCRIPT\WPS\ALGO\Action\Parent</Filter>
+    </ClCompile>
+    <ClCompile Include="ScriptAlgoAction_EventStatusClear.cpp">
+      <Filter>SCRIPT\WPS\ALGO\Action\Parent</Filter>
+    </ClCompile>
+    <ClCompile Include="ScriptAlgoAction_EventStatusRegister.cpp">
+      <Filter>SCRIPT\WPS\ALGO\Action\Parent</Filter>
+    </ClCompile>
+    <ClCompile Include="ScriptAlgoAction_EventStatusSelect.cpp">
+      <Filter>SCRIPT\WPS\ALGO\Action\Parent</Filter>
+    </ClCompile>
+    <ClCompile Include="ScriptAlgoAction_ExecAtOnce.cpp">
+      <Filter>SCRIPT\WPS\ALGO\Action\Parent</Filter>
+    </ClCompile>
+    <ClCompile Include="ScriptAlgoAction_ExecWps.cpp">
+      <Filter>SCRIPT\WPS\ALGO\Action\Parent</Filter>
+    </ClCompile>
+    <ClCompile Include="ScriptAlgoAction_FlashPlay.cpp">
+      <Filter>SCRIPT\WPS\ALGO\Action\Parent</Filter>
+    </ClCompile>
+    <ClCompile Include="ScriptAlgoAction_GetFaintLocation.cpp">
+      <Filter>SCRIPT\WPS\ALGO\Action\Parent</Filter>
+    </ClCompile>
+    <ClCompile Include="ScriptAlgoAction_If.cpp">
+      <Filter>SCRIPT\WPS\ALGO\Action\Parent</Filter>
+    </ClCompile>
+    <ClCompile Include="ScriptAlgoAction_MobList.cpp">
+      <Filter>SCRIPT\WPS\ALGO\Action\Parent</Filter>
+    </ClCompile>
+    <ClCompile Include="ScriptAlgoAction_PlayBgm.cpp">
+      <Filter>SCRIPT\WPS\ALGO\Action\Parent</Filter>
+    </ClCompile>
+    <ClCompile Include="ScriptAlgoAction_PlayJingle.cpp">
+      <Filter>SCRIPT\WPS\ALGO\Action\Parent</Filter>
+    </ClCompile>
+    <ClCompile Include="ScriptAlgoAction_RegisterBuff.cpp">
+      <Filter>SCRIPT\WPS\ALGO\Action\Parent</Filter>
+    </ClCompile>
+    <ClCompile Include="ScriptAlgoAction_RemoveNpc.cpp">
+      <Filter>SCRIPT\WPS\ALGO\Action\Parent</Filter>
+    </ClCompile>
+    <ClCompile Include="ScriptAlgoAction_SendAISEvent.cpp">
+      <Filter>SCRIPT\WPS\ALGO\Action\Parent</Filter>
+    </ClCompile>
+    <ClCompile Include="ScriptAlgoAction_SendEventToAis.cpp">
+      <Filter>SCRIPT\WPS\ALGO\Action\Parent</Filter>
+    </ClCompile>
+    <ClCompile Include="ScriptAlgoAction_SendEventToSps.cpp">
+      <Filter>SCRIPT\WPS\ALGO\Action\Parent</Filter>
+    </ClCompile>
+    <ClCompile Include="ScriptAlgoAction_SendEventToTqs.cpp">
+      <Filter>SCRIPT\WPS\ALGO\Action\Parent</Filter>
+    </ClCompile>
+    <ClCompile Include="ScriptAlgoAction_SendEventToWps.cpp">
+      <Filter>SCRIPT\WPS\ALGO\Action\Parent</Filter>
+    </ClCompile>
+    <ClCompile Include="ScriptAlgoAction_SendSPSEvent.cpp">
+      <Filter>SCRIPT\WPS\ALGO\Action\Parent</Filter>
+    </ClCompile>
+    <ClCompile Include="ScriptAlgoAction_Switch.cpp">
+      <Filter>SCRIPT\WPS\ALGO\Action\Parent</Filter>
+    </ClCompile>
+    <ClCompile Include="ScriptAlgoAction_SystemMessage.cpp">
+      <Filter>SCRIPT\WPS\ALGO\Action\Parent</Filter>
+    </ClCompile>
+    <ClCompile Include="ScriptAlgoAction_TelecastMessage.cpp">
+      <Filter>SCRIPT\WPS\ALGO\Action\Parent</Filter>
+    </ClCompile>
+    <ClCompile Include="ScriptAlgoAction_Then.cpp">
+      <Filter>SCRIPT\WPS\ALGO\Action\Parent</Filter>
+    </ClCompile>
+    <ClCompile Include="ScriptAlgoAction_TimeCountdown.cpp">
+      <Filter>SCRIPT\WPS\ALGO\Action\Parent</Filter>
+    </ClCompile>
+    <ClCompile Include="ScriptAlgoAction_UnregisterBuff.cpp">
+      <Filter>SCRIPT\WPS\ALGO\Action\Parent</Filter>
+    </ClCompile>
+    <ClCompile Include="ScriptAlgoCondition_AllPlayerFaint.cpp">
+      <Filter>SCRIPT\WPS\ALGO\Condition\Parent</Filter>
+    </ClCompile>
+    <ClCompile Include="ScriptAlgoCondition_CheckBattle.cpp">
+      <Filter>SCRIPT\WPS\ALGO\Condition\Parent</Filter>
+    </ClCompile>
+    <ClCompile Include="ScriptAlgoCondition_CheckCountDown.cpp">
+      <Filter>SCRIPT\WPS\ALGO\Condition\Parent</Filter>
+    </ClCompile>
+    <ClCompile Include="ScriptAlgoCondition_Compare.cpp">
+      <Filter>SCRIPT\WPS\ALGO\Condition\Parent</Filter>
+    </ClCompile>
+    <ClCompile Include="ScriptAlgoCondition_RecvEventFromAis.cpp">
+      <Filter>SCRIPT\WPS\ALGO\Condition\Parent</Filter>
+    </ClCompile>
+    <ClCompile Include="ScriptAlgoCondition_RecvEventFromItem.cpp">
+      <Filter>SCRIPT\WPS\ALGO\Condition\Parent</Filter>
+    </ClCompile>
+    <ClCompile Include="ScriptAlgoCondition_RecvEventFromSps.cpp">
+      <Filter>SCRIPT\WPS\ALGO\Condition\Parent</Filter>
+    </ClCompile>
+    <ClCompile Include="ScriptAlgoCondition_RecvEventFromTqs.cpp">
+      <Filter>SCRIPT\WPS\ALGO\Condition\Parent</Filter>
+    </ClCompile>
+    <ClCompile Include="ScriptAlgoCondition_RecvEventFromTs.cpp">
+      <Filter>SCRIPT\WPS\ALGO\Condition\Parent</Filter>
+    </ClCompile>
+    <ClCompile Include="ScriptAlgoCondition_RecvEventFromWps.cpp">
+      <Filter>SCRIPT\WPS\ALGO\Condition\Parent</Filter>
+    </ClCompile>
+    <ClCompile Include="ScriptAlgoCondition_RecvSpsEvent.cpp">
+      <Filter>SCRIPT\WPS\ALGO\Condition\Parent</Filter>
+    </ClCompile>
+    <ClCompile Include="ScriptAlgoCondition_RecvTsEvent.cpp">
+      <Filter>SCRIPT\WPS\ALGO\Condition\Parent</Filter>
+    </ClCompile>
+    <ClCompile Include="ScriptAlgoCondition_SpawnedMob.cpp">
+      <Filter>SCRIPT\WPS\ALGO\Condition\Parent</Filter>
+    </ClCompile>
+    <ClCompile Include="ScriptAlgoCondition_SpawnedNpc.cpp">
+      <Filter>SCRIPT\WPS\ALGO\Condition\Parent</Filter>
+    </ClCompile>
+    <ClCompile Include="ScriptAlgoCondition_WaitCondition.cpp">
+      <Filter>SCRIPT\WPS\ALGO\Condition\Parent</Filter>
+    </ClCompile>
+    <ClCompile Include="ScriptAlgoAction_Function.cpp">
+      <Filter>SCRIPT\WPS\ALGO\Action\Parent</Filter>
+    </ClCompile>
+    <ClCompile Include="QuestProgress.cpp">
+      <Filter>character NEW\Player\TriggerSystem%28TS%29</Filter>
+    </ClCompile>
+    <ClCompile Include="HtbSkillManager.cpp">
+      <Filter>Skill\HTB</Filter>
+    </ClCompile>
+    <ClCompile Include="HtbSkill.cpp">
+      <Filter>Skill\HTB</Filter>
+    </ClCompile>
+    <ClCompile Include="TimeQuestScriptManager.cpp">
+      <Filter>SCRIPT\TQS</Filter>
+    </ClCompile>
+    <ClCompile Include="ServerTimeQuestScript.cpp">
+      <Filter>SCRIPT\TQS</Filter>
+    </ClCompile>
+    <ClCompile Include="TQSScript.cpp">
+      <Filter>SCRIPT\TQS\Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="TQSNodeFactory.cpp">
+      <Filter>SCRIPT\TQS\Main\Factory</Filter>
+    </ClCompile>
+    <ClCompile Include="TQSManager.cpp">
+      <Filter>SCRIPT\TQS\Main\Main</Filter>
+    </ClCompile>
+    <ClCompile Include="TQSNodeAction_Wait.cpp">
+      <Filter>SCRIPT\TQS\Node\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="TQSNodeAction_TimeCountdown.cpp">
+      <Filter>SCRIPT\TQS\Node\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="TQSNodeAction_PlayJingle.cpp">
+      <Filter>SCRIPT\TQS\Node\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="TQSNodeAction_PlayBgm.cpp">
+      <Filter>SCRIPT\TQS\Node\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="TQSNodeAction_RegisterCondition.cpp">
+      <Filter>SCRIPT\TQS\Node\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="TQSNodeAction_Teleport.cpp">
+      <Filter>SCRIPT\TQS\Node\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="TQSNodeAction_DirectionIndicate.cpp">
+      <Filter>SCRIPT\TQS\Node\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="TQSNodeAction_ProgressMessage.cpp">
+      <Filter>SCRIPT\TQS\Node\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="TQSNodeAction_BroadMessage.cpp">
+      <Filter>SCRIPT\TQS\Node\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="TQSNodeAction_Information.cpp">
+      <Filter>SCRIPT\TQS\Node\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="TQSNodeAction_Reward.cpp">
+      <Filter>SCRIPT\TQS\Node\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="TQSNodeAction_SendTqsEvent.cpp">
+      <Filter>SCRIPT\TQS\Node\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="TQSNodeAction_SendTsEvent.cpp">
+      <Filter>SCRIPT\TQS\Node\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="TQSNodeAction_ChangeObjectState.cpp">
+      <Filter>SCRIPT\TQS\Node\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="TQSNodeAction_ChangeStage.cpp">
+      <Filter>SCRIPT\TQS\Node\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="TQSNodeAction_DirectPlay.cpp">
+      <Filter>SCRIPT\TQS\Node\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="TQSNodeAction_RemoveMobGroup.cpp">
+      <Filter>SCRIPT\TQS\Node\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="TQSNodeAction_AddMobGroup.cpp">
+      <Filter>SCRIPT\TQS\Node\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="TQSNodeAction_AddMob.cpp">
+      <Filter>SCRIPT\TQS\Node\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="TQSNodeAction_RemoveNpc.cpp">
+      <Filter>SCRIPT\TQS\Node\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="TQSNodeAction_AddNpc.cpp">
+      <Filter>SCRIPT\TQS\Node\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="TQSNodeCondition_AllPlayerFaint.cpp">
+      <Filter>SCRIPT\TQS\Node\Condition</Filter>
+    </ClCompile>
+    <ClCompile Include="TQSNodeCondition_Child.cpp">
+      <Filter>SCRIPT\TQS\Node\Condition</Filter>
+    </ClCompile>
+    <ClCompile Include="TQSNodeCondition_AreaEnter.cpp">
+      <Filter>SCRIPT\TQS\Node\Condition</Filter>
+    </ClCompile>
+    <ClCompile Include="TQSNodeCondition_NpcFaint.cpp">
+      <Filter>SCRIPT\TQS\Node\Condition</Filter>
+    </ClCompile>
+    <ClCompile Include="TQSNodeCondition_CheckMobGroup.cpp">
+      <Filter>SCRIPT\TQS\Node\Condition</Filter>
+    </ClCompile>
+    <ClCompile Include="TQSNodeCondition_CheckTime.cpp">
+      <Filter>SCRIPT\TQS\Node\Condition</Filter>
+    </ClCompile>
+    <ClCompile Include="TQSNodeCondition_RecvSpsEvent.cpp">
+      <Filter>SCRIPT\TQS\Node\Condition</Filter>
+    </ClCompile>
+    <ClCompile Include="TQSNodeCondition_RecvTsEvent.cpp">
+      <Filter>SCRIPT\TQS\Node\Condition</Filter>
+    </ClCompile>
+    <ClCompile Include="TQSNodeGameStage.cpp">
+      <Filter>SCRIPT\TQS\Node\State</Filter>
+    </ClCompile>
+    <ClCompile Include="TQSNodeGameBegin.cpp">
+      <Filter>SCRIPT\TQS\Node\State</Filter>
+    </ClCompile>
+    <ClCompile Include="TQSNodeGameEnd.cpp">
+      <Filter>SCRIPT\TQS\Node\State</Filter>
+    </ClCompile>
+    <ClCompile Include="WpsAlgoObject.cpp">
+      <Filter>SCRIPT\WPS\ALGO\Object</Filter>
+    </ClCompile>
+    <ClCompile Include="UltimateDungeon.cpp">
+      <Filter>Dungeon\Ultimate Dungeon %28UD%29</Filter>
+    </ClCompile>
+    <ClCompile Include="Guild.cpp">
+      <Filter>Guild/DOJO</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayerItemContainer.cpp">
+      <Filter>character NEW\Player\Item</Filter>
+    </ClCompile>
+    <ClCompile Include="DynamicFieldSystemEvent.cpp">
+      <Filter>In-Game Event System\Underworld Invasion</Filter>
+    </ClCompile>
+    <ClCompile Include="DragonballHunt.cpp">
+      <Filter>In-Game Event System\Dragonball Hunt</Filter>
+    </ClCompile>
+    <ClCompile Include="RankBattle.cpp">
+      <Filter>Rank Battle</Filter>
+    </ClCompile>
+    <ClCompile Include="AspectState.cpp">
+      <Filter>character NEW\Character\State System\base\aspect</Filter>
+    </ClCompile>
+    <ClCompile Include="CharState.cpp">
+      <Filter>character NEW\Character\State System\base\state</Filter>
+    </ClCompile>
+    <ClCompile Include="BotStateManager.cpp">
+      <Filter>character NEW\Character\State System\bot</Filter>
+    </ClCompile>
+    <ClCompile Include="AspectState_GreatNamek.cpp">
+      <Filter>character NEW\Character\State System\aspects</Filter>
+    </ClCompile>
+    <ClCompile Include="AspectState_Kaioken.cpp">
+      <Filter>character NEW\Character\State System\aspects</Filter>
+    </ClCompile>
+    <ClCompile Include="AspectState_PureMajin.cpp">
+      <Filter>character NEW\Character\State System\aspects</Filter>
+    </ClCompile>
+    <ClCompile Include="AspectState_RollingAttack.cpp">
+      <Filter>character NEW\Character\State System\aspects</Filter>
+    </ClCompile>
+    <ClCompile Include="AspectState_SpinningAttack.cpp">
+      <Filter>character NEW\Character\State System\aspects</Filter>
+    </ClCompile>
+    <ClCompile Include="AspectState_SuperSaiyan.cpp">
+      <Filter>character NEW\Character\State System\aspects</Filter>
+    </ClCompile>
+    <ClCompile Include="AspectState_Vehicle.cpp">
+      <Filter>character NEW\Character\State System\aspects</Filter>
+    </ClCompile>
+    <ClCompile Include="ConditionState_Invisible.cpp">
+      <Filter>character NEW\Character\State System\conditions</Filter>
+    </ClCompile>
+    <ClCompile Include="ConditionState_HidingKi.cpp">
+      <Filter>character NEW\Character\State System\conditions</Filter>
+    </ClCompile>
+    <ClCompile Include="ConditionState_Invincible.cpp">
+      <Filter>character NEW\Character\State System\conditions</Filter>
+    </ClCompile>
+    <ClCompile Include="ConditionState_Taunt.cpp">
+      <Filter>character NEW\Character\State System\conditions</Filter>
+    </ClCompile>
+    <ClCompile Include="ConditionState_AttackDisallow.cpp">
+      <Filter>character NEW\Character\State System\conditions</Filter>
+    </ClCompile>
+    <ClCompile Include="ConditionState_Transparent.cpp">
+      <Filter>character NEW\Character\State System\conditions</Filter>
+    </ClCompile>
+    <ClCompile Include="ConditionState_CantBeTargetted.cpp">
+      <Filter>character NEW\Character\State System\conditions</Filter>
+    </ClCompile>
+    <ClCompile Include="ConditionState_DirectPlay.cpp">
+      <Filter>character NEW\Character\State System\conditions</Filter>
+    </ClCompile>
+    <ClCompile Include="ConditionState_Bleeding.cpp">
+      <Filter>character NEW\Character\State System\conditions</Filter>
+    </ClCompile>
+    <ClCompile Include="ConditionState_Poison.cpp">
+      <Filter>character NEW\Character\State System\conditions</Filter>
+    </ClCompile>
+    <ClCompile Include="ConditionState_Stomachache.cpp">
+      <Filter>character NEW\Character\State System\conditions</Filter>
+    </ClCompile>
+    <ClCompile Include="ConditionState_Burn.cpp">
+      <Filter>character NEW\Character\State System\conditions</Filter>
+    </ClCompile>
+    <ClCompile Include="ConditionState_Confused.cpp">
+      <Filter>character NEW\Character\State System\conditions</Filter>
+    </ClCompile>
+    <ClCompile Include="ConditionState_Terror.cpp">
+      <Filter>character NEW\Character\State System\conditions</Filter>
+    </ClCompile>
+    <ClCompile Include="ConditionState_Barrier.cpp">
+      <Filter>character NEW\Character\State System\conditions</Filter>
+    </ClCompile>
+    <ClCompile Include="ConditionState_DamageReflection.cpp">
+      <Filter>character NEW\Character\State System\conditions</Filter>
+    </ClCompile>
+    <ClCompile Include="ConditionState_AfterEffect.cpp">
+      <Filter>character NEW\Character\State System\conditions</Filter>
+    </ClCompile>
+    <ClCompile Include="ConditionState_ChargingBlocked.cpp">
+      <Filter>character NEW\Character\State System\conditions</Filter>
+    </ClCompile>
+    <ClCompile Include="ConditionState_FakeDeath.cpp">
+      <Filter>character NEW\Character\State System\conditions</Filter>
+    </ClCompile>
+    <ClCompile Include="ConditionState_NullifiedDamage.cpp">
+      <Filter>character NEW\Character\State System\conditions</Filter>
+    </ClCompile>
+    <ClCompile Include="ConditionState_ClickDisable.cpp">
+      <Filter>character NEW\Character\State System\conditions</Filter>
+    </ClCompile>
+    <ClCompile Include="ConditionState_ClientUiDisable.cpp">
+      <Filter>character NEW\Character\State System\conditions</Filter>
+    </ClCompile>
+    <ClCompile Include="ConditionState_TaiyouKen.cpp">
+      <Filter>character NEW\Character\State System\conditions</Filter>
+    </ClCompile>
+    <ClCompile Include="ConditionState_BattleInability.cpp">
+      <Filter>character NEW\Character\State System\conditions</Filter>
+    </ClCompile>
+    <ClCompile Include="ConditionState_SkillInability.cpp">
+      <Filter>character NEW\Character\State System\conditions</Filter>
+    </ClCompile>
+    <ClCompile Include="ConditionState_RevivalAftereffect.cpp">
+      <Filter>character NEW\Character\State System\conditions</Filter>
+    </ClCompile>
+    <ClCompile Include="ConditionState_LpAutoRecover.cpp">
+      <Filter>character NEW\Character\State System\conditions</Filter>
+    </ClCompile>
+    <ClCompile Include="ConditionState_EpAutoRecover.cpp">
+      <Filter>character NEW\Character\State System\conditions</Filter>
+    </ClCompile>
+    <ClCompile Include="ConditionState_Rabies.cpp">
+      <Filter>character NEW\Character\State System\conditions</Filter>
+    </ClCompile>
+    <ClCompile Include="ConditionState_Drunk.cpp">
+      <Filter>character NEW\Character\State System\conditions</Filter>
+    </ClCompile>
+    <ClCompile Include="ConditionState_ExcitationMale.cpp">
+      <Filter>character NEW\Character\State System\conditions</Filter>
+    </ClCompile>
+    <ClCompile Include="ConditionState_ExcitationFemale.cpp">
+      <Filter>character NEW\Character\State System\conditions</Filter>
+    </ClCompile>
+    <ClCompile Include="WpsNodeAction_CCBD.cpp">
+      <Filter>SCRIPT\WPS\Node\Action\CCBD</Filter>
+    </ClCompile>
+    <ClCompile Include="WpsNodeAction_CCBD_register_direct_play.cpp">
+      <Filter>SCRIPT\WPS\Node\Action\CCBD</Filter>
+    </ClCompile>
+    <ClCompile Include="WpsNodeAction_CCBD_wait_user.cpp">
+      <Filter>SCRIPT\WPS\Node\Action\CCBD</Filter>
+    </ClCompile>
+    <ClCompile Include="WpsNodeAction_CCBD_stage.cpp">
+      <Filter>SCRIPT\WPS\Node\Action\CCBD</Filter>
+    </ClCompile>
+    <ClCompile Include="WpsNodeAction_CCBD_exec_pattern.cpp">
+      <Filter>SCRIPT\WPS\Node\Action\CCBD</Filter>
+    </ClCompile>
+    <ClCompile Include="WpsNodeAction_CCBD_stage_clear.cpp">
+      <Filter>SCRIPT\WPS\Node\Action\CCBD</Filter>
+    </ClCompile>
+    <ClCompile Include="WpsNodeAction_CCBD_reward.cpp">
+      <Filter>SCRIPT\WPS\Node\Action\CCBD</Filter>
+    </ClCompile>
+    <ClCompile Include="WpsNodeAction_CCBD_Leave.cpp">
+      <Filter>SCRIPT\WPS\Node\Action\CCBD</Filter>
+    </ClCompile>
+    <ClCompile Include="WpsNodeCondition_CCBD_check_limit_time.cpp">
+      <Filter>SCRIPT\WPS\Node\Condition\CCBD</Filter>
+    </ClCompile>
+    <ClCompile Include="WpsNodeCondition_CCBD_check_run_state.cpp">
+      <Filter>SCRIPT\WPS\Node\Condition\CCBD</Filter>
+    </ClCompile>
+    <ClCompile Include="WpsNodeCondition_CCBD_pattern.cpp">
+      <Filter>SCRIPT\WPS\Node\Condition\CCBD</Filter>
+    </ClCompile>
+    <ClCompile Include="WpsScriptAlgoAction_CCBD.cpp">
+      <Filter>SCRIPT\WPS\ALGO\Action\CCBD</Filter>
+    </ClCompile>
+    <ClCompile Include="WpsScriptAlgoAction_CCBD_register_direct_play.cpp">
+      <Filter>SCRIPT\WPS\ALGO\Action\CCBD</Filter>
+    </ClCompile>
+    <ClCompile Include="WpsScriptAlgoAction_CCBD_wait_user.cpp">
+      <Filter>SCRIPT\WPS\ALGO\Action\CCBD</Filter>
+    </ClCompile>
+    <ClCompile Include="WpsScriptAlgoAction_CCBD_stage.cpp">
+      <Filter>SCRIPT\WPS\ALGO\Action\CCBD</Filter>
+    </ClCompile>
+    <ClCompile Include="WpsScriptAlgoAction_CCBD_exec_pattern.cpp">
+      <Filter>SCRIPT\WPS\ALGO\Action\CCBD</Filter>
+    </ClCompile>
+    <ClCompile Include="WpsScriptAlgoAction_CCBD_stage_clear.cpp">
+      <Filter>SCRIPT\WPS\ALGO\Action\CCBD</Filter>
+    </ClCompile>
+    <ClCompile Include="WpsScriptAlgoAction_CCBD_Leave.cpp">
+      <Filter>SCRIPT\WPS\ALGO\Action\CCBD</Filter>
+    </ClCompile>
+    <ClCompile Include="WpsScriptAlgoCondition_CCBD_check_run_state.cpp">
+      <Filter>SCRIPT\WPS\ALGO\Condition\CCBD</Filter>
+    </ClCompile>
+    <ClCompile Include="WpsScriptAlgoCondition_CCBD_check_limit_time.cpp">
+      <Filter>SCRIPT\WPS\ALGO\Condition\CCBD</Filter>
+    </ClCompile>
+    <ClCompile Include="WpsScriptAlgoCondition_CCBD_pattern.cpp">
+      <Filter>SCRIPT\WPS\ALGO\Condition\CCBD</Filter>
+    </ClCompile>
+    <ClCompile Include="WpsScriptAlgoAction_CCBD_reward.cpp">
+      <Filter>SCRIPT\WPS\ALGO\Action\CCBD</Filter>
+    </ClCompile>
+    <ClCompile Include="BattleDungeon.cpp">
+      <Filter>Dungeon\CCBD</Filter>
+    </ClCompile>
+    <ClCompile Include="WpsAlgoStageFailed.cpp">
+      <Filter>SCRIPT\WPS\ALGO\Stage\Parent</Filter>
+    </ClCompile>
+    <ClCompile Include="WpsAlgoStagePrepare.cpp">
+      <Filter>SCRIPT\WPS\ALGO\Stage\Parent</Filter>
+    </ClCompile>
+    <ClCompile Include="WpsAlgoStage.cpp">
+      <Filter>SCRIPT\WPS\ALGO\Stage\Parent</Filter>
+    </ClCompile>
+    <ClCompile Include="TQSNodeAction_Function.cpp">
+      <Filter>SCRIPT\TQS\Node\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="TqsAlgoAction_Information.cpp">
+      <Filter>SCRIPT\TQS\ALGO\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="TqsAlgoAction_ProgressMessage.cpp">
+      <Filter>SCRIPT\TQS\ALGO\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="TqsAlgoAction_RegisterCondition.cpp">
+      <Filter>SCRIPT\TQS\ALGO\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="TqsAlgoAction_Reward.cpp">
+      <Filter>SCRIPT\TQS\ALGO\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="TqsAlgoAction_SendTqsEvent.cpp">
+      <Filter>SCRIPT\TQS\ALGO\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="TqsAlgoAction_SendTsEvent.cpp">
+      <Filter>SCRIPT\TQS\ALGO\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="TqsAlgoAction_Teleport.cpp">
+      <Filter>SCRIPT\TQS\ALGO\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="TqsAlgoStage_End.cpp">
+      <Filter>SCRIPT\TQS\ALGO\Stage</Filter>
+    </ClCompile>
+    <ClCompile Include="TqsAlgoStage_Begin.cpp">
+      <Filter>SCRIPT\TQS\ALGO\Stage</Filter>
+    </ClCompile>
+    <ClCompile Include="TqsAlgoCondition_NpcFaint.cpp">
+      <Filter>SCRIPT\TQS\ALGO\Condition</Filter>
+    </ClCompile>
+    <ClCompile Include="TqsAlgoCondition_RecvTsEvent.cpp">
+      <Filter>SCRIPT\TQS\ALGO\Condition</Filter>
+    </ClCompile>
+    <ClCompile Include="TqsAlgoCondition_RecvSpsEvent.cpp">
+      <Filter>SCRIPT\TQS\ALGO\Condition</Filter>
+    </ClCompile>
+    <ClCompile Include="TqsAlgoCondition_Child.cpp">
+      <Filter>SCRIPT\TQS\ALGO\Condition</Filter>
+    </ClCompile>
+    <ClCompile Include="TqsAlgoCondition_CheckTime.cpp">
+      <Filter>SCRIPT\TQS\ALGO\Condition</Filter>
+    </ClCompile>
+    <ClCompile Include="TqsAlgoCondition_CheckMobGroup.cpp">
+      <Filter>SCRIPT\TQS\ALGO\Condition</Filter>
+    </ClCompile>
+    <ClCompile Include="TqsAlgoCondition_AreaEnter.cpp">
+      <Filter>SCRIPT\TQS\ALGO\Condition</Filter>
+    </ClCompile>
+    <ClCompile Include="TqsAlgoCondition_AllPlayerFaint.cpp">
+      <Filter>SCRIPT\TQS\ALGO\Condition</Filter>
+    </ClCompile>
+    <ClCompile Include="TqsAlgoAction_Wait.cpp">
+      <Filter>SCRIPT\TQS\ALGO\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="TqsAlgoAction_TimeCountdown.cpp">
+      <Filter>SCRIPT\TQS\ALGO\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="TqsAlgoAction_RemoveNpc.cpp">
+      <Filter>SCRIPT\TQS\ALGO\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="TqsAlgoAction_RemoveMobGroup.cpp">
+      <Filter>SCRIPT\TQS\ALGO\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="TqsAlgoAction_PlayJingle.cpp">
+      <Filter>SCRIPT\TQS\ALGO\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="TqsAlgoAction_PlayBgm.cpp">
+      <Filter>SCRIPT\TQS\ALGO\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="TqsAlgoAction_Function.cpp">
+      <Filter>SCRIPT\TQS\ALGO\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="TqsAlgoAction_DirectPlay.cpp">
+      <Filter>SCRIPT\TQS\ALGO\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="TqsAlgoAction_Direction_Indicate.cpp">
+      <Filter>SCRIPT\TQS\ALGO\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="TqsAlgoAction_ChangeStage.cpp">
+      <Filter>SCRIPT\TQS\ALGO\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="TqsAlgoAction_ChangeObjectState.cpp">
+      <Filter>SCRIPT\TQS\ALGO\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="TqsAlgoAction_BroadMessage.cpp">
+      <Filter>SCRIPT\TQS\ALGO\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="TqsAlgoAction_AddNpc.cpp">
+      <Filter>SCRIPT\TQS\ALGO\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="TqsAlgoAction_AddMobGroup.cpp">
+      <Filter>SCRIPT\TQS\ALGO\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="TqsAlgoAction_AddMob.cpp">
+      <Filter>SCRIPT\TQS\ALGO\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="TqsAlgoObject.cpp">
+      <Filter>SCRIPT\TQS\ALGO\Object</Filter>
+    </ClCompile>
+    <ClCompile Include="TqsAlgoStage_Stage.cpp">
+      <Filter>SCRIPT\TQS\ALGO\Stage</Filter>
+    </ClCompile>
+    <ClCompile Include="TimeQuestControlFactory.cpp">
+      <Filter>SCRIPT\TQS\ALGO</Filter>
+    </ClCompile>
+    <ClCompile Include="WorldPlayControlFactoy.cpp">
+      <Filter>SCRIPT\WPS\ALGO</Filter>
+    </ClCompile>
+    <ClCompile Include="ScriptAlgoObject.cpp">
+      <Filter>SCRIPT\ALGO\Object</Filter>
+    </ClCompile>
+    <ClCompile Include="ScriptAlgoObjectManager.cpp">
+      <Filter>SCRIPT\ALGO\Object\Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="ScriptAlgoController.cpp">
+      <Filter>SCRIPT\ALGO\Object\Controller</Filter>
+    </ClCompile>
+    <ClCompile Include="TqsAlgoStage.cpp">
+      <Filter>SCRIPT\TQS\ALGO\Stage\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="TriggerObject.cpp">
+      <Filter>character NEW\ObjTrigger</Filter>
+    </ClCompile>
+    <ClCompile Include="ServerNaviLog.cpp">
+      <Filter>Navi\Log</Filter>
+    </ClCompile>
+    <ClCompile Include="qg_opcodes.cpp">
+      <Filter>Servers\QueryServer\qg_opcodes</Filter>
+    </ClCompile>
+    <ClCompile Include="ug_opcodes.cpp">
+      <Filter>character NEW\Player\Session\opcodes</Filter>
+    </ClCompile>
+    <ClCompile Include="tg_opcodes.cpp">
+      <Filter>Servers\ChatServer\tg_opcodes</Filter>
+    </ClCompile>
+    <ClCompile Include="mg_opcodes.cpp">
+      <Filter>Servers\MasterServer\mg_opcodes</Filter>
+    </ClCompile>
+    <ClCompile Include="calcs.cpp">
+      <Filter>utilities</Filter>
+    </ClCompile>
+    <ClCompile Include="DojoWar.cpp">
+      <Filter>Guild/DOJO</Filter>
+    </ClCompile>
+    <ClCompile Include="BudokaiManager.cpp">
+      <Filter>In-Game Event System\Budokai</Filter>
+    </ClCompile>
+    <ClCompile Include="ExpEvent.cpp">
+      <Filter>In-Game Event System\Exp Event</Filter>
+    </ClCompile>
+    <ClCompile Include="DragonballScramble.cpp">
+      <Filter>In-Game Event System\Dragonball Scramble</Filter>
+    </ClCompile>
+    <ClCompile Include="BusSystem.cpp">
+      <Filter>BUS SYSTEM</Filter>
+    </ClCompile>
+    <ClCompile Include="scsManager.cpp">
+      <Filter>ANTI-BOT%28SCS%29</Filter>
+    </ClCompile>
+    <ClCompile Include="HoneyBeeEvent.cpp">
+      <Filter>In-Game Event System\HoneyBee</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ClientSession.h">
+      <Filter>character NEW\Player\Session</Filter>
+    </ClInclude>
+    <ClInclude Include="DungeonManager.h">
+      <Filter>Dungeon</Filter>
+    </ClInclude>
+    <ClInclude Include="TriggerManager.h">
+      <Filter>Trigger System</Filter>
+    </ClInclude>
+    <ClInclude Include="Quest.h">
+      <Filter>character NEW\Player\TriggerSystem%28TS%29</Filter>
+    </ClInclude>
+    <ClInclude Include="ChatServerSession.h">
+      <Filter>Servers\ChatServer</Filter>
+    </ClInclude>
+    <ClInclude Include="GameSessionFactory.h">
+      <Filter>Servers\ServerSession</Filter>
+    </ClInclude>
+    <ClInclude Include="battle.h">
+      <Filter>Battle%28fight%29</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>Main\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ItemManager.h">
+      <Filter>Item</Filter>
+    </ClInclude>
+    <ClInclude Include="freebattle.h">
+      <Filter>Battle%28fight%29</Filter>
+    </ClInclude>
+    <ClInclude Include="MasterServerSession.h">
+      <Filter>Servers\MasterServer</Filter>
+    </ClInclude>
+    <ClInclude Include="TableContainerManager.h">
+      <Filter>Main\TableManager</Filter>
+    </ClInclude>
+    <ClInclude Include="item.h">
+      <Filter>Item</Filter>
+    </ClInclude>
+    <ClInclude Include="privateshop.h">
+      <Filter>character NEW\Player\private shop</Filter>
+    </ClInclude>
+    <ClInclude Include="CPlayer.h">
+      <Filter>character NEW\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="Npc.h">
+      <Filter>character NEW\Monster\Npc</Filter>
+    </ClInclude>
+    <ClInclude Include="Monster.h">
+      <Filter>character NEW\Monster</Filter>
+    </ClInclude>
+    <ClInclude Include="TimeQuest.h">
+      <Filter>Dungeon\TMQ</Filter>
+    </ClInclude>
+    <ClInclude Include="ShenronManager.h">
+      <Filter>character NEW\Monster\Npc\Shenron</Filter>
+    </ClInclude>
+    <ClInclude Include="calcs.h">
+      <Filter>utilities</Filter>
+    </ClInclude>
+    <ClInclude Include="gm.h">
+      <Filter>character NEW\Player\GM</Filter>
+    </ClInclude>
+    <ClInclude Include="DojoManager.h">
+      <Filter>Guild/DOJO</Filter>
+    </ClInclude>
+    <ClInclude Include="BotAiAction.h">
+      <Filter>character NEW\Monster\BOT AI\action\main</Filter>
+    </ClInclude>
+    <ClInclude Include="BotAiCondition.h">
+      <Filter>character NEW\Monster\BOT AI\condition\main</Filter>
+    </ClInclude>
+    <ClInclude Include="BotAiState.h">
+      <Filter>character NEW\Monster\BOT AI\state\main</Filter>
+    </ClInclude>
+    <ClInclude Include="BotAiAction_Wander.h">
+      <Filter>character NEW\Monster\BOT AI\action</Filter>
+    </ClInclude>
+    <ClInclude Include="BotAiAction_FixLoc.h">
+      <Filter>character NEW\Monster\BOT AI\action</Filter>
+    </ClInclude>
+    <ClInclude Include="BotAiAction_Follow.h">
+      <Filter>character NEW\Monster\BOT AI\action</Filter>
+    </ClInclude>
+    <ClInclude Include="BotAiAction_EscortFollow.h">
+      <Filter>character NEW\Monster\BOT AI\action</Filter>
+    </ClInclude>
+    <ClInclude Include="BotAiAction_PetFollow.h">
+      <Filter>character NEW\Monster\BOT AI\action</Filter>
+    </ClInclude>
+    <ClInclude Include="BotAiAction_Patrol.h">
+      <Filter>character NEW\Monster\BOT AI\action</Filter>
+    </ClInclude>
+    <ClInclude Include="BotAiAction_FollowMove.h">
+      <Filter>character NEW\Monster\BOT AI\action</Filter>
+    </ClInclude>
+    <ClInclude Include="BotAiAction_WanderMove.h">
+      <Filter>character NEW\Monster\BOT AI\action</Filter>
+    </ClInclude>
+    <ClInclude Include="BotAiAction_DestMove.h">
+      <Filter>character NEW\Monster\BOT AI\action</Filter>
+    </ClInclude>
+    <ClInclude Include="BotAiAction_NavMove.h">
+      <Filter>character NEW\Monster\BOT AI\action</Filter>
+    </ClInclude>
+    <ClInclude Include="BotAiAction_ReturnMove.h">
+      <Filter>character NEW\Monster\BOT AI\action</Filter>
+    </ClInclude>
+    <ClInclude Include="BotAiBase.h">
+      <Filter>character NEW\Monster\BOT AI\base\main</Filter>
+    </ClInclude>
+    <ClInclude Include="BotAiBase_FirstProcList.h">
+      <Filter>character NEW\Monster\BOT AI\base</Filter>
+    </ClInclude>
+    <ClInclude Include="BotAiState_Enter.h">
+      <Filter>character NEW\Monster\BOT AI\state</Filter>
+    </ClInclude>
+    <ClInclude Include="BotAiState_Spawn.h">
+      <Filter>character NEW\Monster\BOT AI\state</Filter>
+    </ClInclude>
+    <ClInclude Include="BotAiState_Idle.h">
+      <Filter>character NEW\Monster\BOT AI\state</Filter>
+    </ClInclude>
+    <ClInclude Include="BotAiController.h">
+      <Filter>character NEW\Monster\BOT AI\Control</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjectController.h">
+      <Filter>character NEW\Monster\Npc\controller</Filter>
+    </ClInclude>
+    <ClInclude Include="EndCondition.h">
+      <Filter>character NEW\Monster\BOT AI\condition\end</Filter>
+    </ClInclude>
+    <ClInclude Include="CheckupEndCondition.h">
+      <Filter>character NEW\Monster\BOT AI\condition\end</Filter>
+    </ClInclude>
+    <ClInclude Include="EndCondition_TargetFixAttack.h">
+      <Filter>character NEW\Monster\BOT AI\condition\end</Filter>
+    </ClInclude>
+    <ClInclude Include="EndCondition_HimSelf_LPCheck.h">
+      <Filter>character NEW\Monster\BOT AI\condition\end</Filter>
+    </ClInclude>
+    <ClInclude Include="ApplyAiFunc.h">
+      <Filter>character NEW\Monster\BOT AI</Filter>
+    </ClInclude>
+    <ClInclude Include="ActionPattern.h">
+      <Filter>character NEW\Character\ActionPattern</Filter>
+    </ClInclude>
+    <ClInclude Include="ActionPatternSystem.h">
+      <Filter>character NEW\Character\ActionPattern</Filter>
+    </ClInclude>
+    <ClInclude Include="ActionPatternUnit.h">
+      <Filter>character NEW\Character\ActionPattern</Filter>
+    </ClInclude>
+    <ClInclude Include="ContainerActionPatternUnit.h">
+      <Filter>character NEW\Character\ActionPattern</Filter>
+    </ClInclude>
+    <ClInclude Include="ContainerActionPatternSet.h">
+      <Filter>character NEW\Character\ActionPattern</Filter>
+    </ClInclude>
+    <ClInclude Include="ActionPatternMove.h">
+      <Filter>character NEW\Character\ActionPattern</Filter>
+    </ClInclude>
+    <ClInclude Include="ActionPatternIdle1.h">
+      <Filter>character NEW\Character\ActionPattern</Filter>
+    </ClInclude>
+    <ClInclude Include="ActionPatternIdle2.h">
+      <Filter>character NEW\Character\ActionPattern</Filter>
+    </ClInclude>
+    <ClInclude Include="ActionPatternMIdle1.h">
+      <Filter>character NEW\Character\ActionPattern</Filter>
+    </ClInclude>
+    <ClInclude Include="ActionPatternMIdle2.h">
+      <Filter>character NEW\Character\ActionPattern</Filter>
+    </ClInclude>
+    <ClInclude Include="FactoryActionPatternUnit.h">
+      <Filter>character NEW\Character\ActionPattern</Filter>
+    </ClInclude>
+    <ClInclude Include="BotPathFinder.h">
+      <Filter>character NEW\Monster\Npc\PathFinder</Filter>
+    </ClInclude>
+    <ClInclude Include="WayPointList.h">
+      <Filter>character NEW\Monster\Npc\PathFinder</Filter>
+    </ClInclude>
+    <ClInclude Include="BotAiCondition_Facing.h">
+      <Filter>character NEW\Monster\BOT AI\condition</Filter>
+    </ClInclude>
+    <ClInclude Include="BotAiAction_PlayScene.h">
+      <Filter>character NEW\Monster\BOT AI\action</Filter>
+    </ClInclude>
+    <ClInclude Include="BotAiAction_Rotate.h">
+      <Filter>character NEW\Monster\BOT AI\action</Filter>
+    </ClInclude>
+    <ClInclude Include="BotAiAction_Attack.h">
+      <Filter>character NEW\Monster\BOT AI\action</Filter>
+    </ClInclude>
+    <ClInclude Include="BotAiAction_Chase.h">
+      <Filter>character NEW\Monster\BOT AI\action</Filter>
+    </ClInclude>
+    <ClInclude Include="BotAiAction_SkillUse.h">
+      <Filter>character NEW\Monster\BOT AI\action</Filter>
+    </ClInclude>
+    <ClInclude Include="BotAiAction_Look.h">
+      <Filter>character NEW\Monster\BOT AI\action</Filter>
+    </ClInclude>
+    <ClInclude Include="BotAiAction_RangedAttack.h">
+      <Filter>character NEW\Monster\BOT AI\action</Filter>
+    </ClInclude>
+    <ClInclude Include="BotAiAction_Flee.h">
+      <Filter>character NEW\Monster\BOT AI\action</Filter>
+    </ClInclude>
+    <ClInclude Include="BotAiAction_Retreat.h">
+      <Filter>character NEW\Monster\BOT AI\action</Filter>
+    </ClInclude>
+    <ClInclude Include="BotAiAction_PatrolWait.h">
+      <Filter>character NEW\Monster\BOT AI\action</Filter>
+    </ClInclude>
+    <ClInclude Include="BotAiAction_Terror.h">
+      <Filter>character NEW\Monster\BOT AI\action</Filter>
+    </ClInclude>
+    <ClInclude Include="BotAiAction_Say.h">
+      <Filter>character NEW\Monster\BOT AI\action</Filter>
+    </ClInclude>
+    <ClInclude Include="BotAiAction_DirectPlay.h">
+      <Filter>character NEW\Monster\BOT AI\action</Filter>
+    </ClInclude>
+    <ClInclude Include="BotAiAction_DirectTurning.h">
+      <Filter>character NEW\Monster\BOT AI\action</Filter>
+    </ClInclude>
+    <ClInclude Include="BotAiAction_SetCharCondition.h">
+      <Filter>character NEW\Monster\BOT AI\action</Filter>
+    </ClInclude>
+    <ClInclude Include="BotAiAction_Wait.h">
+      <Filter>character NEW\Monster\BOT AI\action</Filter>
+    </ClInclude>
+    <ClInclude Include="BotAiAction_SitDown.h">
+      <Filter>character NEW\Monster\BOT AI\action</Filter>
+    </ClInclude>
+    <ClInclude Include="BotAiAction_Leave.h">
+      <Filter>character NEW\Monster\BOT AI\action</Filter>
+    </ClInclude>
+    <ClInclude Include="BotAiAction_Escort.h">
+      <Filter>character NEW\Monster\BOT AI\action</Filter>
+    </ClInclude>
+    <ClInclude Include="BotAiAction_SPSEnd.h">
+      <Filter>character NEW\Monster\BOT AI\action</Filter>
+    </ClInclude>
+    <ClInclude Include="BotAiAction_SendSpsEvent.h">
+      <Filter>character NEW\Monster\BOT AI\action</Filter>
+    </ClInclude>
+    <ClInclude Include="BotAiAction_Timid.h">
+      <Filter>character NEW\Monster\BOT AI\action</Filter>
+    </ClInclude>
+    <ClInclude Include="BotAiAction_AddMob.h">
+      <Filter>character NEW\Monster\BOT AI\action</Filter>
+    </ClInclude>
+    <ClInclude Include="BotAiAction_ChangeCharAttribute.h">
+      <Filter>character NEW\Monster\BOT AI\action</Filter>
+    </ClInclude>
+    <ClInclude Include="BotAiAction_ChangeNpcAttribute.h">
+      <Filter>character NEW\Monster\BOT AI\action</Filter>
+    </ClInclude>
+    <ClInclude Include="BotAiAction_TargetFixAttack.h">
+      <Filter>character NEW\Monster\BOT AI\action</Filter>
+    </ClInclude>
+    <ClInclude Include="BotAiAction_ChangeAiBitFlag.h">
+      <Filter>character NEW\Monster\BOT AI\action</Filter>
+    </ClInclude>
+    <ClInclude Include="BotAiAction_ChangeTimidAttribute.h">
+      <Filter>character NEW\Monster\BOT AI\action</Filter>
+    </ClInclude>
+    <ClInclude Include="BotAiAction_Function.h">
+      <Filter>character NEW\Monster\BOT AI\action</Filter>
+    </ClInclude>
+    <ClInclude Include="BotAiAction_SendEscortEventToTs.h">
+      <Filter>character NEW\Monster\BOT AI\action</Filter>
+    </ClInclude>
+    <ClInclude Include="BotAiAction_SendEventToTqs.h">
+      <Filter>character NEW\Monster\BOT AI\action</Filter>
+    </ClInclude>
+    <ClInclude Include="BotAiAction_SPS_SendEventToWps.h">
+      <Filter>character NEW\Monster\BOT AI\action</Filter>
+    </ClInclude>
+    <ClInclude Include="BotAiAction_AIS_SendEventToWps.h">
+      <Filter>character NEW\Monster\BOT AI\action</Filter>
+    </ClInclude>
+    <ClInclude Include="BotAiAction_AIS_SendEventToTqs.h">
+      <Filter>character NEW\Monster\BOT AI\action</Filter>
+    </ClInclude>
+    <ClInclude Include="BotAiAction_SPS_SendEventToTs.h">
+      <Filter>character NEW\Monster\BOT AI\action</Filter>
+    </ClInclude>
+    <ClInclude Include="BotAiAction_SPS_SendEvent.h">
+      <Filter>character NEW\Monster\BOT AI\action</Filter>
+    </ClInclude>
+    <ClInclude Include="BotAiAction_ClearSpsEvent.h">
+      <Filter>character NEW\Monster\BOT AI\action</Filter>
+    </ClInclude>
+    <ClInclude Include="BotAiAction_Calculate.h">
+      <Filter>character NEW\Monster\BOT AI\action</Filter>
+    </ClInclude>
+    <ClInclude Include="BotAiState_Fight.h">
+      <Filter>character NEW\Monster\BOT AI\state</Filter>
+    </ClInclude>
+    <ClInclude Include="BotAiState_BattleScene.h">
+      <Filter>character NEW\Monster\BOT AI\state</Filter>
+    </ClInclude>
+    <ClInclude Include="BotAiState_Return.h">
+      <Filter>character NEW\Monster\BOT AI\state</Filter>
+    </ClInclude>
+    <ClInclude Include="BotAiState_Faint.h">
+      <Filter>character NEW\Monster\BOT AI\state</Filter>
+    </ClInclude>
+    <ClInclude Include="BotAiState_Teleporting.h">
+      <Filter>character NEW\Monster\BOT AI\state</Filter>
+    </ClInclude>
+    <ClInclude Include="BotAiState_Despawn.h">
+      <Filter>character NEW\Monster\BOT AI\state</Filter>
+    </ClInclude>
+    <ClInclude Include="BotAiState_Leave.h">
+      <Filter>character NEW\Monster\BOT AI\state</Filter>
+    </ClInclude>
+    <ClInclude Include="BotAiCondition_HimselfCheck.h">
+      <Filter>character NEW\Monster\BOT AI\condition</Filter>
+    </ClInclude>
+    <ClInclude Include="BotAiCondition_Scan.h">
+      <Filter>character NEW\Monster\BOT AI\condition</Filter>
+    </ClInclude>
+    <ClInclude Include="BotAiCondition_AIS_RecvEventFromWps.h">
+      <Filter>character NEW\Monster\BOT AI\condition</Filter>
+    </ClInclude>
+    <ClInclude Include="BotAiCondition_AIS_RecvEventFromTqs.h">
+      <Filter>character NEW\Monster\BOT AI\condition</Filter>
+    </ClInclude>
+    <ClInclude Include="BotAiCondition_AttackTarget.h">
+      <Filter>character NEW\Monster\BOT AI\condition</Filter>
+    </ClInclude>
+    <ClInclude Include="BotAiCondition_OutOfNest.h">
+      <Filter>character NEW\Monster\BOT AI\condition</Filter>
+    </ClInclude>
+    <ClInclude Include="BotAiCondition_SkillUse.h">
+      <Filter>character NEW\Monster\BOT AI\condition</Filter>
+    </ClInclude>
+    <ClInclude Include="BotAiCondition_RangedAttack.h">
+      <Filter>character NEW\Monster\BOT AI\condition</Filter>
+    </ClInclude>
+    <ClInclude Include="BotAiCondition_ScanTarget.h">
+      <Filter>character NEW\Monster\BOT AI\condition</Filter>
+    </ClInclude>
+    <ClInclude Include="BotAiCondition_Flee.h">
+      <Filter>character NEW\Monster\BOT AI\condition</Filter>
+    </ClInclude>
+    <ClInclude Include="BotAiCondition_Speech.h">
+      <Filter>character NEW\Monster\BOT AI\condition</Filter>
+    </ClInclude>
+    <ClInclude Include="BotAiCondition_AllianceHelpMe.h">
+      <Filter>character NEW\Monster\BOT AI\condition</Filter>
+    </ClInclude>
+    <ClInclude Include="BotAiCondition_Defend.h">
+      <Filter>character NEW\Monster\BOT AI\condition</Filter>
+    </ClInclude>
+    <ClInclude Include="BotAiCondition_Retreat.h">
+      <Filter>character NEW\Monster\BOT AI\condition</Filter>
+    </ClInclude>
+    <ClInclude Include="BotAiCondition_Timid.h">
+      <Filter>character NEW\Monster\BOT AI\condition</Filter>
+    </ClInclude>
+    <ClInclude Include="BotAiCondition_Terror.h">
+      <Filter>character NEW\Monster\BOT AI\condition</Filter>
+    </ClInclude>
+    <ClInclude Include="BotAiCondition_Confusion.h">
+      <Filter>character NEW\Monster\BOT AI\condition</Filter>
+    </ClInclude>
+    <ClInclude Include="BotAiCondition_Follow_Teleport.h">
+      <Filter>character NEW\Monster\BOT AI\condition</Filter>
+    </ClInclude>
+    <ClInclude Include="BotAiCondition_PetFollow.h">
+      <Filter>character NEW\Monster\BOT AI\condition</Filter>
+    </ClInclude>
+    <ClInclude Include="BotAiCondition_PetFollow_Teleport.h">
+      <Filter>character NEW\Monster\BOT AI\condition</Filter>
+    </ClInclude>
+    <ClInclude Include="BotAiCondition_Child.h">
+      <Filter>character NEW\Monster\BOT AI\condition</Filter>
+    </ClInclude>
+    <ClInclude Include="BotAiCondition_SPS_RecvEventFromTs.h">
+      <Filter>character NEW\Monster\BOT AI\condition</Filter>
+    </ClInclude>
+    <ClInclude Include="BotAiCondition_SPS_RecvEventFromWps.h">
+      <Filter>character NEW\Monster\BOT AI\condition</Filter>
+    </ClInclude>
+    <ClInclude Include="BotAiCondition_SPS_RecvEventFromItem.h">
+      <Filter>character NEW\Monster\BOT AI\condition</Filter>
+    </ClInclude>
+    <ClInclude Include="BotAiCondition_RegisterBattleScene.h">
+      <Filter>character NEW\Monster\BOT AI\condition</Filter>
+    </ClInclude>
+    <ClInclude Include="BotAiCondition_BSCondition.h">
+      <Filter>character NEW\Monster\BOT AI\condition</Filter>
+    </ClInclude>
+    <ClInclude Include="BotAiCondition_BSConditionGroup.h">
+      <Filter>character NEW\Monster\BOT AI\condition</Filter>
+    </ClInclude>
+    <ClInclude Include="BotAiCondition_BSFlow.h">
+      <Filter>character NEW\Monster\BOT AI\condition</Filter>
+    </ClInclude>
+    <ClInclude Include="BotAiCondition_BSCheckLp.h">
+      <Filter>character NEW\Monster\BOT AI\condition</Filter>
+    </ClInclude>
+    <ClInclude Include="TargetListManager.h">
+      <Filter>character NEW\Character\TargetManager</Filter>
+    </ClInclude>
+    <ClInclude Include="StateManager.h">
+      <Filter>character NEW\Character\State System\base\manager</Filter>
+    </ClInclude>
+    <ClInclude Include="ConditionState.h">
+      <Filter>character NEW\Character\State System\base\condition</Filter>
+    </ClInclude>
+    <ClInclude Include="StateBase.h">
+      <Filter>character NEW\Character\State System\base\base</Filter>
+    </ClInclude>
+    <ClInclude Include="BotState_Spawning.h">
+      <Filter>character NEW\Character\State System\states</Filter>
+    </ClInclude>
+    <ClInclude Include="BotState_Standing.h">
+      <Filter>character NEW\Character\State System\states</Filter>
+    </ClInclude>
+    <ClInclude Include="BotState_Sitting.h">
+      <Filter>character NEW\Character\State System\states</Filter>
+    </ClInclude>
+    <ClInclude Include="BotState_Fainting.h">
+      <Filter>character NEW\Character\State System\states</Filter>
+    </ClInclude>
+    <ClInclude Include="BotState_Camping.h">
+      <Filter>character NEW\Character\State System\states</Filter>
+    </ClInclude>
+    <ClInclude Include="BotState_Moving.h">
+      <Filter>character NEW\Character\State System\states</Filter>
+    </ClInclude>
+    <ClInclude Include="BotState_DestMove.h">
+      <Filter>character NEW\Character\State System\states</Filter>
+    </ClInclude>
+    <ClInclude Include="BotState_Follow.h">
+      <Filter>character NEW\Character\State System\states</Filter>
+    </ClInclude>
+    <ClInclude Include="BotState_Falling.h">
+      <Filter>character NEW\Character\State System\states</Filter>
+    </ClInclude>
+    <ClInclude Include="BotState_DashPassive.h">
+      <Filter>character NEW\Character\State System\states</Filter>
+    </ClInclude>
+    <ClInclude Include="BotState_Teleporting.h">
+      <Filter>character NEW\Character\State System\states</Filter>
+    </ClInclude>
+    <ClInclude Include="BotState_Sliding.h">
+      <Filter>character NEW\Character\State System\states</Filter>
+    </ClInclude>
+    <ClInclude Include="BotState_Knockdown.h">
+      <Filter>character NEW\Character\State System\states</Filter>
+    </ClInclude>
+    <ClInclude Include="BotState_Focusing.h">
+      <Filter>character NEW\Character\State System\states</Filter>
+    </ClInclude>
+    <ClInclude Include="BotState_Casting.h">
+      <Filter>character NEW\Character\State System\states</Filter>
+    </ClInclude>
+    <ClInclude Include="BotState_SkillAffecting.h">
+      <Filter>character NEW\Character\State System\states</Filter>
+    </ClInclude>
+    <ClInclude Include="BotState_KeepingEffect.h">
+      <Filter>character NEW\Character\State System\states</Filter>
+    </ClInclude>
+    <ClInclude Include="BotState_CastingItem.h">
+      <Filter>character NEW\Character\State System\states</Filter>
+    </ClInclude>
+    <ClInclude Include="BotState_Stunned.h">
+      <Filter>character NEW\Character\State System\states</Filter>
+    </ClInclude>
+    <ClInclude Include="BotState_Sleeping.h">
+      <Filter>character NEW\Character\State System\states</Filter>
+    </ClInclude>
+    <ClInclude Include="BotState_Paralyzed.h">
+      <Filter>character NEW\Character\State System\states</Filter>
+    </ClInclude>
+    <ClInclude Include="BotState_HTB.h">
+      <Filter>character NEW\Character\State System\states</Filter>
+    </ClInclude>
+    <ClInclude Include="BotState_Sandbag.h">
+      <Filter>character NEW\Character\State System\states</Filter>
+    </ClInclude>
+    <ClInclude Include="BotState_Charging.h">
+      <Filter>character NEW\Character\State System\states</Filter>
+    </ClInclude>
+    <ClInclude Include="BotState_Guard.h">
+      <Filter>character NEW\Character\State System\states</Filter>
+    </ClInclude>
+    <ClInclude Include="BotState_Despawning.h">
+      <Filter>character NEW\Character\State System\states</Filter>
+    </ClInclude>
+    <ClInclude Include="BotState_PrivateShop.h">
+      <Filter>character NEW\Character\State System\states</Filter>
+    </ClInclude>
+    <ClInclude Include="BotState_Leaving.h">
+      <Filter>character NEW\Character\State System\states</Filter>
+    </ClInclude>
+    <ClInclude Include="BotState_DirectPlay.h">
+      <Filter>character NEW\Character\State System\states</Filter>
+    </ClInclude>
+    <ClInclude Include="BotState_Operating.h">
+      <Filter>character NEW\Character\State System\states</Filter>
+    </ClInclude>
+    <ClInclude Include="BotState_RideOn.h">
+      <Filter>character NEW\Character\State System\states</Filter>
+    </ClInclude>
+    <ClInclude Include="BotState_Turning.h">
+      <Filter>character NEW\Character\State System\states</Filter>
+    </ClInclude>
+    <ClInclude Include="BotState_AirJump.h">
+      <Filter>character NEW\Character\State System\states</Filter>
+    </ClInclude>
+    <ClInclude Include="BotState_AirDashAccel.h">
+      <Filter>character NEW\Character\State System\states</Filter>
+    </ClInclude>
+    <ClInclude Include="SpawnObject.h">
+      <Filter>character NEW\SpawnObject</Filter>
+    </ClInclude>
+    <ClInclude Include="GameObject.h">
+      <Filter>character NEW\GameObject</Filter>
+    </ClInclude>
+    <ClInclude Include="MoveableObject.h">
+      <Filter>character NEW\MoveableObject</Filter>
+    </ClInclude>
+    <ClInclude Include="CharacterObject.h">
+      <Filter>character NEW\CharacterObject</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjectManager.h">
+      <Filter>character NEW</Filter>
+    </ClInclude>
+    <ClInclude Include="Party.h">
+      <Filter>Party\PLAYER</Filter>
+    </ClInclude>
+    <ClInclude Include="PartyMatching.h">
+      <Filter>Party\PLAYER</Filter>
+    </ClInclude>
+    <ClInclude Include="NpcPartyManager.h">
+      <Filter>Party\BOT</Filter>
+    </ClInclude>
+    <ClInclude Include="NpcParty.h">
+      <Filter>Party\BOT</Filter>
+    </ClInclude>
+    <ClInclude Include="PartyPublicSight.h">
+      <Filter>Party\BOT</Filter>
+    </ClInclude>
+    <ClInclude Include="PartyHelpData.h">
+      <Filter>Party\BOT</Filter>
+    </ClInclude>
+    <ClInclude Include="WorldObjectLinker.h">
+      <Filter>World-System</Filter>
+    </ClInclude>
+    <ClInclude Include="World.h">
+      <Filter>World-System</Filter>
+    </ClInclude>
+    <ClInclude Include="WorldCell.h">
+      <Filter>World-System</Filter>
+    </ClInclude>
+    <ClInclude Include="WorldZone.h">
+      <Filter>World-System</Filter>
+    </ClInclude>
+    <ClInclude Include="WorldObjectList.h">
+      <Filter>World-System</Filter>
+    </ClInclude>
+    <ClInclude Include="WorldPool.h">
+      <Filter>World-System</Filter>
+    </ClInclude>
+    <ClInclude Include="WorldList.h">
+      <Filter>World-System</Filter>
+    </ClInclude>
+    <ClInclude Include="WorldIdxList.h">
+      <Filter>World-System</Filter>
+    </ClInclude>
+    <ClInclude Include="WorldManager.h">
+      <Filter>World-System\manager</Filter>
+    </ClInclude>
+    <ClInclude Include="WorldFactory.h">
+      <Filter>World-System</Filter>
+    </ClInclude>
+    <ClInclude Include="char.h">
+      <Filter>character NEW\Character</Filter>
+    </ClInclude>
+    <ClInclude Include="ContainerMeHater.h">
+      <Filter>character NEW\Character\MeHaterManager</Filter>
+    </ClInclude>
+    <ClInclude Include="HelpMeListManager.h">
+      <Filter>character NEW\Monster\Npc\HelpMeListManager</Filter>
+    </ClInclude>
+    <ClInclude Include="BotBreakUp.h">
+      <Filter>character NEW\Character\BotBreakUp</Filter>
+    </ClInclude>
+    <ClInclude Include="MeHaterManager.h">
+      <Filter>character NEW\Character\MeHaterManager\Main</Filter>
+    </ClInclude>
+    <ClInclude Include="EscortManager.h">
+      <Filter>character NEW\Monster\Npc\EscortManager</Filter>
+    </ClInclude>
+    <ClInclude Include="RangeCheck.h">
+      <Filter>utilities\range-check</Filter>
+    </ClInclude>
+    <ClInclude Include="CharacterAttPC.h">
+      <Filter>character NEW\Character\CharacterAttribute\pc</Filter>
+    </ClInclude>
+    <ClInclude Include="CharacterAtt.h">
+      <Filter>character NEW\Character\CharacterAttribute\main</Filter>
+    </ClInclude>
+    <ClInclude Include="CharacterAttBot.h">
+      <Filter>character NEW\Character\CharacterAttribute\bot</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjectMsg.h">
+      <Filter>OBJECT-MSG</Filter>
+    </ClInclude>
+    <ClInclude Include="trade.h">
+      <Filter>character NEW\Player\Trade</Filter>
+    </ClInclude>
+    <ClInclude Include="ItemDrop.h">
+      <Filter>Item\Drop</Filter>
+    </ClInclude>
+    <ClInclude Include="BuffLinkedObject.h">
+      <Filter>Buff</Filter>
+    </ClInclude>
+    <ClInclude Include="Buff.h">
+      <Filter>Buff\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="BuffManager.h">
+      <Filter>Buff\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="BuffBot.h">
+      <Filter>Buff\BOT</Filter>
+    </ClInclude>
+    <ClInclude Include="BuffManagerBot.h">
+      <Filter>Buff\BOT</Filter>
+    </ClInclude>
+    <ClInclude Include="BuffManagerPc.h">
+      <Filter>Buff\PC</Filter>
+    </ClInclude>
+    <ClInclude Include="BuffPc.h">
+      <Filter>Buff\PC</Filter>
+    </ClInclude>
+    <ClInclude Include="SkillManager.h">
+      <Filter>Skill\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="Skill.h">
+      <Filter>Skill\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="SkillBot.h">
+      <Filter>Skill\BOT</Filter>
+    </ClInclude>
+    <ClInclude Include="SkillManagerBot.h">
+      <Filter>Skill\BOT</Filter>
+    </ClInclude>
+    <ClInclude Include="SkillCondition.h">
+      <Filter>Skill\BOT\Condition</Filter>
+    </ClInclude>
+    <ClInclude Include="SkillCondition_LP.h">
+      <Filter>Skill\BOT\Condition</Filter>
+    </ClInclude>
+    <ClInclude Include="SkillCondition_Give.h">
+      <Filter>Skill\BOT\Condition</Filter>
+    </ClInclude>
+    <ClInclude Include="SkillCondition_Time.h">
+      <Filter>Skill\BOT\Condition</Filter>
+    </ClInclude>
+    <ClInclude Include="SkillCondition_RingRange.h">
+      <Filter>Skill\BOT\Condition</Filter>
+    </ClInclude>
+    <ClInclude Include="SkillCondition_OnlyLP.h">
+      <Filter>Skill\BOT\Condition</Filter>
+    </ClInclude>
+    <ClInclude Include="SpellAreaChecker.h">
+      <Filter>utilities</Filter>
+    </ClInclude>
+    <ClInclude Include="SkillPc.h">
+      <Filter>Skill\PC</Filter>
+    </ClInclude>
+    <ClInclude Include="SkillManagerPc.h">
+      <Filter>Skill\PC</Filter>
+    </ClInclude>
+    <ClInclude Include="HitBySkillContainer.h">
+      <Filter>utilities</Filter>
+    </ClInclude>
+    <ClInclude Include="QueryServerSession.h">
+      <Filter>Servers\QueryServer</Filter>
+    </ClInclude>
+    <ClInclude Include="GameServer.h">
+      <Filter>Main</Filter>
+    </ClInclude>
+    <ClInclude Include="GameMain.h">
+      <Filter>Main\GameMain</Filter>
+    </ClInclude>
+    <ClInclude Include="GameData.h">
+      <Filter>Main\GameData</Filter>
+    </ClInclude>
+    <ClInclude Include="GameProcessor.h">
+      <Filter>Main\GameProcessor</Filter>
+    </ClInclude>
+    <ClInclude Include="ItemPet.h">
+      <Filter>character NEW\Pet</Filter>
+    </ClInclude>
+    <ClInclude Include="SummonPet.h">
+      <Filter>character NEW\Pet</Filter>
+    </ClInclude>
+    <ClInclude Include="SubNeighborServerInfoManager.h">
+      <Filter>Servers</Filter>
+    </ClInclude>
+    <ClInclude Include="ControlStateManager.h">
+      <Filter>SCRIPT\Controller\State\Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="ControlState.h">
+      <Filter>SCRIPT\Controller\State\Main</Filter>
+    </ClInclude>
+    <ClInclude Include="ControlStateEx.h">
+      <Filter>SCRIPT\Controller\State\Main</Filter>
+    </ClInclude>
+    <ClInclude Include="ControlStateFactory.h">
+      <Filter>SCRIPT\Controller\State\Factory</Filter>
+    </ClInclude>
+    <ClInclude Include="ControlStateComposite.h">
+      <Filter>SCRIPT\Controller\State\Composite</Filter>
+    </ClInclude>
+    <ClInclude Include="ComplexState.h">
+      <Filter>SCRIPT\Controller\State\Complex</Filter>
+    </ClInclude>
+    <ClInclude Include="ControlCondition.h">
+      <Filter>SCRIPT\Controller\Condition</Filter>
+    </ClInclude>
+    <ClInclude Include="ControlAction.h">
+      <Filter>SCRIPT\Controller\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="AIScript.h">
+      <Filter>SCRIPT\AIS\Lua</Filter>
+    </ClInclude>
+    <ClInclude Include="AISNodeFactory.h">
+      <Filter>SCRIPT\AIS\Main\Factory</Filter>
+    </ClInclude>
+    <ClInclude Include="AISManager.h">
+      <Filter>SCRIPT\AIS\Main\Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="AISNodeAction_SendEventToTQS.h">
+      <Filter>SCRIPT\AIS\Node\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="AISNodeAction_SendEventToWPS.h">
+      <Filter>SCRIPT\AIS\Node\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="AISNodeAction_AddMob.h">
+      <Filter>SCRIPT\AIS\Node\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="AISNodeAction_UseSkill.h">
+      <Filter>SCRIPT\AIS\Node\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="AISNodeAction_TargetFixAttack.h">
+      <Filter>SCRIPT\AIS\Node\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="AISNodeAction_SetCharCondition.h">
+      <Filter>SCRIPT\AIS\Node\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="AISNodeAction_ChangeAiBitFlag.h">
+      <Filter>SCRIPT\AIS\Node\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="AISNodeAction_PointMove.h">
+      <Filter>SCRIPT\AIS\Node\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="AISNodeAction_Say.h">
+      <Filter>SCRIPT\AIS\Node\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="AISNodeCondition_Scan.h">
+      <Filter>SCRIPT\AIS\Node\Condition</Filter>
+    </ClInclude>
+    <ClInclude Include="AISNodeCondition_HimselfCheck.h">
+      <Filter>SCRIPT\AIS\Node\Condition</Filter>
+    </ClInclude>
+    <ClInclude Include="AISNodeCondition_RecvEventFromTQS.h">
+      <Filter>SCRIPT\AIS\Node\Condition</Filter>
+    </ClInclude>
+    <ClInclude Include="AISNodeCondition_RecvEventFromWPS.h">
+      <Filter>SCRIPT\AIS\Node\Condition</Filter>
+    </ClInclude>
+    <ClInclude Include="AISNodeScene.h">
+      <Filter>SCRIPT\AIS\Node\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="AISNodeState.h">
+      <Filter>SCRIPT\AIS\Node\State</Filter>
+    </ClInclude>
+    <ClInclude Include="AISNodeState_Fight.h">
+      <Filter>SCRIPT\AIS\Node\State</Filter>
+    </ClInclude>
+    <ClInclude Include="AISNodeState_Wander.h">
+      <Filter>SCRIPT\AIS\Node\State</Filter>
+    </ClInclude>
+    <ClInclude Include="AISNodeState_Comeback.h">
+      <Filter>SCRIPT\AIS\Node\State</Filter>
+    </ClInclude>
+    <ClInclude Include="AISNodeState_Teleporting.h">
+      <Filter>SCRIPT\AIS\Node\State</Filter>
+    </ClInclude>
+    <ClInclude Include="AISNodeState_NonBattle.h">
+      <Filter>SCRIPT\AIS\Node\State</Filter>
+    </ClInclude>
+    <ClInclude Include="AISNodeState_Idle.h">
+      <Filter>SCRIPT\AIS\Node\State</Filter>
+    </ClInclude>
+    <ClInclude Include="AISNodeState_Spawn.h">
+      <Filter>SCRIPT\AIS\Node\State</Filter>
+    </ClInclude>
+    <ClInclude Include="AIScriptControlFactoy.h">
+      <Filter>SCRIPT\AIS</Filter>
+    </ClInclude>
+    <ClInclude Include="AIScriptManager.h">
+      <Filter>SCRIPT\AIS</Filter>
+    </ClInclude>
+    <ClInclude Include="AISDefine.h">
+      <Filter>SCRIPT\AIS</Filter>
+    </ClInclude>
+    <ClInclude Include="ServerAIScript.h">
+      <Filter>SCRIPT\AIS</Filter>
+    </ClInclude>
+    <ClInclude Include="ControlScriptEventMap.h">
+      <Filter>SCRIPT\ControlScript\EventMap</Filter>
+    </ClInclude>
+    <ClInclude Include="ControlScriptManager.h">
+      <Filter>SCRIPT\ControlScript\Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="ControlScriptNodeAction.h">
+      <Filter>SCRIPT\ControlScript\Node\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="ControlScriptNodeCondition.h">
+      <Filter>SCRIPT\ControlScript\Node\Condition</Filter>
+    </ClInclude>
+    <ClInclude Include="ControlScriptNodeFactory.h">
+      <Filter>SCRIPT\ControlScript\Node\Factory</Filter>
+    </ClInclude>
+    <ClInclude Include="ControlScriptNode.h">
+      <Filter>SCRIPT\ControlScript\Node</Filter>
+    </ClInclude>
+    <ClInclude Include="ControlScriptNodeParam.h">
+      <Filter>SCRIPT\ControlScript\Param</Filter>
+    </ClInclude>
+    <ClInclude Include="ControlScriptNodeParam_Number.h">
+      <Filter>SCRIPT\ControlScript\Param\number</Filter>
+    </ClInclude>
+    <ClInclude Include="ControlScriptNodeParam_String.h">
+      <Filter>SCRIPT\ControlScript\Param\string</Filter>
+    </ClInclude>
+    <ClInclude Include="ControlScriptNodeState.h">
+      <Filter>SCRIPT\ControlScript\State</Filter>
+    </ClInclude>
+    <ClInclude Include="ControlScript.h">
+      <Filter>SCRIPT\ControlScript</Filter>
+    </ClInclude>
+    <ClInclude Include="ControlScriptGlobal.h">
+      <Filter>SCRIPT</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayScriptControlFactoy.h">
+      <Filter>SCRIPT\SPS</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayScriptManager.h">
+      <Filter>SCRIPT\SPS</Filter>
+    </ClInclude>
+    <ClInclude Include="ServerPlayScript.h">
+      <Filter>SCRIPT\SPS</Filter>
+    </ClInclude>
+    <ClInclude Include="SPSDefine.h">
+      <Filter>SCRIPT\SPS</Filter>
+    </ClInclude>
+    <ClInclude Include="SPSScript.h">
+      <Filter>SCRIPT\SPS\Lua</Filter>
+    </ClInclude>
+    <ClInclude Include="SPSNodeFactory.h">
+      <Filter>SCRIPT\SPS\Main\Factory</Filter>
+    </ClInclude>
+    <ClInclude Include="SPSManager.h">
+      <Filter>SCRIPT\SPS\Main\Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="SPSNodeAction_SitDown.h">
+      <Filter>SCRIPT\SPS\Node\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="SPSNodeAction_Say.h">
+      <Filter>SCRIPT\SPS\Node\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="SPSNodeAction_PointMove.h">
+      <Filter>SCRIPT\SPS\Node\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="SPSNodeAction_Rotate.h">
+      <Filter>SCRIPT\SPS\Node\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="SPSNodeAction_SendEventToTs.h">
+      <Filter>SCRIPT\SPS\Node\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="SPSNodeAction_SendEvent.h">
+      <Filter>SCRIPT\SPS\Node\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="SPSNodeAction_TargetFixAttack.h">
+      <Filter>SCRIPT\SPS\Node\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="SPSNodeAction_ChangeCharAttribute.h">
+      <Filter>SCRIPT\SPS\Node\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="SPSNodeAction_ChangeAiBitFlag.h">
+      <Filter>SCRIPT\SPS\Node\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="SPSNodeAction_Calculate.h">
+      <Filter>SCRIPT\SPS\Node\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="SPSNodeAction_PathMove.h">
+      <Filter>SCRIPT\SPS\Node\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="SPSNodeAction_ClearEvent.h">
+      <Filter>SCRIPT\SPS\Node\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="SPSNodeAction_SendEventToWps.h">
+      <Filter>SCRIPT\SPS\Node\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="SPSNodeAction_SendEventToTqs.h">
+      <Filter>SCRIPT\SPS\Node\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="SPSNodeAction_SendEscortEventToTs.h">
+      <Filter>SCRIPT\SPS\Node\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="SPSNodeAction_SendEventToSps.h">
+      <Filter>SCRIPT\SPS\Node\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="SPSNodeAction_SendSpsEvent.h">
+      <Filter>SCRIPT\SPS\Node\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="SPSNodeAction_Function.h">
+      <Filter>SCRIPT\SPS\Node\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="SPSNodeAction_DoWander.h">
+      <Filter>SCRIPT\SPS\Node\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="SPSNodeAction_ChangeTimidAttribute.h">
+      <Filter>SCRIPT\SPS\Node\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="SPSNodeAction_ChangeNpcAttribute.h">
+      <Filter>SCRIPT\SPS\Node\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="SPSNodeAction_SPSEnd.h">
+      <Filter>SCRIPT\SPS\Node\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="SPSNodeAction_Leave.h">
+      <Filter>SCRIPT\SPS\Node\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="SPSNodeAction_Escort.h">
+      <Filter>SCRIPT\SPS\Node\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="SPSNodeAction_DirectTurning.h">
+      <Filter>SCRIPT\SPS\Node\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="SPSNodeAction_DirectPlay.h">
+      <Filter>SCRIPT\SPS\Node\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="SPSNodeAction_Wait.h">
+      <Filter>SCRIPT\SPS\Node\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="SPSNodeAction_SkillUse.h">
+      <Filter>SCRIPT\SPS\Node\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="SPSNodeAction_SetCharCondition.h">
+      <Filter>SCRIPT\SPS\Node\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="SPSNodeCondition_BSCheckMobGroup.h">
+      <Filter>SCRIPT\SPS\Node\Condition</Filter>
+    </ClInclude>
+    <ClInclude Include="SPSNodeCondition_BSCheckNpc.h">
+      <Filter>SCRIPT\SPS\Node\Condition</Filter>
+    </ClInclude>
+    <ClInclude Include="SPSNodeCondition_BSCheckLp.h">
+      <Filter>SCRIPT\SPS\Node\Condition</Filter>
+    </ClInclude>
+    <ClInclude Include="SPSNodeCondition_BSConditionGroup.h">
+      <Filter>SCRIPT\SPS\Node\Condition</Filter>
+    </ClInclude>
+    <ClInclude Include="SPSNodeCondition_BSFlow.h">
+      <Filter>SCRIPT\SPS\Node\Condition</Filter>
+    </ClInclude>
+    <ClInclude Include="SPSNodeCondition_BSCondition.h">
+      <Filter>SCRIPT\SPS\Node\Condition</Filter>
+    </ClInclude>
+    <ClInclude Include="SPSNodeCondition_RegisterBattleScene.h">
+      <Filter>SCRIPT\SPS\Node\Condition</Filter>
+    </ClInclude>
+    <ClInclude Include="SPSNodeCondition_RecvEventFromItem.h">
+      <Filter>SCRIPT\SPS\Node\Condition</Filter>
+    </ClInclude>
+    <ClInclude Include="SPSNodeCondition_RecvEventFromWps.h">
+      <Filter>SCRIPT\SPS\Node\Condition</Filter>
+    </ClInclude>
+    <ClInclude Include="SPSNodeCondition_RecvEventFromTs.h">
+      <Filter>SCRIPT\SPS\Node\Condition</Filter>
+    </ClInclude>
+    <ClInclude Include="SPSNodeCondition_Child.h">
+      <Filter>SCRIPT\SPS\Node\Condition</Filter>
+    </ClInclude>
+    <ClInclude Include="SPSNodeScene.h">
+      <Filter>SCRIPT\SPS\Node\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="ParameterReader.h">
+      <Filter>SCRIPT\Utility\ParameterReader</Filter>
+    </ClInclude>
+    <ClInclude Include="StringSeparator.h">
+      <Filter>SCRIPT\Utility\StringSeperator</Filter>
+    </ClInclude>
+    <ClInclude Include="SvrScrFormulaToken.h">
+      <Filter>SCRIPT\Utility\SvrRcr\Formula</Filter>
+    </ClInclude>
+    <ClInclude Include="SvrScrFormulaExpress.h">
+      <Filter>SCRIPT\Utility\SvrRcr\Formula</Filter>
+    </ClInclude>
+    <ClInclude Include="SvrScrFormulaDeclare.h">
+      <Filter>SCRIPT\Utility\SvrRcr\Formula</Filter>
+    </ClInclude>
+    <ClInclude Include="SvrScrFormulaCalc.h">
+      <Filter>SCRIPT\Utility\SvrRcr\Formula</Filter>
+    </ClInclude>
+    <ClInclude Include="SvrScrVariableMap.h">
+      <Filter>SCRIPT\Utility\SvrRcr\Variable</Filter>
+    </ClInclude>
+    <ClInclude Include="SvrScrVariableContainer.h">
+      <Filter>SCRIPT\Utility\SvrRcr\Variable</Filter>
+    </ClInclude>
+    <ClInclude Include="BotAiBattleSceneCondition.h">
+      <Filter>character NEW\Monster\BOT AI\condition</Filter>
+    </ClInclude>
+    <ClInclude Include="TimeLeapDungeon.h">
+      <Filter>Dungeon\TLQ</Filter>
+    </ClInclude>
+    <ClInclude Include="WPSDefine.h">
+      <Filter>SCRIPT\WPS</Filter>
+    </ClInclude>
+    <ClInclude Include="WorldPlayScriptManager.h">
+      <Filter>SCRIPT\WPS</Filter>
+    </ClInclude>
+    <ClInclude Include="ServerWorldPlayScript.h">
+      <Filter>SCRIPT\WPS</Filter>
+    </ClInclude>
+    <ClInclude Include="WPSNodeGameFailed.h">
+      <Filter>SCRIPT\WPS\Node\State\Failed</Filter>
+    </ClInclude>
+    <ClInclude Include="WPSNodeGamePrepare.h">
+      <Filter>SCRIPT\WPS\Node\State\Prepare</Filter>
+    </ClInclude>
+    <ClInclude Include="WPSNodeGameStage.h">
+      <Filter>SCRIPT\WPS\Node\State\Stage</Filter>
+    </ClInclude>
+    <ClInclude Include="WPSNodeCondition_CheckTime.h">
+      <Filter>SCRIPT\WPS\Node\Condition</Filter>
+    </ClInclude>
+    <ClInclude Include="WPSNodeCondition_NpcFaint.h">
+      <Filter>SCRIPT\WPS\Node\Condition</Filter>
+    </ClInclude>
+    <ClInclude Include="WPSNodeCondition_LoopCond.h">
+      <Filter>SCRIPT\WPS\Node\Condition</Filter>
+    </ClInclude>
+    <ClInclude Include="WPSNodeCondition_AllPlayerFaint.h">
+      <Filter>SCRIPT\WPS\Node\Condition</Filter>
+    </ClInclude>
+    <ClInclude Include="WPSNodeCondition_RecvEventFromItem.h">
+      <Filter>SCRIPT\WPS\Node\Condition</Filter>
+    </ClInclude>
+    <ClInclude Include="WPSNodeCondition_RecvEventFromTqs.h">
+      <Filter>SCRIPT\WPS\Node\Condition</Filter>
+    </ClInclude>
+    <ClInclude Include="WPSNodeCondition_RecvEventFromWps.h">
+      <Filter>SCRIPT\WPS\Node\Condition</Filter>
+    </ClInclude>
+    <ClInclude Include="WPSNodeCondition_RecvEventFromAis.h">
+      <Filter>SCRIPT\WPS\Node\Condition</Filter>
+    </ClInclude>
+    <ClInclude Include="WPSNodeCondition_RecvEventFromSps.h">
+      <Filter>SCRIPT\WPS\Node\Condition</Filter>
+    </ClInclude>
+    <ClInclude Include="WPSNodeCondition_RecvEventFromTs.h">
+      <Filter>SCRIPT\WPS\Node\Condition</Filter>
+    </ClInclude>
+    <ClInclude Include="WPSNodeCondition_RecvSpsEvent.h">
+      <Filter>SCRIPT\WPS\Node\Condition</Filter>
+    </ClInclude>
+    <ClInclude Include="WPSNodeCondition_RecvTsEvent.h">
+      <Filter>SCRIPT\WPS\Node\Condition</Filter>
+    </ClInclude>
+    <ClInclude Include="WPSNodeCondition_Compare.h">
+      <Filter>SCRIPT\WPS\Node\Condition</Filter>
+    </ClInclude>
+    <ClInclude Include="WPSNodeCondition_CheckCountDown.h">
+      <Filter>SCRIPT\WPS\Node\Condition</Filter>
+    </ClInclude>
+    <ClInclude Include="WPSNodeCondition_CheckBattle.h">
+      <Filter>SCRIPT\WPS\Node\Condition</Filter>
+    </ClInclude>
+    <ClInclude Include="WPSNodeCondition_CheckLP.h">
+      <Filter>SCRIPT\WPS\Node\Condition</Filter>
+    </ClInclude>
+    <ClInclude Include="WPSNodeCondition_SpawnedMob.h">
+      <Filter>SCRIPT\WPS\Node\Condition</Filter>
+    </ClInclude>
+    <ClInclude Include="WPSNodeCondition_WaitCondition.h">
+      <Filter>SCRIPT\WPS\Node\Condition</Filter>
+    </ClInclude>
+    <ClInclude Include="WPSNodeCondition_Child.h">
+      <Filter>SCRIPT\WPS\Node\Condition</Filter>
+    </ClInclude>
+    <ClInclude Include="WPSNodeCondition_AreaEnter.h">
+      <Filter>SCRIPT\WPS\Node\Condition</Filter>
+    </ClInclude>
+    <ClInclude Include="WPSNodeCondition_CheckMobGroup.h">
+      <Filter>SCRIPT\WPS\Node\Condition</Filter>
+    </ClInclude>
+    <ClInclude Include="WPSNodeCondition_SpawnedNpc.h">
+      <Filter>SCRIPT\WPS\Node\Condition</Filter>
+    </ClInclude>
+    <ClInclude Include="WPSNodeAction_Wait.h">
+      <Filter>SCRIPT\WPS\Node\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="WPSNodeAction_Calculate.h">
+      <Filter>SCRIPT\WPS\Node\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="WPSNodeAction_EventStatusRegister.h">
+      <Filter>SCRIPT\WPS\Node\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="WPSNodeAction_AddNpc.h">
+      <Filter>SCRIPT\WPS\Node\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="WPSNodeAction_Loop.h">
+      <Filter>SCRIPT\WPS\Node\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="WPSNodeAction_SystemMessage.h">
+      <Filter>SCRIPT\WPS\Node\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="WPSNodeAction_FlashPlay.h">
+      <Filter>SCRIPT\WPS\Node\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="WPSNodeAction_UnregisterBuff.h">
+      <Filter>SCRIPT\WPS\Node\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="WPSNodeAction_RegisterBuff.h">
+      <Filter>SCRIPT\WPS\Node\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="WPSNodeAction_EventStatusClear.h">
+      <Filter>SCRIPT\WPS\Node\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="WPSNodeAction_EventStatusSelect.h">
+      <Filter>SCRIPT\WPS\Node\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="WPSNodeAction_EventHandler.h">
+      <Filter>SCRIPT\WPS\Node\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="WPSNodeAction_ChangeSpsScene.h">
+      <Filter>SCRIPT\WPS\Node\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="WPSNodeAction_SendEventToAis.h">
+      <Filter>SCRIPT\WPS\Node\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="WPSNodeAction_SendEventToWps.h">
+      <Filter>SCRIPT\WPS\Node\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="WPSNodeAction_SendEventToTqs.h">
+      <Filter>SCRIPT\WPS\Node\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="WPSNodeAction_SendEventToSps.h">
+      <Filter>SCRIPT\WPS\Node\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="WPSNodeAction_SendEventToTs.h">
+      <Filter>SCRIPT\WPS\Node\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="WPSNodeAction_SendAISEvent.h">
+      <Filter>SCRIPT\WPS\Node\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="WPSNodeAction_SendSPSEvent.h">
+      <Filter>SCRIPT\WPS\Node\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="WPSNodeAction_ChangeNpcAttribute.h">
+      <Filter>SCRIPT\WPS\Node\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="WPSNodeAction_WpsFail.h">
+      <Filter>SCRIPT\WPS\Node\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="WPSNodeAction_GetFaintLocation.h">
+      <Filter>SCRIPT\WPS\Node\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="WPSNodeAction_GetLocation.h">
+      <Filter>SCRIPT\WPS\Node\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="WPSNodeAction_ChangeCharAttribute.h">
+      <Filter>SCRIPT\WPS\Node\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="WPSNodeAction_PlayJingle.h">
+      <Filter>SCRIPT\WPS\Node\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="WPSNodeAction_PlayBgm.h">
+      <Filter>SCRIPT\WPS\Node\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="WPSNodeAction_Default.h">
+      <Filter>SCRIPT\WPS\Node\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="WPSNodeAction_Case.h">
+      <Filter>SCRIPT\WPS\Node\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="WPSNodeAction_Switch.h">
+      <Filter>SCRIPT\WPS\Node\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="WPSNodeAction_While.h">
+      <Filter>SCRIPT\WPS\Node\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="WPSNodeAction_Else.h">
+      <Filter>SCRIPT\WPS\Node\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="WPSNodeAction_Then.h">
+      <Filter>SCRIPT\WPS\Node\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="WPSNodeAction_If.h">
+      <Filter>SCRIPT\WPS\Node\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="WPSNodeAction_ExecWps.h">
+      <Filter>SCRIPT\WPS\Node\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="WPSNodeAction_Direction_Indicate.h">
+      <Filter>SCRIPT\WPS\Node\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="WPSNodeAction_ClearEvent.h">
+      <Filter>SCRIPT\WPS\Node\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="WPSNodeAction_ExecAtOnce.h">
+      <Filter>SCRIPT\WPS\Node\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="WPSNodeAction_Function.h">
+      <Filter>SCRIPT\WPS\Node\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="WPSNodeAction_BroadMessage.h">
+      <Filter>SCRIPT\WPS\Node\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="WPSNodeAction_TelecastMessage.h">
+      <Filter>SCRIPT\WPS\Node\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="WPSNodeAction_TimeCountdown.h">
+      <Filter>SCRIPT\WPS\Node\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="WPSNodeAction_ChangeObjectState.h">
+      <Filter>SCRIPT\WPS\Node\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="WPSNodeAction_ChangeStage.h">
+      <Filter>SCRIPT\WPS\Node\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="WPSNodeAction_AddMob.h">
+      <Filter>SCRIPT\WPS\Node\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="WPSNodeAction_DirectPlay.h">
+      <Filter>SCRIPT\WPS\Node\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="WPSNodeAction_MobList.h">
+      <Filter>SCRIPT\WPS\Node\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="WPSNodeAction_RemoveMobGroup.h">
+      <Filter>SCRIPT\WPS\Node\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="WPSNodeAction_AddMobGroup.h">
+      <Filter>SCRIPT\WPS\Node\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="WPSNodeAction_RemoveNpc.h">
+      <Filter>SCRIPT\WPS\Node\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="WPSNodeFactory.h">
+      <Filter>SCRIPT\WPS\Main\Factory</Filter>
+    </ClInclude>
+    <ClInclude Include="WPSManager.h">
+      <Filter>SCRIPT\WPS\Main</Filter>
+    </ClInclude>
+    <ClInclude Include="WPSScript.h">
+      <Filter>SCRIPT\WPS\LUA</Filter>
+    </ClInclude>
+    <ClInclude Include="ScriptAlgoAction_AddNpc.h">
+      <Filter>SCRIPT\WPS\ALGO\Action\Parent</Filter>
+    </ClInclude>
+    <ClInclude Include="ScriptAlgoAction_Loop.h">
+      <Filter>SCRIPT\WPS\ALGO\Action\Parent</Filter>
+    </ClInclude>
+    <ClInclude Include="ScriptAlgoAction_Wait.h">
+      <Filter>SCRIPT\WPS\ALGO\Action\Parent</Filter>
+    </ClInclude>
+    <ClInclude Include="ScriptAlgoAction_While.h">
+      <Filter>SCRIPT\WPS\ALGO\Action\Parent</Filter>
+    </ClInclude>
+    <ClInclude Include="ScriptAlgoCondition_CheckTime.h">
+      <Filter>SCRIPT\WPS\ALGO\Condition\Parent</Filter>
+    </ClInclude>
+    <ClInclude Include="ScriptAlgoCondition_NpcFaint.h">
+      <Filter>SCRIPT\WPS\ALGO\Condition\Parent</Filter>
+    </ClInclude>
+    <ClInclude Include="ScriptAlgoCondition_LoopCond.h">
+      <Filter>SCRIPT\WPS\ALGO\Condition\Parent</Filter>
+    </ClInclude>
+    <ClInclude Include="ScriptAlgoCondition_AreaEnter.h">
+      <Filter>SCRIPT\WPS\ALGO\Condition\Parent</Filter>
+    </ClInclude>
+    <ClInclude Include="ScriptAlgoAction_AddMob.h">
+      <Filter>SCRIPT\WPS\ALGO\Action\Parent</Filter>
+    </ClInclude>
+    <ClInclude Include="ScriptAlgoAction_Calculate.h">
+      <Filter>SCRIPT\WPS\ALGO\Action\Parent</Filter>
+    </ClInclude>
+    <ClInclude Include="ScriptAlgoAction_GetLocation.h">
+      <Filter>SCRIPT\WPS\ALGO\Action\Parent</Filter>
+    </ClInclude>
+    <ClInclude Include="ScriptAlgoAction_SendEventToTs.h">
+      <Filter>SCRIPT\WPS\ALGO\Action\Parent</Filter>
+    </ClInclude>
+    <ClInclude Include="ScriptAlgoAction_RemoveMobGroup.h">
+      <Filter>SCRIPT\WPS\ALGO\Action\Parent</Filter>
+    </ClInclude>
+    <ClInclude Include="ScriptAlgoCondition_CheckLp.h">
+      <Filter>SCRIPT\WPS\ALGO\Condition\Parent</Filter>
+    </ClInclude>
+    <ClInclude Include="ScriptAlgoCondition_CheckMobGroup.h">
+      <Filter>SCRIPT\WPS\ALGO\Condition\Parent</Filter>
+    </ClInclude>
+    <ClInclude Include="ScriptAlgoCondition_Child.h">
+      <Filter>SCRIPT\WPS\ALGO\Condition\Parent</Filter>
+    </ClInclude>
+    <ClInclude Include="ScriptAlgoAction_WpsFail.h">
+      <Filter>SCRIPT\WPS\ALGO\Action\Parent</Filter>
+    </ClInclude>
+    <ClInclude Include="ScriptAlgoAction_AddMobGroup.h">
+      <Filter>SCRIPT\WPS\ALGO\Action\Parent</Filter>
+    </ClInclude>
+    <ClInclude Include="ScriptAlgoAction_BroadMessage.h">
+      <Filter>SCRIPT\WPS\ALGO\Action\Parent</Filter>
+    </ClInclude>
+    <ClInclude Include="ScriptAlgoAction_Case.h">
+      <Filter>SCRIPT\WPS\ALGO\Action\Parent</Filter>
+    </ClInclude>
+    <ClInclude Include="ScriptAlgoAction_ChangeCharAttribute.h">
+      <Filter>SCRIPT\WPS\ALGO\Action\Parent</Filter>
+    </ClInclude>
+    <ClInclude Include="ScriptAlgoAction_ChangeNpcAttribute.h">
+      <Filter>SCRIPT\WPS\ALGO\Action\Parent</Filter>
+    </ClInclude>
+    <ClInclude Include="ScriptAlgoAction_ChangeObjectState.h">
+      <Filter>SCRIPT\WPS\ALGO\Action\Parent</Filter>
+    </ClInclude>
+    <ClInclude Include="ScriptAlgoAction_ChangeSpsScene.h">
+      <Filter>SCRIPT\WPS\ALGO\Action\Parent</Filter>
+    </ClInclude>
+    <ClInclude Include="ScriptAlgoAction_ChangeStage.h">
+      <Filter>SCRIPT\WPS\ALGO\Action\Parent</Filter>
+    </ClInclude>
+    <ClInclude Include="ScriptAlgoAction_ClearEvent.h">
+      <Filter>SCRIPT\WPS\ALGO\Action\Parent</Filter>
+    </ClInclude>
+    <ClInclude Include="ScriptAlgoAction_Default.h">
+      <Filter>SCRIPT\WPS\ALGO\Action\Parent</Filter>
+    </ClInclude>
+    <ClInclude Include="ScriptAlgoAction_Direction_Indicate.h">
+      <Filter>SCRIPT\WPS\ALGO\Action\Parent</Filter>
+    </ClInclude>
+    <ClInclude Include="ScriptAlgoAction_DirectPlay.h">
+      <Filter>SCRIPT\WPS\ALGO\Action\Parent</Filter>
+    </ClInclude>
+    <ClInclude Include="ScriptAlgoAction_Else.h">
+      <Filter>SCRIPT\WPS\ALGO\Action\Parent</Filter>
+    </ClInclude>
+    <ClInclude Include="ScriptAlgoAction_EventHandler.h">
+      <Filter>SCRIPT\WPS\ALGO\Action\Parent</Filter>
+    </ClInclude>
+    <ClInclude Include="ScriptAlgoAction_EventStatusClear.h">
+      <Filter>SCRIPT\WPS\ALGO\Action\Parent</Filter>
+    </ClInclude>
+    <ClInclude Include="ScriptAlgoAction_EventStatusRegister.h">
+      <Filter>SCRIPT\WPS\ALGO\Action\Parent</Filter>
+    </ClInclude>
+    <ClInclude Include="ScriptAlgoAction_EventStatusSelect.h">
+      <Filter>SCRIPT\WPS\ALGO\Action\Parent</Filter>
+    </ClInclude>
+    <ClInclude Include="ScriptAlgoAction_ExecAtOnce.h">
+      <Filter>SCRIPT\WPS\ALGO\Action\Parent</Filter>
+    </ClInclude>
+    <ClInclude Include="ScriptAlgoAction_ExecWps.h">
+      <Filter>SCRIPT\WPS\ALGO\Action\Parent</Filter>
+    </ClInclude>
+    <ClInclude Include="ScriptAlgoAction_FlashPlay.h">
+      <Filter>SCRIPT\WPS\ALGO\Action\Parent</Filter>
+    </ClInclude>
+    <ClInclude Include="ScriptAlgoAction_GetFaintLocation.h">
+      <Filter>SCRIPT\WPS\ALGO\Action\Parent</Filter>
+    </ClInclude>
+    <ClInclude Include="ScriptAlgoAction_If.h">
+      <Filter>SCRIPT\WPS\ALGO\Action\Parent</Filter>
+    </ClInclude>
+    <ClInclude Include="ScriptAlgoAction_MobList.h">
+      <Filter>SCRIPT\WPS\ALGO\Action\Parent</Filter>
+    </ClInclude>
+    <ClInclude Include="ScriptAlgoAction_PlayBgm.h">
+      <Filter>SCRIPT\WPS\ALGO\Action\Parent</Filter>
+    </ClInclude>
+    <ClInclude Include="ScriptAlgoAction_PlayJingle.h">
+      <Filter>SCRIPT\WPS\ALGO\Action\Parent</Filter>
+    </ClInclude>
+    <ClInclude Include="ScriptAlgoAction_RegisterBuff.h">
+      <Filter>SCRIPT\WPS\ALGO\Action\Parent</Filter>
+    </ClInclude>
+    <ClInclude Include="ScriptAlgoAction_RemoveNpc.h">
+      <Filter>SCRIPT\WPS\ALGO\Action\Parent</Filter>
+    </ClInclude>
+    <ClInclude Include="ScriptAlgoAction_SendAISEvent.h">
+      <Filter>SCRIPT\WPS\ALGO\Action\Parent</Filter>
+    </ClInclude>
+    <ClInclude Include="ScriptAlgoAction_SendEventToAis.h">
+      <Filter>SCRIPT\WPS\ALGO\Action\Parent</Filter>
+    </ClInclude>
+    <ClInclude Include="ScriptAlgoAction_SendEventToSps.h">
+      <Filter>SCRIPT\WPS\ALGO\Action\Parent</Filter>
+    </ClInclude>
+    <ClInclude Include="ScriptAlgoAction_SendEventToTqs.h">
+      <Filter>SCRIPT\WPS\ALGO\Action\Parent</Filter>
+    </ClInclude>
+    <ClInclude Include="ScriptAlgoAction_SendEventToWps.h">
+      <Filter>SCRIPT\WPS\ALGO\Action\Parent</Filter>
+    </ClInclude>
+    <ClInclude Include="ScriptAlgoAction_SendSPSEvent.h">
+      <Filter>SCRIPT\WPS\ALGO\Action\Parent</Filter>
+    </ClInclude>
+    <ClInclude Include="ScriptAlgoAction_Switch.h">
+      <Filter>SCRIPT\WPS\ALGO\Action\Parent</Filter>
+    </ClInclude>
+    <ClInclude Include="ScriptAlgoAction_SystemMessage.h">
+      <Filter>SCRIPT\WPS\ALGO\Action\Parent</Filter>
+    </ClInclude>
+    <ClInclude Include="ScriptAlgoAction_TelecastMessage.h">
+      <Filter>SCRIPT\WPS\ALGO\Action\Parent</Filter>
+    </ClInclude>
+    <ClInclude Include="ScriptAlgoAction_Then.h">
+      <Filter>SCRIPT\WPS\ALGO\Action\Parent</Filter>
+    </ClInclude>
+    <ClInclude Include="ScriptAlgoAction_TimeCountdown.h">
+      <Filter>SCRIPT\WPS\ALGO\Action\Parent</Filter>
+    </ClInclude>
+    <ClInclude Include="ScriptAlgoAction_UnregisterBuff.h">
+      <Filter>SCRIPT\WPS\ALGO\Action\Parent</Filter>
+    </ClInclude>
+    <ClInclude Include="ScriptAlgoCondition_AllPlayerFaint.h">
+      <Filter>SCRIPT\WPS\ALGO\Condition\Parent</Filter>
+    </ClInclude>
+    <ClInclude Include="ScriptAlgoCondition_CheckBattle.h">
+      <Filter>SCRIPT\WPS\ALGO\Condition\Parent</Filter>
+    </ClInclude>
+    <ClInclude Include="ScriptAlgoCondition_CheckCountDown.h">
+      <Filter>SCRIPT\WPS\ALGO\Condition\Parent</Filter>
+    </ClInclude>
+    <ClInclude Include="ScriptAlgoCondition_Compare.h">
+      <Filter>SCRIPT\WPS\ALGO\Condition\Parent</Filter>
+    </ClInclude>
+    <ClInclude Include="ScriptAlgoCondition_RecvEventFromAis.h">
+      <Filter>SCRIPT\WPS\ALGO\Condition\Parent</Filter>
+    </ClInclude>
+    <ClInclude Include="ScriptAlgoCondition_RecvEventFromItem.h">
+      <Filter>SCRIPT\WPS\ALGO\Condition\Parent</Filter>
+    </ClInclude>
+    <ClInclude Include="ScriptAlgoCondition_RecvEventFromSps.h">
+      <Filter>SCRIPT\WPS\ALGO\Condition\Parent</Filter>
+    </ClInclude>
+    <ClInclude Include="ScriptAlgoCondition_RecvEventFromTqs.h">
+      <Filter>SCRIPT\WPS\ALGO\Condition\Parent</Filter>
+    </ClInclude>
+    <ClInclude Include="ScriptAlgoCondition_RecvEventFromTs.h">
+      <Filter>SCRIPT\WPS\ALGO\Condition\Parent</Filter>
+    </ClInclude>
+    <ClInclude Include="ScriptAlgoCondition_RecvEventFromWps.h">
+      <Filter>SCRIPT\WPS\ALGO\Condition\Parent</Filter>
+    </ClInclude>
+    <ClInclude Include="ScriptAlgoCondition_RecvSpsEvent.h">
+      <Filter>SCRIPT\WPS\ALGO\Condition\Parent</Filter>
+    </ClInclude>
+    <ClInclude Include="ScriptAlgoCondition_RecvTsEvent.h">
+      <Filter>SCRIPT\WPS\ALGO\Condition\Parent</Filter>
+    </ClInclude>
+    <ClInclude Include="ScriptAlgoCondition_SpawnedMob.h">
+      <Filter>SCRIPT\WPS\ALGO\Condition\Parent</Filter>
+    </ClInclude>
+    <ClInclude Include="ScriptAlgoCondition_SpawnedNpc.h">
+      <Filter>SCRIPT\WPS\ALGO\Condition\Parent</Filter>
+    </ClInclude>
+    <ClInclude Include="ScriptAlgoCondition_WaitCondition.h">
+      <Filter>SCRIPT\WPS\ALGO\Condition\Parent</Filter>
+    </ClInclude>
+    <ClInclude Include="ScriptAlgoAction_Function.h">
+      <Filter>SCRIPT\WPS\ALGO\Action\Parent</Filter>
+    </ClInclude>
+    <ClInclude Include="QuestProgress.h">
+      <Filter>character NEW\Player\TriggerSystem%28TS%29</Filter>
+    </ClInclude>
+    <ClInclude Include="HtbSkillManager.h">
+      <Filter>Skill\HTB</Filter>
+    </ClInclude>
+    <ClInclude Include="HtbSkill.h">
+      <Filter>Skill\HTB</Filter>
+    </ClInclude>
+    <ClInclude Include="ScriptAlgoDefine.h">
+      <Filter>SCRIPT\ALGO</Filter>
+    </ClInclude>
+    <ClInclude Include="TimeQuestScriptManager.h">
+      <Filter>SCRIPT\TQS</Filter>
+    </ClInclude>
+    <ClInclude Include="TQSDefine.h">
+      <Filter>SCRIPT\TQS</Filter>
+    </ClInclude>
+    <ClInclude Include="ServerTimeQuestScript.h">
+      <Filter>SCRIPT\TQS</Filter>
+    </ClInclude>
+    <ClInclude Include="TQSScript.h">
+      <Filter>SCRIPT\TQS\Lua</Filter>
+    </ClInclude>
+    <ClInclude Include="TQSNodeFactory.h">
+      <Filter>SCRIPT\TQS\Main\Factory</Filter>
+    </ClInclude>
+    <ClInclude Include="TQSManager.h">
+      <Filter>SCRIPT\TQS\Main\Main</Filter>
+    </ClInclude>
+    <ClInclude Include="TQSNodeAction_Wait.h">
+      <Filter>SCRIPT\TQS\Node\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="TQSNodeAction_TimeCountdown.h">
+      <Filter>SCRIPT\TQS\Node\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="TQSNodeAction_PlayJingle.h">
+      <Filter>SCRIPT\TQS\Node\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="TQSNodeAction_PlayBgm.h">
+      <Filter>SCRIPT\TQS\Node\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="TQSNodeAction_Teleport.h">
+      <Filter>SCRIPT\TQS\Node\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="TQSNodeAction_RegisterCondition.h">
+      <Filter>SCRIPT\TQS\Node\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="TQSNodeAction_DirectionIndicate.h">
+      <Filter>SCRIPT\TQS\Node\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="TQSNodeAction_ProgressMessage.h">
+      <Filter>SCRIPT\TQS\Node\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="TQSNodeAction_BroadMessage.h">
+      <Filter>SCRIPT\TQS\Node\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="TQSNodeAction_Information.h">
+      <Filter>SCRIPT\TQS\Node\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="TQSNodeAction_Reward.h">
+      <Filter>SCRIPT\TQS\Node\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="TQSNodeAction_SendTqsEvent.h">
+      <Filter>SCRIPT\TQS\Node\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="TQSNodeAction_SendTsEvent.h">
+      <Filter>SCRIPT\TQS\Node\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="TQSNodeAction_ChangeObjectState.h">
+      <Filter>SCRIPT\TQS\Node\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="TQSNodeAction_ChangeStage.h">
+      <Filter>SCRIPT\TQS\Node\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="TQSNodeAction_DirectPlay.h">
+      <Filter>SCRIPT\TQS\Node\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="TQSNodeAction_RemoveMobGroup.h">
+      <Filter>SCRIPT\TQS\Node\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="TQSNodeAction_AddMobGroup.h">
+      <Filter>SCRIPT\TQS\Node\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="TQSNodeAction_AddMob.h">
+      <Filter>SCRIPT\TQS\Node\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="TQSNodeAction_RemoveNpc.h">
+      <Filter>SCRIPT\TQS\Node\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="TQSNodeAction_AddNpc.h">
+      <Filter>SCRIPT\TQS\Node\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="TQSNodeCondition_AllPlayerFaint.h">
+      <Filter>SCRIPT\TQS\Node\Condition</Filter>
+    </ClInclude>
+    <ClInclude Include="TQSNodeCondition_Child.h">
+      <Filter>SCRIPT\TQS\Node\Condition</Filter>
+    </ClInclude>
+    <ClInclude Include="TQSNodeCondition_AreaEnter.h">
+      <Filter>SCRIPT\TQS\Node\Condition</Filter>
+    </ClInclude>
+    <ClInclude Include="TQSNodeCondition_NpcFaint.h">
+      <Filter>SCRIPT\TQS\Node\Condition</Filter>
+    </ClInclude>
+    <ClInclude Include="TQSNodeCondition_CheckMobGroup.h">
+      <Filter>SCRIPT\TQS\Node\Condition</Filter>
+    </ClInclude>
+    <ClInclude Include="TQSNodeCondition_CheckTime.h">
+      <Filter>SCRIPT\TQS\Node\Condition</Filter>
+    </ClInclude>
+    <ClInclude Include="TQSNodeCondition_RecvSpsEvent.h">
+      <Filter>SCRIPT\TQS\Node\Condition</Filter>
+    </ClInclude>
+    <ClInclude Include="TQSNodeCondition_RecvTsEvent.h">
+      <Filter>SCRIPT\TQS\Node\Condition</Filter>
+    </ClInclude>
+    <ClInclude Include="TQSNodeGameStage.h">
+      <Filter>SCRIPT\TQS\Node\State</Filter>
+    </ClInclude>
+    <ClInclude Include="TQSNodeGameBegin.h">
+      <Filter>SCRIPT\TQS\Node\State</Filter>
+    </ClInclude>
+    <ClInclude Include="TQSNodeGameEnd.h">
+      <Filter>SCRIPT\TQS\Node\State</Filter>
+    </ClInclude>
+    <ClInclude Include="WpsAlgoObject.h">
+      <Filter>SCRIPT\WPS\ALGO\Object</Filter>
+    </ClInclude>
+    <ClInclude Include="UltimateDungeon.h">
+      <Filter>Dungeon\Ultimate Dungeon %28UD%29</Filter>
+    </ClInclude>
+    <ClInclude Include="Guild.h">
+      <Filter>Guild/DOJO</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayerItemContainer.h">
+      <Filter>character NEW\Player\Item</Filter>
+    </ClInclude>
+    <ClInclude Include="DynamicFieldSystemEvent.h">
+      <Filter>In-Game Event System\Underworld Invasion</Filter>
+    </ClInclude>
+    <ClInclude Include="DragonballHunt.h">
+      <Filter>In-Game Event System\Dragonball Hunt</Filter>
+    </ClInclude>
+    <ClInclude Include="RankBattle.h">
+      <Filter>Rank Battle</Filter>
+    </ClInclude>
+    <ClInclude Include="AspectState.h">
+      <Filter>character NEW\Character\State System\base\aspect</Filter>
+    </ClInclude>
+    <ClInclude Include="CharState.h">
+      <Filter>character NEW\Character\State System\base\state</Filter>
+    </ClInclude>
+    <ClInclude Include="BotStateManager.h">
+      <Filter>character NEW\Character\State System\bot</Filter>
+    </ClInclude>
+    <ClInclude Include="AspectState_GreatNamek.h">
+      <Filter>character NEW\Character\State System\aspects</Filter>
+    </ClInclude>
+    <ClInclude Include="AspectState_Kaioken.h">
+      <Filter>character NEW\Character\State System\aspects</Filter>
+    </ClInclude>
+    <ClInclude Include="AspectState_PureMajin.h">
+      <Filter>character NEW\Character\State System\aspects</Filter>
+    </ClInclude>
+    <ClInclude Include="AspectState_RollingAttack.h">
+      <Filter>character NEW\Character\State System\aspects</Filter>
+    </ClInclude>
+    <ClInclude Include="AspectState_SpinningAttack.h">
+      <Filter>character NEW\Character\State System\aspects</Filter>
+    </ClInclude>
+    <ClInclude Include="AspectState_SuperSaiyan.h">
+      <Filter>character NEW\Character\State System\aspects</Filter>
+    </ClInclude>
+    <ClInclude Include="AspectState_Vehicle.h">
+      <Filter>character NEW\Character\State System\aspects</Filter>
+    </ClInclude>
+    <ClInclude Include="ConditionState_Invisible.h">
+      <Filter>character NEW\Character\State System\conditions</Filter>
+    </ClInclude>
+    <ClInclude Include="ConditionState_HidingKi.h">
+      <Filter>character NEW\Character\State System\conditions</Filter>
+    </ClInclude>
+    <ClInclude Include="ConditionState_Invincible.h">
+      <Filter>character NEW\Character\State System\conditions</Filter>
+    </ClInclude>
+    <ClInclude Include="ConditionState_Taunt.h">
+      <Filter>character NEW\Character\State System\conditions</Filter>
+    </ClInclude>
+    <ClInclude Include="ConditionState_AttackDisallow.h">
+      <Filter>character NEW\Character\State System\conditions</Filter>
+    </ClInclude>
+    <ClInclude Include="ConditionState_Transparent.h">
+      <Filter>character NEW\Character\State System\conditions</Filter>
+    </ClInclude>
+    <ClInclude Include="ConditionState_CantBeTargetted.h">
+      <Filter>character NEW\Character\State System\conditions</Filter>
+    </ClInclude>
+    <ClInclude Include="ConditionState_DirectPlay.h">
+      <Filter>character NEW\Character\State System\conditions</Filter>
+    </ClInclude>
+    <ClInclude Include="ConditionState_Bleeding.h">
+      <Filter>character NEW\Character\State System\conditions</Filter>
+    </ClInclude>
+    <ClInclude Include="ConditionState_Poison.h">
+      <Filter>character NEW\Character\State System\conditions</Filter>
+    </ClInclude>
+    <ClInclude Include="ConditionState_Stomachache.h">
+      <Filter>character NEW\Character\State System\conditions</Filter>
+    </ClInclude>
+    <ClInclude Include="ConditionState_Burn.h">
+      <Filter>character NEW\Character\State System\conditions</Filter>
+    </ClInclude>
+    <ClInclude Include="ConditionState_Confused.h">
+      <Filter>character NEW\Character\State System\conditions</Filter>
+    </ClInclude>
+    <ClInclude Include="ConditionState_Terror.h">
+      <Filter>character NEW\Character\State System\conditions</Filter>
+    </ClInclude>
+    <ClInclude Include="ConditionState_Barrier.h">
+      <Filter>character NEW\Character\State System\conditions</Filter>
+    </ClInclude>
+    <ClInclude Include="ConditionState_DamageReflection.h">
+      <Filter>character NEW\Character\State System\conditions</Filter>
+    </ClInclude>
+    <ClInclude Include="ConditionState_AfterEffect.h">
+      <Filter>character NEW\Character\State System\conditions</Filter>
+    </ClInclude>
+    <ClInclude Include="ConditionState_ChargingBlocked.h">
+      <Filter>character NEW\Character\State System\conditions</Filter>
+    </ClInclude>
+    <ClInclude Include="ConditionState_FakeDeath.h">
+      <Filter>character NEW\Character\State System\conditions</Filter>
+    </ClInclude>
+    <ClInclude Include="ConditionState_NullifiedDamage.h">
+      <Filter>character NEW\Character\State System\conditions</Filter>
+    </ClInclude>
+    <ClInclude Include="ConditionState_ClickDisable.h">
+      <Filter>character NEW\Character\State System\conditions</Filter>
+    </ClInclude>
+    <ClInclude Include="ConditionState_ClientUiDisable.h">
+      <Filter>character NEW\Character\State System\conditions</Filter>
+    </ClInclude>
+    <ClInclude Include="ConditionState_TaiyouKen.h">
+      <Filter>character NEW\Character\State System\conditions</Filter>
+    </ClInclude>
+    <ClInclude Include="ConditionState_BattleInability.h">
+      <Filter>character NEW\Character\State System\conditions</Filter>
+    </ClInclude>
+    <ClInclude Include="ConditionState_SkillInability.h">
+      <Filter>character NEW\Character\State System\conditions</Filter>
+    </ClInclude>
+    <ClInclude Include="ConditionState_RevivalAftereffect.h">
+      <Filter>character NEW\Character\State System\conditions</Filter>
+    </ClInclude>
+    <ClInclude Include="ConditionState_LpAutoRecover.h">
+      <Filter>character NEW\Character\State System\conditions</Filter>
+    </ClInclude>
+    <ClInclude Include="ConditionState_EpAutoRecover.h">
+      <Filter>character NEW\Character\State System\conditions</Filter>
+    </ClInclude>
+    <ClInclude Include="ConditionState_Rabies.h">
+      <Filter>character NEW\Character\State System\conditions</Filter>
+    </ClInclude>
+    <ClInclude Include="ConditionState_Drunk.h">
+      <Filter>character NEW\Character\State System\conditions</Filter>
+    </ClInclude>
+    <ClInclude Include="ConditionState_ExcitationMale.h">
+      <Filter>character NEW\Character\State System\conditions</Filter>
+    </ClInclude>
+    <ClInclude Include="ConditionState_ExcitationFemale.h">
+      <Filter>character NEW\Character\State System\conditions</Filter>
+    </ClInclude>
+    <ClInclude Include="WpsNodeAction_CCBD.h">
+      <Filter>SCRIPT\WPS\Node\Action\CCBD</Filter>
+    </ClInclude>
+    <ClInclude Include="WpsNodeAction_CCBD_register_direct_play.h">
+      <Filter>SCRIPT\WPS\Node\Action\CCBD</Filter>
+    </ClInclude>
+    <ClInclude Include="WpsNodeAction_CCBD_wait_user.h">
+      <Filter>SCRIPT\WPS\Node\Action\CCBD</Filter>
+    </ClInclude>
+    <ClInclude Include="WpsNodeAction_CCBD_stage.h">
+      <Filter>SCRIPT\WPS\Node\Action\CCBD</Filter>
+    </ClInclude>
+    <ClInclude Include="WpsNodeAction_CCBD_exec_pattern.h">
+      <Filter>SCRIPT\WPS\Node\Action\CCBD</Filter>
+    </ClInclude>
+    <ClInclude Include="WpsNodeAction_CCBD_stage_clear.h">
+      <Filter>SCRIPT\WPS\Node\Action\CCBD</Filter>
+    </ClInclude>
+    <ClInclude Include="WpsNodeAction_CCBD_reward.h">
+      <Filter>SCRIPT\WPS\Node\Action\CCBD</Filter>
+    </ClInclude>
+    <ClInclude Include="WpsNodeAction_CCBD_Leave.h">
+      <Filter>SCRIPT\WPS\Node\Action\CCBD</Filter>
+    </ClInclude>
+    <ClInclude Include="WpsNodeCondition_CCBD_check_limit_time.h">
+      <Filter>SCRIPT\WPS\Node\Condition\CCBD</Filter>
+    </ClInclude>
+    <ClInclude Include="WpsNodeCondition_CCBD_check_run_state.h">
+      <Filter>SCRIPT\WPS\Node\Condition\CCBD</Filter>
+    </ClInclude>
+    <ClInclude Include="WpsNodeCondition_CCBD_pattern.h">
+      <Filter>SCRIPT\WPS\Node\Condition\CCBD</Filter>
+    </ClInclude>
+    <ClInclude Include="WpsScriptAlgoAction_CCBD.h">
+      <Filter>SCRIPT\WPS\ALGO\Action\CCBD</Filter>
+    </ClInclude>
+    <ClInclude Include="WpsScriptAlgoAction_CCBD_register_direct_play.h">
+      <Filter>SCRIPT\WPS\ALGO\Action\CCBD</Filter>
+    </ClInclude>
+    <ClInclude Include="WpsScriptAlgoAction_CCBD_wait_user.h">
+      <Filter>SCRIPT\WPS\ALGO\Action\CCBD</Filter>
+    </ClInclude>
+    <ClInclude Include="WpsScriptAlgoAction_CCBD_stage.h">
+      <Filter>SCRIPT\WPS\ALGO\Action\CCBD</Filter>
+    </ClInclude>
+    <ClInclude Include="WpsScriptAlgoAction_CCBD_exec_pattern.h">
+      <Filter>SCRIPT\WPS\ALGO\Action\CCBD</Filter>
+    </ClInclude>
+    <ClInclude Include="WpsScriptAlgoAction_CCBD_stage_clear.h">
+      <Filter>SCRIPT\WPS\ALGO\Action\CCBD</Filter>
+    </ClInclude>
+    <ClInclude Include="WpsScriptAlgoAction_CCBD_Leave.h">
+      <Filter>SCRIPT\WPS\ALGO\Action\CCBD</Filter>
+    </ClInclude>
+    <ClInclude Include="WpsScriptAlgoCondition_CCBD_check_run_state.h">
+      <Filter>SCRIPT\WPS\ALGO\Condition\CCBD</Filter>
+    </ClInclude>
+    <ClInclude Include="WpsScriptAlgoCondition_CCBD_check_limit_time.h">
+      <Filter>SCRIPT\WPS\ALGO\Condition\CCBD</Filter>
+    </ClInclude>
+    <ClInclude Include="WpsScriptAlgoCondition_CCBD_pattern.h">
+      <Filter>SCRIPT\WPS\ALGO\Condition\CCBD</Filter>
+    </ClInclude>
+    <ClInclude Include="WpsScriptAlgoAction_CCBD_reward.h">
+      <Filter>SCRIPT\WPS\ALGO\Action\CCBD</Filter>
+    </ClInclude>
+    <ClInclude Include="BattleDungeon.h">
+      <Filter>Dungeon\CCBD</Filter>
+    </ClInclude>
+    <ClInclude Include="WpsAlgoStageFailed.h">
+      <Filter>SCRIPT\WPS\ALGO\Stage\Parent</Filter>
+    </ClInclude>
+    <ClInclude Include="WpsAlgoStagePrepare.h">
+      <Filter>SCRIPT\WPS\ALGO\Stage\Parent</Filter>
+    </ClInclude>
+    <ClInclude Include="WpsAlgoStage.h">
+      <Filter>SCRIPT\WPS\ALGO\Stage\Parent</Filter>
+    </ClInclude>
+    <ClInclude Include="TQSNodeAction_Function.h">
+      <Filter>SCRIPT\TQS\Node\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="TqsAlgoAction_Information.h">
+      <Filter>SCRIPT\TQS\ALGO\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="TqsAlgoAction_ProgressMessage.h">
+      <Filter>SCRIPT\TQS\ALGO\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="TqsAlgoAction_RegisterCondition.h">
+      <Filter>SCRIPT\TQS\ALGO\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="TqsAlgoAction_Reward.h">
+      <Filter>SCRIPT\TQS\ALGO\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="TqsAlgoAction_SendTqsEvent.h">
+      <Filter>SCRIPT\TQS\ALGO\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="TqsAlgoAction_SendTsEvent.h">
+      <Filter>SCRIPT\TQS\ALGO\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="TqsAlgoAction_Teleport.h">
+      <Filter>SCRIPT\TQS\ALGO\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="TqsAlgoStage_Begin.h">
+      <Filter>SCRIPT\TQS\ALGO\Stage</Filter>
+    </ClInclude>
+    <ClInclude Include="TqsAlgoStage_End.h">
+      <Filter>SCRIPT\TQS\ALGO\Stage</Filter>
+    </ClInclude>
+    <ClInclude Include="TqsAlgoCondition_NpcFaint.h">
+      <Filter>SCRIPT\TQS\ALGO\Condition</Filter>
+    </ClInclude>
+    <ClInclude Include="TqsAlgoCondition_RecvTsEvent.h">
+      <Filter>SCRIPT\TQS\ALGO\Condition</Filter>
+    </ClInclude>
+    <ClInclude Include="TqsAlgoCondition_RecvSpsEvent.h">
+      <Filter>SCRIPT\TQS\ALGO\Condition</Filter>
+    </ClInclude>
+    <ClInclude Include="TqsAlgoCondition_Child.h">
+      <Filter>SCRIPT\TQS\ALGO\Condition</Filter>
+    </ClInclude>
+    <ClInclude Include="TqsAlgoCondition_CheckTime.h">
+      <Filter>SCRIPT\TQS\ALGO\Condition</Filter>
+    </ClInclude>
+    <ClInclude Include="TqsAlgoCondition_CheckMobGroup.h">
+      <Filter>SCRIPT\TQS\ALGO\Condition</Filter>
+    </ClInclude>
+    <ClInclude Include="TqsAlgoCondition_AreaEnter.h">
+      <Filter>SCRIPT\TQS\ALGO\Condition</Filter>
+    </ClInclude>
+    <ClInclude Include="TqsAlgoCondition_AllPlayerFaint.h">
+      <Filter>SCRIPT\TQS\ALGO\Condition</Filter>
+    </ClInclude>
+    <ClInclude Include="TqsAlgoAction_Wait.h">
+      <Filter>SCRIPT\TQS\ALGO\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="TqsAlgoAction_TimeCountdown.h">
+      <Filter>SCRIPT\TQS\ALGO\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="TqsAlgoAction_RemoveNpc.h">
+      <Filter>SCRIPT\TQS\ALGO\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="TqsAlgoAction_RemoveMobGroup.h">
+      <Filter>SCRIPT\TQS\ALGO\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="TqsAlgoAction_PlayJingle.h">
+      <Filter>SCRIPT\TQS\ALGO\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="TqsAlgoAction_PlayBgm.h">
+      <Filter>SCRIPT\TQS\ALGO\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="TqsAlgoAction_Function.h">
+      <Filter>SCRIPT\TQS\ALGO\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="TqsAlgoAction_DirectPlay.h">
+      <Filter>SCRIPT\TQS\ALGO\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="TqsAlgoAction_Direction_Indicate.h">
+      <Filter>SCRIPT\TQS\ALGO\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="TqsAlgoAction_ChangeStage.h">
+      <Filter>SCRIPT\TQS\ALGO\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="TqsAlgoAction_ChangeObjectState.h">
+      <Filter>SCRIPT\TQS\ALGO\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="TqsAlgoAction_BroadMessage.h">
+      <Filter>SCRIPT\TQS\ALGO\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="TqsAlgoAction_AddNpc.h">
+      <Filter>SCRIPT\TQS\ALGO\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="TqsAlgoAction_AddMobGroup.h">
+      <Filter>SCRIPT\TQS\ALGO\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="TqsAlgoAction_AddMob.h">
+      <Filter>SCRIPT\TQS\ALGO\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="TqsAlgoObject.h">
+      <Filter>SCRIPT\TQS\ALGO\Object</Filter>
+    </ClInclude>
+    <ClInclude Include="TqsAlgoStage.h">
+      <Filter>SCRIPT\TQS\ALGO\Stage\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="TqsAlgoStage_Stage.h">
+      <Filter>SCRIPT\TQS\ALGO\Stage</Filter>
+    </ClInclude>
+    <ClInclude Include="TqsAlgoBase.h">
+      <Filter>SCRIPT\TQS\ALGO\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="TqsAlgoAction_Base.h">
+      <Filter>SCRIPT\TQS\ALGO\Action\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="TqsAlgoCondition_Base.h">
+      <Filter>SCRIPT\TQS\ALGO\Condition\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="TimeQuestControlFactory.h">
+      <Filter>SCRIPT\TQS\ALGO</Filter>
+    </ClInclude>
+    <ClInclude Include="WorldPlayControlFactory.h">
+      <Filter>SCRIPT\WPS\ALGO</Filter>
+    </ClInclude>
+    <ClInclude Include="ScriptAlgoCondition.h">
+      <Filter>SCRIPT\WPS\ALGO\Condition\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="ScriptAlgoAction.h">
+      <Filter>SCRIPT\WPS\ALGO\Action\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="ScriptAlgoBase.h">
+      <Filter>SCRIPT\WPS\ALGO\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="ScriptAlgoState.h">
+      <Filter>SCRIPT\WPS\ALGO\Stage\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="ScriptAlgoObject.h">
+      <Filter>SCRIPT\ALGO\Object</Filter>
+    </ClInclude>
+    <ClInclude Include="ScriptAlgoObjectManager.h">
+      <Filter>SCRIPT\ALGO\Object\Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="ScriptAlgoController.h">
+      <Filter>SCRIPT\ALGO\Object\Controller</Filter>
+    </ClInclude>
+    <ClInclude Include="TriggerObject.h">
+      <Filter>character NEW\ObjTrigger</Filter>
+    </ClInclude>
+    <ClInclude Include="ServerNaviLog.h">
+      <Filter>Navi\Log</Filter>
+    </ClInclude>
+    <ClInclude Include="qg_opcodes.h">
+      <Filter>Servers\QueryServer\qg_opcodes</Filter>
+    </ClInclude>
+    <ClInclude Include="ug_opcodes.h">
+      <Filter>character NEW\Player\Session\opcodes</Filter>
+    </ClInclude>
+    <ClInclude Include="tg_opcodes.h">
+      <Filter>Servers\ChatServer\tg_opcodes</Filter>
+    </ClInclude>
+    <ClInclude Include="mg_opcodes.h">
+      <Filter>Servers\MasterServer\mg_opcodes</Filter>
+    </ClInclude>
+    <ClInclude Include="DojoWar.h">
+      <Filter>Guild/DOJO</Filter>
+    </ClInclude>
+    <ClInclude Include="BudokaiManager.h">
+      <Filter>In-Game Event System\Budokai</Filter>
+    </ClInclude>
+    <ClInclude Include="ExpEvent.h">
+      <Filter>In-Game Event System\Exp Event</Filter>
+    </ClInclude>
+    <ClInclude Include="DragonballScramble.h">
+      <Filter>In-Game Event System\Dragonball Scramble</Filter>
+    </ClInclude>
+    <ClInclude Include="DiceManager.h">
+      <Filter>utilities</Filter>
+    </ClInclude>
+    <ClInclude Include="BusSystem.h">
+      <Filter>BUS SYSTEM</Filter>
+    </ClInclude>
+    <ClInclude Include="scsManager.h">
+      <Filter>ANTI-BOT%28SCS%29</Filter>
+    </ClInclude>
+    <ClInclude Include="HoneyBeeEvent.h">
+      <Filter>In-Game Event System\HoneyBee</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,153 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{7752DF80-46EF-4F55-81CE-2A77867F5DA5}</ProjectGuid>
+    <RootNamespace>ChatServer</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>12.0.21005.1</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>$(SolutionDir)ExecutionEnv/</OutDir>
+    <IntDir>ExecutionEnv\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Midl>
+      <TargetEnvironment>X64</TargetEnvironment>
+    </Midl>
+    <ClCompile>
+      <PreprocessorDefinitions>WIN64;_CONSOLE;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <AdditionalIncludeDirectories>..\..\..\NtlLib\Server\NtlNetwork;..\..\..\NtlLib\Server\NtlSystem;..\..\..\NtlLib\Server\NtlThread;..\..\..\NtlLib\Server\NtlSfx;..\..\..\NtlLib\Shared;..\..\..\NtlLib\Shared\Util;..\..\..\NtlLib\Shared\NtlTrigger;..\..\..\NtlLib\Server\boost_1_64_0;..\..\..\NtlLib\Server\mysql57;..\..\..\NtlLib\Server\Database;..\..\..\NtlLib\Server\servercommon;..\..\..\DboShared\NtlGameTable;..\..\..\DboShared\NtlShared2;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OmitFramePointers>false</OmitFramePointers>
+      <WholeProgramOptimization>false</WholeProgramOptimization>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>DebugFull</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <TargetMachine>MachineX64</TargetMachine>
+      <AdditionalDependencies>Ws2_32.lib;winmm.lib;libmysql.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>..\..\..\NtlLib\Server\boost_1_64_0;..\..\..\NtlLib\Server\mysql57\lib;$(SolutionDir)x64\Release;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention />
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="AuctionHouse.cpp" />
+    <ClCompile Include="ChatServer.cpp" />
+    <ClCompile Include="ClientSession.cpp" />
+    <ClCompile Include="Dojo.cpp" />
+    <ClCompile Include="DojoManager.cpp" />
+    <ClCompile Include="DojoWar.cpp" />
+    <ClCompile Include="gt_opcodes.cpp" />
+    <ClCompile Include="Guild.cpp" />
+    <ClCompile Include="GuildManager.cpp" />
+    <ClCompile Include="HlsSlotMachine.cpp" />
+    <ClCompile Include="MasterServerSession.cpp" />
+    <ClCompile Include="Party.cpp" />
+    <ClCompile Include="RankBattle.cpp" />
+    <ClCompile Include="SubNeighborServerInfoManager.cpp" />
+    <ClCompile Include="PacketChatServer.cpp" />
+    <ClCompile Include="PlayerManager.cpp" />
+    <ClCompile Include="Player.cpp" />
+    <ClCompile Include="GameServerPacket.cpp" />
+    <ClCompile Include="QueryServerSession.cpp" />
+    <ClCompile Include="ServerPassiveSession.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="TableContainerManager.cpp" />
+    <ClCompile Include="ut_opcodes.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AuctionHouse.h" />
+    <ClInclude Include="boost.h" />
+    <ClInclude Include="ChatServer.h" />
+    <ClInclude Include="ClientSession.h" />
+    <ClInclude Include="Dojo.h" />
+    <ClInclude Include="DojoManager.h" />
+    <ClInclude Include="DojoWar.h" />
+    <ClInclude Include="GameSessionFactory.h" />
+    <ClInclude Include="gt_opcodes.h" />
+    <ClInclude Include="Guild.h" />
+    <ClInclude Include="GuildManager.h" />
+    <ClInclude Include="HlsSlotMachine.h" />
+    <ClInclude Include="MasterServerSession.h" />
+    <ClInclude Include="Party.h" />
+    <ClInclude Include="RankBattle.h" />
+    <ClInclude Include="SubNeighborServerInfoManager.h" />
+    <ClInclude Include="PlayerManager.h" />
+    <ClInclude Include="Player.h" />
+    <ClInclude Include="QueryServerSession.h" />
+    <ClInclude Include="ServerPassiveSession.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="TableContainerManager.h" />
+    <ClInclude Include="ut_opcodes.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\DboShared\NtlGameTable\NtlGameTable.vcxproj">
+      <Project>{9a4dc8e8-16ef-463b-8f14-77f447a782cc}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\DboShared\NtlShared2\NtlShared.vcxproj">
+      <Project>{573eb1e4-7620-479e-8ccf-def06491545b}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\NtlLib\Server\Database\Database.vcxproj">
+      <Project>{5b2696c6-15ee-4d0d-8632-f209b5996f15}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\NtlLib\Server\NtlNetwork\NtlNetwork.vcxproj">
+      <Project>{5cdc731a-4c57-4d49-a72a-911ba19c3c14}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\NtlLib\Server\NtlSfx\NtlSfx.vcxproj">
+      <Project>{f038f0b5-67c7-4da4-8e3c-c45ab1e4b352}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\NtlLib\Server\NtlSystem\NtlSystem.vcxproj">
+      <Project>{6d76c448-b419-424f-ad6a-04041b1c2315}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\NtlLib\Server\NtlThread\NtlThread.vcxproj">
+      <Project>{04b8d510-b763-45d7-b13c-531ba7dcc3f4}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\NtlLib\Server\servercommon\servercommon.vcxproj">
+      <Project>{aa5dbd5c-a152-4c17-af86-476f0931f6e4}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\NtlLib\Shared\NtlXMLLoader\NtlXMLLoader.vcxproj">
+      <Project>{9d941cac-4183-44e3-aec3-817c0a32d1dd}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\NtlLib\Shared\Util\Util.vcxproj">
+      <Project>{5229f8ae-a505-4077-b6d3-5ce0164dfe73}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

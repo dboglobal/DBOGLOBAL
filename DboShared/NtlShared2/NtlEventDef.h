@@ -1,0 +1,150 @@
+#pragma once
+
+#include "NtlSharedDef.h"
+
+//-----------------------------------------------------------------------------------
+// 4.12.2014
+//-----------------------------------------------------------------------------------
+
+const DWORD		DBO_MAX_EVENT_PLAY_TIME_TERM = 60000;
+const DWORD		DBO_MAX_EVENT_PLAY_TIME_SEC = 60;
+const DWORD		NTL_MAX_EVENT_REWARD_COUNT_IN_LOADING = 1000;
+const BYTE		NTL_MAX_EVENT_REWARD_COUNT_IN_PACKET = 56;
+
+const DWORD	DBO_MAX_DYNAMIC_FIELD_PLAY_TIME_TERM = 60000;
+const DWORD	DBO_MAX_DYNAMIC_FIELD_PLAY_TIME_SEC = 60;
+const DWORD	DBO_MAX_DYNAMIC_FIELD_SUB_MONSTER_SPAWN_COUNT = 3000;
+const DWORD	DBO_DYNAMIC_FIELD_EVENT_TIME = 7800;
+const DWORD	NTL_MAX_DYNAMIC_FIELD_REWARD_COUNT_IN_PACKET = 100;
+const DWORD	NTL_MAX_DYNAMIC_FIELD_REWARD_COUNT_IN_LOADING = 1000;
+const DWORD	NTL_MAX_DYNAMIC_BOSS = 100;
+
+#pragma pack(1)
+
+
+enum eEVENT_SYSTEM_TYPE
+{
+	EVENT_SYSTEM_TYPE_TIME_ONE,
+	EVENT_SYSTEM_TYPE_TIME_EACH,
+	EVENT_SYSTEM_TYPE_MOB_KILL,
+	EVENT_SYSTEM_TYPE_NPC_REWARD,
+	EVENT_SYSTEM_TYPE_EVENT_MACHINE,
+	EVENT_SYSTEM_TYPE_COUNTING,
+
+	EVENT_SYSTEM_TYPE_COUNT,
+};
+
+enum eEVENT_SYSTEM_ACTION
+{
+	EVENT_SYSTEM_ACTION_ITEM,
+	EVENT_SYSTEM_ACTION_MOB,
+	EVENT_SYSTEM_ACTION_BUFF,
+	EVENT_SYSTEM_ACTION_INVEN_INSERT,
+	EVENT_SYSTEM_ACTION_COUNTING,
+	EVENT_SYSTEM_ACTION_WPS,
+};
+
+struct sEVENT_DATA
+{
+	unsigned int	eventId;
+	WORD			wCount;
+	unsigned int	keyEventStatus;
+};
+
+struct sEVENT_REWARD_INFO
+{
+	TBLIDX		eventTblidx;
+	CHARACTERID	charId;
+};
+
+
+struct sEVENT_PC_NAME
+{
+	sEVENT_PC_NAME() {}
+	sEVENT_PC_NAME(CHARACTERID id, const WCHAR* name)
+	{
+		charId = id;
+		memcpy(awchName, name, sizeof(WCHAR) * (NTL_MAX_SIZE_CHAR_NAME + 1));
+	}
+
+	CHARACTERID		charId;
+	WCHAR			awchName[NTL_MAX_SIZE_CHAR_NAME + 1];
+};
+
+
+struct sSERVERSCRIPT_EVENTSTATUS_INFO
+{
+	BYTE byGroup;
+	BYTE byIndex;
+	TBLIDX textTblidx;
+	BYTE byType;
+  
+	union
+	{
+		struct sNORMAL
+		{
+		};
+
+		struct sMOBKILL_COUNT
+		{
+			GROUPID spawnGroupId;
+			WORD wMaxKillCount;
+		};
+
+		struct sSCRIPTEVENT_COUNT
+		{
+			TBLIDX eventId;
+			WORD wMaxCount;
+		};
+
+		sNORMAL				sNormal;
+		sMOBKILL_COUNT		sMobKillCount;
+		sSCRIPTEVENT_COUNT	sScriptEventCount;
+
+	};
+};
+
+enum eSERVERSCRIPT_EVENTSTATUS_TYPE
+{
+	SERVERSCRIPT_EVENTSTATUS_NORMAL,
+	SERVERSCRIPT_EVENTSTATUS_MOBKILL_COUNT,
+
+	SERVERSCRIPT_EVENTSTATUS_SCRIPTEVENT_COUNT,
+	INVALID_SERVERSCRIPT_EVENTSTATUS_TYPE = 0xFF,
+};
+
+struct sSVRSCR_EVENTSTATUS_DATA
+{
+	BYTE byGroup;
+	BYTE byIndex;
+	TBLIDX textTblidx;
+	TBLIDX wpsId;
+	eSERVERSCRIPT_EVENTSTATUS_TYPE eType;
+  
+	union
+	{
+		struct sNORMAL
+		{
+		};
+
+		struct sMOBKILL_COUNT
+		{
+			GROUPID spawnGroupId;
+			WORD wMaxKillCount;
+		};
+
+		struct sSCRIPTEVENT_COUNT
+		{
+			TBLIDX eventId;
+			WORD wMaxCount;
+		};
+
+		sNORMAL				sNormal;
+		sMOBKILL_COUNT		sMobKillCount;
+		sSCRIPTEVENT_COUNT	sScriptEventCount;
+	};
+
+};
+
+
+#pragma pack()

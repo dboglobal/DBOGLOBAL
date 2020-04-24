@@ -1,0 +1,660 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug4Client|Win32">
+      <Configuration>Debug4Client</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release4Client|Win32">
+      <Configuration>Release4Client</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{76814177-7FC9-46C0-9415-8A7A6DE32B13}</ProjectGuid>
+    <RootNamespace>TSTool</RootNamespace>
+    <Keyword>MFCProj</Keyword>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release4Client|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v80</PlatformToolset>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v80</PlatformToolset>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v80</PlatformToolset>
+    <UseOfMfc>Static</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug4Client|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v80</PlatformToolset>
+    <UseOfMfc>Static</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release4Client|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug4Client|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>14.0.25431.1</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug4Client|Win32'">
+    <OutDir>$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release4Client|Win32'">
+    <OutDir>$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <ValidateAllParameters>false</ValidateAllParameters>
+    </Midl>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>$(SolutionDir)Lib\NtlFlasher;$(SolutionDir)Lib\NtlFlasher\Include;$(SolutionDir)Lib\NtlFlasher\3rdParty\jpeg-6b;$(SolutionDir)Lib\NtlFlasher\3rdParty\zlib-1.2.3;$(SolutionDir)..\NtlLib\Shared;$(SolutionDir)..\NtlLib\Shared\Util;$(SolutionDir)..\NtlLib\Shared\Zip\zlib123;$(SolutionDir)..\NtlLib\Shared\Lua;$(SolutionDir)..\NtlLib\Shared\Lua\Lua-5.1.0\src;$(SolutionDir)..\NtlLib\Shared\NtlXMLLoader;$(SolutionDir)..\NtlLib\Shared\NtlTrigger;$(SolutionDir)..\NtlLib\Client\NtlClientNet;$(SolutionDir)..\DboShared\NtlShared2;$(SolutionDir)..\DboShared\NtlGameTable;$(SolutionDir)..\DboShared\DboTrigger;$(SolutionDir)Lib\Ntl_Plugin_Collis\collis;$(SolutionDir)Lib\Ntl_Plugin_Toon\toon;$(SolutionDir)Renderware\Include;$(SolutionDir)Lib\NtlCore;$(SolutionDir)Lib\NtlPresentation;$(SolutionDir)Lib\NtlSimulation;$(SolutionDir)Lib\NtlGui;$(SolutionDir)Lib\NtlSound;$(SolutionDir)Lib\NtlFramework;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;RWDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0412</Culture>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>ddraw.lib;Ws2_32.lib;Winmm.lib;Imm32.lib;rtdict.lib;rtcharse.lib;rtfsyst.lib;rtbmp.lib;rtpng.lib;rtintsec.lib;rtpick.lib;rttoc.lib;rpworld.lib;rwcore.lib;rtanim.lib;rphanim.lib;rtquat.lib;rplogo.lib;rpusrdat.lib;rpid.lib;rpmatfx.lib;rpuvanim.lib;rpprtstd.lib;rpprtadv.lib;rpptank.lib;rpskintoon.lib;rprandom.lib;rtimport.lib;rtgcond.lib;rtwing.lib;rtray.lib;rplodatm.lib;GFx.lib;GFx_D3D9.lib;libjpeg.lib;rppvs.lib;rpltmap.lib;rtltmap.lib;rpmipkl.lib;rtpitexd.lib;rtbary.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)Renderware\Lib\Debug;$(SolutionDir)Lib\NtlFlasher\3rdParty\jpeg-6b\lib\Win32\Msvc80\Debug_MT_Static;$(SolutionDir)Lib\NtlFlasher\3rdParty\zlib-1.2.3\lib\win32\Msvc80\Debug_MT_Static;$(SolutionDir)Lib\NtlFlasher\Lib\Win32\Msvc80\Debug_MT_Static;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreSpecificDefaultLibraries>libcp.lib;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug4Client|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <ValidateAllParameters>false</ValidateAllParameters>
+    </Midl>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>$(SolutionDir)Lib\NtlFlasher;$(SolutionDir)Lib\NtlFlasher\Include;$(SolutionDir)Lib\NtlFlasher\3rdParty\jpeg-6b;$(SolutionDir)Lib\NtlFlasher\3rdParty\zlib-1.2.3;$(SolutionDir)..\NtlLib\Shared;$(SolutionDir)..\NtlLib\Shared\Util;$(SolutionDir)..\NtlLib\Shared\Zip\zlib123;$(SolutionDir)..\NtlLib\Shared\Lua;$(SolutionDir)..\NtlLib\Shared\Lua\Lua-5.1.0\src;$(SolutionDir)..\NtlLib\Shared\NtlXMLLoader;$(SolutionDir)..\NtlLib\Shared\NtlTrigger;$(SolutionDir)..\NtlLib\Client\NtlClientNet;$(SolutionDir)..\DboShared\NtlShared2;$(SolutionDir)..\DboShared\NtlGameTable;$(SolutionDir)..\DboShared\DboTrigger;$(SolutionDir)Lib\Ntl_Plugin_Collis\collis;$(SolutionDir)Lib\Ntl_Plugin_Toon\toon;$(SolutionDir)Renderware\Include;$(SolutionDir)Lib\NtlCore;$(SolutionDir)Lib\NtlPresentation;$(SolutionDir)Lib\NtlSimulation;$(SolutionDir)Lib\NtlGui;$(SolutionDir)Lib\NtlSound;$(SolutionDir)Lib\NtlFramework;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;RWDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0412</Culture>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>ddraw.lib;Ws2_32.lib;Winmm.lib;Imm32.lib;rtdict.lib;rtcharse.lib;rtfsyst.lib;rtbmp.lib;rtpng.lib;rtintsec.lib;rtpick.lib;rttoc.lib;rpworld.lib;rwcore.lib;rtanim.lib;rphanim.lib;rtquat.lib;rplogo.lib;rpusrdat.lib;rpid.lib;rpmatfx.lib;rpuvanim.lib;rpprtstd.lib;rpprtadv.lib;rpptank.lib;rpskintoon.lib;rprandom.lib;rtimport.lib;rtgcond.lib;rtwing.lib;rtray.lib;rplodatm.lib;GFx.lib;GFx_D3D9.lib;libjpeg.lib;rppvs.lib;rpltmap.lib;rtltmap.lib;rpmipkl.lib;rtpitexd.lib;rtbary.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)Renderware\Lib\Debug;$(SolutionDir)Lib\NtlFlasher\3rdParty\jpeg-6b\lib\Win32\Msvc80\Debug_MT_Static;$(SolutionDir)Lib\NtlFlasher\3rdParty\zlib-1.2.3\lib\win32\Msvc80\Debug_MT_Static;$(SolutionDir)Lib\NtlFlasher\Lib\Win32\Msvc80\Debug_MT_Static;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreSpecificDefaultLibraries>libcp.lib;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <ValidateAllParameters>false</ValidateAllParameters>
+    </Midl>
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(SolutionDir)Lib\Ntl_Plugin_Collis\collis;$(SolutionDir)Lib\Ntl_Plugin_Toon\toon;$(SolutionDir)..\NtlLib\Shared;$(SolutionDir)..\NtlLib\Shared\Util;$(SolutionDir)..\NtlLib\Shared\Lua;$(SolutionDir)..\NtlLib\Shared\Lua\Lua-5.1.0\src;$(SolutionDir)..\NtlLib\Shared\NtlXMLLoader;$(SolutionDir)..\NtlLib\Shared\NtlTrigger;$(SolutionDir)..\NtlLib\Client\NtlClientNet;$(SolutionDir)..\DboShared\NtlShared2;$(SolutionDir)..\DboShared\NtlGameTable;$(SolutionDir)..\DboShared\DboTrigger;$(SolutionDir)Renderware\Include;..\NtlCore;..\NtlPresentation;..\NtlGui;..\NtlSound;..\NtlFramework;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0412</Culture>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>Ws2_32.lib;Winmm.lib;Imm32.lib;rtdict.lib;rtcharse.lib;rtfsyst.lib;rtbmp.lib;rtpng.lib;rtintsec.lib;rtpick.lib;rttoc.lib;rpworld.lib;rwcore.lib;rtanim.lib;rphanim.lib;rtquat.lib;rplogo.lib;rpusrdat.lib;rpid.lib;rpmatfx.lib;rpuvanim.lib;rpprtstd.lib;rpprtadv.lib;rpptank.lib;rpskintoon.lib;rprandom.lib;rtimport.lib;rtgcond.lib;rtwing.lib;rtray.lib;rplodatm.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)Renderware\Lib\Release;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release4Client|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <ValidateAllParameters>false</ValidateAllParameters>
+    </Midl>
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(SolutionDir)Lib\Ntl_Plugin_Collis\collis;$(SolutionDir)Lib\Ntl_Plugin_Toon\toon;$(SolutionDir)..\NtlLib\Shared;$(SolutionDir)..\NtlLib\Shared\Util;$(SolutionDir)..\NtlLib\Shared\Lua;$(SolutionDir)..\NtlLib\Shared\Lua\Lua-5.1.0\src;$(SolutionDir)..\NtlLib\Shared\NtlXMLLoader;$(SolutionDir)..\NtlLib\Shared\NtlTrigger;$(SolutionDir)..\NtlLib\Client\NtlClientNet;$(SolutionDir)..\DboShared\NtlShared2;$(SolutionDir)..\DboShared\NtlGameTable;$(SolutionDir)..\DboShared\DboTrigger;$(SolutionDir)Renderware\Include;..\NtlCore;..\NtlPresentation;..\NtlGui;..\NtlSound;..\NtlFramework;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0412</Culture>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>Ws2_32.lib;Winmm.lib;Imm32.lib;rtdict.lib;rtcharse.lib;rtfsyst.lib;rtbmp.lib;rtpng.lib;rtintsec.lib;rtpick.lib;rttoc.lib;rpworld.lib;rwcore.lib;rtanim.lib;rphanim.lib;rtquat.lib;rplogo.lib;rpusrdat.lib;rpid.lib;rpmatfx.lib;rpuvanim.lib;rpprtstd.lib;rpprtadv.lib;rpptank.lib;rpskintoon.lib;rprandom.lib;rtimport.lib;rtgcond.lib;rtwing.lib;rtray.lib;rplodatm.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)Renderware\Lib\Release;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <Image Include="res\containerbar.bmp" />
+    <Image Include="res\Toolbar.bmp" />
+    <Image Include="res\TSTool.ico" />
+    <Image Include="res\TSToolDoc.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="TSTool.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\TSTool.rc2" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="AttrEntityMng.cpp" />
+    <ClCompile Include="Attr_ACT_BroadCast.cpp" />
+    <ClCompile Include="Attr_ACT_BroadMsg.cpp" />
+    <ClCompile Include="Attr_ACT_ConcCheck.cpp" />
+    <ClCompile Include="Attr_ACT_CustomEvt.cpp" />
+    <ClCompile Include="Attr_ACT_Dir.cpp" />
+    <ClCompile Include="Attr_ACT_DirIndicator.cpp" />
+    <ClCompile Include="Attr_ACT_Dojo.cpp" />
+    <ClCompile Include="Attr_ACT_DoSkill.cpp" />
+    <ClCompile Include="Attr_ACT_Drop.cpp" />
+    <ClCompile Include="Attr_ACT_Escort.cpp" />
+    <ClCompile Include="Attr_ACT_ETimerE.cpp" />
+    <ClCompile Include="Attr_ACT_ETimerS.cpp" />
+    <ClCompile Include="Attr_ACT_ExcCGroup.cpp" />
+    <ClCompile Include="Attr_ACT_Hint.cpp" />
+    <ClCompile Include="Attr_ACT_InSSM.cpp" />
+    <ClCompile Include="Attr_ACT_Item.cpp" />
+    <ClCompile Include="Attr_ACT_MiniNarration.cpp" />
+    <ClCompile Include="Attr_ACT_NPCConv.cpp" />
+    <ClCompile Include="Attr_ACT_ObjConv.cpp" />
+    <ClCompile Include="Attr_ACT_ObjState.cpp" />
+    <ClCompile Include="Attr_ACT_ObjWPS.cpp" />
+    <ClCompile Include="Attr_ACT_OPCam.cpp" />
+    <ClCompile Include="Attr_ACT_OpenWindow.cpp" />
+    <ClCompile Include="Attr_ACT_OperateObject.cpp" />
+    <ClCompile Include="Attr_ACT_PCConv.cpp" />
+    <ClCompile Include="Attr_ACT_PIDgn.cpp" />
+    <ClCompile Include="Attr_ACT_Portal.cpp" />
+    <ClCompile Include="Attr_ACT_QItem.cpp" />
+    <ClCompile Include="Attr_ACT_RegCTiming.cpp" />
+    <ClCompile Include="Attr_ACT_RegQInfo.cpp" />
+    <ClCompile Include="Attr_ACT_RmvCoupon.cpp" />
+    <ClCompile Include="Attr_ACT_SendSvrEvt.cpp" />
+    <ClCompile Include="Attr_ACT_SkipCont.cpp" />
+    <ClCompile Include="Attr_ACT_SToCEvt.cpp" />
+    <ClCompile Include="Attr_ACT_SWProbSF.cpp" />
+    <ClCompile Include="Attr_ACT_TelMinorMatch.cpp" />
+    <ClCompile Include="Attr_ACT_TelMudosa.cpp" />
+    <ClCompile Include="Attr_ACT_TLQ.cpp" />
+    <ClCompile Include="Attr_ACT_TMQInfoShow.cpp" />
+    <ClCompile Include="Attr_ACT_TMQStage.cpp" />
+    <ClCompile Include="Attr_ACT_TMQTimeBonus.cpp" />
+    <ClCompile Include="Attr_ACT_TObjFriendly.cpp" />
+    <ClCompile Include="Attr_ACT_TSState.cpp" />
+    <ClCompile Include="Attr_ACT_TWaitTS.cpp" />
+    <ClCompile Include="Attr_ACT_WorldPlayScript.cpp" />
+    <ClCompile Include="Attr_COND_AttachObj.cpp" />
+    <ClCompile Include="Attr_COND_AvatarDead.cpp" />
+    <ClCompile Include="Attr_COND_BudokaiState.cpp" />
+    <ClCompile Include="Attr_COND_ClrQst.cpp" />
+    <ClCompile Include="Attr_COND_DistNPC.cpp" />
+    <ClCompile Include="Attr_COND_HasCoupon.cpp" />
+    <ClCompile Include="Attr_COND_InNPC.cpp" />
+    <ClCompile Include="Attr_COND_InWorld.cpp" />
+    <ClCompile Include="Attr_COND_Item.cpp" />
+    <ClCompile Include="Attr_COND_Lvl.cpp" />
+    <ClCompile Include="Attr_COND_NPCDead.cpp" />
+    <ClCompile Include="Attr_COND_ObjItem.cpp" />
+    <ClCompile Include="Attr_COND_ObjState.cpp" />
+    <ClCompile Include="Attr_COND_OperateObject.cpp" />
+    <ClCompile Include="Attr_COND_OutRgn.cpp" />
+    <ClCompile Include="Attr_COND_PCCls.cpp" />
+    <ClCompile Include="Attr_COND_PCRace.cpp" />
+    <ClCompile Include="Attr_COND_ProgCustomEvt.cpp" />
+    <ClCompile Include="Attr_COND_ProgQuest.cpp" />
+    <ClCompile Include="Attr_COND_QItem.cpp" />
+    <ClCompile Include="Attr_COND_Reputation.cpp" />
+    <ClCompile Include="Attr_COND_SSM.cpp" />
+    <ClCompile Include="Attr_COND_SToCDelivery.cpp" />
+    <ClCompile Include="Attr_COND_SToCEvt.cpp" />
+    <ClCompile Include="Attr_COND_WItem.cpp" />
+    <ClCompile Include="Attr_CONT_End.cpp" />
+    <ClCompile Include="Attr_CONT_GAct.cpp" />
+    <ClCompile Include="Attr_CONT_GCond.cpp" />
+    <ClCompile Include="Attr_CONT_Narration.cpp" />
+    <ClCompile Include="Attr_CONT_Proposal.cpp" />
+    <ClCompile Include="Attr_CONT_Reward.cpp" />
+    <ClCompile Include="Attr_CONT_Start.cpp" />
+    <ClCompile Include="Attr_CONT_Switch.cpp" />
+    <ClCompile Include="Attr_CONT_UnifiedNarration.cpp" />
+    <ClCompile Include="Attr_CONT_UserSel.cpp" />
+    <ClCompile Include="Attr_EVT_BindStone.cpp" />
+    <ClCompile Include="Attr_EVT_Budokai.cpp" />
+    <ClCompile Include="Attr_EVT_ClickMob.cpp" />
+    <ClCompile Include="Attr_EVT_ClickNPC.cpp" />
+    <ClCompile Include="Attr_EVT_ClickObject.cpp" />
+    <ClCompile Include="Attr_EVT_ColObject.cpp" />
+    <ClCompile Include="Attr_EVT_ColRgn.cpp" />
+    <ClCompile Include="Attr_EVT_FreeBattle.cpp" />
+    <ClCompile Include="Attr_EVT_HoipoiMix.cpp" />
+    <ClCompile Include="Attr_EVT_ItemEquip.cpp" />
+    <ClCompile Include="Attr_EVT_ItemGet.cpp" />
+    <ClCompile Include="Attr_EVT_ItemIdentity.cpp" />
+    <ClCompile Include="Attr_EVT_ItemUpgrade.cpp" />
+    <ClCompile Include="Attr_EVT_ItemUse.cpp" />
+    <ClCompile Include="Attr_EVT_Party.cpp" />
+    <ClCompile Include="Attr_EVT_PrivateShop.cpp" />
+    <ClCompile Include="Attr_EVT_RB.cpp" />
+    <ClCompile Include="Attr_EVT_RcvSvrEvt.cpp" />
+    <ClCompile Include="Attr_EVT_ScoutUse.cpp" />
+    <ClCompile Include="Attr_EVT_SearchQuest.cpp" />
+    <ClCompile Include="Attr_EVT_SkillUse.cpp" />
+    <ClCompile Include="Attr_EVT_SlotMachine.cpp" />
+    <ClCompile Include="Attr_EVT_Teleport.cpp" />
+    <ClCompile Include="Attr_EVT_UseMail.cpp" />
+    <ClCompile Include="Attr_Group.cpp" />
+    <ClCompile Include="Attr_Link.cpp" />
+    <ClCompile Include="Attr_Page.cpp" />
+    <ClCompile Include="Attr_Trigger.cpp" />
+    <ClCompile Include="Changer.cpp" />
+    <ClCompile Include="DirDialog.cpp" />
+    <ClCompile Include="EntityRegisterDiag.cpp" />
+    <ClCompile Include="ExportEventDlg.cpp" />
+    <ClCompile Include="ExportEvtTSMng.cpp" />
+    <ClCompile Include="Finder.cpp" />
+    <ClCompile Include="FinderDlg.cpp" />
+    <ClCompile Include="MainMenuListCtrl.cpp" />
+    <ClCompile Include="MainMenuTreeCtrl.cpp" />
+    <ClCompile Include="MobGroupIdxChanger.cpp" />
+    <ClCompile Include="OptionListBox.cpp" />
+    <ClCompile Include="OptionPage.cpp" />
+    <ClCompile Include="OptionSheet.cpp" />
+    <ClCompile Include="RwdTblIdxChanger.cpp" />
+    <ClCompile Include="scbarcf.cpp" />
+    <ClCompile Include="scbarg.cpp" />
+    <ClCompile Include="SCtrl.cpp" />
+    <ClCompile Include="SCtrl_End.cpp" />
+    <ClCompile Include="SCtrl_GAct.cpp" />
+    <ClCompile Include="SCtrl_GCond.cpp" />
+    <ClCompile Include="SCtrl_GEntityCont.cpp" />
+    <ClCompile Include="SCtrl_Link.cpp" />
+    <ClCompile Include="SCtrl_Link_Def.cpp" />
+    <ClCompile Include="SCtrl_Link_Error.cpp" />
+    <ClCompile Include="SCtrl_Link_LogIn.cpp" />
+    <ClCompile Include="SCtrl_Link_No.cpp" />
+    <ClCompile Include="SCtrl_Link_Yes.cpp" />
+    <ClCompile Include="SCtrl_Narration.cpp" />
+    <ClCompile Include="SCtrl_Note.cpp" />
+    <ClCompile Include="SCtrl_Proposal.cpp" />
+    <ClCompile Include="SCtrl_Reward.cpp" />
+    <ClCompile Include="SCtrl_Select.cpp" />
+    <ClCompile Include="SCtrl_Start.cpp" />
+    <ClCompile Include="SCtrl_Switch.cpp" />
+    <ClCompile Include="SCtrl_UnifiedNarration.cpp" />
+    <ClCompile Include="SCtrl_UsrSel.cpp" />
+    <ClCompile Include="Shape.cpp" />
+    <ClCompile Include="Shape_End.cpp" />
+    <ClCompile Include="Shape_GAct.cpp" />
+    <ClCompile Include="Shape_GCond.cpp" />
+    <ClCompile Include="Shape_GEntityCont.cpp" />
+    <ClCompile Include="Shape_Link.cpp" />
+    <ClCompile Include="Shape_Narration.cpp" />
+    <ClCompile Include="Shape_Note.cpp" />
+    <ClCompile Include="Shape_Proposal.cpp" />
+    <ClCompile Include="Shape_Reward.cpp" />
+    <ClCompile Include="Shape_Start.cpp" />
+    <ClCompile Include="Shape_Switch.cpp" />
+    <ClCompile Include="Shape_UnifiedNarration.cpp" />
+    <ClCompile Include="Shape_UsrSel.cpp" />
+    <ClCompile Include="sizecbar.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug4Client|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release4Client|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="TextIdxChanger.cpp" />
+    <ClCompile Include="Theme.cpp" />
+    <ClCompile Include="TSDoc.cpp" />
+    <ClCompile Include="TSFrame.cpp" />
+    <ClCompile Include="TSGroupIDInputDlg.cpp" />
+    <ClCompile Include="TSMng.cpp" />
+    <ClCompile Include="TSProject.cpp" />
+    <ClCompile Include="TSProjectMainMenuBar.cpp" />
+    <ClCompile Include="TSProjectMainMenuForm.cpp" />
+    <ClCompile Include="TSProjectProperty.cpp" />
+    <ClCompile Include="TSQuestTextBar.cpp" />
+    <ClCompile Include="TSQuestTextForm.cpp" />
+    <ClCompile Include="TSQuestTextListCtrl.cpp" />
+    <ClCompile Include="TSTool.cpp" />
+    <ClCompile Include="TSTrigger.cpp" />
+    <ClCompile Include="TSUtil.cpp" />
+    <ClCompile Include="TSView.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AttrEntityMng.h" />
+    <ClInclude Include="Attr_ACT_BroadCast.h" />
+    <ClInclude Include="Attr_ACT_BroadMsg.h" />
+    <ClInclude Include="Attr_ACT_ConcCheck.h" />
+    <ClInclude Include="Attr_ACT_CustomEvt.h" />
+    <ClInclude Include="Attr_ACT_Dir.h" />
+    <ClInclude Include="Attr_ACT_DirIndicator.h" />
+    <ClInclude Include="Attr_ACT_Dojo.h" />
+    <ClInclude Include="Attr_ACT_DoSkill.h" />
+    <ClInclude Include="Attr_ACT_Drop.h" />
+    <ClInclude Include="Attr_ACT_Escort.h" />
+    <ClInclude Include="Attr_ACT_ETimerE.h" />
+    <ClInclude Include="Attr_ACT_ETimerS.h" />
+    <ClInclude Include="Attr_ACT_ExcCGroup.h" />
+    <ClInclude Include="Attr_ACT_Hint.h" />
+    <ClInclude Include="Attr_ACT_InSSM.h" />
+    <ClInclude Include="Attr_ACT_Item.h" />
+    <ClInclude Include="Attr_ACT_MiniNarration.h" />
+    <ClInclude Include="Attr_ACT_NPCConv.h" />
+    <ClInclude Include="Attr_ACT_ObjConv.h" />
+    <ClInclude Include="Attr_ACT_ObjState.h" />
+    <ClInclude Include="Attr_ACT_ObjWPS.h" />
+    <ClInclude Include="Attr_ACT_OPCam.h" />
+    <ClInclude Include="Attr_ACT_OpenWindow.h" />
+    <ClInclude Include="Attr_ACT_OperateObject.h" />
+    <ClInclude Include="Attr_ACT_PCConv.h" />
+    <ClInclude Include="Attr_ACT_PIDgn.h" />
+    <ClInclude Include="Attr_ACT_Portal.h" />
+    <ClInclude Include="Attr_ACT_QItem.h" />
+    <ClInclude Include="Attr_ACT_RegCTiming.h" />
+    <ClInclude Include="Attr_ACT_RegQInfo.h" />
+    <ClInclude Include="Attr_ACT_RmvCoupon.h" />
+    <ClInclude Include="Attr_ACT_SendSvrEvt.h" />
+    <ClInclude Include="Attr_ACT_SkipCont.h" />
+    <ClInclude Include="Attr_ACT_SToCEvt.h" />
+    <ClInclude Include="Attr_ACT_SWProbSF.h" />
+    <ClInclude Include="Attr_ACT_TelMinorMatch.h" />
+    <ClInclude Include="Attr_ACT_TelMudosa.h" />
+    <ClInclude Include="Attr_ACT_TLQ.h" />
+    <ClInclude Include="Attr_ACT_TMQInfoShow.h" />
+    <ClInclude Include="Attr_ACT_TMQStage.h" />
+    <ClInclude Include="Attr_ACT_TMQTimeBonus.h" />
+    <ClInclude Include="Attr_ACT_TObjFriendly.h" />
+    <ClInclude Include="Attr_ACT_TSState.h" />
+    <ClInclude Include="Attr_ACT_TWaitTS.h" />
+    <ClInclude Include="Attr_ACT_WorldPlayScript.h" />
+    <ClInclude Include="Attr_COND_AttachObj.h" />
+    <ClInclude Include="Attr_COND_AvatarDead.h" />
+    <ClInclude Include="Attr_COND_BudokaiState.h" />
+    <ClInclude Include="Attr_COND_ClrQst.h" />
+    <ClInclude Include="Attr_COND_DistNPC.h" />
+    <ClInclude Include="Attr_COND_HasCoupon.h" />
+    <ClInclude Include="Attr_COND_InNPC.h" />
+    <ClInclude Include="Attr_COND_InWorld.h" />
+    <ClInclude Include="Attr_COND_Item.h" />
+    <ClInclude Include="Attr_COND_Lvl.h" />
+    <ClInclude Include="Attr_COND_NPCDead.h" />
+    <ClInclude Include="Attr_COND_ObjItem.h" />
+    <ClInclude Include="Attr_COND_ObjState.h" />
+    <ClInclude Include="Attr_COND_OperateObject.h" />
+    <ClInclude Include="Attr_COND_OutRgn.h" />
+    <ClInclude Include="Attr_COND_PCCls.h" />
+    <ClInclude Include="Attr_COND_PCRace.h" />
+    <ClInclude Include="Attr_COND_ProgCustomEvt.h" />
+    <ClInclude Include="Attr_COND_ProgQuest.h" />
+    <ClInclude Include="Attr_COND_QItem.h" />
+    <ClInclude Include="Attr_COND_Reputation.h" />
+    <ClInclude Include="Attr_COND_SSM.h" />
+    <ClInclude Include="Attr_COND_SToCDelivery.h" />
+    <ClInclude Include="Attr_COND_SToCEvt.h" />
+    <ClInclude Include="Attr_COND_WItem.h" />
+    <ClInclude Include="Attr_CONT_End.h" />
+    <ClInclude Include="Attr_CONT_GAct.h" />
+    <ClInclude Include="Attr_CONT_GCond.h" />
+    <ClInclude Include="Attr_CONT_Narration.h" />
+    <ClInclude Include="Attr_CONT_Proposal.h" />
+    <ClInclude Include="Attr_CONT_Reward.h" />
+    <ClInclude Include="Attr_CONT_Start.h" />
+    <ClInclude Include="Attr_CONT_Switch.h" />
+    <ClInclude Include="Attr_CONT_UnifiedNarration.h" />
+    <ClInclude Include="Attr_CONT_UserSel.h" />
+    <ClInclude Include="Attr_EVT_BindStone.h" />
+    <ClInclude Include="Attr_EVT_Budokai.h" />
+    <ClInclude Include="Attr_EVT_ClickMob.h" />
+    <ClInclude Include="Attr_EVT_ClickNPC.h" />
+    <ClInclude Include="Attr_EVT_ClickObject.h" />
+    <ClInclude Include="Attr_EVT_ColObject.h" />
+    <ClInclude Include="Attr_EVT_ColRgn.h" />
+    <ClInclude Include="Attr_EVT_FreeBattle.h" />
+    <ClInclude Include="Attr_EVT_HoipoiMix.h" />
+    <ClInclude Include="Attr_EVT_ItemEquip.h" />
+    <ClInclude Include="Attr_EVT_ItemGet.h" />
+    <ClInclude Include="Attr_EVT_ItemIdentity.h" />
+    <ClInclude Include="Attr_EVT_ItemUpgrade.h" />
+    <ClInclude Include="Attr_EVT_ItemUse.h" />
+    <ClInclude Include="Attr_EVT_Party.h" />
+    <ClInclude Include="Attr_EVT_PrivateShop.h" />
+    <ClInclude Include="Attr_EVT_RB.h" />
+    <ClInclude Include="Attr_EVT_RcvSvrEvt.h" />
+    <ClInclude Include="Attr_EVT_ScoutUse.h" />
+    <ClInclude Include="Attr_EVT_SearchQuest.h" />
+    <ClInclude Include="Attr_EVT_SkillUse.h" />
+    <ClInclude Include="Attr_EVT_SlotMachine.h" />
+    <ClInclude Include="Attr_EVT_Teleport.h" />
+    <ClInclude Include="Attr_EVT_UseMail.h" />
+    <ClInclude Include="Attr_Group.h" />
+    <ClInclude Include="Attr_Link.h" />
+    <ClInclude Include="Attr_Page.h" />
+    <ClInclude Include="Attr_Trigger.h" />
+    <ClInclude Include="Changer.h" />
+    <ClInclude Include="DirDialog.h" />
+    <ClInclude Include="EntityRegisterDiag.h" />
+    <ClInclude Include="ExportEventDlg.h" />
+    <ClInclude Include="ExportEvtTSMng.h" />
+    <ClInclude Include="Finder.h" />
+    <ClInclude Include="FinderDlg.h" />
+    <ClInclude Include="MainMenuListCtrl.h" />
+    <ClInclude Include="MainMenuTreeCtrl.h" />
+    <ClInclude Include="MobGroupIdxChanger.h" />
+    <ClInclude Include="OptionListBox.h" />
+    <ClInclude Include="OptionPage.h" />
+    <ClInclude Include="OptionSheet.h" />
+    <ClInclude Include="Resource.h" />
+    <ClInclude Include="RwdTblIdxChanger.h" />
+    <ClInclude Include="scbarcf.h" />
+    <ClInclude Include="scbarg.h" />
+    <ClInclude Include="SCtrl.h" />
+    <ClInclude Include="SCtrl_End.h" />
+    <ClInclude Include="SCtrl_GAct.h" />
+    <ClInclude Include="SCtrl_GCond.h" />
+    <ClInclude Include="SCtrl_GEntityCont.h" />
+    <ClInclude Include="SCtrl_Link.h" />
+    <ClInclude Include="SCtrl_Link_Def.h" />
+    <ClInclude Include="SCtrl_Link_Error.h" />
+    <ClInclude Include="SCtrl_Link_LogIn.h" />
+    <ClInclude Include="SCtrl_Link_No.h" />
+    <ClInclude Include="SCtrl_Link_Yes.h" />
+    <ClInclude Include="SCtrl_Narration.h" />
+    <ClInclude Include="SCtrl_Note.h" />
+    <ClInclude Include="SCtrl_Proposal.h" />
+    <ClInclude Include="SCtrl_Reward.h" />
+    <ClInclude Include="SCtrl_Select.h" />
+    <ClInclude Include="SCtrl_Start.h" />
+    <ClInclude Include="SCtrl_Switch.h" />
+    <ClInclude Include="SCtrl_UnifiedNarration.h" />
+    <ClInclude Include="SCtrl_UsrSel.h" />
+    <ClInclude Include="Shape.h" />
+    <ClInclude Include="Shape_End.h" />
+    <ClInclude Include="Shape_GAct.h" />
+    <ClInclude Include="Shape_GCond.h" />
+    <ClInclude Include="Shape_GEntityCont.h" />
+    <ClInclude Include="Shape_Link.h" />
+    <ClInclude Include="Shape_Narration.h" />
+    <ClInclude Include="Shape_Note.h" />
+    <ClInclude Include="Shape_Proposal.h" />
+    <ClInclude Include="Shape_Reward.h" />
+    <ClInclude Include="Shape_Start.h" />
+    <ClInclude Include="Shape_Switch.h" />
+    <ClInclude Include="Shape_UnifiedNarration.h" />
+    <ClInclude Include="Shape_UsrSel.h" />
+    <ClInclude Include="sizecbar.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="TextIdxChanger.h" />
+    <ClInclude Include="Theme.h" />
+    <ClInclude Include="TSDoc.h" />
+    <ClInclude Include="TSFrame.h" />
+    <ClInclude Include="TSGroupIDInputDlg.h" />
+    <ClInclude Include="TSMng.h" />
+    <ClInclude Include="TSProject.h" />
+    <ClInclude Include="TSProjectMainMenuBar.h" />
+    <ClInclude Include="TSProjectMainMenuForm.h" />
+    <ClInclude Include="TSProjectProperty.h" />
+    <ClInclude Include="TSQuestTextBar.h" />
+    <ClInclude Include="TSQuestTextForm.h" />
+    <ClInclude Include="TSQuestTextListCtrl.h" />
+    <ClInclude Include="TSTool.h" />
+    <ClInclude Include="TSToolDefine.h" />
+    <ClInclude Include="TSTrigger.h" />
+    <ClInclude Include="TSUtil.h" />
+    <ClInclude Include="TSView.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\DboShared\DboTrigger\DboTrigger.vcxproj">
+      <Project>{3bee299b-d145-4030-81dd-d8b9ade8b767}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\DboShared\NtlGameTable\NtlGameTable.vcxproj">
+      <Project>{9a4dc8e8-16ef-463b-8f14-77f447a782cc}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\DboShared\NtlShared2\NtlShared.vcxproj">
+      <Project>{573eb1e4-7620-479e-8ccf-def06491545b}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\NtlLib\Shared\NtlTrigger\NtlTrigger.vcxproj">
+      <Project>{31832309-d436-4c40-913d-87aaf73ffc99}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\NtlLib\Shared\NtlXMLLoader\NtlXMLLoader.vcxproj">
+      <Project>{9d941cac-4183-44e3-aec3-817c0a32d1dd}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\NtlLib\Shared\Util\Util.vcxproj">
+      <Project>{5229f8ae-a505-4077-b6d3-5ce0164dfe73}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\NtlLib\Shared\Zip\zlib123\projects\visualdotnet2005\zlib.vcxproj">
+      <Project>{9b2b6c11-764e-4d4b-8db2-f91ac99e0b93}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Lib\NtlFramework\NtlFramework.vcxproj">
+      <Project>{a2e4d1ec-1758-44e0-b3c9-955c286f84be}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Lib\NtlGui\NtlGui.vcxproj">
+      <Project>{4cacaf6f-333c-4ac8-bb0e-ce8eee4b44a3}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Lib\NtlPresentation\NtlPresentation.vcxproj">
+      <Project>{0ec8e06b-8138-4bfd-8af7-9cad1f2f65ac}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Lib\NtlSimulation\NtlSimulation.vcxproj">
+      <Project>{7bb7020c-506b-47f4-b54b-c91c6f5246ca}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Lib\Ntl_Plugin_Collis\Ntl_Plugin_Collis.vcxproj">
+      <Project>{4bd7b6fb-4afc-4880-a136-3b59f384ed9e}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Lib\Ntl_Plugin_Toon\Ntl_Plugin_Toon.vcxproj">
+      <Project>{0a07ccc0-9f5d-4e94-b7d6-68bd00dfd37d}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Lib\Ntl_Plugin_World\Ntl_Plugin_World.vcxproj">
+      <Project>{837e47aa-e57b-46ff-b42f-26f23bcba8df}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties RESOURCE_FILE="TSTool.rc" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

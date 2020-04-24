@@ -1,0 +1,199 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="FixedStringList">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="FixedString">
+      <UniqueIdentifier>{f02f14a5-020f-4a78-8c72-97ccad4e9a74}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="LogMessageManager">
+      <UniqueIdentifier>{3ed244c2-c9d4-4621-b80f-4162d89e9ce2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common">
+      <UniqueIdentifier>{1dc48bc4-0a06-4d32-8a96-a0d3ab6ae9e9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common\PreCompiledHeader">
+      <UniqueIdentifier>{87249837-b048-4f66-8309-9af93157ee7e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Crypt">
+      <UniqueIdentifier>{88e4f345-76fa-4537-850b-7dab1f7b36a3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="PathData">
+      <UniqueIdentifier>{45ddfb1b-d316-47fc-b9bd-7f6f9d2b5587}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Loki">
+      <UniqueIdentifier>{23603c63-59df-4ae5-b0ef-5ce89ba3453e}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="CFixedStringList.h">
+      <Filter>FixedStringList</Filter>
+    </ClInclude>
+    <ClInclude Include="CFixedStringListA.h">
+      <Filter>FixedStringList</Filter>
+    </ClInclude>
+    <ClInclude Include="CFixedStringListW.h">
+      <Filter>FixedStringList</Filter>
+    </ClInclude>
+    <ClInclude Include="CFixedString.h">
+      <Filter>FixedString</Filter>
+    </ClInclude>
+    <ClInclude Include="CFixedStringA.h">
+      <Filter>FixedString</Filter>
+    </ClInclude>
+    <ClInclude Include="CFixedStringW.h">
+      <Filter>FixedString</Filter>
+    </ClInclude>
+    <ClInclude Include="FixedStringBase.h">
+      <Filter>FixedString</Filter>
+    </ClInclude>
+    <ClInclude Include="CBaseQueue.h">
+      <Filter>LogMessageManager</Filter>
+    </ClInclude>
+    <ClInclude Include="CLogMessageManager.h">
+      <Filter>LogMessageManager</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>Common\PreCompiledHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="AESCipher.h">
+      <Filter>Crypt</Filter>
+    </ClInclude>
+    <ClInclude Include="Blowfish.h">
+      <Filter>Crypt</Filter>
+    </ClInclude>
+    <ClInclude Include="CDes.h">
+      <Filter>Crypt</Filter>
+    </ClInclude>
+    <ClInclude Include="Cipher.h">
+      <Filter>Crypt</Filter>
+    </ClInclude>
+    <ClInclude Include="Constant.h">
+      <Filter>Crypt</Filter>
+    </ClInclude>
+    <ClInclude Include="CryptRSA.h">
+      <Filter>Crypt</Filter>
+    </ClInclude>
+    <ClInclude Include="md5.h">
+      <Filter>Crypt</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlCipher.h">
+      <Filter>Crypt</Filter>
+    </ClInclude>
+    <ClInclude Include="TripleDes.h">
+      <Filter>Crypt</Filter>
+    </ClInclude>
+    <ClInclude Include="TwofishCipher.h">
+      <Filter>Crypt</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlNaviData.h">
+      <Filter>PathData</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlNaviDataDefine.h">
+      <Filter>PathData</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlNaviDataMng.h">
+      <Filter>PathData</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlBitFlag.h" />
+    <ClInclude Include="NtlBitFlagManager.h" />
+    <ClInclude Include="NtlConvexHull.h" />
+    <ClInclude Include="NtlFileSerializer.h" />
+    <ClInclude Include="NtlHex.h" />
+    <ClInclude Include="NtlSerializer.h" />
+    <ClInclude Include="NtlStringHandler.h" />
+    <ClInclude Include="NtlTokenizer.h" />
+    <ClInclude Include="CallBack.h" />
+    <ClInclude Include="LokiExport.h">
+      <Filter>Loki</Filter>
+    </ClInclude>
+    <ClInclude Include="Singleton.h">
+      <Filter>Loki</Filter>
+    </ClInclude>
+    <ClInclude Include="Threads.h">
+      <Filter>Loki</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="CFixedStringListA.cpp">
+      <Filter>FixedStringList</Filter>
+    </ClCompile>
+    <ClCompile Include="CFixedStringListW.cpp">
+      <Filter>FixedStringList</Filter>
+    </ClCompile>
+    <ClCompile Include="CFixedStringA.cpp">
+      <Filter>FixedString</Filter>
+    </ClCompile>
+    <ClCompile Include="CFixedStringA_Format.cpp">
+      <Filter>FixedString</Filter>
+    </ClCompile>
+    <ClCompile Include="CFixedStringW.cpp">
+      <Filter>FixedString</Filter>
+    </ClCompile>
+    <ClCompile Include="CFixedStringW_Format.cpp">
+      <Filter>FixedString</Filter>
+    </ClCompile>
+    <ClCompile Include="CBaseQueue.cpp">
+      <Filter>LogMessageManager</Filter>
+    </ClCompile>
+    <ClCompile Include="CLogMessageManager.cpp">
+      <Filter>LogMessageManager</Filter>
+    </ClCompile>
+    <ClCompile Include="CLogMessageManager_Format.cpp">
+      <Filter>LogMessageManager</Filter>
+    </ClCompile>
+    <ClCompile Include="CLogMessageManager_GlobalError.cpp">
+      <Filter>LogMessageManager</Filter>
+    </ClCompile>
+    <ClCompile Include="CLogMessageManager_GlobalLog.cpp">
+      <Filter>LogMessageManager</Filter>
+    </ClCompile>
+    <ClCompile Include="CLogMessageManager_GlobalTrace.cpp">
+      <Filter>LogMessageManager</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Common\PreCompiledHeader</Filter>
+    </ClCompile>
+    <ClCompile Include="AESCipher.cpp">
+      <Filter>Crypt</Filter>
+    </ClCompile>
+    <ClCompile Include="Blowfish.cpp">
+      <Filter>Crypt</Filter>
+    </ClCompile>
+    <ClCompile Include="CDes.cpp">
+      <Filter>Crypt</Filter>
+    </ClCompile>
+    <ClCompile Include="Cipher.cpp">
+      <Filter>Crypt</Filter>
+    </ClCompile>
+    <ClCompile Include="CryptRSA.cpp">
+      <Filter>Crypt</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlCipher.cpp">
+      <Filter>Crypt</Filter>
+    </ClCompile>
+    <ClCompile Include="TripleDes.cpp">
+      <Filter>Crypt</Filter>
+    </ClCompile>
+    <ClCompile Include="TwofishCipher.cpp">
+      <Filter>Crypt</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlNaviData.cpp">
+      <Filter>PathData</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlNaviDataMng.cpp">
+      <Filter>PathData</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlBitFlagManager.cpp" />
+    <ClCompile Include="NtlFileSerializer.cpp" />
+    <ClCompile Include="NtlHex.cpp" />
+    <ClCompile Include="NtlSerializer.cpp" />
+    <ClCompile Include="NtlStringHandler.cpp" />
+    <ClCompile Include="NtlTokenizer.cpp" />
+    <ClCompile Include="CallBack.cpp" />
+    <ClCompile Include="Singleton.cpp">
+      <Filter>Loki</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

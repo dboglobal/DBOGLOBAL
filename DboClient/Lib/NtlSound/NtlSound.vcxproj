@@ -1,0 +1,143 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Release4Client|Win32">
+      <Configuration>Release4Client</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release4Tools|Win32">
+      <Configuration>Release4Tools</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{AC4B3632-113D-40E1-B22F-0E6D9D1FD15A}</ProjectGuid>
+    <RootNamespace>NtlSound</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release4Client|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v80</PlatformToolset>
+    <CharacterSet>NotSet</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release4Tools|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v80</PlatformToolset>
+    <CharacterSet>NotSet</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release4Client|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release4Tools|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>14.0.25431.1</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release4Client|Win32'">
+    <OutDir>$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release4Tools|Win32'">
+    <OutDir>$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release4Client|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(SolutionDir)Lib\NtlCore;$(SolutionDir)Renderware\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>precomp_ntlsound.h</PrecompiledHeaderFile>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <BufferSecurityCheck>true</BufferSecurityCheck>
+      <WholeProgramOptimization>true</WholeProgramOptimization>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <MinimalRebuild>false</MinimalRebuild>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release4Tools|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(SolutionDir)Lib\NtlCore;$(SolutionDir)Renderware\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>precomp_ntlsound.h</PrecompiledHeaderFile>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <BufferSecurityCheck>true</BufferSecurityCheck>
+      <WholeProgramOptimization>true</WholeProgramOptimization>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <MinimalRebuild>false</MinimalRebuild>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="fmod\fmod.h" />
+    <ClInclude Include="fmod\fmod.hpp" />
+    <ClInclude Include="fmod\fmod_codec.h" />
+    <ClInclude Include="fmod\fmod_common.h" />
+    <ClInclude Include="fmod\fmod_dsp.h" />
+    <ClInclude Include="fmod\fmod_dsp_effects.h" />
+    <ClInclude Include="fmod\fmod_errors.h" />
+    <ClInclude Include="fmod\fmod_output.h" />
+    <ClInclude Include="GUISoundDefine.h" />
+    <ClInclude Include="NtlBGMGroup.h" />
+    <ClInclude Include="NtlBGMPlayList.h" />
+    <ClInclude Include="NtlChannelGroup.h" />
+    <ClInclude Include="NtlFadeInOut.h" />
+    <ClInclude Include="NtlFMODSoundPool.h" />
+    <ClInclude Include="NtlJingleGroup.h" />
+    <ClInclude Include="NtlMusicGroup.h" />
+    <ClInclude Include="NtlObjectGroup.h" />
+    <ClInclude Include="NtlSound.h" />
+    <ClInclude Include="NtlSoundDefines.h" />
+    <ClInclude Include="NtlSoundDSP.h" />
+    <ClInclude Include="NtlSoundEvent.h" />
+    <ClInclude Include="NtlSoundEventGenerator.h" />
+    <ClInclude Include="NtlSoundEventHandler.h" />
+    <ClInclude Include="NtlSoundGlobal.h" />
+    <ClInclude Include="NtlSoundLogic.h" />
+    <ClInclude Include="NtlSoundManager.h" />
+    <ClInclude Include="NtlSoundMessage.h" />
+    <ClInclude Include="NtlSoundSubSystem.h" />
+    <ClInclude Include="NtlWeatherGroup.h" />
+    <ClInclude Include="precomp_ntlsound.h" />
+    <ClInclude Include="WorldSoundDefine.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="NtlBGMGroup.cpp" />
+    <ClCompile Include="NtlBGMPlayList.cpp" />
+    <ClCompile Include="NtlChannelGroup.cpp" />
+    <ClCompile Include="NtlFadeInOut.cpp" />
+    <ClCompile Include="NtlFMODSoundPool.cpp" />
+    <ClCompile Include="NtlJingleGroup.cpp" />
+    <ClCompile Include="NtlMusicGroup.cpp" />
+    <ClCompile Include="NtlObjectGroup.cpp" />
+    <ClCompile Include="NtlSound.cpp" />
+    <ClCompile Include="NtlSoundDSP.cpp" />
+    <ClCompile Include="NtlSoundEvent.cpp" />
+    <ClCompile Include="NtlSoundEventGenerator.cpp" />
+    <ClCompile Include="NtlSoundEventHandler.cpp" />
+    <ClCompile Include="NtlSoundGlobal.cpp" />
+    <ClCompile Include="NtlSoundLogic.cpp" />
+    <ClCompile Include="NtlSoundManager.cpp" />
+    <ClCompile Include="NtlSoundSubSystem.cpp" />
+    <ClCompile Include="NtlWeatherGroup.cpp" />
+    <ClCompile Include="precomp_ntlsound.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release4Client|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release4Tools|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

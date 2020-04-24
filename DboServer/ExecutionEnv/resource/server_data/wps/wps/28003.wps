@@ -1,0 +1,184 @@
+-- First floor
+-- Which runs on the object
+-- Summon new fork
+
+GameStage(0)
+--[
+	-- 신품 포크포크 8개 소환하고 각각 path따라가도록 함
+
+	-- scene 3,path 48 따라가는 신품 포크포크
+	Action( "add mob" )
+	--[
+		Param( "index", 2612161 )
+		Param( "group", 2800301 )
+		Param( "loc x", -191.35 )
+		Param( "loc y", 0.05 )
+		Param( "loc z", -472.42 )
+		Param( "dir x", 0.00 )
+		Param( "dir z", 1.00 )
+		Param( "play script", 2612161 )
+		Param( "play scene", 3 )
+		Param( "no spawn wait", "true" )
+	--]
+	End()
+
+	-- scene 1, path 46 따라가는 신품 포크포크
+	Action( "add mob" )
+	--[
+		Param( "index", 2612161 )
+		Param( "group", 2800301 )
+		Param( "loc x", -219.28 )
+		Param( "loc y", 0.05 )
+		Param( "loc z", -472.56 )
+		Param( "dir x", 0.00 )
+		Param( "dir z", 1.00 )
+		Param( "play script", 2612161 )
+		Param( "play scene", 1 )
+		Param( "no spawn wait", "true" )
+	--]
+	End()
+
+	-- scene 6, path 51 따라가는 신품 포크포크
+	Action( "add mob" )
+	--[
+		Param( "index", 2612161 )
+		Param( "group", 2800301 )
+		Param( "loc x", -132.16 )
+		Param( "loc y", 0.05 )
+		Param( "loc z", -472.65 )
+		Param( "dir x", 0.00 )
+		Param( "dir z", 1.00 )
+		Param( "play script", 2612161 )
+		Param( "play scene", 6 )
+		Param( "no spawn wait", "true" )
+	--]
+	End()
+
+	-- scene 7, path 52 따라가는 신품 포크포크
+	Action( "add mob" )
+	--[
+		Param( "index", 2612161 )
+		Param( "group", 2800301 )
+		Param( "loc x", -118.50 )
+		Param( "loc y", 0.05 )
+		Param( "loc z", -472.61 )
+		Param( "dir x", 0.00 )
+		Param( "dir z", 1.00 )
+		Param( "play script", 2612161 )
+		Param( "play scene", 7 )
+		Param( "no spawn wait", "true" )
+	--]
+	End()
+
+	-- scene 2, path 47 따라가는 신품 포크포크
+	Action( "add mob" )
+	--[
+		Param( "index", 2612161 )
+		Param( "group", 2800301 )
+		Param( "loc x", -204.73 )
+		Param( "loc y", 0.05 )
+		Param( "loc z", -472.39 )
+		Param( "dir x", 0.00 )
+		Param( "dir z", 1.00 )
+		Param( "play script", 2612161 )
+		Param( "play scene", 2 )
+		Param( "no spawn wait", "true" )
+	--]
+	End()
+
+	-- scene 8, path 53 따라가는 신품 포크포크
+	Action( "add mob" )
+	--[
+		Param( "index", 2612161 )
+		Param( "group", 2800301 )
+		Param( "loc x", -104.67 )
+		Param( "loc y", 0.05 )
+		Param( "loc z", -472.18 )
+		Param( "dir x", 0.00 )
+		Param( "dir z", 1.00 )
+		Param( "play script", 2612161 )
+		Param( "play scene", 8 )
+		Param( "no spawn wait", "true" )
+	--]
+	End()
+
+	-- scene 4, path 49 따라가는 신품 포크포크
+	Action( "add mob" )
+	--[
+		Param( "index", 2612161 )
+		Param( "group", 2800301 )
+		Param( "loc x", -177.89 )
+		Param( "loc y", 0.05 )
+		Param( "loc z", -472.77 )
+		Param( "dir x", 0.00 )
+		Param( "dir z", 1.00 )
+		Param( "play script", 2612161 )
+		Param( "play scene", 4 )
+		Param( "no spawn wait", "true" )
+	--]
+	End()
+
+	-- scene 5, path 50 따라가는 신품 포크포크
+	Action( "add mob" )
+	--[
+		Param( "index", 2612161 )
+		Param( "group", 2800301 )
+		Param( "loc x", -145.99 )
+		Param( "loc y", 0.05 )
+		Param( "loc z", -472.91 )
+		Param( "dir x", 0.00 )
+		Param( "dir z", 1.00 )
+		Param( "play script", 2612161 )
+		Param( "play scene", 5 )
+		Param( "no spawn wait", "true" )
+	--]
+	End()
+
+
+
+	-- mob 모두 잡을 때 까지 대기
+	Action( "wait" )
+	--[
+		Condition( "check mobgroup" )
+		--[
+			Param( "group", 2800301 )
+			Param( "count", 0 )
+		--]
+		End()
+	--]
+	End()
+
+	-- 신품 포크포크 모두 잡으면 문 열어준다
+	Action( "change object state" )
+	--[
+		Param( "index", 30 )
+		Param( "state", 1 )
+		Param( "substate show", 1 )
+	--]
+	End()
+	
+	-- 시스템 메세지 "로봇 격납고 출구가 열렸습니다"
+	Action( "system message" )
+	--[
+		Param( "notify", "action" )
+		Param( "text index", 15 )
+	--]
+	End()
+	
+	Action( "system message" )
+	--[
+		Param( "notify", "system" )
+		Param( "text index", 15 )
+	--]
+	End()
+	
+	-- 엘레베이터 앞 mob spawn
+	Action( "send event to wps" )
+	--[
+		Param( "wps index", 28005 )
+		Param( "event id", 475 )
+	--]
+	End()
+
+--]
+End()

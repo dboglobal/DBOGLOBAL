@@ -1,0 +1,165 @@
+
+GameStage(0)
+--[
+	Action( "function" )
+	--[
+		Condition( "child" )
+		--[
+			Action( "add mob" )
+			--[
+				Param( "index", 5311104 )
+				Param( "group", 21003 )
+				Param( "loc x", 35.59 )
+				Param( "loc y", 17.69 )
+				Param( "loc z", -273.61 )
+				Param( "dir x", 0.00 )
+				Param( "dir z", -1.00 )
+				Param( "no spawn wait", "true" )
+			--]
+			End()
+	
+			Action( "function" )
+			--[
+				Condition( "child" )
+				--[
+					Action( "while" )
+					--[
+						Action( "loop" )
+						--[
+							Action( "wait" )
+							--[
+								Condition( "check battle" )
+								--[
+									Param( "type", "mob" )
+									Param( "group", 21003 )
+									Param( "is battle", "true" )
+								--]
+								End() 
+							--]
+							End()
+
+							Action( "add mob" )
+							--[
+								Param( "index", 7116116 )
+								Param( "group", 21012 )
+								Param( "loc x", -19.43 )
+								Param( "loc y", 17.75 )
+								Param( "loc z", -283.00 )
+								Param( "dir x", 0.00 )
+								Param( "dir z", 1.00 )
+								Param( "play script", 7116113 )
+								Param( "play scene", 5 )
+								Param( "no spawn wait", "true" )
+							--]
+							End()			
+					
+							Action( "add mob" )
+							--[
+								Param( "index", 7116116 )
+								Param( "group", 21012 )
+								Param( "loc x", 2.46 )
+								Param( "loc y", 17.96 )
+								Param( "loc z", -286.78 )
+								Param( "dir x", 0.09 )
+								Param( "dir z", 1.00 )
+								Param( "no spawn wait", "true" )
+							--]
+							End()
+					
+							Action( "add mob" )
+							--[
+								Param( "index", 7116116 )
+								Param( "group", 21012 )
+								Param( "loc x", 23.65 )
+								Param( "loc y", 17.75 )
+								Param( "loc z", -283.11 )
+								Param( "dir x", 0.00 )
+								Param( "dir z", 1.00 )
+								Param( "play script", 7116113 )
+								Param( "play scene", 6 )
+								Param( "no spawn wait", "true" )
+							--]
+							End()
+
+							Action( "wait" )
+							--[
+								Condition( "check battle" )
+								--[
+									Param( "type", "mob" )
+									Param( "group", 21003 )
+									Param( "is battle", "false" )
+								--]
+								End() 
+							--]
+							End()
+
+							Action( "remove mobgroup" )
+							--[
+								Param( "group", 21012 )
+								Param( "type", "clear" )
+							--]
+							End()
+						--]
+						End()
+					--]
+					End()
+				--]
+				End()
+
+				Action( "wait" )
+				--[
+					Condition( "check mobgroup" )
+					--[
+						Param( "group", 21003 )
+						Param( "count", 1 )
+					--]
+					End()
+				--]
+				End()
+			--]
+			End()
+
+			Action( "change object state" )
+			--[
+				Param( "index", 26 )
+				Param( "state", 1 )
+				Param( "substate show", 0 )
+			--]
+			End()
+			Action( "send event to wps" )
+			--[
+				Param( "wps index", 21002 )
+				Param( "event id", 398 )
+			--]
+			End()
+
+			Action( "remove mobgroup" )
+			--[
+				Param( "group", 21012 )
+				Param( "type", "faint" )
+			--]
+			End()	
+		--]
+		End()
+		
+		Action( "wait" )
+		--[
+			Condition( "recv event from wps" )
+			--[
+				Param( "wps index", 21002 )
+				Param( "event id", 397 )
+			--]
+			End()
+		--]
+		End()
+
+		Action( "send event to wps" )
+		--[
+			Param( "wps index", 21002 )
+			Param( "event id", 398 )
+		--]
+		End()
+	--]
+	End()
+--]
+End()

@@ -1,0 +1,207 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Release4Tools|Win32">
+      <Configuration>Release4Tools</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{CB929600-27F1-4214-9B31-EC7872B80762}</ProjectGuid>
+    <RootNamespace>My2DParticleEditor</RootNamespace>
+    <Keyword>MFCProj</Keyword>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v80</PlatformToolset>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release4Tools|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v80</PlatformToolset>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release4Tools|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>14.0.25431.1</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release4Tools|Win32'">
+    <OutDir>E:\DBOG\DBO\DBOG UNPACKED\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <ValidateAllParameters>false</ValidateAllParameters>
+    </Midl>
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release4Tools|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <ValidateAllParameters>false</ValidateAllParameters>
+    </Midl>
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <AdditionalIncludeDirectories>$(SolutionDir)Renderware\Include;$(SolutionDir)Lib\NtlCore;$(SolutionDir)..\DboShared\NtlNetwork;$(SolutionDir)Lib\NtlPresentation;$(SolutionDir)Lib\NtlFramework;$(SolutionDir)..\NtlLib\Shared\NtlXMLLoader;$(SolutionDir)..\DboShared\NtlShared2;$(SolutionDir)..\DboShared\NtlShared;$(SolutionDir)Lib\NtlSimulation;..\..\Client\Main;..\..\Client\Stage;..\..\Client\Camera;..\..\..\DboShared\NtlNetwork\NtlNetClient;$(SolutionDir)..\NtlLib\Shared\NtlTrigger;$(SolutionDir)..\NtlLib\Shared;.\;.\property;..\..\..\DboShared\NtlGameTable;$(SolutionDir)Lib\NtlSound;$(SolutionDir)..\NtlLib\Shared\util;$(SolutionDir)..\Xtreme ToolkitPro v13.2.1\Source;$(DXSDK_DIR)Include;$(SolutionDir)Lib\NtlGui;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <TargetMachine>MachineX86</TargetMachine>
+      <AdditionalDependencies>comsuppwd.lib;ddraw.lib;Ws2_32.lib;Winmm.lib;Imm32.lib;rtdict.lib;rtcharse.lib;rtfsyst.lib;rtpng.lib;rtbmp.lib;rtintsec.lib;rtpick.lib;rttoc.lib;rpworld.lib;rtanim.lib;rphanim.lib;rtquat.lib;rplogo.lib;rpusrdat.lib;rpid.lib;rpmatfx.lib;rpuvanim.lib;rpprtstd.lib;rpprtadv.lib;rpptank.lib;rpskintoon.lib;rprandom.lib;rtimport.lib;rtgcond.lib;rtwing.lib;rtray.lib;rplodatm.lib;strmiids.lib;libgfx.lib;libgrenderer_d3d9.lib;libjpeg.lib;zlib.lib;d3dx9.lib;d3d9.lib;Devil.lib;rppvs.lib;rpltmap.lib;rtltmap.lib;rpmipkl.lib;rtpitexd.lib;rtbary.lib;Gdiplus.lib;rpskin.lib;rpskinmatfx.lib;rpskinmatfxtoon.lib;rpspline.lib;rpteam.lib;rpmipslope.lib;rpnormmap.lib;rpenv.lib;rpadc.lib;rtnormmap.lib;dxguid.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <IgnoreSpecificDefaultLibraries>libcp.lib;msvcprtd.lib;libcmtd.lib;libcmt.lib;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <AdditionalLibraryDirectories>$(SolutionDir)Renderware\Lib\Release;$(SolutionDir)bugTrap;..\..\lib\NtlCore;$(SolutionDir)..\Xtreme ToolkitPro v13.2.1\Lib\vc80;$(DXSDK_DIR)Lib\x86;$(SolutionDir)Lib\NtlFlasher\GFx SDK 3.3\3rdParty\jpeg-6b\lib\$(PlatformName)\Msvc80\Release;$(SolutionDir)Lib\NtlFlasher\GFx SDK 3.3\Lib\$(PlatformName)\Msvc80\Release;$(SolutionDir)DirectShow;$(SolutionDir)Release4Client;$(SolutionDir)Client\Addin\Devil;$(SolutionDir)Lib/NtlSound/fmod;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="2DParticleApp.cpp" />
+    <ClCompile Include="2DParticleEditor.cpp" />
+    <ClCompile Include="2DParticleEditorDoc.cpp" />
+    <ClCompile Include="2DParticleEditorView.cpp" />
+    <ClCompile Include="2DParticleGlobal.cpp" />
+    <ClCompile Include="AttributePane.cpp" />
+    <ClCompile Include="AttrRenameDlg.cpp" />
+    <ClCompile Include="BackManager.cpp" />
+    <ClCompile Include="GuideManager.cpp" />
+    <ClCompile Include="InfomationPane.cpp" />
+    <ClCompile Include="MainFrm.cpp" />
+    <ClCompile Include="MouseMode.cpp" />
+    <ClCompile Include="PathManager.cpp" />
+    <ClCompile Include="PathPoint.cpp" />
+    <ClCompile Include="PropertiesPane.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release4Tools|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="SystemPane.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="2DParticleApp.h" />
+    <ClInclude Include="2DParticleEditor.h" />
+    <ClInclude Include="2DParticleEditorDoc.h" />
+    <ClInclude Include="2DParticleEditorView.h" />
+    <ClInclude Include="2DParticleGlobal.h" />
+    <ClInclude Include="AttributePane.h" />
+    <ClInclude Include="AttrRenameDlg.h" />
+    <ClInclude Include="BackManager.h" />
+    <ClInclude Include="GuideManager.h" />
+    <ClInclude Include="InfomationPane.h" />
+    <ClInclude Include="MainFrm.h" />
+    <ClInclude Include="MouseMode.h" />
+    <ClInclude Include="PathManager.h" />
+    <ClInclude Include="PathPoint.h" />
+    <ClInclude Include="PropertiesPane.h" />
+    <ClInclude Include="Resource.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="SystemPane.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\2DParticleEditor.ico" />
+    <Image Include="res\2DParticleEditorDoc.ico" />
+    <Image Include="res\attribute.bmp" />
+    <Image Include="res\paneicons.bmp" />
+    <Image Include="res\Toolbar.bmp" />
+    <Image Include="res\toolbar1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="2DParticleEditor.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\My2DParticleEditor.rc2" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Lib\NtlCore\NtlCore.vcxproj">
+      <Project>{2d91cafc-1814-4cb4-b844-4e55f937d051}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Lib\NtlFlasher\NtlFlasher.vcxproj">
+      <Project>{de6f78c4-d4bd-4594-b1f0-e7fe85e30ee5}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Lib\NtlFramework\NtlFramework.vcxproj">
+      <Project>{a2e4d1ec-1758-44e0-b3c9-955c286f84be}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Lib\NtlGui\NtlGui.vcxproj">
+      <Project>{4cacaf6f-333c-4ac8-bb0e-ce8eee4b44a3}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Lib\NtlSound\NtlSound.vcxproj">
+      <Project>{ac4b3632-113d-40e1-b22f-0e6d9d1fd15a}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Lib\Ntl_Plugin_Collis\Ntl_Plugin_Collis.vcxproj">
+      <Project>{4bd7b6fb-4afc-4880-a136-3b59f384ed9e}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Lib\Ntl_Plugin_World\Ntl_Plugin_World.vcxproj">
+      <Project>{837e47aa-e57b-46ff-b42f-26f23bcba8df}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties RESOURCE_FILE="2DParticleEditor.rc" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

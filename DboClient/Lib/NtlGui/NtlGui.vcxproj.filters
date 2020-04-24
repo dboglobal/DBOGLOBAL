@@ -1,0 +1,785 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Util">
+      <UniqueIdentifier>{4690a484-82ec-43c2-b529-c812651d62bf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Util\Unibuffer">
+      <UniqueIdentifier>{77d5ed77-9f63-44fe-b941-598678c651a9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Util\Graphics">
+      <UniqueIdentifier>{b6128f72-1b62-4630-a676-337c62ae0422}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Util\Common">
+      <UniqueIdentifier>{32b30d0b-3ec7-47b7-99b5-706655df9899}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Util\Helper">
+      <UniqueIdentifier>{826dad64-f5f4-4fd4-ab50-3d1e94203958}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Util\LocalStringConvert">
+      <UniqueIdentifier>{fe7e77c6-062c-41a4-bbe8-f7fd317fe062}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Main">
+      <UniqueIdentifier>{0614d5ef-bde9-4850-a520-c2839daf18e8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Component">
+      <UniqueIdentifier>{a631130b-f4fa-4133-88b8-140701fcb348}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Component\Base">
+      <UniqueIdentifier>{4d519a5b-6d82-4fbb-ab4f-2a0612219d46}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Component\Manager">
+      <UniqueIdentifier>{736de42d-1ed7-4f94-8163-0ff1e189823d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Component\Balloon">
+      <UniqueIdentifier>{8e413383-4789-41d4-9328-0b0e28241f49}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Component\Panel">
+      <UniqueIdentifier>{4b3b594b-4246-421e-949a-a3900bad5730}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Component\Dialog">
+      <UniqueIdentifier>{dee86f75-680c-4175-aa9c-1407afbecfb7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Component\Global">
+      <UniqueIdentifier>{55fd9ff3-49e5-4dfb-8a45-a01152dd870f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Component\Button">
+      <UniqueIdentifier>{1f4e67c8-fc53-4c4f-9f91-ec09c6dad4b3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Component\Combobox">
+      <UniqueIdentifier>{101e0fe4-4543-4e69-8a54-821175a9623c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Component\Flash">
+      <UniqueIdentifier>{6d905949-d761-430d-9c38-53db80b1fba2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Component\Frame">
+      <UniqueIdentifier>{c7a8b0b1-0925-40df-a2d1-fd87c8748e9a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Component\Htmlbox">
+      <UniqueIdentifier>{d4d41c0d-4fec-4404-8c62-a8d0caca0d4a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Component\Hypertextbox">
+      <UniqueIdentifier>{aae490f3-7e28-4790-a57f-c309f72f00b3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Component\Inputbox">
+      <UniqueIdentifier>{273bcc81-8ebe-4dbf-8e9d-6fa333783add}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Component\Listbox">
+      <UniqueIdentifier>{44bffe10-fa1a-4ff0-b234-69ae9869d19a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Component\Staticbox">
+      <UniqueIdentifier>{c5f5ca88-57a7-473b-883a-695731a91d56}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Component\Outputbox">
+      <UniqueIdentifier>{df4ce4b1-ce31-4e09-9c13-178f47442825}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Component\Particlebox">
+      <UniqueIdentifier>{21ca7927-1eb3-48c9-9c1e-6dc1fe9dd1a7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Component\Progressbar">
+      <UniqueIdentifier>{dc4f6193-37bb-4963-8888-5f7222b6e2ff}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Component\Scrollbar">
+      <UniqueIdentifier>{df81dc80-fedf-424b-b17f-b0176c0fce79}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Component\Slidebar">
+      <UniqueIdentifier>{799ac8d5-a5ee-40d3-9c43-4951cc5a9c82}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Component\Tabbutton">
+      <UniqueIdentifier>{bfb84b19-2b3d-436f-9af5-a719b75f1055}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Component\Tooltip">
+      <UniqueIdentifier>{61404f01-5452-4cf5-a0d2-3c119c53c7fb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Manager">
+      <UniqueIdentifier>{07a78827-40da-4430-96b4-be50296eb140}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Manager\Resource">
+      <UniqueIdentifier>{12a8f75b-fc2b-4b60-836d-27da139b9a5a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Manager\Surface">
+      <UniqueIdentifier>{b20da0c0-15c4-4d5e-b127-f5459286d1f4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Manager\Texture">
+      <UniqueIdentifier>{40a0f751-2b6a-46ce-9673-d4cb79cac6eb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Manager\Gui">
+      <UniqueIdentifier>{a2857321-63b1-46ac-b59f-27a78cab428a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Manager\Font">
+      <UniqueIdentifier>{45ea8b00-542d-4357-9d09-c64bbbf70fb5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Manager\Event">
+      <UniqueIdentifier>{af300c6e-5ec8-4ab8-9459-f94c0ffc6001}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Manager\Signal">
+      <UniqueIdentifier>{67a340c0-77d4-4abe-ab17-2aa63fecece1}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="gui_unibuffer.cpp">
+      <Filter>Util\Unibuffer</Filter>
+    </ClCompile>
+    <ClCompile Include="gui_dynamicoutline.cpp">
+      <Filter>Util\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="gui_effect_flicker.cpp">
+      <Filter>Util\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="gui_effect_path_chase.cpp">
+      <Filter>Util\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="gui_effect_radar.cpp">
+      <Filter>Util\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="gui_line_renderer.cpp">
+      <Filter>Util\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="mouse.cpp">
+      <Filter>Util\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="position.cpp">
+      <Filter>Util\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="rectangle.cpp">
+      <Filter>Util\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="timer.cpp">
+      <Filter>Util\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="GuiUtil.cpp">
+      <Filter>Util\Helper</Filter>
+    </ClCompile>
+    <ClCompile Include="StringLocalConverter.cpp">
+      <Filter>Util\LocalStringConvert</Filter>
+    </ClCompile>
+    <ClCompile Include="StringLocalConverter_Korean.cpp">
+      <Filter>Util\LocalStringConvert</Filter>
+    </ClCompile>
+    <ClCompile Include="gui_precomp.cpp">
+      <Filter>Main</Filter>
+    </ClCompile>
+    <ClCompile Include="gui_component.cpp">
+      <Filter>Component\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="gui_component_generic.cpp">
+      <Filter>Component\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="gui_componentmanager.cpp">
+      <Filter>Component\Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="gui_componentmanager_generic.cpp">
+      <Filter>Component\Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="gui_componentpage.cpp">
+      <Filter>Component\Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="gui_componenttokenizer.cpp">
+      <Filter>Component\Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="gui_balloon.cpp">
+      <Filter>Component\Balloon</Filter>
+    </ClCompile>
+    <ClCompile Include="gui_balloon_generic.cpp">
+      <Filter>Component\Balloon</Filter>
+    </ClCompile>
+    <ClCompile Include="gui_anipanel.cpp">
+      <Filter>Component\Panel</Filter>
+    </ClCompile>
+    <ClCompile Include="gui_anipanel_generic.cpp">
+      <Filter>Component\Panel</Filter>
+    </ClCompile>
+    <ClCompile Include="gui_panel.cpp">
+      <Filter>Component\Panel</Filter>
+    </ClCompile>
+    <ClCompile Include="gui_panel_generic.cpp">
+      <Filter>Component\Panel</Filter>
+    </ClCompile>
+    <ClCompile Include="gui_dialog.cpp">
+      <Filter>Component\Dialog</Filter>
+    </ClCompile>
+    <ClCompile Include="gui_dialog_generic.cpp">
+      <Filter>Component\Dialog</Filter>
+    </ClCompile>
+    <ClCompile Include="gui_globalcomponent.cpp">
+      <Filter>Component\Global</Filter>
+    </ClCompile>
+    <ClCompile Include="gui_button.cpp">
+      <Filter>Component\Button</Filter>
+    </ClCompile>
+    <ClCompile Include="gui_button_generic.cpp">
+      <Filter>Component\Button</Filter>
+    </ClCompile>
+    <ClCompile Include="gui_combobox.cpp">
+      <Filter>Component\Combobox</Filter>
+    </ClCompile>
+    <ClCompile Include="gui_combobox_generic.cpp">
+      <Filter>Component\Combobox</Filter>
+    </ClCompile>
+    <ClCompile Include="gui_flash.cpp">
+      <Filter>Component\Flash</Filter>
+    </ClCompile>
+    <ClCompile Include="gui_flash_generic.cpp">
+      <Filter>Component\Flash</Filter>
+    </ClCompile>
+    <ClCompile Include="gui_frame.cpp">
+      <Filter>Component\Frame</Filter>
+    </ClCompile>
+    <ClCompile Include="gui_frame_generic.cpp">
+      <Filter>Component\Frame</Filter>
+    </ClCompile>
+    <ClCompile Include="gui_html_doc.cpp">
+      <Filter>Component\Htmlbox</Filter>
+    </ClCompile>
+    <ClCompile Include="gui_htmlbox.cpp">
+      <Filter>Component\Htmlbox</Filter>
+    </ClCompile>
+    <ClCompile Include="gui_htmlbox_generic.cpp">
+      <Filter>Component\Htmlbox</Filter>
+    </ClCompile>
+    <ClCompile Include="gui_htmlbox_item.cpp">
+      <Filter>Component\Htmlbox</Filter>
+    </ClCompile>
+    <ClCompile Include="gui_htmltokenizer.cpp">
+      <Filter>Component\Htmlbox</Filter>
+    </ClCompile>
+    <ClCompile Include="gui_hypertext.cpp">
+      <Filter>Component\Hypertextbox</Filter>
+    </ClCompile>
+    <ClCompile Include="gui_hypertextbox.cpp">
+      <Filter>Component\Hypertextbox</Filter>
+    </ClCompile>
+    <ClCompile Include="gui_hypertextbox_generic.cpp">
+      <Filter>Component\Hypertextbox</Filter>
+    </ClCompile>
+    <ClCompile Include="gui_inputbox.cpp">
+      <Filter>Component\Inputbox</Filter>
+    </ClCompile>
+    <ClCompile Include="gui_inputbox_generic.cpp">
+      <Filter>Component\Inputbox</Filter>
+    </ClCompile>
+    <ClCompile Include="gui_listbox.cpp">
+      <Filter>Component\Listbox</Filter>
+    </ClCompile>
+    <ClCompile Include="gui_listbox_generic.cpp">
+      <Filter>Component\Listbox</Filter>
+    </ClCompile>
+    <ClCompile Include="gui_mdstaticbox.cpp">
+      <Filter>Component\Staticbox</Filter>
+    </ClCompile>
+    <ClCompile Include="gui_mdstaticbox_generic.cpp">
+      <Filter>Component\Staticbox</Filter>
+    </ClCompile>
+    <ClCompile Include="gui_staticbox.cpp">
+      <Filter>Component\Staticbox</Filter>
+    </ClCompile>
+    <ClCompile Include="gui_staticbox_generic.cpp">
+      <Filter>Component\Staticbox</Filter>
+    </ClCompile>
+    <ClCompile Include="gui_outputbox.cpp">
+      <Filter>Component\Outputbox</Filter>
+    </ClCompile>
+    <ClCompile Include="gui_outputbox_generic.cpp">
+      <Filter>Component\Outputbox</Filter>
+    </ClCompile>
+    <ClCompile Include="gui_particle.cpp">
+      <Filter>Component\Particlebox</Filter>
+    </ClCompile>
+    <ClCompile Include="gui_particle_doc.cpp">
+      <Filter>Component\Particlebox</Filter>
+    </ClCompile>
+    <ClCompile Include="gui_particleaffector.cpp">
+      <Filter>Component\Particlebox</Filter>
+    </ClCompile>
+    <ClCompile Include="gui_particlebox.cpp">
+      <Filter>Component\Particlebox</Filter>
+    </ClCompile>
+    <ClCompile Include="gui_particlebox_generic.cpp">
+      <Filter>Component\Particlebox</Filter>
+    </ClCompile>
+    <ClCompile Include="gui_particleemitter.cpp">
+      <Filter>Component\Particlebox</Filter>
+    </ClCompile>
+    <ClCompile Include="gui_particlepath.cpp">
+      <Filter>Component\Particlebox</Filter>
+    </ClCompile>
+    <ClCompile Include="gui_particlesystem.cpp">
+      <Filter>Component\Particlebox</Filter>
+    </ClCompile>
+    <ClCompile Include="gui_progressbar.cpp">
+      <Filter>Component\Progressbar</Filter>
+    </ClCompile>
+    <ClCompile Include="gui_progressbar_generic.cpp">
+      <Filter>Component\Progressbar</Filter>
+    </ClCompile>
+    <ClCompile Include="gui_scrollbar.cpp">
+      <Filter>Component\Scrollbar</Filter>
+    </ClCompile>
+    <ClCompile Include="gui_scrollbar_generic.cpp">
+      <Filter>Component\Scrollbar</Filter>
+    </ClCompile>
+    <ClCompile Include="gui_sliderbar.cpp">
+      <Filter>Component\Slidebar</Filter>
+    </ClCompile>
+    <ClCompile Include="gui_sliderbar_generic.cpp">
+      <Filter>Component\Slidebar</Filter>
+    </ClCompile>
+    <ClCompile Include="gui_tabbutton.cpp">
+      <Filter>Component\Tabbutton</Filter>
+    </ClCompile>
+    <ClCompile Include="gui_tabbutton_generic.cpp">
+      <Filter>Component\Tabbutton</Filter>
+    </ClCompile>
+    <ClCompile Include="gui_tabbutton_item.cpp">
+      <Filter>Component\Tabbutton</Filter>
+    </ClCompile>
+    <ClCompile Include="gui_tooltip.cpp">
+      <Filter>Component\Tooltip</Filter>
+    </ClCompile>
+    <ClCompile Include="gui_tooltip_generic.cpp">
+      <Filter>Component\Tooltip</Filter>
+    </ClCompile>
+    <ClCompile Include="gui_resourcefilepaser.cpp">
+      <Filter>Manager\Resource</Filter>
+    </ClCompile>
+    <ClCompile Include="gui_resourcemanager.cpp">
+      <Filter>Manager\Resource</Filter>
+    </ClCompile>
+    <ClCompile Include="gui_resourcemanager_generic.cpp">
+      <Filter>Manager\Resource</Filter>
+    </ClCompile>
+    <ClCompile Include="gui_resourcepage.cpp">
+      <Filter>Manager\Resource</Filter>
+    </ClCompile>
+    <ClCompile Include="gui_surfacefilepaser.cpp">
+      <Filter>Manager\Surface</Filter>
+    </ClCompile>
+    <ClCompile Include="gui_surfacemanager.cpp">
+      <Filter>Manager\Surface</Filter>
+    </ClCompile>
+    <ClCompile Include="gui_surfacemanager_generic.cpp">
+      <Filter>Manager\Surface</Filter>
+    </ClCompile>
+    <ClCompile Include="gui_surfacepage.cpp">
+      <Filter>Manager\Surface</Filter>
+    </ClCompile>
+    <ClCompile Include="gui_texture.cpp">
+      <Filter>Manager\Texture</Filter>
+    </ClCompile>
+    <ClCompile Include="gui_texturemanager.cpp">
+      <Filter>Manager\Texture</Filter>
+    </ClCompile>
+    <ClCompile Include="gui_guifilepaser.cpp">
+      <Filter>Manager\Gui</Filter>
+    </ClCompile>
+    <ClCompile Include="gui_guimanager.cpp">
+      <Filter>Manager\Gui</Filter>
+    </ClCompile>
+    <ClCompile Include="gui_guimanager_generic.cpp">
+      <Filter>Manager\Gui</Filter>
+    </ClCompile>
+    <ClCompile Include="gui_renderer.cpp">
+      <Filter>Manager\Gui</Filter>
+    </ClCompile>
+    <ClCompile Include="gui_setupgui.cpp">
+      <Filter>Manager\Gui</Filter>
+    </ClCompile>
+    <ClCompile Include="gui_font.cpp">
+      <Filter>Manager\Font</Filter>
+    </ClCompile>
+    <ClCompile Include="gui_fontmanager.cpp">
+      <Filter>Manager\Font</Filter>
+    </ClCompile>
+    <ClCompile Include="eventlistener_win32.cpp">
+      <Filter>Manager\Event</Filter>
+    </ClCompile>
+    <ClCompile Include="eventtimer.cpp">
+      <Filter>Manager\Event</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="gui_unibuffer.h">
+      <Filter>Util\Unibuffer</Filter>
+    </ClInclude>
+    <ClInclude Include="gui_dynamicoutline.h">
+      <Filter>Util\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="gui_effect_flicker.h">
+      <Filter>Util\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="gui_effect_path_chase.h">
+      <Filter>Util\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="gui_effect_radar.h">
+      <Filter>Util\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="gui_line_renderer.h">
+      <Filter>Util\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="inputdevice.h">
+      <Filter>Util\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="key.h">
+      <Filter>Util\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="mouse.h">
+      <Filter>Util\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="position.h">
+      <Filter>Util\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="rectangle.h">
+      <Filter>Util\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="timer.h">
+      <Filter>Util\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="GuiUtil.h">
+      <Filter>Util\Helper</Filter>
+    </ClInclude>
+    <ClInclude Include="StringLocalConverter.h">
+      <Filter>Util\LocalStringConvert</Filter>
+    </ClInclude>
+    <ClInclude Include="StringLocalConverter_Korean.h">
+      <Filter>Util\LocalStringConvert</Filter>
+    </ClInclude>
+    <ClInclude Include="StringLocalConverter_LocalBase.h">
+      <Filter>Util\LocalStringConvert</Filter>
+    </ClInclude>
+    <ClInclude Include="gui_define.h">
+      <Filter>Main</Filter>
+    </ClInclude>
+    <ClInclude Include="gui_precomp.h">
+      <Filter>Main</Filter>
+    </ClInclude>
+    <ClInclude Include="guicore_precomp.h">
+      <Filter>Main</Filter>
+    </ClInclude>
+    <ClInclude Include="gui_component.h">
+      <Filter>Component\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="gui_component_generic.h">
+      <Filter>Component\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="gui_componentmanager.h">
+      <Filter>Component\Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="gui_componentmanager_generic.h">
+      <Filter>Component\Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="gui_componentoption.h">
+      <Filter>Component\Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="gui_componentpage.h">
+      <Filter>Component\Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="gui_componenttokenizer.h">
+      <Filter>Component\Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="gui_componenttype.h">
+      <Filter>Component\Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="gui_componenttypes.h">
+      <Filter>Component\Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="gui_balloon.h">
+      <Filter>Component\Balloon</Filter>
+    </ClInclude>
+    <ClInclude Include="gui_balloon_generic.h">
+      <Filter>Component\Balloon</Filter>
+    </ClInclude>
+    <ClInclude Include="gui_anipanel.h">
+      <Filter>Component\Panel</Filter>
+    </ClInclude>
+    <ClInclude Include="gui_anipanel_generic.h">
+      <Filter>Component\Panel</Filter>
+    </ClInclude>
+    <ClInclude Include="gui_panel.h">
+      <Filter>Component\Panel</Filter>
+    </ClInclude>
+    <ClInclude Include="gui_panel_generic.h">
+      <Filter>Component\Panel</Filter>
+    </ClInclude>
+    <ClInclude Include="gui_dialog.h">
+      <Filter>Component\Dialog</Filter>
+    </ClInclude>
+    <ClInclude Include="gui_dialog_generic.h">
+      <Filter>Component\Dialog</Filter>
+    </ClInclude>
+    <ClInclude Include="gui_globalcomponent.h">
+      <Filter>Component\Global</Filter>
+    </ClInclude>
+    <ClInclude Include="gui_button.h">
+      <Filter>Component\Button</Filter>
+    </ClInclude>
+    <ClInclude Include="gui_button_generic.h">
+      <Filter>Component\Button</Filter>
+    </ClInclude>
+    <ClInclude Include="gui_combobox.h">
+      <Filter>Component\Combobox</Filter>
+    </ClInclude>
+    <ClInclude Include="gui_combobox_generic.h">
+      <Filter>Component\Combobox</Filter>
+    </ClInclude>
+    <ClInclude Include="gui_flash.h">
+      <Filter>Component\Flash</Filter>
+    </ClInclude>
+    <ClInclude Include="gui_flash_generic.h">
+      <Filter>Component\Flash</Filter>
+    </ClInclude>
+    <ClInclude Include="gui_frame.h">
+      <Filter>Component\Frame</Filter>
+    </ClInclude>
+    <ClInclude Include="gui_frame_generic.h">
+      <Filter>Component\Frame</Filter>
+    </ClInclude>
+    <ClInclude Include="gui_html_doc.h">
+      <Filter>Component\Htmlbox</Filter>
+    </ClInclude>
+    <ClInclude Include="gui_htmlbox.h">
+      <Filter>Component\Htmlbox</Filter>
+    </ClInclude>
+    <ClInclude Include="gui_htmlbox_generic.h">
+      <Filter>Component\Htmlbox</Filter>
+    </ClInclude>
+    <ClInclude Include="gui_htmlbox_item.h">
+      <Filter>Component\Htmlbox</Filter>
+    </ClInclude>
+    <ClInclude Include="gui_htmltokenizer.h">
+      <Filter>Component\Htmlbox</Filter>
+    </ClInclude>
+    <ClInclude Include="gui_hypertext.h">
+      <Filter>Component\Hypertextbox</Filter>
+    </ClInclude>
+    <ClInclude Include="gui_hypertextbox.h">
+      <Filter>Component\Hypertextbox</Filter>
+    </ClInclude>
+    <ClInclude Include="gui_hypertextbox_generic.h">
+      <Filter>Component\Hypertextbox</Filter>
+    </ClInclude>
+    <ClInclude Include="gui_hypertextbox_item.h">
+      <Filter>Component\Hypertextbox</Filter>
+    </ClInclude>
+    <ClInclude Include="gui_inputbox.h">
+      <Filter>Component\Inputbox</Filter>
+    </ClInclude>
+    <ClInclude Include="gui_inputbox_generic.h">
+      <Filter>Component\Inputbox</Filter>
+    </ClInclude>
+    <ClInclude Include="gui_listbox.h">
+      <Filter>Component\Listbox</Filter>
+    </ClInclude>
+    <ClInclude Include="gui_listbox_generic.h">
+      <Filter>Component\Listbox</Filter>
+    </ClInclude>
+    <ClInclude Include="gui_listbox_item.h">
+      <Filter>Component\Listbox</Filter>
+    </ClInclude>
+    <ClInclude Include="gui_mdstaticbox.h">
+      <Filter>Component\Staticbox</Filter>
+    </ClInclude>
+    <ClInclude Include="gui_mdstaticbox_generic.h">
+      <Filter>Component\Staticbox</Filter>
+    </ClInclude>
+    <ClInclude Include="gui_mdstaticbox_item.h">
+      <Filter>Component\Staticbox</Filter>
+    </ClInclude>
+    <ClInclude Include="gui_staticbox.h">
+      <Filter>Component\Staticbox</Filter>
+    </ClInclude>
+    <ClInclude Include="gui_staticbox_generic.h">
+      <Filter>Component\Staticbox</Filter>
+    </ClInclude>
+    <ClInclude Include="gui_staticbox_item.h">
+      <Filter>Component\Staticbox</Filter>
+    </ClInclude>
+    <ClInclude Include="gui_outputbox.h">
+      <Filter>Component\Outputbox</Filter>
+    </ClInclude>
+    <ClInclude Include="gui_outputbox_generic.h">
+      <Filter>Component\Outputbox</Filter>
+    </ClInclude>
+    <ClInclude Include="gui_outputbox_item.h">
+      <Filter>Component\Outputbox</Filter>
+    </ClInclude>
+    <ClInclude Include="gui_particle.h">
+      <Filter>Component\Particlebox</Filter>
+    </ClInclude>
+    <ClInclude Include="gui_particle_doc.h">
+      <Filter>Component\Particlebox</Filter>
+    </ClInclude>
+    <ClInclude Include="gui_particleaffector.h">
+      <Filter>Component\Particlebox</Filter>
+    </ClInclude>
+    <ClInclude Include="gui_particlebox.h">
+      <Filter>Component\Particlebox</Filter>
+    </ClInclude>
+    <ClInclude Include="gui_particlebox_generic.h">
+      <Filter>Component\Particlebox</Filter>
+    </ClInclude>
+    <ClInclude Include="gui_particleemitter.h">
+      <Filter>Component\Particlebox</Filter>
+    </ClInclude>
+    <ClInclude Include="gui_particlepath.h">
+      <Filter>Component\Particlebox</Filter>
+    </ClInclude>
+    <ClInclude Include="gui_particlesystem.h">
+      <Filter>Component\Particlebox</Filter>
+    </ClInclude>
+    <ClInclude Include="gui_progressbar.h">
+      <Filter>Component\Progressbar</Filter>
+    </ClInclude>
+    <ClInclude Include="gui_progressbar_generic.h">
+      <Filter>Component\Progressbar</Filter>
+    </ClInclude>
+    <ClInclude Include="gui_scrollbar.h">
+      <Filter>Component\Scrollbar</Filter>
+    </ClInclude>
+    <ClInclude Include="gui_scrollbar_generic.h">
+      <Filter>Component\Scrollbar</Filter>
+    </ClInclude>
+    <ClInclude Include="gui_sliderbar.h">
+      <Filter>Component\Slidebar</Filter>
+    </ClInclude>
+    <ClInclude Include="gui_sliderbar_generic.h">
+      <Filter>Component\Slidebar</Filter>
+    </ClInclude>
+    <ClInclude Include="gui_tabbutton_item.h">
+      <Filter>Component\Tabbutton</Filter>
+    </ClInclude>
+    <ClInclude Include="gui_tooltip.h">
+      <Filter>Component\Tooltip</Filter>
+    </ClInclude>
+    <ClInclude Include="gui_tooltip_generic.h">
+      <Filter>Component\Tooltip</Filter>
+    </ClInclude>
+    <ClInclude Include="gui_resourcefilepaser.h">
+      <Filter>Manager\Resource</Filter>
+    </ClInclude>
+    <ClInclude Include="gui_resourcemanager.h">
+      <Filter>Manager\Resource</Filter>
+    </ClInclude>
+    <ClInclude Include="gui_resourcemanager_generic.h">
+      <Filter>Manager\Resource</Filter>
+    </ClInclude>
+    <ClInclude Include="gui_resourcepage.h">
+      <Filter>Manager\Resource</Filter>
+    </ClInclude>
+    <ClInclude Include="gui_surface.h">
+      <Filter>Manager\Surface</Filter>
+    </ClInclude>
+    <ClInclude Include="gui_surfacefilepaser.h">
+      <Filter>Manager\Surface</Filter>
+    </ClInclude>
+    <ClInclude Include="gui_surfacemanager.h">
+      <Filter>Manager\Surface</Filter>
+    </ClInclude>
+    <ClInclude Include="gui_surfacemanager_generic.h">
+      <Filter>Manager\Surface</Filter>
+    </ClInclude>
+    <ClInclude Include="gui_surfacepage.h">
+      <Filter>Manager\Surface</Filter>
+    </ClInclude>
+    <ClInclude Include="gui_texture.h">
+      <Filter>Manager\Texture</Filter>
+    </ClInclude>
+    <ClInclude Include="gui_texturemanager.h">
+      <Filter>Manager\Texture</Filter>
+    </ClInclude>
+    <ClInclude Include="gui_guifilepaser.h">
+      <Filter>Manager\Gui</Filter>
+    </ClInclude>
+    <ClInclude Include="gui_guimanager.h">
+      <Filter>Manager\Gui</Filter>
+    </ClInclude>
+    <ClInclude Include="gui_guimanager_generic.h">
+      <Filter>Manager\Gui</Filter>
+    </ClInclude>
+    <ClInclude Include="gui_renderer.h">
+      <Filter>Manager\Gui</Filter>
+    </ClInclude>
+    <ClInclude Include="gui_setupgui.h">
+      <Filter>Manager\Gui</Filter>
+    </ClInclude>
+    <ClInclude Include="gui_font.h">
+      <Filter>Manager\Font</Filter>
+    </ClInclude>
+    <ClInclude Include="gui_fontmanager.h">
+      <Filter>Manager\Font</Filter>
+    </ClInclude>
+    <ClInclude Include="callback_widget.h">
+      <Filter>Manager\Event</Filter>
+    </ClInclude>
+    <ClInclude Include="eventlistener_win32.h">
+      <Filter>Manager\Event</Filter>
+    </ClInclude>
+    <ClInclude Include="eventtimer.h">
+      <Filter>Manager\Event</Filter>
+    </ClInclude>
+    <ClInclude Include="gui_signals.h">
+      <Filter>Manager\Signal</Filter>
+    </ClInclude>
+    <ClInclude Include="gui_signalv0.h">
+      <Filter>Manager\Signal</Filter>
+    </ClInclude>
+    <ClInclude Include="gui_signalv1.h">
+      <Filter>Manager\Signal</Filter>
+    </ClInclude>
+    <ClInclude Include="gui_signalv2.h">
+      <Filter>Manager\Signal</Filter>
+    </ClInclude>
+    <ClInclude Include="gui_signalv3.h">
+      <Filter>Manager\Signal</Filter>
+    </ClInclude>
+    <ClInclude Include="gui_signalv4.h">
+      <Filter>Manager\Signal</Filter>
+    </ClInclude>
+    <ClInclude Include="gui_signalv5.h">
+      <Filter>Manager\Signal</Filter>
+    </ClInclude>
+    <ClInclude Include="gui_slot.h">
+      <Filter>Manager\Signal</Filter>
+    </ClInclude>
+    <ClInclude Include="gui_slot_container.h">
+      <Filter>Manager\Signal</Filter>
+    </ClInclude>
+    <ClInclude Include="gui_slot_generic.h">
+      <Filter>Manager\Signal</Filter>
+    </ClInclude>
+    <ClInclude Include="gui_slotbufferv0.h">
+      <Filter>Manager\Signal</Filter>
+    </ClInclude>
+    <ClInclude Include="gui_slotbufferv1.h">
+      <Filter>Manager\Signal</Filter>
+    </ClInclude>
+    <ClInclude Include="gui_slots.h">
+      <Filter>Manager\Signal</Filter>
+    </ClInclude>
+    <ClInclude Include="gui_slotv0.h">
+      <Filter>Manager\Signal</Filter>
+    </ClInclude>
+    <ClInclude Include="gui_slotv1.h">
+      <Filter>Manager\Signal</Filter>
+    </ClInclude>
+    <ClInclude Include="gui_slotv2.h">
+      <Filter>Manager\Signal</Filter>
+    </ClInclude>
+    <ClInclude Include="gui_slotv3.h">
+      <Filter>Manager\Signal</Filter>
+    </ClInclude>
+    <ClInclude Include="gui_slotv4.h">
+      <Filter>Manager\Signal</Filter>
+    </ClInclude>
+    <ClInclude Include="gui_slotv5.h">
+      <Filter>Manager\Signal</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="gui_tabbutton.h">
+      <Filter>Component\Tabbutton</Filter>
+    </CustomBuild>
+    <CustomBuild Include="gui_tabbutton_generic.h">
+      <Filter>Component\Tabbutton</Filter>
+    </CustomBuild>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,74 @@
+---Ver.01
+
+GameStage(0)
+--[
+	Action( "wait" )
+	--[
+		Condition( "recv ts event" )
+		--[
+			Param( "trigger type", "quest" )
+			Param( "event id", 44 )
+		--]
+		End()
+	--]
+	End()
+
+	Action( "add mob" )
+	--[
+		Param( "index", 6681113 )
+		Param( "group", 760 )
+		Param( "loc x", 7527.948 )
+		Param( "loc y", -117.383 )
+		Param( "loc z", -959.930 )
+		Param( "dir x", -0.156 )
+		Param( "dir z", 0.988 )
+		Param( "play script", 6681113 )
+		Param( "play scene",2 )
+		Param( "no spawn wait", "true" )
+	--]
+	End()
+
+	Action( "wait" )
+	--[
+		Param( "operation", "or" )
+
+		Condition( "check mobgroup" )
+		--[
+			Param( "group", 760 )
+			Param( "count", 1 )
+		--]
+		End()
+
+		Condition( "check time" )
+		--[
+			Param( "time", 170 )
+		--]
+		End()
+	--]
+	End()
+	
+	Action( "add npc" )
+	--[
+		Param( "index", 5651102 )
+		Param( "loc x", 7539.350 )
+		Param( "loc y", -117)
+		Param( "loc z", -939.753 )
+		Param( "dir x", -0.156 )
+		Param( "dir z", 0.988 )
+		Param( "play script",5651102 )
+		Param( "play scene", 1 )
+		Param( "no spawn wait", "true" )
+	--]
+	End()
+
+	Action( "wait" )
+	--[
+		Condition( "check time" )
+		--[
+			Param( "time", 5 )
+		--]
+		End()
+	--]
+	End()
+--]
+End()

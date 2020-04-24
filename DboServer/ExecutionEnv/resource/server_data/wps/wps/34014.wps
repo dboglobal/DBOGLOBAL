@@ -1,0 +1,482 @@
+-- UD6
+-- Normal Mob Stage
+-- 암흑선두 재배소
+-- 스위치 4개 중 2개 근처에 있으면 열리는 문
+
+GameStage(0)
+--[
+	-- @teleport -907 715
+	-- 14, 15, 16, 17 4개의 오브젝트(스위치) 근처에 user가 각각 다가가면, 각 오브젝트가 반응하고,
+	-- 그 중 14 & 15 혹은16 & 17 이 반응하고 있을 때 18(문)이 열려서 다른 user들이 지나갈 수 있게 된다.
+	
+	Action( "calculate" )
+	--[
+		Param( "declare", "int bitFlag18 = 0, int press14 = 1, int press15 = 2, int press16 = 4, int press17 = 8" )
+	--]
+	End()
+	
+	Action( "function" )
+	--[
+		-- 14번 오브젝트
+		Condition( "child" )
+		--[
+			Action( "while" )
+			--[
+				Action( "loop" )
+				--[
+					-- The user you approach near the switch
+					Action( "wait" )
+					--[
+						Condition( "area enter" )
+						--[
+							Param( "origin x", -895.09 )
+							Param( "origin z", 714.88 )
+							Param( "radius", 2 )
+							Param( "all member", "false" )
+						--]
+						End()
+					--]
+					End()
+					
+					-- Switch is pressed
+					Action( "change object state" )
+					--[
+						Param( "index", 14 )
+						Param( "state", 1 )
+						Param( "substate show", 1 )
+					--]
+					End()
+					
+					-- 스위치가 눌려진 것을 bitflag에 기록한다
+					Action( "calculate" )
+					--[
+						Param( "express", "bitFlag18 = bitFlag18 + press14" )
+					--]
+					End()
+					
+					-- loop until all members left the area
+					Action( "while" )
+					--[
+						Condition( "loop cond" )
+						--[
+							Condition( "area enter" )
+							--[
+								Param( "origin x", -895.09 )
+								Param( "origin z", 714.88 )
+								Param( "radius", 2 )
+								Param( "all member", "false" )
+							--]
+							End()
+						--]
+						End()
+						
+						Action( "loop" )
+						--[
+						--]
+						End()
+					-- while end
+					--]
+					End()
+					
+					-- Nulryeotdeon switch olraonda
+					Action( "change object state" )
+					--[
+						Param( "index", 14 )
+						Param( "state", 3 )
+						Param( "substate show", 1 )
+					--]
+					End()
+					
+					-- Record that the switch is put in the bit flag
+					Action( "calculate" )
+					--[
+						Param( "express", "bitFlag18 = bitFlag18 - press14" )
+					--]
+					End()
+				-- loop 닫음
+				--]
+				End()
+				
+			-- while 닫음
+			--]
+			End()
+		-- child 닫음
+		--]
+		End()
+		
+		-- 15번 오브젝트
+		-- 상세 설명은 14번과 동일
+		Condition( "child" )
+		--[
+			Action( "while" )
+			--[
+				Action( "loop" )
+				--[
+					Action( "wait" )
+					--[
+						Condition( "area enter" )
+						--[
+							Param( "origin x", -896.58 )
+							Param( "origin z", 720.68 )
+							Param( "radius", 2 )
+							Param( "all member", "false" )
+						--]
+						End()
+					--]
+					End()
+					
+					Action( "change object state" )
+					--[
+						Param( "index", 15 )
+						Param( "state", 1 )
+						Param( "substate show", 1 )
+					--]
+					End()
+					
+					Action( "calculate" )
+					--[
+						Param( "express", "bitFlag18 = bitFlag18 + press15" )
+					--]
+					End()
+					
+					Action( "while" )
+					--[
+						Condition( "loop cond" )
+						--[
+							Condition( "area enter" )
+							--[
+								Param( "origin x", -896.58 )
+								Param( "origin z", 720.68 )
+								Param( "radius", 2 )
+								Param( "all member", "false" )
+							--]
+							End()
+						--]
+						End()
+						
+						Action( "loop" )
+						--[
+						--]
+						End()
+					-- while close
+					--]
+					End()
+					
+					Action( "change object state" )
+					--[
+						Param( "index", 15 )
+						Param( "state", 3 )
+						Param( "substate show", 1 )
+					--]
+					End()
+					
+					Action( "calculate" )
+					--[
+						Param( "express", "bitFlag18 = bitFlag18 - press15" )
+					--]
+					End()
+				-- loop 닫음
+				--]
+				End()
+				
+			-- while 닫음
+			--]
+			End()
+		-- child 닫음
+		--]
+		End()
+		
+		-- 16번 오브젝트
+		-- 상세 설명은 14번과 동일
+		Condition( "child" )
+		--[
+			Action( "while" )
+			--[
+				Action( "loop" )
+				--[
+					Action( "wait" )
+					--[
+						Condition( "area enter" )
+						--[
+							Param( "origin x", -884.03 )
+							Param( "origin z", 717.66 )
+							Param( "radius", 2 )
+							Param( "all member", "false" )
+						--]
+						End()
+					--]
+					End()
+					
+					Action( "change object state" )
+					--[
+						Param( "index", 16 )
+						Param( "state", 1 )
+						Param( "substate show", 1 )
+					--]
+					End()
+					
+					Action( "calculate" )
+					--[
+						Param( "express", "bitFlag18 = bitFlag18 + press16" )
+					--]
+					End()
+					
+					Action( "while" )
+					--[
+						Condition( "loop cond" )
+						--[
+							Condition( "area enter" )
+							--[
+								Param( "origin x", -884.03 )
+								Param( "origin z", 717.66 )
+								Param( "radius", 2 )
+								Param( "all member", "false" )
+							--]
+							End()
+						--]
+						End()
+						
+						Action( "loop" )
+						--[
+						--]
+						End()
+					-- while 닫음
+					--]
+					End()
+					
+					Action( "change object state" )
+					--[
+						Param( "index", 16 )
+						Param( "state", 3 )
+						Param( "substate show", 1 )
+					--]
+					End()
+					
+					Action( "calculate" )
+					--[
+						Param( "express", "bitFlag18 = bitFlag18 - press16" )
+					--]
+					End()
+				-- loop 닫음
+				--]
+				End()
+				
+			-- while 닫음
+			--]
+			End()
+		-- child 닫음
+		--]
+		End()
+		
+		-- 17번 오브젝트
+		-- 상세 설명은 14번과 동일
+		Condition( "child" )
+		--[
+			Action( "while" )
+			--[
+				Action( "loop" )
+				--[
+					Action( "wait" )
+					--[
+						Condition( "area enter" )
+						--[
+							Param( "origin x", -885.71 )
+							Param( "origin z", 723.41 )
+							Param( "radius", 2 )
+							Param( "all member", "false" )
+						--]
+						End()
+					--]
+					End()
+					
+					Action( "change object state" )
+					--[
+						Param( "index", 17 )
+						Param( "state", 1 )
+						Param( "substate show", 1 )
+					--]
+					End()
+					
+					Action( "calculate" )
+					--[
+						Param( "express", "bitFlag18 = bitFlag18 + press17" )
+					--]
+					End()
+					
+					Action( "while" )
+					--[
+						Condition( "loop cond" )
+						--[
+							Condition( "area enter" )
+							--[
+								Param( "origin x", -885.71 )
+								Param( "origin z", 723.41 )
+								Param( "radius", 2 )
+								Param( "all member", "false" )
+							--]
+							End()
+						--]
+						End()
+						
+						Action( "loop" )
+						--[
+						--]
+						End()
+					-- while 닫음
+					--]
+					End()
+					
+					Action( "change object state" )
+					--[
+						Param( "index", 17 )
+						Param( "state", 3 )
+						Param( "substate show", 1 )
+					--]
+					End()
+					
+					Action( "calculate" )
+					--[
+						Param( "express", "bitFlag18 = bitFlag18 - press17" )
+					--]
+					End()
+				-- loop 닫음
+				--]
+				End()
+			-- while 닫음
+			--]
+			End()
+		-- child 닫음
+		--]
+		End()
+		
+		-- 18번 오브젝트(문)
+		Condition( "child" )
+		--[
+			Action( "while" )
+			--[
+				Action( "loop" )
+				--[
+					-- 14 & 15 혹은 16 & 17 스위치가 눌려졌을 때
+					Action( "wait" )
+					--[
+						Param( "operation", "or" )
+						
+						Condition( "compare" )
+						--[
+							Param( "express", "bitFlag18 == 3" )
+						--]
+						End()
+						
+						Condition( "compare" )
+						--[
+							Param( "express", "bitFlag18 == 12" )
+						--]
+						End()
+					--]
+					End()
+					
+					-- 18(문) 열어줌
+					Action( "change object state" )
+					--[
+						Param( "index", 18 )
+						Param( "state", 1 )
+						Param( "substate show", 1 )
+					--]
+					End()
+					
+					-- 14 & 15 혹은 16 & 17 스위치가 눌려지지 않았을 때
+					Action( "wait" )
+					--[
+						Param( "operation", "and" )
+						
+						Condition( "compare" )
+						--[
+							Param( "express", "bitFlag18 != 3" )
+						--]
+						End()
+						
+						Condition( "compare" )
+						--[
+							Param( "express", "bitFlag18 != 12" )
+						--]
+						End()
+					--]
+					End()
+					
+					-- 18(문) 닫아줌
+					Action( "change object state" )
+					--[
+						Param( "index", 18 )
+						Param( "state", 3 )
+						Param( "substate show", 1 )
+					--]
+					End()
+				--]
+				End()
+			--]
+			End()
+		--]
+		End()
+		
+		-- 아래 구문을 넣지 않으면 암흑선두 재배소 이후 진행하다 죽으면 혼자 올라올 수 없음
+		-- 초콜레이님 stage이상 진행하면 4개 스위치와 문 모두 누르고 열어버림
+		
+		-- leave loop when receive wps
+		Action( "wait" )
+		--[
+			Condition( "recv event from wps" )
+			--[
+				Param( "wps index", 34011 )
+				Param( "event id", 941 )
+			--]
+			End()
+		--]
+		End()
+	-- function 닫음
+	--]
+	End()
+	
+	-- 스위치 4개 모두 눌러버림
+	Action( "change object state" )
+	--[
+		Param( "index", 14 )
+		Param( "state", 1 )
+		Param( "substate show", 1 )
+	--]
+	End()
+	
+	Action( "change object state" )
+	--[
+		Param( "index", 15 )
+		Param( "state", 1 )
+		Param( "substate show", 1 )
+	--]
+	End()
+	
+	Action( "change object state" )
+	--[
+		Param( "index", 16 )
+		Param( "state", 1 )
+		Param( "substate show", 1 )
+	--]
+	End()
+	
+	Action( "change object state" )
+	--[
+		Param( "index", 17 )
+		Param( "state", 1 )
+		Param( "substate show", 1 )
+	--]
+	End()
+	
+	-- 18(문) 열어줌
+	Action( "change object state" )
+	--[
+		Param( "index", 18 )
+		Param( "state", 1 )
+		Param( "substate show", 1 )
+	--]
+	End()
+	
+--]
+End()

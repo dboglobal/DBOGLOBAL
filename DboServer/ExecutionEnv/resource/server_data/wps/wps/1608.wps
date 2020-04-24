@@ -1,0 +1,296 @@
+GameStage(0)
+--[
+
+	Action("change sps scene")
+	--[
+		Param("index", 6203101)
+		Param("play script", 6203101)
+		Param("play scene", 1)
+	--]
+	End()
+
+--무스탕 대사 1 대기
+
+	Action("wait")
+	--[
+		Condition("recv event from sps")
+		--[
+			Param("object type", "npc")
+			Param("object index", 6203101)
+			Param("event id", 319)
+		--]
+		End()
+	--]
+	End()
+
+	Action("add npc")
+	--[
+		Param("index", 4124101)
+		Param("loc x", -1267.247)
+		Param("loc y", -80.297)
+		Param("loc z", 1238.441)
+		Param("dir x", -0.483)
+		Param("dir z", -0.875)
+		Param("play script", 4124101)
+		Param("play scene", 1)
+		Param("no spawn wait","true")
+	--]
+	End()
+
+
+--부하 대사 1 대기
+
+	Action("wait")
+	--[
+		Condition("recv event from sps")
+		--[
+			Param("object type","npc")
+			Param("object index", 4124101)
+			Param("event id", 320)
+		--]
+		End()
+	--]
+	End()
+
+	Action("send event to sps")
+	--[
+		Param("target type", "npc")
+		Param("target index", 6203101)
+		Param("event id", 321)
+	--]
+	End()
+
+--무스탕 대사 2 대기
+
+	Action("wait")
+	--[
+		Condition("recv event from sps")
+		--[
+			Param("object type","npc")
+			Param("object index", 6203101)
+			Param("event id", 322)
+		--]
+		End()
+	--]
+	End()
+
+	Action("send event to sps")
+	--[
+		Param("target type","npc")
+		Param("target index", 4124101)
+		Param("event id", 323)
+	--]
+	End()
+
+--부하 대사 2 대기
+
+	Action("wait")
+	--[
+		Condition("recv event from sps")
+		--[
+			Param("object type","npc")
+			Param("object index", 4124101)
+			Param("event id", 324)
+		--]
+		End()
+	--]
+	End()
+
+	Action("send event to sps")
+	--[
+		Param("target type", "npc")
+		Param("target index", 6203101)
+		Param("event id", 325)
+	--]
+	End()
+
+	Action("send event to sps")
+	--[
+		Param("target type", "npc")
+		Param("target index", 4124101)
+		Param("event id", 326)
+	--]
+	End()
+
+--악수연출 대기
+
+	Action("wait")
+	--[
+		Param("operation","and")
+
+		Condition("recv event from sps")
+		--[
+			Param("object type","npc")
+			Param("object index", 6203101)
+			Param("event id", 327)
+		--]
+		End()
+
+		Condition("recv event from sps")
+		--[
+			Param("object type","npc")
+			Param("object index", 4124101)
+			Param("event id", 328)
+		--]
+		End()
+	--]
+	End()
+
+
+	Action("send event to sps")
+	--[
+		Param("target type","npc")
+		Param("target index", 4124101)
+		Param("event id", 329)
+	--]
+	End()
+
+--변신 연출 대기
+
+	Action("wait")
+	--[
+		Condition("recv event from sps")
+		--[
+			Param("object type","npc")
+			Param("object index", 4124101)
+			Param("event id", 330)
+		--]
+		End()
+	--]
+	End()
+
+	Action("send event to sps")
+	--[
+		Param("target type","npc")
+		Param("target index", 6203101)
+		Param("event id", 331)
+	--]
+	End()
+
+--무스탕 대사 3 대기
+
+	Action("wait")
+	--[
+		Condition("recv event from sps")
+		--[
+			Param("object type","npc")
+			Param("object index", 6203101)
+			Param("event id", 332)
+		--]
+		End()
+	--]
+	End()
+
+	Action("send event to sps")
+	--[
+		Param("target type","npc")
+		Param("target index", 6203101)
+		Param("event id", 333)
+	--]
+	End()
+
+	Action("send event to sps")
+	--[
+		Param("target type","npc")
+		Param("target index", 4124101)
+		Param("event id", 334)
+	--]
+	End()
+
+--원래모습 완료 대기
+
+	Action("wait")
+	--[
+		Param("operation","and")
+
+		Condition("recv event from sps")
+		--[
+			Param("object type","npc")
+			Param("object index", 6203101)
+			Param("event id", 335)
+		--]
+		End()
+
+		Condition("recv event from sps")
+		--[
+			Param("object type", "npc")
+			Param("object index", 4124101)
+			Param("event id", 336)
+		--]
+		End()
+	--]
+	End()
+
+	Action("send event to sps")
+	--[
+		Param("target type", "npc")
+		Param("target index", 6203101)
+		Param("event id", 337)
+	--]
+	End()
+
+--무스탕 대사 4 대기
+
+	Action("wait")
+	--[
+		Condition("recv event from sps")
+		--[
+			Param("object type", "npc")
+			Param("object index", 6203101)
+			Param("event id", 338)
+		--]
+		End()
+	--]
+	End()
+
+	Action("send event to ts")
+	--[
+		Param("trigger type", "quest")
+		Param("apply type", "register all")
+		Param("event id", 339)
+	--]
+	End()
+
+	Action("remove npc")
+	--[
+		Param("index", 4124101)
+		Param("type", "clear")
+	--]
+	End()
+
+--]
+End()
+
+GameFailed()
+--[
+
+	Action("remove npc")
+	--[
+		Param("index", 4124101)
+		Param("type", "clear")
+	--]
+	End()
+
+	Action("remove npc")
+	--[
+		Param("index", 6203101)
+		Param("type", "clear")
+	--]
+	End()
+
+	Action("add npc")
+	--[
+		Param("index", 6203101)
+		Param("loc x", -1277.02)
+		Param("loc y", -80)
+		Param("loc z", 1220.65)
+		Param("dir x", 0.411)
+		Param("dir z", 0.912)
+		Param("no spawn wait","true")
+		Param("stand alone","true")
+	--]
+	End()
+
+--]
+End()
+	

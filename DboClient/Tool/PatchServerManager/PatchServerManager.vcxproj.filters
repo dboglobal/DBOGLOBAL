@@ -1,0 +1,140 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Framework">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Configure">
+      <UniqueIdentifier>{9815647b-c7a4-4fc7-9c73-351e2588ff4f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav</Extensions>
+    </Filter>
+    <Filter Include="Patch">
+      <UniqueIdentifier>{7c39f2b4-fe84-4fe0-8cf6-e431b8147ee1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utility">
+      <UniqueIdentifier>{9d7bbe70-7f42-4ccc-9bfe-0f6c2373fb95}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Event">
+      <UniqueIdentifier>{662a1488-1b96-46e8-991b-06316bab6df4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Log">
+      <UniqueIdentifier>{d7e1c75d-55b9-417a-9820-65f2179d83d4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="UpdateDataMng">
+      <UniqueIdentifier>{ace66c9d-01a2-4cf7-8937-76f461b410db}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Integrity">
+      <UniqueIdentifier>{a849165f-7477-448e-91ef-e1b4693f8659}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Define.h">
+      <Filter>Framework</Filter>
+    </ClInclude>
+    <ClInclude Include="PatchServerManager.h">
+      <Filter>Framework</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>Framework</Filter>
+    </ClInclude>
+    <ClInclude Include="PatchInfo.h">
+      <Filter>Configure</Filter>
+    </ClInclude>
+    <ClInclude Include="PSMngConfig.h">
+      <Filter>Configure</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>Resource</Filter>
+    </ClInclude>
+    <ClInclude Include="Patcher.h">
+      <Filter>Patch</Filter>
+    </ClInclude>
+    <ClInclude Include="patchwin.h">
+      <Filter>Patch</Filter>
+    </ClInclude>
+    <ClInclude Include="Utility.h">
+      <Filter>Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="EventDef.h">
+      <Filter>Event</Filter>
+    </ClInclude>
+    <ClInclude Include="EventSys.h">
+      <Filter>Event</Filter>
+    </ClInclude>
+    <ClInclude Include="Log.h">
+      <Filter>Log</Filter>
+    </ClInclude>
+    <ClInclude Include="UpdateDataMng.h">
+      <Filter>UpdateDataMng</Filter>
+    </ClInclude>
+    <ClInclude Include="IntegritySys.h">
+      <Filter>Integrity</Filter>
+    </ClInclude>
+    <ClInclude Include="md5.h">
+      <Filter>Integrity</Filter>
+    </ClInclude>
+    <ClInclude Include="MD5ChekSumErrCode.h">
+      <Filter>Integrity</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlMD5CheckSum.h">
+      <Filter>Integrity</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="PatchServerManager.cpp">
+      <Filter>Framework</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Framework</Filter>
+    </ClCompile>
+    <ClCompile Include="PatchInfo.cpp">
+      <Filter>Configure</Filter>
+    </ClCompile>
+    <ClCompile Include="PSMngConfig.cpp">
+      <Filter>Configure</Filter>
+    </ClCompile>
+    <ClCompile Include="Patcher.cpp">
+      <Filter>Patch</Filter>
+    </ClCompile>
+    <ClCompile Include="Utility.cpp">
+      <Filter>Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="EventSys.cpp">
+      <Filter>Event</Filter>
+    </ClCompile>
+    <ClCompile Include="Log.cpp">
+      <Filter>Log</Filter>
+    </ClCompile>
+    <ClCompile Include="UpdateDataMng.cpp">
+      <Filter>UpdateDataMng</Filter>
+    </ClCompile>
+    <ClCompile Include="IntegritySys.cpp">
+      <Filter>Integrity</Filter>
+    </ClCompile>
+    <ClCompile Include="md5.c">
+      <Filter>Integrity</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlMD5CheckSum.cpp">
+      <Filter>Integrity</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\PatchServerManager.ico">
+      <Filter>Resource</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="PatchServerManager.rc">
+      <Filter>Resource</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\PatchServerManager.rc2">
+      <Filter>Resource</Filter>
+    </None>
+  </ItemGroup>
+</Project>

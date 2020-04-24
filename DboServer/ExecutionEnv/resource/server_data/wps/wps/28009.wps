@@ -1,0 +1,22 @@
+-- Second floor
+-- Which runs on the object
+-- If you click on the door without turning on the power switch
+
+GameStage(0)
+--[
+	-- System message: "Security devices could not open the door because it works."
+	Action( "system message" )
+	--[
+		Param( "notify", "caution" )
+		Param( "text index", 10 )
+	--]
+	End()
+	
+	Action( "system message" )
+	--[
+		Param( "notify", "system" )
+		Param( "text index", 10 )
+	--]
+	End()
+--]
+End()

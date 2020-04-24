@@ -1,0 +1,17 @@
+Scene( 1, "³»¿ë" )
+--[
+	State( "fight" )
+	--[
+		Action( "target fix attack" )
+		--[
+			Param( "obj type", "npc" )
+			Param( "bot tblidx", 4754102 )
+			Param( "scan range", 50 )
+            Param( "end type", "percent target lp" )
+            Param( "end value", 1 )
+		--]
+		End()
+	--]     
+	End()
+--]     
+End()

@@ -1,0 +1,1439 @@
+GameStage(0)
+--[
+
+-- Object 1964
+	
+	Condition( "child" )
+	--[
+		Action( "while" )
+		--[
+			Action( "loop" )
+			--[
+				Action( "wait" )
+				--[
+					Condition( "recv event from ts" )
+					--[
+						Param( "trigger type", "object" )
+						Param( "event id", 726 )
+					--]
+					End()
+				--]
+				End()
+				
+				Action( "add mob" )
+				--[
+					Param( "index", 17361101 )
+					Param( "group", 292501 )
+					Param( "loc x", 2325.16 )
+					Param( "loc y", -60.53 )
+					Param( "loc z", -3752.37 )
+					Param( "dir x", -0.81 )
+					Param( "dir z", 0.57 )
+					Param( "no spawn wait", "true" )
+				--]
+				End()
+				
+				Action( "wait" )
+				--[
+					Param( "operation", "or" )
+					
+					Condition( "check mobgroup" )
+					--[
+						Param( "group", 292501 )
+						Param( "count", 1 )
+					--]
+					End()
+					
+					Condition( "check time" )
+					--[
+						Param( "time", 60 )
+					--]
+					End()
+				--]
+				End()
+				
+				Action( "remove mobgroup" )
+				--[
+					Param( "group", 292501)
+					Param( "type", "clear" )
+				--]
+				End()
+				
+				Action( "clear event" )
+				--[
+					Param( "clear all", "false" )
+					Param( "event id", 726 )
+				--]
+				End()
+			--]
+			End()
+		--]
+		End()
+	--]
+	End()
+
+			
+-- Object 1965
+
+	Condition( "child" )
+	--[
+		Action( "while" )
+		--[
+			Action( "loop" )
+			--[
+				Action( "wait" )
+				--[
+					Condition( "recv event from ts" )
+					--[
+						Param( "trigger type", "object" )
+						Param( "event id", 727)
+					--]
+					End()
+					
+				--]
+				End()
+					
+				Action( "add mob" )
+				--[
+					Param( "index", 17361101 )
+					Param( "group", 292502 )
+					Param( "loc x", 2358.71 )
+					Param( "loc y", -61.55 )
+					Param( "loc z", -3805.29 )
+					Param( "dir x", -0.851 )
+	 				Param( "dir z", -0.525 )
+	 				Param( "no spawn wait", "true" )
+	 			--]
+	 			End()
+
+				Action( "wait" )
+				--[
+					Param( "operation", "or" )
+					
+					Condition( "check mobgroup" )
+					--[
+						Param( "group", 292502 )
+						Param( "count", 1 )
+					--]
+					End()
+					
+					Condition( "check time" )
+					--[
+						Param( "time", 60 )
+					--]
+					End()
+				--]
+				End()
+				
+				Action( "remove mobgroup" )
+				--[
+					Param( "group", 292502 )
+					Param( "type", "clear" )
+				--]
+				End()
+				
+				Action( "clear event" )
+				--[
+					Param( "clear all", "false" )
+					Param( "event id", 727 )
+				--]
+				End()
+			--]
+			End()
+		--]
+		End()
+	--]
+	End()
+
+-- Object 1966
+
+	Condition( "child" )
+	--[
+		Action( "while" )
+		--[
+			Action( "loop" )
+			--[
+				Action( "wait" )
+				--[
+					Condition( "recv event from ts" )
+					--[
+						Param( "trigger type", "object" )
+						Param( "event id", 728)
+					--]
+					End()
+				--]
+				End()
+				
+				Action( "add mob" )
+				--[
+					Param( "index", 17361101 )
+					Param( "group", 292503 )
+					Param( "loc x", 2364.87 )
+					Param( "loc y", -59.56 )
+					Param( "loc z", -3915.82 )
+					Param( "dir x", -0.147 )
+	 				Param( "dir z", 0.989 )
+	 				Param( "no spawn wait", "true" )
+	 			--]
+	 			End()
+				
+				Action( "wait" )
+				--[
+					Param( "operation", "or" )
+					
+					Condition( "check mobgroup" )
+					--[
+						Param( "group", 292503 )
+						Param( "count", 1 )
+					--]
+					End()
+					
+					Condition( "check time" )
+					--[
+						Param( "time", 60 )
+					--]
+					End()
+				--]
+				End()
+				
+				Action( "remove mobgroup" )
+				--[
+					Param( "group", 292503)
+					Param( "type", "clear" )
+				--]
+				End()
+				
+				Action( "clear event" )
+				--[
+					Param( "clear all", "false" )
+					Param( "event id", 728 )
+				--]
+				End()
+			--]
+			End()
+		--]
+		End()
+	--]
+	End()		
+
+-- Object 1967
+		
+	Condition( "child" )
+	--[
+		Action( "while" )
+		--[
+			Action( "loop" )
+			--[
+				Action( "wait" )
+				--[
+					Condition( "recv event from ts" )
+					--[
+						Param( "trigger type", "object" )
+						Param( "event id", 729)
+					--]
+					End()
+				--]
+				End()
+					
+				Action( "add mob" )
+				--[
+					Param( "index", 17361101 )
+					Param( "group", 292504 )
+					Param( "loc x", 2405.71 )
+					Param( "loc y", -59.3 )
+					Param( "loc z", -3806.46 )
+					Param( "dir x", 0.964 )
+	 				Param( "dir z", -0.268 )
+	 				Param( "no spawn wait", "true" )
+	 			--]
+	 			End()
+				
+				Action( "wait" )
+				--[
+					Param( "operation", "or" )
+					
+					Condition( "check mobgroup" )
+					--[
+						Param( "group", 292504 )
+						Param( "count", 1 )
+					--]
+					End()
+					
+					Condition( "check time" )
+					--[
+						Param( "time", 60 )
+					--]
+					End()
+				--]
+				End()
+				
+				Action( "remove mobgroup" )
+				--[
+					Param( "group", 292504)
+					Param( "type", "clear" )
+				--]
+				End()
+				
+				Action( "clear event" )
+				--[
+					Param( "clear all", "false" )
+					Param( "event id", 729 )
+				--]
+				End()
+			--]
+			End()
+		--]
+		End()
+	--]
+	End()			
+						
+-- Object 1968
+
+	Condition( "child" )
+	--[
+		Action( "while" )
+		--[
+			Action( "loop" )
+			--[
+				Action( "wait" )
+				--[
+					Condition( "recv event from ts" )
+					--[
+						Param( "trigger type", "object" )
+						Param( "event id", 730)
+					--]
+					End()
+				--]
+				End()
+				
+				Action( "add mob" )
+				--[
+					Param( "index", 17361101 )
+					Param( "group", 292505 )
+					Param( "loc x", 2474.21 )
+					Param( "loc y", -53.25 )
+					Param( "loc z", -3831.25 )
+					Param( "dir x", -0.421 )
+	 				Param( "dir z", 0.907 )
+	 				Param( "no spawn wait", "true" )
+	 			--]
+	 			End()								
+				
+				Action( "wait" )
+				--[
+					Param( "operation", "or" )
+					
+					Condition( "check mobgroup" )
+					--[
+						Param( "group", 292505 )
+						Param( "count", 1 )
+					--]
+					End()
+					
+					Condition( "check time" )
+					--[
+						Param( "time", 60 )
+					--]
+					End()
+				--]
+				End()
+				
+				Action( "remove mobgroup" )
+				--[
+					Param( "group", 292505)
+					Param( "type", "clear" )
+				--]
+				End()
+				
+				Action( "clear event" )
+				--[
+					Param( "clear all", "false" )
+					Param( "event id", 730 )
+				--]
+				End()
+			--]
+			End()
+		--]
+		End()
+	--]
+	End()				
+
+-- Object 1969
+			
+	Condition( "child" )
+	--[
+		Action( "while" )
+		--[
+			Action( "loop" )
+			--[
+				Action( "wait" )
+				--[
+					Condition( "recv event from ts" )
+					--[
+						Param( "trigger type", "object" )
+						Param( "event id", 731)
+					--]
+					End()
+				--]
+				End()
+					
+				Action( "add mob" )
+				--[
+					Param( "index", 17361101 )
+					Param( "group", 292506 )
+					Param( "loc x", 2477.97 )
+					Param( "loc y", -60.35 )
+					Param( "loc z", -3776.49 )
+					Param( "dir x", -0.767 )
+	 				Param( "dir z", 0.604 )
+	 				Param( "no spawn wait", "true" )
+	 			--]
+	 			End()
+												
+				Action( "wait" )
+				--[
+					Param( "operation", "or" )
+					
+					Condition( "check mobgroup" )
+					--[
+						Param( "group", 292506 )
+						Param( "count", 1 )
+					--]
+					End()
+					
+					Condition( "check time" )
+					--[
+						Param( "time", 60 )
+					--]
+					End()
+				--]
+				End()
+				
+				Action( "remove mobgroup" )
+				--[
+					Param( "group", 292506)
+					Param( "type", "clear" )
+				--]
+				End()
+				
+				Action( "clear event" )
+				--[
+					Param( "clear all", "false" )
+					Param( "event id", 731 )
+				--]
+				End()
+			--]
+			End()
+		--]
+		End()
+	--]
+	End()				
+
+-- Object 1970
+
+	Condition( "child" )
+	--[
+		Action( "while" )
+		--[
+			Action( "loop" )
+			--[
+				Action( "wait" )
+				--[
+					Condition( "recv event from ts" )
+					--[
+						Param( "trigger type", "object" )
+						Param( "event id", 732)
+					--]
+					End()
+				--]
+				End()
+					
+				Action( "add mob" )
+				--[
+					Param( "index", 17361101 )
+					Param( "group", 292507 )
+					Param( "loc x", 2565.27 )
+					Param( "loc y", -53.98 )
+					Param( "loc z", -3699.93 )
+					Param( "dir x", 0.660 )
+	 				Param( "dir z", -0.752 )
+	 				Param( "no spawn wait", "true" )
+	 			--]
+	 			End()
+				
+				Action( "wait" )
+				--[
+					Param( "operation", "or" )
+					
+					Condition( "check mobgroup" )
+					--[
+						Param( "group", 292507 )
+						Param( "count", 1 )
+					--]
+					End()
+					
+					Condition( "check time" )
+					--[
+						Param( "time", 60 )
+					--]
+					End()
+				--]
+				End()
+				
+				Action( "remove mobgroup" )
+				--[
+					Param( "group", 292507)
+					Param( "type", "clear" )
+				--]
+				End()
+				
+				Action( "clear event" )
+				--[
+					Param( "clear all", "false" )
+					Param( "event id", 732 )
+				--]
+				End()
+			--]
+			End()
+		--]
+		End()
+	--]
+	End()				
+
+-- Object 1971
+
+	Condition( "child" )
+	--[
+		Action( "while" )
+		--[
+			Action( "loop" )
+			--[
+				Action( "wait" )
+				--[
+					Condition( "recv event from ts" )
+					--[
+						Param( "trigger type", "object" )
+						Param( "event id", 733)
+					--]
+					End()
+				--]
+				End()
+					
+				Action( "add mob" )
+				--[
+					Param( "index", 17361101 )
+					Param( "group", 292508 )
+					Param( "loc x", 2485.27 )
+					Param( "loc y", -55.38 )
+					Param( "loc z", -3704.93 )
+					Param( "dir x", 0.583 )
+	 				Param( "dir z", -0.812 )
+	 				Param( "no spawn wait", "true" )
+	 			--]
+	 			End()				
+				
+				Action( "wait" )
+				--[
+					Param( "operation", "or" )
+					
+					Condition( "check mobgroup" )
+					--[
+						Param( "group", 292508 )
+						Param( "count", 1 )
+					--]
+					End()
+					
+					Condition( "check time" )
+					--[
+						Param( "time", 60 )
+					--]
+					End()
+				--]
+				End()
+				
+				Action( "remove mobgroup" )
+				--[
+					Param( "group", 292508)
+					Param( "type", "clear" )
+				--]
+				End()
+				
+				Action( "clear event" )
+				--[
+					Param( "clear all", "false" )
+					Param( "event id", 733 )
+				--]
+				End()
+			--]
+			End()
+		--]
+		End()
+	--]
+	End()			
+			
+-- Object 1972
+
+	Condition( "child" )
+	--[
+		Action( "while" )
+		--[
+			Action( "loop" )
+			--[
+				Action( "wait" )
+				--[
+					Condition( "recv event from ts" )
+					--[
+						Param( "trigger type", "object" )
+						Param( "event id", 734)
+					--]
+					End()
+				--]
+				End()
+					
+				Action( "add mob" )
+				--[
+					Param( "index", 17361101 )
+					Param( "group", 292509 )
+					Param( "loc x", 2599.3 )
+					Param( "loc y", -60.96 )
+					Param( "loc z", -3819.56 )
+					Param( "dir x", 0.173 )
+	 				Param( "dir z", 0.985 )
+	 				Param( "no spawn wait", "true" )
+	 			--]
+	 			End()
+				
+				Action( "wait" )
+				--[
+					Param( "operation", "or" )
+					
+					Condition( "check mobgroup" )
+					--[
+						Param( "group", 292509 )
+						Param( "count", 1 )
+					--]
+					End()
+					
+					Condition( "check time" )
+					--[
+						Param( "time", 60 )
+					--]
+					End()
+				--]
+				End()
+				
+				Action( "remove mobgroup" )
+				--[
+					Param( "group", 292509)
+					Param( "type", "clear" )
+				--]
+				End()
+				
+				Action( "clear event" )
+				--[
+					Param( "clear all", "false" )
+					Param( "event id", 734 )
+				--]
+				End()
+			--]
+			End()
+		--]
+		End()
+	--]
+	End()			
+
+-- Object 1973
+
+	Condition( "child" )
+	--[
+		Action( "while" )
+		--[
+			Action( "loop" )
+			--[
+				Action( "wait" )
+				--[
+					Condition( "recv event from ts" )
+					--[
+						Param( "trigger type", "object" )
+						Param( "event id", 735)
+					--]
+					End()
+				--]
+				End()
+									
+				Action( "add mob" )
+				--[
+					Param( "index", 17361101 )
+					Param( "group", 292510 )
+					Param( "loc x", 2647.51 )
+					Param( "loc y", -55.4 )
+					Param( "loc z", -3694.15 )
+					Param( "dir x", -0.946 )
+	 				Param( "dir z", -0.323 )
+	 				Param( "no spawn wait", "true" )
+	 			--]
+	 			End()
+								
+				Action( "wait" )
+				--[
+					Param( "operation", "or" )
+					
+					Condition( "check mobgroup" )
+					--[
+						Param( "group", 292510 )
+						Param( "count", 1 )
+					--]
+					End()
+					
+					Condition( "check time" )
+					--[
+						Param( "time", 60 )
+					--]
+					End()
+				--]
+				End()
+				
+				Action( "remove mobgroup" )
+				--[
+					Param( "group", 292510)
+					Param( "type", "clear" )
+				--]
+				End()
+				
+				Action( "clear event" )
+				--[
+					Param( "clear all", "false" )
+					Param( "event id", 735 )
+				--]
+				End()
+			--]
+			End()
+		--]
+		End()
+	--]
+	End()				
+			
+-- Object 1974
+
+	Condition( "child" )
+	--[
+		Action( "while" )
+		--[
+			Action( "loop" )
+			--[
+				Action( "wait" )
+				--[
+					Condition( "recv event from ts" )
+					--[
+						Param( "trigger type", "object" )
+						Param( "event id", 736)
+					--]
+					End()
+				--]
+				End()
+					
+				Action( "add mob" )
+				--[
+					Param( "index", 17361101 )
+					Param( "group", 292511 )
+					Param( "loc x", 2711.1 )
+					Param( "loc y", -61.62 )
+					Param( "loc z", -3796.69 )
+					Param( "dir x", -0.495 )
+	 				Param( "dir z", 0.869 )
+	 				Param( "no spawn wait", "true" )
+	 			--]
+	 			End()
+								
+				Action( "wait" )
+				--[
+					Param( "operation", "or" )
+					
+					Condition( "check mobgroup" )
+					--[
+						Param( "group", 292511 )
+						Param( "count", 1 )
+					--]
+					End()
+					
+					Condition( "check time" )
+					--[
+						Param( "time", 60 )
+					--]
+					End()
+				--]
+				End()
+				
+				Action( "remove mobgroup" )
+				--[
+					Param( "group", 292511)
+					Param( "type", "clear" )
+				--]
+				End()
+				
+				Action( "clear event" )
+				--[
+					Param( "clear all", "false" )
+					Param( "event id", 736 )
+				--]
+				End()
+			--]
+			End()
+		--]
+		End()
+	--]
+	End()				
+			
+-- Object 1975
+
+	Condition( "child" )
+	--[
+		Action( "while" )
+		--[
+			Action( "loop" )
+			--[
+				Action( "wait" )
+				--[
+					Condition( "recv event from ts" )
+					--[
+						Param( "trigger type", "object" )
+						Param( "event id", 737)
+					--]
+					End()
+				--]
+				End()
+				
+				Action( "add mob" )
+				--[
+					Param( "index", 17361101 )
+					Param( "group", 292512 )
+					Param( "loc x", 2652.52 )
+					Param( "loc y", -61.62 )
+					Param( "loc z", -3984.98 )
+					Param( "dir x", -0.14 )
+	 				Param( "dir z", 0.99 )
+	 				Param( "no spawn wait", "true" )
+	 			--]
+	 			End()
+				
+				Action( "wait" )
+				--[
+					Param( "operation", "or" )
+					
+					Condition( "check mobgroup" )
+					--[
+						Param( "group", 292512 )
+						Param( "count", 1 )
+					--]
+					End()
+					
+					Condition( "check time" )
+					--[
+						Param( "time", 60 )
+					--]
+					End()
+				--]
+				End()
+				
+				Action( "remove mobgroup" )
+				--[
+					Param( "group", 292512)
+					Param( "type", "clear" )
+				--]
+				End()
+				
+				Action( "clear event" )
+				--[
+					Param( "clear all", "false" )
+					Param( "event id", 737 )
+				--]
+				End()
+			--]
+			End()
+		--]
+		End()
+	--]
+	End()				
+			
+-- Object 1976
+
+	Condition( "child" )
+	--[
+		Action( "while" )
+		--[
+			Action( "loop" )
+			--[
+				Action( "wait" )
+				--[
+					Condition( "recv event from ts" )
+					--[
+						Param( "trigger type", "object" )
+						Param( "event id", 738)
+					--]
+					End()
+				--]
+				End()
+					
+				Action( "add mob" )
+				--[
+					Param( "index", 17361101 )
+					Param( "group", 292513 )
+					Param( "loc x", 2672.62 )
+					Param( "loc y", -61.62 )
+					Param( "loc z", -3874.7 )
+					Param( "dir x", -0.537 )
+	 				Param( "dir z", 0.844 )
+	 				Param( "no spawn wait", "true" )
+	 			--]
+	 			End()				
+				
+				Action( "wait" )
+				--[
+					Param( "operation", "or" )
+					
+					Condition( "check mobgroup" )
+					--[
+						Param( "group", 292513 )
+						Param( "count", 1 )
+					--]
+					End()
+					
+					Condition( "check time" )
+					--[
+						Param( "time", 60 )
+					--]
+					End()
+				--]
+				End()
+				
+				Action( "remove mobgroup" )
+				--[
+					Param( "group", 292513)
+					Param( "type", "clear" )
+				--]
+				End()
+				
+				Action( "clear event" )
+				--[
+					Param( "clear all", "false" )
+					Param( "event id", 738 )
+				--]
+				End()
+			--]
+			End()
+		--]
+		End()
+	--]
+	End()
+			
+-- Object 1977
+
+	Condition( "child" )
+	--[
+		Action( "while" )
+		--[
+			Action( "loop" )
+			--[
+				Action( "wait" )
+				--[
+					Condition( "recv event from ts" )
+					--[
+						Param( "trigger type", "object" )
+						Param( "event id", 739)
+					--]
+					End()
+				--]
+				End()
+					
+				Action( "add mob" )
+				--[
+					Param( "index", 17361101 )
+					Param( "group", 292514 )
+					Param( "loc x", 2587.82 )
+					Param( "loc y", -61.62 )
+					Param( "loc z", -3971.26 )
+					Param( "dir x", 0.98 )
+	 				Param( "dir z", -0.2 )
+	 				Param( "no spawn wait", "true" )
+	 			--]
+	 			End()
+								
+				Action( "wait" )
+				--[
+					Param( "operation", "or" )
+					
+					Condition( "check mobgroup" )
+					--[
+						Param( "group", 292514 )
+						Param( "count", 1 )
+					--]
+					End()
+					
+					Condition( "check time" )
+					--[
+						Param( "time", 60 )
+					--]
+					End()
+				--]
+				End()
+				
+				Action( "remove mobgroup" )
+				--[
+					Param( "group", 292514)
+					Param( "type", "clear" )
+				--]
+				End()
+				
+				Action( "clear event" )
+				--[
+					Param( "clear all", "false" )
+					Param( "event id", 739 )
+				--]
+				End()
+			--]
+			End()
+		--]
+		End()
+	--]
+	End()
+
+-- Object 1978
+
+	Condition( "child" )
+	--[
+		Action( "while" )
+		--[
+			Action( "loop" )
+			--[
+				Action( "wait" )
+				--[
+					Condition( "recv event from ts" )
+					--[
+						Param( "trigger type", "object" )
+						Param( "event id", 740)
+					--]
+					End()
+				--]
+				End()
+					
+				Action( "add mob" )
+				--[
+					Param( "index", 17361101 )
+					Param( "group", 292515 )
+					Param( "loc x", 2616.89 )
+					Param( "loc y", -61.6 )
+					Param( "loc z", -4021.88 )
+					Param( "dir x", 1.0 )
+	 				Param( "dir z", -0.034 )
+	 				Param( "no spawn wait", "true" )
+	 			--]
+	 			End()
+				
+				Action( "wait" )
+				--[
+					Param( "operation", "or" )
+					
+					Condition( "check mobgroup" )
+					--[
+						Param( "group", 292515 )
+						Param( "count", 1 )
+					--]
+					End()
+					
+					Condition( "check time" )
+					--[
+						Param( "time", 60 )
+					--]
+					End()
+				--]
+				End()
+				
+				Action( "remove mobgroup" )
+				--[
+					Param( "group", 292515)
+					Param( "type", "clear" )
+				--]
+				End()
+				
+				Action( "clear event" )
+				--[
+					Param( "clear all", "false" )
+					Param( "event id", 740 )
+				--]
+				End()
+			--]
+			End()
+		--]
+		End()
+	--]
+	End()
+
+-- Object 1979
+
+	Condition( "child" )
+	--[
+		Action( "while" )
+		--[
+			Action( "loop" )
+			--[
+				Action( "wait" )
+				--[
+					Condition( "recv event from ts" )
+					--[
+						Param( "trigger type", "object" )
+						Param( "event id", 741)
+					--]
+					End()
+				--]
+				End()
+				
+				Action( "add mob" )
+				--[
+					Param( "index", 17361101 )
+					Param( "group", 292516 )
+					Param( "loc x", 2518.39 )
+					Param( "loc y", -61.6 )
+					Param( "loc z", -3886.99 )
+					Param( "dir x", 0.889 )
+	 				Param( "dir z", 0.458 )
+	 				Param( "no spawn wait", "true" )
+	 			--]
+	 			End()
+				
+				Action( "wait" )
+				--[
+					Param( "operation", "or" )
+					
+					Condition( "check mobgroup" )
+					--[
+						Param( "group", 292516 )
+						Param( "count", 1 )
+					--]
+					End()
+					
+					Condition( "check time" )
+					--[
+						Param( "time", 60 )
+					--]
+					End()
+				--]
+				End()
+				
+				Action( "remove mobgroup" )
+				--[
+					Param( "group", 292516)
+					Param( "type", "clear" )
+				--]
+				End()
+				
+				Action( "clear event" )
+				--[
+					Param( "clear all", "false" )
+					Param( "event id", 741 )
+				--]
+				End()
+			--]
+			End()
+		--]
+		End()
+	--]
+	End()
+
+-- Object 1980
+
+	Condition( "child" )
+	--[
+		Action( "while" )
+		--[
+			Action( "loop" )
+			--[
+				Action( "wait" )
+				--[
+					Condition( "recv event from ts" )
+					--[
+						Param( "trigger type", "object" )
+						Param( "event id", 742)
+					--]
+					End()
+				--]
+				End()
+				
+				Action( "add mob" )
+				--[
+					Param( "index", 17361101 )
+					Param( "group", 292517 )
+					Param( "loc x", 2258.26 )
+					Param( "loc y", -57.38 )
+					Param( "loc z", -3825.2 )
+					Param( "dir x", -0.991 )
+	 				Param( "dir z", 0.131 )
+	 				Param( "no spawn wait", "true" )
+	 			--]
+	 			End()
+				
+				Action( "wait" )
+				--[
+					Param( "operation", "or" )
+					
+					Condition( "check mobgroup" )
+					--[
+						Param( "group", 292517 )
+						Param( "count", 1 )
+					--]
+					End()
+					
+					Condition( "check time" )
+					--[
+						Param( "time", 60 )
+					--]
+					End()
+				--]
+				End()
+				
+				Action( "remove mobgroup" )
+				--[
+					Param( "group", 292517)
+					Param( "type", "clear" )
+				--]
+				End()
+				
+				Action( "clear event" )
+				--[
+					Param( "clear all", "false" )
+					Param( "event id", 742 )
+				--]
+				End()
+			--]
+			End()
+		--]
+		End()
+	--]
+	End()
+
+-- Object 1981
+
+	Condition( "child" )
+	--[
+		Action( "while" )
+		--[
+			Action( "loop" )
+			--[
+				Action( "wait" )
+				--[
+					Condition( "recv event from ts" )
+					--[
+						Param( "trigger type", "object" )
+						Param( "event id", 743)
+					--]
+					End()
+				--]
+				End()
+					
+				Action( "add mob" )
+				--[
+					Param( "index", 17361101 )
+					Param( "group", 292518 )
+					Param( "loc x", 2307.77 )
+					Param( "loc y", -61.59 )
+					Param( "loc z", -3877.39 )
+					Param( "dir x", 0.796 )
+	 				Param( "dir z", 0.606 )
+	 				Param( "no spawn wait", "true" )
+	 			--]
+	 			End()
+												
+				Action( "wait" )
+				--[
+					Param( "operation", "or" )
+					
+					Condition( "check mobgroup" )
+					--[
+						Param( "group", 292518 )
+						Param( "count", 1 )
+					--]
+					End()
+					
+					Condition( "check time" )
+					--[
+						Param( "time", 60 )
+					--]
+					End()
+				--]
+				End()
+				
+				Action( "remove mobgroup" )
+				--[
+					Param( "group", 292518)
+					Param( "type", "clear" )
+				--]
+				End()
+				
+				Action( "clear event" )
+				--[
+					Param( "clear all", "false" )
+					Param( "event id", 743 )
+				--]
+				End()
+			--]
+			End()
+		--]
+		End()
+	--]
+	End()
+
+-- Object 1982
+
+	Condition( "child" )
+	--[
+		Action( "while" )
+		--[
+			Action( "loop" )
+			--[
+				Action( "wait" )
+				--[
+					Condition( "recv event from ts" )
+					--[
+						Param( "trigger type", "object" )
+						Param( "event id", 744)
+					--]
+					End()
+				--]
+				End()
+					
+				Action( "add mob" )
+				--[
+					Param( "index", 17361101 )
+					Param( "group", 292519 )
+					Param( "loc x", 2535.76 )
+					Param( "loc y", -59.87 )
+					Param( "loc z", -3760.41 )
+					Param( "dir x", -0.660 )
+	 				Param( "dir z", 0.752 )
+	 				Param( "no spawn wait", "true" )
+	 			--]
+	 			End()
+
+				
+				Action( "wait" )
+				--[
+					Param( "operation", "or" )
+					
+					Condition( "check mobgroup" )
+					--[
+						Param( "group", 292519 )
+						Param( "count", 1 )
+					--]
+					End()
+					
+					Condition( "check time" )
+					--[
+						Param( "time", 60 )
+					--]
+					End()
+				--]
+				End()
+				
+				Action( "remove mobgroup" )
+				--[
+					Param( "group", 292519)
+					Param( "type", "clear" )
+				--]
+				End()
+				
+				Action( "clear event" )
+				--[
+					Param( "clear all", "false" )
+					Param( "event id", 744 )
+				--]
+				End()
+			--]
+			End()
+		--]
+		End()
+	--]
+	End()
+
+-- Object 1983
+
+	Condition( "child" )
+	--[
+		Action( "while" )
+		--[
+			Action( "loop" )
+			--[
+				Action( "wait" )
+				--[
+					Condition( "recv event from ts" )
+					--[
+						Param( "trigger type", "object" )
+						Param( "event id", 745)
+					--]
+					End()
+				--]
+				End()
+					
+				Action( "add mob" )
+				--[
+					Param( "index", 17361101 )
+					Param( "group", 292520 )
+					Param( "loc x", 2737.39 )
+					Param( "loc y", -55.27 )
+					Param( "loc z", -3714.2 )
+					Param( "dir x", -0.558 )
+	 				Param( "dir z", -0.830 )
+	 				Param( "no spawn wait", "true" )
+	 			--]
+	 			End()
+								
+				Action( "wait" )
+				--[
+					Param( "operation", "or" )
+					
+					Condition( "check mobgroup" )
+					--[
+						Param( "group", 292520 )
+						Param( "count", 1 )
+					--]
+					End()
+					
+					Condition( "check time" )
+					--[
+						Param( "time", 60 )
+					--]
+					End()
+				--]
+				End()
+				
+				Action( "remove mobgroup" )
+				--[
+					Param( "group", 292520)
+					Param( "type", "clear" )
+				--]
+				End()
+				
+				Action( "clear event" )
+				--[
+					Param( "clear all", "false" )
+					Param( "event id", 745 )
+				--]
+				End()
+			--]
+			End()
+		--]
+		End()
+	--]
+	End()
+			
+	Action( "wait" )
+	--[
+		Condition( "recv event from ts" )
+		--[
+			Param( "trigger type", "object" )
+			Param( "event id", 666 )
+		--]
+		End()
+	--]
+	End()
+														
+--]
+End()

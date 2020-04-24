@@ -1,0 +1,658 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// 한국어 resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_KOR)
+#ifdef _WIN32
+LANGUAGE LANG_KOREAN, SUBLANG_DEFAULT
+#pragma code_page(949)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_KOR)\r\n"
+    "LANGUAGE 18, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#include ""res\\MrPoPo.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\MrPoPo.ico"
+IDR_MrPoPoTYPE          ICON                    "res\\MrPoPoDoc.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDR_MAINFRAME           BITMAP                  "res\\Toolbar.bmp"
+IDB_BITMAP_ICONS        BITMAP                  "res\\PaneIcons.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Toolbar
+//
+
+IDR_MAINFRAME TOOLBAR  16, 15
+BEGIN
+    BUTTON      ID_FILE_NEW
+    BUTTON      ID_FILE_OPEN
+    BUTTON      ID_FILE_SAVE
+    SEPARATOR
+    BUTTON      ID_EDIT_CUT
+    BUTTON      ID_EDIT_COPY
+    BUTTON      ID_EDIT_PASTE
+    SEPARATOR
+    BUTTON      ID_FILE_PRINT
+    BUTTON      ID_APP_ABOUT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAINFRAME MENU 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&New\tCtrl+N",                ID_FILE_NEW
+        MENUITEM "&Open...\tCtrl+O",            ID_FILE_OPEN
+        MENUITEM "&Save\tCtrl+S",               ID_FILE_SAVE
+        MENUITEM "Save &As...",                 ID_FILE_SAVE_AS
+        MENUITEM SEPARATOR
+        MENUITEM "Recent File",                 ID_FILE_MRU_FILE1, GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit",                       ID_APP_EXIT
+    END
+    POPUP "&Edit"
+    BEGIN
+        MENUITEM "&Undo\tCtrl+Z",               ID_EDIT_UNDO
+        MENUITEM SEPARATOR
+        MENUITEM "Cu&t\tCtrl+X",                ID_EDIT_CUT
+        MENUITEM "&Copy\tCtrl+C",               ID_EDIT_COPY
+        MENUITEM "&Paste\tCtrl+V",              ID_EDIT_PASTE
+    END
+    POPUP "&View"
+    BEGIN
+        POPUP "&Toolbars"
+        BEGIN
+            MENUITEM "&Toolbar",                    ID_VIEW_TOOLBAR
+            MENUITEM SEPARATOR
+            MENUITEM "&Customize...",               35001
+        END
+        MENUITEM "&Status Bar",                 ID_VIEW_STATUS_BAR
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&About MrPoPo...",            ID_APP_ABOUT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_MAINFRAME ACCELERATORS 
+BEGIN
+    "N",            ID_FILE_NEW,            VIRTKEY, CONTROL
+    "O",            ID_FILE_OPEN,           VIRTKEY, CONTROL
+    "S",            ID_FILE_SAVE,           VIRTKEY, CONTROL
+    "Z",            ID_EDIT_UNDO,           VIRTKEY, CONTROL
+    "X",            ID_EDIT_CUT,            VIRTKEY, CONTROL
+    "C",            ID_EDIT_COPY,           VIRTKEY, CONTROL
+    "V",            ID_EDIT_PASTE,          VIRTKEY, CONTROL
+    VK_BACK,        ID_EDIT_UNDO,           VIRTKEY, ALT
+    VK_DELETE,      ID_EDIT_CUT,            VIRTKEY, SHIFT
+    VK_INSERT,      ID_EDIT_COPY,           VIRTKEY, CONTROL
+    VK_INSERT,      ID_EDIT_PASTE,          VIRTKEY, SHIFT
+    VK_F6,          ID_NEXT_PANE,           VIRTKEY 
+    VK_F6,          ID_PREV_PANE,           VIRTKEY, SHIFT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 235, 55
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About MrPoPo"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,17,20,20
+    LTEXT           "MrPoPo Version 1.0",IDC_STATIC,40,10,119,8,SS_NOPREFIX
+    LTEXT           "Copyright (C) 2008",IDC_STATIC,40,25,119,8
+    DEFPUSHBUTTON   "OK",IDOK,178,7,50,16,WS_GROUP
+END
+
+IDR_MAINFRAME DIALOGEX 0, 0, 330, 16
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    LTEXT           "TODO: layout dialog bar ",IDC_STATIC,12,4,300,8
+END
+
+IDD_MPPCONFIGSETTING DIALOGEX 0, 0, 172, 202
+STYLE DS_SETFONT | WS_CHILD | WS_THICKFRAME
+FONT 9, "MS Sans Serif, 굴림", 0, 0, 0x0
+BEGIN
+    LTEXT           "",IDC_STATIC,0,0,172,92,NOT WS_VISIBLE
+    PUSHBUTTON      "Save XML",IDC_BTN_SAVEXML,15,100,50,14
+    PUSHBUTTON      "Save Encrypt",IDC_BTN_SAVEENC,103,100,50,14
+    GROUPBOX        "Lua Compile",IDC_ST_LUA,0,122,171,72
+    LTEXT           "Lua File Directory",IDC_ST_LUA_DIR,3,142,56,8
+    LTEXT           "Output File Directory",IDC_ST_OUT_DIR,3,160,68,8
+    EDITTEXT        IDC_ED_LUA,73,140,98,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_ED_OUT,73,158,98,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "Compile Lua Files",IDC_BTN_LUA_COMPILE,26,180,117,14
+END
+
+IDD_MPPSETITEMPANE DIALOGEX 0, 0, 408, 217
+STYLE DS_SETFONT | WS_CHILD | WS_THICKFRAME
+FONT 9, "MS Sans Serif, 굴림", 0, 0, 0x0
+BEGIN
+    GROUPBOX        "Item Setting",IDC_STATIC,7,7,117,48,0,WS_EX_TRANSPARENT
+    EDITTEXT        IDC_EDIT_CREATEITEM,81,17,40,14,ES_AUTOHSCROLL | ES_NUMBER
+    PUSHBUTTON      "Item Create",IDC_BTN_CREATEITEM,7,17,71,14
+    PUSHBUTTON      "Upgrade Equip Item",IDC_BTN_UPGRADEITEM,7,37,117,14
+    GROUPBOX        "Zenny",IDC_STATIC,7,57,117,33,0,WS_EX_TRANSPARENT
+    EDITTEXT        IDC_EDIT_SETZENNY,81,68,40,14,ES_AUTOHSCROLL | ES_NUMBER
+    PUSHBUTTON      "Set Zenny",IDC_BTN_SETZENNY,7,69,71,14
+    GROUPBOX        "Level",IDC_STATIC,7,92,117,46,0,WS_EX_TRANSPARENT
+    EDITTEXT        IDC_EDIT_ADDEXP,81,104,40,14,ES_AUTOHSCROLL | ES_NUMBER
+    EDITTEXT        IDC_EDIT_SETLEVEL,81,121,40,14,ES_AUTOHSCROLL | ES_WANTRETURN | ES_NUMBER | WS_DISABLED
+    PUSHBUTTON      "Add Exp",IDC_BTN_ADDEXP,7,104,71,14
+    PUSHBUTTON      "Set Level",IDC_BTN_SETLEVEL,7,122,71,14,WS_DISABLED
+    GROUPBOX        "Function",IDC_STATIC,132,7,106,88,0,WS_EX_TRANSPARENT
+    PUSHBUTTON      "Collect All DragonBall",IDC_BTN_COLLECTDRAGONBALL,135,16,99,14
+    GROUPBOX        "Status",IDC_STATIC,7,142,117,68,0,WS_EX_TRANSPARENT
+    PUSHBUTTON      "Set Speed",IDC_BTN_SETSPEED,7,154,71,14
+    PUSHBUTTON      "Set Offence",IDC_BTN_OFFENCE,7,171,71,14
+    PUSHBUTTON      "Set Defence",IDC_BTN_DEFENCE,7,188,71,14
+    EDITTEXT        IDC_EDIT_SETSPEED,81,154,40,14,ES_AUTOHSCROLL | ES_NUMBER
+    EDITTEXT        IDC_EDIT_OFFENCE,81,171,40,14,ES_AUTOHSCROLL | ES_NUMBER
+    EDITTEXT        IDC_EDIT_DEFENCE,81,188,40,14,ES_AUTOHSCROLL | ES_NUMBER
+    GROUPBOX        "Teleport",IDC_STATIC,253,7,152,78,0,WS_EX_TRANSPARENT
+    PUSHBUTTON      "Teleport",IDC_BUTTON1,302,67,56,14
+    EDITTEXT        IDC_ED_TELE_X,304,32,20,12,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "X-",IDC_STATIC,296,34,8,8
+    EDITTEXT        IDC_ED_TELE_Z,338,32,20,12,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "Z-",IDC_STATIC,329,34,8,8
+    COMBOBOX        IDC_CB_TELE_SELECT,293,16,77,30,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_ED_TELE_VISIT,293,48,77,14,ES_AUTOHSCROLL
+    CONTROL         "Select",IDC_RD_SELECT,"Button",BS_AUTORADIOBUTTON | WS_GROUP,255,17,35,10
+    CONTROL         "Direct",IDC_RD_DIRECT,"Button",BS_AUTORADIOBUTTON,255,34,35,10
+    CONTROL         "Visit",IDC_RD_VISIT,"Button",BS_AUTORADIOBUTTON,255,51,29,10
+    PUSHBUTTON      "Learn All Skill",IDC_BTN_LEARN_ALL_SKILL,135,31,99,14
+    PUSHBUTTON      "Upgrade All Skill",IDC_BTN_UPGRADE_ALL_SKILL,135,46,99,14
+    PUSHBUTTON      "Create Level Items",IDC_BTN_CREATE_LEVEL_ITEMS,135,61,99,14
+    PUSHBUTTON      "Set Super Mode",IDC_BTN_SUPER_MODE,136,76,99,14
+END
+
+IDD_MPPTESTPANE DIALOGEX 0, 0, 320, 200
+STYLE DS_SETFONT | WS_CHILD
+FONT 9, "MS Sans Serif, 굴림", 0, 0, 0x0
+BEGIN
+    GROUPBOX        "Tenkaichi Mudokai Crowd Test",IDC_STATIC,7,7,118,46,0,WS_EX_TRANSPARENT
+    COMBOBOX        IDC_CB_CROWD,7,18,118,30,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "Change Step",IDC_BTN_CROWD_CHANGE,7,33,118,14
+    GROUPBOX        "Observer Camera Test",IDC_STATIC,7,57,118,62,0,WS_EX_TRANSPARENT
+    PUSHBUTTON      "Static Index",IDC_BT_OBSERVER_INDEX,7,84,50,14
+    EDITTEXT        IDC_ED_OBSERVER_INDEX,61,84,40,14,ES_AUTOHSCROLL | ES_NUMBER
+    GROUPBOX        "Test Value",IDC_STATIC,7,132,118,60,0,WS_EX_TRANSPARENT
+    PUSHBUTTON      "Test 1",IDC_BT_TEST1,7,141,50,14
+    EDITTEXT        IDC_ED_TEST1,61,141,40,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "Test 2",IDC_BT_TEST2,7,157,50,14
+    EDITTEXT        IDC_ED_TEST2,61,157,40,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "Test 3",IDC_BT_TEST3,7,173,50,14
+    EDITTEXT        IDC_ED_TEST3,61,173,40,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "FREE Camera",IDC_BT_FREECAMERA,7,68,115,14
+    PUSHBUTTON      "Lua Index",IDC_BT_OBSERVER_LUA,7,100,50,14
+    EDITTEXT        IDC_ED_OBSERVER_LUA,61,101,40,14,ES_AUTOHSCROLL | ES_NUMBER
+    GROUPBOX        "General Test",IDC_STATIC,131,7,182,121,0,WS_EX_TRANSPARENT
+    PUSHBUTTON      "Render Scouter",IDC_BT_RENDER_SCOUTER,135,19,84,14
+    LTEXT           "TenKaIchi Marking Test",IDC_STATIC,135,37,86,8
+    COMBOBOX        IDC_TENKAICHI,221,35,90,30,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Color Change Test",IDC_STATIC,135,52,86,8
+    COMBOBOX        IDC_COLORCHANGE,221,50,90,30,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "State Change",IDC_STATIC,135,68,86,8
+    COMBOBOX        IDC_STATECHANGE,221,65,90,44,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Set Transform",IDC_STATIC,135,83,86,8
+    COMBOBOX        IDC_TRANSFORM,221,80,90,44,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Stun Type",IDC_STATIC,135,98,86,8
+    COMBOBOX        IDC_STUNTYPE,221,95,90,44,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "Target Marking Mark",IDC_BT_TARGET_MARKING,229,19,84,14
+    PUSHBUTTON      "Push Test",IDC_BT_PUSHING,135,110,84,14
+END
+
+IDD_MPPCLIENTCHEAT DIALOGEX 0, 0, 320, 200
+STYLE DS_SETFONT | WS_CHILD
+FONT 9, "MS Sans Serif, 굴림", 0, 0, 0x0
+BEGIN
+    GROUPBOX        "General Cheat",IDC_STATIC,7,7,118,47,0,WS_EX_TRANSPARENT
+    PUSHBUTTON      "Elapsed Weight",IDC_BT_ELAPSED,7,18,59,14
+    EDITTEXT        IDC_ED_ELAPSED,78,18,40,14,ES_AUTOHSCROLL
+    GROUPBOX        "DUMP",IDC_STATIC,131,7,118,98,0,WS_EX_TRANSPARENT
+    PUSHBUTTON      "Dump To Console",IDC_BT_DUMP_CONSOLE,133,18,113,14
+    PUSHBUTTON      "Dump To File",IDC_BT_DUMP_FILE,133,50,113,14
+    PUSHBUTTON      "Dump To GUI",IDC_BT_DUMP_GUI,133,34,113,14
+    PUSHBUTTON      "Dump Target",IDC_DUMP_TARGET,133,67,56,14
+    COMBOBOX        IDC_CB_DUMP,191,68,56,30,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "Target Reg",IDC_DUMP_REG,133,85,56,14
+    PUSHBUTTON      "Target UnReg",IDC_DUMP_UNREG,191,85,56,14
+    PUSHBUTTON      "Low Spec Character",IDC_BT_LOWSPEC_CHAR,134,121,113,14
+    GROUPBOX        "Low Spec Option",IDC_STATIC,131,108,118,85,0,WS_EX_TRANSPARENT
+    PUSHBUTTON      "Low Spec Effect",IDC_BT_LOWSPEC_EFFECT,134,138,113,14
+    PUSHBUTTON      "Render Mesh Effect",IDC_BT_LOWSPEC_MESH,134,154,113,14
+    PUSHBUTTON      "Render Decal Effect",IDC_BT_LOWSPEC_DECAL,134,169,113,14
+END
+
+IDD_MPPGRAPHICPANE DIALOGEX 0, 0, 370, 282
+STYLE DS_SETFONT | WS_CHILD
+FONT 9, "Arial", 400, 0, 0x0
+BEGIN
+    GROUPBOX        "Terrain",IDC_STATIC,7,7,170,148,0,WS_EX_TRANSPARENT
+    LTEXT           "Terrain Distance( 200 , 512 )",IDC_STATIC,14,18,93,8
+    GROUPBOX        "Character",IDC_STATIC,7,161,169,110,0,WS_EX_TRANSPARENT
+    GROUPBOX        "Normal Effect",IDC_STATIC,186,7,167,104,0,WS_EX_TRANSPARENT
+    CONTROL         "Terrain Shadow",IDC_TERRAIN_SHADOW,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,15,137,66,10
+    CONTROL         "Water Specular",IDC_WATER_SPECULAR,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,94,138,65,10
+    CONTROL         "Edge",IDC_CHAR_EDGE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,14,217,32,10
+    CONTROL         "Gray Color",IDC_CHAR_GRAY_COLOR,"Button",BS_AUTOCHECKBOX | WS_DISABLED | WS_TABSTOP,95,217,50,10
+    CONTROL         "Low Spec Effect",IDC_EFFECT_LOWSPEC,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,191,22,67,10
+    CONTROL         "Mesh Effect",IDC_EFFECT_MESH,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,193,93,54,10
+    CONTROL         "Decal Effect",IDC_EFFECT_DECAL,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,272,93,55,10
+    CONTROL         "",IDC_EFFECT_PARTICLE_RATIO,"msctls_trackbar32",TBS_AUTOTICKS | TBS_TOP | TBS_TOOLTIPS | WS_TABSTOP,187,56,160,28
+    LTEXT           "Particle Ratio( 0.1 , 1.0 )",IDC_STATIC,192,40,80,8
+    CONTROL         "",IDC_TERRAIN_DIST,"msctls_trackbar32",TBS_AUTOTICKS | TBS_TOP | TBS_TOOLTIPS | WS_TABSTOP,8,30,165,28
+    EDITTEXT        IDC_EDIT_TERRAIN_DIST,124,16,40,14,ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_EDIT_PARTICLE_RATIO,302,38,40,14,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "Object Distance( 200 , 512 )",IDC_STATIC,16,60,92,8,WS_DISABLED
+    CONTROL         "",IDC_OBJECT_DIST,"msctls_trackbar32",TBS_AUTOTICKS | TBS_TOP | TBS_TOOLTIPS | WS_DISABLED | WS_TABSTOP,8,69,165,28
+    LTEXT           "Grass Distance( 1 , 75 )",IDC_STATIC,16,100,76,8,WS_DISABLED
+    CONTROL         "",IDC_GRASS_DIST,"msctls_trackbar32",TBS_AUTOTICKS | TBS_TOP | TBS_TOOLTIPS | WS_DISABLED | WS_TABSTOP,8,109,165,28
+    LTEXT           "Character Distance( 50 , 150 )",IDC_STATIC,16,175,98,8
+    CONTROL         "",IDC_CHAR_DIST,"msctls_trackbar32",TBS_AUTOTICKS | TBS_TOP | TBS_TOOLTIPS | WS_TABSTOP,8,183,165,28
+    CONTROL         "Character Shadow",IDC_CHAR_SHADOW,"Button",BS_AUTOCHECKBOX | WS_DISABLED | WS_TABSTOP,14,231,75,10
+    CONTROL         "Character Foot",IDC_CHAR_FOOT,"Button",BS_AUTOCHECKBOX | WS_DISABLED | WS_TABSTOP,94,232,65,10
+    CONTROL         "Character Upgrade Effect",IDC_CHAR_UPGRADE_EFFECT,
+                    "Button",BS_AUTOCHECKBOX | WS_DISABLED | WS_TABSTOP,14,246,99,10
+    COMBOBOX        IDC_EFFECT_WEATHER,193,140,98,30,CBS_DROPDOWN | CBS_SORT | WS_DISABLED | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Weather( 1~3 Level )",IDC_STATIC,193,127,70,8
+    CONTROL         "Bloom Effect",IDC_EFFECT_BLOOM,"Button",BS_AUTOCHECKBOX | WS_DISABLED | WS_TABSTOP,193,165,56,10
+    GROUPBOX        "Special Effect",IDC_STATIC,186,114,167,71,0,WS_EX_TRANSPARENT
+END
+
+IDD_DIALOG1 DIALOGEX 0, 0, 304, 473
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_POPUP | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    GROUPBOX        " 해상도 ",IDC_STATIC,28,9,256,101
+    GROUPBOX        " 효과 ",IDC_STATIC,27,114,255,261
+    LTEXT           "지형 시야거리",IDC_STATIC,41,190,51,8
+    LTEXT           "사물 시야거리",IDC_STATIC,41,206,51,8
+    LTEXT           "지형 그림자",IDC_STATIC,42,224,43,8
+    LTEXT           "물 효과",IDC_STATIC,42,242,27,8
+    LTEXT           "캐릭터 효과",IDC_STATIC,44,278,43,8
+    LTEXT           "캐릭터 그림자",IDC_STATIC,44,296,51,8
+    LTEXT           "마법 세부효과",IDC_STATIC,44,315,51,8
+    LTEXT           "날씨 효과",IDC_STATIC,44,335,35,8
+    LTEXT           "텍스쳐 해상도",IDC_STATIC,44,354,51,8
+    CONTROL         "",IDC_SLIDER1,"msctls_trackbar32",TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,46,159,216,15
+    LTEXT           "낮음",IDC_STATIC,51,149,17,8
+    LTEXT           "높음",IDC_STATIC,181,150,17,8
+    CONTROL         "",IDC_SLIDER2,"msctls_trackbar32",TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,154,203,100,15
+    LTEXT           "낮음",IDC_STATIC,138,207,17,8
+    LTEXT           "높음",IDC_STATIC,256,207,17,8
+    CONTROL         "",IDC_SLIDER3,"msctls_trackbar32",TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,154,221,100,15
+    LTEXT           "낮음",IDC_STATIC,138,224,17,8
+    LTEXT           "높음",IDC_STATIC,256,224,17,8
+    CONTROL         "",IDC_SLIDER4,"msctls_trackbar32",TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,154,238,100,15
+    LTEXT           "낮음",IDC_STATIC,138,242,17,8
+    LTEXT           "높음",IDC_STATIC,256,242,17,8
+    CONTROL         "",IDC_SLIDER8,"msctls_trackbar32",TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,154,292,100,15
+    LTEXT           "낮음",IDC_STATIC,138,296,17,8
+    LTEXT           "높음",IDC_STATIC,256,296,17,8
+    CONTROL         "",IDC_SLIDER9,"msctls_trackbar32",TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,154,312,100,15
+    LTEXT           "낮음",IDC_STATIC,138,316,17,8
+    LTEXT           "높음",IDC_STATIC,256,316,17,8
+    LTEXT           "해상도",IDC_STATIC,46,27,25,8
+    LTEXT           "색상",IDC_STATIC,46,44,17,8
+    LTEXT           "밝기",IDC_STATIC,47,73,17,8
+    COMBOBOX        IDC_COMBO1,84,26,114,30,CBS_DROPDOWN | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_COMBO2,84,43,114,30,CBS_DROPDOWN | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "",IDC_SLIDER10,"msctls_trackbar32",TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,78,70,126,15
+    LTEXT           "낮음",IDC_STATIC,83,62,17,8
+    LTEXT           "높음",IDC_STATIC,182,62,17,8
+    CONTROL         " 창모드",IDC_CHECK1,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,47,94,42,10
+    GROUPBOX        " 쉐이더 효과  ",IDC_STATIC,26,384,255,36
+    CONTROL         " HDR 효과",IDC_CHECK2,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,43,404,50,10
+    LTEXT           "캐릭터 시야거리",IDC_STATIC,43,261,59,8
+    LTEXT           "낮음",IDC_STATIC,138,261,17,8
+    CONTROL         "",IDC_SLIDER11,"msctls_trackbar32",TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,154,257,100,15
+    LTEXT           "높음",IDC_STATIC,256,259,17,8
+    CONTROL         "",IDC_SLIDER12,"msctls_trackbar32",TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,154,330,100,15
+    LTEXT           "낮음",IDC_STATIC,138,334,17,8
+    LTEXT           "높음",IDC_STATIC,256,334,17,8
+    CONTROL         "",IDC_SLIDER13,"msctls_trackbar32",TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,154,348,100,15
+    LTEXT           "낮음",IDC_STATIC,138,353,17,8
+    LTEXT           "높음",IDC_STATIC,256,353,17,8
+    GROUPBOX        " 최적화",IDC_STATIC,25,427,255,36
+    PUSHBUTTON      "자동 설정",IDC_BUTTON1,41,442,64,14
+    GROUPBOX        " 그래픽 품질 ",IDC_STATIC,40,127,232,51
+    LTEXT           "사용자 설정",IDC_STATIC,216,150,43,8
+    CONTROL         "",IDC_SLIDER5,"msctls_trackbar32",TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,154,186,100,15
+    LTEXT           "낮음",IDC_STATIC,138,189,17,8
+    LTEXT           "높음",IDC_STATIC,256,189,17,8
+    CONTROL         " Toon Edge ",IDC_CHECK3,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,141,277,54,10
+    CONTROL         " Effect",IDC_CHECK4,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,216,276,37,10
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904e4"
+        BEGIN
+            VALUE "CompanyName", "TODO: <Company name>"
+            VALUE "FileDescription", "TODO: <File description>"
+            VALUE "FileVersion", "1.0.0.1"
+            VALUE "InternalName", "MrPoPo.exe"
+            VALUE "LegalCopyright", "TODO: (c) <Company name>.  All rights reserved."
+            VALUE "OriginalFilename", "MrPoPo.exe"
+            VALUE "ProductName", "TODO: <Product name>"
+            VALUE "ProductVersion", "1.0.0.1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1252
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 228
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 48
+    END
+
+    IDD_MPPCONFIGSETTING, DIALOG
+    BEGIN
+        BOTTOMMARGIN, 194
+    END
+
+    IDD_MPPSETITEMPANE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 405
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 210
+    END
+
+    IDD_MPPTESTPANE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 313
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 193
+    END
+
+    IDD_MPPCLIENTCHEAT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 313
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 193
+    END
+
+    IDD_MPPGRAPHICPANE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 363
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 275
+    END
+
+    IDD_DIALOG1, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 297
+        TOPMARGIN, 7
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDP_OLE_INIT_FAILED     "OLE initialization failed.  Make sure that the OLE libraries are the correct version."
+    IDR_PANE_LOGVIEW        "Log View"
+    IDR_PANE_SETITEM        "Server Cheat"
+    IDR_PANE_TEST           "Test Property"
+    IDP_SOCKETS_INIT_FAILED "Windows sockets initialization failed."
+    IDR_PANE_CHEAT          "Client Cheat"
+    IDR_PANE_GRAPHIC        "Graphic Setting"
+END
+
+STRINGTABLE 
+BEGIN
+    IDR_MAINFRAME           "MrPoPo\n\nMrPoPo\n\n\nMrPoPo.Document\nMrPoPo.Document"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_APP_TITLE       "MrPoPo"
+    AFX_IDS_IDLEMESSAGE     "Ready"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_INDICATOR_EXT        "EXT"
+    ID_INDICATOR_CAPS       "CAP"
+    ID_INDICATOR_NUM        "NUM"
+    ID_INDICATOR_SCRL       "SCRL"
+    ID_INDICATOR_OVR        "OVR"
+    ID_INDICATOR_REC        "REC"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_FILE_NEW             "Create a new document\nNew"
+    ID_FILE_OPEN            "Open an existing document\nOpen"
+    ID_FILE_CLOSE           "Close the active document\nClose"
+    ID_FILE_SAVE            "Save the active document\nSave"
+    ID_FILE_SAVE_AS         "Save the active document with a new name\nSave As"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_APP_ABOUT            "Display program information, version number and copyright\nAbout"
+    ID_APP_EXIT             "Quit the application; prompts to save documents\nExit"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_FILE_MRU_FILE1       "Open this document"
+    ID_FILE_MRU_FILE2       "Open this document"
+    ID_FILE_MRU_FILE3       "Open this document"
+    ID_FILE_MRU_FILE4       "Open this document"
+    ID_FILE_MRU_FILE5       "Open this document"
+    ID_FILE_MRU_FILE6       "Open this document"
+    ID_FILE_MRU_FILE7       "Open this document"
+    ID_FILE_MRU_FILE8       "Open this document"
+    ID_FILE_MRU_FILE9       "Open this document"
+    ID_FILE_MRU_FILE10      "Open this document"
+    ID_FILE_MRU_FILE11      "Open this document"
+    ID_FILE_MRU_FILE12      "Open this document"
+    ID_FILE_MRU_FILE13      "Open this document"
+    ID_FILE_MRU_FILE14      "Open this document"
+    ID_FILE_MRU_FILE15      "Open this document"
+    ID_FILE_MRU_FILE16      "Open this document"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_NEXT_PANE            "Switch to the next window pane\nNext Pane"
+    ID_PREV_PANE            "Switch back to the previous window pane\nPrevious Pane"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_WINDOW_SPLIT         "Split the active window into panes\nSplit"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_EDIT_CLEAR           "Erase the selection\nErase"
+    ID_EDIT_CLEAR_ALL       "Erase everything\nErase All"
+    ID_EDIT_COPY            "Copy the selection and put it on the Clipboard\nCopy"
+    ID_EDIT_CUT             "Cut the selection and put it on the Clipboard\nCut"
+    ID_EDIT_FIND            "Find the specified text\nFind"
+    ID_EDIT_PASTE           "Insert Clipboard contents\nPaste"
+    ID_EDIT_REPEAT          "Repeat the last action\nRepeat"
+    ID_EDIT_REPLACE         "Replace specific text with different text\nReplace"
+    ID_EDIT_SELECT_ALL      "Select the entire document\nSelect All"
+    ID_EDIT_UNDO            "Undo the last action\nUndo"
+    ID_EDIT_REDO            "Redo the previously undone action\nRedo"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_VIEW_TOOLBAR         "Show or hide the toolbar\nToggle ToolBar"
+    ID_VIEW_STATUS_BAR      "Show or hide the status bar\nToggle StatusBar"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_SCSIZE          "Change the window size"
+    AFX_IDS_SCMOVE          "Change the window position"
+    AFX_IDS_SCMINIMIZE      "Reduce the window to an icon"
+    AFX_IDS_SCMAXIMIZE      "Enlarge the window to full size"
+    AFX_IDS_SCNEXTWINDOW    "Switch to the next document window"
+    AFX_IDS_SCPREVWINDOW    "Switch to the previous document window"
+    AFX_IDS_SCCLOSE         "Close the active window and prompts to save the documents"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_SCRESTORE       "Restore the window to normal size"
+    AFX_IDS_SCTASKLIST      "Activate Task List"
+END
+
+STRINGTABLE 
+BEGIN
+    IDR_PANE_OPTIONS        "Options"
+    IDR_PANE_PROPERTIES     "Properties"
+    IDR_PANE_CONFIG         "ConfigOption Setting"
+END
+
+#endif    // 한국어 resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_KOR)
+LANGUAGE 18, 1
+#pragma code_page(1252)
+#include "res\MrPoPo.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

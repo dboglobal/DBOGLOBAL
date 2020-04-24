@@ -1,0 +1,863 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Release4Client|Win32">
+      <Configuration>Release4Client</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{8E1E45F4-1BCF-412A-A5E7-79EA79233C4F}</ProjectGuid>
+    <RootNamespace>Client</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release4Client|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v80</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <UseOfAtl>false</UseOfAtl>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release4Client|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>14.0.25431.1</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release4Client|Win32'">
+    <OutDir>$(SolutionDir)DragonBall\</OutDir>
+    <IntDir>(Configuration)\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release4Client|Win32'">
+    <PreBuildEvent>
+      <Command>
+      </Command>
+    </PreBuildEvent>
+    <ClCompile>
+      <WholeProgramOptimization>true</WholeProgramOptimization>
+      <AdditionalIncludeDirectories>$(SolutionDir)Lib\NtlMovie;$(SolutionDir)Lib\NtlFlasher;$(SolutionDir)Lib\NtlFlasher\GFx SDK 3.3\Src\GRenderer;$(SolutionDir)Lib\NtlFlasher\GFx SDK 3.3\Src\GKernel;$(SolutionDir)Lib\NtlFlasher\GFx SDK 3.3\Src\GFxXML;$(SolutionDir)Lib\NtlFlasher\GFx SDK 3.3\Include;..\..\NtlLib\Shared\NtlTrigger;..\..\NtlLib\Shared;..\..\NtlLib\Shared\Util;..\..\NtlLib\Shared\NtlXMLLoader;..\..\NtlLib\Client\NtlClientNet;..\..\DboShared\NtlGameTable;..\..\DboShared\DboTrigger;..\..\DboShared\NtlShared2;..\..\NtlLib\Shared\Lua;$(SolutionDir)Renderware\Include;$(SolutionDir)Lib\Ntl_Plugin_Collis\collis;$(SolutionDir)Lib\Ntl_Plugin_Toon\toon;$(SolutionDir)Lib\NtlCore;$(SolutionDir)Lib\NtlFramework;$(SolutionDir)Lib\NtlPresentation;$(SolutionDir)Lib\NtlSimulation;$(SolutionDir)Lib\NtlGui;$(SolutionDir)Lib\NtlSound;.\Stage;.\Main;.\Gui;.\Input;.\Camera;.\Thread;.\Parser;.\LoadingScene;.;$(SolutionDir)BVL;.\Addin;.\Addin\Devil;$(DXSDK_DIR)Include;$(SolutionDir)Lib\Discord;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_CRT_SECURE_NO_WARNINGS;DISCORD_DYNAMIC_LIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>precomp_dboclient.h</PrecompiledHeaderFile>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4311;4312;4099;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <MinimalRebuild>false</MinimalRebuild>
+      <BufferSecurityCheck>true</BufferSecurityCheck>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <UseUnicodeForAssemblerListing>false</UseUnicodeForAssemblerListing>
+      <FloatingPointModel>Precise</FloatingPointModel>
+      <UseFullPaths>true</UseFullPaths>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>ddraw.lib;Ws2_32.lib;Winmm.lib;Imm32.lib;rtdict.lib;rtcharse.lib;rtfsyst.lib;rtbmp.lib;rtpng.lib;rtintsec.lib;rtpick.lib;rttoc.lib;rpworld.lib;rtanim.lib;rphanim.lib;rtquat.lib;rplogo.lib;rpusrdat.lib;rpid.lib;rpmatfx.lib;rpuvanim.lib;rpprtstd.lib;rpprtadv.lib;rpptank.lib;rpskintoon.lib;rprandom.lib;rtimport.lib;rtgcond.lib;rtwing.lib;rtray.lib;rplodatm.lib;strmiids.lib;libgfx.lib;libgrenderer_d3d9.lib;libjpeg.lib;zlib.lib;d3dx9.lib;d3d9.lib;Devil.lib;rppvs.lib;rpltmap.lib;rtltmap.lib;rpmipkl.lib;rtpitexd.lib;rtbary.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+      <AdditionalLibraryDirectories>$(SolutionDir)Renderware\Lib\Release;$(SolutionDir)BugTrap;$(SolutionDir)DirectShow;.\Addin\Devil;$(SolutionDir)Lib/Localize/Lib;$(DXSDK_DIR)Lib\x86;$(SolutionDir)Release4Client;$(GFXSDK)3rdParty\expat-2.0.1\lib;$(SolutionDir)Lib\NtlFlasher\GFx SDK 3.3\Lib\$(PlatformName)\Msvc80\Release;$(SolutionDir)Lib\NtlFlasher\GFx SDK 3.3\3rdParty\jpeg-6b\lib\$(PlatformName)\Msvc80\Release;$(SolutionDir)Lib/Discord;$(SolutionDir)Lib/NtlSound/fmod;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreSpecificDefaultLibraries>
+      </IgnoreSpecificDefaultLibraries>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>$(TargetDir)$(TargetName).pdb</ProgramDatabaseFile>
+      <GenerateMapFile>false</GenerateMapFile>
+      <MapFileName>
+      </MapFileName>
+      <MapExports>false</MapExports>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <TargetMachine>MachineX86</TargetMachine>
+      <RandomizedBaseAddress />
+    </Link>
+    <PostBuildEvent>
+      <Command>
+      </Command>
+    </PostBuildEvent>
+    <ProjectReference>
+      <UseLibraryDependencyInputs>false</UseLibraryDependencyInputs>
+    </ProjectReference>
+    <ResourceCompile>
+      <Culture>0x0409</Culture>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <Reference Include="System">
+      <CopyLocalSatelliteAssemblies>true</CopyLocalSatelliteAssemblies>
+      <ReferenceOutputAssembly>true</ReferenceOutputAssembly>
+    </Reference>
+    <Reference Include="System.Data">
+      <CopyLocalSatelliteAssemblies>true</CopyLocalSatelliteAssemblies>
+      <ReferenceOutputAssembly>true</ReferenceOutputAssembly>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <CopyLocalSatelliteAssemblies>true</CopyLocalSatelliteAssemblies>
+      <ReferenceOutputAssembly>true</ReferenceOutputAssembly>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <CopyLocalSatelliteAssemblies>true</CopyLocalSatelliteAssemblies>
+      <ReferenceOutputAssembly>true</ReferenceOutputAssembly>
+    </Reference>
+    <Reference Include="System.Xml">
+      <CopyLocalSatelliteAssemblies>true</CopyLocalSatelliteAssemblies>
+      <ReferenceOutputAssembly>true</ReferenceOutputAssembly>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\BVL\MoviePlayer.cpp" />
+    <ClCompile Include="..\DirectShow\DirectShowMovie.cpp" />
+    <ClCompile Include="Addin\DboAddinManager.cpp" />
+    <ClCompile Include="CCBDBoardGui.cpp" />
+    <ClCompile Include="CCBDNotifyGui.cpp" />
+    <ClCompile Include="CCBDRewardGui.cpp" />
+    <ClCompile Include="CCBDStatusGui.cpp" />
+    <ClCompile Include="Gui\ActionNotifyGui.cpp" />
+    <ClCompile Include="Gui\AlarmManager.cpp" />
+    <ClCompile Include="Gui\AltarGui.cpp">
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release4Client|Win32'">$(IntDir)%(Filename)1.obj</ObjectFileName>
+      <XMLDocumentationFileName Condition="'$(Configuration)|$(Platform)'=='Release4Client|Win32'">$(IntDir)%(Filename)1.xdc</XMLDocumentationFileName>
+    </ClCompile>
+    <ClCompile Include="Gui\AuctionHouseGui.cpp" />
+    <ClCompile Include="Gui\BackboardGui.cpp" />
+    <ClCompile Include="Gui\BagGui.cpp" />
+    <ClCompile Include="Gui\BroadCastGui.cpp" />
+    <ClCompile Include="Gui\BroadCastUnit.cpp" />
+    <ClCompile Include="Gui\BudokaiSideIconGui.cpp" />
+    <ClCompile Include="Gui\BudokaiTournamentGui.cpp" />
+    <ClCompile Include="Gui\BuffDispObject.cpp" />
+    <ClCompile Include="Gui\ButtonList.cpp" />
+    <ClCompile Include="Gui\CautionNotifyGui.cpp" />
+    <ClCompile Include="Gui\CautionSideIconGui.cpp" />
+    <ClCompile Include="Gui\ChannelChangeGui.cpp" />
+    <ClCompile Include="Gui\ChannelSelectGui.cpp" />
+    <ClCompile Include="Gui\CharAccountGui.cpp" />
+    <ClCompile Include="Gui\CharCreateGui.cpp" />
+    <ClCompile Include="Gui\CharGuiGroup.cpp" />
+    <ClCompile Include="Gui\CharInfoGui.cpp" />
+    <ClCompile Include="Gui\CharMakePartGui.cpp" />
+    <ClCompile Include="Gui\CharSelecterGui.cpp" />
+    <ClCompile Include="Gui\CharSelectGui.cpp" />
+    <ClCompile Include="Gui\ChatBalloonManager.cpp" />
+    <ClCompile Include="Gui\ChatDisplayGui.cpp" />
+    <ClCompile Include="Gui\ChatGui.cpp" />
+    <ClCompile Include="Gui\ChatOptionGui.cpp" />
+    <ClCompile Include="Gui\ChatReceiver.cpp" />
+    <ClCompile Include="Gui\ChatSender.cpp" />
+    <ClCompile Include="Gui\CinematicGui.cpp" />
+    <ClCompile Include="Gui\ClassExplainGui.cpp" />
+    <ClCompile Include="Gui\CommercialExtendGui.cpp" />
+    <ClCompile Include="Gui\CommunityGui.cpp" />
+    <ClCompile Include="Gui\CommunityGuild.cpp" />
+    <ClCompile Include="Gui\CommunityRaid.cpp" />
+    <ClCompile Include="Gui\CommuTargetGui.cpp" />
+    <ClCompile Include="Gui\ContractGui.cpp" />
+    <ClCompile Include="Gui\CounterGui.cpp" />
+    <ClCompile Include="Gui\CursorManager.cpp" />
+    <ClCompile Include="Gui\DBCDragonDialogGui.cpp" />
+    <ClCompile Include="Gui\DBCNarrationGui.cpp" />
+    <ClCompile Include="Gui\DBCRewardGUI.cpp">
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release4Client|Win32'">$(IntDir)%(Filename)1.obj</ObjectFileName>
+      <XMLDocumentationFileName Condition="'$(Configuration)|$(Platform)'=='Release4Client|Win32'">$(IntDir)%(Filename)1.xdc</XMLDocumentationFileName>
+    </ClCompile>
+    <ClCompile Include="Gui\DBCSideIconGui.cpp" />
+    <ClCompile Include="Gui\DBOTitleGui.cpp" />
+    <ClCompile Include="Gui\DBOUIConfig.cpp" />
+    <ClCompile Include="Gui\DeliberationRankGui.cpp" />
+    <ClCompile Include="Gui\DeveloperPreviewGui.cpp" />
+    <ClCompile Include="Gui\DialogManager.cpp" />
+    <ClCompile Include="Gui\DialogManager_Rule.cpp" />
+    <ClCompile Include="Gui\DiceGui.cpp" />
+    <ClCompile Include="Gui\DiceManager.cpp" />
+    <ClCompile Include="Gui\DisplayStringManager.cpp" />
+    <ClCompile Include="Gui\DogiGui.cpp" />
+    <ClCompile Include="Gui\DojoInfoGui.cpp" />
+    <ClCompile Include="Gui\DojoInfo_Battle.cpp" />
+    <ClCompile Include="Gui\DojoInfo_Info.cpp" />
+    <ClCompile Include="Gui\DojoSideIconGui.cpp" />
+    <ClCompile Include="Gui\DojoUpgradeGui.cpp" />
+    <ClCompile Include="Gui\DoRepairSideIconGui.cpp" />
+    <ClCompile Include="Gui\DropItemInfoGui.cpp" />
+    <ClCompile Include="Gui\DumpGui.cpp" />
+    <ClCompile Include="Gui\ESCMenuGui.cpp" />
+    <ClCompile Include="Gui\ExpGui.cpp" />
+    <ClCompile Include="Gui\FlashNotifyGui.cpp" />
+    <ClCompile Include="Gui\FriendListGui.cpp" />
+    <ClCompile Include="Gui\GameGuiGroup.cpp" />
+    <ClCompile Include="Gui\GaugeAnimation.cpp" />
+    <ClCompile Include="Gui\GMChatGui.cpp" />
+    <ClCompile Include="Gui\GMGuiGroup.cpp" />
+    <ClCompile Include="Gui\GMPlayerInfoGui.cpp" />
+    <ClCompile Include="Gui\GMPopupGui.cpp" />
+    <ClCompile Include="Gui\GMQuickSlotGui.cpp" />
+    <ClCompile Include="Gui\GMSideIconGui.cpp" />
+    <ClCompile Include="Gui\GroupChatGui.cpp" />
+    <ClCompile Include="Gui\GroupChatManager.cpp" />
+    <ClCompile Include="Gui\GroupNotifyGui.cpp" />
+    <ClCompile Include="Gui\GuiFunctor.cpp" />
+    <ClCompile Include="Gui\GuildEmblemMakerGui.cpp" />
+    <ClCompile Include="Gui\GuildNoticeGui.cpp" />
+    <ClCompile Include="Gui\GuildWarehouseGui.cpp" />
+    <ClCompile Include="Gui\GuiLineTree.cpp" />
+    <ClCompile Include="Gui\GUI_TEST.cpp" />
+    <ClCompile Include="Gui\HelpWindowGui.cpp" />
+    <ClCompile Include="Gui\HintCommon.cpp" />
+    <ClCompile Include="Gui\HintSideIconGui.cpp" />
+    <ClCompile Include="Gui\HpGui.cpp" />
+    <ClCompile Include="Gui\IconMoveManager.cpp" />
+    <ClCompile Include="Gui\InfoWindowGui.cpp" />
+    <ClCompile Include="Gui\InfoWndManager.cpp" />
+    <ClCompile Include="Gui\InterfaceShakeGui.cpp" />
+    <ClCompile Include="Gui\ItemChangeBattleAttributeGui.cpp" />
+    <ClCompile Include="Gui\ItemUpgradeGui.cpp" />
+    <ClCompile Include="Gui\LittleQuestContainer.cpp" />
+    <ClCompile Include="Gui\LoadingGui.cpp" />
+    <ClCompile Include="Gui\LoginGui.cpp" />
+    <ClCompile Include="Gui\LoginGuiGroup.cpp" />
+    <ClCompile Include="Gui\LogoGui.cpp" />
+    <ClCompile Include="Gui\MailSystemGui.cpp" />
+    <ClCompile Include="Gui\MainMenuGui.cpp" />
+    <ClCompile Include="Gui\MinimapGui.cpp" />
+    <ClCompile Include="Gui\MsgBoxGui.cpp" />
+    <ClCompile Include="Gui\MsgBoxManager.cpp" />
+    <ClCompile Include="Gui\MultiDialogGui.cpp" />
+    <ClCompile Include="Gui\NameNotifyGui.cpp" />
+    <ClCompile Include="Gui\NetPyShopCartGui.cpp" />
+    <ClCompile Include="Gui\NetPyShopGui.cpp" />
+    <ClCompile Include="Gui\NpcNotifyGui.cpp" />
+    <ClCompile Include="Gui\NPCShop.cpp" />
+    <ClCompile Include="Gui\NumberGui.cpp" />
+    <ClCompile Include="Gui\NumberGui_Helper.cpp" />
+    <ClCompile Include="Gui\ObjectClickGui.cpp" />
+    <ClCompile Include="Gui\OptionBase.cpp" />
+    <ClCompile Include="Gui\OptionChattingTab.cpp" />
+    <ClCompile Include="Gui\OptionControlTab.cpp" />
+    <ClCompile Include="Gui\OptionGraphicTab.cpp" />
+    <ClCompile Include="Gui\OptionWindowGui.cpp" />
+    <ClCompile Include="Gui\PartyMemberGui.cpp" />
+    <ClCompile Include="Gui\PartyMenuGui.cpp" />
+    <ClCompile Include="Gui\PetitionGui.cpp" />
+    <ClCompile Include="Gui\PetitionSatisfactionGui.cpp" />
+    <ClCompile Include="Gui\PetitionSideIconGui.cpp" />
+    <ClCompile Include="Gui\PetSkillWindowGui.cpp" />
+    <ClCompile Include="Gui\PetStatusBarGui.cpp" />
+    <ClCompile Include="Gui\PopupManager.cpp" />
+    <ClCompile Include="Gui\PopupMenuGui.cpp" />
+    <ClCompile Include="Gui\PortalGui.cpp" />
+    <ClCompile Include="Gui\PrivateShopCartGui.cpp" />
+    <ClCompile Include="Gui\PrivateShopGui.cpp" />
+    <ClCompile Include="Gui\PublicNotifyGui.cpp" />
+    <ClCompile Include="Gui\QuestCommonGui.cpp" />
+    <ClCompile Include="Gui\QuestGui.cpp" />
+    <ClCompile Include="Gui\QuestIndicatorGui.cpp" />
+    <ClCompile Include="Gui\QuestInventoryGui.cpp" />
+    <ClCompile Include="Gui\QuestListGui.cpp" />
+    <ClCompile Include="Gui\QuestMessageGui.cpp" />
+    <ClCompile Include="Gui\QuestNarrationGui.cpp" />
+    <ClCompile Include="Gui\QuestProgressGui.cpp" />
+    <ClCompile Include="Gui\QuestProposalGui.cpp" />
+    <ClCompile Include="Gui\QuestRewardGui.cpp" />
+    <ClCompile Include="Gui\QuestSearchGui.cpp" />
+    <ClCompile Include="Gui\QuickSlotGui.cpp" />
+    <ClCompile Include="Gui\RaceExplainGui.cpp" />
+    <ClCompile Include="Gui\RankBattleBoard.cpp" />
+    <ClCompile Include="Gui\RankBoardCommon.cpp" />
+    <ClCompile Include="Gui\RankBoardGui.cpp" />
+    <ClCompile Include="Gui\RBBattleInfoGui.cpp" />
+    <ClCompile Include="Gui\RBBoardGui.cpp" />
+    <ClCompile Include="Gui\RBChallengeGui.cpp" />
+    <ClCompile Include="Gui\RBDirectionGui.cpp" />
+    <ClCompile Include="Gui\RBGui.cpp" />
+    <ClCompile Include="Gui\RBResultGui.cpp" />
+    <ClCompile Include="Gui\RBSideIconGui.cpp" />
+    <ClCompile Include="Gui\ResultNarrationGui.cpp" />
+    <ClCompile Include="Gui\RwTextureGui.cpp" />
+    <ClCompile Include="Gui\SayFilter.cpp" />
+    <ClCompile Include="Gui\ScouterPCInfoViewer.cpp" />
+    <ClCompile Include="Gui\ScrambleBalloonHelper.cpp" />
+    <ClCompile Include="Gui\ScrambleNotifyGui.cpp" />
+    <ClCompile Include="Gui\ScrambleStatusGui.cpp" />
+    <ClCompile Include="Gui\SCSActive.cpp" />
+    <ClCompile Include="Gui\SCSActiveInfo.cpp" />
+    <ClCompile Include="Gui\SCSActiveMSG.cpp" />
+    <ClCompile Include="Gui\SCSGui.cpp" />
+    <ClCompile Include="Gui\SCSSideIconGui.cpp" />
+    <ClCompile Include="Gui\ServerSelectGui.cpp" />
+    <ClCompile Include="Gui\SideDialogControlGui.cpp" />
+    <ClCompile Include="Gui\SideDialogManager.cpp" />
+    <ClCompile Include="Gui\SideDialogMiniGui.cpp" />
+    <ClCompile Include="Gui\SideIconGui.cpp" />
+    <ClCompile Include="Gui\SkillAbilitySetGui.cpp" />
+    <ClCompile Include="Gui\SkillAbilityUseGui.cpp" />
+    <ClCompile Include="Gui\SkillCommon.cpp" />
+    <ClCompile Include="Gui\SkillCustomizeGui.cpp" />
+    <ClCompile Include="Gui\SkillCustomizeItem.cpp" />
+    <ClCompile Include="Gui\SkillCustomizeParser.cpp" />
+    <ClCompile Include="Gui\SkillHTBRpResult.cpp" />
+    <ClCompile Include="Gui\SkillHtbRpUse.cpp" />
+    <ClCompile Include="Gui\SlotGui.cpp" />
+    <ClCompile Include="Gui\StatusWindowGui.cpp" />
+    <ClCompile Include="Gui\SubGaugeGui.cpp" />
+    <ClCompile Include="Gui\SurfaceCamera.cpp" />
+    <ClCompile Include="Gui\SurfaceGui.cpp" />
+    <ClCompile Include="Gui\TargetHpGui.cpp" />
+    <ClCompile Include="Gui\TBAwardGui.cpp" />
+    <ClCompile Include="Gui\TBCommonDirectionGui.cpp" />
+    <ClCompile Include="Gui\TBFinalDirectionGui.cpp" />
+    <ClCompile Include="Gui\TBFinalMatchInfoGui.cpp" />
+    <ClCompile Include="Gui\TBGambleResult.cpp" />
+    <ClCompile Include="Gui\TBGui.cpp" />
+    <ClCompile Include="Gui\TBMajorDirectionGui.cpp" />
+    <ClCompile Include="Gui\TBMajorMatchInfoGui.cpp" />
+    <ClCompile Include="Gui\TBMatchIndiObBlueGui.cpp" />
+    <ClCompile Include="Gui\TBMatchIndiObRedGui.cpp" />
+    <ClCompile Include="Gui\TBMatchObserverVersusGui.cpp" />
+    <ClCompile Include="Gui\TBMatchResultGui.cpp" />
+    <ClCompile Include="Gui\TBMatchTeamObBlueGui.cpp" />
+    <ClCompile Include="Gui\TBMatchTeamObRedGui.cpp" />
+    <ClCompile Include="Gui\TBMinorDirectionGui.cpp" />
+    <ClCompile Include="Gui\TBMinorMatchInfoGui.cpp" />
+    <ClCompile Include="Gui\TBMinorMatchResultGui.cpp" />
+    <ClCompile Include="Gui\TBNewsGui.cpp" />
+    <ClCompile Include="Gui\TBRequestGui.cpp" />
+    <ClCompile Include="Gui\TBTournamentGui.cpp" />
+    <ClCompile Include="Gui\TBTournamentMatchInfoGui.cpp" />
+    <ClCompile Include="Gui\TeleportProposalManager.cpp" />
+    <ClCompile Include="Gui\TerritoryNotifyGui.cpp" />
+    <ClCompile Include="Gui\TimeNotifyGui.cpp" />
+    <ClCompile Include="Gui\TMQBoard.cpp" />
+    <ClCompile Include="Gui\TMQBoardGui.cpp" />
+    <ClCompile Include="Gui\TMQRewardGui.cpp" />
+    <ClCompile Include="Gui\TMQStatusGui.cpp" />
+    <ClCompile Include="Gui\TradeCart.cpp" />
+    <ClCompile Include="Gui\TutorialConfirmGui.cpp" />
+    <ClCompile Include="Gui\TutorialDialogFocusGui.cpp" />
+    <ClCompile Include="Gui\TutorialExampleGui.cpp" />
+    <ClCompile Include="Gui\TutorialMessageGui.cpp" />
+    <ClCompile Include="Gui\TutorialSideIconGui.cpp" />
+    <ClCompile Include="Gui\VehicleGui.cpp" />
+    <ClCompile Include="Gui\WareHouseGui.cpp" />
+    <ClCompile Include="Gui\Windowby3.cpp" />
+    <ClCompile Include="Gui\WorldMap.cpp" />
+    <ClCompile Include="HLShopBuyConfirmGui.cpp" />
+    <ClCompile Include="HLShopBuyGui.cpp" />
+    <ClCompile Include="HLShopGiftConfirmGui.cpp" />
+    <ClCompile Include="HLShopGiftGui.cpp" />
+    <ClCompile Include="HLShopGui.cpp" />
+    <ClCompile Include="HLSSideIconGui.cpp" />
+    <ClCompile Include="HLSSideView.cpp" />
+    <ClCompile Include="HoiPoiMixCraftGui.cpp" />
+    <ClCompile Include="HoiPoiMixRecipeGui.cpp" />
+    <ClCompile Include="ItemBindSealingGui.cpp" />
+    <ClCompile Include="ItemOptionRestructureGui.cpp" />
+    <ClCompile Include="ItemSwapCartGui.cpp" />
+    <ClCompile Include="ItemSwapGui.cpp" />
+    <ClCompile Include="LoadingScene\GameLoadingScene.cpp" />
+    <ClCompile Include="Main\AvatarController.cpp" />
+    <ClCompile Include="Main\DboApplication.cpp" />
+    <ClCompile Include="Main\DboEvent.cpp" />
+    <ClCompile Include="Main\DboEventGenerator.cpp" />
+    <ClCompile Include="Main\DboEventHandler.cpp" />
+    <ClCompile Include="Main\DboExceptionHandler.cpp" />
+    <ClCompile Include="Main\DboExtraErrorReport.cpp" />
+    <ClCompile Include="Main\DboGlobal.cpp" />
+    <ClCompile Include="Main\DboLogic.cpp" />
+    <ClCompile Include="Main\DboLogic_ItemMove.cpp" />
+    <ClCompile Include="Main\DboLogic_String.cpp" />
+    <ClCompile Include="Main\DboPacketGenerator.cpp" />
+    <ClCompile Include="Main\DboPacketHandler.cpp" />
+    <ClCompile Include="Main\DboPacketHandler_GUBank.cpp" />
+    <ClCompile Include="Main\DboPacketHandler_GUBudokai.cpp" />
+    <ClCompile Include="Main\DboPacketHandler_GUFreeBattle.cpp" />
+    <ClCompile Include="Main\DboPacketHandler_GUHoipoiMix.cpp" />
+    <ClCompile Include="Main\DboPacketHandler_GUMail.cpp" />
+    <ClCompile Include="Main\DboPacketHandler_GUParty.cpp" />
+    <ClCompile Include="Main\DboPacketHandler_GUPrivateShop.cpp" />
+    <ClCompile Include="Main\DboPacketHandler_GURankBattle.cpp" />
+    <ClCompile Include="Main\DboPacketHandler_GUTMQ.cpp" />
+    <ClCompile Include="Main\DboPacketHandler_GUVehicle.cpp" />
+    <ClCompile Include="Main\DboPacketHandler_Lobby.cpp" />
+    <ClCompile Include="Main\DboPacketHandler_Register.cpp" />
+    <ClCompile Include="Main\DboPacketHandler_TU.cpp" />
+    <ClCompile Include="Main\DboPacketHandler_TUGuild.cpp" />
+    <ClCompile Include="Main\DboPacketHandler_TURankingBoard.cpp" />
+    <ClCompile Include="Main\DboVirtualServer.cpp" />
+    <ClCompile Include="Main\Lobby.cpp" />
+    <ClCompile Include="Main\LobbyManager.cpp" />
+    <ClCompile Include="Main\Msjexhnd.cpp" />
+    <ClCompile Include="Main\PacketProc.cpp" />
+    <ClCompile Include="Main\PetitionManager.cpp" />
+    <ClCompile Include="Main\WinMain.cpp" />
+    <ClCompile Include="MrPoPoHandler.cpp" />
+    <ClCompile Include="NetPySideIconGui.cpp" />
+    <ClCompile Include="NetPySideView.cpp" />
+    <ClCompile Include="Parser\DBOCheatCommand.cpp" />
+    <ClCompile Include="Parser\DBOEncrypter.cpp" />
+    <ClCompile Include="Parser\DisplayParser.cpp" />
+    <ClCompile Include="Parser\DumpCommand.cpp" />
+    <ClCompile Include="Parser\DumpTargetConsole.cpp" />
+    <ClCompile Include="Parser\DumpTargetFile.cpp" />
+    <ClCompile Include="Parser\DumpTargetGui.cpp" />
+    <ClCompile Include="Parser\JudgeDump.cpp" />
+    <ClCompile Include="Parser\PacketTracer.cpp" />
+    <ClCompile Include="PlayerTitleGui.cpp" />
+    <ClCompile Include="precomp_dboclient.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release4Client|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="QuickTeleportGui.cpp" />
+    <ClCompile Include="ScouterMeasureDlgGui.cpp" />
+    <ClCompile Include="Stage\CharStageState.cpp" />
+    <ClCompile Include="Stage\GameStage.cpp" />
+    <ClCompile Include="Stage\GameStageState.cpp" />
+    <ClCompile Include="Stage\LobbyStage.cpp" />
+    <ClCompile Include="Stage\LogInStage.cpp" />
+    <ClCompile Include="Stage\LogInStageState.cpp" />
+    <ClCompile Include="Stage\StageManager.cpp" />
+    <ClCompile Include="Thread\GameLoadingThread.cpp" />
+    <ClCompile Include="Thread\Thread.cpp" />
+    <ClCompile Include="UltimateDungeonGui.cpp" />
+    <ClCompile Include="YardratWarehouseGui.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\BVL\BandiVideo.h" />
+    <ClInclude Include="..\BVL\MoviePlayer.h" />
+    <ClInclude Include="..\DirectShow\DirectShowMovie.h" />
+    <ClInclude Include="Addin\DboAddinManager.h" />
+    <ClInclude Include="Addin\Devil\devil_internal_exports.h" />
+    <ClInclude Include="Addin\Devil\il.h" />
+    <ClInclude Include="Addin\Devil\ilu.h" />
+    <ClInclude Include="Addin\Devil\ilut.h" />
+    <ClInclude Include="Addin\Devil\ilu_region.h" />
+    <ClInclude Include="CCBDBoardGui.h" />
+    <ClInclude Include="CCBDNotifyGui.h" />
+    <ClInclude Include="CCBDRewardGui.h" />
+    <ClInclude Include="CCBDStatusGui.h" />
+    <ClInclude Include="Gui\ActionNotifyGui.h" />
+    <ClInclude Include="Gui\AlarmManager.h" />
+    <ClInclude Include="Gui\AltarGui.h" />
+    <ClInclude Include="Gui\AuctionHouseGui.h" />
+    <ClInclude Include="Gui\BackboardGui.h" />
+    <ClInclude Include="Gui\ItemUpgradeGui.h" />
+    <ClInclude Include="HLShopBuyConfirmGui.h" />
+    <ClInclude Include="HLShopBuyGui.h" />
+    <ClInclude Include="HLShopGiftConfirmGui.h" />
+    <ClInclude Include="HLShopGiftGui.h" />
+    <ClInclude Include="HoiPoiMixCraftGui.h" />
+    <ClInclude Include="HoiPoiMixRecipeGui.h" />
+    <ClInclude Include="ItemOptionRestructureGui.h" />
+    <ClInclude Include="ItemSwapCartGui.h" />
+    <ClInclude Include="ItemSwapGui.h" />
+    <ClInclude Include="PlayerTitleGui.h" />
+    <ClInclude Include="QuickTeleportGui.h" />
+    <ClInclude Include="ScouterMeasureDlgGui.h" />
+    <ClInclude Include="UltimateDungeonGui.h" />
+    <ClInclude Include="YardratWarehouseGui.h" />
+    <CustomBuild Include="Gui\BagGui.h" />
+    <ClInclude Include="Gui\BroadCastDef.h" />
+    <ClInclude Include="Gui\BroadCastGui.h" />
+    <ClInclude Include="Gui\BroadCastUnit.h" />
+    <ClInclude Include="Gui\BudokaiSideIconGui.h" />
+    <ClInclude Include="Gui\BudokaiTournamentGui.h" />
+    <CustomBuild Include="Gui\BuffDispObject.h" />
+    <ClInclude Include="Gui\ButtonList.h" />
+    <ClInclude Include="Gui\CautionNotifyGui.h" />
+    <ClInclude Include="Gui\CautionSideIconGui.h" />
+    <ClInclude Include="Gui\ChannelChangeGui.h" />
+    <ClInclude Include="Gui\ChannelSelectGui.h" />
+    <ClInclude Include="Gui\CharAccountGui.h" />
+    <ClInclude Include="Gui\CharCreateGui.h" />
+    <ClInclude Include="Gui\CharGuiGroup.h" />
+    <ClInclude Include="Gui\CharInfoGui.h" />
+    <ClInclude Include="Gui\CharMakeDisplayPart.h" />
+    <ClInclude Include="Gui\CharMakePartGui.h" />
+    <ClInclude Include="Gui\CharSelecterGui.h" />
+    <ClInclude Include="Gui\CharSelectGui.h" />
+    <ClInclude Include="Gui\ChatBalloonManager.h" />
+    <ClInclude Include="Gui\ChatDefine.h" />
+    <ClInclude Include="Gui\ChatDisplayGui.h" />
+    <ClInclude Include="Gui\ChatGui.h" />
+    <ClInclude Include="Gui\ChatOptionGui.h" />
+    <ClInclude Include="Gui\ChatReceiver.h" />
+    <ClInclude Include="Gui\ChatSender.h" />
+    <CustomBuild Include="Gui\CinematicGui.h" />
+    <ClInclude Include="Gui\ClassExplainGui.h" />
+    <ClInclude Include="Gui\CommercialExtendGui.h" />
+    <ClInclude Include="Gui\CommunityBase.h" />
+    <ClInclude Include="Gui\CommunityGui.h" />
+    <ClInclude Include="Gui\CommunityGuild.h" />
+    <ClInclude Include="Gui\CommunityRaid.h" />
+    <ClInclude Include="Gui\CommuTargetGui.h" />
+    <ClInclude Include="Gui\ContractGui.h" />
+    <ClInclude Include="Gui\CounterGui.h" />
+    <ClInclude Include="Gui\CursorManager.h" />
+    <ClInclude Include="Gui\DBCDragonDialogGui.h" />
+    <ClInclude Include="Gui\DBCNarrationGui.h" />
+    <ClInclude Include="Gui\DBCRewardGUI.h" />
+    <ClInclude Include="Gui\DBCSideIconGui.h" />
+    <ClInclude Include="Gui\DboScriptLinkDef.h" />
+    <ClInclude Include="Gui\DBOTitleGui.h" />
+    <ClInclude Include="Gui\DBOUIConfig.h" />
+    <ClInclude Include="Gui\DeliberationRankGui.h" />
+    <ClInclude Include="Gui\DeveloperPreviewGui.h" />
+    <ClInclude Include="Gui\DialogDefine.h" />
+    <ClInclude Include="Gui\DialogManager.h" />
+    <ClInclude Include="Gui\DialogPriority.h" />
+    <ClInclude Include="Gui\DiceGui.h" />
+    <ClInclude Include="Gui\DiceManager.h" />
+    <ClInclude Include="Gui\DisplayStringManager.h" />
+    <ClInclude Include="Gui\DogiGui.h" />
+    <ClInclude Include="Gui\DojoInfoGui.h" />
+    <ClInclude Include="Gui\DojoInfo_Base.h" />
+    <ClInclude Include="Gui\DojoInfo_Battle.h" />
+    <ClInclude Include="Gui\DojoInfo_Info.h" />
+    <ClInclude Include="Gui\DojoSideIconGui.h" />
+    <ClInclude Include="Gui\DojoUpgradeGui.h" />
+    <ClInclude Include="Gui\DoRepairSideIconGui.h" />
+    <CustomBuild Include="Gui\DropItemInfoGui.h" />
+    <ClInclude Include="Gui\DumpGui.h" />
+    <ClInclude Include="Gui\ESCMenuGui.h" />
+    <ClInclude Include="Gui\ExpGui.h" />
+    <ClInclude Include="Gui\FlashNotifyGui.h" />
+    <ClInclude Include="Gui\FriendListGui.h" />
+    <ClInclude Include="Gui\GameGuiGroup.h" />
+    <ClInclude Include="Gui\GaugeAnimation.h" />
+    <ClInclude Include="Gui\GMChatGui.h" />
+    <ClInclude Include="Gui\GMGuiGroup.h" />
+    <ClInclude Include="Gui\GMPlayerInfoGui.h" />
+    <ClInclude Include="Gui\GMPopupGui.h" />
+    <ClInclude Include="Gui\GMQuickSlotGui.h" />
+    <ClInclude Include="Gui\GMSideIconGui.h" />
+    <ClInclude Include="Gui\GroupChatGui.h" />
+    <ClInclude Include="Gui\GroupChatManager.h" />
+    <ClInclude Include="Gui\GroupNotifyGui.h" />
+    <ClInclude Include="Gui\GuiFunctor.h" />
+    <ClInclude Include="Gui\GuildEmblemMakerGui.h" />
+    <ClInclude Include="Gui\GuildNoticeGui.h" />
+    <ClInclude Include="Gui\GuildWarehouseGui.h" />
+    <ClInclude Include="Gui\GuiLineTree.h" />
+    <ClInclude Include="Gui\GUI_TEST.h" />
+    <ClInclude Include="Gui\HelpWindowGui.h" />
+    <ClInclude Include="Gui\HintCommon.h" />
+    <ClInclude Include="Gui\HintSideIconGui.h" />
+    <ClInclude Include="Gui\HpGui.h" />
+    <ClInclude Include="Gui\IconMoveManager.h" />
+    <ClInclude Include="Gui\InfoWindowGui.h" />
+    <ClInclude Include="Gui\InfoWndManager.h" />
+    <ClInclude Include="Gui\InterfaceShakeGui.h" />
+    <ClInclude Include="Gui\ItemChangeBattleAttributeGui.h" />
+    <ClInclude Include="Gui\LittleQuestContainer.h" />
+    <ClInclude Include="Gui\LoadingGui.h" />
+    <ClInclude Include="Gui\LoginGui.h" />
+    <ClInclude Include="Gui\LoginGuiGroup.h" />
+    <ClInclude Include="Gui\LogoGui.h" />
+    <ClInclude Include="Gui\MailSystemGui.h" />
+    <ClInclude Include="Gui\MainMenuGui.h" />
+    <ClInclude Include="Gui\MinimapGui.h" />
+    <ClInclude Include="Gui\MsgBoxGui.h" />
+    <ClInclude Include="Gui\MsgBoxManager.h" />
+    <ClInclude Include="Gui\MultiDialogGui.h" />
+    <ClInclude Include="Gui\NameNotifyGui.h" />
+    <ClInclude Include="Gui\NetPyShopCartGui.h" />
+    <ClInclude Include="Gui\NetPyShopGui.h" />
+    <ClInclude Include="Gui\NpcNotifyGui.h" />
+    <ClInclude Include="Gui\NPCShop.h" />
+    <ClInclude Include="Gui\NumberGui.h" />
+    <ClInclude Include="Gui\NumberGui_Helper.h" />
+    <ClInclude Include="Gui\ObjectClickGui.h" />
+    <ClInclude Include="Gui\OptionBase.h" />
+    <ClInclude Include="Gui\OptionChattingTab.h" />
+    <ClInclude Include="Gui\OptionControlTab.h" />
+    <ClInclude Include="Gui\OptionGraphicTab.h" />
+    <ClInclude Include="Gui\OptionWindowGui.h" />
+    <ClInclude Include="Gui\PartyMemberGui.h" />
+    <ClInclude Include="Gui\PartyMenuGui.h" />
+    <ClInclude Include="Gui\PetitionGui.h" />
+    <ClInclude Include="Gui\PetitionSatisfactionGui.h" />
+    <ClInclude Include="Gui\PetitionSideIconGui.h" />
+    <ClInclude Include="Gui\PetSkillWindowGui.h" />
+    <ClInclude Include="Gui\PetStatusBarGui.h" />
+    <ClInclude Include="Gui\PopupManager.h" />
+    <ClInclude Include="Gui\PopupMenuGui.h" />
+    <ClInclude Include="Gui\PortalGui.h" />
+    <ClInclude Include="Gui\PrivateShopCartGui.h" />
+    <ClInclude Include="Gui\PrivateShopGui.h" />
+    <ClInclude Include="Gui\PublicNotifyGui.h" />
+    <ClInclude Include="Gui\QuestCommonGui.h" />
+    <ClInclude Include="Gui\QuestGui.h" />
+    <ClInclude Include="Gui\QuestGuiDef.h" />
+    <ClInclude Include="Gui\QuestIndicatorGui.h" />
+    <ClInclude Include="Gui\QuestInventoryGui.h" />
+    <ClInclude Include="Gui\QuestListGui.h" />
+    <ClInclude Include="Gui\QuestMessageGui.h" />
+    <ClInclude Include="Gui\QuestNarrationGui.h" />
+    <ClInclude Include="Gui\QuestProgressGui.h" />
+    <ClInclude Include="Gui\QuestProposalGui.h" />
+    <ClInclude Include="Gui\QuestRewardGui.h" />
+    <ClInclude Include="Gui\QuestSearchGui.h" />
+    <ClInclude Include="Gui\QuickSlotGui.h" />
+    <ClInclude Include="Gui\RaceExplainGui.h" />
+    <ClInclude Include="Gui\RankBattleBoard.h" />
+    <ClInclude Include="Gui\RankBoardCommon.h" />
+    <ClInclude Include="Gui\RankBoardGui.h" />
+    <ClInclude Include="Gui\RBBattleInfoGui.h" />
+    <ClInclude Include="Gui\RBBoardGui.h" />
+    <ClInclude Include="Gui\RBChallengeGui.h" />
+    <ClInclude Include="Gui\RBDirectionGui.h" />
+    <ClInclude Include="Gui\RBGui.h" />
+    <ClInclude Include="Gui\RBResultGui.h" />
+    <ClInclude Include="Gui\RBSideIconGui.h" />
+    <ClInclude Include="Gui\ResultNarrationGui.h" />
+    <ClInclude Include="Gui\RwTextureGui.h" />
+    <ClInclude Include="Gui\SayFilter.h" />
+    <ClInclude Include="Gui\ScouterPCInfoViewer.h" />
+    <ClInclude Include="Gui\ScrambleBalloonHelper.h" />
+    <ClInclude Include="Gui\ScrambleNotifyGui.h" />
+    <ClInclude Include="Gui\ScrambleStatusGui.h" />
+    <ClInclude Include="Gui\SCSActive.h" />
+    <ClInclude Include="Gui\SCSActiveInfo.h" />
+    <ClInclude Include="Gui\SCSActiveMSG.h" />
+    <ClInclude Include="Gui\SCSGui.h" />
+    <ClInclude Include="Gui\SCSSideIconGui.h" />
+    <ClInclude Include="Gui\ServerSelectGui.h" />
+    <ClInclude Include="Gui\SideDialogControlGui.h" />
+    <ClInclude Include="Gui\SideDialogDefine.h" />
+    <ClInclude Include="Gui\SideDialogManager.h" />
+    <ClInclude Include="Gui\SideDialogMiniGui.h" />
+    <ClInclude Include="Gui\SideIconDefine.h" />
+    <ClInclude Include="Gui\SideIconGui.h" />
+    <ClInclude Include="Gui\SkillAbilitySetGui.h" />
+    <ClInclude Include="Gui\SkillAbilityUseGui.h" />
+    <ClInclude Include="Gui\SkillCommon.h" />
+    <ClInclude Include="Gui\SkillCustomizeGui.h" />
+    <ClInclude Include="Gui\SkillCustomizeItem.h" />
+    <ClInclude Include="Gui\SkillCustomizeParser.h" />
+    <ClInclude Include="Gui\SkillHTBRpResult.h" />
+    <ClInclude Include="Gui\SkillHtbRpUse.h" />
+    <ClInclude Include="Gui\SlotGui.h" />
+    <CustomBuild Include="Gui\StatusWindowGui.h" />
+    <ClInclude Include="Gui\SubGaugeGui.h" />
+    <ClInclude Include="Gui\SurfaceCamera.h" />
+    <ClInclude Include="Gui\SurfaceGui.h" />
+    <ClInclude Include="Gui\TargetHpGui.h" />
+    <ClInclude Include="Gui\TBAwardGui.h" />
+    <ClInclude Include="Gui\TBCommonDirectionGui.h" />
+    <ClInclude Include="Gui\TBFinalDirectionGui.h" />
+    <ClInclude Include="Gui\TBFinalMatchInfoGui.h" />
+    <ClInclude Include="Gui\TBGambleResult.h" />
+    <ClInclude Include="Gui\TBGui.h" />
+    <ClInclude Include="Gui\TBMajorDirectionGui.h" />
+    <ClInclude Include="Gui\TBMajorMatchInfoGui.h" />
+    <ClInclude Include="Gui\TBMatchIndiObBlueGui.h" />
+    <ClInclude Include="Gui\TBMatchIndiObRedGui.h" />
+    <ClInclude Include="Gui\TBMatchObserverVersusGui.h" />
+    <ClInclude Include="Gui\TBMatchResultGui.h" />
+    <ClInclude Include="Gui\TBMatchTeamObBlueGui.h" />
+    <ClInclude Include="Gui\TBMatchTeamObRedGui.h" />
+    <ClInclude Include="Gui\TBMinorDirectionGui.h" />
+    <ClInclude Include="Gui\TBMinorMatchInfoGui.h" />
+    <ClInclude Include="Gui\TBMinorMatchResultGui.h" />
+    <ClInclude Include="Gui\TBNewsGui.h" />
+    <ClInclude Include="Gui\TBRequestGui.h" />
+    <ClInclude Include="Gui\TBTournamentGui.h" />
+    <ClInclude Include="Gui\TBTournamentMatchInfoGui.h" />
+    <ClInclude Include="Gui\TeleportProposalManager.h" />
+    <ClInclude Include="Gui\TerritoryNotifyGui.h" />
+    <ClInclude Include="Gui\TimeNotifyGui.h" />
+    <ClInclude Include="Gui\TMQBoard.h" />
+    <ClInclude Include="Gui\TMQBoardGui.h" />
+    <ClInclude Include="Gui\TMQRewardGui.h" />
+    <ClInclude Include="Gui\TMQStatusGui.h" />
+    <ClInclude Include="Gui\TradeCart.h" />
+    <ClInclude Include="Gui\TutorialConfirmGui.h" />
+    <ClInclude Include="Gui\TutorialDialogFocusGui.h" />
+    <ClInclude Include="Gui\TutorialExampleGui.h" />
+    <ClInclude Include="Gui\TutorialMessageGui.h" />
+    <ClInclude Include="Gui\TutorialSideIconGui.h" />
+    <ClInclude Include="Gui\VehicleGui.h" />
+    <ClInclude Include="Gui\WareHouseGui.h" />
+    <ClInclude Include="Gui\Windowby3.h" />
+    <ClInclude Include="Gui\WorldMap.h" />
+    <ClInclude Include="HLShopGui.h" />
+    <ClInclude Include="HLSSideIconGui.h" />
+    <ClInclude Include="HLSSideView.h" />
+    <ClInclude Include="ItemBindSealingGui.h" />
+    <ClInclude Include="LoadingScene\GameLoadingScene.h" />
+    <ClInclude Include="Main\AvatarController.h" />
+    <ClInclude Include="Main\DboApplication.h" />
+    <ClInclude Include="Main\DboCompileOpt.h" />
+    <ClInclude Include="Main\DboDef.h" />
+    <ClInclude Include="Main\DboEvent.h" />
+    <ClInclude Include="Main\DboEventGenerator.h" />
+    <ClInclude Include="Main\DboEventHandler.h" />
+    <ClInclude Include="Main\DboExceptionHandler.h" />
+    <ClInclude Include="Main\DboExtraErrorReport.h" />
+    <ClInclude Include="Main\DboGlobal.h" />
+    <ClInclude Include="Main\DboLogic.h" />
+    <ClInclude Include="Main\DboPacketGenerator.h" />
+    <ClInclude Include="Main\DboPacketHandler.h" />
+    <ClInclude Include="Main\DboTableInfo.h" />
+    <ClInclude Include="Main\DboVirtualServer.h" />
+    <ClInclude Include="Main\Lobby.h" />
+    <ClInclude Include="Main\LobbyManager.h" />
+    <ClInclude Include="Main\Msjexhnd.h" />
+    <ClInclude Include="Main\PacketProc.h" />
+    <ClInclude Include="Main\PetitionManager.h" />
+    <ClInclude Include="MrPoPoHandler.h" />
+    <ClInclude Include="NetPySideIconGui.h" />
+    <ClInclude Include="NetPySideView.h" />
+    <ClInclude Include="Parser\DBOCheatCommand.h" />
+    <ClInclude Include="Parser\DBOEncrypter.h" />
+    <ClInclude Include="Parser\DisplayParser.h" />
+    <ClInclude Include="Parser\DumpCommand.h" />
+    <ClInclude Include="Parser\DumpTargetConsole.h" />
+    <ClInclude Include="Parser\DumpTargetFile.h" />
+    <ClInclude Include="Parser\DumpTargetGui.h" />
+    <ClInclude Include="Parser\JudgeDump.h" />
+    <ClInclude Include="Parser\PacketTracer.h" />
+    <ClInclude Include="precomp_dboclient.h" />
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="Stage\CharStageState.h" />
+    <ClInclude Include="Stage\GameStage.h" />
+    <ClInclude Include="Stage\GameStageState.h" />
+    <ClInclude Include="Stage\LobbyStage.h" />
+    <ClInclude Include="Stage\LogInStage.h" />
+    <ClInclude Include="Stage\LogInStageState.h" />
+    <ClInclude Include="Stage\StageManager.h" />
+    <ClInclude Include="Thread\CriticalSection.h" />
+    <ClInclude Include="Thread\GameLoadingThread.h" />
+    <ClInclude Include="Thread\Thread.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Addin\Devil\config.h.win" />
+    <None Include="Addin\Devil\DevIL.dll" />
+    <None Include="Addin\Devil\DevIL.exp" />
+    <None Include="Addin\Devil\ILU.dll" />
+    <None Include="Addin\Devil\ILU.exp" />
+    <None Include="Addin\Devil\ILUT.dll" />
+    <None Include="Addin\Devil\ILUT.exp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="Addin\Devil\DevIL.lib" />
+    <Library Include="Addin\Devil\ILU.lib" />
+    <Library Include="Addin\Devil\ILUT.lib" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Client.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\DboShared\DboTrigger\DboTrigger.vcxproj">
+      <Project>{3bee299b-d145-4030-81dd-d8b9ade8b767}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <UseLibraryDependencyInputs>false</UseLibraryDependencyInputs>
+    </ProjectReference>
+    <ProjectReference Include="..\..\DboShared\NtlGameTable\NtlGameTable.vcxproj">
+      <Project>{9a4dc8e8-16ef-463b-8f14-77f447a782cc}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <UseLibraryDependencyInputs>false</UseLibraryDependencyInputs>
+    </ProjectReference>
+    <ProjectReference Include="..\..\DboShared\NtlShared2\NtlShared.vcxproj">
+      <Project>{573eb1e4-7620-479e-8ccf-def06491545b}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <UseLibraryDependencyInputs>false</UseLibraryDependencyInputs>
+    </ProjectReference>
+    <ProjectReference Include="..\..\NtlLib\Client\NtlClientNet\NtlClientNet.vcxproj">
+      <Project>{c54a01c8-8482-4ef8-b259-06dff4fd4dbe}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <UseLibraryDependencyInputs>false</UseLibraryDependencyInputs>
+    </ProjectReference>
+    <ProjectReference Include="..\..\NtlLib\Shared\Lua\Lua.vcxproj">
+      <Project>{f7291b35-71f2-47c4-ae77-f3c4ab3b43a0}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <UseLibraryDependencyInputs>false</UseLibraryDependencyInputs>
+    </ProjectReference>
+    <ProjectReference Include="..\..\NtlLib\Shared\NtlTrigger\NtlTrigger.vcxproj">
+      <Project>{31832309-d436-4c40-913d-87aaf73ffc99}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <UseLibraryDependencyInputs>false</UseLibraryDependencyInputs>
+    </ProjectReference>
+    <ProjectReference Include="..\..\NtlLib\Shared\NtlXMLLoader\NtlXMLLoader.vcxproj">
+      <Project>{9d941cac-4183-44e3-aec3-817c0a32d1dd}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <UseLibraryDependencyInputs>false</UseLibraryDependencyInputs>
+    </ProjectReference>
+    <ProjectReference Include="..\..\NtlLib\Shared\Util\Util.vcxproj">
+      <Project>{5229f8ae-a505-4077-b6d3-5ce0164dfe73}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <UseLibraryDependencyInputs>false</UseLibraryDependencyInputs>
+    </ProjectReference>
+    <ProjectReference Include="..\..\NtlLib\Shared\Zip\zlib123\projects\visualdotnet2005\zlib.vcxproj">
+      <Project>{9b2b6c11-764e-4d4b-8db2-f91ac99e0b93}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <UseLibraryDependencyInputs>false</UseLibraryDependencyInputs>
+    </ProjectReference>
+    <ProjectReference Include="..\Lib\Discord\Discord.vcxproj">
+      <Project>{1f437f8e-d07b-4a71-858c-318ddf7ff968}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Lib\NtlCore\NtlCore.vcxproj">
+      <Project>{2d91cafc-1814-4cb4-b844-4e55f937d051}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <UseLibraryDependencyInputs>false</UseLibraryDependencyInputs>
+    </ProjectReference>
+    <ProjectReference Include="..\Lib\NtlFlasher\NtlFlasher.vcxproj">
+      <Project>{de6f78c4-d4bd-4594-b1f0-e7fe85e30ee5}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <UseLibraryDependencyInputs>false</UseLibraryDependencyInputs>
+    </ProjectReference>
+    <ProjectReference Include="..\Lib\NtlFramework\NtlFramework.vcxproj">
+      <Project>{a2e4d1ec-1758-44e0-b3c9-955c286f84be}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <UseLibraryDependencyInputs>false</UseLibraryDependencyInputs>
+    </ProjectReference>
+    <ProjectReference Include="..\Lib\NtlGui\NtlGui.vcxproj">
+      <Project>{4cacaf6f-333c-4ac8-bb0e-ce8eee4b44a3}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <UseLibraryDependencyInputs>false</UseLibraryDependencyInputs>
+    </ProjectReference>
+    <ProjectReference Include="..\Lib\NtlLocalize\NtlLocalize.vcxproj">
+      <Project>{cf10a0f6-007a-4bd3-896f-2ca1e9faef45}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <UseLibraryDependencyInputs>false</UseLibraryDependencyInputs>
+    </ProjectReference>
+    <ProjectReference Include="..\Lib\NtlMovie\NtlMovie.vcxproj">
+      <Project>{393dffa4-16b4-4037-aed4-36c4dffb5b18}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <UseLibraryDependencyInputs>false</UseLibraryDependencyInputs>
+    </ProjectReference>
+    <ProjectReference Include="..\Lib\NtlPresentation\NtlPresentation.vcxproj">
+      <Project>{0ec8e06b-8138-4bfd-8af7-9cad1f2f65ac}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\Lib\NtlSimulation\NtlSimulation.vcxproj">
+      <Project>{7bb7020c-506b-47f4-b54b-c91c6f5246ca}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <UseLibraryDependencyInputs>false</UseLibraryDependencyInputs>
+    </ProjectReference>
+    <ProjectReference Include="..\Lib\NtlSound\NtlSound.vcxproj">
+      <Project>{ac4b3632-113d-40e1-b22f-0e6d9d1fd15a}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <UseLibraryDependencyInputs>false</UseLibraryDependencyInputs>
+    </ProjectReference>
+    <ProjectReference Include="..\Lib\Ntl_Plugin_Collis\Ntl_Plugin_Collis.vcxproj">
+      <Project>{4bd7b6fb-4afc-4880-a136-3b59f384ed9e}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <UseLibraryDependencyInputs>false</UseLibraryDependencyInputs>
+    </ProjectReference>
+    <ProjectReference Include="..\Lib\Ntl_Plugin_Toon\Ntl_Plugin_Toon.vcxproj">
+      <Project>{0a07ccc0-9f5d-4e94-b7d6-68bd00dfd37d}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <UseLibraryDependencyInputs>false</UseLibraryDependencyInputs>
+    </ProjectReference>
+    <ProjectReference Include="..\Lib\Ntl_Plugin_World\Ntl_Plugin_World.vcxproj">
+      <Project>{837e47aa-e57b-46ff-b42f-26f23bcba8df}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <UseLibraryDependencyInputs>false</UseLibraryDependencyInputs>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

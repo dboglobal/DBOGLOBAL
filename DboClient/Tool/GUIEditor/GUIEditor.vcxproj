@@ -1,0 +1,332 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Release4Client|Win32">
+      <Configuration>Release4Client</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release4Tools|Win32">
+      <Configuration>Release4Tools</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{1E11B94B-2C50-47FB-AB65-8EE9D9EF6D87}</ProjectGuid>
+    <RootNamespace>GUIEditor</RootNamespace>
+    <Keyword>MFCProj</Keyword>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v80</PlatformToolset>
+    <UseOfMfc>Static</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release4Client|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v80</PlatformToolset>
+    <UseOfMfc>Static</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release4Tools|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v80</PlatformToolset>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release4Client|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release4Tools|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>14.0.25431.1</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>Release\</OutDir>
+    <IntDir>Release\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release4Client|Win32'">
+    <OutDir>E:\DBOG\DBO\DBOG UNPACKED\</OutDir>
+    <IntDir>Release\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release4Tools|Win32'">
+    <OutDir>E:\DBOG\DBO\DBOG UNPACKED\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+    </Midl>
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0412</Culture>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release4Client|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+    </Midl>
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <AdditionalIncludeDirectories>$(SolutionDir)Tool\GUIEditor;$(SolutionDir)Tool\GUIEditor\Control;$(SolutionDir)Renderware\Include;$(SolutionDir)Lib\NtlGui;$(DXSDK_DIR)Include;$(SolutionDir)Lib\NtlCore;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <UseUnicodeForAssemblerListing>false</UseUnicodeForAssemblerListing>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <WholeProgramOptimization>true</WholeProgramOptimization>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>
+      </PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>
+      </AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <TargetMachine>MachineX86</TargetMachine>
+      <AdditionalDependencies>ddraw.lib;dxguid.lib;Ws2_32.lib;Winmm.lib;Imm32.lib;rtdict.lib;rtcharse.lib;rtfsyst.lib;rtbmp.lib;rtpng.lib;rtintsec.lib;rtpick.lib;rttoc.lib;rpworld.lib;rtanim.lib;rphanim.lib;rtquat.lib;rplogo.lib;rpusrdat.lib;rpid.lib;rpmatfx.lib;rpuvanim.lib;rpprtstd.lib;rpprtadv.lib;rpptank.lib;rpskintoon.lib;rprandom.lib;rtimport.lib;rtgcond.lib;rtwing.lib;rtray.lib;rplodatm.lib;strmiids.lib;libgfx.lib;libgrenderer_d3d9.lib;libjpeg.lib;zlib.lib;d3dx9.lib;d3d9.lib;Devil.lib;rppvs.lib;rpltmap.lib;rtltmap.lib;rpmipkl.lib;rtpitexd.lib;rtbary.lib;rpadc.lib;rpcrowd.lib;rwplcore.lib;rwcore.lib;rtworld.lib;rttoon.lib;ilut.lib;ilu.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)Renderware\Lib\Release;$(SolutionDir)BugTrap;$(SolutionDir)DirectShow;$(SolutionDir)Client\Addin\Devil;$(SolutionDir)Lib/Localize/Lib;$(DXSDK_DIR)Lib\x86;$(SolutionDir)Release4Client;$(GFXSDK)3rdParty\expat-2.0.1\lib;$(SolutionDir)Lib\NtlFlasher\GFx SDK 3.3\Lib\$(PlatformName)\Msvc80\Release;$(SolutionDir)Lib\NtlFlasher\GFx SDK 3.3\3rdParty\jpeg-6b\lib\$(PlatformName)\Msvc80\Release;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <LinkTimeCodeGeneration>UseLinkTimeCodeGeneration</LinkTimeCodeGeneration>
+      <RandomizedBaseAddress />
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release4Tools|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+    </Midl>
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <AdditionalIncludeDirectories>$(SolutionDir)Tool\GUIEditor;$(SolutionDir)Tool\GUIEditor\Control;$(SolutionDir)Renderware\Include;$(SolutionDir)Lib\NtlGui;$(DXSDK_DIR)Include;$(SolutionDir)Lib\NtlCore;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <UseUnicodeForAssemblerListing>false</UseUnicodeForAssemblerListing>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <WholeProgramOptimization>true</WholeProgramOptimization>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>
+      </PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>
+      </AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <TargetMachine>MachineX86</TargetMachine>
+      <AdditionalDependencies>ddraw.lib;dxguid.lib;Ws2_32.lib;Winmm.lib;Imm32.lib;rtdict.lib;rtcharse.lib;rtfsyst.lib;rtbmp.lib;rtpng.lib;rtintsec.lib;rtpick.lib;rttoc.lib;rpworld.lib;rtanim.lib;rphanim.lib;rtquat.lib;rplogo.lib;rpusrdat.lib;rpid.lib;rpmatfx.lib;rpuvanim.lib;rpprtstd.lib;rpprtadv.lib;rpptank.lib;rpskintoon.lib;rprandom.lib;rtimport.lib;rtgcond.lib;rtwing.lib;rtray.lib;rplodatm.lib;strmiids.lib;libgfx.lib;libgrenderer_d3d9.lib;libjpeg.lib;zlib.lib;d3dx9.lib;d3d9.lib;Devil.lib;rppvs.lib;rpltmap.lib;rtltmap.lib;rpmipkl.lib;rtpitexd.lib;rtbary.lib;rpadc.lib;rpcrowd.lib;rwplcore.lib;rwcore.lib;rtworld.lib;rttoon.lib;ilut.lib;ilu.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)Renderware\Lib\Release;$(SolutionDir)BugTrap;$(SolutionDir)DirectShow;$(SolutionDir)Client\Addin\Devil;$(SolutionDir)Lib/Localize/Lib;$(DXSDK_DIR)Lib\x86;$(SolutionDir)Release4Client;$(GFXSDK)3rdParty\expat-2.0.1\lib;$(SolutionDir)Lib\NtlFlasher\GFx SDK 3.3\Lib\$(PlatformName)\Msvc80\Release;$(SolutionDir)Lib\NtlFlasher\GFx SDK 3.3\3rdParty\jpeg-6b\lib\$(PlatformName)\Msvc80\Release;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <LinkTimeCodeGeneration>UseLinkTimeCodeGeneration</LinkTimeCodeGeneration>
+      <RandomizedBaseAddress>
+      </RandomizedBaseAddress>
+      <IgnoreSpecificDefaultLibraries>libcmt.lib</IgnoreSpecificDefaultLibraries>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="CDevIL.cpp" />
+    <ClCompile Include="CDevILMFCMemDC.cpp" />
+    <ClCompile Include="Control\AutoFont.cpp" />
+    <ClCompile Include="Control\BtnST.cpp" />
+    <ClCompile Include="Control\Dib.cpp" />
+    <ClCompile Include="Control\N3Slider.cpp" />
+    <ClCompile Include="Control\PropTree.cpp" />
+    <ClCompile Include="Control\PropTreeInfo.cpp" />
+    <ClCompile Include="Control\PropTreeItem.cpp" />
+    <ClCompile Include="Control\PropTreeItemColor.cpp" />
+    <ClCompile Include="Control\PropTreeItemCombo.cpp" />
+    <ClCompile Include="Control\PropTreeItemEdit.cpp" />
+    <ClCompile Include="Control\PropTreeItemSlider.cpp" />
+    <ClCompile Include="Control\PropTreeItemStatic.cpp" />
+    <ClCompile Include="Control\PropTreeList.cpp" />
+    <ClCompile Include="Control\RollupCtrl.cpp" />
+    <ClCompile Include="Control\Sizecbar.cpp" />
+    <ClCompile Include="Control\SizingTabCtrlBar.cpp" />
+    <ClCompile Include="Control\SXbutton.cpp" />
+    <ClCompile Include="Control\WBButton.cpp" />
+    <ClCompile Include="CoordManager.cpp" />
+    <ClCompile Include="DataManager.cpp" />
+    <ClCompile Include="DirTreeCtrl.cpp" />
+    <ClCompile Include="DirTreeCtrlMSC.cpp" />
+    <ClCompile Include="ExtFilter.cpp" />
+    <ClCompile Include="FileViewDlg.cpp" />
+    <ClCompile Include="GUIControlView.cpp" />
+    <ClCompile Include="GUIDebugView.cpp" />
+    <ClCompile Include="GUIEditor.cpp" />
+    <ClCompile Include="GUIEditorDoc.cpp" />
+    <ClCompile Include="GUIFileInfoView.cpp" />
+    <ClCompile Include="GUIFileView.cpp" />
+    <ClCompile Include="GUIResourceView.cpp" />
+    <ClCompile Include="KMMFCMemDC.cpp" />
+    <ClCompile Include="KMSelectBox.cpp" />
+    <ClCompile Include="LayerMisc.cpp" />
+    <ClCompile Include="MainFrm.cpp" />
+    <ClCompile Include="RectInfoDlg.cpp" />
+    <ClCompile Include="ResourceAttributeDlg.cpp" />
+    <ClCompile Include="ResourceLayer.cpp" />
+    <ClCompile Include="ResourceListDlg.cpp" />
+    <ClCompile Include="SortStringArray.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release4Client|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release4Tools|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="SurfaceAttributeDlg.cpp" />
+    <ClCompile Include="SurfaceLayer.cpp" />
+    <ClCompile Include="SurfaceListDlg.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="CDevIL.h" />
+    <ClInclude Include="CDevILMFCMemDC.h" />
+    <ClInclude Include="Control\AutoFont.h" />
+    <ClInclude Include="Control\btnst.h" />
+    <ClInclude Include="Control\Dib.h" />
+    <ClInclude Include="Control\N3Slider.h" />
+    <ClInclude Include="Control\PropTree.h" />
+    <ClInclude Include="Control\PropTreeInfo.h" />
+    <ClInclude Include="Control\PropTreeItem.h" />
+    <ClInclude Include="Control\PropTreeItemColor.h" />
+    <ClInclude Include="Control\PropTreeItemCombo.h" />
+    <ClInclude Include="Control\PropTreeItemEdit.h" />
+    <ClInclude Include="Control\PropTreeItemSlider.h" />
+    <ClInclude Include="Control\PropTreeItemStatic.h" />
+    <ClInclude Include="Control\PropTreeList.h" />
+    <ClInclude Include="Control\RollupCtrl.h" />
+    <ClInclude Include="Control\Sizecbar.h" />
+    <ClInclude Include="Control\SizingTabCtrlBar.h" />
+    <ClInclude Include="Control\SXbutton.h" />
+    <ClInclude Include="Control\WBButton.h" />
+    <ClInclude Include="CoordManager.h" />
+    <ClInclude Include="DataManager.h" />
+    <ClInclude Include="DirTreeCtrl.h" />
+    <ClInclude Include="DirTreeCtrlMSC.h" />
+    <ClInclude Include="ExtFilter.h" />
+    <ClInclude Include="FileViewDlg.h" />
+    <ClInclude Include="GUIControlView.h" />
+    <ClInclude Include="GUIDebugView.h" />
+    <ClInclude Include="GUIEditor.h" />
+    <ClInclude Include="GUIEditorDoc.h" />
+    <ClInclude Include="GUIFileInfoView.h" />
+    <ClInclude Include="GUIFileView.h" />
+    <ClInclude Include="GUIResourceView.h" />
+    <ClInclude Include="KMMFCMemDC.h" />
+    <ClInclude Include="KMSelectBox.h" />
+    <ClInclude Include="LayerMisc.h" />
+    <ClInclude Include="MainFrm.h" />
+    <ClInclude Include="RectInfoDlg.h" />
+    <ClInclude Include="Resource.h" />
+    <ClInclude Include="ResourceAttributeDlg.h" />
+    <ClInclude Include="ResourceLayer.h" />
+    <ClInclude Include="ResourceListDlg.h" />
+    <ClInclude Include="SortStringArray.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="SurfaceAttributeDlg.h" />
+    <ClInclude Include="SurfaceLayer.h" />
+    <ClInclude Include="SurfaceListDlg.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\bitmap1.bmp" />
+    <Image Include="res\expanddown.bmp" />
+    <Image Include="res\expanddown_blue.bmp" />
+    <Image Include="res\expandleft.bmp" />
+    <Image Include="res\expandleft_blue.bmp" />
+    <Image Include="res\GUIEditor.ico" />
+    <Image Include="res\GUIEditorDoc.ico" />
+    <Image Include="res\Icon.bmp" />
+    <Image Include="res\Toolbar.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\fpoint.cur" />
+    <None Include="res\GUIEditor.rc2" />
+    <None Include="res\spliter.cur" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="GUIEditor.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="res\GUIEditor.manifest">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release4Client|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release4Tools|Win32'">true</ExcludedFromBuild>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\NtlLib\Shared\NtlXMLLoader\NtlXMLLoader.vcxproj">
+      <Project>{9d941cac-4183-44e3-aec3-817c0a32d1dd}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Lib\NtlCore\NtlCore.vcxproj">
+      <Project>{2d91cafc-1814-4cb4-b844-4e55f937d051}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Lib\NtlGui\NtlGui.vcxproj">
+      <Project>{4cacaf6f-333c-4ac8-bb0e-ce8eee4b44a3}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties RESOURCE_FILE="GUIEditor.rc" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

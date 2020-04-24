@@ -1,0 +1,353 @@
+-- Dwc2 Hard Mode & Last Boss Battle --
+GameStage(0)
+--[
+-- 이벤트 선택 : 송이버섯 구하기
+	Action("event status select")
+	--[
+		Param("group", 4)
+		Param("index", 2)
+	--]
+	End()
+	
+-- 이벤트 등록: 바다거북을 해변가로 데려가기
+	Action( "event status register" )
+	--[
+		Param( "group", 6 )
+		Param( "index", 1 )
+		Param( "text tblidx", 61 )
+		Param( "type", "normal")
+	--]
+	End()
+	
+	Action("add mobgroup")
+	--[
+		Param("group", 9)
+		Param("no spawn wait", "true")
+	--]
+	End()
+	
+	Action("change sps scene")
+	--[
+		Param("index", 7611209)
+		Param("play script", 7611209)
+		Param("play scene", 2)
+	--]
+	End()
+	
+-- check point
+	Action("direction indicate")
+	--[
+		Param("apply" , "true")
+		Param("indicate type", "point")
+		Param("loc x", -572.31)
+		Param("loc z", 1831.03)
+	--]
+	End()
+	
+	Action("wait")
+	--[
+		Condition("check mobgroup")
+		--[
+			Param("group", 9)
+			Param("count", 2 )
+		--]
+		End()
+	--]
+	End()
+	
+	Action("send event to ts")
+	--[
+		Param("trigger type", "quest")
+		Param("apply type", "register all")
+		Param("event id", 640)
+	--]
+	End()
+	
+	Action("wait")
+	--[
+		Condition ("area enter")
+		--[
+			Param("origin x", -572.31)
+			Param("origin z", 1831.03)
+			Param("radius", 15)
+		--]
+		End()
+	--]
+	End()
+	
+	Action("wait")
+	--[
+		Condition("recv event from sps")
+		--[
+			Param("object type", "npc")
+			Param("object index", 7611209)
+			Param("event id", 692)
+		--]
+		End()
+	--]
+	End()
+
+-- check point 삭제
+	Action("direction indicate")
+	--[
+		Param("apply", "false")
+		Param("indicate type", "point")
+	--]
+	End()
+
+	Action("send event to ts")
+	--[
+		Param("trigger type", "quest")
+		Param("apply type", "register all")
+		Param("event id", 661)
+	--]
+	End()
+
+	Action("wait")
+	--[
+		Condition("recv event from ts")
+		--[
+			Param("trigger type", "quest")
+			Param("event id", 662)
+		--]
+		End()
+	--]
+	End()
+	
+	Action("change sps scene")
+	--[
+		Param("index", 7611209)
+		Param("play script", 7611209)
+		Param("play scene", 4)
+	--]
+	End()
+	
+	Action("wait")
+	--[
+		Condition("recv event from sps")
+		--[
+			Param("object type", "npc")
+			Param("object index", 7611209)
+			Param("event id", 668)
+		--]
+		End()
+	--]
+	End()
+	
+-- 거북선인 등장 시네마틱 후 대화 --
+	Action("direct play")
+	--[
+		Param("type", "cinematic")
+		Param("id", 1070)
+		Param("sync", "false")
+	--]
+	End()
+	
+	Action("add npc")
+	--[
+		Param("index", 3301201)
+		Param("loc x", -569.02)
+		Param("loc y", -116.15)
+		Param("loc z", 1839.79)
+		Param("dir x", -0.21)
+		Param("dir z", -0.98)
+		Param("no spawn wait", "true" )
+	--]
+	End()
+	
+	Action("add npc")
+	--[
+		Param("index", 7611210)
+		Param("loc x", -569.16)
+		Param("loc y", -116.37)
+		Param("loc z", 1842.28)
+		Param("dir x", -0.29)
+		Param("dir z", -0.96)
+		Param("no spawn wait", "true" )
+	--]
+	End()
+	
+	Action("send event to ts")
+	--[
+		Param("trigger type", "quest")
+		Param("apply type", "register all")
+		Param("event id", 663)
+	--]
+	End()
+	
+	Action("wait")
+	--[
+		Condition("recv event from ts")
+		--[
+			Param("trigger type", "quest")
+			Param("event id", 664)
+		--]
+		End()
+	--]
+	End()
+	
+-- 이벤트 선택 : 바다거북을 해변가로 데려가기
+	Action("event status select")
+	--[
+		Param("group", 6)
+		Param("index", 1)
+	--]
+	End()
+	
+-- 이벤트 등록: 바다거북을 해변가로 데려가기
+	Action( "event status register" )
+	--[
+		Param( "group", 7 )
+		Param( "index", 1 )
+		Param( "text tblidx", 62 )
+		Param( "type", "normal")
+	--]
+	End()
+	
+	Action("remove npc")
+	--[
+		Param("index", 3301201)
+		Param("type", "clear")
+	--]
+	End()
+	
+-- 거북선인과의 Battle --
+	Action("add mobgroup")
+	--[
+		Param("group", 11)
+		Param("no spawn wait", "true")
+	--]
+	End()
+	
+	Action("wait")
+	--[
+		Condition("check mobgroup")
+		--[
+			Param("group", 11)
+			Param("count", 0 )
+		--]
+		End()
+	--]
+	End()
+	
+	--- 거북선인 NPC Spawn 좌표 등록 ---
+	Action("calculate")
+	--[
+		Param("declare", "vector nLoc = Vector(0,0,0), vector nDir = Vector(0,0,0)")
+	--]
+	End()
+	
+	Action("get location")
+	--[
+		Param("target type", "mob")
+		Param("target index", 11)
+		Param("loc var", "nLoc")
+		Param("dir var", "nDir")
+		Param("default", "Loc(-569.02,-116.15,1839.79), Dir(-0.21,0,-0.98)")
+	--]
+	End()
+	
+-- 야한잡지 삭제 --
+	Action("send event to ts")
+	--[
+		Param("trigger type", "quest")
+		Param("apply type", "register all")
+		Param("event id", 691 )
+	--]
+	End()
+	
+	Action("remove mobgroup")
+	--[
+		Param("group", 11)
+		Param("type", "clear")
+	--]
+	End()
+	
+	Action("add npc")
+	--[
+		Param("index", 3301201)
+		Param("use loc var", "true")
+		Param("loc var", "nLoc")
+		Param("dir var", "nDir")
+		Param("no spawn wait", "true" )
+	--]
+	End()
+	
+	Action("send event to ts")
+	--[
+		Param("trigger type", "quest")
+		Param("apply type", "register all")
+		Param("event id", 665)
+	--]
+	End()
+	
+	Action("wait")
+	--[
+		Condition("recv event from ts")
+		--[
+			Param("trigger type", "quest")
+			Param("event id", 667)
+		--]
+		End()
+	--]
+	End()
+	
+-- 플래시: Clear
+	Action( "flash play" )
+	--[
+		Param( "id", 20003 )
+	--]     
+	End()
+	
+	-- 3초간 대기
+	Action( "wait" )
+	--[
+		Condition( "check time" )
+		--[
+			Param( "time", 3 )
+		--]
+		End()
+	--]
+	End()
+	
+	Action( "DWC reward" )
+	--[
+		Param( "dwc tblidx", 2 )
+		Param( "mission index", 3 )
+	--]
+	End()
+	
+	-- 10초 카운트다운
+	Action("wait")
+	--[
+		Condition( "check countdown" )
+		--[   
+			Param( "time", 10 )
+		--]
+		End()
+	--]
+	End()
+
+-- DWC 종료
+	Action( "DWC leave" )
+	--[
+	--]
+	End()
+	
+	Action( "wait" )
+	--[
+		Condition( "check time" )
+		--[
+			Param( "time", 3 )
+		--]
+		End()
+	--]
+	End()
+	
+-- wps 종료
+	Action( "wps fail" )
+	--[
+	--]
+	End()
+--]
+End()

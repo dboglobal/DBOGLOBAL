@@ -1,0 +1,76 @@
+
+GameStage(0)
+--[
+	Action( "add npc" )
+	--[
+		Param( "index", 4511306 )
+		Param( "loc x", 5836.757 )
+		Param( "loc y", -88)
+		Param( "loc z", -3365.042 )
+		Param( "dir x", -1.0 )
+		Param( "dir z", 0.028 )
+		Param( "play script", 4511306 )
+		Param( "play scene", 1 )
+		Param( "no spawn wait", "true" )
+	--]
+	End()
+
+	Action( "wait" )
+	--[
+		Condition( "recv event from sps" )
+		--[
+			Param( "object type", "npc" )
+			Param( "object index", 4511306 )
+			Param( "event id", 18 )
+		--]
+		End()
+	--]
+	End()
+
+	Action( "send event to ts" )
+	--[
+		Param( "trigger type", "quest" )
+		Param( "apply type", "register all" )
+		Param( "event id", 24 )
+	--]
+	End()
+
+	Action( "wait" )
+	--[
+		Condition( "recv event from ts" )
+		--[
+			Param( "trigger type", "quest" )
+			Param( "event id", 21 )
+		--]
+		End()
+	--]
+	End()
+
+	Action( "send event to sps" )
+	--[
+		Param( "target type", "npc" )
+		Param( "target index", 4511306 )
+		Param( "event id", 19 )
+	--]
+	End()
+
+	Action( "wait" )
+	--[
+		Condition( "recv event from sps" )
+		--[
+			Param( "object type", "npc" )
+			Param( "object index", 4511306 )
+			Param( "event id", 23 )
+		--]
+		End()
+	--]
+	End()
+
+	Action( "remove npc" )
+	--[
+		Param( "index", 4511306 )
+		Param( "type", "clear" )
+	--]
+	End()
+--]
+End()

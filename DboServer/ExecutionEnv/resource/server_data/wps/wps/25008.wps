@@ -1,0 +1,31 @@
+-- UD1 Hard º®ÆøÆÄÈÄ ½ºÆù ¸÷ 1
+
+GameStage(0)
+--[
+
+	Action("add mob")
+	--[
+		Param("index", 5812308)
+		Param("group", 2500801)
+		Param("loc x", -51.497)
+		Param("loc y", -0.257)
+		Param("loc z", -4.955)
+		Param("dir x", 0.999)
+		Param("dir z", -0.041)
+		Param("no spawn wait", "true")
+	--]
+	End()
+
+	Action("wait")
+	--[
+		Condition("check mobgroup")
+		--[
+			Param("group", 2500801)
+			Param("count", 1)
+		--]
+		End()
+	--]
+	End()
+
+--]
+End()

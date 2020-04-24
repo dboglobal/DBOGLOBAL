@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{5CDC731A-4C57-4D49-A72A-911BA19C3C14}</ProjectGuid>
+    <RootNamespace>NtlNetwork</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.40219.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(OutDir)/</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(Configuration)\</IntDir>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Release|x64'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Release|x64'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Release|x64'" />
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Midl>
+      <TargetEnvironment>X64</TargetEnvironment>
+    </Midl>
+    <ClCompile>
+      <AdditionalIncludeDirectories>..\NtlSystem;..\NtlThread;..\..\Shared;..\..\Shared\Util;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN64;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <TreatWarningAsError>false</TreatWarningAsError>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <StringPooling>false</StringPooling>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
+      <FloatingPointModel>Fast</FloatingPointModel>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="MemStream.h" />
+    <ClInclude Include="NtlAcceptingSessionList.h" />
+    <ClInclude Include="NtlNetBuffer.h" />
+    <ClInclude Include="NtlPacket.h" />
+    <ClInclude Include="NtlPacketEncoder.h" />
+    <ClInclude Include="NtlPacketSYS.h" />
+    <ClInclude Include="NtlAcceptor.h" />
+    <ClInclude Include="NtlConnection.h" />
+    <ClInclude Include="NtlConnector.h" />
+    <ClInclude Include="NtlIOCP.h" />
+    <ClInclude Include="NtlNetwork.h" />
+    <ClInclude Include="NtlNetworkProcessor.h" />
+    <ClInclude Include="NtlSessionListBase.h" />
+    <ClInclude Include="NtlSockAddr.h" />
+    <ClInclude Include="NtlSocket.h" />
+    <ClInclude Include="NtlSession.h" />
+    <ClInclude Include="NtlSessionFactory.h" />
+    <ClInclude Include="NtlSessionList.h" />
+    <ClInclude Include="NtlSessionMap.h" />
+    <ClInclude Include="PacketBlock.h" />
+    <ClInclude Include="Peeker.h" />
+    <ClInclude Include="PeekerQueue.h" />
+    <ClInclude Include="stdafx.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="MemStream.cpp" />
+    <ClCompile Include="NtlAcceptingSessionList.cpp" />
+    <ClCompile Include="NtlPacket.cpp" />
+    <ClCompile Include="NtlPacketEncoder.cpp" />
+    <ClCompile Include="NtlAcceptor.cpp" />
+    <ClCompile Include="NtlConnection.cpp" />
+    <ClCompile Include="NtlConnector.cpp" />
+    <ClCompile Include="NtlIOCP.cpp" />
+    <ClCompile Include="NtlNetwork.cpp" />
+    <ClCompile Include="NtlNetworkProcessor.cpp" />
+    <ClCompile Include="NtlSessionListBase.cpp" />
+    <ClCompile Include="NtlSocket.cpp" />
+    <ClCompile Include="NtlSession.cpp" />
+    <ClCompile Include="NtlSessionList.cpp" />
+    <ClCompile Include="PacketBlock.cpp" />
+    <ClCompile Include="Peeker.cpp" />
+    <ClCompile Include="PeekerQueue.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+    </ClCompile>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

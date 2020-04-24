@@ -1,0 +1,465 @@
+-- DWC2 Start & Easy Mode--
+
+GameStage(0)
+--[
+
+	Action( "DWC" )
+	--[
+	--]
+	End()
+	
+	Action( "DWC wait user" )
+	--[
+	--]
+	End()
+	
+-- 플래시: DWC Challenge
+	Action( "flash play" )
+	--[
+		Param( "id", 20000 )
+	--]     
+	End()
+	
+	Action( "wait" )
+	--[
+		Condition( "check time" )
+		--[
+			Param( "time", 3 )
+		--]
+		End()
+	--]
+	End()
+	
+-- 플래시: Start
+	Action( "flash play" )
+	--[
+		Param( "id", 20001 )
+	--]     
+	End()
+	
+--바다거북 생성
+	Action ("add npc")
+	--[
+		Param("index", 7611210)
+		Param("loc x", -890.02)
+		Param("loc y", -60.93)
+		Param("loc z", 1702.42)
+		Param("dir x", 0.00)
+		Param("dir z", 1.00)
+		Param("no spawn wait", "true" )
+	--]
+	End()
+	
+	-- 일반 몹 스폰 WPS 실행 --
+	Action("exec wps")
+	--[
+		Param("wps tblidx", 70130)
+	--]
+	End()
+	
+-- 이벤트 등록: 바다거북을 찾아가기
+	Action( "event status register" )
+	--[
+		Param( "group", 1 )
+		Param( "index", 1 )
+		Param( "text tblidx", 56 )
+		Param( "type", "normal" )
+	--]
+	End()
+	
+-- check point
+	Action("direction indicate")
+	--[
+		Param("apply" , "true")
+		Param("indicate type", "point")
+		Param("loc x", -890.02)
+		Param("loc z", 1702.42)
+	--]
+	End()
+	
+--플레이어가 바다거북 근처까지 도착 여부 확인
+	Action("wait")
+	--[
+		Condition ("area enter")
+		--[
+			Param("origin x", -890.02)
+			Param("origin z", 1702.42)
+			Param("radius", 15)
+		--]
+		End()
+	--]
+	End()
+
+-- check point 삭제
+	Action("direction indicate")
+	--[
+		Param("apply", "false")
+		Param("indicate type", "point")
+	--]
+	End()
+
+-- 바다거북 나레이션
+	Action ("send event to ts")
+	--[
+		Param("trigger type", "quest")
+		Param("apply type", "register all")
+		Param("event id", 641)
+	--]
+	End()
+
+-- 유저 선택으로 인한 분기 ( Easy , Normal )	
+	Action ("function")
+	--[
+		Condition("child")
+		--[
+-- Normal 진행하는 분기		
+			Action ("wait")
+			--[
+				Condition("recv event from ts")
+				--[
+					Param("trigger type", "quest")
+					Param("event id", 647)
+				--]
+				End()
+			--]
+			End()
+			
+			Action ("exec wps")
+			--[
+				Param("wps tblidx", 70110)
+			--]
+			End()
+		--]
+		End()
+		
+-- Easy로 그냥 진행
+		Action ("wait")
+		--[
+			Condition("recv event from ts")
+			--[
+				Param("trigger type", "quest")
+				Param("event id", 642)
+			--]
+			End()
+		--]
+		End()
+	--]
+	End()
+	
+-- 이벤트 선택 : 바다거북을 찾아가기
+	Action("event status select")
+	--[
+		Param("group", 1)
+		Param("index", 1)
+	--]
+	End()
+	
+-- 이벤트 등록: 바다거북을 호위하기
+	Action( "event status register" )
+	--[
+		Param( "group", 2 )
+		Param( "index", 1 )
+		Param( "text tblidx", 57 )
+		Param( "type", "normal" )
+	--]
+	End()
+	
+-- 이벤트 등록 : 바다거북을 노리는 산적 처치
+	Action("event status register")
+	--[
+		Param("group", 2)
+		Param("index", 2)
+		Param("text tblidx", 63)
+		Param("type", "normal")
+	--]
+	End()
+	
+	Action("remove npc")
+	--[
+		Param("index", 7611210)
+		Param("type", "clear")
+	--]
+	End()
+	
+-- 바다거북 호위용으로 교체
+	Action ("add npc")
+	--[
+		Param("index", 7611209)
+		Param("loc x", -890.02)
+		Param("loc y", -60.93)
+		Param("loc z", 1702.42)
+		Param("dir x", 0.00)
+		Param("dir z", 1.00)
+		Param("play script", 7611209)
+		Param("play scene", 1)
+		Param("no spawn wait", "true" )
+	--]
+	End()
+	
+-- check point
+	Action("direction indicate")
+	--[
+		Param("apply" , "true")
+		Param("indicate type", "point")
+		Param("loc x", -846.05)
+		Param("loc z", 1742.12)
+	--]
+	End()
+	
+	Action("send event to ts")
+	--[
+		Param("trigger type", "quest")
+		Param("apply type", "register all")
+		Param("event id", 657)
+	--]
+	End()
+	
+	-- 산적을 죽이기 전에 NPC가 죽으면 실패 , 중간 CheckPoint 도착시 갱신 ---
+	Action("function")
+	--[
+		Condition("child")
+		--[
+			Action("wait")
+			--[
+				Condition("npc faint")
+				--[
+					Param("npc index", 7611209)
+				--]
+				End()
+			--]
+			End()
+			
+			Action("DWC fail")
+			--[
+			--]
+			End()
+		--]
+		End()
+		
+		Condition("child")
+		--[
+			Action("wait")
+			--[
+				Condition("area enter")
+				--[
+					Param("origin x", -846.05)
+					Param("origin z", 1742.12)
+					Param("radius", 15)
+				--]
+				End()
+			--]
+			End()
+			
+			Action("direction indicate")
+			--[
+				Param("apply", "false")
+				Param("indicate type", "point")
+			--]
+			End()
+			
+			Action("direction indicate")
+			--[
+				Param("apply" , "true")
+				Param("indicate type", "point")
+				Param("loc x", -682.66)
+				Param("loc z", 1684.36)
+			--]
+			End()
+		--]
+		End()
+		
+		-- 해당 위치에 도착하고, 일반산적을 다 처치하면 산적곰 출현 --	
+		Action("wait")
+		--[
+			Param("operation", "and")
+			
+			Condition("check mobgroup")
+			--[
+				Param("group", 4)
+				Param("count", 4)
+			--]
+			End()
+			
+			Condition("area enter")
+			--[
+  				Param("origin x", -682.66)
+  				Param("origin z", 1684.36)
+				Param("radius", 15)
+			--]
+			End()
+		--]
+		End()
+	--]
+	End()
+
+-- check point 삭제
+	Action("direction indicate")
+	--[
+		Param("apply", "false")
+		Param("indicate type", "point")
+	--]
+	End()
+	
+	Action("direct play")
+	--[
+		Param("type", "cinematic")
+		Param("id", 1083)
+		Param("sync", "false")
+	--]
+	End()
+
+-- 산적곰 등장 나레이션
+	Action("send event to ts")
+	--[
+		Param("trigger type", "quest")
+		Param("apply type", "register all")
+		Param("event id", 643)
+	--]
+	End()
+-- 산적곰 등장
+	Action("add npc")
+	--[
+		Param("index", 1331201)
+		Param("loc x", -682.66)
+		Param("loc y", -79.26)
+		Param("loc z", 1684.36)
+		Param("dir x", -0.89)
+		Param("dir z", 0.45)
+		Param("no spawn wait", "true" )
+	--]
+	End()
+	
+	Action("wait")
+	--[
+		Condition("recv event from ts")
+		--[
+			Param("trigger type", "quest")
+			Param("event id", 644)
+		--]
+		End()
+	--]
+	End()
+	
+-- 바다거북 숨기위해 이동 --
+	Action("change sps scene")
+	--[
+		Param("index", 7611209)
+		Param("play script", 7611209)
+		Param("play scene", 6)
+	--]
+	End()
+	
+-- 이벤트 선택 : 바다거북을 호위하기
+	Action("event status select")
+	--[
+		Param("group", 2)
+		Param("index", 1)
+	--]
+	End()
+	
+-- 이벤트 등록: 산적곰을 처치하기
+	Action( "event status register" )
+	--[
+		Param( "group", 3 )
+		Param( "index", 1 )
+		Param( "text tblidx", 59 )
+		Param( "type", "normal" )
+	--]
+	End()
+	
+-- NPC 산적 지우고 MOB 스폰
+	Action("remove npc")
+	--[
+		Param("index", 1331201)
+		Param("type" , "clear")
+	--]
+	End()
+	
+	Action("add mobgroup")
+	--[
+		Param("group", 7)
+		Param("no spawn wait", "true")
+	--]
+	End()
+	
+	Action("wait")
+	--[
+		Condition("check mobgroup")
+		--[
+			Param("group",7)
+			Param("count",1)
+		--]
+		End()
+	--]
+	End()
+	
+-- 이벤트 선택 : 산적곰을 처치하기
+	Action("event status select")
+	--[
+		Param("group", 3)
+		Param("index", 1)
+	--]
+	End()
+	
+	Action("send event to ts")
+	--[
+		Param("trigger type", "quest")
+		Param("apply type", "register all")
+		Param("event id", 645)
+	--]
+	End()
+	
+	Action("wait")
+	--[
+		Condition("recv event from ts")
+		--[
+			Param("trigger type", "quest")
+			Param("event id", 646)
+		--]
+		End()
+	--]
+	End()
+	
+	-- 플래시: Clear
+	Action( "flash play" )
+	--[
+		Param( "id", 20003 )
+	--]     
+	End()
+	
+	-- 3초간 대기
+	Action( "wait" )
+	--[
+		Condition( "check time" )
+		--[
+			Param( "time", 3 )
+		--]
+		End()
+	--]
+	End()
+	
+	Action( "DWC reward" )
+	--[
+			Param( "dwc tblidx", 2 )
+			Param( "mission index", 1 )
+	--]
+	End()
+
+-- 10초 카운트다운
+	Action("wait")
+	--[
+		Condition( "check countdown" )
+		--[   
+			Param( "time", 10 )
+		--]
+		End()
+	--]
+	End()
+	
+-- DWC 종료
+	Action( "DWC leave" )
+	--[
+	--]
+	End()
+--]
+End()

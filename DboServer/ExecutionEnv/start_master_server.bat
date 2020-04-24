@@ -1,0 +1,3 @@
+start MasterServer.exe
+
+exit

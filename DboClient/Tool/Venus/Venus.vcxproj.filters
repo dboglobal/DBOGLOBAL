@@ -1,0 +1,737 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Main Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Main Files\Gfl">
+      <UniqueIdentifier>{05540664-896e-4248-a548-3121c813a288}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Main Files\Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx</Extensions>
+    </Filter>
+    <Filter Include="Control Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Control Files\Mac Control">
+      <UniqueIdentifier>{3c1ad91d-c999-4962-83af-57b29fc5511e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Control Files\Rollup Control">
+      <UniqueIdentifier>{3de5dda2-8ed9-4ff4-a73c-0f434325b5af}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Control Files\Property Files">
+      <UniqueIdentifier>{aa3d8093-3b13-467b-aac9-d9dfbe4dfa86}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Layer Files">
+      <UniqueIdentifier>{51c0776f-e5e1-4dd7-b750-c56d1d466cad}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Layer Files\Effect Edit Layer">
+      <UniqueIdentifier>{d66a1ed0-9aae-4358-9ff4-a68acdf9ca87}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Layer Files\Effect Edit Layer\XMLList">
+      <UniqueIdentifier>{cc418eda-9cb9-4484-b357-7b1c0a7d7bb3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Layer Files\Texture Layer">
+      <UniqueIdentifier>{e2272f66-1d34-4317-9fd2-18bba98923bc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Layer Files\Mesh Layer">
+      <UniqueIdentifier>{ad371b4d-45e3-4860-9cf9-8d1d9483d4ff}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Layer Files\Path Layer">
+      <UniqueIdentifier>{db4cc734-6fbc-412d-978c-db01e09f8f5e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Layer Files\Event Layer">
+      <UniqueIdentifier>{bdf9fbb9-308e-4be5-8163-b96a0dc849a2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Dialog Files">
+      <UniqueIdentifier>{aff24f79-8513-42e0-ab41-4741332f155d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Property Container">
+      <UniqueIdentifier>{ddd6686e-211a-4057-9eac-464aed3f0f93}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework Files">
+      <UniqueIdentifier>{e6febce2-11e8-4c95-9cb4-fb7c2e110699}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Core Files">
+      <UniqueIdentifier>{4f7fb861-c656-4458-894a-233bfc76e45d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Delete Files">
+      <UniqueIdentifier>{1f12fbd5-3970-4e41-8a17-4f5297f84668}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Lighting Files">
+      <UniqueIdentifier>{0e802030-f810-478b-bbfa-facf75f3bf7b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Character Event Files">
+      <UniqueIdentifier>{539576d6-f273-4930-8f0d-7fa348363db4}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Main Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Venus.cpp">
+      <Filter>Main Files</Filter>
+    </ClCompile>
+    <ClCompile Include="VenusAPI.cpp">
+      <Filter>Main Files</Filter>
+    </ClCompile>
+    <ClCompile Include="VenusConfig.cpp">
+      <Filter>Main Files</Filter>
+    </ClCompile>
+    <ClCompile Include="VenusDoc.cpp">
+      <Filter>Main Files</Filter>
+    </ClCompile>
+    <ClCompile Include="VenusFrame.cpp">
+      <Filter>Main Files</Filter>
+    </ClCompile>
+    <ClCompile Include="VenusView.cpp">
+      <Filter>Main Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Control\ColorButton.cpp">
+      <Filter>Control Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DataTreeCtrl.cpp">
+      <Filter>Control Files</Filter>
+    </ClCompile>
+    <ClCompile Include="InputBox.cpp">
+      <Filter>Control Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Splash.cpp">
+      <Filter>Control Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Control\TrueColorToolBar.cpp">
+      <Filter>Control Files</Filter>
+    </ClCompile>
+    <ClCompile Include="VenusGridCtrl.cpp">
+      <Filter>Control Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Control\MacButtons.cpp">
+      <Filter>Control Files\Mac Control</Filter>
+    </ClCompile>
+    <ClCompile Include="Control\MacProgressCtrl.cpp">
+      <Filter>Control Files\Mac Control</Filter>
+    </ClCompile>
+    <ClCompile Include="Control\MacSliderCtrl.cpp">
+      <Filter>Control Files\Mac Control</Filter>
+    </ClCompile>
+    <ClCompile Include="Control\AutoFont.cpp">
+      <Filter>Control Files\Rollup Control</Filter>
+    </ClCompile>
+    <ClCompile Include="Control\BtnST.cpp">
+      <Filter>Control Files\Rollup Control</Filter>
+    </ClCompile>
+    <ClCompile Include="Control\ComboInListView.cpp">
+      <Filter>Control Files\Rollup Control</Filter>
+    </ClCompile>
+    <ClCompile Include="Control\Dib.cpp">
+      <Filter>Control Files\Rollup Control</Filter>
+    </ClCompile>
+    <ClCompile Include="Control\listeditctrl.cpp">
+      <Filter>Control Files\Rollup Control</Filter>
+    </ClCompile>
+    <ClCompile Include="Control\RollupCtrl.cpp">
+      <Filter>Control Files\Rollup Control</Filter>
+    </ClCompile>
+    <ClCompile Include="Control\Sizecbar.cpp">
+      <Filter>Control Files\Rollup Control</Filter>
+    </ClCompile>
+    <ClCompile Include="Control\SizingTabCtrlBar.cpp">
+      <Filter>Control Files\Rollup Control</Filter>
+    </ClCompile>
+    <ClCompile Include="Control\supergridctrl.cpp">
+      <Filter>Control Files\Rollup Control</Filter>
+    </ClCompile>
+    <ClCompile Include="Control\SXbutton.cpp">
+      <Filter>Control Files\Rollup Control</Filter>
+    </ClCompile>
+    <ClCompile Include="Control\WBButton.cpp">
+      <Filter>Control Files\Rollup Control</Filter>
+    </ClCompile>
+    <ClCompile Include="Control\ztimeline.cpp">
+      <Filter>Control Files\Rollup Control</Filter>
+    </ClCompile>
+    <ClCompile Include="Property\N3Slider.cpp">
+      <Filter>Control Files\Property Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Property\PropTree.cpp">
+      <Filter>Control Files\Property Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Property\PropTreeInfo.cpp">
+      <Filter>Control Files\Property Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Property\PropTreeItem.cpp">
+      <Filter>Control Files\Property Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Property\PropTreeItemColor.cpp">
+      <Filter>Control Files\Property Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Property\PropTreeItemCombo.cpp">
+      <Filter>Control Files\Property Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Property\PropTreeItemEdit.cpp">
+      <Filter>Control Files\Property Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Property\PropTreeItemSlider.cpp">
+      <Filter>Control Files\Property Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Property\PropTreeItemStatic.cpp">
+      <Filter>Control Files\Property Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Property\PropTreeList.cpp">
+      <Filter>Control Files\Property Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ActionListCtrl.cpp">
+      <Filter>Layer Files\Effect Edit Layer</Filter>
+    </ClCompile>
+    <ClCompile Include="ActionListDialog.cpp">
+      <Filter>Layer Files\Effect Edit Layer</Filter>
+    </ClCompile>
+    <ClCompile Include="EffectEditLayer.cpp">
+      <Filter>Layer Files\Effect Edit Layer</Filter>
+    </ClCompile>
+    <ClCompile Include="EffectListCtrl.cpp">
+      <Filter>Layer Files\Effect Edit Layer</Filter>
+    </ClCompile>
+    <ClCompile Include="EffectListDialog.cpp">
+      <Filter>Layer Files\Effect Edit Layer</Filter>
+    </ClCompile>
+    <ClCompile Include="EffectPropertyDialog.cpp">
+      <Filter>Layer Files\Effect Edit Layer</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlTreeXml.cpp">
+      <Filter>Layer Files\Effect Edit Layer\XMLList</Filter>
+    </ClCompile>
+    <ClCompile Include="VenusXMLDoc.cpp">
+      <Filter>Layer Files\Effect Edit Layer\XMLList</Filter>
+    </ClCompile>
+    <ClCompile Include="TextureInfoDialog.cpp">
+      <Filter>Layer Files\Texture Layer</Filter>
+    </ClCompile>
+    <ClCompile Include="TextureLayer.cpp">
+      <Filter>Layer Files\Texture Layer</Filter>
+    </ClCompile>
+    <ClCompile Include="TextureListDialog.cpp">
+      <Filter>Layer Files\Texture Layer</Filter>
+    </ClCompile>
+    <ClCompile Include="AnimationListDialog.cpp">
+      <Filter>Layer Files\Mesh Layer</Filter>
+    </ClCompile>
+    <ClCompile Include="MeshLayer.cpp">
+      <Filter>Layer Files\Mesh Layer</Filter>
+    </ClCompile>
+    <ClCompile Include="MeshListDialog.cpp">
+      <Filter>Layer Files\Mesh Layer</Filter>
+    </ClCompile>
+    <ClCompile Include="UvAniListDialog.cpp">
+      <Filter>Layer Files\Mesh Layer</Filter>
+    </ClCompile>
+    <ClCompile Include="PathLayer.cpp">
+      <Filter>Layer Files\Path Layer</Filter>
+    </ClCompile>
+    <ClCompile Include="SplinePathListCtrl.cpp">
+      <Filter>Layer Files\Path Layer</Filter>
+    </ClCompile>
+    <ClCompile Include="SplinePathListDialog.cpp">
+      <Filter>Layer Files\Path Layer</Filter>
+    </ClCompile>
+    <ClCompile Include="SplinePathPropertyDialog.cpp">
+      <Filter>Layer Files\Path Layer</Filter>
+    </ClCompile>
+    <ClCompile Include="AvatarPropertyDialog.cpp">
+      <Filter>Layer Files\Event Layer</Filter>
+    </ClCompile>
+    <ClCompile Include="EnemyPropertyDialog.cpp">
+      <Filter>Layer Files\Event Layer</Filter>
+    </ClCompile>
+    <ClCompile Include="EventLayer.cpp">
+      <Filter>Layer Files\Event Layer</Filter>
+    </ClCompile>
+    <ClCompile Include="EventListCtrl.cpp">
+      <Filter>Layer Files\Event Layer</Filter>
+    </ClCompile>
+    <ClCompile Include="EventListDialog.cpp">
+      <Filter>Layer Files\Event Layer</Filter>
+    </ClCompile>
+    <ClCompile Include="CreateSplinePathDialog.cpp">
+      <Filter>Dialog Files</Filter>
+    </ClCompile>
+    <ClCompile Include="EditDialog.cpp">
+      <Filter>Dialog Files</Filter>
+    </ClCompile>
+    <ClCompile Include="InstanceEffectDialog.cpp">
+      <Filter>Dialog Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LightDialog.cpp">
+      <Filter>Dialog Files</Filter>
+    </ClCompile>
+    <ClCompile Include="OptionDialog.cpp">
+      <Filter>Dialog Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PostEffectDialog.cpp">
+      <Filter>Dialog Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ProgressDialog.cpp">
+      <Filter>Dialog Files</Filter>
+    </ClCompile>
+    <ClCompile Include="StatusBarDialog.cpp">
+      <Filter>Dialog Files</Filter>
+    </ClCompile>
+    <ClCompile Include="StringDialog.cpp">
+      <Filter>Dialog Files</Filter>
+    </ClCompile>
+    <ClCompile Include="VenusPropertyContainer.cpp">
+      <Filter>Property Container</Filter>
+    </ClCompile>
+    <ClCompile Include="VenusPropertyContainer_Spline.cpp">
+      <Filter>Property Container</Filter>
+    </ClCompile>
+    <ClCompile Include="VenusCamera.cpp">
+      <Filter>Framework Files</Filter>
+    </ClCompile>
+    <ClCompile Include="VenusFramework.cpp">
+      <Filter>Framework Files</Filter>
+    </ClCompile>
+    <ClCompile Include="VenusGrid.cpp">
+      <Filter>Framework Files</Filter>
+    </ClCompile>
+    <ClCompile Include="VenusVisualManager.cpp">
+      <Filter>Framework Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Manipulator.cpp">
+      <Filter>Core Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MiniDump.cpp">
+      <Filter>Core Files</Filter>
+    </ClCompile>
+    <ClCompile Include="StringManager.cpp">
+      <Filter>Core Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MeshListCtrl.cpp">
+      <Filter>Delete Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TextureListCtrl.cpp">
+      <Filter>Delete Files</Filter>
+    </ClCompile>
+    <ClCompile Include="UpdateNewsDialog.cpp">
+      <Filter>Delete Files</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlLighting.cpp">
+      <Filter>Lighting Files</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlLightingController.cpp">
+      <Filter>Lighting Files</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlLightingStrip.cpp">
+      <Filter>Lighting Files</Filter>
+    </ClCompile>
+    <ClCompile Include="VenusEventBall.cpp">
+      <Filter>Character Event Files</Filter>
+    </ClCompile>
+    <ClCompile Include="VenusEventEnemy.cpp">
+      <Filter>Character Event Files</Filter>
+    </ClCompile>
+    <ClCompile Include="VenusPlayer.cpp">
+      <Filter>Character Event Files</Filter>
+    </ClCompile>
+    <ClCompile Include="VenusPlayerEvent.cpp">
+      <Filter>Character Event Files</Filter>
+    </ClCompile>
+    <ClCompile Include="VenusPlayerEventManager.cpp">
+      <Filter>Character Event Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="stdafx.h">
+      <Filter>Main Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Venus.h">
+      <Filter>Main Files</Filter>
+    </ClInclude>
+    <ClInclude Include="VenusAPI.h">
+      <Filter>Main Files</Filter>
+    </ClInclude>
+    <ClInclude Include="VenusConfig.h">
+      <Filter>Main Files</Filter>
+    </ClInclude>
+    <ClInclude Include="VenusDefine.h">
+      <Filter>Main Files</Filter>
+    </ClInclude>
+    <ClInclude Include="VenusDoc.h">
+      <Filter>Main Files</Filter>
+    </ClInclude>
+    <ClInclude Include="VenusFrame.h">
+      <Filter>Main Files</Filter>
+    </ClInclude>
+    <ClInclude Include="VenusView.h">
+      <Filter>Main Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Gfl\libgfl.h">
+      <Filter>Main Files\Gfl</Filter>
+    </ClInclude>
+    <ClInclude Include="Gfl\libgfle.h">
+      <Filter>Main Files\Gfl</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>Main Files\Resource Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Control\ColorButton.h">
+      <Filter>Control Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DataTreeCtrl.h">
+      <Filter>Control Files</Filter>
+    </ClInclude>
+    <ClInclude Include="InputBox.h">
+      <Filter>Control Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Splash.h">
+      <Filter>Control Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Control\TrueColorToolBar.h">
+      <Filter>Control Files</Filter>
+    </ClInclude>
+    <ClInclude Include="VenusGridCtrl.h">
+      <Filter>Control Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Control\MacButtons.h">
+      <Filter>Control Files\Mac Control</Filter>
+    </ClInclude>
+    <ClInclude Include="Control\MacProgressCtrl.h">
+      <Filter>Control Files\Mac Control</Filter>
+    </ClInclude>
+    <ClInclude Include="Control\MacSliderCtrl.h">
+      <Filter>Control Files\Mac Control</Filter>
+    </ClInclude>
+    <ClInclude Include="Control\AutoFont.h">
+      <Filter>Control Files\Rollup Control</Filter>
+    </ClInclude>
+    <ClInclude Include="Control\btnst.h">
+      <Filter>Control Files\Rollup Control</Filter>
+    </ClInclude>
+    <ClInclude Include="Control\ComboInListView.h">
+      <Filter>Control Files\Rollup Control</Filter>
+    </ClInclude>
+    <ClInclude Include="Control\Dib.h">
+      <Filter>Control Files\Rollup Control</Filter>
+    </ClInclude>
+    <ClInclude Include="Control\listeditctrl.h">
+      <Filter>Control Files\Rollup Control</Filter>
+    </ClInclude>
+    <ClInclude Include="Control\RollupCtrl.h">
+      <Filter>Control Files\Rollup Control</Filter>
+    </ClInclude>
+    <ClInclude Include="Control\Sizecbar.h">
+      <Filter>Control Files\Rollup Control</Filter>
+    </ClInclude>
+    <ClInclude Include="Control\SizingTabCtrlBar.h">
+      <Filter>Control Files\Rollup Control</Filter>
+    </ClInclude>
+    <ClInclude Include="Control\supergridctrl.h">
+      <Filter>Control Files\Rollup Control</Filter>
+    </ClInclude>
+    <ClInclude Include="Control\SXbutton.h">
+      <Filter>Control Files\Rollup Control</Filter>
+    </ClInclude>
+    <ClInclude Include="Control\WBButton.h">
+      <Filter>Control Files\Rollup Control</Filter>
+    </ClInclude>
+    <ClInclude Include="Control\ztimeline.h">
+      <Filter>Control Files\Rollup Control</Filter>
+    </ClInclude>
+    <ClInclude Include="Property\N3Slider.h">
+      <Filter>Control Files\Property Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Property\PropTree.h">
+      <Filter>Control Files\Property Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Property\PropTreeInfo.h">
+      <Filter>Control Files\Property Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Property\PropTreeItem.h">
+      <Filter>Control Files\Property Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Property\PropTreeItemColor.h">
+      <Filter>Control Files\Property Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Property\PropTreeItemCombo.h">
+      <Filter>Control Files\Property Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Property\PropTreeItemEdit.h">
+      <Filter>Control Files\Property Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Property\PropTreeItemSlider.h">
+      <Filter>Control Files\Property Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Property\PropTreeItemStatic.h">
+      <Filter>Control Files\Property Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Property\PropTreeList.h">
+      <Filter>Control Files\Property Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ActionListCtrl.h">
+      <Filter>Layer Files\Effect Edit Layer</Filter>
+    </ClInclude>
+    <ClInclude Include="ActionListDialog.h">
+      <Filter>Layer Files\Effect Edit Layer</Filter>
+    </ClInclude>
+    <ClInclude Include="EffectEditLayer.h">
+      <Filter>Layer Files\Effect Edit Layer</Filter>
+    </ClInclude>
+    <ClInclude Include="EffectListCtrl.h">
+      <Filter>Layer Files\Effect Edit Layer</Filter>
+    </ClInclude>
+    <ClInclude Include="EffectListDialog.h">
+      <Filter>Layer Files\Effect Edit Layer</Filter>
+    </ClInclude>
+    <ClInclude Include="EffectPropertyDialog.h">
+      <Filter>Layer Files\Effect Edit Layer</Filter>
+    </ClInclude>
+    <ClInclude Include="PropertyControlID.h">
+      <Filter>Layer Files\Effect Edit Layer</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlTreeXml.h">
+      <Filter>Layer Files\Effect Edit Layer\XMLList</Filter>
+    </ClInclude>
+    <ClInclude Include="VenusXMLDoc.h">
+      <Filter>Layer Files\Effect Edit Layer\XMLList</Filter>
+    </ClInclude>
+    <ClInclude Include="TextureInfoDialog.h">
+      <Filter>Layer Files\Texture Layer</Filter>
+    </ClInclude>
+    <ClInclude Include="TextureLayer.h">
+      <Filter>Layer Files\Texture Layer</Filter>
+    </ClInclude>
+    <ClInclude Include="TextureListDialog.h">
+      <Filter>Layer Files\Texture Layer</Filter>
+    </ClInclude>
+    <ClInclude Include="AnimationListDialog.h">
+      <Filter>Layer Files\Mesh Layer</Filter>
+    </ClInclude>
+    <ClInclude Include="MeshLayer.h">
+      <Filter>Layer Files\Mesh Layer</Filter>
+    </ClInclude>
+    <ClInclude Include="MeshListDialog.h">
+      <Filter>Layer Files\Mesh Layer</Filter>
+    </ClInclude>
+    <ClInclude Include="UvAniListDialog.h">
+      <Filter>Layer Files\Mesh Layer</Filter>
+    </ClInclude>
+    <ClInclude Include="PathLayer.h">
+      <Filter>Layer Files\Path Layer</Filter>
+    </ClInclude>
+    <ClInclude Include="SplinePathListCtrl.h">
+      <Filter>Layer Files\Path Layer</Filter>
+    </ClInclude>
+    <ClInclude Include="SplinePathListDialog.h">
+      <Filter>Layer Files\Path Layer</Filter>
+    </ClInclude>
+    <ClInclude Include="SplinePathPropertyDialog.h">
+      <Filter>Layer Files\Path Layer</Filter>
+    </ClInclude>
+    <ClInclude Include="AvatarPropertyDialog.h">
+      <Filter>Layer Files\Event Layer</Filter>
+    </ClInclude>
+    <ClInclude Include="EnemyPropertyDialog.h">
+      <Filter>Layer Files\Event Layer</Filter>
+    </ClInclude>
+    <ClInclude Include="EventLayer.h">
+      <Filter>Layer Files\Event Layer</Filter>
+    </ClInclude>
+    <ClInclude Include="EventListCtrl.h">
+      <Filter>Layer Files\Event Layer</Filter>
+    </ClInclude>
+    <ClInclude Include="EventListDialog.h">
+      <Filter>Layer Files\Event Layer</Filter>
+    </ClInclude>
+    <ClInclude Include="CreateSplinePathDialog.h">
+      <Filter>Dialog Files</Filter>
+    </ClInclude>
+    <ClInclude Include="EditDialog.h">
+      <Filter>Dialog Files</Filter>
+    </ClInclude>
+    <ClInclude Include="InstanceEffectDialog.h">
+      <Filter>Dialog Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LightDialog.h">
+      <Filter>Dialog Files</Filter>
+    </ClInclude>
+    <ClInclude Include="OptionDialog.h">
+      <Filter>Dialog Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PostEffectDialog.h">
+      <Filter>Dialog Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ProgressDialog.h">
+      <Filter>Dialog Files</Filter>
+    </ClInclude>
+    <ClInclude Include="StatusBarDialog.h">
+      <Filter>Dialog Files</Filter>
+    </ClInclude>
+    <ClInclude Include="StringDialog.h">
+      <Filter>Dialog Files</Filter>
+    </ClInclude>
+    <ClInclude Include="VenusPropertyContainer.h">
+      <Filter>Property Container</Filter>
+    </ClInclude>
+    <ClInclude Include="VenusCamera.h">
+      <Filter>Framework Files</Filter>
+    </ClInclude>
+    <ClInclude Include="VenusFramework.h">
+      <Filter>Framework Files</Filter>
+    </ClInclude>
+    <ClInclude Include="VenusGrid.h">
+      <Filter>Framework Files</Filter>
+    </ClInclude>
+    <ClInclude Include="VenusVisualManager.h">
+      <Filter>Framework Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Manipulator.h">
+      <Filter>Core Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MiniDump.h">
+      <Filter>Core Files</Filter>
+    </ClInclude>
+    <ClInclude Include="StringManager.h">
+      <Filter>Core Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MeshListCtrl.h">
+      <Filter>Delete Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TextureListCtrl.h">
+      <Filter>Delete Files</Filter>
+    </ClInclude>
+    <ClInclude Include="UpdateNewsDialog.h">
+      <Filter>Delete Files</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlLighting.h">
+      <Filter>Lighting Files</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlLightingController.h">
+      <Filter>Lighting Files</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlLightingStrip.h">
+      <Filter>Lighting Files</Filter>
+    </ClInclude>
+    <ClInclude Include="VenusEventBall.h">
+      <Filter>Character Event Files</Filter>
+    </ClInclude>
+    <ClInclude Include="VenusEventEnemy.h">
+      <Filter>Character Event Files</Filter>
+    </ClInclude>
+    <ClInclude Include="VenusPlayer.h">
+      <Filter>Character Event Files</Filter>
+    </ClInclude>
+    <ClInclude Include="VenusPlayerEvent.h">
+      <Filter>Character Event Files</Filter>
+    </ClInclude>
+    <ClInclude Include="VenusPlayerEventManager.h">
+      <Filter>Character Event Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="Gfl\libgfl.lib">
+      <Filter>Main Files\Gfl</Filter>
+    </Library>
+    <Library Include="Gfl\libgfle.lib">
+      <Filter>Main Files\Gfl</Filter>
+    </Library>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="libgfl190.dll">
+      <Filter>Main Files\Gfl</Filter>
+    </None>
+    <None Include="libgfle190.dll">
+      <Filter>Main Files\Gfl</Filter>
+    </None>
+    <None Include="res\fpoint.cur">
+      <Filter>Main Files\Resource Files</Filter>
+    </None>
+    <None Include="res\spliter.cur">
+      <Filter>Main Files\Resource Files</Filter>
+    </None>
+    <None Include="res\Venus.rc2">
+      <Filter>Main Files\Resource Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\Animation.ico">
+      <Filter>Main Files\Resource Files</Filter>
+    </Image>
+    <Image Include="res\Category.ico">
+      <Filter>Main Files\Resource Files</Filter>
+    </Image>
+    <Image Include="res\CircleEmitter.ICO">
+      <Filter>Main Files\Resource Files</Filter>
+    </Image>
+    <Image Include="res\EffectListImage.bmp">
+      <Filter>Main Files\Resource Files</Filter>
+    </Image>
+    <Image Include="res\EmitterColor.ico">
+      <Filter>Main Files\Resource Files</Filter>
+    </Image>
+    <Image Include="res\EmitterSize.ico">
+      <Filter>Main Files\Resource Files</Filter>
+    </Image>
+    <Image Include="res\expanddown.bmp">
+      <Filter>Main Files\Resource Files</Filter>
+    </Image>
+    <Image Include="res\expanddown_blue.bmp">
+      <Filter>Main Files\Resource Files</Filter>
+    </Image>
+    <Image Include="res\expandleft.bmp">
+      <Filter>Main Files\Resource Files</Filter>
+    </Image>
+    <Image Include="res\expandleft_blue.bmp">
+      <Filter>Main Files\Resource Files</Filter>
+    </Image>
+    <Image Include="res\PointEmitter.ICO">
+      <Filter>Main Files\Resource Files</Filter>
+    </Image>
+    <Image Include="res\ResourceEffect.ico">
+      <Filter>Main Files\Resource Files</Filter>
+    </Image>
+    <Image Include="res\ResourceParticle.ICO">
+      <Filter>Main Files\Resource Files</Filter>
+    </Image>
+    <Image Include="res\SphereEmitter.ICO">
+      <Filter>Main Files\Resource Files</Filter>
+    </Image>
+    <Image Include="res\TabImage.bmp">
+      <Filter>Main Files\Resource Files</Filter>
+    </Image>
+    <Image Include="res\Toolbar.bmp">
+      <Filter>Main Files\Resource Files</Filter>
+    </Image>
+    <Image Include="res\toolbar1.bmp">
+      <Filter>Main Files\Resource Files</Filter>
+    </Image>
+    <Image Include="res\ToolbarDraw.bmp">
+      <Filter>Main Files\Resource Files</Filter>
+    </Image>
+    <Image Include="res\ToolbarDrawHot.bmp">
+      <Filter>Main Files\Resource Files</Filter>
+    </Image>
+    <Image Include="res\Venus.ico">
+      <Filter>Main Files\Resource Files</Filter>
+    </Image>
+    <Image Include="res\VenusDoc.ico">
+      <Filter>Main Files\Resource Files</Filter>
+    </Image>
+    <Image Include="..\..\..\DragonBall\Tool\VenusData\VenusIcon.bmp">
+      <Filter>Main Files\Resource Files</Filter>
+    </Image>
+    <Image Include="res\VenusIcon.ico">
+      <Filter>Main Files\Resource Files</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Venus.rc">
+      <Filter>Main Files\Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="StringType.txt">
+      <Filter>Core Files</Filter>
+    </Text>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,312 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="NtlPlugin">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Core">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Core\Performance">
+      <UniqueIdentifier>{474ceadd-3b54-44d7-8f38-1fd45863d4f7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav</Extensions>
+    </Filter>
+    <Filter Include="Console">
+      <UniqueIdentifier>{0d43512c-4b24-416a-aeb4-7f2b86defa11}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Precompile">
+      <UniqueIdentifier>{1dd65ff7-96bc-4348-a7f5-860e6c5ae808}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="BugTrap">
+      <UniqueIdentifier>{28c79250-1334-4dcc-bdb1-c4dd5fdd0867}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Interface">
+      <UniqueIdentifier>{59811e70-f0ff-45c5-8929-2c3e9e241dc6}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="NtlAtomic.cpp">
+      <Filter>NtlPlugin</Filter>
+    </ClCompile>
+    <ClCompile Include="callstack.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="ceventhandler.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="ceventvisualisation.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="debugmacros.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="debugostream.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="eventhandlerstrfuncs.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="idfromstring.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="memoryhandler.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlCharsetPrint.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlCoreApi.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlCoreLogic.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlCoreRender.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlCoreUtil.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlDeviceRestoreHandler.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlDumpTarget.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlEventQueue.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlFrameSkipScheduler.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlLoadingController.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlLog.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlMath.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlPackImage.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlPaser.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlSchedule.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlStringUtil.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlSysEvent.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlSystemInfo.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlTokenOption.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlWorldDI.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlWorldMouse.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Registry.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="RTTI.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="streamhandler.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="memoryprofile.cpp">
+      <Filter>Core\Performance</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlProfiler.cpp">
+      <Filter>Core\Performance</Filter>
+    </ClCompile>
+    <ClCompile Include="PerformanceChecker.cpp">
+      <Filter>Core\Performance</Filter>
+    </ClCompile>
+    <ClCompile Include="profile.cpp">
+      <Filter>Core\Performance</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlConsole.cpp">
+      <Filter>Console</Filter>
+    </ClCompile>
+    <ClCompile Include="precomp_ntlcore.cpp">
+      <Filter>Precompile</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlBugTrap.cpp">
+      <Filter>BugTrap</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="NtlAtomic.h">
+      <Filter>NtlPlugin</Filter>
+    </ClInclude>
+    <ClInclude Include="callstack.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="ceventhandler.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="ceventvisualisation.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="debugmacros.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="debugostream.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="idfromstring.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="iocoercion.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="memoryhandler.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlCallbackWidget.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlCharsetPrint.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlCoreApi.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlCoreDescription.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlCoreLogic.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlCoreRender.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlCoreUtil.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlDebug.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlDeviceRestoreHandler.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlDumpTarget.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlEventQueue.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlFrameSkipScheduler.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlLoadingController.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlLog.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlMath.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlPackImage.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlPaser.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlResourceFileManager.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlSchedule.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlStringUtil.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlSysEvent.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlSystemInfo.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlTokenOption.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlWorldDI.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlWorldMouse.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Registry.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="RTTI.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="rwsguid.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="streamhandler.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="strfunc.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="memoryprofile.h">
+      <Filter>Core\Performance</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlProfiler.h">
+      <Filter>Core\Performance</Filter>
+    </ClInclude>
+    <ClInclude Include="PerformanceChecker.h">
+      <Filter>Core\Performance</Filter>
+    </ClInclude>
+    <ClInclude Include="profile.h">
+      <Filter>Core\Performance</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlConsole.h">
+      <Filter>Console</Filter>
+    </ClInclude>
+    <ClInclude Include="precomp_ntlcore.h">
+      <Filter>Precompile</Filter>
+    </ClInclude>
+    <ClInclude Include="precomp_ntlplatform.h">
+      <Filter>Precompile</Filter>
+    </ClInclude>
+    <ClInclude Include="BTAtlWindow.h">
+      <Filter>BugTrap</Filter>
+    </ClInclude>
+    <ClInclude Include="BTMfcWindow.h">
+      <Filter>BugTrap</Filter>
+    </ClInclude>
+    <ClInclude Include="BTTrace.h">
+      <Filter>BugTrap</Filter>
+    </ClInclude>
+    <ClInclude Include="BugTrap.h">
+      <Filter>BugTrap</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlBugTrap.h">
+      <Filter>BugTrap</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlClientService.h">
+      <Filter>Interface</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

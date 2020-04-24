@@ -1,0 +1,118 @@
+
+GameStage( 0 )
+--[
+	Action("add mob")
+	--[
+		Param( "index", 5011201 )
+		Param( "group", 60031 )
+		Param( "loc x", -4.118 )
+		Param( "loc y", 34.603 )
+		Param( "loc z", -250.623 )
+		Param( "dir x", 0.485 )
+		Param( "dir z", 0.875 )
+		Param( "no spawn wait", "true" )
+	--]
+	End()
+	
+	Action("add mob")
+	--[
+		Param( "index", 5011201 )
+		Param( "group", 60032 )
+		Param( "loc x", 1.494 )
+		Param( "loc y", 34.603 )
+		Param( "loc z", -250.172 )
+		Param( "dir x", -0.113 )
+		Param( "dir z", 0.994 )
+		Param( "no spawn wait", "true" )
+	--]
+	End()	
+
+	Action( "function" )
+	--[
+		Condition( "child" )
+		--[
+			Action( "wait" )
+			--[
+				Condition( "check mobgroup" )
+				--[
+					Param( "group", 60031 )
+					Param( "count", 1 )
+				--]
+				End()
+			--]
+			End()
+
+			Action("add mob")
+			--[
+				Param( "index", 5011201 )
+				Param( "group", 60031 )
+				Param( "loc x", -4.118 )
+				Param( "loc y", 34.603 )
+				Param( "loc z", -250.623 )
+				Param( "dir x", 0.485 )
+				Param( "dir z", 0.875 )
+				Param( "no spawn wait", "true" )
+			--]
+			End()
+		--]
+		End()
+
+		Condition( "child" )
+		--[
+			Action( "wait" )
+			--[
+				Condition( "check mobgroup" )
+				--[
+					Param( "group", 60032 )
+					Param( "count", 1 )
+				--]
+				End()
+			--]
+			End()		
+
+			Action("add mob")
+			--[
+				Param( "index", 5011201 )
+				Param( "group", 60032 )
+				Param( "loc x", 1.494 )
+				Param( "loc y", 34.603 )
+				Param( "loc z", -250.172 )
+				Param( "dir x", -0.113 )
+				Param( "dir z", 0.994 )
+				Param( "no spawn wait", "true" )
+			--]
+			End()
+		--]
+		End()
+
+		Action( "wait" )
+		--[
+			Param( "operation", "and" )
+	
+			Condition( "check mobgroup" )
+			--[
+				Param( "group", 60031 )
+				Param( "count", 2 )
+			--]
+			End()
+
+			Condition( "check mobgroup" )
+			--[
+				Param( "group", 60032 )
+				Param( "count", 2 )
+			--]
+			End()
+		--]
+		End()
+	--]
+	End()
+	
+	Action(	"send event to ts" )
+	--[
+		Param( "trigger type", "quest"	)
+		Param( "apply type", "register all" )
+		Param( "event id", 194 )
+	--]
+	End()
+--]
+End()

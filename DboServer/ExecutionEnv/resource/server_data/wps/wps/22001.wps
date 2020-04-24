@@ -1,0 +1,311 @@
+-- UD2 Normal
+-- New Battle Script podongyi
+
+GameStage(0)
+--[
+	-- New podongyi spawn
+	Action("add mobgroup")
+	--[
+		Param("group", 6)
+		Param("no spawn wait", "true")
+	--]
+	End()
+	
+	-- 포동이의 위치 정보 변수 선언
+	Action( "calculate" )
+	--[
+		Param( "declare", "vector buyLoc = Vector(0,0,0), vector buyDir = Vector(0,0,0)" )
+	--]
+	End()
+	
+	-- 로봇의 위치 정보 변수 선언
+	Action( "calculate" )
+	--[
+		Param( "declare", "vector bjkLoc = Vector(0,0,0), vector bjkDir = Vector(0,0,0)" )
+	--]
+	End()
+	
+	Action( "function" )
+	--[
+		Condition( "child" )
+		--[
+			Action( "while" )
+			--[
+				Action( "loop" )
+				--[
+				
+					Action( "function" )
+					--[
+						Condition( "child" )
+						--[
+							Action( "while" )
+							--[
+								Action( "loop" )
+								--[
+									
+									-- The battle went on
+									Action( "wait" )
+									--[
+										Condition( "check battle" )
+										--[
+											Param( "type", "mob" )
+											Param( "group", 6 )
+											Param( "is battle", "true" )
+										--]
+										End()
+									--]
+									End()
+				
+									Action( "wait" )
+									--[
+										Condition( "check time" )
+										--[
+											Param( "time", 25 )
+										--]
+										End()
+									--]
+									End()
+									
+									-- 신 포동이의 위치 get
+									Action( "get location" )
+									--[
+										Param( "target type", "mob" )
+										Param( "target index", 6 )
+										Param( "loc var", "buyLoc" )
+										Param( "dir var", "buyDir" )
+										Param( "default", "Loc(-51.44, 14.37, -68.80), Dir(-0.10, 0.00, 0.99)" )
+									--]
+									End()
+									
+									-- 로봇 방향에 포동의 방향 복사
+									Action( "calculate" )
+									--[
+										Param( "express", "bjkDir = buyDir" )
+									--]
+									End()									
+									
+									
+									-- 45도 위치에 로봇 위치 지정, 각도, 거리
+									Action( "calculate" )
+									--[
+										Param( "express", "bjkLoc = RelativeCoord( buyLoc, buyDir, 45, 13 )" )
+									--]
+									End()
+									
+									-- 45도 위치에 로봇을 spawn한다
+									Action( "add mob" )
+									--[
+										Param( "index", 1651125 )
+										Param( "group", 2200101 )
+										Param( "use loc var", "true" )
+										Param( "loc var", "bjkLoc" )
+										Param( "dir var", "bjkDir" )
+										Param( "no spawn wait", "true" )
+									--]
+									End()
+									
+									
+									-- 315도 위치에 로봇 위치 지정, 각도, 거리
+									Action( "calculate" )
+									--[
+										Param( "express", "bjkLoc = RelativeCoord( buyLoc, buyDir, 315, 13 )" )
+									--]
+									End()
+									
+									-- 315도 위치에 로봇을 spawn한다
+									Action( "add mob" )
+									--[
+										Param( "index", 1651125 )
+										Param( "group", 2200101 )
+										Param( "use loc var", "true" )
+										Param( "loc var", "bjkLoc" )
+										Param( "dir var", "bjkDir" )
+										Param( "no spawn wait", "true" )
+									--]
+									End()									
+									
+									
+									
+									-- 50초간 대기
+									Action( "wait" )
+									--[
+										Condition( "check time" )
+										--[
+											Param( "time", 50 )
+										--]
+										End()
+									--]
+									End()
+				
+									
+									-- 신 포동이의 위치 get
+									Action( "get location" )
+									--[
+										Param( "target type", "mob" )
+										Param( "target index", 6 )
+										Param( "loc var", "buyLoc" )
+										Param( "dir var", "buyDir" )
+										Param( "default", "Loc(-51.44, 14.37, -68.80), Dir(-0.10, 0.00, 0.99)" )
+									--]
+									End()
+									
+									-- 로봇 방향에 포동의 방향 복사
+									Action( "calculate" )
+									--[
+										Param( "express", "bjkDir = buyDir" )
+									--]
+									End()									
+									
+									
+									-- 135도 위치에 로봇 위치 지정, 각도, 거리
+									Action( "calculate" )
+									--[
+										Param( "express", "bjkLoc = RelativeCoord( buyLoc, buyDir, 135, 13 )" )
+									--]
+									End()
+									
+									-- 135도 위치에 로봇을 spawn한다
+									Action( "add mob" )
+									--[
+										Param( "index", 1651125 )
+										Param( "group", 2200102 )
+										Param( "use loc var", "true" )
+										Param( "loc var", "bjkLoc" )
+										Param( "dir var", "bjkDir" )
+										Param( "no spawn wait", "true" )
+									--]
+									End()
+									
+									
+									-- 225도 위치에 로봇 위치 지정, 각도, 거리
+									Action( "calculate" )
+									--[
+										Param( "express", "bjkLoc = RelativeCoord( buyLoc, buyDir, 225, 13 )" )
+									--]
+									End()
+									
+									-- 225도 위치에 로봇을 spawn한다
+									Action( "add mob" )
+									--[
+										Param( "index", 1651125 )
+										Param( "group", 2200102 )
+										Param( "use loc var", "true" )
+										Param( "loc var", "bjkLoc" )
+										Param( "dir var", "bjkDir" )
+										Param( "no spawn wait", "true" )
+									--]
+									End()									
+									
+									
+									-- 25초간 대기
+									Action( "wait" )
+									--[
+										Condition( "check time" )
+										--[
+											Param( "time", 25 )
+										--]
+										End()
+									--]
+									End()
+									
+								-- loop 닫음
+								--]
+								End()
+							-- while 닫음
+							--]
+							End()
+						-- child 닫음
+						--]
+						End()
+						
+						-- When the battle is released
+						Action( "wait" )
+						--[
+							Condition( "check battle" )
+							--[
+								Param( "type", "mob" )
+								Param( "group", 6 )
+								Param( "is battle", "false" )
+							--]
+							End()
+						--]
+						End()
+						
+						Action( "remove mobgroup" )
+						--[
+							Param( "group", 2200101 )
+							Param( "type", "clear" )
+						--]
+						End()
+						
+						Action( "remove mobgroup" )
+						--[
+							Param( "group", 2200102 )
+							Param( "type", "clear" )
+						--]
+						End()
+						
+						
+						-- The loop round the back to spawn again this sinpodong
+					-- function end
+					--]
+					End()
+				-- loop end
+				--]
+				End()
+			--while end
+			--]
+			End()
+		--child end
+		--]
+		End()
+		
+		-- Leave loop if mob group 6 dead
+		Action( "wait" )
+		--[
+			Condition( "check mobgroup" )
+			--[
+				Param( "group", 6 )
+				Param( "count", 1 ) 
+			--]
+			End()
+		--]
+		End()
+		
+	-- function end
+	--]
+	End()
+	
+	-- 신 포동이 사망시 육탄 로보 디스폰
+	Action( "remove mobgroup" )
+	--[
+		Param( "group", 2200101 )
+		Param( "type", "clear" )
+	--]
+	End()
+
+	-- 신 포동이 사망시 육탄 로보 디스폰
+	Action( "remove mobgroup" )
+	--[
+		Param( "group", 2200102 )
+		Param( "type", "clear" )
+	--]
+	End()
+
+	-- UD에서 나가는 출구 문을 열어줌
+	Action( "send event to wps" )
+	--[
+		Param( "wps index", 22002 )
+		Param( "event id", 401 )
+	--]
+	End()
+	
+	-- 닥터 게로 클론 방의 문을 열어줌
+	Action( "send event to wps" )
+	--[
+		Param( "wps index", 22008 )
+		Param( "event id", 617 )
+	--]
+	End()
+--]
+End()

@@ -1,0 +1,596 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Release4Client|Win32">
+      <Configuration>Release4Client</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release4Client|x64">
+      <Configuration>Release4Client</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release4Tools|Win32">
+      <Configuration>Release4Tools</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release4Tools|x64">
+      <Configuration>Release4Tools</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release4Server|Win32">
+      <Configuration>Release4Server</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release4Server|x64">
+      <Configuration>Release4Server</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{3BEE299B-D145-4030-81DD-D8B9ADE8B767}</ProjectGuid>
+    <RootNamespace>DboTrigger</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release4Server|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release4Client|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <PlatformToolset>v80</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release4Tools|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <PlatformToolset>v80</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release4Server|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release4Client|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release4Tools|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release4Server|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release4Client|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release4Tools|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release4Server|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release4Client|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release4Tools|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.40219.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release4Server|Win32'">$(OutDir)/</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release4Client|Win32'">$(SolutionDir)$(Configuration)\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release4Tools|Win32'">$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release4Server|Win32'">$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release4Client|Win32'">$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release4Tools|Win32'">$(Configuration)\</IntDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release4Server|x64'">$(OutDir)</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release4Client|x64'">$(OutDir)/</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release4Tools|x64'">$(OutDir)/</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release4Server|x64'">$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release4Client|x64'">$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release4Tools|x64'">$(Configuration)\</IntDir>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Release4Server|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Release4Client|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Release4Tools|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Release4Server|Win32'" />
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Release4Client|Win32'" />
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Release4Tools|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Release4Server|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Release4Client|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Release4Tools|Win32'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Release4Server|x64'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Release4Client|x64'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Release4Tools|x64'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Release4Server|x64'" />
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Release4Client|x64'" />
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Release4Tools|x64'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Release4Server|x64'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Release4Client|x64'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Release4Tools|x64'" />
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release4Server|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>..\NtlShared2;..\NtlGameTable;..\..\NtlLib\Shared\Util;..\..\NtlLib\Shared\NtlTrigger;..\..\NtlLib\Shared\Zip\zlib123;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN64;_LIB;_CRT_SECURE_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>precomp_trigger.h</PrecompiledHeaderFile>
+      <WarningLevel>Level4</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <Optimization>MaxSpeed</Optimization>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <MinimalRebuild>false</MinimalRebuild>
+      <IntrinsicFunctions>false</IntrinsicFunctions>
+      <WholeProgramOptimization>false</WholeProgramOptimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Lib>
+      <LinkTimeCodeGeneration>true</LinkTimeCodeGeneration>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release4Client|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>..\NtlShared2;..\NtlGameTable;..\..\NtlLib\Shared\Util;..\..\NtlLib\Shared\NtlTrigger;..\..\NtlLib\Shared\Zip\zlib123;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_LIB;__WIN32__;_CRT_SECURE_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>precomp_trigger.h</PrecompiledHeaderFile>
+      <WarningLevel>Level4</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <Optimization>MaxSpeed</Optimization>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <MinimalRebuild>false</MinimalRebuild>
+      <IntrinsicFunctions>false</IntrinsicFunctions>
+      <WholeProgramOptimization>true</WholeProgramOptimization>
+      <FunctionLevelLinking>
+      </FunctionLevelLinking>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <BufferSecurityCheck>true</BufferSecurityCheck>
+    </ClCompile>
+    <Lib>
+      <LinkTimeCodeGeneration>true</LinkTimeCodeGeneration>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release4Tools|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>..\NtlShared2;..\NtlGameTable;..\..\NtlLib\Shared\Util;..\..\NtlLib\Shared\NtlTrigger;..\..\NtlLib\Shared\Zip\zlib123;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_LIB;__WIN32__;_CRT_SECURE_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>precomp_trigger.h</PrecompiledHeaderFile>
+      <WarningLevel>Level4</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <Optimization>MaxSpeed</Optimization>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <MinimalRebuild>false</MinimalRebuild>
+      <IntrinsicFunctions>false</IntrinsicFunctions>
+      <WholeProgramOptimization>true</WholeProgramOptimization>
+      <FunctionLevelLinking>
+      </FunctionLevelLinking>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <BufferSecurityCheck>true</BufferSecurityCheck>
+    </ClCompile>
+    <Lib>
+      <LinkTimeCodeGeneration>true</LinkTimeCodeGeneration>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release4Server|x64'">
+    <Midl>
+      <TargetEnvironment>X64</TargetEnvironment>
+    </Midl>
+    <ClCompile>
+      <AdditionalIncludeDirectories>..\NtlShared2;..\NtlGameTable;..\..\NtlLib\Shared\Util;..\..\NtlLib\Shared\NtlTrigger;..\..\NtlLib\Shared\Zip\zlib123;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN64;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>precomp_trigger.h</PrecompiledHeaderFile>
+      <WarningLevel>Level4</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <OmitFramePointers>false</OmitFramePointers>
+      <WholeProgramOptimization>false</WholeProgramOptimization>
+      <StringPooling>false</StringPooling>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
+      <FloatingPointModel>Fast</FloatingPointModel>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release4Client|x64'">
+    <Midl>
+      <TargetEnvironment>X64</TargetEnvironment>
+    </Midl>
+    <ClCompile>
+      <AdditionalIncludeDirectories>..\NtlShared2;..\NtlGameTable;..\..\NtlLib\Shared\Util;..\..\NtlLib\Shared\NtlTrigger;..\..\NtlLib\Shared\Zip\zlib123;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN64;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>precomp_trigger.h</PrecompiledHeaderFile>
+      <WarningLevel>Level4</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <OmitFramePointers>false</OmitFramePointers>
+      <WholeProgramOptimization>false</WholeProgramOptimization>
+      <StringPooling>false</StringPooling>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
+      <FloatingPointModel>Fast</FloatingPointModel>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release4Tools|x64'">
+    <Midl>
+      <TargetEnvironment>X64</TargetEnvironment>
+    </Midl>
+    <ClCompile>
+      <AdditionalIncludeDirectories>..\NtlShared2;..\NtlGameTable;..\..\NtlLib\Shared\Util;..\..\NtlLib\Shared\NtlTrigger;..\..\NtlLib\Shared\Zip\zlib123;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN64;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>precomp_trigger.h</PrecompiledHeaderFile>
+      <WarningLevel>Level4</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <OmitFramePointers>false</OmitFramePointers>
+      <WholeProgramOptimization>false</WholeProgramOptimization>
+      <StringPooling>false</StringPooling>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
+      <FloatingPointModel>Fast</FloatingPointModel>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="DboTSActAvatarDead.cpp" />
+    <ClCompile Include="DboTSActMail.cpp" />
+    <ClCompile Include="DboTSActOutMsg.cpp" />
+    <ClCompile Include="DboTSActSkyDgn.cpp" />
+    <ClCompile Include="DboTSActWPSFD.cpp" />
+    <ClCompile Include="DboTSClickSideIcon.cpp" />
+    <ClCompile Include="DboTSDialogOpen.cpp" />
+    <ClCompile Include="DboTSEMDialogOpen.cpp" />
+    <ClCompile Include="DboTSEMFLink.cpp" />
+    <ClCompile Include="DboTSEMLevelCheck.cpp" />
+    <ClCompile Include="DboTSEMQuest.cpp" />
+    <ClCompile Include="DboTSEMSideIcon.cpp" />
+    <ClCompile Include="DboTSLevelCheck.cpp" />
+    <ClCompile Include="DboTSQuest.cpp" />
+    <ClCompile Include="precomp_trigger.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release4Server|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release4Client|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release4Tools|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release4Server|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release4Client|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release4Tools|x64'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="DboTSActFactoryType.cpp" />
+    <ClCompile Include="DboTSCondFactoryType.cpp" />
+    <ClCompile Include="DboTSContFactoryType.cpp" />
+    <ClCompile Include="DboTSEntityFactory.cpp" />
+    <ClCompile Include="DboTSEventFactoryType.cpp" />
+    <ClCompile Include="DboTSBindStone.cpp" />
+    <ClCompile Include="DboTSBudokai.cpp" />
+    <ClCompile Include="DboTSClickMob.cpp" />
+    <ClCompile Include="DboTSClickNPC.cpp" />
+    <ClCompile Include="DboTSClickObject.cpp" />
+    <ClCompile Include="DboTSColObject.cpp" />
+    <ClCompile Include="DboTSColRgn.cpp" />
+    <ClCompile Include="DboTSFreeBattle.cpp" />
+    <ClCompile Include="DboTSHoipoiMix.cpp" />
+    <ClCompile Include="DboTSItemEquip.cpp" />
+    <ClCompile Include="DboTSItemGet.cpp" />
+    <ClCompile Include="DboTSItemIdentity.cpp" />
+    <ClCompile Include="DboTSItemUpgrade.cpp" />
+    <ClCompile Include="DboTSItemUse.cpp" />
+    <ClCompile Include="DboTSParty.cpp" />
+    <ClCompile Include="DboTSPrivateShop.cpp" />
+    <ClCompile Include="DboTSRB.cpp" />
+    <ClCompile Include="DboTSRcvSvrEvt.cpp" />
+    <ClCompile Include="DboTSScoutUse.cpp" />
+    <ClCompile Include="DboTSSearchQuest.cpp" />
+    <ClCompile Include="DboTSSkillUse.cpp" />
+    <ClCompile Include="DboTSSlotMachine.cpp" />
+    <ClCompile Include="DboTSTeleport.cpp" />
+    <ClCompile Include="DboTSUseMail.cpp" />
+    <ClCompile Include="DboTSCheckAttachObj.cpp" />
+    <ClCompile Include="DboTSCheckAvatarDead.cpp" />
+    <ClCompile Include="DboTSCheckBudokaiState.cpp" />
+    <ClCompile Include="DboTSCheckClrQst.cpp" />
+    <ClCompile Include="DboTSCheckCustomEvent.cpp" />
+    <ClCompile Include="DboTSCheckDistWithNPC.cpp" />
+    <ClCompile Include="DboTSCheckHasCoupon.cpp" />
+    <ClCompile Include="DboTSCheckInNPC.cpp" />
+    <ClCompile Include="DboTSCheckInWorld.cpp" />
+    <ClCompile Include="DboTSCheckItem.cpp" />
+    <ClCompile Include="DboTSCheckLvl.cpp" />
+    <ClCompile Include="DboTSCheckNPCDead.cpp" />
+    <ClCompile Include="DboTSCheckObjItem.cpp" />
+    <ClCompile Include="DboTSCheckObjState.cpp" />
+    <ClCompile Include="DboTSCheckOPObject.cpp" />
+    <ClCompile Include="DboTSCheckOutRgn.cpp" />
+    <ClCompile Include="DboTSCheckPCCls.cpp" />
+    <ClCompile Include="DboTSCheckPCRace.cpp" />
+    <ClCompile Include="DboTSCheckProgQuest.cpp" />
+    <ClCompile Include="DboTSCheckPS.cpp" />
+    <ClCompile Include="DboTSCheckQItem.cpp" />
+    <ClCompile Include="DboTSCheckReputation.cpp" />
+    <ClCompile Include="DboTSCheckSSM.cpp" />
+    <ClCompile Include="DboTSCheckSToCDelivery.cpp" />
+    <ClCompile Include="DboTSCheckSToCEvt.cpp" />
+    <ClCompile Include="DboTSCheckWItem.cpp" />
+    <ClCompile Include="DboTSActBroadMsg.cpp" />
+    <ClCompile Include="DboTSActConcCheck.cpp" />
+    <ClCompile Include="DboTSActCustomEvt.cpp" />
+    <ClCompile Include="DboTSActDir.cpp" />
+    <ClCompile Include="DboTSActDirIndicator.cpp" />
+    <ClCompile Include="DboTSActDojo.cpp" />
+    <ClCompile Include="DboTSActDoSkill.cpp" />
+    <ClCompile Include="DboTSActDrop.cpp" />
+    <ClCompile Include="DboTSActEscort.cpp" />
+    <ClCompile Include="DboTSActETimerE.cpp" />
+    <ClCompile Include="DboTSActETimerS.cpp" />
+    <ClCompile Include="DboTSActExcCGroup.cpp" />
+    <ClCompile Include="DboTSActHint.cpp" />
+    <ClCompile Include="DboTSActInSSM.cpp" />
+    <ClCompile Include="DboTSActItem.cpp" />
+    <ClCompile Include="DboTSActMiniNarration.cpp" />
+    <ClCompile Include="DboTSActNPCConv.cpp" />
+    <ClCompile Include="DboTSActObjConv.cpp" />
+    <ClCompile Include="DboTSActObjState.cpp" />
+    <ClCompile Include="DboTSActObjWPS.cpp" />
+    <ClCompile Include="DboTSActOPCam.cpp" />
+    <ClCompile Include="DboTSActOpenWindow.cpp" />
+    <ClCompile Include="DboTSActOPObject.cpp" />
+    <ClCompile Include="DboTSActPCConv.cpp" />
+    <ClCompile Include="DboTSActPIDgn.cpp" />
+    <ClCompile Include="DboTSActPortal.cpp" />
+    <ClCompile Include="DboTSActPSEmpty.cpp" />
+    <ClCompile Include="DboTSActPSPop.cpp" />
+    <ClCompile Include="DboTSActPSPush.cpp" />
+    <ClCompile Include="DboTSActPSToSSM.cpp" />
+    <ClCompile Include="DboTSActQItem.cpp" />
+    <ClCompile Include="DboTSActRegCTiming.cpp" />
+    <ClCompile Include="DboTSActRegQInfo.cpp" />
+    <ClCompile Include="DboTSActRmvCoupon.cpp" />
+    <ClCompile Include="DboTSActSendSvrEvt.cpp" />
+    <ClCompile Include="DboTSActSkipCont.cpp" />
+    <ClCompile Include="DboTSAcTSSMToPS.cpp" />
+    <ClCompile Include="DboTSAcTSToCEvt.cpp" />
+    <ClCompile Include="DboTSActSWProbSF.cpp" />
+    <ClCompile Include="DboTSActTelecast.cpp" />
+    <ClCompile Include="DboTSActTelMinorMatch.cpp" />
+    <ClCompile Include="DboTSActTelMudosa.cpp" />
+    <ClCompile Include="DboTSActTLQ.cpp" />
+    <ClCompile Include="DboTSActTMQInfoShow.cpp" />
+    <ClCompile Include="DboTSActTMQStage.cpp" />
+    <ClCompile Include="DboTSActTMQTimeBonus.cpp" />
+    <ClCompile Include="DboTSActTObjFriendly.cpp" />
+    <ClCompile Include="DboTSActTSState.cpp" />
+    <ClCompile Include="DboTSActTWaitTS.cpp" />
+    <ClCompile Include="DboTSActWorldPlayScript.cpp" />
+    <ClCompile Include="DboTSContEnd.cpp" />
+    <ClCompile Include="DboTSContGAct.cpp" />
+    <ClCompile Include="DboTSContGCond.cpp" />
+    <ClCompile Include="DboTSContNarration.cpp" />
+    <ClCompile Include="DboTSContProposal.cpp" />
+    <ClCompile Include="DboTSContReward.cpp" />
+    <ClCompile Include="DboTSContStart.cpp" />
+    <ClCompile Include="DboTSContSwitch.cpp" />
+    <ClCompile Include="DboTSContSyncAct.cpp" />
+    <ClCompile Include="DboTSContUnifiedNarration.cpp" />
+    <ClCompile Include="DboTSContUsrSel.cpp" />
+    <ClCompile Include="DboTSEMBindStone.cpp" />
+    <ClCompile Include="DboTSEMBudokai.cpp" />
+    <ClCompile Include="DboTSEMColRgn.cpp" />
+    <ClCompile Include="DboTSEMFreeBattle.cpp" />
+    <ClCompile Include="DboTSEMHoipoiMix.cpp" />
+    <ClCompile Include="DboTSEMItem.cpp" />
+    <ClCompile Include="DboTSEMItemIdentity.cpp" />
+    <ClCompile Include="DboTSEMItemUpgrade.cpp" />
+    <ClCompile Include="DboTSEMMob.cpp" />
+    <ClCompile Include="DboTSEMNPC.cpp" />
+    <ClCompile Include="DboTSEMObject.cpp" />
+    <ClCompile Include="DboTSEMParty.cpp" />
+    <ClCompile Include="DboTSEMPrivateShop.cpp" />
+    <ClCompile Include="DboTSEMRB.cpp" />
+    <ClCompile Include="DboTSEMSearchQuest.cpp" />
+    <ClCompile Include="DboTSEMSkill.cpp" />
+    <ClCompile Include="DboTSEMSlotMachine.cpp" />
+    <ClCompile Include="DboTSEMSvrEvt.cpp" />
+    <ClCompile Include="DboTSEMTeleport.cpp" />
+    <ClCompile Include="DboTSEMUseMail.cpp" />
+    <ClCompile Include="DboTSCtrlFactory.cpp" />
+    <ClCompile Include="DboTSCtrlFactoryType.cpp" />
+    <ClCompile Include="DboTSQCtrl.cpp" />
+    <ClCompile Include="DboTSTCtrl.cpp" />
+    <ClCompile Include="DboTSCompleteQInfo.cpp" />
+    <ClCompile Include="DboTSUIFactory.cpp" />
+    <ClCompile Include="DboTSUIFactoryType.cpp" />
+    <ClCompile Include="DboTSQAgency.cpp" />
+    <ClCompile Include="DboTSTAgency.cpp" />
+    <ClCompile Include="DboTSMain.cpp" />
+    <ClCompile Include="DboTSQRecv.cpp" />
+    <ClCompile Include="DboTSTRecv.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="DboTSActAvatarDead.h" />
+    <ClInclude Include="DboTSActMail.h" />
+    <ClInclude Include="DboTSActOutMsg.h" />
+    <ClInclude Include="DboTSActSkyDgn.h" />
+    <ClInclude Include="DboTSActWPSFD.h" />
+    <ClInclude Include="DboTSClickSideIcon.h" />
+    <ClInclude Include="DboTSDialogOpen.h" />
+    <ClInclude Include="DboTSEMDialogOpen.h" />
+    <ClInclude Include="DboTSEMFLink.h" />
+    <ClInclude Include="DboTSEMLevelCheck.h" />
+    <ClInclude Include="DboTSEMQuest.h" />
+    <ClInclude Include="DboTSEMSideIcon.h" />
+    <ClInclude Include="DboTSLevelCheck.h" />
+    <ClInclude Include="DboTSQuest.h" />
+    <ClInclude Include="precomp_trigger.h" />
+    <ClInclude Include="DboTSActFactoryType.h" />
+    <ClInclude Include="DboTSCondFactoryType.h" />
+    <ClInclude Include="DboTSContFactoryType.h" />
+    <ClInclude Include="DboTSEntityFactory.h" />
+    <ClInclude Include="DboTSEventFactoryType.h" />
+    <ClInclude Include="DboTSBindStone.h" />
+    <ClInclude Include="DboTSBudokai.h" />
+    <ClInclude Include="DboTSClickMob.h" />
+    <ClInclude Include="DboTSClickNPC.h" />
+    <ClInclude Include="DboTSClickObject.h" />
+    <ClInclude Include="DboTSColObject.h" />
+    <ClInclude Include="DboTSColRgn.h" />
+    <ClInclude Include="DboTSFreeBattle.h" />
+    <ClInclude Include="DboTSHoipoiMix.h" />
+    <ClInclude Include="DboTSItemEquip.h" />
+    <ClInclude Include="DboTSItemGet.h" />
+    <ClInclude Include="DboTSItemIdentity.h" />
+    <ClInclude Include="DboTSItemUpgrade.h" />
+    <ClInclude Include="DboTSItemUse.h" />
+    <ClInclude Include="DboTSParty.h" />
+    <ClInclude Include="DboTSPrivateShop.h" />
+    <ClInclude Include="DboTSRB.h" />
+    <ClInclude Include="DboTSRcvSvrEvt.h" />
+    <ClInclude Include="DboTSScoutUse.h" />
+    <ClInclude Include="DboTSSearchQuest.h" />
+    <ClInclude Include="DboTSSkillUse.h" />
+    <ClInclude Include="DboTSSlotMachine.h" />
+    <ClInclude Include="DboTSTeleport.h" />
+    <ClInclude Include="DboTSUseMail.h" />
+    <ClInclude Include="DboTSCheckAttachObj.h" />
+    <ClInclude Include="DboTSCheckAvatarDead.h" />
+    <ClInclude Include="DboTSCheckBudokaiState.h" />
+    <ClInclude Include="DboTSCheckClrQst.h" />
+    <ClInclude Include="DboTSCheckCustomEvent.h" />
+    <ClInclude Include="DboTSCheckDistWithNPC.h" />
+    <ClInclude Include="DboTSCheckHasCoupon.h" />
+    <ClInclude Include="DboTSCheckInNPC.h" />
+    <ClInclude Include="DboTSCheckInWorld.h" />
+    <ClInclude Include="DboTSCheckItem.h" />
+    <ClInclude Include="DboTSCheckLvl.h" />
+    <ClInclude Include="DboTSCheckNPCDead.h" />
+    <ClInclude Include="DboTSCheckObjItem.h" />
+    <ClInclude Include="DboTSCheckObjState.h" />
+    <ClInclude Include="DboTSCheckOPObject.h" />
+    <ClInclude Include="DboTSCheckOutRgn.h" />
+    <ClInclude Include="DboTSCheckPCCls.h" />
+    <ClInclude Include="DboTSCheckPCRace.h" />
+    <ClInclude Include="DboTSCheckProgQuest.h" />
+    <ClInclude Include="DboTSCheckPS.h" />
+    <ClInclude Include="DboTSCheckQItem.h" />
+    <ClInclude Include="DboTSCheckReputation.h" />
+    <ClInclude Include="DboTSCheckSSM.h" />
+    <ClInclude Include="DboTSCheckSToCDelivery.h" />
+    <ClInclude Include="DboTSCheckSToCEvt.h" />
+    <ClInclude Include="DboTSCheckWItem.h" />
+    <ClInclude Include="DboTSActBroadMsg.h" />
+    <ClInclude Include="DboTSActConcCheck.h" />
+    <ClInclude Include="DboTSActCustomEvt.h" />
+    <ClInclude Include="DboTSActDir.h" />
+    <ClInclude Include="DboTSActDirIndicator.h" />
+    <ClInclude Include="DboTSActDojo.h" />
+    <ClInclude Include="DboTSActDoSkill.h" />
+    <ClInclude Include="DboTSActDrop.h" />
+    <ClInclude Include="DboTSActEscort.h" />
+    <ClInclude Include="DboTSActETimerE.h" />
+    <ClInclude Include="DboTSActETimerS.h" />
+    <ClInclude Include="DboTSActExcCGroup.h" />
+    <ClInclude Include="DboTSActHint.h" />
+    <ClInclude Include="DboTSActInSSM.h" />
+    <ClInclude Include="DboTSActItem.h" />
+    <ClInclude Include="DboTSActMiniNarration.h" />
+    <ClInclude Include="DboTSActNPCConv.h" />
+    <ClInclude Include="DboTSActObjConv.h" />
+    <ClInclude Include="DboTSActObjState.h" />
+    <ClInclude Include="DboTSActObjWPS.h" />
+    <ClInclude Include="DboTSActOPCam.h" />
+    <ClInclude Include="DboTSActOpenWindow.h" />
+    <ClInclude Include="DboTSActOPObject.h" />
+    <ClInclude Include="DboTSActPCConv.h" />
+    <ClInclude Include="DboTSActPIDgn.h" />
+    <ClInclude Include="DboTSActPortal.h" />
+    <ClInclude Include="DboTSActPSEmpty.h" />
+    <ClInclude Include="DboTSActPSPop.h" />
+    <ClInclude Include="DboTSActPSPush.h" />
+    <ClInclude Include="DboTSActPSToSSM.h" />
+    <ClInclude Include="DboTSActQItem.h" />
+    <ClInclude Include="DboTSActRegCTiming.h" />
+    <ClInclude Include="DboTSActRegQInfo.h" />
+    <ClInclude Include="DboTSActRmvCoupon.h" />
+    <ClInclude Include="DboTSActSendSvrEvt.h" />
+    <ClInclude Include="DboTSActSkipCont.h" />
+    <ClInclude Include="DboTSAcTSSMToPS.h" />
+    <ClInclude Include="DboTSAcTSToCEvt.h" />
+    <ClInclude Include="DboTSActSWProbSF.h" />
+    <ClInclude Include="DboTSActTelecast.h" />
+    <ClInclude Include="DboTSActTelMinorMatch.h" />
+    <ClInclude Include="DboTSActTelMudosa.h" />
+    <ClInclude Include="DboTSActTLQ.h" />
+    <ClInclude Include="DboTSActTMQInfoShow.h" />
+    <ClInclude Include="DboTSActTMQStage.h" />
+    <ClInclude Include="DboTSActTMQTimeBonus.h" />
+    <ClInclude Include="DboTSActTObjFriendly.h" />
+    <ClInclude Include="DboTSActTSState.h" />
+    <ClInclude Include="DboTSActTWaitTS.h" />
+    <ClInclude Include="DboTSActWorldPlayScript.h" />
+    <ClInclude Include="DboTSContEnd.h" />
+    <ClInclude Include="DboTSContGAct.h" />
+    <ClInclude Include="DboTSContGCond.h" />
+    <ClInclude Include="DboTSContNarration.h" />
+    <ClInclude Include="DboTSContProposal.h" />
+    <ClInclude Include="DboTSContReward.h" />
+    <ClInclude Include="DboTSContStart.h" />
+    <ClInclude Include="DboTSContSwitch.h" />
+    <ClInclude Include="DboTSContSyncAct.h" />
+    <ClInclude Include="DboTSContUnifiedNarration.h" />
+    <ClInclude Include="DboTSContUsrSel.h" />
+    <ClInclude Include="DboTSCore.h" />
+    <ClInclude Include="DboTSCoreDefine.h" />
+    <ClInclude Include="DboTSEMBindStone.h" />
+    <ClInclude Include="DboTSEMBudokai.h" />
+    <ClInclude Include="DboTSEMColRgn.h" />
+    <ClInclude Include="DboTSEMFreeBattle.h" />
+    <ClInclude Include="DboTSEMHoipoiMix.h" />
+    <ClInclude Include="DboTSEMItem.h" />
+    <ClInclude Include="DboTSEMItemIdentity.h" />
+    <ClInclude Include="DboTSEMItemUpgrade.h" />
+    <ClInclude Include="DboTSEMMob.h" />
+    <ClInclude Include="DboTSEMNPC.h" />
+    <ClInclude Include="DboTSEMObject.h" />
+    <ClInclude Include="DboTSEMParty.h" />
+    <ClInclude Include="DboTSEMPrivateShop.h" />
+    <ClInclude Include="DboTSEMRB.h" />
+    <ClInclude Include="DboTSEMSearchQuest.h" />
+    <ClInclude Include="DboTSEMSkill.h" />
+    <ClInclude Include="DboTSEMSlotMachine.h" />
+    <ClInclude Include="DboTSEMSvrEvt.h" />
+    <ClInclude Include="DboTSEMTeleport.h" />
+    <ClInclude Include="DboTSEMUseMail.h" />
+    <ClInclude Include="DboTSCtrlFactory.h" />
+    <ClInclude Include="DboTSCtrlFactoryType.h" />
+    <ClInclude Include="DboTSQCtrl.h" />
+    <ClInclude Include="DboTSTCtrl.h" />
+    <ClInclude Include="DboTSCompleteQInfo.h" />
+    <ClInclude Include="DboTSUIFactory.h" />
+    <ClInclude Include="DboTSUIFactoryType.h" />
+    <ClInclude Include="DboTSQAgency.h" />
+    <ClInclude Include="DboTSTAgency.h" />
+    <ClInclude Include="DboTSMain.h" />
+    <ClInclude Include="DboTSQRecv.h" />
+    <ClInclude Include="DboTSTRecv.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

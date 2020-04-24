@@ -1,0 +1,8040 @@
+surface "srfDialog"
+{
+	resource_file	= "Game.rsr";
+	resource_name	= "rsrCommon_1";
+
+	x		= 0;
+	y		= 0;
+	width		= 320;
+	height		= 480;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 0;
+	uv_top		= 0;
+	uv_right	= 320;
+	uv_bottom	= 480;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfCloseBtnUp"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrCommon_1";
+
+	x		= 0;
+	y		= 0;
+	width		= 14;
+	height		= 14;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 426;
+	uv_top		= 0;
+	uv_right	= 440;
+	uv_bottom	= 14;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfCloseBtnFoc"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrCommon_1";
+
+	x		= 0;
+	y		= 0;
+	width		= 14;
+	height		= 14;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 441;
+	uv_top		= 0;
+	uv_right	= 455;
+	uv_bottom	= 14;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfCloseBtnDown"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrCommon_1";
+
+	x		= 0;
+	y		= 0;
+	width		= 14;
+	height		= 14;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 456;
+	uv_top		= 0;
+	uv_right	= 470;
+	uv_bottom	= 14;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfTabLeft"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrCommon_1";
+
+	x		= 0;
+	y		= 0;
+	width		= 10;
+	height		= 22;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 321;
+	uv_top		= 0;
+	uv_right	= 331;
+	uv_bottom	= 22;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfTabCenter"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrCommon_1";
+
+	x		= 0;
+	y		= 0;
+	width		= 8;
+	height		= 22;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 333;
+	uv_top		= 0;
+	uv_right	= 341;
+	uv_bottom	= 22;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfTabRight"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrCommon_1";
+
+	x		= 0;
+	y		= 0;
+	width		= 10;
+	height		= 22;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 343;
+	uv_top		= 0;
+	uv_right	= 353;
+	uv_bottom	= 22;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfTabFocLeft"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrCommon_1";
+
+	x		= 0;
+	y		= 0;
+	width		= 10;
+	height		= 22;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 354;
+	uv_top		= 0;
+	uv_right	= 364;
+	uv_bottom	= 22;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfTabFocCenter"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrCommon_1";
+
+	x		= 0;
+	y		= 0;
+	width		= 8;
+	height		= 22;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 366;
+	uv_top		= 0;
+	uv_right	= 374;
+	uv_bottom	= 22;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfTabFocRight"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrCommon_1";
+
+	x		= 0;
+	y		= 0;
+	width		= 10;
+	height		= 22;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 376;
+	uv_top		= 0;
+	uv_right	= 386;
+	uv_bottom	= 22;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfTabSelLeft"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrCommon_1";
+
+	x		= 0;
+	y		= 0;
+	width		= 10;
+	height		= 22;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 387;
+	uv_top		= 0;
+	uv_right	= 397;
+	uv_bottom	= 22;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfTabSelCenter"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrCommon_1";
+
+	x		= 0;
+	y		= 0;
+	width		= 8;
+	height		= 22;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 399;
+	uv_top		= 0;
+	uv_right	= 407;
+	uv_bottom	= 22;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfTabSelRight"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrCommon_1";
+
+	x		= 0;
+	y		= 0;
+	width		= 10;
+	height		= 22;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 409;
+	uv_top		= 0;
+	uv_right	= 419;
+	uv_bottom	= 22;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfTabLine"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrCommon_1";
+
+	x		= 0;
+	y		= 0;
+	width		= 3;
+	height		= 22;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 421;
+	uv_top		= 0;
+	uv_right	= 424;
+	uv_bottom	= 22;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfSlotFocusEffect"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrCommon_1";
+
+	x		= 0;
+	y		= 0;
+	width		= 36;
+	height		= 36;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 321;
+	uv_top		= 67;
+	uv_right	= 357;
+	uv_bottom	= 103;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfCommonBtnUp"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrCommon_1";
+
+	x		= 0;
+	y		= 0;
+	width		= 69;
+	height		= 23;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 347;
+	uv_top		= 164;
+	uv_right	= 416;
+	uv_bottom	= 187;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfCommonBtnFoc"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrCommon_1";
+
+	x		= 0;
+	y		= 0;
+	width		= 69;
+	height		= 23;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 417;
+	uv_top		= 164;
+	uv_right	= 486;
+	uv_bottom	= 187;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfCommonBtnDown"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrCommon_1";
+
+	x		= 0;
+	y		= 0;
+	width		= 69;
+	height		= 23;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 321;
+	uv_top		= 188;
+	uv_right	= 390;
+	uv_bottom	= 211;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfCommonBtnDis"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrCommon_1";
+
+	x		= 0;
+	y		= 0;
+	width		= 69;
+	height		= 23;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 424;
+	uv_top		= 106;
+	uv_right	= 493;
+	uv_bottom	= 129;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfSlotGrayedEffect"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrCommon_1";
+
+	x		= 0;
+	y		= 0;
+	width		= 32;
+	height		= 32;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 391;
+	uv_top		= 109;
+	uv_right	= 423;
+	uv_bottom	= 141;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfSlotDisableEffect"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrCommon_1";
+
+	x		= 0;
+	y		= 0;
+	width		= 32;
+	height		= 32;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 460;
+	uv_top		= 71;
+	uv_right	= 492;
+	uv_bottom	= 103;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfZennyMark"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrCommon_1";
+
+	x		= 0;
+	y		= 0;
+	width		= 13;
+	height		= 14;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 471;
+	uv_top		= 0;
+	uv_right	= 484;
+	uv_bottom	= 14;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfScrollPrevBtnUp"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrCommon_1";
+
+	x		= 0;
+	y		= 0;
+	width		= 12;
+	height		= 19;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 391;
+	uv_top		= 142;
+	uv_right	= 403;
+	uv_bottom	= 161;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfScrollPrevBtnFoc"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrCommon_1";
+
+	x		= 0;
+	y		= 0;
+	width		= 12;
+	height		= 19;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 404;
+	uv_top		= 142;
+	uv_right	= 416;
+	uv_bottom	= 161;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfScrollPrevBtnDown"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrCommon_1";
+
+	x		= 0;
+	y		= 0;
+	width		= 12;
+	height		= 19;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 417;
+	uv_top		= 142;
+	uv_right	= 429;
+	uv_bottom	= 161;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfScrollNextBtnUp"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrCommon_1";
+
+	x		= 0;
+	y		= 0;
+	width		= 12;
+	height		= 19;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 430;
+	uv_top		= 142;
+	uv_right	= 442;
+	uv_bottom	= 161;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfScrollNextBtnFoc"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrCommon_1";
+
+	x		= 0;
+	y		= 0;
+	width		= 12;
+	height		= 19;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 443;
+	uv_top		= 142;
+	uv_right	= 455;
+	uv_bottom	= 161;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfScrollNextBtnDown"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrCommon_1";
+
+	x		= 0;
+	y		= 0;
+	width		= 12;
+	height		= 19;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 456;
+	uv_top		= 142;
+	uv_right	= 468;
+	uv_bottom	= 161;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfScrollLayout"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrCommon_1";
+
+	x		= 0;
+	y		= 0;
+	width		= 12;
+	height		= 3;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 447;
+	uv_top		= 82;
+	uv_right	= 459;
+	uv_bottom	= 85;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfScrollLayout_2"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon";
+
+	x		= 0;
+	y		= 0;
+	width		= 12;
+	height		= 106;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 270;
+	uv_top		= 355;
+	uv_right	= 282;
+	uv_bottom	= 461;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfScrollSmall"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrCommon_1";
+
+	x		= 0;
+	y		= 0;
+	width		= 12;
+	height		= 26;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 347;
+	uv_top		= 133;
+	uv_right	= 359;
+	uv_bottom	= 159;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfScrollMedium"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrCommon_1";
+
+	x		= 0;
+	y		= 0;
+	width		= 12;
+	height		= 39;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 334;
+	uv_top		= 133;
+	uv_right	= 346;
+	uv_bottom	= 172;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfScrollLarge"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrCommon_1";
+
+	x		= 0;
+	y		= 0;
+	width		= 12;
+	height		= 52;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 321;
+	uv_top		= 133;
+	uv_right	= 333;
+	uv_bottom	= 185;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfBackLineTop"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrCommon_1";
+
+	x		= 9;
+	y		= 50;
+	width		= 303;
+	height		= 9;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 0;
+	uv_top		= 481;
+	uv_right	= 303;
+	uv_bottom	= 490;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfBackLineCenter"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrCommon_1";
+
+	x		= 9;
+	y		= 59;
+	width		= 303;
+	height		= 396;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 0;
+	uv_top		= 492;
+	uv_right	= 303;
+	uv_bottom	= 499;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfBackLineBottom"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrCommon_1";
+
+	x		= 9;
+	y		= 455;
+	width		= 303;
+	height		= 9;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 0;
+	uv_top		= 501;
+	uv_right	= 303;
+	uv_bottom	= 510;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfUpArrowBtnUp"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrCommon_1";
+
+	x		= 0;
+	y		= 0;
+	width		= 20;
+	height		= 20;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 423;
+	uv_top		= 50;
+	uv_right	= 443;
+	uv_bottom	= 70;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfUpArrowBtnFoc"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrCommon_1";
+
+	x		= 0;
+	y		= 0;
+	width		= 20;
+	height		= 20;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 444;
+	uv_top		= 50;
+	uv_right	= 464;
+	uv_bottom	= 70;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfUpArrowBtnDown"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrCommon_1";
+
+	x		= 0;
+	y		= 0;
+	width		= 20;
+	height		= 20;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 465;
+	uv_top		= 50;
+	uv_right	= 485;
+	uv_bottom	= 70;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfDownArrowBtnUp"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrCommon_1";
+
+	x		= 0;
+	y		= 0;
+	width		= 20;
+	height		= 20;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 486;
+	uv_top		= 50;
+	uv_right	= 506;
+	uv_bottom	= 70;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfDownArrowBtnFoc"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrCommon_1";
+
+	x		= 0;
+	y		= 0;
+	width		= 20;
+	height		= 20;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 391;
+	uv_top		= 67;
+	uv_right	= 411;
+	uv_bottom	= 87;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfDownArrowBtnDown"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrCommon_1";
+
+	x		= 0;
+	y		= 0;
+	width		= 20;
+	height		= 20;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 391;
+	uv_top		= 88;
+	uv_right	= 411;
+	uv_bottom	= 108;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfLeftArrowBtnUp"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrCommon_1";
+
+	x		= 0;
+	y		= 0;
+	width		= 33;
+	height		= 21;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 321;
+	uv_top		= 23;
+	uv_right	= 354;
+	uv_bottom	= 44;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfLeftArrowBtnFoc"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrCommon_1";
+
+	x		= 0;
+	y		= 0;
+	width		= 33;
+	height		= 21;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 355;
+	uv_top		= 23;
+	uv_right	= 388;
+	uv_bottom	= 44;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfLeftArrowBtnDown"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrCommon_1";
+
+	x		= 0;
+	y		= 0;
+	width		= 33;
+	height		= 21;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 389;
+	uv_top		= 23;
+	uv_right	= 422;
+	uv_bottom	= 44;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfRightArrowBtnUp"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrCommon_1";
+
+	x		= 0;
+	y		= 0;
+	width		= 33;
+	height		= 21;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 321;
+	uv_top		= 45;
+	uv_right	= 354;
+	uv_bottom	= 66;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfRightArrowBtnFoc"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrCommon_1";
+
+	x		= 0;
+	y		= 0;
+	width		= 33;
+	height		= 21;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 355;
+	uv_top		= 45;
+	uv_right	= 388;
+	uv_bottom	= 66;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfRightArrowBtnDown"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrCommon_1";
+
+	x		= 0;
+	y		= 0;
+	width		= 33;
+	height		= 21;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 389;
+	uv_top		= 45;
+	uv_right	= 422;
+	uv_bottom	= 66;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfBlackBack"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrCommon_1";
+
+	x		= 0;
+	y		= 0;
+	width		= 73;
+	height		= 20;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 426;
+	uv_top		= 15;
+	uv_right	= 499;
+	uv_bottom	= 35;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfZennyBtnUp"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrCommon_1";
+
+	x		= 0;
+	y		= 0;
+	width		= 23;
+	height		= 20;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 424;
+	uv_top		= 106;
+	uv_right	= 447;
+	uv_bottom	= 126;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfZennyBtnFoc"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrCommon_1";
+
+	x		= 0;
+	y		= 0;
+	width		= 23;
+	height		= 20;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 448;
+	uv_top		= 106;
+	uv_right	= 471;
+	uv_bottom	= 126;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfZennyBtnDown"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrCommon_1";
+
+	x		= 0;
+	y		= 0;
+	width		= 23;
+	height		= 20;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 472;
+	uv_top		= 106;
+	uv_right	= 495;
+	uv_bottom	= 126;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfIconSlotBack"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrMain";
+
+	x		= 0;
+	y		= 0;
+	width		= 34;
+	height		= 36;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 448;
+	uv_top		= 139;
+	uv_right	= 482;
+	uv_bottom	= 175;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfMine_fighter"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon";
+
+	x		= 0;
+	y		= 0;
+	width		= 23;
+	height		= 23;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 48;
+	uv_top		= 0;
+	uv_right	= 71;
+	uv_bottom	= 23;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfMine_Music"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon";
+
+	x		= 0;
+	y		= 0;
+	width		= 23;
+	height		= 23;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 72;
+	uv_top		= 0;
+	uv_right	= 95;
+	uv_bottom	= 23;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfMine_Club"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon";
+
+	x		= 0;
+	y		= 0;
+	width		= 23;
+	height		= 23;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 48;
+	uv_top		= 24;
+	uv_right	= 71;
+	uv_bottom	= 47;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfMine_Soul"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon";
+
+	x		= 0;
+	y		= 0;
+	width		= 23;
+	height		= 23;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 72;
+	uv_top		= 24;
+	uv_right	= 95;
+	uv_bottom	= 47;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfMine_Mask"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon";
+
+	x		= 0;
+	y		= 0;
+	width		= 23;
+	height		= 23;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 72;
+	uv_top		= 48;
+	uv_right	= 95;
+	uv_bottom	= 71;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfMine_Drum"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon";
+
+	x		= 0;
+	y		= 0;
+	width		= 23;
+	height		= 23;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 48;
+	uv_top		= 48;
+	uv_right	= 71;
+	uv_bottom	= 71;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfNamec_fighter"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon";
+
+	x		= 0;
+	y		= 0;
+	width		= 23;
+	height		= 23;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 0;
+	uv_top		= 0;
+	uv_right	= 23;
+	uv_bottom	= 23;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfNamec_Claw"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon";
+
+	x		= 0;
+	y		= 0;
+	width		= 23;
+	height		= 23;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 24;
+	uv_top		= 0;
+	uv_right	= 47;
+	uv_bottom	= 23;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfNamec_Axe"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon";
+
+	x		= 0;
+	y		= 0;
+	width		= 23;
+	height		= 23;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 0;
+	uv_top		= 24;
+	uv_right	= 23;
+	uv_bottom	= 47;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfNamec_staff"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon";
+
+	x		= 0;
+	y		= 0;
+	width		= 23;
+	height		= 23;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 24;
+	uv_top		= 24;
+	uv_right	= 47;
+	uv_bottom	= 47;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfNamec_Healer"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon";
+
+	x		= 0;
+	y		= 0;
+	width		= 23;
+	height		= 23;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 0;
+	uv_top		= 48;
+	uv_right	= 23;
+	uv_bottom	= 71;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfNamec_Sommon"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon";
+
+	x		= 0;
+	y		= 0;
+	width		= 23;
+	height		= 23;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 24;
+	uv_top		= 48;
+	uv_right	= 47;
+	uv_bottom	= 71;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfHuman_fighter"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon";
+
+	x		= 0;
+	y		= 0;
+	width		= 23;
+	height		= 23;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 96;
+	uv_top		= 0;
+	uv_right	= 119;
+	uv_bottom	= 23;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfHuman_stick"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon";
+
+	x		= 0;
+	y		= 0;
+	width		= 23;
+	height		= 23;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 120;
+	uv_top		= 0;
+	uv_right	= 143;
+	uv_bottom	= 23;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfHuman_sword"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon";
+
+	x		= 0;
+	y		= 0;
+	width		= 23;
+	height		= 23;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 96;
+	uv_top		= 24;
+	uv_right	= 119;
+	uv_bottom	= 47;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfHuman_kamehame"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon";
+
+	x		= 0;
+	y		= 0;
+	width		= 23;
+	height		= 23;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 120;
+	uv_top		= 24;
+	uv_right	= 143;
+	uv_bottom	= 47;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfHuman_wand"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon";
+
+	x		= 0;
+	y		= 0;
+	width		= 23;
+	height		= 23;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 96;
+	uv_top		= 48;
+	uv_right	= 119;
+	uv_bottom	= 71;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfHuman_fan"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon";
+
+	x		= 0;
+	y		= 0;
+	width		= 23;
+	height		= 23;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 96;
+	uv_top		= 72;
+	uv_right	= 119;
+	uv_bottom	= 95;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfHuman_long"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon";
+
+	x		= 0;
+	y		= 0;
+	width		= 23;
+	height		= 23;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 96;
+	uv_top		= 48;
+	uv_right	= 119;
+	uv_bottom	= 71;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfHuman_gun"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon";
+
+	x		= 0;
+	y		= 0;
+	width		= 23;
+	height		= 23;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 96;
+	uv_top		= 72;
+	uv_right	= 119;
+	uv_bottom	= 95;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfHuman_mechine"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon";
+
+	x		= 0;
+	y		= 0;
+	width		= 23;
+	height		= 23;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 96;
+	uv_top		= 96;
+	uv_right	= 119;
+	uv_bottom	= 119;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfMarkAvatar"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon";
+
+	x		= 0;
+	y		= 0;
+	width		= 17;
+	height		= 17;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 168;
+	uv_top		= 15;
+	uv_right	= 185;
+	uv_bottom	= 32;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfMarkMob"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon";
+
+	x		= 0;
+	y		= 0;
+	width		= 6;
+	height		= 6;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 179;
+	uv_top		= 33;
+	uv_right	= 185;
+	uv_bottom	= 39;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfMarkMobHaveDragonBall"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon";
+
+	x		= 0;
+	y		= 0;
+	width		= 14;
+	height		= 14;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 441;
+	uv_top		= 261;
+	uv_right	= 455;
+	uv_bottom	= 275;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfMarkPartyMember"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon";
+
+	x		= 0;
+	y		= 0;
+	width		= 10;
+	height		= 10;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 168;
+	uv_top		= 33;
+	uv_right	= 178;
+	uv_bottom	= 43;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfNewQuest"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon";
+
+	x		= 0;
+	y		= 0;
+	width		= 12;
+	height		= 14;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 186;
+	uv_top		= 15;
+	uv_right	= 198;
+	uv_bottom	= 29;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfProgressQuest"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon";
+
+	x		= 0;
+	y		= 0;
+	width		= 12;
+	height		= 14;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 199;
+	uv_top		= 15;
+	uv_right	= 211;
+	uv_bottom	= 29;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfRewardQuest"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon";
+
+	x		= 0;
+	y		= 0;
+	width		= 12;
+	height		= 14;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 212;
+	uv_top		= 15;
+	uv_right	= 224;
+	uv_bottom	= 29;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfWeaponMark"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon";
+
+	x		= 0;
+	y		= 0;
+	width		= 14;
+	height		= 14;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 168;
+	uv_top		= 0;
+	uv_right	= 182;
+	uv_bottom	= 14;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfArmorMark"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon";
+
+	x		= 0;
+	y		= 0;
+	width		= 14;
+	height		= 14;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 183;
+	uv_top		= 0;
+	uv_right	= 197;
+	uv_bottom	= 14;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfGoodsMark"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon";
+
+	x		= 0;
+	y		= 0;
+	width		= 14;
+	height		= 14;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 198;
+	uv_top		= 0;
+	uv_right	= 212;
+	uv_bottom	= 14;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfScouterMark"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon";
+
+	x		= 0;
+	y		= 0;
+	width		= 14;
+	height		= 14;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 213;
+	uv_top		= 0;
+	uv_right	= 227;
+	uv_bottom	= 14;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfBankMark"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon";
+
+	x		= 0;
+	y		= 0;
+	width		= 14;
+	height		= 14;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 228;
+	uv_top		= 0;
+	uv_right	= 242;
+	uv_bottom	= 14;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfTalkMark"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon";
+
+	x		= 0;
+	y		= 0;
+	width		= 14;
+	height		= 14;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 243;
+	uv_top		= 0;
+	uv_right	= 257;
+	uv_bottom	= 14;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfSpecialWeaponMark"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon";
+
+	x		= 0;
+	y		= 0;
+	width		= 14;
+	height		= 14;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 387;
+	uv_top		= 216;
+	uv_right	= 401;
+	uv_bottom	= 230;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfSpecialArmorMark"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon";
+
+	x		= 0;
+	y		= 0;
+	width		= 14;
+	height		= 14;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 402;
+	uv_top		= 216;
+	uv_right	= 416;
+	uv_bottom	= 230;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfSpecialGoodsMark"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon";
+
+	x		= 0;
+	y		= 0;
+	width		= 14;
+	height		= 14;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 417;
+	uv_top		= 216;
+	uv_right	= 431;
+	uv_bottom	= 230;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfSpecialScouterMark"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon";
+
+	x		= 0;
+	y		= 0;
+	width		= 14;
+	height		= 14;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 387;
+	uv_top		= 231;
+	uv_right	= 401;
+	uv_bottom	= 245;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfGuardMark"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon";
+
+	x		= 0;
+	y		= 0;
+	width		= 14;
+	height		= 14;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 402;
+	uv_top		= 231;
+	uv_right	= 416;
+	uv_bottom	= 245;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfGuildMark"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon";
+
+	x		= 0;
+	y		= 0;
+	width		= 14;
+	height		= 14;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 417;
+	uv_top		= 231;
+	uv_right	= 431;
+	uv_bottom	= 245;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfSubWeaponMark"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon";
+
+	x		= 0;
+	y		= 0;
+	width		= 14;
+	height		= 14;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 432;
+	uv_top		= 231;
+	uv_right	= 446;
+	uv_bottom	= 245;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfTrainerMark"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon";
+
+	x		= 0;
+	y		= 0;
+	width		= 14;
+	height		= 14;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 381;
+	uv_top		= 246;
+	uv_right	= 395;
+	uv_bottom	= 260;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfGrandTrainerMark"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon";
+
+	x		= 0;
+	y		= 0;
+	width		= 14;
+	height		= 14;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 396;
+	uv_top		= 246;
+	uv_right	= 410;
+	uv_bottom	= 260;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfDogiMark"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon";
+
+	x		= 0;
+	y		= 0;
+	width		= 14;
+	height		= 14;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 411;
+	uv_top		= 246;
+	uv_right	= 425;
+	uv_bottom	= 260;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfSpecialFoodsMark"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon";
+
+	x		= 0;
+	y		= 0;
+	width		= 14;
+	height		= 14;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 426;
+	uv_top		= 246;
+	uv_right	= 440;
+	uv_bottom	= 260;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfGateMark"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon";
+
+	x		= 0;
+	y		= 0;
+	width		= 14;
+	height		= 14;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 441;
+	uv_top		= 246;
+	uv_right	= 455;
+	uv_bottom	= 260;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfTMQMark"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon";
+
+	x		= 0;
+	y		= 0;
+	width		= 14;
+	height		= 14;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 411;
+	uv_top		= 261;
+	uv_right	= 425;
+	uv_bottom	= 275;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfScouterPowerGauge"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon";
+
+	x		= 0;
+	y		= 0;
+	width		= 120;
+	height		= 12;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 249;
+	uv_top		= 54;
+	uv_right	= 369;
+	uv_bottom	= 66;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfSlot"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon";
+
+	x		= 0;
+	y		= 0;
+	width		= 150;
+	height		= 36;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 283;
+	uv_top		= 444;
+	uv_right	= 433;
+	uv_bottom	= 480;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfScouterSliderBar"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon";
+
+	x		= 0;
+	y		= 0;
+	width		= 12;
+	height		= 26;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 374;
+	uv_top		= 216;
+	uv_right	= 386;
+	uv_bottom	= 242;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfHonest"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon2";
+
+	x		= 0;
+	y		= 0;
+	width		= 25;
+	height		= 25;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 0;
+	uv_top		= 305;
+	uv_right	= 25;
+	uv_bottom	= 330;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfHonestSmall"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon2";
+
+	x		= 0;
+	y		= 0;
+	width		= 19;
+	height		= 19;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 377;
+	uv_top		= 416;
+	uv_right	= 396;
+	uv_bottom	= 435;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfStrange"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon2";
+
+	x		= 0;
+	y		= 0;
+	width		= 25;
+	height		= 25;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 26;
+	uv_top		= 305;
+	uv_right	= 51;
+	uv_bottom	= 330;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfStrangeSmall"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon2";
+
+	x		= 0;
+	y		= 0;
+	width		= 19;
+	height		= 19;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 397;
+	uv_top		= 416;
+	uv_right	= 416;
+	uv_bottom	= 435;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfWild"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon2";
+
+	x		= 0;
+	y		= 0;
+	width		= 25;
+	height		= 25;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 52;
+	uv_top		= 305;
+	uv_right	= 77;
+	uv_bottom	= 330;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfWildSmall"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon2";
+
+	x		= 0;
+	y		= 0;
+	width		= 19;
+	height		= 19;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 211;
+	uv_top		= 411;
+	uv_right	= 230;
+	uv_bottom	= 430;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfElegance"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon2";
+
+	x		= 0;
+	y		= 0;
+	width		= 25;
+	height		= 25;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 78;
+	uv_top		= 305;
+	uv_right	= 103;
+	uv_bottom	= 330;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfEleganceSmall"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon2";
+
+	x		= 0;
+	y		= 0;
+	width		= 19;
+	height		= 19;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 191;
+	uv_top		= 411;
+	uv_right	= 210;
+	uv_bottom	= 430;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfFunny"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon2";
+
+	x		= 0;
+	y		= 0;
+	width		= 25;
+	height		= 25;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 104;
+	uv_top		= 305;
+	uv_right	= 129;
+	uv_bottom	= 330;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfFunnySmall"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon2";
+
+	x		= 0;
+	y		= 0;
+	width		= 19;
+	height		= 19;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 171;
+	uv_top		= 411;
+	uv_right	= 190;
+	uv_bottom	= 430;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfNone"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon2";
+
+	x		= 0;
+	y		= 0;
+	width		= 25;
+	height		= 25;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 391;
+	uv_top		= 436;
+	uv_right	= 416;
+	uv_bottom	= 461;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfNoneSmall"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon2";
+
+	x		= 0;
+	y		= 0;
+	width		= 19;
+	height		= 19;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 417;
+	uv_top		= 448;
+	uv_right	= 436;
+	uv_bottom	= 467;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfRaceInsect"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon2";
+
+	x		= 0;
+	y		= 0;
+	width		= 42;
+	height		= 42;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 0;
+	uv_top		= 176;
+	uv_right	= 42;
+	uv_bottom	= 218;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfRacePlant"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon2";
+
+	x		= 0;
+	y		= 0;
+	width		= 42;
+	height		= 42;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 43;
+	uv_top		= 176;
+	uv_right	= 85;
+	uv_bottom	= 218;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfRaceUndead"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon2";
+
+	x		= 0;
+	y		= 0;
+	width		= 42;
+	height		= 42;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 86;
+	uv_top		= 176;
+	uv_right	= 128;
+	uv_bottom	= 218;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfRaceAndroid"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon2";
+
+	x		= 0;
+	y		= 0;
+	width		= 42;
+	height		= 42;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 129;
+	uv_top		= 176;
+	uv_right	= 171;
+	uv_bottom	= 218;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfRaceRobot"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon2";
+
+	x		= 0;
+	y		= 0;
+	width		= 42;
+	height		= 42;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 172;
+	uv_top		= 176;
+	uv_right	= 214;
+	uv_bottom	= 218;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfRaceDragon"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon2";
+
+	x		= 0;
+	y		= 0;
+	width		= 42;
+	height		= 42;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 0;
+	uv_top		= 219;
+	uv_right	= 42;
+	uv_bottom	= 261;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfRaceDevil"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon2";
+
+	x		= 0;
+	y		= 0;
+	width		= 42;
+	height		= 42;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 43;
+	uv_top		= 219;
+	uv_right	= 85;
+	uv_bottom	= 261;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfRaceDinosaur"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon2";
+
+	x		= 0;
+	y		= 0;
+	width		= 42;
+	height		= 42;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 86;
+	uv_top		= 219;
+	uv_right	= 128;
+	uv_bottom	= 261;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfRaceAlien"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon2";
+
+	x		= 0;
+	y		= 0;
+	width		= 42;
+	height		= 42;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 129;
+	uv_top		= 219;
+	uv_right	= 171;
+	uv_bottom	= 261;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfRaceHumanAnimal"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon2";
+
+	x		= 0;
+	y		= 0;
+	width		= 42;
+	height		= 42;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 172;
+	uv_top		= 219;
+	uv_right	= 214;
+	uv_bottom	= 261;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfRaceAnimal"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon2";
+
+	x		= 0;
+	y		= 0;
+	width		= 42;
+	height		= 42;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 0;
+	uv_top		= 262;
+	uv_right	= 42;
+	uv_bottom	= 304;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfRaceHuman"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon2";
+
+	x		= 0;
+	y		= 0;
+	width		= 42;
+	height		= 42;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 43;
+	uv_top		= 262;
+	uv_right	= 85;
+	uv_bottom	= 304;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfRaceNamek"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon2";
+
+	x		= 0;
+	y		= 0;
+	width		= 42;
+	height		= 42;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 86;
+	uv_top		= 262;
+	uv_right	= 128;
+	uv_bottom	= 304;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfRaceMajin"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon2";
+
+	x		= 0;
+	y		= 0;
+	width		= 42;
+	height		= 42;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 129;
+	uv_top		= 262;
+	uv_right	= 171;
+	uv_bottom	= 304;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfGradeSuper"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon2";
+
+	x		= 0;
+	y		= 0;
+	width		= 57;
+	height		= 21;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 0;
+	uv_top		= 132;
+	uv_right	= 57;
+	uv_bottom	= 153;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfGradeUltra"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon2";
+
+	x		= 0;
+	y		= 0;
+	width		= 57;
+	height		= 21;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 58;
+	uv_top		= 132;
+	uv_right	= 115;
+	uv_bottom	= 153;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfGradeBoss"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon2";
+
+	x		= 0;
+	y		= 0;
+	width		= 57;
+	height		= 21;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 0;
+	uv_top		= 154;
+	uv_right	= 57;
+	uv_bottom	= 175;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfGradeHero"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon2";
+
+	x		= 0;
+	y		= 0;
+	width		= 57;
+	height		= 21;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 58;
+	uv_top		= 154;
+	uv_right	= 115;
+	uv_bottom	= 175;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfRBGauge1Back"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrStatus1";
+
+	x		= 0;
+	y		= 0;
+	width		= 106;
+	height		= 9;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 361;
+	uv_top		= 168;
+	uv_right	= 467;
+	uv_bottom	= 177;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfRBGauge2Back"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrStatus1";
+
+	x		= 0;
+	y		= 0;
+	width		= 106;
+	height		= 9;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 361;
+	uv_top		= 188;
+	uv_right	= 467;
+	uv_bottom	= 197;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfRBGauge1"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrStatus1";
+
+	x		= 0;
+	y		= 0;
+	width		= 106;
+	height		= 9;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 361;
+	uv_top		= 158;
+	uv_right	= 467;
+	uv_bottom	= 167;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfRBGauge2"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrStatus1";
+
+	x		= 0;
+	y		= 0;
+	width		= 106;
+	height		= 9;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 361;
+	uv_top		= 178;
+	uv_right	= 467;
+	uv_bottom	= 187;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfBtnDiscardFoc"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon2";
+
+	x		= 0;
+	y		= 0;
+	width		= 29;
+	height		= 30;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 201;
+	uv_top		= 0;
+	uv_right	= 230;
+	uv_bottom	= 30;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfWeaponMerchantIcon"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon2";
+
+	x		= 0;
+	y		= 0;
+	width		= 25;
+	height		= 25;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 68;
+	uv_top		= 331;
+	uv_right	= 93;
+	uv_bottom	= 356;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfArmorMerchantIcon"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon2";
+
+	x		= 0;
+	y		= 0;
+	width		= 25;
+	height		= 25;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 94;
+	uv_top		= 331;
+	uv_right	= 119;
+	uv_bottom	= 356;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfMiscMerchantIcon"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon2";
+
+	x		= 0;
+	y		= 0;
+	width		= 25;
+	height		= 25;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 68;
+	uv_top		= 357;
+	uv_right	= 93;
+	uv_bottom	= 382;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfScouterMerchantIcon"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon2";
+
+	x		= 0;
+	y		= 0;
+	width		= 25;
+	height		= 25;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 94;
+	uv_top		= 357;
+	uv_right	= 119;
+	uv_bottom	= 382;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfWareHouseIcon"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon2";
+
+	x		= 0;
+	y		= 0;
+	width		= 25;
+	height		= 25;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 0;
+	uv_top		= 393;
+	uv_right	= 25;
+	uv_bottom	= 418;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfGuildIcon"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon2";
+
+	x		= 0;
+	y		= 0;
+	width		= 25;
+	height		= 25;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 208;
+	uv_top		= 385;
+	uv_right	= 233;
+	uv_bottom	= 410;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfTalkerIcon"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon2";
+
+	x		= 0;
+	y		= 0;
+	width		= 25;
+	height		= 25;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 26;
+	uv_top		= 393;
+	uv_right	= 51;
+	uv_bottom	= 418;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfGuardIcon"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon2";
+
+	x		= 0;
+	y		= 0;
+	width		= 25;
+	height		= 25;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 182;
+	uv_top		= 385;
+	uv_right	= 207;
+	uv_bottom	= 410;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfSkillMasterIcon"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon2";
+
+	x		= 0;
+	y		= 0;
+	width		= 25;
+	height		= 25;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 364;
+	uv_top		= 385;
+	uv_right	= 389;
+	uv_bottom	= 410;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfGrandSkillMasterIcon"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon2";
+
+	x		= 0;
+	y		= 0;
+	width		= 25;
+	height		= 25;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 156;
+	uv_top		= 385;
+	uv_right	= 181;
+	uv_bottom	= 410;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfDogiMerchantIcon"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon2";
+
+	x		= 0;
+	y		= 0;
+	width		= 25;
+	height		= 25;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 260;
+	uv_top		= 385;
+	uv_right	= 285;
+	uv_bottom	= 410;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfSPWeaponMerchantIcon"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon2";
+
+	x		= 0;
+	y		= 0;
+	width		= 25;
+	height		= 25;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 52;
+	uv_top		= 393;
+	uv_right	= 77;
+	uv_bottom	= 418;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfSPArmorMerchantIcon"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon2";
+
+	x		= 0;
+	y		= 0;
+	width		= 25;
+	height		= 25;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 78;
+	uv_top		= 385;
+	uv_right	= 103;
+	uv_bottom	= 410;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfSPMiscMerchantIcon"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon2";
+
+	x		= 0;
+	y		= 0;
+	width		= 25;
+	height		= 25;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 104;
+	uv_top		= 385;
+	uv_right	= 129;
+	uv_bottom	= 410;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfSPScouterMerchantIcon"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon2";
+
+	x		= 0;
+	y		= 0;
+	width		= 25;
+	height		= 25;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 130;
+	uv_top		= 385;
+	uv_right	= 155;
+	uv_bottom	= 410;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfSPFoodMerchantIcon"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon2";
+
+	x		= 0;
+	y		= 0;
+	width		= 25;
+	height		= 25;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 286;
+	uv_top		= 385;
+	uv_right	= 311;
+	uv_bottom	= 410;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfSubWeaponMerchantIcon"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon2";
+
+	x		= 0;
+	y		= 0;
+	width		= 25;
+	height		= 25;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 234;
+	uv_top		= 385;
+	uv_right	= 259;
+	uv_bottom	= 410;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfKeeperIcon"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon2";
+
+	x		= 0;
+	y		= 0;
+	width		= 25;
+	height		= 25;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 312;
+	uv_top		= 385;
+	uv_right	= 337;
+	uv_bottom	= 410;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfTimeMachineIcon"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon2";
+
+	x		= 0;
+	y		= 0;
+	width		= 25;
+	height		= 25;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 338;
+	uv_top		= 385;
+	uv_right	= 363;
+	uv_bottom	= 410;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfSideRBC"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon2";
+
+	x		= 0;
+	y		= 0;
+	width		= 42;
+	height		= 35;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 470;
+	uv_top		= 34;
+	uv_right	= 512;
+	uv_bottom	= 69;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfSideRTC"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon2";
+
+	x		= 0;
+	y		= 0;
+	width		= 20;
+	height		= 25;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 492;
+	uv_top		= 0;
+	uv_right	= 512;
+	uv_bottom	= 25;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfSideLTC"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon2";
+
+	x		= 0;
+	y		= 0;
+	width		= 22;
+	height		= 25;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 231;
+	uv_top		= 0;
+	uv_right	= 253;
+	uv_bottom	= 25;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfSideLBC"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon2";
+
+	x		= 0;
+	y		= 0;
+	width		= 21;
+	height		= 35;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 231;
+	uv_top		= 34;
+	uv_right	= 252;
+	uv_bottom	= 69;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfSideLL"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon2";
+
+	x		= 0;
+	y		= 0;
+	width		= 7;
+	height		= 5;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 231;
+	uv_top		= 27;
+	uv_right	= 238;
+	uv_bottom	= 32;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfSideBL"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon2";
+
+	x		= 0;
+	y		= 0;
+	width		= 3;
+	height		= 35;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 330;
+	uv_top		= 34;
+	uv_right	= 333;
+	uv_bottom	= 69;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfSideTL"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon2";
+
+	x		= 0;
+	y		= 0;
+	width		= 3;
+	height		= 25;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 330;
+	uv_top		= 0;
+	uv_right	= 333;
+	uv_bottom	= 25;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfSideRL"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon2";
+
+	x		= 0;
+	y		= 0;
+	width		= 7;
+	height		= 5;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 505;
+	uv_top		= 27;
+	uv_right	= 512;
+	uv_bottom	= 32;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfSideCenter"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon2";
+
+	x		= 0;
+	y		= 0;
+	width		= 4;
+	height		= 4;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 330;
+	uv_top		= 27;
+	uv_right	= 334;
+	uv_bottom	= 31;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfSideCloseUp"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon";
+
+	x		= 0;
+	y		= 0;
+	width		= 9;
+	height		= 8;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 493;
+	uv_top		= 66;
+	uv_right	= 502;
+	uv_bottom	= 74;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfSideCloseFocus"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon";
+
+	x		= 0;
+	y		= 0;
+	width		= 9;
+	height		= 8;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 493;
+	uv_top		= 75;
+	uv_right	= 502;
+	uv_bottom	= 83;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfSideCloseDown"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon";
+
+	x		= 0;
+	y		= 0;
+	width		= 9;
+	height		= 8;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 493;
+	uv_top		= 84;
+	uv_right	= 502;
+	uv_bottom	= 92;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfFritzSlotEffect"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon";
+
+	x		= 0;
+	y		= 0;
+	width		= 32;
+	height		= 32;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 231;
+	uv_top		= 277;
+	uv_right	= 263;
+	uv_bottom	= 309;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfNumTMQStage_0"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon2";
+
+	x		= 0;
+	y		= 0;
+	width		= 9;
+	height		= 9;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 0;
+	uv_top		= 419;
+	uv_right	= 9;
+	uv_bottom	= 428;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfNumTMQStage_1"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon2";
+
+	x		= 0;
+	y		= 0;
+	width		= 9;
+	height		= 9;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 10;
+	uv_top		= 419;
+	uv_right	= 19;
+	uv_bottom	= 428;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfNumTMQStage_2"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon2";
+
+	x		= 0;
+	y		= 0;
+	width		= 9;
+	height		= 9;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 20;
+	uv_top		= 419;
+	uv_right	= 29;
+	uv_bottom	= 428;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfNumTMQStage_3"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon2";
+
+	x		= 0;
+	y		= 0;
+	width		= 9;
+	height		= 9;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 30;
+	uv_top		= 419;
+	uv_right	= 39;
+	uv_bottom	= 428;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfNumTMQStage_4"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon2";
+
+	x		= 0;
+	y		= 0;
+	width		= 9;
+	height		= 9;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 40;
+	uv_top		= 419;
+	uv_right	= 49;
+	uv_bottom	= 428;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfNumTMQStage_5"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon2";
+
+	x		= 0;
+	y		= 0;
+	width		= 9;
+	height		= 9;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 50;
+	uv_top		= 419;
+	uv_right	= 59;
+	uv_bottom	= 428;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfNumTMQStage_6"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon2";
+
+	x		= 0;
+	y		= 0;
+	width		= 9;
+	height		= 9;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 60;
+	uv_top		= 419;
+	uv_right	= 69;
+	uv_bottom	= 428;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfNumTMQStage_7"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon2";
+
+	x		= 0;
+	y		= 0;
+	width		= 9;
+	height		= 9;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 70;
+	uv_top		= 419;
+	uv_right	= 79;
+	uv_bottom	= 428;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfNumTMQStage_8"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon2";
+
+	x		= 0;
+	y		= 0;
+	width		= 9;
+	height		= 9;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 80;
+	uv_top		= 419;
+	uv_right	= 89;
+	uv_bottom	= 428;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfNumTMQStage_9"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon2";
+
+	x		= 0;
+	y		= 0;
+	width		= 9;
+	height		= 9;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 90;
+	uv_top		= 419;
+	uv_right	= 99;
+	uv_bottom	= 428;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfMinuteNumber_Colon"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon2";
+
+	x		= 0;
+	y		= 0;
+	width		= 22;
+	height		= 39;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 490;
+	uv_top		= 305;
+	uv_right	= 512;
+	uv_bottom	= 344;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfMinuteNumber_9"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon2";
+
+	x		= 0;
+	y		= 0;
+	width		= 34;
+	height		= 39;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 140;
+	uv_top		= 305;
+	uv_right	= 175;
+	uv_bottom	= 344;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfMinuteNumber_8"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon2";
+
+	x		= 0;
+	y		= 0;
+	width		= 34;
+	height		= 39;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 176;
+	uv_top		= 305;
+	uv_right	= 210;
+	uv_bottom	= 344;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfMinuteNumber_7"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon2";
+
+	x		= 0;
+	y		= 0;
+	width		= 34;
+	height		= 39;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 211;
+	uv_top		= 305;
+	uv_right	= 245;
+	uv_bottom	= 344;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfMinuteNumber_6"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon2";
+
+	x		= 0;
+	y		= 0;
+	width		= 34;
+	height		= 39;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 246;
+	uv_top		= 305;
+	uv_right	= 280;
+	uv_bottom	= 344;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfMinuteNumber_5"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon2";
+
+	x		= 0;
+	y		= 0;
+	width		= 34;
+	height		= 39;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 281;
+	uv_top		= 305;
+	uv_right	= 315;
+	uv_bottom	= 344;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfMinuteNumber_4"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon2";
+
+	x		= 0;
+	y		= 0;
+	width		= 34;
+	height		= 39;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 316;
+	uv_top		= 305;
+	uv_right	= 350;
+	uv_bottom	= 344;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfMinuteNumber_3"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon2";
+
+	x		= 0;
+	y		= 0;
+	width		= 34;
+	height		= 39;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 351;
+	uv_top		= 305;
+	uv_right	= 385;
+	uv_bottom	= 344;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfMinuteNumber_2"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon2";
+
+	x		= 0;
+	y		= 0;
+	width		= 34;
+	height		= 39;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 386;
+	uv_top		= 305;
+	uv_right	= 420;
+	uv_bottom	= 344;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfMinuteNumber_1"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon2";
+
+	x		= 0;
+	y		= 0;
+	width		= 34;
+	height		= 39;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 421;
+	uv_top		= 305;
+	uv_right	= 455;
+	uv_bottom	= 344;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfMinuteNumber_0"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon2";
+
+	x		= 0;
+	y		= 0;
+	width		= 34;
+	height		= 39;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 456;
+	uv_top		= 305;
+	uv_right	= 490;
+	uv_bottom	= 344;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfMinuteNumber_Plus"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon2";
+
+	x		= 0;
+	y		= 0;
+	width		= 34;
+	height		= 39;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 88;
+	uv_top		= 44;
+	uv_right	= 122;
+	uv_bottom	= 83;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfSecondNumber_Colon"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon2";
+
+	x		= 0;
+	y		= 0;
+	width		= 22;
+	height		= 39;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 490;
+	uv_top		= 345;
+	uv_right	= 512;
+	uv_bottom	= 384;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfSecondNumber_9"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon2";
+
+	x		= 0;
+	y		= 0;
+	width		= 34;
+	height		= 39;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 140;
+	uv_top		= 345;
+	uv_right	= 174;
+	uv_bottom	= 384;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfSecondNumber_8"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon2";
+
+	x		= 0;
+	y		= 0;
+	width		= 34;
+	height		= 39;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 175;
+	uv_top		= 345;
+	uv_right	= 209;
+	uv_bottom	= 384;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfSecondNumber_7"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon2";
+
+	x		= 0;
+	y		= 0;
+	width		= 34;
+	height		= 39;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 210;
+	uv_top		= 345;
+	uv_right	= 244;
+	uv_bottom	= 384;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfSecondNumber_6"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon2";
+
+	x		= 0;
+	y		= 0;
+	width		= 34;
+	height		= 39;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 245;
+	uv_top		= 345;
+	uv_right	= 279;
+	uv_bottom	= 384;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfSecondNumber_5"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon2";
+
+	x		= 0;
+	y		= 0;
+	width		= 34;
+	height		= 39;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 280;
+	uv_top		= 345;
+	uv_right	= 314;
+	uv_bottom	= 384;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfSecondNumber_4"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon2";
+
+	x		= 0;
+	y		= 0;
+	width		= 34;
+	height		= 39;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 315;
+	uv_top		= 345;
+	uv_right	= 349;
+	uv_bottom	= 384;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfSecondNumber_3"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon2";
+
+	x		= 0;
+	y		= 0;
+	width		= 34;
+	height		= 39;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 350;
+	uv_top		= 345;
+	uv_right	= 384;
+	uv_bottom	= 384;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfSecondNumber_2"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon2";
+
+	x		= 0;
+	y		= 0;
+	width		= 34;
+	height		= 39;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 385;
+	uv_top		= 345;
+	uv_right	= 419;
+	uv_bottom	= 384;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfSecondNumber_1"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon2";
+
+	x		= 0;
+	y		= 0;
+	width		= 34;
+	height		= 39;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 420;
+	uv_top		= 345;
+	uv_right	= 454;
+	uv_bottom	= 384;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfSecondNumber_0"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon2";
+
+	x		= 0;
+	y		= 0;
+	width		= 34;
+	height		= 39;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 455;
+	uv_top		= 345;
+	uv_right	= 489;
+	uv_bottom	= 384;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfHuman_Fighter"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon2";
+
+	x		= 0;
+	y		= 0;
+	width		= 19;
+	height		= 19;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 453;
+	uv_top		= 224;
+	uv_right	= 472;
+	uv_bottom	= 243;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfStreet_Fighter"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon2";
+
+	x		= 0;
+	y		= 0;
+	width		= 19;
+	height		= 19;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 473;
+	uv_top		= 224;
+	uv_right	= 492;
+	uv_bottom	= 243;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfSword_Master"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon2";
+
+	x		= 0;
+	y		= 0;
+	width		= 19;
+	height		= 19;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 493;
+	uv_top		= 224;
+	uv_right	= 512;
+	uv_bottom	= 243;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfHuman_Mystic"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon2";
+
+	x		= 0;
+	y		= 0;
+	width		= 19;
+	height		= 19;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 453;
+	uv_top		= 244;
+	uv_right	= 472;
+	uv_bottom	= 263;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfCrane_Roshi"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon2";
+
+	x		= 0;
+	y		= 0;
+	width		= 19;
+	height		= 19;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 473;
+	uv_top		= 244;
+	uv_right	= 492;
+	uv_bottom	= 263;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfTurtle_Roshi"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon2";
+
+	x		= 0;
+	y		= 0;
+	width		= 19;
+	height		= 19;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 493;
+	uv_top		= 244;
+	uv_right	= 512;
+	uv_bottom	= 263;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfHuman_Engineer"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon2";
+
+	x		= 0;
+	y		= 0;
+	width		= 19;
+	height		= 19;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 453;
+	uv_top		= 264;
+	uv_right	= 472;
+	uv_bottom	= 283;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfGun_Mania"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon2";
+
+	x		= 0;
+	y		= 0;
+	width		= 19;
+	height		= 19;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 473;
+	uv_top		= 264;
+	uv_right	= 492;
+	uv_bottom	= 283;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfMech_Mania"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon2";
+
+	x		= 0;
+	y		= 0;
+	width		= 19;
+	height		= 19;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 493;
+	uv_top		= 264;
+	uv_right	= 512;
+	uv_bottom	= 283;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfNamek_Fighter"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon2";
+
+	x		= 0;
+	y		= 0;
+	width		= 19;
+	height		= 19;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 453;
+	uv_top		= 144;
+	uv_right	= 472;
+	uv_bottom	= 163;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfDark_Warrior"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon2";
+
+	x		= 0;
+	y		= 0;
+	width		= 19;
+	height		= 19;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 473;
+	uv_top		= 144;
+	uv_right	= 492;
+	uv_bottom	= 163;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfShadow_Knight"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon2";
+
+	x		= 0;
+	y		= 0;
+	width		= 19;
+	height		= 19;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 493;
+	uv_top		= 144;
+	uv_right	= 512;
+	uv_bottom	= 163;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfNamek_Mystic"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon2";
+
+	x		= 0;
+	y		= 0;
+	width		= 19;
+	height		= 19;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 453;
+	uv_top		= 164;
+	uv_right	= 472;
+	uv_bottom	= 183;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfDenden_Healer"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon2";
+
+	x		= 0;
+	y		= 0;
+	width		= 19;
+	height		= 19;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 473;
+	uv_top		= 164;
+	uv_right	= 492;
+	uv_bottom	= 183;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfPoco_Summoner"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon2";
+
+	x		= 0;
+	y		= 0;
+	width		= 19;
+	height		= 19;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 493;
+	uv_top		= 164;
+	uv_right	= 512;
+	uv_bottom	= 183;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfMighty_Majin"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon2";
+
+	x		= 0;
+	y		= 0;
+	width		= 19;
+	height		= 19;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 453;
+	uv_top		= 184;
+	uv_right	= 472;
+	uv_bottom	= 203;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfGrand_Ma"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon2";
+
+	x		= 0;
+	y		= 0;
+	width		= 19;
+	height		= 19;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 493;
+	uv_top		= 184;
+	uv_right	= 512;
+	uv_bottom	= 203;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfUlti_Ma"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon2";
+
+	x		= 0;
+	y		= 0;
+	width		= 19;
+	height		= 19;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 473;
+	uv_top		= 184;
+	uv_right	= 492;
+	uv_bottom	= 203;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfWonder_Majin"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon2";
+
+	x		= 0;
+	y		= 0;
+	width		= 19;
+	height		= 19;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 453;
+	uv_top		= 204;
+	uv_right	= 472;
+	uv_bottom	= 223;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfPlas_Ma"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon2";
+
+	x		= 0;
+	y		= 0;
+	width		= 19;
+	height		= 19;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 473;
+	uv_top		= 204;
+	uv_right	= 492;
+	uv_bottom	= 223;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfKar_Ma"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon2";
+
+	x		= 0;
+	y		= 0;
+	width		= 19;
+	height		= 19;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 493;
+	uv_top		= 204;
+	uv_right	= 512;
+	uv_bottom	= 223;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfHuman_Fighter_Out"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon";
+
+	x		= 0;
+	y		= 0;
+	width		= 25;
+	height		= 25;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 435;
+	uv_top		= 125;
+	uv_right	= 460;
+	uv_bottom	= 150;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfStreet_Fighter_Out"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon";
+
+	x		= 0;
+	y		= 0;
+	width		= 25;
+	height		= 25;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 461;
+	uv_top		= 125;
+	uv_right	= 486;
+	uv_bottom	= 150;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfSword_Master_Out"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon";
+
+	x		= 0;
+	y		= 0;
+	width		= 25;
+	height		= 25;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 435;
+	uv_top		= 151;
+	uv_right	= 460;
+	uv_bottom	= 176;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfHuman_Mystic_Out"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon";
+
+	x		= 0;
+	y		= 0;
+	width		= 25;
+	height		= 25;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 461;
+	uv_top		= 151;
+	uv_right	= 486;
+	uv_bottom	= 176;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfCrane_Roshi_Out"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon";
+
+	x		= 0;
+	y		= 0;
+	width		= 25;
+	height		= 25;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 435;
+	uv_top		= 177;
+	uv_right	= 460;
+	uv_bottom	= 202;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfTurtle_Roshi_Out"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon";
+
+	x		= 0;
+	y		= 0;
+	width		= 25;
+	height		= 25;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 461;
+	uv_top		= 177;
+	uv_right	= 486;
+	uv_bottom	= 202;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfHuman_Engineer_Out"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon";
+
+	x		= 0;
+	y		= 0;
+	width		= 25;
+	height		= 25;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 447;
+	uv_top		= 203;
+	uv_right	= 472;
+	uv_bottom	= 228;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfGun_Mania_Out"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon";
+
+	x		= 0;
+	y		= 0;
+	width		= 25;
+	height		= 25;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 456;
+	uv_top		= 229;
+	uv_right	= 481;
+	uv_bottom	= 254;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfMech_Mania_Out"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon";
+
+	x		= 0;
+	y		= 0;
+	width		= 25;
+	height		= 25;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 482;
+	uv_top		= 229;
+	uv_right	= 507;
+	uv_bottom	= 254;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfNamek_Fighter_Out"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon";
+
+	x		= 0;
+	y		= 0;
+	width		= 25;
+	height		= 25;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 0;
+	uv_top		= 0;
+	uv_right	= 25;
+	uv_bottom	= 25;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfDark_Warrior_Out"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon";
+
+	x		= 0;
+	y		= 0;
+	width		= 25;
+	height		= 25;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 26;
+	uv_top		= 0;
+	uv_right	= 51;
+	uv_bottom	= 25;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfShadow_Knight_Out"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon";
+
+	x		= 0;
+	y		= 0;
+	width		= 25;
+	height		= 25;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 52;
+	uv_top		= 0;
+	uv_right	= 77;
+	uv_bottom	= 25;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfNamek_Mystic_Out"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon";
+
+	x		= 0;
+	y		= 0;
+	width		= 25;
+	height		= 25;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 78;
+	uv_top		= 0;
+	uv_right	= 103;
+	uv_bottom	= 25;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfDenden_Healer_Out"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon";
+
+	x		= 0;
+	y		= 0;
+	width		= 25;
+	height		= 25;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 104;
+	uv_top		= 0;
+	uv_right	= 129;
+	uv_bottom	= 25;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfPoco_Summoner_Out"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon";
+
+	x		= 0;
+	y		= 0;
+	width		= 25;
+	height		= 25;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 130;
+	uv_top		= 0;
+	uv_right	= 155;
+	uv_bottom	= 25;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfMighty_Majin_Out"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon";
+
+	x		= 0;
+	y		= 0;
+	width		= 25;
+	height		= 25;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 0;
+	uv_top		= 26;
+	uv_right	= 25;
+	uv_bottom	= 51;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfGrand_Ma_Out"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon";
+
+	x		= 0;
+	y		= 0;
+	width		= 25;
+	height		= 25;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 52;
+	uv_top		= 26;
+	uv_right	= 77;
+	uv_bottom	= 51;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfUlti_Ma_Out"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon";
+
+	x		= 0;
+	y		= 0;
+	width		= 25;
+	height		= 25;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 26;
+	uv_top		= 26;
+	uv_right	= 51;
+	uv_bottom	= 51;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfWonder_Majin_Out"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon";
+
+	x		= 0;
+	y		= 0;
+	width		= 25;
+	height		= 25;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 78;
+	uv_top		= 26;
+	uv_right	= 103;
+	uv_bottom	= 51;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfPlas_Ma_Out"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon";
+
+	x		= 0;
+	y		= 0;
+	width		= 25;
+	height		= 25;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 104;
+	uv_top		= 26;
+	uv_right	= 129;
+	uv_bottom	= 51;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfKar_Ma_Out"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon";
+
+	x		= 0;
+	y		= 0;
+	width		= 25;
+	height		= 25;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 130;
+	uv_top		= 26;
+	uv_right	= 155;
+	uv_bottom	= 51;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfWeapon_Merchant"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon";
+
+	x		= 0;
+	y		= 0;
+	width		= 14;
+	height		= 14;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 168;
+	uv_top		= 0;
+	uv_right	= 182;
+	uv_bottom	= 14;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfArmor_Merchant"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon";
+
+	x		= 0;
+	y		= 0;
+	width		= 14;
+	height		= 14;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 183;
+	uv_top		= 0;
+	uv_right	= 197;
+	uv_bottom	= 14;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfGoods_Merchant"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon";
+
+	x		= 0;
+	y		= 0;
+	width		= 14;
+	height		= 14;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 198;
+	uv_top		= 0;
+	uv_right	= 212;
+	uv_bottom	= 14;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfScouter_Merchant"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon";
+
+	x		= 0;
+	y		= 0;
+	width		= 14;
+	height		= 14;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 213;
+	uv_top		= 0;
+	uv_right	= 227;
+	uv_bottom	= 14;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfGuard"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon";
+
+	x		= 0;
+	y		= 0;
+	width		= 14;
+	height		= 14;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 402;
+	uv_top		= 231;
+	uv_right	= 416;
+	uv_bottom	= 245;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfSkill_Trainer"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon";
+
+	x		= 0;
+	y		= 0;
+	width		= 14;
+	height		= 14;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 381;
+	uv_top		= 246;
+	uv_right	= 395;
+	uv_bottom	= 260;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfBanker"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon";
+
+	x		= 0;
+	y		= 0;
+	width		= 14;
+	height		= 14;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 228;
+	uv_top		= 0;
+	uv_right	= 242;
+	uv_bottom	= 14;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfTalker"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon";
+
+	x		= 0;
+	y		= 0;
+	width		= 14;
+	height		= 14;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 243;
+	uv_top		= 0;
+	uv_right	= 257;
+	uv_bottom	= 14;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfGuild_Manager"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon";
+
+	x		= 0;
+	y		= 0;
+	width		= 14;
+	height		= 14;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 417;
+	uv_top		= 231;
+	uv_right	= 431;
+	uv_bottom	= 245;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfSummon_Pet"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon";
+
+	x		= 0;
+	y		= 0;
+	width		= 14;
+	height		= 14;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 447;
+	uv_top		= 229;
+	uv_right	= 455;
+	uv_bottom	= 244;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfDogi_Merchant"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon";
+
+	x		= 0;
+	y		= 0;
+	width		= 14;
+	height		= 14;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 411;
+	uv_top		= 246;
+	uv_right	= 425;
+	uv_bottom	= 260;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfSpecial_Weapon_Merchant"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon";
+
+	x		= 0;
+	y		= 0;
+	width		= 14;
+	height		= 14;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 387;
+	uv_top		= 216;
+	uv_right	= 401;
+	uv_bottom	= 230;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfSpecial_Armor_Merchant"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon";
+
+	x		= 0;
+	y		= 0;
+	width		= 14;
+	height		= 14;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 402;
+	uv_top		= 216;
+	uv_right	= 416;
+	uv_bottom	= 230;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfSpecial_Goods_Merchant"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon";
+
+	x		= 0;
+	y		= 0;
+	width		= 14;
+	height		= 14;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 417;
+	uv_top		= 216;
+	uv_right	= 431;
+	uv_bottom	= 230;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfSpecial_Foods_Merchant"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon";
+
+	x		= 0;
+	y		= 0;
+	width		= 14;
+	height		= 14;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 426;
+	uv_top		= 246;
+	uv_right	= 440;
+	uv_bottom	= 260;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfSpecial_Scouter_Merchant"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon";
+
+	x		= 0;
+	y		= 0;
+	width		= 14;
+	height		= 14;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 432;
+	uv_top		= 216;
+	uv_right	= 446;
+	uv_bottom	= 230;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfGrand_Skill_Trainer"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon";
+
+	x		= 0;
+	y		= 0;
+	width		= 14;
+	height		= 14;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 396;
+	uv_top		= 246;
+	uv_right	= 410;
+	uv_bottom	= 260;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfSub_Weapon_Merchant"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon";
+
+	x		= 0;
+	y		= 0;
+	width		= 14;
+	height		= 14;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 432;
+	uv_top		= 231;
+	uv_right	= 446;
+	uv_bottom	= 245;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfGate_Keeper"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon";
+
+	x		= 0;
+	y		= 0;
+	width		= 14;
+	height		= 14;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 441;
+	uv_top		= 246;
+	uv_right	= 455;
+	uv_bottom	= 260;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfVending_Machine"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon";
+
+	x		= 0;
+	y		= 0;
+	width		= 14;
+	height		= 14;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 198;
+	uv_top		= 0;
+	uv_right	= 212;
+	uv_bottom	= 14;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfTimeMachine_Merchant"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon";
+
+	x		= 0;
+	y		= 0;
+	width		= 14;
+	height		= 14;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 411;
+	uv_top		= 261;
+	uv_right	= 425;
+	uv_bottom	= 275;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfPortal_Man"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon";
+
+	x		= 0;
+	y		= 0;
+	width		= 14;
+	height		= 14;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 441;
+	uv_top		= 241;
+	uv_right	= 455;
+	uv_bottom	= 260;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfBus"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon";
+
+	x		= 0;
+	y		= 0;
+	width		= 14;
+	height		= 14;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 359;
+	uv_top		= 216;
+	uv_right	= 373;
+	uv_bottom	= 230;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfWeapon_Merchant_Out"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon2";
+
+	x		= 0;
+	y		= 0;
+	width		= 25;
+	height		= 25;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 68;
+	uv_top		= 331;
+	uv_right	= 93;
+	uv_bottom	= 356;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfArmor_Merchant_Out"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon2";
+
+	x		= 0;
+	y		= 0;
+	width		= 25;
+	height		= 25;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 94;
+	uv_top		= 331;
+	uv_right	= 119;
+	uv_bottom	= 356;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfGoods_Merchant_Out"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon2";
+
+	x		= 0;
+	y		= 0;
+	width		= 25;
+	height		= 25;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 68;
+	uv_top		= 357;
+	uv_right	= 93;
+	uv_bottom	= 382;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfScouter_Merchant_Out"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon2";
+
+	x		= 0;
+	y		= 0;
+	width		= 25;
+	height		= 25;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 94;
+	uv_top		= 357;
+	uv_right	= 119;
+	uv_bottom	= 382;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfGuard_Out"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon2";
+
+	x		= 0;
+	y		= 0;
+	width		= 25;
+	height		= 25;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 182;
+	uv_top		= 385;
+	uv_right	= 207;
+	uv_bottom	= 410;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfSkill_Trainer_Out"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon2";
+
+	x		= 0;
+	y		= 0;
+	width		= 25;
+	height		= 25;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 364;
+	uv_top		= 385;
+	uv_right	= 389;
+	uv_bottom	= 410;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfBanker_Out"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon2";
+
+	x		= 0;
+	y		= 0;
+	width		= 25;
+	height		= 25;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 0;
+	uv_top		= 393;
+	uv_right	= 25;
+	uv_bottom	= 418;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfTalker_Out"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon2";
+
+	x		= 0;
+	y		= 0;
+	width		= 25;
+	height		= 25;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 26;
+	uv_top		= 393;
+	uv_right	= 51;
+	uv_bottom	= 418;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfGuild_Manager_Out"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon2";
+
+	x		= 0;
+	y		= 0;
+	width		= 25;
+	height		= 25;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 208;
+	uv_top		= 385;
+	uv_right	= 233;
+	uv_bottom	= 410;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfSummon_Pet_Out"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon2";
+
+	x		= 0;
+	y		= 0;
+	width		= 25;
+	height		= 25;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 68;
+	uv_top		= 383;
+	uv_right	= 77;
+	uv_bottom	= 392;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfDogi_Merchant_Out"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon2";
+
+	x		= 0;
+	y		= 0;
+	width		= 25;
+	height		= 25;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 260;
+	uv_top		= 385;
+	uv_right	= 285;
+	uv_bottom	= 410;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfSpecial_Weapon_Merchant_Out"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon2";
+
+	x		= 0;
+	y		= 0;
+	width		= 25;
+	height		= 25;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 52;
+	uv_top		= 393;
+	uv_right	= 77;
+	uv_bottom	= 418;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfSpecial_Armor_Merchant_Out"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon2";
+
+	x		= 0;
+	y		= 0;
+	width		= 25;
+	height		= 25;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 78;
+	uv_top		= 385;
+	uv_right	= 103;
+	uv_bottom	= 410;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfSpecial_Goods_Merchant_Out"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon2";
+
+	x		= 0;
+	y		= 0;
+	width		= 25;
+	height		= 25;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 104;
+	uv_top		= 385;
+	uv_right	= 129;
+	uv_bottom	= 410;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfSpecial_Foods_Merchant_Out"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon2";
+
+	x		= 0;
+	y		= 0;
+	width		= 25;
+	height		= 25;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 286;
+	uv_top		= 385;
+	uv_right	= 311;
+	uv_bottom	= 410;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfSpecial_Scouter_Merchant_Out"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon2";
+
+	x		= 0;
+	y		= 0;
+	width		= 25;
+	height		= 25;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 130;
+	uv_top		= 385;
+	uv_right	= 155;
+	uv_bottom	= 410;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfGrand_Skill_Trainer_Out"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon2";
+
+	x		= 0;
+	y		= 0;
+	width		= 25;
+	height		= 25;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 156;
+	uv_top		= 385;
+	uv_right	= 181;
+	uv_bottom	= 410;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfSub_Weapon_Merchant_Out"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon2";
+
+	x		= 0;
+	y		= 0;
+	width		= 25;
+	height		= 25;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 234;
+	uv_top		= 385;
+	uv_right	= 259;
+	uv_bottom	= 410;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfGate_Keeper_Out"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon2";
+
+	x		= 0;
+	y		= 0;
+	width		= 25;
+	height		= 25;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 312;
+	uv_top		= 385;
+	uv_right	= 337;
+	uv_bottom	= 410;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfVending_Machine_Out"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon2";
+
+	x		= 0;
+	y		= 0;
+	width		= 25;
+	height		= 25;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 68;
+	uv_top		= 357;
+	uv_right	= 93;
+	uv_bottom	= 382;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfTimeMachine_Merchant_Out"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon2";
+
+	x		= 0;
+	y		= 0;
+	width		= 25;
+	height		= 25;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 338;
+	uv_top		= 385;
+	uv_right	= 363;
+	uv_bottom	= 410;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfPortal_Man_Out"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon2";
+
+	x		= 0;
+	y		= 0;
+	width		= 25;
+	height		= 25;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 312;
+	uv_top		= 385;
+	uv_right	= 337;
+	uv_bottom	= 410;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfBus_Out"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon2";
+
+	x		= 0;
+	y		= 0;
+	width		= 25;
+	height		= 25;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 56;
+	uv_top		= 467;
+	uv_right	= 81;
+	uv_bottom	= 492;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfSideDialog"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrSideDialog";
+
+	x		= 0;
+	y		= 0;
+	width		= 165;
+	height		= 324;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 0;
+	uv_top		= 0;
+	uv_right	= 165;
+	uv_bottom	= 324;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfSideExitBtnUp"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrSideDialog";
+
+	x		= 0;
+	y		= 0;
+	width		= 14;
+	height		= 14;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 387;
+	uv_top		= 79;
+	uv_right	= 401;
+	uv_bottom	= 93;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfSideExitBtnFoc"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrSideDialog";
+
+	x		= 0;
+	y		= 0;
+	width		= 14;
+	height		= 14;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 402;
+	uv_top		= 79;
+	uv_right	= 416;
+	uv_bottom	= 93;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfSideExitBtnDown"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrSideDialog";
+
+	x		= 0;
+	y		= 0;
+	width		= 14;
+	height		= 14;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 428;
+	uv_top		= 94;
+	uv_right	= 442;
+	uv_bottom	= 106;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfSideNormalSizeBtnUp"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrSideDialog";
+
+	x		= 0;
+	y		= 0;
+	width		= 14;
+	height		= 14;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 423;
+	uv_top		= 79;
+	uv_right	= 437;
+	uv_bottom	= 93;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfSideNormalSizeBtnFoc"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrSideDialog";
+
+	x		= 0;
+	y		= 0;
+	width		= 14;
+	height		= 14;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 438;
+	uv_top		= 79;
+	uv_right	= 452;
+	uv_bottom	= 93;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfSideNormalSizeBtnDown"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrSideDialog";
+
+	x		= 0;
+	y		= 0;
+	width		= 14;
+	height		= 14;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 453;
+	uv_top		= 79;
+	uv_right	= 467;
+	uv_bottom	= 93;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfSideMiniSizeBtnUp"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrSideDialog";
+
+	x		= 0;
+	y		= 0;
+	width		= 14;
+	height		= 14;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 468;
+	uv_top		= 79;
+	uv_right	= 482;
+	uv_bottom	= 93;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfSideMiniSizeBtnFoc"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrSideDialog";
+
+	x		= 0;
+	y		= 0;
+	width		= 14;
+	height		= 14;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 483;
+	uv_top		= 79;
+	uv_right	= 497;
+	uv_bottom	= 93;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfSideMiniSizeBtnDown"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrSideDialog";
+
+	x		= 0;
+	y		= 0;
+	width		= 14;
+	height		= 14;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 498;
+	uv_top		= 79;
+	uv_right	= 512;
+	uv_bottom	= 93;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfSideContourLine"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrSideDialog";
+
+	x		= 0;
+	y		= 0;
+	width		= 165;
+	height		= 3;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 0;
+	uv_top		= 323;
+	uv_right	= 165;
+	uv_bottom	= 326;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfSideNum_0"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrSideDialog";
+
+	x		= 0;
+	y		= 0;
+	width		= 23;
+	height		= 31;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 0;
+	uv_top		= 363;
+	uv_right	= 23;
+	uv_bottom	= 394;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfSideNum_1"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrSideDialog";
+
+	x		= 0;
+	y		= 0;
+	width		= 23;
+	height		= 31;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 24;
+	uv_top		= 363;
+	uv_right	= 47;
+	uv_bottom	= 394;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfSideNum_2"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrSideDialog";
+
+	x		= 0;
+	y		= 0;
+	width		= 23;
+	height		= 31;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 48;
+	uv_top		= 363;
+	uv_right	= 71;
+	uv_bottom	= 394;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfSideNum_3"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrSideDialog";
+
+	x		= 0;
+	y		= 0;
+	width		= 23;
+	height		= 31;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 72;
+	uv_top		= 363;
+	uv_right	= 95;
+	uv_bottom	= 394;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfSideNum_4"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrSideDialog";
+
+	x		= 0;
+	y		= 0;
+	width		= 23;
+	height		= 31;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 96;
+	uv_top		= 363;
+	uv_right	= 119;
+	uv_bottom	= 394;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfSideNum_5"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrSideDialog";
+
+	x		= 0;
+	y		= 0;
+	width		= 23;
+	height		= 31;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 120;
+	uv_top		= 363;
+	uv_right	= 143;
+	uv_bottom	= 394;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfSideNum_6"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrSideDialog";
+
+	x		= 0;
+	y		= 0;
+	width		= 23;
+	height		= 31;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 144;
+	uv_top		= 363;
+	uv_right	= 167;
+	uv_bottom	= 394;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfSideNum_7"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrSideDialog";
+
+	x		= 0;
+	y		= 0;
+	width		= 23;
+	height		= 31;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 0;
+	uv_top		= 395;
+	uv_right	= 23;
+	uv_bottom	= 426;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfSideNum_8"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrSideDialog";
+
+	x		= 0;
+	y		= 0;
+	width		= 23;
+	height		= 31;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 24;
+	uv_top		= 395;
+	uv_right	= 47;
+	uv_bottom	= 426;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfSideNum_9"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrSideDialog";
+
+	x		= 0;
+	y		= 0;
+	width		= 23;
+	height		= 31;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 48;
+	uv_top		= 395;
+	uv_right	= 71;
+	uv_bottom	= 426;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfSideBtnUp"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrSideDialog";
+
+	x		= 0;
+	y		= 0;
+	width		= 72;
+	height		= 28;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 367;
+	uv_top		= 231;
+	uv_right	= 439;
+	uv_bottom	= 259;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfSideBtnFoc"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrSideDialog";
+
+	x		= 0;
+	y		= 0;
+	width		= 72;
+	height		= 28;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 440;
+	uv_top		= 231;
+	uv_right	= 512;
+	uv_bottom	= 259;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfSideBtnDown"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrSideDialog";
+
+	x		= 0;
+	y		= 0;
+	width		= 72;
+	height		= 28;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 440;
+	uv_top		= 260;
+	uv_right	= 512;
+	uv_bottom	= 288;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "backLTC"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrMessage";
+
+	x		= 0;
+	y		= 0;
+	width		= 21;
+	height		= 19;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 411;
+	uv_top		= 0;
+	uv_right	= 432;
+	uv_bottom	= 19;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "backRTC"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrMessage";
+
+	x		= 0;
+	y		= 0;
+	width		= 20;
+	height		= 19;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 439;
+	uv_top		= 0;
+	uv_right	= 459;
+	uv_bottom	= 19;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "backLBC"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrMessage";
+
+	x		= 0;
+	y		= 0;
+	width		= 21;
+	height		= 14;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 411;
+	uv_top		= 25;
+	uv_right	= 432;
+	uv_bottom	= 39;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "backRBC"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrMessage";
+
+	x		= 0;
+	y		= 0;
+	width		= 20;
+	height		= 14;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 439;
+	uv_top		= 25;
+	uv_right	= 459;
+	uv_bottom	= 39;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "backTL"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrMessage";
+
+	x		= 0;
+	y		= 0;
+	width		= 3;
+	height		= 19;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 434;
+	uv_top		= 0;
+	uv_right	= 437;
+	uv_bottom	= 19;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "backLL"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrMessage";
+
+	x		= 0;
+	y		= 0;
+	width		= 21;
+	height		= 2;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 411;
+	uv_top		= 21;
+	uv_right	= 432;
+	uv_bottom	= 23;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "backRL"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrMessage";
+
+	x		= 0;
+	y		= 0;
+	width		= 20;
+	height		= 2;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 439;
+	uv_top		= 21;
+	uv_right	= 459;
+	uv_bottom	= 23;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "backBL"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrMessage";
+
+	x		= 0;
+	y		= 0;
+	width		= 3;
+	height		= 14;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 434;
+	uv_top		= 25;
+	uv_right	= 437;
+	uv_bottom	= 39;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "backCenter"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrMessage";
+
+	x		= 0;
+	y		= 0;
+	width		= 3;
+	height		= 2;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 434;
+	uv_top		= 21;
+	uv_right	= 437;
+	uv_bottom	= 23;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfPowerFont_0"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrMain";
+
+	x		= 0;
+	y		= 0;
+	width		= 15;
+	height		= 18;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 97;
+	uv_top		= 0;
+	uv_right	= 112;
+	uv_bottom	= 18;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfPowerFont_1"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrMain";
+
+	x		= 0;
+	y		= 0;
+	width		= 15;
+	height		= 18;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 113;
+	uv_top		= 0;
+	uv_right	= 128;
+	uv_bottom	= 18;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfPowerFont_2"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrMain";
+
+	x		= 0;
+	y		= 0;
+	width		= 15;
+	height		= 18;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 129;
+	uv_top		= 0;
+	uv_right	= 144;
+	uv_bottom	= 18;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfPowerFont_3"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrMain";
+
+	x		= 0;
+	y		= 0;
+	width		= 15;
+	height		= 18;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 145;
+	uv_top		= 0;
+	uv_right	= 160;
+	uv_bottom	= 18;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfPowerFont_4"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrMain";
+
+	x		= 0;
+	y		= 0;
+	width		= 15;
+	height		= 18;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 161;
+	uv_top		= 0;
+	uv_right	= 176;
+	uv_bottom	= 18;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfPowerFont_5"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrMain";
+
+	x		= 0;
+	y		= 0;
+	width		= 15;
+	height		= 18;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 177;
+	uv_top		= 0;
+	uv_right	= 192;
+	uv_bottom	= 18;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfPowerFont_6"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrMain";
+
+	x		= 0;
+	y		= 0;
+	width		= 15;
+	height		= 18;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 193;
+	uv_top		= 0;
+	uv_right	= 208;
+	uv_bottom	= 18;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfPowerFont_7"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrMain";
+
+	x		= 0;
+	y		= 0;
+	width		= 15;
+	height		= 18;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 209;
+	uv_top		= 0;
+	uv_right	= 224;
+	uv_bottom	= 18;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfPowerFont_8"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrMain";
+
+	x		= 0;
+	y		= 0;
+	width		= 15;
+	height		= 18;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 97;
+	uv_top		= 19;
+	uv_right	= 112;
+	uv_bottom	= 37;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfPowerFont_9"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrMain";
+
+	x		= 0;
+	y		= 0;
+	width		= 15;
+	height		= 18;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 113;
+	uv_top		= 19;
+	uv_right	= 128;
+	uv_bottom	= 37;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfPowerFont_Text"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrMain";
+
+	x		= 0;
+	y		= 0;
+	width		= 50;
+	height		= 18;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 129;
+	uv_top		= 19;
+	uv_right	= 179;
+	uv_bottom	= 37;
+
+	handle		= 0;
+	blend		= 0;
+}
+

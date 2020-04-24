@@ -1,0 +1,22 @@
+-- 2층
+-- 오브젝트에서 실행됨
+-- 전원 스위치를 켜지 않고 문을 클릭한 경우
+
+GameStage(0)
+--[
+	-- 시스템 메세지: "보안 장치가 가동중이기 때문에 문을 열 수 없습니다"
+	Action( "system message" )
+	--[
+		Param( "notify", "caution" )
+		Param( "text index", 10 )
+	--]
+	End()
+	
+	Action( "system message" )
+	--[
+		Param( "notify", "system" )
+		Param( "text index", 10 )
+	--]
+	End()
+--]
+End()

@@ -1,0 +1,242 @@
+GameStage(0)
+--[
+	Action("add npc")
+	--[
+		Param( "index", 1345101 )
+		Param( "loc x", 2215 )
+		Param( "loc y", -111)
+		Param( "loc z", 1260 )
+		Param( "dir x", -0.9 )
+		Param( "dir z", 0.06 )
+		Param( "play script", 1345101 )
+		Param( "play scene", 1 )
+		Param( "no spawn wait", "true" )
+	--]
+	End()
+
+	Action( "function" )
+	--[
+		Condition( "child" )
+		--[
+			Action( "wait" )
+			--[
+				Condition( "npc faint" )
+				--[
+					Param( "npc index", 1345101 )
+				--]
+				End()
+			--]
+			End()
+
+			Action( "wps fail" )
+			--[
+			--]
+			End()
+		--]
+		End()
+
+		Action("wait")
+		--[
+			Condition( "check time" )
+			--[
+				Param("time", 2 )
+			--]
+			End()
+		--]
+		End()
+
+		Action("wait")
+		--[
+			--SPS로부터 몹 스폰 요청 받으면 A
+			Condition( "recv event from sps" )
+			--[
+				Param( "object type", "npc" )
+				Param( "object index", 1345101 )
+				Param( "event id", 378 )
+			--]
+			End()
+		--]
+		End()
+
+		Action( "add mob" )
+		--[ 
+			Param( "index", 4513119 )
+			Param( "group", 188001 )
+			Param( "loc x", 2236 )
+			Param( "loc y", -94)
+			Param( "loc z", 1500 )
+			Param( "dir x", 0.46 )
+			Param( "dir z", 0.88 )
+			Param( "spawn count", 4 )
+			Param( "spawn loc range", 5 )
+			Param( "no spawn wait", "true" )
+		--]
+		End()
+
+		--몹 스폰 확인 신호 보냄 B
+		Action("send event to sps")
+		--[
+			Param("target type", "npc")
+			Param("target index", 1345101)
+			Param("event id", 379 )
+		--]
+		End()
+
+		Action( "wait" )
+		--[
+			Param( "operation", "or" )		
+			
+			Condition( "check mobgroup" )
+			--[   
+				Param( "group", 188001 )
+				Param( "count", 4 )
+			--]
+			End()
+	
+			Condition( "check time" )
+			--[
+				Param( "time", 300)
+			--]
+			End()
+		--]
+		End()
+
+		Action("remove mobgroup")
+		--[
+			Param("group", 188001)
+			Param("type", "clear")
+		--]
+		End()
+
+		--SPS로 진행 계속 신호 보냄 C
+		Action("send event to sps")
+		--[
+			Param("target type", "npc")
+			Param("target index", 1345101)
+			Param("event id", 380)
+		--]
+		End()
+
+		--SPS로부터 몹 스폰 요청 받으면 D
+		Action("wait")
+		--[
+			Condition( "recv event from sps" )
+			--[
+				Param( "object type", "npc")
+				Param( "object index", 1345101)
+				Param( "event id", 381 )
+			--]
+			End()
+		--]
+		End()
+
+		Action( "add mob" )
+		--[ 
+			Param( "index",1652201)
+			Param( "group",188002)
+			Param( "loc x",2187)
+			Param( "loc y", -93)
+			Param( "loc z",1546)
+			Param("dir x",0.99)
+			Param("dir z",0.06)		
+			Param( "no spawn wait", "true" )
+		--]
+		End()
+
+		--몹 스폰 확인 신호 E
+		Action("send event to sps")
+		--[
+			Param("target type", "npc")
+			Param("target index", 1345101)
+			Param("event id", 382 )
+		--]
+		End()
+
+		Action( "wait" )
+		--[
+			Param( "operation", "or" )		
+			
+			Condition( "check mobgroup" )
+			--[   
+				Param( "group", 188002 )
+				Param( "count", 1 )
+			--]
+			End() 
+	
+			Condition( "check time" )
+			--[
+				Param( "time", 300 )
+			--]
+			End()
+		--]
+		End()
+
+		Action("remove mobgroup")
+		--[
+			Param("group", 188002)
+			Param("type", "clear")
+		--]
+		End()
+
+		--SPS로 진행 계속 신호 보냄 F
+		Action("send event to sps")
+		--[
+			Param("target type", "npc")
+			Param("target index", 1345101)
+			Param("event id", 383 )
+		--]
+		End()
+
+		--에스코트 종료 신호 받으면 G
+		Action("wait")
+		--[
+			Condition( "recv event from sps" )
+			--[
+				Param("object type", "npc")
+				Param("object index", 1345101)
+				Param("event id", 384 )
+			--]
+			End()
+		--]
+		End()
+	--]
+	End()
+
+	--SPS종료 신호 대기 H
+	Action( "wait" )
+	--[
+		Condition( "recv event from sps" )
+		--[
+			Param( "object type", "npc" )
+			Param( "object index", 1345101 )
+			Param( "event id", 385 )
+		--]
+		End()
+	--]
+	End()
+
+	Action( "wait" )
+	--[
+		Condition( "check time" )
+		--[
+			Param( "time", 3 )
+		--]
+		End()
+	--]
+	End()
+
+	--TS로 호위 종료 신호 보냄 I
+	Action( "send event to ts" )
+	--[
+		Param( "trigger type", "quest" )
+		Param( "apply type", "register all" )
+		Param( "event id", 386 )
+	--]
+	End()
+--]
+End()
+
+GameFailed()
+--[
+--]
+End()

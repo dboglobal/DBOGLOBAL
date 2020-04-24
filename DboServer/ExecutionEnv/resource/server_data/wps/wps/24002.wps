@@ -1,0 +1,62 @@
+-- UD1 Easy Mob »£√‚ 6-1
+
+
+GameStage(0)
+--[
+
+	Action("wait")
+	--[
+		Condition("area enter")
+		--[
+			Param("origin x", -18.682)
+			Param("origin z", 38.671)
+			Param("radius", 20)
+			Param("all member", "false")
+		--]
+		End()
+	--]
+	End()
+
+	Action("add mob")
+	--[
+		Param("index", 9416113)
+		Param("group", 9400201)
+		Param("loc x", -20.561)
+		Param("loc y", 0.542)
+		Param("loc z", 41.708)
+		Param("dir x", 0.57)
+		Param("dir z", -0.82)
+		Param("play script", 9416113)
+		Param("play scene", 1)
+		Param("no spawn wait", "true")
+	--]
+	End()
+
+	Action("add mob")
+	--[
+		Param("index", 9416113)
+		Param("group", 9400201)
+		Param("loc x", -20.561)
+		Param("loc y", 0.542)
+		Param("loc z", 41.708)
+		Param("dir x", 0.57)
+		Param("dir z", -0.82)
+		Param("play script", 9416113)
+		Param("play scene", 2)
+		Param("no spawn wait", "true")
+	--]
+	End()
+
+	Action("wait")
+	--[
+		Condition("check mobgroup")
+		--[
+			Param("group", 9400201)
+			Param("count", 2)
+		--]
+		End()
+	--]
+	End()
+
+--]
+End()

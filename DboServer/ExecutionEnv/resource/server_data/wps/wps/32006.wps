@@ -1,0 +1,469 @@
+-- stage 2
+-- Which runs from wps
+-- When you Grease Gas Pudong going hunting portal opens
+
+GameStage(0)
+--[
+	-- Update bridge object so people cant move over it
+	Action( "change object state" )
+	--[
+		Param( "index", 58 )
+		Param( "substate unselect", 1 )
+	--]
+	End()
+	
+	-----------------------------------
+	-- Grease collecting first gas battery
+	-----------------------------------
+
+	-- Shows the battery Grease Gas (Click impossible)
+	Action( "change object state" )
+	--[
+		Param( "index", 33 )
+		Param( "substate show", 1 )
+		Param( "substate unselect", 1 )
+	--]
+	End()
+	
+	-- mobgroup spawn
+	Action( "add mobgroup" )
+	--[
+		Param( "group", 201 )
+		Param( "no spawn wait", "true" )
+	--]
+	End()
+
+	-- mobgroup 전부 사망시까지 대기
+	Action( "wait" )
+	--[
+		Condition( "check mobgroup" )
+		--[
+			Param( "group", 201 )
+			Param( "count", 0 )
+		--]
+		End()
+	--]
+	End()
+	
+	-- object Click to change the zoom
+	Action( "change object state" )
+	--[
+		Param( "index", 33 )
+		Param( "substate unselect", 0 )
+	--]
+	End()
+
+	-- object 클릭 대기
+	Action( "wait" )
+	--[
+		Condition( "recv event from ts" )
+		--[
+			Param( "trigger type", "object" )
+			Param( "event id", 476 )
+		--]
+		End()
+	--]
+	End()
+	
+	-- system message '구리스 가스 배터리를 획득했습니다 (1/5)'
+	Action( "system message" )
+	--[
+		Param( "notify", "action" )
+		Param( "text index", 18 )
+	--]
+	End()
+
+	Action( "system message" )
+	--[
+		Param( "notify", "system" )
+		Param( "text index", 18 )
+	--]
+	End()
+	
+	
+
+	-----------------------------------
+	-- Collect grease second gas battery
+	-----------------------------------
+
+	-- 구리스 가스 배터리를 보여준다(클릭 불가능)
+	Action( "change object state" )
+	--[
+		Param( "index", 34 )
+		Param( "substate show", 1 )
+		Param( "substate unselect", 1 )
+	--]
+	End()
+	
+	-- mobgroup 생성
+	Action( "add mobgroup" )
+	--[
+		Param( "group", 202 )
+		Param( "no spawn wait", "true" )
+	--]
+	End()
+
+	-- mobgroup 전부 사망시까지 대기
+	Action( "wait" )
+	--[
+		Condition( "check mobgroup" )
+		--[
+			Param( "group", 202 )
+			Param( "count", 0 )
+		--]
+		End()
+	--]
+	End()
+	
+	-- object를 클릭할 수 있도록 바꿔줌
+	Action( "change object state" )
+	--[
+		Param( "index", 34 )
+		Param( "substate unselect", 0 )
+	--]
+	End()
+
+	-- object 클릭 대기
+	Action( "wait" )
+	--[
+		Condition( "recv event from ts" )
+		--[
+			Param( "trigger type", "object" )
+			Param( "event id", 477 )
+		--]
+		End()
+	--]
+	End()
+	
+	-- system message '구리스 가스 배터리를 획득했습니다 (2/5)'
+	Action( "system message" )
+	--[
+		Param( "notify", "action" )
+		Param( "text index", 19 )
+	--]
+	End()
+
+	Action( "system message" )
+	--[
+		Param( "notify", "system" )
+		Param( "text index", 19 )
+	--]
+	End()
+	
+	
+	
+
+	-----------------------------------
+	-- Collect grease third gas battery
+	-----------------------------------
+
+	-- 구리스 가스 배터리를 보여준다(클릭 불가능)
+	Action( "change object state" )
+	--[
+		Param( "index", 35 )
+		Param( "substate show", 1 )
+		Param( "substate unselect", 1 )
+	--]
+	End()
+	
+	-- mobgroup 생성
+	Action( "add mobgroup" )
+	--[
+		Param( "group", 203 )
+		Param( "no spawn wait", "true" )
+	--]
+	End()
+
+	-- mobgroup 전부 사망시까지 대기
+	Action( "wait" )
+	--[
+		Condition( "check mobgroup" )
+		--[
+			Param( "group", 203 )
+			Param( "count", 0 )
+		--]
+		End()
+	--]
+	End()
+	
+	-- object를 클릭할 수 있도록 바꿔줌
+	Action( "change object state" )
+	--[
+		Param( "index", 35 )
+		Param( "substate unselect", 0 )
+	--]
+	End()
+
+	-- object 클릭 대기
+	Action( "wait" )
+	--[
+		Condition( "recv event from ts" )
+		--[
+			Param( "trigger type", "object" )
+			Param( "event id", 478 )
+		--]
+		End()
+	--]
+	End()
+	
+	-- system message '구리스 가스 배터리를 획득했습니다 (3/5)'
+	Action( "system message" )
+	--[
+		Param( "notify", "action" )
+		Param( "text index", 20 )
+	--]
+	End()
+
+	Action( "system message" )
+	--[
+		Param( "notify", "system" )
+		Param( "text index", 20 )
+	--]
+	End()
+
+
+
+
+	-----------------------------------
+	-- Collect grease fourth gas battery
+	-----------------------------------
+
+	-- 구리스 가스 배터리를 보여준다(클릭 불가능)
+	Action( "change object state" )
+	--[
+		Param( "index", 36 )
+		Param( "substate show", 1 )
+		Param( "substate unselect", 1 )
+	--]
+	End()
+	
+	-- mobgroup 생성
+	Action( "add mobgroup" )
+	--[
+		Param( "group", 204 )
+		Param( "no spawn wait", "true" )
+	--]
+	End()
+
+	-- mobgroup 전부 사망시까지 대기
+	Action( "wait" )
+	--[
+		Condition( "check mobgroup" )
+		--[
+			Param( "group", 204 )
+			Param( "count", 0 )
+		--]
+		End()
+	--]
+	End()
+	
+	-- object를 클릭할 수 있도록 바꿔줌
+	Action( "change object state" )
+	--[
+		Param( "index", 36 )
+		Param( "substate unselect", 0 )
+	--]
+	End()
+
+	-- object 클릭 대기
+	Action( "wait" )
+	--[
+		Condition( "recv event from ts" )
+		--[
+			Param( "trigger type", "object" )
+			Param( "event id", 479 )
+		--]
+		End()
+	--]
+	End()
+	
+	-- system message '구리스 가스 배터리를 획득했습니다 (4/5)'
+	Action( "system message" )
+	--[
+		Param( "notify", "action" )
+		Param( "text index", 21 )
+	--]
+	End()
+
+	Action( "system message" )
+	--[
+		Param( "notify", "system" )
+		Param( "text index", 21 )
+	--]
+	End()
+
+
+
+
+	-----------------------------------
+	--Collect grease Gas fifth battery
+	-----------------------------------
+
+	-- 구리스 가스 배터리를 보여준다(클릭 불가능)
+	Action( "change object state" )
+	--[
+		Param( "index", 37 )
+		Param( "substate show", 1 )
+		Param( "substate unselect", 1 )
+	--]
+	End()
+	
+	-- mobgroup 생성
+	Action( "add mobgroup" )
+	--[
+		Param( "group", 205 )
+		Param( "no spawn wait", "true" )
+	--]
+	End()
+
+	-- mobgroup 전부 사망시까지 대기
+	Action( "wait" )
+	--[
+		Condition( "check mobgroup" )
+		--[
+			Param( "group", 205 )
+			Param( "count", 0 )
+		--]
+		End()
+	--]
+	End()
+	
+	-- object를 클릭할 수 있도록 바꿔줌
+	Action( "change object state" )
+	--[
+		Param( "index", 37 )
+		Param( "substate unselect", 0 )
+	--]
+	End()
+
+	-- object 클릭 대기
+	Action( "wait" )
+	--[
+		Condition( "recv event from ts" )
+		--[
+			Param( "trigger type", "object" )
+			Param( "event id", 480 )
+		--]
+		End()
+	--]
+	End()
+	
+	-- system message '구리스 가스 배터리를 획득했습니다 (5/5)'
+	Action( "system message" )
+	--[
+		Param( "notify", "action" )
+		Param( "text index", 22 )
+	--]
+	End()
+
+	Action( "system message" )
+	--[
+		Param( "notify", "system" )
+		Param( "text index", 22 )
+	--]
+	End()
+
+
+
+
+	-----------------------------------
+	-- Legs come down
+	-----------------------------------
+
+	-- grand bridge 스위치 클릭가능하도록 변경
+	Action( "change object state" )
+	--[
+		Param( "index", 38 )
+		Param( "substate unselect", 0 )
+	--]
+	End()
+
+	-- 스위치 클릭 대기
+	Action( "wait" )
+	--[
+		Condition( "recv event from ts" )
+		--[
+			Param( "trigger type", "object" )
+			Param( "event id", 482 )
+		--]
+		End()
+	--]
+	End()
+	
+	-- system message 다리가 연결됩니다
+	Action( "system message" )
+	--[
+		Param( "notify", "action" )
+		Param( "text index", 23 )
+	--]
+	End()
+
+	Action( "system message" )
+	--[
+		Param( "notify", "system" )
+		Param( "text index", 23 )
+	--]
+	End()
+	
+	-- wps32008 실행시킴
+	-- 다리를 내리지 않고 아래로 점프하여 그냥 진행하는 일을 막기 위하여
+	-- wps32008을 wps32000에서 실행시키지 않고 여기서 실행시킴
+	Action( "exec wps" )
+	--[
+		Param( "wps tblidx", 32008 )
+	--]
+	End()
+		
+	-- 영역 검사
+	Action( "wait" )
+	--[
+		Condition( "area enter" )
+		--[
+			Param( "origin x", 581.97 )
+			Param( "origin z", 121.76 )
+			Param( "radius", 40 )
+			Param( "all member", "false" )
+		--]
+		End()
+	--]
+	End()
+	
+	-- 와타 대장 연출용 npc 스폰
+	Action( "add npc" )
+	--[
+		Param( "index", 8391201 )
+		Param( "loc x", 579.364 )
+		Param( "loc y", -26.626 )
+		Param( "loc z", 124.558 )
+		Param( "dir x", -0.26 )
+		Param( "dir z", 0.97 )
+		Param( "play script", 8391201 )
+		Param( "play scene", 1 )
+		Param( "stand alone", "true" )
+		Param( "no spawn wait", "true" )
+	--]
+	End()
+
+	-- sps로부터 연출 종료 신호 받으면
+	Action( "wait" )
+	--[
+		Condition( "recv event from sps" )
+		--[
+			Param( "object type", "npc" )
+			Param( "object index", 8391201 )
+			Param( "event id", 487 )
+		--]
+		End()
+	--]
+	End()
+
+	-- 와타 대장 연출용 npc 지워줌
+	Action( "remove npc" )
+	--[
+		Param( "index", 8391201 )
+		Param( "type", "clear" )
+	--]
+	End()
+
+--]
+End()

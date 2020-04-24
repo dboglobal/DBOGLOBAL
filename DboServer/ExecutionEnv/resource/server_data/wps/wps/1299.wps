@@ -1,0 +1,71 @@
+GameStage(0)
+--[
+
+	Action("remove npc")
+	--[
+		Param("index", 7611206)
+		Param("type", "clear")
+	--]
+	End()
+
+	Action("wait")
+	--[
+		Condition("check time")
+		--[
+			Param("time", 60)
+		--]
+		End()
+	--]
+	End()
+
+	Action("add npc")
+	--[
+		Param("index", 7611206)
+		Param("loc x",1932.950)
+		Param("loc y", -54.950)
+		Param("loc z", 4306.640)
+		Param("dir x", 0.982)
+		Param("dir z", -0.190)
+		Param("stand alone", "true")
+		Param("no spawn wait", "true")
+	--]
+	End()
+
+--]
+End()
+
+GameFailed()
+--[
+	Action("if")
+	--[
+		Condition("spawned npc")
+		--[
+			Param("tblidx", 7611206)
+		--]
+		End()
+
+		Action("then")
+		--[
+		--]
+		End()
+
+		Action("else")
+		--[
+			Action("add npc")
+			--[
+				Param("index", 7611206)
+				Param("loc x", 1932.950)
+				Param("loc y", -54.950)
+				Param("loc z", 4306.640)
+				Param("dir x", 0.982)
+				Param("dir z", -0.190)
+				Param("stand alone", "true")
+				Param("no spawn wait", "true")
+			--]
+			End()
+		--]
+		End()
+	--]
+	End()
+--]
+End()

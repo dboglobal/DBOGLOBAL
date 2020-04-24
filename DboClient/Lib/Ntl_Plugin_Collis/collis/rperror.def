@@ -1,0 +1,2 @@
+RWECODE(E_RP_COLLIS_BUILD_FAILURE, "Collision build failure.")
+RWECODE(E_RP_COLLIS_STREAM_FAILURE, "Collision stream failure.")

@@ -1,0 +1,59 @@
+-- Second floor
+-- Which runs on the object
+-- (Script yeoteum that originally generated dungeons and execution, if you hunt around the butt of the mob stone fist on the ground floor open out the door)
+-- (Changed to a different function as the original function is moved to wps 28003 (New fork))
+-- System messages refinery outlet opens Drill "drill refinery outlet is open"
+
+GameStage(0)
+--[
+	-- 시스템 메세지 "키리 정제소 출구가 열렸습니다"
+	Action( "system message" )
+	--[
+		Param( "notify", "action" )
+		Param( "text index", 16 )
+	--]
+	End()
+	
+	Action( "system message" )
+	--[
+		Param( "notify", "system" )
+		Param( "text index", 16 )
+	--]
+	End()
+	
+	Action( "add mobgroup" )
+	--[
+		Param( "group", 16 )
+		Param( "no spawn wait", "true" )
+	--]
+	End()
+
+	Action( "add mobgroup" )
+	--[
+		Param( "group", 17 )
+		Param( "no spawn wait", "true" )
+	--]
+	End()
+	
+	-- Waiting spawn without a shut down until we both wps mob
+	Action( "wait" )
+	--[
+		Param( "operation", "and" )
+		
+		Condition( "check mobgroup" )
+		--[
+			Param( "group", 16 )
+			Param( "count", 0 )
+		--]
+		End()
+				
+		Condition( "check mobgroup" )
+		--[
+			Param( "group", 17 )
+			Param( "count", 0 )
+		--]
+		End()
+	--]
+	End()
+--]
+End()

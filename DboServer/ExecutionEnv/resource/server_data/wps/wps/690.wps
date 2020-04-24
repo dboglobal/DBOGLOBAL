@@ -1,0 +1,100 @@
+---Ver.01
+
+GameStage(0)
+--[
+	Action( "add mob" )
+	--[
+		Param( "index", 1712116 )
+		Param( "group", 690 )
+		Param( "loc x", 6848.03 )
+		Param( "loc y", -82)
+		Param( "loc z",-287.76 )
+		Param( "dir x", -0.92 )
+		Param( "dir z", -0.39 )
+		Param( "play script", 1712116 )
+		Param( "play scene", 1 )
+		Param( "no spawn wait", "true" )
+	--]
+	End()
+
+	Action( "add mob" )
+	--[
+		Param( "index", 1712116 )
+		Param( "group", 690 )
+		Param( "loc x", 6849.67 )
+		Param( "loc y", -82)
+		Param( "loc z", -314.89 )
+		Param( "dir x", -0.98)
+		Param( "dir z", 0.21 )
+		Param( "play script", 1712116 )
+		Param( "play scene", 2 )
+		Param( "no spawn wait", "true" )
+	--]
+	End()
+
+	Action( "add mob" )
+	--[
+		Param( "index", 1712116 )
+		Param( "group", 690 )
+		Param( "loc x", 6825.38 )
+		Param( "loc y", -82)
+		Param( "loc z", -333.40 )
+		Param( "dir x", 0.00 )
+		Param( "dir z", 1.00 )
+		Param( "play script", 1712116 )
+		Param( "play scene", 3 )
+		Param( "no spawn wait", "true" )
+	--]
+	End()
+
+	Action( "add mob" )
+	--[
+		Param( "index", 1712116 )
+		Param( "group", 690 )
+		Param( "loc x", 6798.98 )
+		Param( "loc y", -82)
+		Param( "loc z", -332.44 )
+		Param( "dir x", 0.54 )
+		Param( "dir z", 0.84 )
+		Param( "play script", 1712116 )
+		Param( "play scene", 4 )
+		Param( "no spawn wait", "true" )
+	--]
+	End()
+
+	Action( "wait" )
+	--[
+		Param( "operation", "or" )
+		
+		Condition( "check mobgroup" )
+		--[
+			Param( "group", 690 )
+			Param( "count", 4 )
+		--]
+		End()
+		
+		Condition( "check time" )
+		--[
+			Param( "time", 600 )
+		--]
+		End()
+	--]
+	End()
+
+	Action( "remove mobgroup" )
+	--[
+		Param( "group", 690 )
+		Param( "type", "faint" )
+	--]
+	End()
+
+	Action( "send event to ts" )
+	--[
+		Param( "trigger type", "quest" )
+		Param( "apply type", "register all")
+		Param( "event id", 24 )
+	--]
+	End()
+
+--]
+End()

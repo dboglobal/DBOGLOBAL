@@ -1,0 +1,173 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Framework">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="App">
+      <UniqueIdentifier>{8abe5b26-d6d1-40be-ad48-61d822e82f7c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="App\Path">
+      <UniqueIdentifier>{d8dacbca-8827-4266-8566-da7d08c714a0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="App\MouseMode">
+      <UniqueIdentifier>{539d9065-ac0e-4109-af7c-0253d19ca37e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="App\GuideLine">
+      <UniqueIdentifier>{c3259533-0adb-4168-a31b-77949b575980}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="App\BackGround">
+      <UniqueIdentifier>{a8c47df0-2082-434c-9b6a-68be7e68aac8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav</Extensions>
+    </Filter>
+    <Filter Include="Panes">
+      <UniqueIdentifier>{ea75d754-71f8-4faf-842b-34df1a063514}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Dialogs">
+      <UniqueIdentifier>{2d9899e1-32e1-4d4b-b702-03b2d20f18b8}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="2DParticleEditor.cpp">
+      <Filter>Framework</Filter>
+    </ClCompile>
+    <ClCompile Include="2DParticleEditorDoc.cpp">
+      <Filter>Framework</Filter>
+    </ClCompile>
+    <ClCompile Include="2DParticleEditorView.cpp">
+      <Filter>Framework</Filter>
+    </ClCompile>
+    <ClCompile Include="MainFrm.cpp">
+      <Filter>Framework</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Framework</Filter>
+    </ClCompile>
+    <ClCompile Include="2DParticleApp.cpp">
+      <Filter>App</Filter>
+    </ClCompile>
+    <ClCompile Include="2DParticleGlobal.cpp">
+      <Filter>App</Filter>
+    </ClCompile>
+    <ClCompile Include="PathManager.cpp">
+      <Filter>App\Path</Filter>
+    </ClCompile>
+    <ClCompile Include="PathPoint.cpp">
+      <Filter>App\Path</Filter>
+    </ClCompile>
+    <ClCompile Include="MouseMode.cpp">
+      <Filter>App\MouseMode</Filter>
+    </ClCompile>
+    <ClCompile Include="GuideManager.cpp">
+      <Filter>App\GuideLine</Filter>
+    </ClCompile>
+    <ClCompile Include="BackManager.cpp">
+      <Filter>App\BackGround</Filter>
+    </ClCompile>
+    <ClCompile Include="AttributePane.cpp">
+      <Filter>Panes</Filter>
+    </ClCompile>
+    <ClCompile Include="InfomationPane.cpp">
+      <Filter>Panes</Filter>
+    </ClCompile>
+    <ClCompile Include="PropertiesPane.cpp">
+      <Filter>Panes</Filter>
+    </ClCompile>
+    <ClCompile Include="SystemPane.cpp">
+      <Filter>Panes</Filter>
+    </ClCompile>
+    <ClCompile Include="AttrRenameDlg.cpp">
+      <Filter>Dialogs</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="2DParticleEditor.h">
+      <Filter>Framework</Filter>
+    </ClInclude>
+    <ClInclude Include="2DParticleEditorDoc.h">
+      <Filter>Framework</Filter>
+    </ClInclude>
+    <ClInclude Include="2DParticleEditorView.h">
+      <Filter>Framework</Filter>
+    </ClInclude>
+    <ClInclude Include="MainFrm.h">
+      <Filter>Framework</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>Framework</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>Framework</Filter>
+    </ClInclude>
+    <ClInclude Include="2DParticleApp.h">
+      <Filter>App</Filter>
+    </ClInclude>
+    <ClInclude Include="2DParticleGlobal.h">
+      <Filter>App</Filter>
+    </ClInclude>
+    <ClInclude Include="PathManager.h">
+      <Filter>App\Path</Filter>
+    </ClInclude>
+    <ClInclude Include="PathPoint.h">
+      <Filter>App\Path</Filter>
+    </ClInclude>
+    <ClInclude Include="MouseMode.h">
+      <Filter>App\MouseMode</Filter>
+    </ClInclude>
+    <ClInclude Include="GuideManager.h">
+      <Filter>App\GuideLine</Filter>
+    </ClInclude>
+    <ClInclude Include="BackManager.h">
+      <Filter>App\BackGround</Filter>
+    </ClInclude>
+    <ClInclude Include="AttributePane.h">
+      <Filter>Panes</Filter>
+    </ClInclude>
+    <ClInclude Include="InfomationPane.h">
+      <Filter>Panes</Filter>
+    </ClInclude>
+    <ClInclude Include="PropertiesPane.h">
+      <Filter>Panes</Filter>
+    </ClInclude>
+    <ClInclude Include="SystemPane.h">
+      <Filter>Panes</Filter>
+    </ClInclude>
+    <ClInclude Include="AttrRenameDlg.h">
+      <Filter>Dialogs</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\2DParticleEditor.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\2DParticleEditorDoc.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\attribute.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\paneicons.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\Toolbar.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\toolbar1.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="2DParticleEditor.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\My2DParticleEditor.rc2">
+      <Filter>Resource Files</Filter>
+    </None>
+  </ItemGroup>
+</Project>

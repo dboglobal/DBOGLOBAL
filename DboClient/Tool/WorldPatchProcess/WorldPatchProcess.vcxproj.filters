@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="CST Framework">
+      <UniqueIdentifier>{98051687-b614-4237-99da-9475e0deefda}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MFC Framework">
+      <UniqueIdentifier>{5cac209c-2c2b-45cf-bd7b-38e6dda8a7e5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MFC Framework\Resource">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="NtlWPPApplication.cpp">
+      <Filter>CST Framework</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>MFC Framework</Filter>
+    </ClCompile>
+    <ClCompile Include="WorldPatchProcess.cpp">
+      <Filter>MFC Framework</Filter>
+    </ClCompile>
+    <ClCompile Include="WorldPatchProcessDlg.cpp">
+      <Filter>MFC Framework</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="NtlWPPApplication.h">
+      <Filter>CST Framework</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>MFC Framework</Filter>
+    </ClInclude>
+    <ClInclude Include="WorldPatchProcess.h">
+      <Filter>MFC Framework</Filter>
+    </ClInclude>
+    <ClInclude Include="WorldPatchProcessDlg.h">
+      <Filter>MFC Framework</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>MFC Framework\Resource</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt">
+      <Filter>MFC Framework\Resource</Filter>
+    </Text>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\WorldPatchProcess.ico">
+      <Filter>MFC Framework\Resource</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="WorldPatchProcess.rc">
+      <Filter>MFC Framework\Resource</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\WorldPatchProcess.rc2">
+      <Filter>MFC Framework\Resource</Filter>
+    </None>
+  </ItemGroup>
+</Project>

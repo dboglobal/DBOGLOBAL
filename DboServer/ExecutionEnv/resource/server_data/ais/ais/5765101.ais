@@ -1,0 +1,38 @@
+--UD5
+--가스 거산 재배맨 이동
+--원래 가스 거산 재배맨이 특정 위치로 이동하고 그 주변에 자폭하는 재배맨이 spawn되는 script였으나
+--그냥 가스 거산 재배맨 주변에 자폭하는 재배맨이 spawn되는 script로 바뀐 다음부터는 이 ais사용 안함.
+--원래 지워야 하는 ais이나, textall 3048 index사용 출처를 남기기 위하여 보존함.
+
+Scene( 1, "이동하기" )
+--[
+	State( "fight" )
+	--[
+		Condition( "himself check" )
+		--[
+			Param( "event type", "lp" )
+			Param( "%", 50 )
+			
+			-- '키이이이이이….'
+			Action( "say" )
+			--[
+				Param( "tblidx", 3048 )
+			--]
+			End()
+			
+			Action( "point move" )
+			--[
+				Param( "loc x", 645.38 )
+				Param( "loc y", -14.38 )
+				Param( "loc z", -179.93 )
+				Param( "dir x", -0.22 )
+				Param( "dir z", 0.97 )
+				Param( "run mode", 1 )
+			--]
+			End()
+		--]     
+		End()
+	--]     
+	End()
+--]     
+End()

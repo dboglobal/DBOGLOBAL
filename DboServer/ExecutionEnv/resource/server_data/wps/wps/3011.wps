@@ -1,0 +1,45 @@
+GameStage(0)
+--[
+	Action("add npc")
+	--[
+		Param( "index", 4751415 )
+		Param( "loc x", 890.98)
+		Param( "loc y", -18.81)
+		Param( "loc z", 77.72)
+		Param( "dir x", 0.99)
+		Param( "dir z", 0.10)
+		Param( "play script", 4751415 )
+		Param( "play scene", 1 )
+		Param( "no spawn wait", "true" )
+	--]
+	End()
+	
+	Action("wait")
+	--[
+		Condition("recv event from ts")
+		--[
+			Param("trigger type", "quest")
+			Param("event id", 780)
+		--]
+		End()
+	--]
+	End()
+	
+	Action("wait")
+	--[
+		Condition("check time")
+		--[
+			Param("time", 5)
+		--]
+		End()
+	--]
+	End()
+	
+	Action("remove npc")
+	--[
+		Param("index", 4751415)
+		Param("type", "clear")
+	--]
+	End()
+--]
+End()

@@ -1,0 +1,109 @@
+-- DWC 1 뿔나로돈 루트
+
+GameStage(0)
+--[
+	-- 70001에서 뿔나로돈 루트 발동시킬 때 까지 대기
+	Action( "wait" )
+	--[
+		Condition( "recv event from wps" )
+		--[
+			Param( "wps index", 70001 )
+			Param( "event id", 670 )
+		--]
+		End()
+	--]
+	End()
+	
+	-- 뿔나로돈 울면서 사라짐
+	Action( "change sps scene" )
+	--[
+		Param( "index", 7031201 )
+		Param( "play script", 7031201 )
+		Param( "play scene", 3 )
+	--]
+	End()
+	
+	-- 부르마가 User에게 고마워하는 나레이션 시작
+	Action("send event to ts")
+	--[
+		Param( "trigger type", "quest" )
+		Param( "apply type", "register all" )
+		Param( "event id", 627 )
+	--]
+	End()
+	
+	-- 부르마가 User에게 고마워하는 나레이션 종료
+	Action( "wait" )
+	--[
+		Condition("recv event from ts")
+		--[
+			Param( "trigger type", "quest" )
+			Param( "event id", 628 )
+		--]
+		End()
+	--]
+	End()
+	
+	-- 플래시: DWC Challenge
+	Action( "flash play" )
+	--[
+		Param( "id", 20000 )
+	--]     
+	End()
+	
+	Action( "wait" )
+	--[
+		Condition( "check time" )
+		--[
+			Param( "time", 3 )
+		--]
+		End()
+	--]
+	End()
+	
+	-- 플래시: Clear
+	Action( "flash play" )
+	--[
+		Param( "id", 20003 )
+	--]     
+	End()
+	
+	-- 3초간 대기
+	Action( "wait" )
+	--[
+		Condition( "check time" )
+		--[
+			Param( "time", 3 )
+		--]
+		End()
+	--]
+	End()
+
+	-- 뿔나로돈 루트 완료
+	Action( "send event to wps" )
+	--[
+		Param( "wps index", 70001 )
+		Param( "event id", 687 )
+	--]
+	End()
+	
+	-- 뿔나로돈 루트 보상 요청
+	Action( "send event to wps" )
+	--[
+		Param( "wps index", 70000 )
+		Param( "event id", 673 )
+	--]
+	End()
+
+	-- 3초간 대기
+	Action( "wait" )
+	--[
+		Condition( "check time" )
+		--[
+			Param( "time", 3 )
+		--]
+		End()
+	--]
+	End()
+--]
+End()

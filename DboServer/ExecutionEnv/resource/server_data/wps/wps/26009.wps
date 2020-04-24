@@ -1,0 +1,57 @@
+-- UD1 Legendary º®ÆøÆÄÈÄ ½ºÆù ¸÷ 2
+
+GameStage(0)
+--[
+
+	Action("add mob")
+	--[
+		Param("index", 5811215)
+		Param("group", 2600901)
+		Param("loc x", -51.497)
+		Param("loc y", -0.257)
+		Param("loc z", -4.955)
+		Param("dir x", 0.999)
+		Param("dir z", -0.041)
+		Param("no spawn wait", "true")
+	--]
+	End()
+
+	Action("add mob")
+	--[
+		Param("index", 5811215)
+		Param("group", 2600901)
+		Param("loc x", -53.905)
+		Param("loc y", 0.192)
+		Param("loc z", -1.374)
+		Param("dir x", 0.999)
+		Param("dir z", -0.049)
+		Param("no spawn wait", "true")
+	--]
+	End()
+
+	Action("add mob")
+	--[
+		Param("index", 5811215)
+		Param("group", 2600901)
+		Param("loc x", -53.652)
+		Param("loc y", 0.363)
+		Param("loc z", -8.516)
+		Param("dir x", 1.0)
+		Param("dir z", -0.023)
+		Param("no spawn wait", "true")
+	--]
+	End()
+
+	Action("wait")
+	--[
+		Condition("check mobgroup")
+		--[
+			Param("group", 2600901)
+			Param("count", 3)
+		--]
+		End()
+	--]
+	End()
+
+--]
+End()	

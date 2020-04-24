@@ -1,0 +1,206 @@
+-- 닥터 게로 클론 전투 스크립트
+-- (wps 1329 및 wps 20007 참조함)
+
+GameStage( 0 )
+--[
+	-- 닥터 게로 클론 스폰
+	Action( "add mobgroup" )
+	--[
+		Param( "group", 9 )
+		Param( "no spawn wait", "true" )
+	--]
+	End()
+
+	-- 닥터 게로 클론 사망 체크(바깥쪽 loop)
+	Action( "function" )
+	--[
+		Condition( "child" )
+		--[
+			Action( "while" )
+			--[
+				Action( "loop" )
+				--[
+				
+					-- 닥터 게로 클론 전투 풀림 체크(안쪽 loop)
+					Action( "function" )
+					--[
+						Condition( "child" )
+						--[
+							Action( "while" )
+							--[
+								Action( "loop" )
+								--[
+									-- 닥터 게로 클론이 전투상태에 들어갔는지 체크함
+									Action( "wait" )
+									--[
+										Condition( "check battle" )
+										--[
+											Param( "type", "mob" )
+											Param( "group", 9 )
+											Param( "is battle", "true" )
+										--]
+										End()
+									--]
+									End()
+									
+									-- 닥터 게로 클론 체력이 80% 남았을 때, 첫 번째 인조인간 19000SP 소환
+									Action( "wait" )
+									--[
+										Condition( "check lp" )
+										--[
+											Param( "type", "mob" )
+											Param( "group", 9 )
+											Param( "index", 3631103 )
+											Param( "lp", 80 )
+										--]
+										End()
+									--]
+									End()
+				
+									Action( "add mobgroup" )
+									--[
+										Param( "group", 10 )
+										Param( "no spawn wait", "true" )
+									--]
+									End()
+				
+									-- 닥터 게로 클론 체력이 60% 남았을 때, 두 번째 인조인간 19000SP 소환
+									Action( "wait" )
+									--[
+										Condition( "check lp" )
+										--[
+											Param( "type", "mob" )
+											Param( "group", 9 )
+											Param( "index", 3631103 )
+											Param( "lp", 60 )
+										--]
+										End()
+									--]
+									End()
+				
+									Action( "add mobgroup" )
+									--[
+										Param( "group", 11 )
+										Param( "no spawn wait", "true" )
+									--]
+									End()
+				
+									-- 닥터 게로 클론 체력이 30% 남았을 때, 세 번째 인조인간 19000SP 소환
+									Action( "wait" )
+									--[
+										Condition( "check lp" )
+										--[
+											Param( "type", "mob" )
+											Param( "group", 9 )
+											Param( "index", 3631103 )
+											Param( "lp", 30 )
+										--]
+										End()
+									--]
+									End()
+				
+									Action( "add mobgroup" )
+									--[
+										Param( "group", 12 )
+										Param( "no spawn wait", "true" )
+									--]
+									End()
+									
+									-- 닥터 게로 클론이 사망시까지 대기
+									-- (이 구문이 없을 시 인조인간 19000SP 무한 스폰됨)
+									Action( "wait" )
+									--[
+										Condition( "check mobgroup" )
+										--[
+											Param( "group", 9 )
+											Param( "count", 2 )
+										--]
+										End()
+									--]
+									End()
+									
+								-- loop 닫음
+								--]
+								End()
+							
+							-- while 닫음
+							--]
+							End()
+						-- child 닫음
+						--]
+						End()
+					
+						-- 전투상태가 풀리면 안쪽 loop에서 탈출하고, 인조인간 제거함
+						Action( "wait" )
+						--[
+							Condition( "check battle" )
+							--[
+								Param( "type", "mob" )
+								Param( "group", 9 )
+								Param( "is battle", "false" )
+							--]
+							End()
+						--]
+						End()
+
+						-- 첫 번째 인조인간 19000SP 제거
+						Action( "remove mobgroup" )
+						--[
+							Param( "group", 10 )
+							Param( "type", "clear" )	
+						--]
+						End()
+
+						-- 두 번째 인조인간 19000SP 제거
+						Action( "remove mobgroup" )
+						--[
+							Param( "group", 11 )
+							Param( "type", "clear" )
+						--]
+						End()
+							
+						-- 세 번째 인조인간 19000SP 제거
+						Action( "remove mobgroup" )
+						--[
+							Param( "group", 12 )
+							Param( "type", "clear" )
+						--]
+						End()
+
+					-- function 닫음
+					--]
+					End()
+					-- 닥터 게로 클론 전투 풀림 체크 종료
+
+				-- loop 닫음
+				--]
+				End()
+
+			-- while 닫음
+			--]
+			End()
+
+		-- child 닫음
+		--]
+		End()
+
+		-- 닥터 게로 사망시 바깥쪽 loop에서 탈출
+		-- 닥터 게로가 죽기 전까지 wps를 종료시키지 않음
+		Action( "wait" )
+		--[
+			Condition( "check mobgroup" )
+			--[
+				Param( "group", 9 )
+				Param( "count", 1 )
+			--]
+			End()
+		--]
+		End()
+
+	-- function 닫음
+	--]
+	End()
+	-- 닥터 게로 클론 사망 체크 종료
+
+--]
+End()

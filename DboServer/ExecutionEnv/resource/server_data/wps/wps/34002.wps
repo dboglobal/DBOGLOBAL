@@ -1,0 +1,2341 @@
+-- UD6
+-- Boss Stage
+-- 드데카민 공급 구역
+-- 프라이
+
+GameStage(0)
+--[
+	Action("function")
+	--[
+		Condition("child")
+		--[
+			-- Normal Stage Clear 될 때까지 대기
+			Action( "wait" )
+			--[
+				Condition( "recv event from wps" )
+				--[
+					Param( "wps index", 34008 )
+					Param( "event id", 880 )
+				--]
+				End()
+			--]
+			End()
+			
+			--프라이 spawn
+			Action( "add mob" )
+			--[
+				Param( "index", 21854101 )
+				Param( "group", 3400201 )
+				Param( "loc x", 628.70 )
+				Param( "loc y", 44.53 )
+				Param( "loc z", -1007.86 )
+				Param( "dir x", 0.67 )
+				Param( "dir z", -0.74 )
+				Param( "nest type", "fix" )
+				Param( "nest range", 35 )
+				Param( "no spawn wait", "true" )
+			--]
+			End()
+			
+			Action( "function" )
+			--[
+				Condition( "child" )
+				--[
+					Action( "while" )
+					--[
+						Action( "loop" )
+						--[
+							-- 프라이가 전투에 들어가면
+							Action( "wait" )
+							--[
+								Condition( "check battle" )
+								--[
+									Param( "type", "mob" )
+									Param( "group", 3400201 )
+									Param( "is battle", "true" )
+								--]
+								End()
+							--]
+							End()
+							
+							--case 4개 중 랜덤. NPC좌표에 동일 몹 스폰. 일정 시간 후 크기 커짐. NPC add, mob spawn loop.
+							Action( "function" )
+							--[
+								Condition( "child" )
+								--[
+									Action( "while" )
+									--[
+										Action( "loop" )
+										--[
+											Action( "wait" )
+											--[
+												Condition( "check lp" )
+												--[
+													Param( "type", "mob" )
+													Param( "group", 3400201 )
+													Param( "lp", 50 )
+												--]
+												End()
+											--]
+											End()
+											
+											-- 변수를 생성하여 1~4 사이의 난수를 발생
+											Action( "calculate" )
+											--[
+												Param( "declare", "int saibai = 0" )
+												Param( "express", "saibai = RandomRange( 1, 4 )" )
+											--]
+											End()
+											
+											Action( "switch" )
+											--[
+												Param( "compare variable", "saibai" )
+												
+												-------------------------------------
+												-- 변수 값이 1일 때
+												-------------------------------------
+												Action( "case" )
+												--[
+													Param( "value", 1 )
+													
+													Action( "remove npc" )
+													--[
+														Param( "index", 5628101 )
+														Param( "type", "clear" )
+													--]
+													End()
+													
+													Action( "add mob" )
+													--[
+														Param( "index", 26818101 )
+														Param( "group", 3400202 )
+														Param( "loc x", 654.84 )
+														Param( "loc y", 44.51 )
+														Param( "loc z", -1006.21 )
+														Param( "dir x", -0.94 )
+														Param( "dir z", 0.34 )
+														Param( "no spawn wait", "true" )
+													--]
+													End()
+													
+													Action( "remove npc" )
+													--[
+														Param( "index", 5628102 )
+														Param( "type", "clear" )
+													--]
+													End()
+													
+													Action( "add mob" )
+													--[
+														Param( "index", 26818101 )
+														Param( "group", 3400202 )
+														Param( "loc x", 648.82 )
+														Param( "loc y", 44.51 )
+														Param( "loc z", -991.80 )
+														Param( "dir x", -0.78 )
+														Param( "dir z", -0.63 )
+														Param( "no spawn wait", "true" )
+													--]
+													End()
+													
+													Action( "remove npc" )
+													--[
+														Param( "index", 5628103 )
+														Param( "type", "clear" )
+													--]
+													End()
+													
+													Action( "add mob" )
+													--[
+														Param( "index", 26818101 )
+														Param( "group", 3400202 )
+														Param( "loc x", 634.77 )
+														Param( "loc y", 43.51 )
+														Param( "loc z", -982.23 )
+														Param( "dir x", -0.57 )
+														Param( "dir z", -0.82 )
+														Param( "no spawn wait", "true" )
+													--]
+													End()
+													
+													Action( "remove npc" )
+													--[
+														Param( "index", 5628104 )
+														Param( "type", "clear" )
+													--]
+													End()
+													
+													Action( "add mob" )
+													--[
+														Param( "index", 26818101 )
+														Param( "group", 3400202 )
+														Param( "loc x", 618.73 )
+														Param( "loc y", 43.51 )
+														Param( "loc z", -983.84 )
+														Param( "dir x", 0.39 )
+														Param( "dir z", -0.92 )
+														Param( "no spawn wait", "true" )
+													--]
+													End()
+													
+													Action( "remove npc" )
+													--[
+														Param( "index", 5628105 )
+														Param( "type", "clear" )
+													--]
+													End()
+													
+													Action( "add mob" )
+													--[
+														Param( "index", 26818101 )
+														Param( "group", 3400202 )
+														Param( "loc x", 605.94 )
+														Param( "loc y", 43.51 )
+														Param( "loc z", -994.89 )
+														Param( "dir x", 0.48 )
+														Param( "dir z", -0.87 )
+														Param( "no spawn wait", "true" )
+													--]
+													End()
+													
+													Condition( "child" )
+													--[
+														-- 12초 후에
+														Action( "wait" )
+														--[
+															Condition( "check time" )
+															--[
+																Param( "time", 12 )
+															--]
+															End()
+														--]
+														End()
+														
+														-- 크기를 키움
+														Action( "change char attribute" )
+														--[
+															Param( "target type", "mob" )
+															Param( "target index", 3400202 )
+															Param( "size rate", 200 )
+														--]
+														End()
+														
+														-- 10초 후에
+														Action( "wait" )
+														--[
+															Condition( "check time" )
+															--[
+																Param( "time", 10 )
+															--]
+															End()
+														--]
+														End()
+														
+														-- 크기를 키움
+														Action( "change char attribute" )
+														--[
+															Param( "target type", "mob" )
+															Param( "target index", 3400202 )
+															Param( "size rate", 270 )
+														--]
+														End()	
+													--]
+													End()
+													
+													-- 180 seconds, or, spawn of Giant Bay are all top mob dies
+													Action( "wait" )
+													--[
+														Param( "operation", "or" )
+														
+														Condition( "check time" )
+														--[
+															Param( "time", 180 )
+														--]
+														End()
+														
+														Condition( "check mobgroup" )
+														--[
+															Param( "group", 3400202 )
+															Param( "count", 0 )
+														--]
+														End()
+													--]
+													End()
+													
+													Action( "add npc" )
+													--[
+														Param( "index", 5628101 )
+														Param( "loc x", 654.84 )
+														Param( "loc y", 44.51 )
+														Param( "loc z", -1006.21 )
+														Param( "dir x", -0.94 )
+														Param( "dir z", 0.34 )
+														Param( "no spawn wait", "true" )
+													--]
+													End()
+													
+													Action( "add npc" )
+													--[
+														Param( "index", 5628102 )
+														Param( "loc x", 648.82 )
+														Param( "loc y", 44.51 )
+														Param( "loc z", -991.80 )
+														Param( "dir x", -0.78 )
+														Param( "dir z", -0.63 )
+														Param( "no spawn wait", "true" )
+													--]
+													End()
+													
+													Action( "add npc" )
+													--[
+														Param( "index", 5628103 )
+														Param( "loc x", 634.77 )
+														Param( "loc y", 43.51 )
+														Param( "loc z", -982.23 )
+														Param( "dir x", -0.57 )
+														Param( "dir z", -0.82 )
+														Param( "no spawn wait", "true" )
+													--]
+													End()	
+													
+													Action( "add npc" )
+													--[
+														Param( "index", 5628104 )
+														Param( "loc x", 618.73 )
+														Param( "loc y", 43.51 )
+														Param( "loc z", -983.84 )
+														Param( "dir x", 0.39 )
+														Param( "dir z", -0.92 )
+														Param( "no spawn wait", "true" )
+													--]
+													End()
+													
+													Action( "add npc" )
+													--[
+														Param( "index", 5628105 )
+														Param( "loc x", 605.94 )
+														Param( "loc y", 43.51 )
+														Param( "loc z", -994.89 )
+														Param( "dir x", 0.48 )
+														Param( "dir z", -0.87 )
+														Param( "no spawn wait", "true" )
+													--]
+													End()
+												-- case 1 end
+												--]
+												End()
+												
+												-------------------------------------
+												-- 변수 값이 2일 때
+												-------------------------------------
+												Action( "case" )
+												--[
+													Param( "value", 2 )
+													
+													Action( "remove npc" )
+													--[
+														Param( "index", 5628106 )
+														Param( "type", "clear" )
+													--]
+													End()
+													
+													Action( "add mob" )
+													--[
+														Param( "index", 26818101 )
+														Param( "group", 3400203 )
+														Param( "loc x", 603.10 )
+														Param( "loc y", 43.51 )
+														Param( "loc z", -1009.35 )
+														Param( "dir x", 0.98 )
+														Param( "dir z", 0.21 )
+														Param( "no spawn wait", "true" )
+													--]
+													End()
+													
+													Action( "remove npc" )
+													--[
+														Param( "index", 5628107 )
+														Param( "type", "clear" )
+													--]
+													End()
+													
+													Action( "add mob" )
+													--[
+														Param( "index", 26818101 )
+														Param( "group", 3400203 )
+														Param( "loc x", 608.89 )
+														Param( "loc y", 43.51 )
+														Param( "loc z", -1024.95 )
+														Param( "dir x", 0.59 )
+														Param( "dir z", 0.81 )
+														Param( "no spawn wait", "true" )
+													--]
+													End()
+													
+													Action( "remove npc" )
+													--[
+														Param( "index", 5628108 )
+														Param( "type", "clear" )
+													--]
+													End()
+													
+													Action( "add mob" )
+													--[
+														Param( "index", 26818101 )
+														Param( "group", 3400203 )
+														Param( "loc x", 650.30 )
+														Param( "loc y", 43.51 )
+														Param( "loc z", -1021.18 )
+														Param( "dir x", -0.69 )
+														Param( "dir z", 0.72 )
+														Param( "no spawn wait", "true" )
+													--]
+													End()
+													
+													Action( "remove npc" )
+													--[
+														Param( "index", 5628109 )
+														Param( "type", "clear" )
+													--]
+													End()
+													
+													Action( "add mob" )
+													--[
+														Param( "index", 26818101 )
+														Param( "group", 3400203 )
+														Param( "loc x", 624.13 )
+														Param( "loc y", 43.51 )
+														Param( "loc z", -1034.18 )
+														Param( "dir x", 0.00 )
+														Param( "dir z", 1.00 )
+														Param( "no spawn wait", "true" )
+													--]
+													End()
+													
+													Action( "remove npc" )
+													--[
+														Param( "index", 5628110 )
+														Param( "type", "clear" )
+													--]
+													End()
+													
+													Action( "add mob" )
+													--[
+														Param( "index", 26818101 )
+														Param( "group", 3400203 )
+														Param( "loc x", 638.78 )
+														Param( "loc y", 43.51 )
+														Param( "loc z", -1031.44 )
+														Param( "dir x", 0.00 )
+														Param( "dir z", 1.00 )
+														Param( "no spawn wait", "true" )
+													--]
+													End()
+													
+													Condition( "child" )
+													--[
+														Action( "wait" )
+														--[
+															Condition( "check time" )
+															--[
+																Param( "time", 12 )
+															--]
+															End()
+														--]
+														End()
+														
+														Action( "change char attribute" )
+														--[
+															Param( "target type", "mob" )
+															Param( "target index", 3400203 )
+															Param( "size rate", 200 )
+														--]
+														End()
+														
+														Action( "wait" )
+														--[
+															Condition( "check time" )
+															--[
+																Param( "time", 10 )
+															--]
+															End()
+														--]
+														End()
+														
+														Action( "change char attribute" )
+														--[
+															Param( "target type", "mob" )
+															Param( "target index", 3400203 )
+															Param( "size rate", 270 )
+														--]
+														End()
+													--]
+													End()
+													
+													Action( "wait" )
+													--[
+														Param( "operation", "or" )
+														
+														Condition( "check time" )
+														--[
+															Param( "time", 180 )
+														--]
+														End()
+														
+														Condition( "check mobgroup" )
+														--[
+															Param( "group", 3400203 )
+															Param( "count", 0 )
+														--]
+														End()
+													--]
+													End()
+													
+													Action( "add npc" )
+													--[
+														Param( "index", 5628106 )
+														Param( "loc x", 603.10 )
+														Param( "loc y", 43.51 )
+														Param( "loc z", -1009.35 )
+														Param( "dir x", 0.98 )
+														Param( "dir z", 0.21 )
+														Param( "no spawn wait", "true" )
+													--]
+													End()
+													
+													Action( "add npc" )
+													--[
+														Param( "index", 5628107 )
+														Param( "loc x", 608.89 )
+														Param( "loc y", 43.51 )
+														Param( "loc z", -1024.95 )
+														Param( "dir x", 0.59 )
+														Param( "dir z", 0.81 )
+														Param( "no spawn wait", "true" )
+													--]
+													End()
+													
+													Action( "add npc" )
+													--[
+														Param( "index", 5628108 )
+														Param( "loc x", 650.30 )
+														Param( "loc y", 43.51 )
+														Param( "loc z", -1021.18 )
+														Param( "dir x", -0.69 )
+														Param( "dir z", 0.72 )
+														Param( "no spawn wait", "true" )
+													--]
+													End()
+													
+													Action( "add npc" )
+													--[
+														Param( "index", 5628109 )
+														Param( "loc x", 624.13 )
+														Param( "loc y", 43.51 )
+														Param( "loc z", -1034.18 )
+														Param( "dir x", 0.00 )
+														Param( "dir z", 1.00 )
+														Param( "no spawn wait", "true" )
+													--]
+													End()
+													
+													Action( "add npc" )
+													--[
+														Param( "index", 5628110 )
+														Param( "loc x", 638.78 )
+														Param( "loc y", 43.51 )
+														Param( "loc z", -1031.44 )
+														Param( "dir x", 0.00 )
+														Param( "dir z", 1.00 )
+														Param( "no spawn wait", "true" )
+													--]
+													End()
+												-- case 2 end
+												--]
+												End()
+												
+												-------------------------------------
+												-- 변수 값이 3일 때
+												-------------------------------------
+												Action( "case" )
+												--[
+													Param( "value", 3 )
+													
+													Action( "remove npc" )
+													--[
+														Param( "index", 5628111 )
+														Param( "type", "clear" )
+													--]
+													End()
+													
+													Action( "add mob" )
+													--[
+														Param( "index", 26818101 )
+														Param( "group", 3400204 )
+														Param( "loc x", 642.96 )
+														Param( "loc y", 43.51 )
+														Param( "loc z", -986.19 )
+														Param( "dir x", -0.67 )
+														Param( "dir z", -0.74 )
+														Param( "no spawn wait", "true" )
+													--]
+													End()
+													
+													Action( "remove npc" )
+													--[
+														Param( "index", 5628112 )
+														Param( "type", "clear" )
+													--]
+													End()
+													
+													Action( "add mob" )
+													--[
+														Param( "index", 26818101 )
+														Param( "group", 3400204 )
+														Param( "loc x", 626.27 )
+														Param( "loc y", 43.88 )
+														Param( "loc z", -982.09 )
+														Param( "dir x", 0.42 )
+														Param( "dir z", -0.91 )
+														Param( "no spawn wait", "true" )
+													--]
+													End()
+													
+													Action( "remove npc" )
+													--[
+														Param( "index", 5628113 )
+														Param( "type", "clear" )
+													--]
+													End()
+													
+													Action( "add mob" )
+													--[
+														Param( "index", 26818101 )
+														Param( "group", 3400204 )
+														Param( "loc x", 611.68 )
+														Param( "loc y", 43.51 )
+														Param( "loc z", -988.51 )
+														Param( "dir x", 0.29 )
+														Param( "dir z", -0.96 )
+														Param( "no spawn wait", "true" )
+													--]
+													End()
+													
+													Action( "remove npc" )
+													--[
+														Param( "index", 5628114 )
+														Param( "type", "clear" )
+													--]
+													End()
+													
+													Action( "add mob" )
+													--[
+														Param( "index", 26818101 )
+														Param( "group", 3400204 )
+														Param( "loc x", 603.38 )
+														Param( "loc y", 43.81 )
+														Param( "loc z", -1002.23 )
+														Param( "dir x", 0.95 )
+														Param( "dir z", -0.33 )
+														Param( "no spawn wait", "true" )
+													--]
+													End()
+													
+													Action( "remove npc" )
+													--[
+														Param( "index", 5628115 )
+														Param( "type", "clear" )
+													--]
+													End()
+													
+													Action( "add mob" )
+													--[
+														Param( "index", 26818101 )
+														Param( "group", 3400204 )
+														Param( "loc x", 604.95 )
+														Param( "loc y", 43.91 )
+														Param( "loc z", -1018.51 )
+														Param( "dir x", 0.80 )
+														Param( "dir z", 0.60 )
+														Param( "no spawn wait", "true" )
+													--]
+													End()
+													
+													Condition( "child" )
+													--[
+														Action( "wait" )
+														--[
+															Condition( "check time" )
+															--[
+																Param( "time", 12 )
+															--]
+															End()
+														--]
+														End()
+														
+														Action( "change char attribute" )
+														--[
+															Param( "target type", "mob" )
+															Param( "target index", 3400204 )
+															Param( "size rate", 200 )
+														--]
+														End()
+														
+														Action( "wait" )
+														--[
+															Condition( "check time" )
+															--[
+																Param( "time", 10 )
+															--]
+															End()
+														--]
+														End()
+														
+														Action( "change char attribute" )
+														--[
+															Param( "target type", "mob" )
+															Param( "target index", 3400204 )
+															Param( "size rate", 270 )
+														--]
+														End()
+													--]
+													End()
+													
+													Action( "wait" )
+													--[
+														Param( "operation", "or" )
+														
+														Condition( "check time" )
+														--[
+															Param( "time", 180 )
+														--]
+														End()
+														
+														Condition( "check mobgroup" )
+														--[
+															Param( "group", 3400204 )
+															Param( "count", 0 )
+														--]
+														End()
+													--]
+													End()
+													
+													Action( "add npc" )
+													--[
+														Param( "index", 5628111 )
+														Param( "loc x", 642.96 )
+														Param( "loc y", 43.51 )
+														Param( "loc z", -986.19 )
+														Param( "dir x", -0.67 )
+														Param( "dir z", -0.74 )
+														Param( "no spawn wait", "true" )
+													--]
+													End()
+													
+													Action( "add npc" )
+													--[
+														Param( "index", 5628112 )
+														Param( "loc x", 626.27 )
+														Param( "loc y", 43.88 )
+														Param( "loc z", -982.09 )
+														Param( "dir x", 0.42 )
+														Param( "dir z", -0.91 )
+														Param( "no spawn wait", "true" )
+													--]
+													End()
+													
+													Action( "add npc" )
+													--[
+														Param( "index", 5628113 )
+														Param( "loc x", 611.68 )
+														Param( "loc y", 43.51 )
+														Param( "loc z", -988.51 )
+														Param( "dir x", 0.29 )
+														Param( "dir z", -0.96 )
+														Param( "no spawn wait", "true" )
+													--]
+													End()
+													
+													Action( "add npc" )
+													--[
+														Param( "index", 5628114 )
+														Param( "loc x", 603.38 )
+														Param( "loc y", 43.81 )
+														Param( "loc z", -1002.23 )
+														Param( "dir x", 0.95 )
+														Param( "dir z", -0.33 )
+														Param( "no spawn wait", "true" )
+													--]
+													End()
+													
+													Action( "add npc" )
+													--[
+														Param( "index", 5628115 )
+														Param( "loc x", 604.95 )
+														Param( "loc y", 43.91 )
+														Param( "loc z", -1018.51 )
+														Param( "dir x", 0.80 )
+														Param( "dir z", 0.60 )
+														Param( "no spawn wait", "true" )
+													--]
+													End()
+												-- case 3 end
+												--]
+												End()
+												
+												-------------------------------------
+												-- 변수 값이 4일 때
+												-------------------------------------
+												Action( "case" )
+												--[
+													Param( "value", 4 )
+													
+													Action( "remove npc" )
+													--[
+														Param( "index", 5628116 )
+														Param( "type", "clear" )
+													--]
+													End()
+													
+													Action( "add mob" )
+													--[
+														Param( "index", 26818101 )
+														Param( "group", 3400205 )
+														Param( "loc x", 616.15 )
+														Param( "loc y", 43.51 )
+														Param( "loc z", -1030.70 )
+														Param( "dir x", 0.45 )
+														Param( "dir z", 0.89 )
+														Param( "no spawn wait", "true" )
+													--]
+													End()
+													
+													Action( "remove npc" )
+													--[
+														Param( "index", 5628117 )
+														Param( "type", "clear" )
+													--]
+													End()
+													
+													Action( "add mob" )
+													--[
+														Param( "index", 26818101 )
+														Param( "group", 3400205 )
+														Param( "loc x", 632.32 )
+														Param( "loc y", 43.51 )
+														Param( "loc z", -1034.05 )
+														Param( "dir x", 0.00 )
+														Param( "dir z", 1.00 )
+														Param( "no spawn wait", "true" )
+													--]
+													End()
+													
+													Action( "remove npc" )
+													--[
+														Param( "index", 5628118 )
+														Param( "type", "clear" )
+													--]
+													End()
+													
+													Action( "add mob" )
+													--[
+														Param( "index", 26818101 )
+														Param( "group", 3400205 )
+														Param( "loc x", 646.05 )
+														Param( "loc y", 44.01 )
+														Param( "loc z", -1027.00 )
+														Param( "dir x", -0.69 )
+														Param( "dir z", 0.72 )
+														Param( "no spawn wait", "true" )
+													--]
+													End()
+													
+													Action( "remove npc" )
+													--[
+														Param( "index", 5628119 )
+														Param( "type", "clear" )
+													--]
+													End()
+													
+													Action( "add mob" )
+													--[
+														Param( "index", 26818101 )
+														Param( "group", 3400205 )
+														Param( "loc x", 653.90 )
+														Param( "loc y", 44.11 )
+														Param( "loc z", -1012.97 )
+														Param( "dir x", -0.99 )
+														Param( "dir z", 0.14 )
+														Param( "no spawn wait", "true" )
+													--]
+													End()
+													
+													Action( "remove npc" )
+													--[
+														Param( "index", 5628120 )
+														Param( "type", "clear" )
+													--]
+													End()
+													
+													Action( "add mob" )
+													--[
+														Param( "index", 26818101 )
+														Param( "group", 3400205 )
+														Param( "loc x", 652.55 )
+														Param( "loc y", 44.21 )
+														Param( "loc z", -997.03 )
+														Param( "dir x", -0.95 )
+														Param( "dir z", -0.31 )
+														Param( "no spawn wait", "true" )
+													--]
+													End()
+													
+													Condition( "child" )
+													--[
+														Action( "wait" )
+														--[
+															Condition( "check time" )
+															--[
+																Param( "time", 12 )
+															--]
+															End()
+														--]
+														End()
+														
+														Action( "change char attribute" )
+														--[
+															Param( "target type", "mob" )
+															Param( "target index", 3400205 )
+															Param( "size rate", 200 )
+														--]
+														End()
+														
+														Action( "wait" )
+														--[
+															Condition( "check time" )
+															--[
+																Param( "time", 10 )
+															--]
+															End()
+														--]
+														End()
+														
+														Action( "change char attribute" )
+														--[
+															Param( "target type", "mob" )
+															Param( "target index", 3400205 )
+															Param( "size rate", 270 )
+														--]
+														End()
+													--]
+													End()
+													
+													Action( "wait" )
+													--[
+														Param( "operation", "or" )
+														
+														Condition( "check time" )
+														--[
+															Param( "time", 180 )
+														--]
+														End()
+														
+														Condition( "check mobgroup" )
+														--[
+															Param( "group", 3400205 )
+															Param( "count", 0 )
+														--]
+														End()
+													--]
+													End()
+													
+													Action( "add npc" )
+													--[
+														Param( "index", 5628116 )
+														Param( "loc x", 616.15 )
+														Param( "loc y", 43.51 )
+														Param( "loc z", -1030.70 )
+														Param( "dir x", 0.45 )
+														Param( "dir z", 0.89 )
+														Param( "no spawn wait", "true" )
+													--]
+													End()
+													
+													Action( "add npc" )
+													--[
+														Param( "index", 5628117 )
+														Param( "loc x", 632.32 )
+														Param( "loc y", 43.51 )
+														Param( "loc z", -1034.05 )
+														Param( "dir x", 0.00 )
+														Param( "dir z", 1.00 )
+														Param( "no spawn wait", "true" )
+													--]
+													End()
+													
+													Action( "add npc" )
+													--[
+														Param( "index", 5628118 )
+														Param( "loc x", 646.05 )
+														Param( "loc y", 44.01 )
+														Param( "loc z", -1027.00 )
+														Param( "dir x", -0.69 )
+														Param( "dir z", 0.72 )
+														Param( "no spawn wait", "true" )
+													--]
+													End()
+													
+													Action( "add npc" )
+													--[
+														Param( "index", 5628119 )
+														Param( "loc x", 653.90 )
+														Param( "loc y", 44.11 )
+														Param( "loc z", -1012.97 )
+														Param( "dir x", -0.99 )
+														Param( "dir z", 0.14 )
+														Param( "no spawn wait", "true" )
+													--]
+													End()
+													
+													Action( "add npc" )
+													--[
+														Param( "index", 5628120 )
+														Param( "loc x", 652.55 )
+														Param( "loc y", 44.21 )
+														Param( "loc z", -997.03 )
+														Param( "dir x", -0.95 )
+														Param( "dir z", -0.31 )
+														Param( "no spawn wait", "true" )
+													--]
+													End()
+												--case 4 end
+												--]
+												End()
+											--switch end
+											--]
+											End()
+										--loop End
+										--]
+										End()
+									--while end
+									--]
+									End()
+								--2. Child end
+								--]
+								End()
+								
+								-- 프라이가 전투에서 풀리면
+								Action( "wait" )
+								--[
+									Condition( "check battle" )
+									--[
+										Param( "type", "mob" )
+										Param( "group", 3400201 )
+										Param( "is battle", "false" )
+									--]
+									End()
+								--]
+								End()
+							--function end
+							--]
+							End()
+						--loop end
+						--]
+						End()
+					--while end
+					--]
+					End()
+				--child End
+				--]
+				End()
+				
+				Condition( "child" )	
+				--[
+					Action( "while" )
+					--[
+						Action( "loop" )
+						--[
+							--------------------------------------------------------------------------------
+							-- 전투 풀리면 프라이와 배치된 NPC, mob 모두 지우고, 프라이와 NPC 다시 spawn시킴
+							--------------------------------------------------------------------------------
+							
+							-- 전투 진입하면
+							Action( "wait" )
+							--[
+								Condition( "check battle" )
+								--[
+									Param( "type", "mob" )
+									Param( "group", 3400201 )
+									Param( "is battle", "true" )
+								--]
+								End()
+							--]
+							End()
+							
+							-- boss stage 입구 닫음
+							Action("change object state")
+							--[
+								Param("index", 123)
+								Param("state", 3)
+								Param("substate show", 1)
+							--]
+							End()
+							
+							-- 전투 풀리면
+							Action( "wait" )
+							--[
+								Condition( "check battle" )
+								--[
+									Param( "type", "mob" )
+									Param( "group", 3400201 )
+									Param( "is battle", "false" )
+								--]
+								End()
+							--]
+							End()
+							
+							-- boss stage 입구 열음
+							Action("change object state")
+							--[
+								Param("index", 123)
+								Param("state", 1)
+								Param("substate show", 1)
+							--]
+							End()
+							
+							---------------------------
+							-- 모두 지우기
+							---------------------------
+							
+							Action( "function" )
+							--[
+								Condition( "child" )
+								--[
+									-- Giant mob cleared the top bay (case 1)
+									Action( "remove mobgroup" )
+									--[
+										Param( "group", 3400202 )
+										Param( "type", "clear" )
+									--]
+									End()
+								--]
+								End()
+								
+								Condition( "child" )
+								--[
+									-- Giant mob cleared the top bay (case 2)
+									Action( "remove mobgroup" )
+									--[
+										Param( "group", 3400203 )
+										Param( "type", "clear" )
+									--]
+									End()
+								--]
+								End()
+								
+								Condition( "child" )
+								--[
+									-- Giant mob cleared the top bay (case 3)
+									Action( "remove mobgroup" )
+									--[
+										Param( "group", 3400204 )
+										Param( "type", "clear" )
+									--]
+									End()
+								--]
+								End()
+								
+								Condition( "child" )
+								--[
+									-- Giant mob cleared the top bay (case 4)
+									Action( "remove mobgroup" )
+									--[
+										Param( "group", 3400205 )
+										Param( "type", "clear" )
+									--]
+									End()
+								--]
+								End()
+								
+								Condition( "child" )
+								--[
+									-- 프라이를 지워줌
+									Action( "remove mobgroup" )
+									--[
+										Param( "group", 3400201 )
+										Param( "type", "clear" )
+									--]
+									End()
+								--]
+								End()
+								
+								Condition( "child" )
+								--[
+									-- 자이언트 베이베이맨 NPC를 모두 지워줌(모두 20마리)
+									Action( "remove npc" )
+									--[
+										Param( "index", 5628101 )
+										Param( "type", "clear" )
+									--]
+									End()
+								--]
+								End()
+								
+								Condition( "child" )
+								--[
+									Action( "remove npc" )
+									--[
+										Param( "index", 5628102 )
+										Param( "type", "clear" )
+									--]
+									End()
+								--]
+								End()
+								
+								Condition( "child" )
+								--[
+									Action( "remove npc" )
+									--[
+										Param( "index", 5628103 )
+										Param( "type", "clear" )
+									--]
+									End()
+								--]
+								End()
+								
+								Condition( "child" )
+								--[
+									Action( "remove npc" )
+									--[
+										Param( "index", 5628104 )
+										Param( "type", "clear" )
+									--]
+									End()
+								--]
+								End()
+								
+								Condition( "child" )
+								--[
+									Action( "remove npc" )
+									--[
+										Param( "index", 5628105 )
+										Param( "type", "clear" )
+									--]
+									End()
+								--]
+								End()
+								
+								Condition( "child" )
+								--[
+									Action( "remove npc" )
+									--[
+										Param( "index", 5628106 )
+										Param( "type", "clear" )
+									--]
+									End()
+								--]
+								End()
+								
+								Condition( "child" )
+								--[
+									Action( "remove npc" )
+									--[
+										Param( "index", 5628107 )
+										Param( "type", "clear" )
+									--]
+									End()
+								--]
+								End()
+								
+								Condition( "child" )
+								--[
+									Action( "remove npc" )
+									--[
+										Param( "index", 5628108 )
+										Param( "type", "clear" )
+									--]
+									End()
+								--]
+								End()
+								
+								Condition( "child" )
+								--[
+									Action( "remove npc" )
+									--[
+										Param( "index", 5628109 )
+										Param( "type", "clear" )
+									--]
+									End()
+								--]
+								End()
+								
+								Condition( "child" )
+								--[
+									Action( "remove npc" )
+									--[
+										Param( "index", 5628110 )
+										Param( "type", "clear" )
+									--]
+									End()
+								--]
+								End()
+								
+								Condition( "child" )
+								--[
+									Action( "remove npc" )
+									--[
+										Param( "index", 5628111 )
+										Param( "type", "clear" )
+									--]
+									End()
+								--]
+								End()
+								
+								Condition( "child" )
+								--[
+									Action( "remove npc" )
+									--[
+										Param( "index", 5628112 )
+										Param( "type", "clear" )
+									--]
+									End()
+								--]
+								End()
+								
+								Condition( "child" )
+								--[
+									Action( "remove npc" )
+									--[
+										Param( "index", 5628113 )
+										Param( "type", "clear" )
+									--]
+									End()
+								--]
+								End()
+								
+								Condition( "child" )
+								--[
+									Action( "remove npc" )
+									--[
+										Param( "index", 5628114 )
+										Param( "type", "clear" )
+									--]
+									End()
+								--]
+								End()
+								
+								Condition( "child" )
+								--[
+									Action( "remove npc" )
+									--[
+										Param( "index", 5628115 )
+										Param( "type", "clear" )
+									--]
+									End()
+								--]
+								End()
+								
+								Condition( "child" )
+								--[
+									Action( "remove npc" )
+									--[
+										Param( "index", 5628116 )
+										Param( "type", "clear" )
+									--]
+									End()
+								--]
+								End()
+								
+								Condition( "child" )
+								--[
+									Action( "remove npc" )
+									--[
+										Param( "index", 5628117 )
+										Param( "type", "clear" )
+									--]
+									End()
+								--]
+								End()
+								
+								Condition( "child" )
+								--[
+									Action( "remove npc" )
+									--[
+										Param( "index", 5628118 )
+										Param( "type", "clear" )
+									--]
+									End()
+								--]
+								End()
+								
+								Condition( "child" )
+								--[
+									Action( "remove npc" )
+									--[
+										Param( "index", 5628119 )
+										Param( "type", "clear" )
+									--]
+									End()
+								--]
+								End()
+								
+								Condition( "child" )
+								--[
+									Action( "remove npc" )
+									--[
+										Param( "index", 5628120 )
+										Param( "type", "clear" )
+									--]
+									End()
+								--]
+								End()
+								
+								Action( "wait" )
+								--[
+									Condition( "check time" )
+									--[
+										Param( "time", 2 )
+									--]
+									End()
+								--]
+								End()
+							-- function end
+							--]
+							End()
+							
+							--------------------------------
+							-- NPC & mob 다시 spawn 시키기
+							--------------------------------
+							
+							Action( "function" )
+							--[
+								Condition( "child" )
+								--[
+									-- 자이언트 베이베이맨 NPC를 모두 다시 spawn시킴(모두 20마리)
+									Action( "add npc" )
+									--[
+										Param( "index", 5628101 )
+										Param( "loc x", 654.84 )
+										Param( "loc y", 44.51 )
+										Param( "loc z", -1006.21 )
+										Param( "dir x", -0.94 )
+										Param( "dir z", 0.34 )
+										Param( "no spawn wait", "true" )
+									--]
+									End()
+								--]
+								End()
+								
+								Condition( "child" )
+								--[
+									Action( "add npc" )
+									--[
+										Param( "index", 5628102 )
+										Param( "loc x", 648.82 )
+										Param( "loc y", 44.51 )
+										Param( "loc z", -991.80 )
+										Param( "dir x", -0.78 )
+										Param( "dir z", -0.63 )
+										Param( "no spawn wait", "true" )
+									--]
+									End()
+								--]
+								End()
+								
+								Condition( "child" )
+								--[
+									Action( "add npc" )
+									--[
+										Param( "index", 5628103 )
+										Param( "loc x", 634.77 )
+										Param( "loc y", 43.51 )
+										Param( "loc z", -982.23 )
+										Param( "dir x", -0.57 )
+										Param( "dir z", -0.82 )
+										Param( "no spawn wait", "true" )
+									--]
+									End()
+								--]
+								End()
+								
+								Condition( "child" )
+								--[
+									Action( "add npc" )
+									--[
+										Param( "index", 5628104 )
+										Param( "loc x", 618.73 )
+										Param( "loc y", 43.51 )
+										Param( "loc z", -983.84 )
+										Param( "dir x", 0.39 )
+										Param( "dir z", -0.92 )
+										Param( "no spawn wait", "true" )
+									--]
+									End()
+								--]
+								End()
+								
+								Condition( "child" )
+								--[
+									Action( "add npc" )
+									--[
+										Param( "index", 5628105 )
+										Param( "loc x", 605.94 )
+										Param( "loc y", 43.51 )
+										Param( "loc z", -994.89 )
+										Param( "dir x", 0.48 )
+										Param( "dir z", -0.87 )
+										Param( "no spawn wait", "true" )
+									--]
+									End()
+								--]
+								End()
+								
+								Condition( "child" )
+								--[
+									Action( "add npc" )
+									--[
+										Param( "index", 5628106 )
+										Param( "loc x", 603.10 )
+										Param( "loc y", 43.51 )
+										Param( "loc z", -1009.35 )
+										Param( "dir x", 0.98 )
+										Param( "dir z", 0.21 )
+										Param( "no spawn wait", "true" )
+									--]
+									End()
+								--]
+								End()
+								
+								Condition( "child" )
+								--[
+									Action( "add npc" )
+									--[
+										Param( "index", 5628107 )
+										Param( "loc x", 608.89 )
+										Param( "loc y", 43.51 )
+										Param( "loc z", -1024.95 )
+										Param( "dir x", 0.59 )
+										Param( "dir z", 0.81 )
+										Param( "no spawn wait", "true" )
+									--]
+									End()
+								--]
+								End()
+								
+								Condition( "child" )
+								--[
+									Action( "add npc" )
+									--[
+										Param( "index", 5628108 )
+										Param( "loc x", 650.30 )
+										Param( "loc y", 43.51 )
+										Param( "loc z", -1021.18 )
+										Param( "dir x", -0.69 )
+										Param( "dir z", 0.72 )
+										Param( "no spawn wait", "true" )
+									--]
+									End()
+								--]
+								End()
+								
+								Condition( "child" )
+								--[
+									Action( "add npc" )
+									--[
+										Param( "index", 5628109 )
+										Param( "loc x", 624.13 )
+										Param( "loc y", 43.51 )
+										Param( "loc z", -1034.18 )
+										Param( "dir x", 0.00 )
+										Param( "dir z", 1.00 )
+										Param( "no spawn wait", "true" )
+									--]
+									End()
+								--]
+								End()
+								
+								Condition( "child" )
+								--[
+									Action( "add npc" )
+									--[
+										Param( "index", 5628110 )
+										Param( "loc x", 638.78 )
+										Param( "loc y", 43.51 )
+										Param( "loc z", -1031.44 )
+										Param( "dir x", 0.00 )
+										Param( "dir z", 1.00 )
+										Param( "no spawn wait", "true" )
+									--]
+									End()
+								--]
+								End()
+								
+								Condition( "child" )
+								--[
+									Action( "add npc" )
+									--[
+										Param( "index", 5628111 )
+										Param( "loc x", 642.96 )
+										Param( "loc y", 43.51 )
+										Param( "loc z", -986.19 )
+										Param( "dir x", -0.67 )
+										Param( "dir z", -0.74 )
+										Param( "no spawn wait", "true" )
+									--]
+									End()
+								--]
+								End()
+								
+								Condition( "child" )
+								--[
+									Action( "add npc" )
+									--[
+										Param( "index", 5628112 )
+										Param( "loc x", 626.27 )
+										Param( "loc y", 43.88 )
+										Param( "loc z", -982.09 )
+										Param( "dir x", 0.42 )
+										Param( "dir z", -0.91 )
+										Param( "no spawn wait", "true" )
+									--]
+									End()
+								--]
+								End()
+								
+								Condition( "child" )
+								--[
+									Action( "add npc" )
+									--[
+										Param( "index", 5628113 )
+										Param( "loc x", 611.68 )
+										Param( "loc y", 43.51 )
+										Param( "loc z", -988.51 )
+										Param( "dir x", 0.29 )
+										Param( "dir z", -0.96 )
+										Param( "no spawn wait", "true" )
+									--]
+									End()
+								--]
+								End()
+								
+								Condition( "child" )
+								--[
+									Action( "add npc" )
+									--[
+										Param( "index", 5628114 )
+										Param( "loc x", 603.38 )
+										Param( "loc y", 43.81 )
+										Param( "loc z", -1002.23 )
+										Param( "dir x", 0.95 )
+										Param( "dir z", -0.33 )
+										Param( "no spawn wait", "true" )
+									--]
+									End()
+								--]
+								End()
+								
+								Condition( "child" )
+								--[
+									Action( "add npc" )
+									--[
+										Param( "index", 5628115 )
+										Param( "loc x", 604.95 )
+										Param( "loc y", 43.91 )
+										Param( "loc z", -1018.51 )
+										Param( "dir x", 0.80 )
+										Param( "dir z", 0.60 )
+										Param( "no spawn wait", "true" )
+									--]
+									End()
+								--]
+								End()
+								
+								Condition( "child" )
+								--[
+									Action( "add npc" )
+									--[
+										Param( "index", 5628116 )
+										Param( "loc x", 616.15 )
+										Param( "loc y", 43.51 )
+										Param( "loc z", -1030.70 )
+										Param( "dir x", 0.45 )
+										Param( "dir z", 0.89 )
+										Param( "no spawn wait", "true" )
+									--]
+									End()
+								--]
+								End()
+								
+								Condition( "child" )
+								--[
+									Action( "add npc" )
+									--[
+										Param( "index", 5628117 )
+										Param( "loc x", 632.32 )
+										Param( "loc y", 43.51 )
+										Param( "loc z", -1034.05 )
+										Param( "dir x", 0.00 )
+										Param( "dir z", 1.00 )
+										Param( "no spawn wait", "true" )
+									--]
+									End()
+								--]
+								End()
+								
+								Condition( "child" )
+								--[
+									Action( "add npc" )
+									--[
+										Param( "index", 5628118 )
+										Param( "loc x", 646.05 )
+										Param( "loc y", 44.01 )
+										Param( "loc z", -1027.00 )
+										Param( "dir x", -0.69 )
+										Param( "dir z", 0.72 )
+										Param( "no spawn wait", "true" )
+									--]
+									End()
+								--]
+								End()
+								
+								Condition( "child" )
+								--[
+									Action( "add npc" )
+									--[
+										Param( "index", 5628119 )
+										Param( "loc x", 653.90 )
+										Param( "loc y", 44.11 )
+										Param( "loc z", -1012.97 )
+										Param( "dir x", -0.99 )
+										Param( "dir z", 0.14 )
+										Param( "no spawn wait", "true" )
+									--]
+									End()
+								--]
+								End()
+								
+								Condition( "child" )
+								--[
+									Action( "add npc" )
+									--[
+										Param( "index", 5628120 )
+										Param( "loc x", 652.55 )
+										Param( "loc y", 44.21 )
+										Param( "loc z", -997.03 )
+										Param( "dir x", -0.95 )
+										Param( "dir z", -0.31 )
+										Param( "no spawn wait", "true" )
+									--]
+									End()
+								--]
+								End()
+								
+								Condition( "child" )
+								--[
+									-- 프라이 mob을 다시 spawn시킴
+									Action( "add mob" )
+									--[
+										Param( "index", 21854101 )
+										Param( "group", 3400201 )
+										Param( "loc x", 628.70 )
+										Param( "loc y", 44.53 )
+										Param( "loc z", -1007.86 )
+										Param( "dir x", 0.67 )
+										Param( "dir z", -0.74 )
+										Param( "nest type", "fix" )
+										Param( "nest range", 35 )
+										Param( "no spawn wait", "true" )
+									--]
+									End()
+								--]
+								End()
+								
+								Action( "wait" )
+								--[
+									Condition( "check time" )
+									--[
+										Param( "time", 2 )
+									--]
+									End()
+								--]
+								End()
+							-- function end
+							--]
+							End()
+						--]
+						End()
+					--]
+					End()
+				-- child end
+				--]
+				End()
+				
+				----------------------------------------------
+				-- 프라이 죽으면 배치된 NPC, mob 모두 지워줌
+				----------------------------------------------
+				
+				-- 프라이가 죽으면
+				Action( "wait" )
+				--[
+					Condition( "check mobgroup" )
+					--[
+						Param( "group", 3400201 )
+						Param( "count", 1 )
+					--]
+					End()
+				--]
+				End()
+			--1. function end+
+			--]
+			End()
+			
+			
+			Action( "function" )
+			--[
+				Condition( "child" )
+				--[
+					-- 자이언트 베이베이맨 mob을 지워줌 (case 1)
+					Action( "remove mobgroup" )
+					--[
+						Param( "group", 3400202 )
+						Param( "type", "faint" )
+					--]
+					End()
+				--]
+				End()
+				
+				Condition( "child" )
+				--[
+					-- 자이언트 베이베이맨 mob을 지워줌 (case 2)
+					Action( "remove mobgroup" )
+					--[
+						Param( "group", 3400203 )
+						Param( "type", "faint" )
+					--]
+					End()
+				--]
+				End()
+				
+				Condition( "child" )
+				--[
+					-- 자이언트 베이베이맨 mob을 지워줌 (case 3)
+					Action( "remove mobgroup" )
+					--[
+						Param( "group", 3400204 )
+						Param( "type", "faint" )
+					--]
+					End()
+				--]
+				End()
+				
+				Condition( "child" )
+				--[
+					-- 자이언트 베이베이맨 mob을 지워줌 (case 4)
+					Action( "remove mobgroup" )
+					--[
+						Param( "group", 3400205 )
+						Param( "type", "faint" )
+					--]
+					End()
+				--]
+				End()
+				
+				Condition( "child" )
+				--[
+					-- 자이언트 베이베이맨 NPC를 모두 지워줌(모두 20마리)
+					Action( "remove npc" )
+					--[
+						Param( "index", 5628101 )
+						Param( "type", "clear" )
+					--]
+					End()
+				--]
+				End()
+				
+				Condition( "child" )
+				--[
+					Action( "remove npc" )
+					--[
+						Param( "index", 5628102 )
+						Param( "type", "clear" )
+					--]
+					End()
+				--]
+				End()
+				
+				Condition( "child" )
+				--[
+					Action( "remove npc" )
+					--[
+						Param( "index", 5628103 )
+						Param( "type", "clear" )
+					--]
+					End()
+				--]
+				End()
+				
+				Condition( "child" )
+				--[
+					Action( "remove npc" )
+					--[
+						Param( "index", 5628104 )
+						Param( "type", "clear" )
+					--]
+					End()
+				--]
+				End()
+				
+				Condition( "child" )
+				--[
+					Action( "remove npc" )
+					--[
+						Param( "index", 5628105 )
+						Param( "type", "clear" )
+					--]
+					End()
+				--]
+				End()
+				
+				Condition( "child" )
+				--[
+					Action( "remove npc" )
+					--[
+						Param( "index", 5628106 )
+						Param( "type", "clear" )
+					--]
+					End()
+				--]
+				End()
+				
+				Condition( "child" )
+				--[
+					Action( "remove npc" )
+					--[
+						Param( "index", 5628107 )
+						Param( "type", "clear" )
+					--]
+					End()
+				--]
+				End()
+				
+				Condition( "child" )
+				--[
+					Action( "remove npc" )
+					--[
+						Param( "index", 5628108 )
+						Param( "type", "clear" )
+					--]
+					End()
+				--]
+				End()
+				
+				Condition( "child" )
+				--[
+					Action( "remove npc" )
+					--[
+						Param( "index", 5628109 )
+						Param( "type", "clear" )
+					--]
+					End()
+				--]
+				End()
+				
+				Condition( "child" )
+				--[
+					Action( "remove npc" )
+					--[
+						Param( "index", 5628110 )
+						Param( "type", "clear" )
+					--]
+					End()
+				--]
+				End()
+				
+				Condition( "child" )
+				--[
+					Action( "remove npc" )
+					--[
+						Param( "index", 5628111 )
+						Param( "type", "clear" )
+					--]
+					End()
+				--]
+				End()
+				
+				Condition( "child" )
+				--[
+					Action( "remove npc" )
+					--[
+						Param( "index", 5628112 )
+						Param( "type", "clear" )
+					--]
+					End()
+				--]
+				End()
+				
+				Condition( "child" )
+				--[
+					Action( "remove npc" )
+					--[
+						Param( "index", 5628113 )
+						Param( "type", "clear" )
+					--]
+					End()
+				--]
+				End()
+				
+				Condition( "child" )
+				--[
+					Action( "remove npc" )
+					--[
+						Param( "index", 5628114 )
+						Param( "type", "clear" )
+					--]
+					End()
+				--]
+				End()
+				
+				Condition( "child" )
+				--[
+					Action( "remove npc" )
+					--[
+						Param( "index", 5628115 )
+						Param( "type", "clear" )
+					--]
+					End()
+				--]
+				End()
+				
+				Condition( "child" )
+				--[
+					Action( "remove npc" )
+					--[
+						Param( "index", 5628116 )
+						Param( "type", "clear" )
+					--]
+					End()
+				--]
+				End()
+				
+				Condition( "child" )
+				--[
+					Action( "remove npc" )
+					--[
+						Param( "index", 5628117 )
+						Param( "type", "clear" )
+					--]
+					End()
+				--]
+				End()
+				
+				Condition( "child" )
+				--[
+					Action( "remove npc" )
+					--[
+						Param( "index", 5628118 )
+						Param( "type", "clear" )
+					--]
+					End()
+				--]
+				End()
+				
+				Condition( "child" )
+				--[
+					Action( "remove npc" )
+					--[
+						Param( "index", 5628119 )
+						Param( "type", "clear" )
+					--]
+					End()
+				--]
+				End()
+				
+				Condition( "child" )
+				--[
+					Action( "remove npc" )
+					--[
+						Param( "index", 5628120 )
+						Param( "type", "clear" )
+					--]
+					End()
+				--]
+				End()
+				
+				Condition( "child" )
+				--[
+					-- 프라이의 캡슐키트 spawn
+					Action( "add mob" )
+					--[
+						Param( "index", 21759501 )
+						Param( "group", 3400206 )
+						Param( "loc x", 628.70 )
+						Param( "loc y", 44.53 )
+						Param( "loc z", -1007.86 )
+						Param( "dir x", 0.67 )
+						Param( "dir z", -0.74 )
+						Param( "no spawn wait", "true" )
+					--]
+					End()
+				--]
+				End()
+				
+				Action( "wait" )
+				--[
+					Condition( "check time" )
+					--[
+						Param( "time", 2 )
+					--]
+					End()
+				--]
+				End()
+			--]
+			End()
+			
+--			-- 프라이가 죽으면
+--			Action( "wait" )
+--			--[
+--				Condition( "check mobgroup" )
+--				--[
+--					Param( "group", 3400201 )
+--					Param( "count", 0 )
+--				--]
+--				End()
+--			--]
+--			End()
+			
+			-- 로비로 event 보냄
+			Action( "send event to wps" )
+			--[
+				Param( "wps index", 34001 )
+				Param( "event id", 881 )
+			--]
+			End()
+			
+			-- boss stage 출구 열어줌
+			Action( "change object state" )
+			--[
+				Param( "index", 125 )
+				Param( "state", 1 ) 
+				Param( "substate show", 1 )
+			--]
+			End()
+			
+--			-- 2초 대기
+--			Action( "wait" )
+--			--[
+--				Condition( "check time" )
+--				--[
+--					Param( "time", 2 )
+--				--]
+--				End()
+--			--]
+--			End()
+			
+			-- 파이프 파괴, 파이프 복도 파괴
+			Action( "change object state" )
+			--[
+				Param( "index", 88 )
+				Param( "state", 1 ) 
+				Param( "substate show", 1 )
+			--]
+			End()
+			
+			-- 드데카민 공급 구역이 폐쇄되었습니다.
+			Action("system message")
+			--[
+				Param("notify", "notice")
+				Param("text index", 79)
+			--]
+			End()
+			
+			-- 2초 대기
+			Action( "wait" )
+			--[
+				Condition( "check time" )
+				--[
+					Param( "time", 2 )
+				--]
+				End()
+			--]
+			End()
+			
+			-- 파이프 복도 출구 열어줌
+			Action( "change object state" )
+			--[
+				Param( "index", 4 )
+				Param( "state", 1 ) 
+				Param( "substate show", 1 )
+			--]
+			End()
+			
+			-- 승천의 구슬 근처 스위치 작동시키고 uncheck
+			Action( "change object state" )
+			--[
+				Param( "index", 82 )
+				Param( "state", 1 )
+				Param( "substate show", 1 )
+				Param( "substate unselect", 1 )
+			--]
+			End()
+			
+			-- 파이프 복도 옆 스위치 작동시키고 uncheck
+			Action( "change object state" )
+			--[
+				Param( "index", 100 )
+				Param( "state", 1 )
+				Param( "substate show", 1 )
+				Param( "substate unselect", 1 )
+			--]
+			End()
+			
+			-- child에서 빠져나가지 않는다
+			Action( "wait" )
+			--[
+				Condition( "recv event from wps" )
+				--[
+					Param( "wps index", 34003 )
+					Param( "event id", 666 )
+				--]
+				End()
+			--]
+			End()
+		-- child end
+		--]
+		End()
+		
+		-- 승천의 구슬 근처 스위치가 작동되면
+		-- Object 8152에서 이벤트가 옴
+		Action("wait")
+		--[
+			Condition("recv event from ts")
+			--[
+				Param("trigger type", "object")
+				Param("event id", 876)
+			--]
+			End()
+		--]
+		End()
+	--]
+	End()
+	
+	------------------------------------------------------------
+	-- Normal Stage의 모든 mob을 despawn하고, 모든 문을 열어준다
+	------------------------------------------------------------
+	Action("remove mobgroup")
+	--[
+		Param("group", 101)
+		Param("type", "clear")
+	--]
+	End()
+	
+	Action("remove mobgroup")
+	--[
+		Param("group", 102)
+		Param("type", "clear")
+	--]
+	End()
+	
+	Action("remove mobgroup")
+	--[
+		Param("group", 103)
+		Param("type", "clear")
+	--]
+	End()
+	
+	Action("remove mobgroup")
+	--[
+		Param("group", 104)
+		Param("type", "clear")
+	--]
+	End()
+	
+	Action( "change object state" )
+	--[
+		Param( "index", 84 )
+		Param( "state", 1 )
+		Param( "substate show", 1 )
+	--]
+	End()
+	
+	Action( "change object state" )
+	--[
+		Param( "index", 85 )
+		Param( "state", 1 )
+		Param( "substate show", 1 )
+	--]
+	End()
+	
+	Action( "change object state" )
+	--[
+		Param( "index", 86 )
+		Param( "state", 1 )
+		Param( "substate show", 1 )
+	--]
+	End()
+	
+	Action( "change object state" )
+	--[
+		Param( "index", 87 )
+		Param( "state", 1 )
+		Param( "substate show", 1 )
+	--]
+	End()
+	
+	Action( "change object state" )
+	--[
+		Param( "index", 123 )
+		Param( "state", 1 )
+		Param( "substate show", 1 )
+	--]
+	End()
+	
+	Action( "change object state" )
+	--[
+		Param( "index", 125 )
+		Param( "state", 1 )
+		Param( "substate show", 1 )
+	--]
+	End()
+	
+	Action( "change object state" )
+	--[
+		Param( "index", 88 )
+		Param( "state", 1 )
+		Param( "substate show", 1 )
+	--]
+	End()
+	
+	Action( "change object state" )
+	--[
+		Param( "index", 4 )
+		Param( "state", 1 )
+		Param( "substate show", 1 )
+	--]
+	End()
+	
+	Action( "change object state" )
+	--[
+		Param( "index", 74 )
+		Param( "state", 1 )
+		Param( "substate show", 1 )
+	--]
+	End()
+	
+	Action( "change object state" )
+	--[
+		Param( "index", 82 )
+		Param( "state", 1 )
+		Param( "substate show", 1 )
+		Param( "substate unselect", 1 )
+	--]
+	End()
+	
+	Action( "change object state" )
+	--[
+		Param( "index", 100 )
+		Param( "state", 1 )
+		Param( "substate show", 1 )
+	--]
+	End()
+--]
+End()

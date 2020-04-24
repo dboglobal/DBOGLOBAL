@@ -1,0 +1,70 @@
+<obstacles3D>
+    <obstacle3D>
+        <point3D x="-118" y="-286" z="0"/>
+        <point3D x="-18" y="-286" z="0"/>
+        <point3D x="-118" y="-186" z="0"/>
+        <point3D x="-18" y="-186" z="0"/>
+        <point3D x="-118" y="-286" z="649"/>
+        <point3D x="-18" y="-286" z="649"/>
+        <point3D x="-118" y="-186" z="649"/>
+        <point3D x="-18" y="-186" z="649"/>
+    </obstacle3D>
+    <obstacle3D>
+        <point3D x="647" y="-267" z="0"/>
+        <point3D x="747" y="-267" z="0"/>
+        <point3D x="647" y="-167" z="0"/>
+        <point3D x="747" y="-167" z="0"/>
+        <point3D x="647" y="-267" z="649"/>
+        <point3D x="747" y="-267" z="649"/>
+        <point3D x="647" y="-167" z="649"/>
+        <point3D x="747" y="-167" z="649"/>
+    </obstacle3D>
+    <obstacle3D>
+        <point3D x="647" y="445" z="0"/>
+        <point3D x="747" y="445" z="0"/>
+        <point3D x="647" y="545" z="0"/>
+        <point3D x="747" y="545" z="0"/>
+        <point3D x="647" y="445" z="649"/>
+        <point3D x="747" y="445" z="649"/>
+        <point3D x="647" y="545" z="649"/>
+        <point3D x="747" y="545" z="649"/>
+    </obstacle3D>
+    <obstacle3D>
+        <point3D x="-118" y="426" z="0"/>
+        <point3D x="-18" y="426" z="0"/>
+        <point3D x="-118" y="526" z="0"/>
+        <point3D x="-18" y="526" z="0"/>
+        <point3D x="-118" y="426" z="649"/>
+        <point3D x="-18" y="426" z="649"/>
+        <point3D x="-118" y="526" z="649"/>
+        <point3D x="-18" y="526" z="649"/>
+    </obstacle3D>
+    <obstacle3D>
+        <point3D x="-138" y="-267" z="666"/>
+        <point3D x="758" y="-267" z="666"/>
+        <point3D x="-138" y="547" z="666"/>
+        <point3D x="758" y="547" z="666"/>
+        <point3D x="-138" y="-267" z="555"/>
+        <point3D x="758" y="-267" z="555"/>
+        <point3D x="-138" y="547" z="555"/>
+        <point3D x="758" y="547" z="555"/>
+    </obstacle3D>
+    <obstacle3D>
+        <point3D x="-151" y="-191" z="659"/>
+        <point3D x="-44" y="-191" z="672"/>
+        <point3D x="-151" y="448" z="659"/>
+        <point3D x="-44" y="448" z="672"/>
+        <point3D x="-273" y="-262" z="1747"/>
+        <point3D x="-165" y="-262" z="1759"/>
+        <point3D x="-273" y="518" z="1747"/>
+        <point3D x="-165" y="518" z="1759"/>
+        <point3D x="-192" y="-192" z="1022"/>
+        <point3D x="-84" y="-192" z="1034"/>
+        <point3D x="-84" y="448" z="1034"/>
+        <point3D x="-192" y="448" z="1022"/>
+        <point3D x="-232" y="-262" z="1384"/>
+        <point3D x="-124" y="-262" z="1396"/>
+        <point3D x="-124" y="518" z="1396"/>
+        <point3D x="-232" y="518" z="1384"/>
+    </obstacle3D>
+</obstacles3D>

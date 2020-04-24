@@ -1,0 +1,673 @@
+-- DWC 1 부르마와 조우
+
+-- 주석에서 아래 용어를 사용한다.
+
+-- npc
+-- 7031101: 비행 뿔나로돈. spawn animation이 하늘에서 날아내려옴. 안씀.
+-- 7031201: 땅 뿔나로돈. spawn animation이 제자리에서.
+
+-- 1381101: 호위 부르마. 피격있고, LP바 있음.
+-- 1381102: 대사 부르마. 피격없고, LP바 없음.
+
+
+GameStage(0)
+--[
+	-- 플래시: DWC Challenge
+	Action( "flash play" )
+	--[
+		Param( "id", 20000 )
+	--]     
+	End()
+	
+	Action( "wait" )
+	--[
+		Condition( "check time" )
+		--[
+			Param( "time", 3 )
+		--]
+		End()
+	--]
+	End()
+	
+	-- 플래시: Start
+	Action( "flash play" )
+	--[
+		Param( "id", 20001 )
+	--]     
+	End()
+
+	-------------------------------------------------------------
+	-- 이벤트 등록: 나가는 길을 찾기
+	Action( "event status register" )
+	--[
+		Param( "group", 1 )
+		Param( "index", 1 )
+		Param( "text tblidx", 49 )
+		Param( "type", "normal" )
+	--]
+	End()
+	
+	-- check point 띄워줌
+	Action( "direction indicate" )
+	--[
+		Param( "apply", "true" )
+		Param( "indicate type", "point" )
+		Param( "loc x", 1700.92 )
+		Param( "loc z", -1498.34 )
+	--]
+	End()
+	
+	-- user가 check point에 들어오면
+	Action("wait") 
+	--[
+		Condition( "area enter" )
+		--[   
+			Param( "origin x", 1700.92 )
+			Param( "origin z", -1498.34 )
+			Param( "radius", 5 )
+			Param( "all member", "false" )
+		--]
+	  	End()
+    	--]
+	End()
+	
+	-- check point 지워줌
+	Action( "direction indicate" )
+	--[
+		Param( "apply", "false" )
+		Param( "indicate type", "point" )
+	--]
+	End()
+	
+	-- 대사 부르마 spawn (볼일보는 위치)
+	Action( "add npc" )
+	--[
+		Param( "index", 1381102 )
+		Param( "loc x", 1691.45 )
+		Param( "loc y", -109.05 )
+		Param( "loc z", -1499.81 )
+		Param( "dir x", 0.97 )
+		Param( "dir z", 0.22 )
+		Param( "play script", 1381102 )
+		Param( "play scene", 1 )
+		Param( "no spawn wait", "true" )
+		Param( "stand alone", "true" )
+	--]
+	End()
+
+	-- 대사 부르마 나올때까지 대기
+	Action( "wait" )
+	--[
+		Condition( "recv event from sps" )
+		--[
+			Param( "object type", "npc" )
+			Param( "object index", 1381102 )
+			Param( "event id", 619 )
+		--]
+		End()
+	--]
+	End()
+	
+	-- 부르마 user 발견 나레이션 시작
+	Action( "send event to ts" )
+	--[
+		Param( "trigger type", "quest" )
+		Param( "apply type", "register all" )
+		Param( "event id", 620 )
+	--]
+	End()
+	
+	-- 부르마 user 발견 나레이션 끝날때까지 대기
+	Action( "wait" )
+	--[
+		Condition( "recv event from ts" )
+		--[
+			Param( "trigger type", "quest" )
+			Param( "event id", 621 )
+		--]
+		End()
+	--]
+	End()
+	
+	-- 뿔나로돈 등장 cinematic
+	Action( "direct play" )
+	--[
+		Param( "type", "cinematic" )
+		Param( "id", 1085 )
+		Param( "sync", "false" )
+	--]
+	End()
+
+	-- 땅 뿔나로돈 NPC Spawn
+	Action( "add npc" )
+	--[
+		Param( "index", 7031201 )
+		Param( "loc x", 1662.46 )
+		Param( "loc y", -109.76 )
+		Param( "loc z", -1525.6 )
+		Param( "dir x", 0.91 )
+		Param( "dir z", 0.42 )
+		Param( "play script", 7031201 )
+		Param( "play scene", 1 )
+		Param( "no spawn wait", "true" )
+	--]
+	End()
+	
+	-- 뿔나로돈 NPC 뛰쳐나오기 끝날때까지 대기
+	Action( "wait" )
+	--[
+		Condition( "recv event from sps" )
+		--[
+			Param( "object type", "npc" )
+			Param( "object index", 7031201 )
+			Param( "event id", 622 )
+		--]
+		End()
+	--]
+	End()
+	
+	-- 뿔나로돈 등장 대사 시작
+	Action("send event to ts")
+	--[
+		Param( "trigger type", "quest" )
+		Param( "apply type", "register all" )
+		Param( "event id", 623 )
+	--]
+	End()
+	
+	-- 뿔나로돈 등장 대사 완료
+	Action( "wait" )
+	--[
+		Condition("recv event from ts")
+		--[
+			Param( "trigger type", "quest" )
+			Param( "event id", 624 )
+		--]
+		End()
+	--]
+	End()
+	
+	-------------------------------------------------------------
+	-- 이벤트 삭제: 나가는 길을 찾기
+	Action( "event status clear" )
+	--[
+		Param( "group", 1 )
+	--]
+	End()
+	
+	-- 대사 부르마 NPC 삭제
+	Action( "remove npc" )
+	--[
+		Param( "index", 1381102 )
+		Param( "type", "clear" )
+	--]
+	End()
+	
+	-- 호위 부르마 NPC spawn
+	-- 부르마 비명 say 있음
+	Action( "add npc" )
+	--[
+		Param( "index", 1381101 )
+		Param( "loc x", 1696.01 )
+		Param( "loc y", -110.44 )
+		Param( "loc z", -1499.46 )
+		Param( "dir x", 0.8 )
+		Param( "dir z", 0.6 )
+		Param( "play script", 1381101 )
+		Param( "play scene", 2 )
+		Param( "no spawn wait", "true" )
+	--]
+	End()
+
+	-- 부르마 호위 function 시작
+	Action( "function" )
+	--[
+		Condition( "child" )
+		--[
+			-- 부르마 호위 중 부르마가 죽으면 dwc fail
+			Action( "wait" )
+			--[
+				Condition( "npc faint" )
+				--[
+					Param( "npc index", 1381101 )
+				--]
+				End()
+			--]
+			End()
+
+			Action( "DWC fail" )
+			--[
+			--]
+			End()
+		--]
+		End()
+		
+		------------------------------------
+		-- 이벤트 등록: 뿔나로돈을 물리치기
+		Action( "event status register" )
+		--[
+			Param( "group", 2 )
+			Param( "index", 1 )
+			Param( "text tblidx", 50 )
+			Param( "type", "normal" )
+		--]
+		End()
+		
+		-- 땅 뿔나로돈 NPC 삭제
+		Action( "remove npc" )
+		--[
+			Param( "index", 7031201 )
+			Param( "type", "clear" )
+		--]
+		End()
+		
+		-- 땅 뿔나로돈 mob spawn
+		Action( "add mob" )
+		--[
+			Param( "index", 48151201 )
+			Param( "group", 7000101 )
+			Param( "loc x", 1691.8 )
+			Param( "loc y", -109.38 )
+			Param( "loc z", -1506.27 )
+			Param( "dir x", 0.48 )
+			Param( "dir z", 0.87 )
+			Param( "no spawn wait", "true" )
+		--]
+		End()
+		
+		-- 땅 뿔나로돈 사망 check
+		Action( "wait" )
+		--[
+			Condition( "check mobgroup" )
+			--[   
+				Param( "group", 7000101 )
+				Param( "count", 0 )
+			--]
+			End() 
+		--]
+		End()
+	--]
+	End()
+	-- 부르마 호위 function 종료
+
+	-------------------------------------------------------------
+	-- 이벤트 선택: 뿔나로돈을 물리치기
+	Action( "event status select" )
+	--[
+		Param( "group", 2 )
+		Param( "index", 1 )
+	--]
+	End()
+
+	Action( "wait" )
+	--[
+		Condition( "check time" )
+		--[
+			Param( "time", 2 )
+		--]
+		End()
+	--]
+	End()
+
+	-- 뿔나로돈이 겹치는 것을 막기 위해 확실하게 지워줌
+	Action( "remove mobgroup" )
+	--[
+		Param( "group", 7000101 )
+		Param( "type", "clear" )
+	--]
+	End()
+	
+	-- 땅 뿔나로돈 NPC Spawn
+	Action( "add npc" )
+	--[
+		Param( "index", 7031201 )
+		Param( "loc x", 1691.8 )
+		Param( "loc y", -109.38 )
+		Param( "loc z", -1506.27 )
+		Param( "dir x", 0.48 )
+		Param( "dir z", 0.87 )
+		Param( "no spawn wait", "true" )
+	--]
+	End()
+	
+	-- 뿔나로돈 용서를 비는 나레이션 시작
+	Action("send event to ts")
+	--[
+		Param( "trigger type", "quest" )
+		Param( "apply type", "register all" )
+		Param( "event id", 625 )
+	--]
+	End()
+	
+	-- User가 뿔나로돈을 용서하는지 아닌지 확인
+	Action( "function" )
+	--[
+		Condition( "child" )
+		--[
+			-- User가 용서할 때
+			-- 부르마 카드 루트
+			Action( "wait" )
+			--[
+				Condition("recv event from ts")
+				--[
+					Param( "trigger type", "quest" )
+					Param( "event id", 626 )
+				--]
+				End()
+			--]
+			End()
+			
+			-- 뿔나로돈 루트 발동 (70002.wps)
+			Action( "send event to wps" )
+			--[
+				Param( "wps index", 70002 )
+				Param( "event id", 670 )
+			--]
+			End()
+			
+			-- 뿔나로돈 루트 완료 대기
+			Action( "wait" )
+			--[
+				Condition( "recv event from wps" )
+				--[
+					Param( "wps index", 70002 )
+					Param( "event id", 687 )
+				--]
+				End()
+			--]
+			End()
+			
+			-- wps 종료
+			Action( "wps fail" )
+			--[
+			--]
+			End()
+		
+		--]
+		End()
+		
+		-- User가 용서하지 않을때
+		-- 부르마 or 손오공 카드 루트
+		Action( "wait" )
+		--[
+			Condition("recv event from ts")
+			--[
+				Param( "trigger type", "quest" )
+				Param( "event id", 629 )
+			--]
+			End()
+		--]
+		End()
+	--]
+	End()
+	
+	-- 용서 안받고 뿔나로돈 뛰어서 도망감
+	Action( "change sps scene" )
+	--[
+		Param( "index", 7031201 )
+		Param( "play script", 7031201 )
+		Param( "play scene", 4 )
+	--]
+	End()
+		
+	-- 호위 부르마 escort 대기상태로 바꿈
+	-- 원래 더 나중에 있던 구문인데, sps동기화 문제가 발생하여 앞쪽으로 당김
+	Action( "change sps scene" )
+	--[
+		Param( "index", 1381101 )
+		Param( "play script", 1381101 )
+		Param( "play scene", 1 )
+	--]
+	End()
+
+	-- 시간 대기(뿔나로돈 나가는 것을 user가 볼 수 있도록 하기 위해)
+	Action( "wait" )
+	--[
+		Condition( "check time" )
+		--[
+			Param( "time", 3 )
+		--]
+		End()
+	--]
+	End()
+	
+	-- 부르마가 안심이라고 말하는 나레이션 시작
+	Action("send event to ts")
+	--[
+		Param( "trigger type", "quest" )
+		Param( "apply type", "register all" )
+		Param( "event id", 630 )
+	--]
+	End()
+	
+	-- 부르마가 안심이라고 말하는 나레이션 종료
+	Action( "wait" )
+	--[
+		Condition("recv event from ts")
+		--[
+			Param( "trigger type", "quest" )
+			Param( "event id", 631 )
+		--]
+		End()
+	--]
+	End()
+
+	-- 호위 부르마 escort 하는 sps 진입 완료된 것 확인 받음
+	Action( "wait" )
+	--[
+		Condition( "recv event from sps" )
+		--[
+			Param( "object type", "npc" )
+			Param( "object index", 1381101 )
+			Param( "event id", 634 )
+		--]
+		End()
+	--]
+	End()
+
+	-------------------------------------------------------------
+	-- 이벤트 등록: 꼬리달린 남자애 찾기
+	Action( "event status register" )
+	--[
+		Param( "group", 3 )
+		Param( "index", 1 )
+		Param( "text tblidx", 51 )
+		Param( "type", "normal" )
+	--]
+	End()
+
+	-- 호위 부르마 escort 시작
+	Action("send event to ts")
+	--[
+		Param( "trigger type", "quest" )
+		Param( "apply type", "register all" )
+		Param( "event id", 632 )
+	--]
+	End()
+	
+	-- User가 가는 곳에 따라 부르마/손오공 루트가 갈림
+	Action( "function" )
+	--[
+		Condition( "child" )
+		--[
+			-- 부르마 카드 루트
+			Action( "wait" )
+			--[
+				Condition( "area enter" )
+				--[
+					Param( "origin x", 1658.08 )
+					Param( "origin z", -1549.90  )
+					Param( "radius", 40 )
+					Param( "all member", "true" )
+				--]
+				End()
+			--]
+			End()
+			
+			-- check point 보여줌
+			Action( "direction indicate" )
+			--[
+				Param( "apply", "true" )
+				Param( "indicate type", "point" )
+				Param( "loc x", 1658.08 )
+				Param( "loc z", -1549.90 )
+			--]
+			End()
+			
+			-- check point에 들어가면
+			Action( "wait" )
+			--[
+				Condition( "area enter" )
+				--[
+					Param( "origin x", 1658.08 )
+					Param( "origin z", -1549.90 )
+					Param( "radius", 10 )
+					Param( "all member", "true" )
+				--]
+				End()
+			--]
+			End()
+			
+			-- check point 지워주고
+			Action( "direction indicate" )
+			--[
+				Param( "apply", "false" )
+				Param( "indicate type", "point" )
+			--]
+			End()
+			
+			-- 부르마 카드 루트 발동 (70003.wps)
+			Action( "send event to wps" )
+			--[
+				Param( "wps index", 70003 )
+				Param( "event id", 671 )
+			--]
+			End()
+			
+			-------------------------------------------
+			-- 이벤트 삭제: 꼬리달린 남자애 찾기
+			Action( "event status clear" )
+			--[
+				Param( "group", 3 )
+			--]
+			End()
+		--]
+		End()
+		
+		-- 손오공 카드 루트
+		Action( "wait" )
+		--[
+			Condition( "area enter" )
+			--[
+				Param( "origin x", 1830.21 )
+				Param( "origin z", -1557.04 )
+				Param( "radius", 40 )
+				Param( "all member", "true" )
+			--]
+			End()
+		--]
+		End()
+		
+		-- check point 보여줌
+		Action( "direction indicate" )
+		--[
+			Param( "apply", "true" )
+			Param( "indicate type", "point" )
+			Param( "loc x", 1830.21 )
+			Param( "loc z", -1557.04 )
+		--]
+		End()
+		
+		-- check point에 들어가면
+		Action( "wait" )
+		--[
+			Condition( "area enter" )
+			--[
+				Param( "origin x", 1830.21 )
+				Param( "origin z", -1557.04 )
+				Param( "radius", 15 )
+				Param( "all member", "true" )
+			--]
+			End()
+		--]
+		End()
+		
+		-- check point 지워주고
+		Action( "direction indicate" )
+		--[
+			Param( "apply", "false" )
+			Param( "indicate type", "point" )
+		--]
+		End()
+		
+		-------------------------------------------------
+		-- 이벤트 삭제: 꼬리달린 남자애 찾기
+		Action( "event status clear" )
+		--[
+			Param( "group", 3 )
+		--]
+		End()
+		
+		-- 손오공 카드 루트 발동 (70004.wps)
+		Action( "send event to wps" )
+		--[
+			Param( "wps index", 70004 )
+			Param( "event id", 672 )
+		--]
+		End()
+	--]
+	End()
+	
+	-- User가 부르마/손오공 루트를 완료시킬 때 까지 wps를 끝내지 않고 대기
+	Action( "function" )
+	--[
+		Condition( "child" )
+		--[
+			-- 조건 1
+			-- 부르마 카드 루트 완료 대기
+			Action( "wait" )
+			--[
+				Condition( "recv event from wps" )
+				--[
+					Param( "wps index", 70003 )
+					Param( "event id", 688 )
+				--]
+				End()
+			--]
+			End()
+		--]
+		End()
+		
+		-- 조건 2
+		-- 손오공 카드 루트 완료 대기
+		Action( "wait" )
+		--[
+			Condition( "recv event from wps" )
+			--[
+				Param( "wps index", 70004 )
+				Param( "event id", 689 )
+			--]
+			End()
+		--]
+		End()
+	--]
+	End()
+	
+	-- 3초간 대기
+	Action( "wait" )
+	--[
+		Condition( "check time" )
+		--[
+			Param( "time", 3 )
+		--]
+		End()
+	--]
+	End()
+	
+	-- wps 종료
+	Action( "wps fail" )
+	--[
+	--]
+	End()
+--]
+End()

@@ -1,0 +1,644 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug4Client|Win32">
+      <Configuration>Debug4Client</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release4Client|Win32">
+      <Configuration>Release4Client</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{9F23821F-BA17-4AEB-AF91-D29075753E04}</ProjectGuid>
+    <RootNamespace>WorldEditor</RootNamespace>
+    <Keyword>MFCProj</Keyword>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v80</PlatformToolset>
+    <UseOfMfc>Static</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release4Client|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v80</PlatformToolset>
+    <UseOfMfc>Static</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v80</PlatformToolset>
+    <UseOfMfc>Static</UseOfMfc>
+    <CharacterSet>NotSet</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug4Client|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v80</PlatformToolset>
+    <UseOfMfc>Static</UseOfMfc>
+    <CharacterSet>NotSet</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release4Client|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug4Client|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>14.0.25431.1</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>Debug\</OutDir>
+    <IntDir>Debug\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug4Client|Win32'">
+    <OutDir>Debug\</OutDir>
+    <IntDir>Debug\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>Release\</OutDir>
+    <IntDir>Release\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release4Client|Win32'">
+    <OutDir>Release\</OutDir>
+    <IntDir>Release\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+    </Midl>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>$(SolutionDir)Renderware\Include;$(SolutionDir)Lib\NtlCore;$(SolutionDir)Lib\NtlPresentation;$(SolutionDir)Lib\NtlFramework;$(SolutionDir)..\DboShared;$(SolutionDir)..\NtlLib\Shared\NtlXMLLoader;$(SolutionDir)..\NtlLib\Shared;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;RWDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <TreatWChar_tAsBuiltInType>false</TreatWChar_tAsBuiltInType>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0412</Culture>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>ToolD.lib;WorldMonitorD.lib;NtlXmlLoader.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)NtlLib\Shared\NtlXMLLoader\Debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <EntryPointSymbol />
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <PostBuildEvent>
+      <Command>copy $(OutDir)$(ProjectName).exe ..\..\..\DragonBall\$(ProjectName).exe</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug4Client|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+    </Midl>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>$(SolutionDir)Renderware\Include;$(SolutionDir)Lib\NtlCore;$(SolutionDir)Lib\NtlPresentation;$(SolutionDir)Lib\NtlFramework;$(SolutionDir)..\DboShared;$(SolutionDir)..\NtlLib\Shared\NtlXMLLoader;$(SolutionDir)..\NtlLib\Shared;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;RWDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <TreatWChar_tAsBuiltInType>false</TreatWChar_tAsBuiltInType>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0412</Culture>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>ToolD.lib;WorldMonitorD.lib;NtlXmlLoader.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)NtlLib\Shared\NtlXMLLoader\Debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <EntryPointSymbol>
+      </EntryPointSymbol>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <PostBuildEvent>
+      <Command>copy $(OutDir)$(ProjectName).exe ..\..\..\DragonBall\$(ProjectName).exe</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+    </Midl>
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(SolutionDir)..\DboShared\NtlXMLLoader;$(SolutionDir)Renderware\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;UNICODE;_UNICODE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0412</Culture>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <AdditionalLibraryDirectories>$(SolutionDir)Renderware\Lib\Release;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <EntryPointSymbol>wWinMainCRTStartup</EntryPointSymbol>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release4Client|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+    </Midl>
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(SolutionDir)..\DboShared\NtlXMLLoader;$(SolutionDir)Renderware\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;UNICODE;_UNICODE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0412</Culture>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <AdditionalLibraryDirectories>$(SolutionDir)Renderware\Lib\Release;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <EntryPointSymbol>wWinMainCRTStartup</EntryPointSymbol>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\Renderware\Include\rpadc.h" />
+    <ClInclude Include="..\..\Renderware\Include\rpanisot.h" />
+    <ClInclude Include="..\..\Renderware\Include\rpcollis.h" />
+    <ClInclude Include="..\..\Renderware\Include\rpcriter.h" />
+    <ClInclude Include="..\..\Renderware\Include\rpcrowd.h" />
+    <ClInclude Include="..\..\Renderware\Include\rpdbgerr.h" />
+    <ClInclude Include="..\..\Renderware\Include\rpdmorph.h" />
+    <ClInclude Include="..\..\Renderware\Include\rpdpvs.h" />
+    <ClInclude Include="..\..\Renderware\Include\rpenv.h" />
+    <ClInclude Include="..\..\Renderware\Include\rperror.h" />
+    <ClInclude Include="..\..\Renderware\Include\rphanim.h" />
+    <ClInclude Include="..\..\Renderware\Include\rpid.h" />
+    <ClInclude Include="..\..\Renderware\Include\rplodatm.h" />
+    <ClInclude Include="..\..\Renderware\Include\rplogo.h" />
+    <ClInclude Include="..\..\Renderware\Include\rpltmap.h" />
+    <ClInclude Include="..\..\Renderware\Include\rpmatfx.h" />
+    <ClInclude Include="..\..\Renderware\Include\rpmipkl.h" />
+    <ClInclude Include="..\..\Renderware\Include\rpmorph.h" />
+    <ClInclude Include="..\..\Renderware\Include\rpnormmap.h" />
+    <ClInclude Include="..\..\Renderware\Include\rppatch.h" />
+    <ClInclude Include="..\..\Renderware\Include\rpprtadv.h" />
+    <ClInclude Include="..\..\Renderware\Include\rpprtstd.h" />
+    <ClInclude Include="..\..\Renderware\Include\rpptank.h" />
+    <ClInclude Include="..\..\Renderware\Include\rppvs.h" />
+    <ClInclude Include="..\..\Renderware\Include\rprandom.h" />
+    <ClInclude Include="..\..\Renderware\Include\rpskin.h" />
+    <ClInclude Include="..\..\Renderware\Include\rpspline.h" />
+    <ClInclude Include="..\..\Renderware\Include\rpteam.h" />
+    <ClInclude Include="..\..\Renderware\Include\rptoon.h" />
+    <ClInclude Include="..\..\Renderware\Include\rpusrdat.h" />
+    <ClInclude Include="..\..\Renderware\Include\rpuvanim.h" />
+    <ClInclude Include="..\..\Renderware\Include\rpworld.h" />
+    <ClInclude Include="..\..\Renderware\Include\rt2d.h" />
+    <ClInclude Include="..\..\Renderware\Include\rt2danim.h" />
+    <ClInclude Include="..\..\Renderware\Include\rtanim.h" />
+    <ClInclude Include="..\..\Renderware\Include\rtbary.h" />
+    <ClInclude Include="..\..\Renderware\Include\rtbezpat.h" />
+    <ClInclude Include="..\..\Renderware\Include\rtbmp.h" />
+    <ClInclude Include="..\..\Renderware\Include\rtcharse.h" />
+    <ClInclude Include="..\..\Renderware\Include\rtcmpkey.h" />
+    <ClInclude Include="..\..\Renderware\Include\rtdict.h" />
+    <ClInclude Include="..\..\Renderware\Include\rtfsyst.h" />
+    <ClInclude Include="..\..\Renderware\Include\rtgcond.h" />
+    <ClInclude Include="..\..\Renderware\Include\rtgncpip.h" />
+    <ClInclude Include="..\..\Renderware\Include\rtimport.h" />
+    <ClInclude Include="..\..\Renderware\Include\rtintsec.h" />
+    <ClInclude Include="..\..\Renderware\Include\rtltmap.h" />
+    <ClInclude Include="..\..\Renderware\Include\rtltmapcnv.h" />
+    <ClInclude Include="..\..\Renderware\Include\rtmipk.h" />
+    <ClInclude Include="..\..\Renderware\Include\rtnormmap.h" />
+    <ClInclude Include="..\..\Renderware\Include\rtpick.h" />
+    <ClInclude Include="..\..\Renderware\Include\rtpitexd.h" />
+    <ClInclude Include="..\..\Renderware\Include\rtpng.h" />
+    <ClInclude Include="..\..\Renderware\Include\rtquat.h" />
+    <ClInclude Include="..\..\Renderware\Include\rtras.h" />
+    <ClInclude Include="..\..\Renderware\Include\rtray.h" />
+    <ClInclude Include="..\..\Renderware\Include\rtskinsp.h" />
+    <ClInclude Include="..\..\Renderware\Include\rtslerp.h" />
+    <ClInclude Include="..\..\Renderware\Include\rtsplpvs.h" />
+    <ClInclude Include="..\..\Renderware\Include\rttiff.h" />
+    <ClInclude Include="..\..\Renderware\Include\rttilerd.h" />
+    <ClInclude Include="..\..\Renderware\Include\rttoc.h" />
+    <ClInclude Include="..\..\Renderware\Include\rttoon.h" />
+    <ClInclude Include="..\..\Renderware\Include\rtvcat.h" />
+    <ClInclude Include="..\..\Renderware\Include\rtwing.h" />
+    <ClInclude Include="..\..\Renderware\Include\rtworld.h" />
+    <ClInclude Include="..\..\Renderware\Include\rwcore.h" />
+    <ClInclude Include="..\..\Renderware\Include\rwplcore.h" />
+    <ClInclude Include="..\..\Renderware\Include\rwversion.h" />
+    <ClInclude Include="AssetObjectDlg.h" />
+    <ClInclude Include="AssetObjectTreeCtrl.h" />
+    <ClInclude Include="AssetObjectView.h" />
+    <ClInclude Include="BaseType.h" />
+    <ClInclude Include="BaseType_Color.h" />
+    <ClInclude Include="BaseType_Position.h" />
+    <ClInclude Include="BaseType_RenderWare.h" />
+    <ClInclude Include="BaseType_Type.h" />
+    <ClInclude Include="BaseType_VirtualKey.h" />
+    <ClInclude Include="CAnimationEntity.h" />
+    <ClInclude Include="CAnimationEntityProperty.h" />
+    <ClInclude Include="CAnimationEntityPropertyTree.h" />
+    <ClInclude Include="CAtomicEntity.h" />
+    <ClInclude Include="CAtomicEntityProperty.h" />
+    <ClInclude Include="CAtomicEntityPropertyTree.h" />
+    <ClInclude Include="CCameraEntity.h" />
+    <ClInclude Include="CCameraEntityProperty.h" />
+    <ClInclude Include="CCameraEntityPropertyTree.h" />
+    <ClInclude Include="CClumpEntity.h" />
+    <ClInclude Include="CClumpEntityProperty.h" />
+    <ClInclude Include="CClumpEntityPropertyTree.h" />
+    <ClInclude Include="CDefaultEntityRenderer.h" />
+    <ClInclude Include="CEditorApplication.h" />
+    <ClInclude Include="CEditorMainControlBar.h" />
+    <ClInclude Include="CEntity.h" />
+    <ClInclude Include="CEntityCollision.h" />
+    <ClInclude Include="CEntityCollisionList.h" />
+    <ClInclude Include="CEntityCommand.h" />
+    <ClInclude Include="CEntityContainer.h" />
+    <ClInclude Include="CEntityCubeContainer.h" />
+    <ClInclude Include="CEntityEvent.h" />
+    <ClInclude Include="CEntityEventQueue.h" />
+    <ClInclude Include="CEntityFactory.h" />
+    <ClInclude Include="CEntityHashContainer.h" />
+    <ClInclude Include="CEntityHashTableContainer.h" />
+    <ClInclude Include="CEntityListContainer.h" />
+    <ClInclude Include="CEntityProperty.h" />
+    <ClInclude Include="CEntityPropertySortContainer.h" />
+    <ClInclude Include="CEntityPropertyTree.h" />
+    <ClInclude Include="CEntityRenderer.h" />
+    <ClInclude Include="CEntityResource.h" />
+    <ClInclude Include="CEntityResourceManager.h" />
+    <ClInclude Include="CFixedString.h" />
+    <ClInclude Include="CFixedStringList.h" />
+    <ClInclude Include="CFogEntity.h" />
+    <ClInclude Include="CFogEntityProperty.h" />
+    <ClInclude Include="CGlobalIndicator.h" />
+    <ClInclude Include="CHashSlot.h" />
+    <ClInclude Include="CHashTable.h" />
+    <ClInclude Include="CHeightMap.h" />
+    <ClInclude Include="CInput.h" />
+    <ClInclude Include="CInstanceDialog.h" />
+    <ClInclude Include="CInstancePropertyDialog.h" />
+    <ClInclude Include="CInstanceTreeCtrl.h" />
+    <ClInclude Include="CInstanceView.h" />
+    <ClInclude Include="CLightEntity.h" />
+    <ClInclude Include="CLightEntityProperty.h" />
+    <ClInclude Include="CLightEntityPropertyTree.h" />
+    <ClInclude Include="CLightMapManager.h" />
+    <ClInclude Include="CLogMessageManager.h" />
+    <ClInclude Include="CMeshEntity.h" />
+    <ClInclude Include="CMeshEntityProperty.h" />
+    <ClInclude Include="Collision.h" />
+    <ClInclude Include="CommandEdit.h" />
+    <ClInclude Include="ConsoleDialog.h" />
+    <ClInclude Include="CRenderManager.h" />
+    <ClInclude Include="CSceneManager.h" />
+    <ClInclude Include="CScriptFileExtractor.h" />
+    <ClInclude Include="CSerializer.h" />
+    <ClInclude Include="CSizingControlBar.h" />
+    <ClInclude Include="CSizingTabControlBar.h" />
+    <ClInclude Include="CSkyEntity.h" />
+    <ClInclude Include="CSkyEntityProperty.h" />
+    <ClInclude Include="CSkyEntityRenderer.h" />
+    <ClInclude Include="CTerrainEntityRenderer.h" />
+    <ClInclude Include="CTreeEntityRenderer.h" />
+    <ClInclude Include="CWorldEntity.h" />
+    <ClInclude Include="CWorldEntityProperty.h" />
+    <ClInclude Include="CWorldSectorEntity.h" />
+    <ClInclude Include="CWorldSectorEntityProperty.h" />
+    <ClInclude Include="DebugEx.h" />
+    <ClInclude Include="Helper.h" />
+    <ClInclude Include="MainFrm.h" />
+    <ClInclude Include="PropTree.h" />
+    <ClInclude Include="PropTreeInfo.h" />
+    <ClInclude Include="PropTreeItem.h" />
+    <ClInclude Include="PropTreeItemColor.h" />
+    <ClInclude Include="PropTreeItemCombo.h" />
+    <ClInclude Include="PropTreeItemEdit.h" />
+    <ClInclude Include="PropTreeItemStatic.h" />
+    <ClInclude Include="PropTreeList.h" />
+    <ClInclude Include="Resource.h" />
+    <ClInclude Include="SKeyState.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="SWordNode.h" />
+    <ClInclude Include="UserDefinedAssert.h" />
+    <ClInclude Include="UserMsg.h" />
+    <ClInclude Include="WorldEditor.h" />
+    <ClInclude Include="WorldEditorDoc.h" />
+    <ClInclude Include="WorldEditorView.h" />
+    <ClInclude Include="WorldMonitor.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="AssetObjectDlg.cpp" />
+    <ClCompile Include="AssetObjectTreeCtrl.cpp" />
+    <ClCompile Include="AssetObjectView.cpp" />
+    <ClCompile Include="BaseType.cpp" />
+    <ClCompile Include="BaseType_Color.cpp" />
+    <ClCompile Include="BaseType_Position.cpp" />
+    <ClCompile Include="CAnimationEntity.cpp" />
+    <ClCompile Include="CAnimationEntityProperty.cpp" />
+    <ClCompile Include="CAnimationEntityPropertyTree.cpp" />
+    <ClCompile Include="CAtomicEntity.cpp" />
+    <ClCompile Include="CAtomicEntityProperty.cpp" />
+    <ClCompile Include="CAtomicEntityPropertyTree.cpp" />
+    <ClCompile Include="CAtomicEntity_Render.cpp" />
+    <ClCompile Include="CAtomicEntity_RpAtomic.cpp" />
+    <ClCompile Include="CAtomicEntity_RwInstanceEx.cpp" />
+    <ClCompile Include="CAtomicEntity_VertexColor.cpp" />
+    <ClCompile Include="CCameraEntity.cpp" />
+    <ClCompile Include="CCameraEntityProperty.cpp" />
+    <ClCompile Include="CCameraEntityPropertyTree.cpp" />
+    <ClCompile Include="CCameraEntity_RwCamera.cpp" />
+    <ClCompile Include="CClumpEntity.cpp" />
+    <ClCompile Include="CClumpEntityProperty.cpp" />
+    <ClCompile Include="CClumpEntityPropertyTree.cpp" />
+    <ClCompile Include="CClumpEntity_RwInstanceEx.cpp" />
+    <ClCompile Include="CDefaultEntityRenderer.cpp" />
+    <ClCompile Include="CEditorApplication.cpp" />
+    <ClCompile Include="CEditorApplication_Command.cpp" />
+    <ClCompile Include="CEditorApplication_File.cpp" />
+    <ClCompile Include="CEditorApplication_Input.cpp" />
+    <ClCompile Include="CEditorMainControlBar.cpp" />
+    <ClCompile Include="CEntity.cpp" />
+    <ClCompile Include="CEntityCollision.cpp" />
+    <ClCompile Include="CEntityCollisionList.cpp" />
+    <ClCompile Include="CEntityCommand.cpp" />
+    <ClCompile Include="CEntityCommand_Excute.cpp" />
+    <ClCompile Include="CEntityCommand_Parse.cpp" />
+    <ClCompile Include="CEntityCommand_Parse_Create.cpp" />
+    <ClCompile Include="CEntityContainer.cpp" />
+    <ClCompile Include="CEntityCubeContainer.cpp" />
+    <ClCompile Include="CEntityEvent.cpp" />
+    <ClCompile Include="CEntityEventQueue.cpp" />
+    <ClCompile Include="CEntityFactory.cpp" />
+    <ClCompile Include="CEntityHashContainer.cpp" />
+    <ClCompile Include="CEntityHashTableContainer.cpp" />
+    <ClCompile Include="CEntityListContainer.cpp" />
+    <ClCompile Include="CEntityProperty.cpp" />
+    <ClCompile Include="CEntityPropertySortContainer.cpp" />
+    <ClCompile Include="CEntityPropertyTree.cpp" />
+    <ClCompile Include="CEntityRenderer.cpp" />
+    <ClCompile Include="CEntityResource.cpp" />
+    <ClCompile Include="CEntityResourceManager.cpp" />
+    <ClCompile Include="CEntityResource_RwInstance.cpp" />
+    <ClCompile Include="CFixedString.cpp" />
+    <ClCompile Include="CFixedStringList.cpp" />
+    <ClCompile Include="CFogEntity.cpp" />
+    <ClCompile Include="CFogEntityProperty.cpp" />
+    <ClCompile Include="CGlobalIndicator.cpp" />
+    <ClCompile Include="CHashSlot.cpp" />
+    <ClCompile Include="CHashTable.cpp" />
+    <ClCompile Include="CHeightMap.cpp" />
+    <ClCompile Include="CInput.cpp" />
+    <ClCompile Include="CInstanceDialog.cpp" />
+    <ClCompile Include="CInstancePropertyDialog.cpp" />
+    <ClCompile Include="CInstanceTreeCtrl.cpp" />
+    <ClCompile Include="CInstanceView.cpp" />
+    <ClCompile Include="CLightEntity.cpp" />
+    <ClCompile Include="CLightEntityProperty.cpp" />
+    <ClCompile Include="CLightEntityPropertyTree.cpp" />
+    <ClCompile Include="CLightEntity_RwInstanceEx.cpp" />
+    <ClCompile Include="CLightMapManager.cpp" />
+    <ClCompile Include="CMeshEntity.cpp" />
+    <ClCompile Include="CMeshEntityProperty.cpp" />
+    <ClCompile Include="CMeshEntity_RwInstanceEx.cpp" />
+    <ClCompile Include="Collision.cpp" />
+    <ClCompile Include="CommandEdit.cpp" />
+    <ClCompile Include="ConsoleDialog.cpp" />
+    <ClCompile Include="CRenderManager.cpp" />
+    <ClCompile Include="CSceneManager.cpp" />
+    <ClCompile Include="CSceneManager_Collision.cpp" />
+    <ClCompile Include="CSerializer.cpp" />
+    <ClCompile Include="CSizingControlBar.cpp" />
+    <ClCompile Include="CSizingTabControlBar.cpp" />
+    <ClCompile Include="CSkyEntity.cpp" />
+    <ClCompile Include="CSkyEntityProperty.cpp" />
+    <ClCompile Include="CSkyEntityRenderer.cpp" />
+    <ClCompile Include="CTerrainEntityRenderer.cpp" />
+    <ClCompile Include="CTreeEntityRenderer.cpp" />
+    <ClCompile Include="CWorldEntity.cpp" />
+    <ClCompile Include="CWorldEntityProperty.cpp" />
+    <ClCompile Include="CWorldEntity_RpWorld.cpp" />
+    <ClCompile Include="CWorldEntity_RwInstanceEx.cpp" />
+    <ClCompile Include="CWorldSectorEntity.cpp" />
+    <ClCompile Include="CWorldSectorEntityProperty.cpp" />
+    <ClCompile Include="CWorldSectorEntity_RpWorldSector.cpp" />
+    <ClCompile Include="CWorldSectorEntity_RwInstanceEx.cpp" />
+    <ClCompile Include="Helper_Cone.cpp" />
+    <ClCompile Include="MainFrm.cpp" />
+    <ClCompile Include="PropTree.cpp" />
+    <ClCompile Include="PropTreeInfo.cpp" />
+    <ClCompile Include="PropTreeItem.cpp" />
+    <ClCompile Include="PropTreeItemColor.cpp" />
+    <ClCompile Include="PropTreeItemCombo.cpp" />
+    <ClCompile Include="PropTreeItemEdit.cpp" />
+    <ClCompile Include="PropTreeItemStatic.cpp" />
+    <ClCompile Include="PropTreeList.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug4Client|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release4Client|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="SWordNode.cpp" />
+    <ClCompile Include="UserMsg.cpp" />
+    <ClCompile Include="WorldEditor.cpp" />
+    <ClCompile Include="WorldEditorDoc.cpp" />
+    <ClCompile Include="WorldEditorView.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="res\WorldEditor.manifest">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug4Client|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release4Client|Win32'">true</ExcludedFromBuild>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\Toolbar.bmp" />
+    <Image Include="res\WorldEditor.ico" />
+    <Image Include="res\WorldEditorDoc.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="WorldEditor.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\WorldEditor.rc2" />
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="..\..\Renderware\Lib\debug\rpadc.lib" />
+    <Library Include="..\..\Renderware\Lib\debug\rpanisot.lib" />
+    <Library Include="..\..\Renderware\Lib\debug\rpcollis.lib" />
+    <Library Include="..\..\Renderware\Lib\debug\rpcrowd.lib" />
+    <Library Include="..\..\Renderware\Lib\debug\rpdmorph.lib" />
+    <Library Include="..\..\Renderware\Lib\debug\rpdpvs.lib" />
+    <Library Include="..\..\Renderware\Lib\debug\rpdpvscw.lib" />
+    <Library Include="..\..\Renderware\Lib\debug\rpenv.lib" />
+    <Library Include="..\..\Renderware\Lib\debug\rphanim.lib" />
+    <Library Include="..\..\Renderware\Lib\debug\rpid.lib" />
+    <Library Include="..\..\Renderware\Lib\debug\rplodatm.lib" />
+    <Library Include="..\..\Renderware\Lib\debug\rplogo.lib" />
+    <Library Include="..\..\Renderware\Lib\debug\rpltmap.lib" />
+    <Library Include="..\..\Renderware\Lib\debug\rpmatfx.lib" />
+    <Library Include="..\..\Renderware\Lib\debug\rpmipkl.lib" />
+    <Library Include="..\..\Renderware\Lib\debug\rpmorph.lib" />
+    <Library Include="..\..\Renderware\Lib\debug\rpnormmap.lib" />
+    <Library Include="..\..\Renderware\Lib\debug\rpnormmapskin.lib" />
+    <Library Include="..\..\Renderware\Lib\debug\rppatch.lib" />
+    <Library Include="..\..\Renderware\Lib\debug\rppatchmatfx.lib" />
+    <Library Include="..\..\Renderware\Lib\debug\rppatchskin.lib" />
+    <Library Include="..\..\Renderware\Lib\debug\rppatchskinmatfx.lib" />
+    <Library Include="..\..\Renderware\Lib\debug\rpprtadv.lib" />
+    <Library Include="..\..\Renderware\Lib\debug\rpprtstd.lib" />
+    <Library Include="..\..\Renderware\Lib\debug\rpptank.lib" />
+    <Library Include="..\..\Renderware\Lib\debug\rppvs.lib" />
+    <Library Include="..\..\Renderware\Lib\debug\rprandom.lib" />
+    <Library Include="..\..\Renderware\Lib\debug\rpskin.lib" />
+    <Library Include="..\..\Renderware\Lib\debug\rpskinmatfx.lib" />
+    <Library Include="..\..\Renderware\Lib\debug\rpskinmatfxtoon.lib" />
+    <Library Include="..\..\Renderware\Lib\debug\rpskintoon.lib" />
+    <Library Include="..\..\Renderware\Lib\debug\rpspline.lib" />
+    <Library Include="..\..\Renderware\Lib\debug\rpteam.lib" />
+    <Library Include="..\..\Renderware\Lib\debug\rptoon.lib" />
+    <Library Include="..\..\Renderware\Lib\debug\rpusrdat.lib" />
+    <Library Include="..\..\Renderware\Lib\debug\rpuvanim.lib" />
+    <Library Include="..\..\Renderware\Lib\debug\rpworld.lib" />
+    <Library Include="..\..\Renderware\Lib\debug\rt2d.lib" />
+    <Library Include="..\..\Renderware\Lib\debug\rt2danim.lib" />
+    <Library Include="..\..\Renderware\Lib\debug\rtanim.lib" />
+    <Library Include="..\..\Renderware\Lib\debug\rtbary.lib" />
+    <Library Include="..\..\Renderware\Lib\debug\rtbezpat.lib" />
+    <Library Include="..\..\Renderware\Lib\debug\rtbmp.lib" />
+    <Library Include="..\..\Renderware\Lib\debug\rtcharse.lib" />
+    <Library Include="..\..\Renderware\Lib\debug\rtcmpkey.lib" />
+    <Library Include="..\..\Renderware\Lib\debug\rtdict.lib" />
+    <Library Include="..\..\Renderware\Lib\debug\rtfsyst.lib" />
+    <Library Include="..\..\Renderware\Lib\debug\rtgcond.lib" />
+    <Library Include="..\..\Renderware\Lib\debug\rtgncpip.lib" />
+    <Library Include="..\..\Renderware\Lib\debug\rtimport.lib" />
+    <Library Include="..\..\Renderware\Lib\debug\rtintsec.lib" />
+    <Library Include="..\..\Renderware\Lib\debug\rtltmap.lib" />
+    <Library Include="..\..\Renderware\Lib\debug\rtltmapcnv.lib" />
+    <Library Include="..\..\Renderware\Lib\debug\rtmipk.lib" />
+    <Library Include="..\..\Renderware\Lib\debug\rtmipkmatfx.lib" />
+    <Library Include="..\..\Renderware\Lib\debug\rtmipkpatch.lib" />
+    <Library Include="..\..\Renderware\Lib\debug\rtmipkpatchmatfx.lib" />
+    <Library Include="..\..\Renderware\Lib\debug\rtnormmap.lib" />
+    <Library Include="..\..\Renderware\Lib\debug\rtpick.lib" />
+    <Library Include="..\..\Renderware\Lib\debug\rtpitexd.lib" />
+    <Library Include="..\..\Renderware\Lib\debug\rtpng.lib" />
+    <Library Include="..\..\Renderware\Lib\debug\rtpngcw.lib" />
+    <Library Include="..\..\Renderware\Lib\debug\rtquat.lib" />
+    <Library Include="..\..\Renderware\Lib\debug\rtras.lib" />
+    <Library Include="..\..\Renderware\Lib\debug\rtray.lib" />
+    <Library Include="..\..\Renderware\Lib\debug\rtskinsp.lib" />
+    <Library Include="..\..\Renderware\Lib\debug\rtslerp.lib" />
+    <Library Include="..\..\Renderware\Lib\debug\rtsplpvs.lib" />
+    <Library Include="..\..\Renderware\Lib\debug\rttiff.lib" />
+    <Library Include="..\..\Renderware\Lib\debug\rttilerd.lib" />
+    <Library Include="..\..\Renderware\Lib\debug\rttoc.lib" />
+    <Library Include="..\..\Renderware\Lib\debug\rttoon.lib" />
+    <Library Include="..\..\Renderware\Lib\debug\rtvcat.lib" />
+    <Library Include="..\..\Renderware\Lib\debug\rtwing.lib" />
+    <Library Include="..\..\Renderware\Lib\debug\rtworld.lib" />
+    <Library Include="..\..\Renderware\Lib\debug\rwcore.lib" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\DboShared\NtlShared2\NtlShared.vcxproj">
+      <Project>{573eb1e4-7620-479e-8ccf-def06491545b}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\NtlLib\Shared\NtlXMLLoader\NtlXMLLoader.vcxproj">
+      <Project>{9d941cac-4183-44e3-aec3-817c0a32d1dd}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Lib\NtlCore\NtlCore.vcxproj">
+      <Project>{2d91cafc-1814-4cb4-b844-4e55f937d051}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Lib\NtlFramework\NtlFramework.vcxproj">
+      <Project>{a2e4d1ec-1758-44e0-b3c9-955c286f84be}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Lib\NtlPresentation\NtlPresentation.vcxproj">
+      <Project>{0ec8e06b-8138-4bfd-8af7-9cad1f2f65ac}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties RESOURCE_FILE="WorldEditor.rc" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

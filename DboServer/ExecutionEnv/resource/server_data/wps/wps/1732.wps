@@ -1,0 +1,49 @@
+GameStage(0)
+--[
+	Action("add mob")
+	--[
+		Param("index", 2612146)
+		Param("group", 1732)
+		Param("loc x", -1260.824)
+		Param("loc y", -106)
+		Param("loc z", -200.04)
+		Param("dir x", 0.811)
+		Param("dir z", -0.584)
+		Param("no spawn wait","true")
+	--]
+	End()
+
+	Action("wait")
+	--[
+		Param("operation","or")
+
+		Condition("check mobgroup")
+		--[
+			Param("group", 1732)
+			Param("count", 1)
+		--]
+		End()
+
+		Condition("child")
+		--[
+			Action("wait")
+			--[
+				Condition("check time")
+				--[
+					Param("time", 300)
+				--]
+				End()
+			--]
+			End()
+		--]
+		End()
+	--]
+	End()
+
+--]
+End()
+
+GameFailed()
+--[
+--]
+End()

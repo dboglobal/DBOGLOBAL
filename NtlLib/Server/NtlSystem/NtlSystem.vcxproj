@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{6D76C448-B419-424F-AD6A-04041B1C2315}</ProjectGuid>
+    <RootNamespace>NtlSystem</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.40219.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(OutDir)/</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(Configuration)\</IntDir>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Release|x64'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Release|x64'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Release|x64'" />
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Midl>
+      <TargetEnvironment>X64</TargetEnvironment>
+    </Midl>
+    <ClCompile>
+      <AdditionalIncludeDirectories>..\..\Shared;..\..\Shared\Util;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN64;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <StringPooling>false</StringPooling>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
+      <FloatingPointModel>Fast</FloatingPointModel>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="NtlDebug.cpp" />
+    <ClCompile Include="NtlError.cpp" />
+    <ClCompile Include="NtlFile.cpp" />
+    <ClCompile Include="NtlIniFile.cpp" />
+    <ClCompile Include="NtlLinkList.cpp" />
+    <ClCompile Include="NtlLog.cpp" />
+    <ClCompile Include="NtlLogSystem.cpp" />
+    <ClCompile Include="NtlMiniDump.cpp" />
+    <ClCompile Include="NtlPdh.cpp" />
+    <ClCompile Include="NtlPerformance.cpp" />
+    <ClCompile Include="NtlPerformanceProfiler.cpp" />
+    <ClCompile Include="NtlProfiler.cpp" />
+    <ClCompile Include="NtlRandomGenerator.cpp" />
+    <ClCompile Include="NtlRandomSheet.cpp" />
+    <ClCompile Include="NtlString.cpp" />
+    <ClCompile Include="NtlStringW.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="Utils.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="NtlRandomSheet.h" />
+    <ClInclude Include="NtlAuthenticator.h" />
+    <ClInclude Include="NtlBase.h" />
+    <ClInclude Include="NtlCircularQueue.h" />
+    <ClInclude Include="NtlDebug.h" />
+    <ClInclude Include="NtlError.h" />
+    <ClInclude Include="NtlErrorcodes.h" />
+    <ClInclude Include="NtlException.h" />
+    <ClInclude Include="NtlFile.h" />
+    <ClInclude Include="NtlIniFile.h" />
+    <ClInclude Include="NtlLinkArray.h" />
+    <ClInclude Include="NtlLinkList.h" />
+    <ClInclude Include="NtlLog.h" />
+    <ClInclude Include="NtlLogSystem.h" />
+    <ClInclude Include="NtlMemoryChecker.h" />
+    <ClInclude Include="NtlMemoryPool.h" />
+    <ClInclude Include="NtlMiniDump.h" />
+    <ClInclude Include="NtlMutex.h" />
+    <ClInclude Include="NtlPairedKeyMap.h" />
+    <ClInclude Include="NtlPairedMap.h" />
+    <ClInclude Include="NtlPdh.h" />
+    <ClInclude Include="NtlPerformance.h" />
+    <ClInclude Include="NtlPerformanceProfiler.h" />
+    <ClInclude Include="NtlProfiler.h" />
+    <ClInclude Include="NtlQueue.h" />
+    <ClInclude Include="NtlRandomGenerator.h" />
+    <ClInclude Include="NtlSingleton.h" />
+    <ClInclude Include="NtlString.h" />
+    <ClInclude Include="NtlStringMap.h" />
+    <ClInclude Include="NtlStringW.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="Utils.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

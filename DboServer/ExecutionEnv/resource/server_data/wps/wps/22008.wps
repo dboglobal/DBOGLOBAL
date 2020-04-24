@@ -1,0 +1,293 @@
+-- UD2 Normal
+-- Dr. Gero clone script Battle
+-- (See also wps 1329 and wps 20007)
+-- When Dr. Gero original clone and start the fight, but the room door closing phrase of Dr. Gero clones,
+-- Since Dr. Gero clones are placed too close to the door to the room of fear abuse should comment
+
+GameStage( 0 )
+--[
+
+	-- 신 포동이 사망 대기
+	Action( "wait" )
+	--[
+		Condition( "recv event from wps" )
+		--[
+			Param( "wps index", 22001 )
+			Param( "event id", 617 )
+		--]
+		End()
+	--]
+	End()
+
+	-- 닥터 게로 클론 스폰
+	Action( "add mobgroup" )
+	--[
+		Param( "group", 9 )
+		Param( "no spawn wait", "true" )
+	--]
+	End()
+	
+	-- boss stage 문을 연다
+	Action( "change object state" )
+	--[
+		Param( "index", 12 )
+		Param( "state", 1 )
+		Param( "substate show", 1 )
+	--]
+	End()
+	
+	-- Check killed Dr. Gero clones (outer loop)
+	Action( "function" )
+	--[
+		Condition( "child" )
+		--[
+			Action( "while" )
+			--[
+				Action( "loop" )
+				--[
+				
+					-- Dr. Gero Clone Battle loosening check (inner loop)
+					Action( "function" )
+					--[
+						Condition( "child" )
+						--[
+							Action( "while" )
+							--[
+								Action( "loop" )
+								--[
+									-- Dr. Gero clone also contains the check went into battle conditions
+									Action( "wait" )
+									--[
+										Condition( "check battle" )
+										--[
+											Param( "type", "mob" )
+											Param( "group", 9 )
+											Param( "is battle", "true" )
+										--]
+										End()
+									--]
+									End()
+									
+								--	-- boss stage 문을 잠근다
+								--	Action( "change object state" )
+								--	--[
+								--		Param( "index", 12 )
+								--		Param( "state", 0 )
+								--		Param( "substate show", 1 )
+								--	--]
+								--	End()
+									
+									-- 닥터 게로 클론 체력이 80% 남았을 때, 첫 번째 인조인간 19000SP 소환
+									Action( "wait" )
+									--[
+										Condition( "check lp" )
+										--[
+											Param( "type", "mob" )
+											Param( "group", 9 )
+											Param( "index", 3631101 )
+											Param( "lp", 80 )
+										--]
+										End()
+									--]
+									End()
+				
+									Action( "add mobgroup" )
+									--[
+										Param( "group", 10 )
+										Param( "no spawn wait", "true" )
+									--]
+									End()
+				
+									-- 닥터 게로 클론 체력이 60% 남았을 때, 두 번째 인조인간 19000SP 소환
+									Action( "wait" )
+									--[
+										Condition( "check lp" )
+										--[
+											Param( "type", "mob" )
+											Param( "group", 9 )
+											Param( "index", 3631101 )
+											Param( "lp", 60 )
+										--]
+										End()
+									--]
+									End()
+				
+									Action( "add mobgroup" )
+									--[
+										Param( "group", 11 )
+										Param( "no spawn wait", "true" )
+									--]
+									End()
+				
+									-- 닥터 게로 클론 체력이 30% 남았을 때, 세 번째 인조인간 19000SP 소환
+									Action( "wait" )
+									--[
+										Condition( "check lp" )
+										--[
+											Param( "type", "mob" )
+											Param( "group", 9 )
+											Param( "index", 3631101 )
+											Param( "lp", 30 )
+										--]
+										End()
+									--]
+									End()
+				
+									Action( "add mobgroup" )
+									--[
+										Param( "group", 12 )
+										Param( "no spawn wait", "true" )
+									--]
+									End()
+									
+									-- Dr. Gero clones wait for death
+									-- (The Android 19000SP infinite spawn in the absence of this phrase)
+									Action( "wait" )
+									--[
+										Condition( "check mobgroup" )
+										--[
+											Param( "group", 9 )
+											Param( "count", 2 )
+										--]
+										End()
+									--]
+									End()
+									
+								-- loop 닫음
+								--]
+								End()
+							
+							-- while 닫음
+							--]
+							End()
+						-- child 닫음
+						--]
+						End()
+					
+						-- The combat is released, it escaped from inside the loop and Android removed
+						Action( "wait" )
+						--[
+							Condition( "check battle" )
+							--[
+								Param( "type", "mob" )
+								Param( "group", 9 )
+								Param( "is battle", "false" )
+							--]
+							End()
+						--]
+						End()
+						
+					--	-- boss stage 문을 연다
+					--	Action( "change object state" )
+					--	--[
+					--		Param( "index", 12 )
+					--		Param( "state", 1 )
+					--		Param( "substate show", 1 )
+					--	--]
+					--	End()
+						
+						-- 첫 번째 인조인간 19000SP 제거
+						Action( "remove mobgroup" )
+						--[
+							Param( "group", 10 )
+							Param( "type", "clear" )	
+						--]
+						End()
+						
+						-- 두 번째 인조인간 19000SP 제거
+						Action( "remove mobgroup" )
+						--[
+							Param( "group", 11 )
+							Param( "type", "clear" )
+						--]
+						End()
+							
+						-- 세 번째 인조인간 19000SP 제거
+						Action( "remove mobgroup" )
+						--[
+							Param( "group", 12 )
+							Param( "type", "clear" )
+						--]
+						End()
+
+					-- function close
+					--]
+					End()
+					-- Dr. Gero check Clone Battle loosening exit
+
+				-- loop close
+				--]
+				End()
+
+			-- while close
+			--]
+			End()
+
+		-- child close
+		--]
+		End()
+
+		-- Dr. Gero escapes death from the outer loop
+		-- Dr. Gero does not end until the death wps
+		Action( "wait" )
+		--[
+			Condition( "check mobgroup" )
+			--[
+				Param( "group", 9 )
+				Param( "count", 1 )
+			--]
+			End()
+		--]
+		End()
+		
+	-- function close
+	--]
+	End()
+	-- Check killed Dr. Gero clones terminated
+
+--	-- boss stage 문을 연다
+--	Action( "change object state" )
+--	--[
+--		Param( "index", 12 )
+--		Param( "state", 1 )
+--		Param( "substate show", 1 )
+--	--]
+--	End()
+	
+						
+	-- 19000SP removed first Android
+	Action( "remove mobgroup" )
+	--[
+		Param( "group", 10 )
+		Param( "type", "clear" )	
+	--]
+	End()
+						
+	-- 두 번째 인조인간 19000SP 제거
+	Action( "remove mobgroup" )
+	--[
+		Param( "group", 11 )
+		Param( "type", "clear" )
+	--]
+	End()
+							
+	-- 세 번째 인조인간 19000SP 제거
+	Action( "remove mobgroup" )
+	--[
+		Param( "group", 12 )
+		Param( "type", "clear" )
+	--]
+	End()
+	
+	Action( "wait" )
+	--[
+		Condition( "recv event from wps" )
+		--[
+			Param( "wps index", 22000 )
+			Param( "event id", 666 )
+		--]
+		End()
+	--]
+	End()
+--]
+End()

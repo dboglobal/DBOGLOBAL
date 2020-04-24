@@ -1,0 +1,584 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="TableData">
+      <UniqueIdentifier>{7ba23ae5-5513-43f9-a427-56d9864ca1c3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="TableData\Item">
+      <UniqueIdentifier>{4fb05464-907a-447a-b326-8d4f16c8b61b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="TableData\Character">
+      <UniqueIdentifier>{7daea73f-55c8-4940-9f5b-9d25800506bf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="TableData\Skill">
+      <UniqueIdentifier>{759baee4-cd89-4784-9f8a-debff91b3406}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="TableData\Party">
+      <UniqueIdentifier>{e48382ba-ee33-44f0-9eb4-01561a5407da}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="TableData\World">
+      <UniqueIdentifier>{8df16c62-fdcf-41b0-abde-e3905bf3e9c2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="TableData\Quest">
+      <UniqueIdentifier>{78787606-5342-4967-aef7-c915953668ac}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="TableData\Misc">
+      <UniqueIdentifier>{5dfab6fc-edd2-4b37-bafc-5d99de63c7a8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="TableData\Text">
+      <UniqueIdentifier>{bfacd01f-65a2-4016-b184-3a76e82368c4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="TableData\Rule">
+      <UniqueIdentifier>{33ca1ccc-9f68-4bfc-a9a2-f4ae9a4ccf14}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Container">
+      <UniqueIdentifier>{cd7a36a8-de2c-40f7-8ae6-611158e00076}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ModelToolData">
+      <UniqueIdentifier>{83c7f2d1-3dc4-4a32-a391-006ec35d2d86}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="WorldData">
+      <UniqueIdentifier>{3ca7bd63-841e-4036-b205-27ecacbbbe90}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Container\Base">
+      <UniqueIdentifier>{2eefd343-3c50-4dd6-9260-5a154d2040f5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="TableData\New">
+      <UniqueIdentifier>{5d430eb1-5927-4788-b56d-cd17856a5af4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DboNavi">
+      <UniqueIdentifier>{5c302d71-22f3-4479-a807-c47cabcb1b1a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="TableData\ServerScriptEvent">
+      <UniqueIdentifier>{c0a40bed-f406-4f6d-b92d-90e73542e1e0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="TableData\HLS">
+      <UniqueIdentifier>{4bce3bb0-4304-4e7d-ad68-4ed478ee4125}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="DragonBallRewardTable.cpp">
+      <Filter>TableData\Item</Filter>
+    </ClCompile>
+    <ClCompile Include="DragonBallTable.cpp">
+      <Filter>TableData\Item</Filter>
+    </ClCompile>
+    <ClCompile Include="ItemMixMachineTable.cpp">
+      <Filter>TableData\Item</Filter>
+    </ClCompile>
+    <ClCompile Include="ItemOptionTable.cpp">
+      <Filter>TableData\Item</Filter>
+    </ClCompile>
+    <ClCompile Include="ItemRecipeTable.cpp">
+      <Filter>TableData\Item</Filter>
+    </ClCompile>
+    <ClCompile Include="ItemTable.cpp">
+      <Filter>TableData\Item</Filter>
+    </ClCompile>
+    <ClCompile Include="SetItemTable.cpp">
+      <Filter>TableData\Item</Filter>
+    </ClCompile>
+    <ClCompile Include="UseItemTable.cpp">
+      <Filter>TableData\Item</Filter>
+    </ClCompile>
+    <ClCompile Include="VehicleTable.cpp">
+      <Filter>TableData\Item</Filter>
+    </ClCompile>
+    <ClCompile Include="ExpTable.cpp">
+      <Filter>TableData\Character</Filter>
+    </ClCompile>
+    <ClCompile Include="GuideHintTable.cpp">
+      <Filter>TableData\Character</Filter>
+    </ClCompile>
+    <ClCompile Include="HelpTable.cpp">
+      <Filter>TableData\Character</Filter>
+    </ClCompile>
+    <ClCompile Include="MerchantTable.cpp">
+      <Filter>TableData\Character</Filter>
+    </ClCompile>
+    <ClCompile Include="MobMovePatternTable.cpp">
+      <Filter>TableData\Character</Filter>
+    </ClCompile>
+    <ClCompile Include="MobTable.cpp">
+      <Filter>TableData\Character</Filter>
+    </ClCompile>
+    <ClCompile Include="NewbieTable.cpp">
+      <Filter>TableData\Character</Filter>
+    </ClCompile>
+    <ClCompile Include="NewbieTableCheck.cpp">
+      <Filter>TableData\Character</Filter>
+    </ClCompile>
+    <ClCompile Include="NpcSpeechTable.cpp">
+      <Filter>TableData\Character</Filter>
+    </ClCompile>
+    <ClCompile Include="NPCTable.cpp">
+      <Filter>TableData\Character</Filter>
+    </ClCompile>
+    <ClCompile Include="PCTable.cpp">
+      <Filter>TableData\Character</Filter>
+    </ClCompile>
+    <ClCompile Include="PortalTable.cpp">
+      <Filter>TableData\Character</Filter>
+    </ClCompile>
+    <ClCompile Include="StatusTransformTable.cpp">
+      <Filter>TableData\Character</Filter>
+    </ClCompile>
+    <ClCompile Include="HTBSetTable.cpp">
+      <Filter>TableData\Skill</Filter>
+    </ClCompile>
+    <ClCompile Include="SkillTable.cpp">
+      <Filter>TableData\Skill</Filter>
+    </ClCompile>
+    <ClCompile Include="SystemEffectTable.cpp">
+      <Filter>TableData\Skill</Filter>
+    </ClCompile>
+    <ClCompile Include="CharmTable.cpp">
+      <Filter>TableData\Party</Filter>
+    </ClCompile>
+    <ClCompile Include="DynamicObjectTable.cpp">
+      <Filter>TableData\World</Filter>
+    </ClCompile>
+    <ClCompile Include="LandMarkTable.cpp">
+      <Filter>TableData\World</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjectTable.cpp">
+      <Filter>TableData\World</Filter>
+    </ClCompile>
+    <ClCompile Include="SpawnTable.cpp">
+      <Filter>TableData\World</Filter>
+    </ClCompile>
+    <ClCompile Include="WorldMapTable.cpp">
+      <Filter>TableData\World</Filter>
+    </ClCompile>
+    <ClCompile Include="WorldPlayTable.cpp">
+      <Filter>TableData\World</Filter>
+    </ClCompile>
+    <ClCompile Include="WorldTable.cpp">
+      <Filter>TableData\World</Filter>
+    </ClCompile>
+    <ClCompile Include="WorldZoneTable.cpp">
+      <Filter>TableData\World</Filter>
+    </ClCompile>
+    <ClCompile Include="QuestDropTable.cpp">
+      <Filter>TableData\Quest</Filter>
+    </ClCompile>
+    <ClCompile Include="QuestItemTable.cpp">
+      <Filter>TableData\Quest</Filter>
+    </ClCompile>
+    <ClCompile Include="QuestNarrationTable.cpp">
+      <Filter>TableData\Quest</Filter>
+    </ClCompile>
+    <ClCompile Include="QuestProbabilityTable.cpp">
+      <Filter>TableData\Quest</Filter>
+    </ClCompile>
+    <ClCompile Include="QuestRewardTable.cpp">
+      <Filter>TableData\Quest</Filter>
+    </ClCompile>
+    <ClCompile Include="QuestTextDataTable.cpp">
+      <Filter>TableData\Quest</Filter>
+    </ClCompile>
+    <ClCompile Include="ActionTable.cpp">
+      <Filter>TableData\Misc</Filter>
+    </ClCompile>
+    <ClCompile Include="ChatCommandTable.cpp">
+      <Filter>TableData\Misc</Filter>
+    </ClCompile>
+    <ClCompile Include="DirectionLinkTable.cpp">
+      <Filter>TableData\Misc</Filter>
+    </ClCompile>
+    <ClCompile Include="FormulaTable.cpp">
+      <Filter>TableData\Misc</Filter>
+    </ClCompile>
+    <ClCompile Include="ScriptLinkTable.cpp">
+      <Filter>TableData\Misc</Filter>
+    </ClCompile>
+    <ClCompile Include="ChattingFilterTable.cpp">
+      <Filter>TableData\Text</Filter>
+    </ClCompile>
+    <ClCompile Include="TextAllTable.cpp">
+      <Filter>TableData\Text</Filter>
+    </ClCompile>
+    <ClCompile Include="BudokaiTable.cpp">
+      <Filter>TableData\Rule</Filter>
+    </ClCompile>
+    <ClCompile Include="DojoTable.cpp">
+      <Filter>TableData\Rule</Filter>
+    </ClCompile>
+    <ClCompile Include="DungeonTable.cpp">
+      <Filter>TableData\Rule</Filter>
+    </ClCompile>
+    <ClCompile Include="RankBattleTable.cpp">
+      <Filter>TableData\Rule</Filter>
+    </ClCompile>
+    <ClCompile Include="TimeQuestTable.cpp">
+      <Filter>TableData\Rule</Filter>
+    </ClCompile>
+    <ClCompile Include="CheckTable.cpp">
+      <Filter>Container\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="Table.cpp">
+      <Filter>Container\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="TableContainer.cpp">
+      <Filter>Container</Filter>
+    </ClCompile>
+    <ClCompile Include="TableFileNameList.cpp">
+      <Filter>Container</Filter>
+    </ClCompile>
+    <ClCompile Include="ModelToolCharDataTable.cpp">
+      <Filter>ModelToolData</Filter>
+    </ClCompile>
+    <ClCompile Include="ModelToolObjDataTable.cpp">
+      <Filter>ModelToolData</Filter>
+    </ClCompile>
+    <ClCompile Include="WorldPathTable.cpp">
+      <Filter>WorldData</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp" />
+    <ClCompile Include="CharTitleTable.cpp">
+      <Filter>TableData\New</Filter>
+    </ClCompile>
+    <ClCompile Include="DwcTable.cpp">
+      <Filter>TableData\New</Filter>
+    </ClCompile>
+    <ClCompile Include="DwcMissionTable.cpp">
+      <Filter>TableData\New</Filter>
+    </ClCompile>
+    <ClCompile Include="ItemBagListTable.cpp">
+      <Filter>TableData\New</Filter>
+    </ClCompile>
+    <ClCompile Include="ItemEnchantTable.cpp">
+      <Filter>TableData\New</Filter>
+    </ClCompile>
+    <ClCompile Include="ItemGroupListTable.cpp">
+      <Filter>TableData\New</Filter>
+    </ClCompile>
+    <ClCompile Include="MascotTable.cpp">
+      <Filter>TableData\New</Filter>
+    </ClCompile>
+    <ClCompile Include="QuestRewardSelectTable.cpp">
+      <Filter>TableData\New</Filter>
+    </ClCompile>
+    <ClCompile Include="MascotGradeTable.cpp">
+      <Filter>TableData\New</Filter>
+    </ClCompile>
+    <ClCompile Include="MascotStatusTable.cpp">
+      <Filter>TableData\New</Filter>
+    </ClCompile>
+    <ClCompile Include="ItemMixExpTable.cpp">
+      <Filter>TableData\New</Filter>
+    </ClCompile>
+    <ClCompile Include="ItemUpgradeRateNewTable.cpp">
+      <Filter>TableData\New</Filter>
+    </ClCompile>
+    <ClCompile Include="AirCostumeTable.cpp">
+      <Filter>TableData\New</Filter>
+    </ClCompile>
+    <ClCompile Include="CommonConfigTable.cpp">
+      <Filter>TableData\New</Filter>
+    </ClCompile>
+    <ClCompile Include="ItemDisassembleTable.cpp">
+      <Filter>TableData\New</Filter>
+    </ClCompile>
+    <ClCompile Include="ContentsOnOffTable.cpp">
+      <Filter>TableData\New</Filter>
+    </ClCompile>
+    <ClCompile Include="NpcServerTable.cpp">
+      <Filter>TableData\New</Filter>
+    </ClCompile>
+    <ClCompile Include="MobServerTable.cpp">
+      <Filter>TableData\New</Filter>
+    </ClCompile>
+    <ClCompile Include="DragonBallReturnPointTable.cpp">
+      <Filter>TableData\Misc</Filter>
+    </ClCompile>
+    <ClCompile Include="ServerConfigTable.cpp">
+      <Filter>TableData\Misc</Filter>
+    </ClCompile>
+    <ClCompile Include="DboNavi.cpp">
+      <Filter>DboNavi</Filter>
+    </ClCompile>
+    <ClCompile Include="DboWeInfoGroup.cpp">
+      <Filter>DboNavi</Filter>
+    </ClCompile>
+    <ClCompile Include="DynamicFieldSystemTable.cpp">
+      <Filter>TableData\ServerScriptEvent</Filter>
+    </ClCompile>
+    <ClCompile Include="EventSystemTable.cpp">
+      <Filter>TableData\ServerScriptEvent</Filter>
+    </ClCompile>
+    <ClCompile Include="HLSItemTable.cpp">
+      <Filter>TableData\HLS</Filter>
+    </ClCompile>
+    <ClCompile Include="SlotMachineTable.cpp">
+      <Filter>TableData\HLS</Filter>
+    </ClCompile>
+    <ClCompile Include="HlsSlotMachineItemTable.cpp">
+      <Filter>TableData\HLS</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="DragonBallRewardTable.h">
+      <Filter>TableData\Item</Filter>
+    </ClInclude>
+    <ClInclude Include="DragonBallTable.h">
+      <Filter>TableData\Item</Filter>
+    </ClInclude>
+    <ClInclude Include="ItemMixMachineTable.h">
+      <Filter>TableData\Item</Filter>
+    </ClInclude>
+    <ClInclude Include="ItemOptionTable.h">
+      <Filter>TableData\Item</Filter>
+    </ClInclude>
+    <ClInclude Include="ItemRecipeTable.h">
+      <Filter>TableData\Item</Filter>
+    </ClInclude>
+    <ClInclude Include="ItemTable.h">
+      <Filter>TableData\Item</Filter>
+    </ClInclude>
+    <ClInclude Include="SetItemTable.h">
+      <Filter>TableData\Item</Filter>
+    </ClInclude>
+    <ClInclude Include="UseItemTable.h">
+      <Filter>TableData\Item</Filter>
+    </ClInclude>
+    <ClInclude Include="VehicleTable.h">
+      <Filter>TableData\Item</Filter>
+    </ClInclude>
+    <ClInclude Include="ExpTable.h">
+      <Filter>TableData\Character</Filter>
+    </ClInclude>
+    <ClInclude Include="GuideHintTable.h">
+      <Filter>TableData\Character</Filter>
+    </ClInclude>
+    <ClInclude Include="HelpTable.h">
+      <Filter>TableData\Character</Filter>
+    </ClInclude>
+    <ClInclude Include="MerchantTable.h">
+      <Filter>TableData\Character</Filter>
+    </ClInclude>
+    <ClInclude Include="MobMovePatternTable.h">
+      <Filter>TableData\Character</Filter>
+    </ClInclude>
+    <ClInclude Include="MobTable.h">
+      <Filter>TableData\Character</Filter>
+    </ClInclude>
+    <ClInclude Include="NewbieTable.h">
+      <Filter>TableData\Character</Filter>
+    </ClInclude>
+    <ClInclude Include="NewbieTableCheck.h">
+      <Filter>TableData\Character</Filter>
+    </ClInclude>
+    <ClInclude Include="NpcSpeechTable.h">
+      <Filter>TableData\Character</Filter>
+    </ClInclude>
+    <ClInclude Include="NPCTable.h">
+      <Filter>TableData\Character</Filter>
+    </ClInclude>
+    <ClInclude Include="PCTable.h">
+      <Filter>TableData\Character</Filter>
+    </ClInclude>
+    <ClInclude Include="PortalTable.h">
+      <Filter>TableData\Character</Filter>
+    </ClInclude>
+    <ClInclude Include="StatusTransformTable.h">
+      <Filter>TableData\Character</Filter>
+    </ClInclude>
+    <ClInclude Include="HTBSetTable.h">
+      <Filter>TableData\Skill</Filter>
+    </ClInclude>
+    <ClInclude Include="SkillTable.h">
+      <Filter>TableData\Skill</Filter>
+    </ClInclude>
+    <ClInclude Include="SystemEffectTable.h">
+      <Filter>TableData\Skill</Filter>
+    </ClInclude>
+    <ClInclude Include="CharmTable.h">
+      <Filter>TableData\Party</Filter>
+    </ClInclude>
+    <ClInclude Include="DynamicObjectTable.h">
+      <Filter>TableData\World</Filter>
+    </ClInclude>
+    <ClInclude Include="LandMarkTable.h">
+      <Filter>TableData\World</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjectTable.h">
+      <Filter>TableData\World</Filter>
+    </ClInclude>
+    <ClInclude Include="SpawnTable.h">
+      <Filter>TableData\World</Filter>
+    </ClInclude>
+    <ClInclude Include="WorldMapTable.h">
+      <Filter>TableData\World</Filter>
+    </ClInclude>
+    <ClInclude Include="WorldPlayTable.h">
+      <Filter>TableData\World</Filter>
+    </ClInclude>
+    <ClInclude Include="WorldTable.h">
+      <Filter>TableData\World</Filter>
+    </ClInclude>
+    <ClInclude Include="WorldZoneTable.h">
+      <Filter>TableData\World</Filter>
+    </ClInclude>
+    <ClInclude Include="QuestDropTable.h">
+      <Filter>TableData\Quest</Filter>
+    </ClInclude>
+    <ClInclude Include="QuestItemTable.h">
+      <Filter>TableData\Quest</Filter>
+    </ClInclude>
+    <ClInclude Include="QuestNarrationTable.h">
+      <Filter>TableData\Quest</Filter>
+    </ClInclude>
+    <ClInclude Include="QuestProbabilityTable.h">
+      <Filter>TableData\Quest</Filter>
+    </ClInclude>
+    <ClInclude Include="QuestRewardTable.h">
+      <Filter>TableData\Quest</Filter>
+    </ClInclude>
+    <ClInclude Include="QuestTextDataTable.h">
+      <Filter>TableData\Quest</Filter>
+    </ClInclude>
+    <ClInclude Include="ActionTable.h">
+      <Filter>TableData\Misc</Filter>
+    </ClInclude>
+    <ClInclude Include="ChatCommandTable.h">
+      <Filter>TableData\Misc</Filter>
+    </ClInclude>
+    <ClInclude Include="DirectionLinkTable.h">
+      <Filter>TableData\Misc</Filter>
+    </ClInclude>
+    <ClInclude Include="FormulaTable.h">
+      <Filter>TableData\Misc</Filter>
+    </ClInclude>
+    <ClInclude Include="ScriptLinkTable.h">
+      <Filter>TableData\Misc</Filter>
+    </ClInclude>
+    <ClInclude Include="ChattingFilterTable.h">
+      <Filter>TableData\Text</Filter>
+    </ClInclude>
+    <ClInclude Include="TextAllTable.h">
+      <Filter>TableData\Text</Filter>
+    </ClInclude>
+    <ClInclude Include="BudokaiTable.h">
+      <Filter>TableData\Rule</Filter>
+    </ClInclude>
+    <ClInclude Include="DojoTable.h">
+      <Filter>TableData\Rule</Filter>
+    </ClInclude>
+    <ClInclude Include="DungeonTable.h">
+      <Filter>TableData\Rule</Filter>
+    </ClInclude>
+    <ClInclude Include="RankBattleTable.h">
+      <Filter>TableData\Rule</Filter>
+    </ClInclude>
+    <ClInclude Include="TimeQuestTable.h">
+      <Filter>TableData\Rule</Filter>
+    </ClInclude>
+    <ClInclude Include="CheckTable.h">
+      <Filter>Container\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="Table.h">
+      <Filter>Container\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="TableContainer.h">
+      <Filter>Container</Filter>
+    </ClInclude>
+    <ClInclude Include="TableFileNameList.h">
+      <Filter>Container</Filter>
+    </ClInclude>
+    <ClInclude Include="GraphicDataTable.h">
+      <Filter>ModelToolData</Filter>
+    </ClInclude>
+    <ClInclude Include="ModelToolCharDataTable.h">
+      <Filter>ModelToolData</Filter>
+    </ClInclude>
+    <ClInclude Include="ModelToolObjDataTable.h">
+      <Filter>ModelToolData</Filter>
+    </ClInclude>
+    <ClInclude Include="WorldPathTable.h">
+      <Filter>WorldData</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="CharTitleTable.h">
+      <Filter>TableData\New</Filter>
+    </ClInclude>
+    <ClInclude Include="DwcTable.h">
+      <Filter>TableData\New</Filter>
+    </ClInclude>
+    <ClInclude Include="DwcMissionTable.h">
+      <Filter>TableData\New</Filter>
+    </ClInclude>
+    <ClInclude Include="ItemBagListTable.h">
+      <Filter>TableData\New</Filter>
+    </ClInclude>
+    <ClInclude Include="ItemEnchantTable.h">
+      <Filter>TableData\New</Filter>
+    </ClInclude>
+    <ClInclude Include="ItemGroupListTable.h">
+      <Filter>TableData\New</Filter>
+    </ClInclude>
+    <ClInclude Include="MascotTable.h">
+      <Filter>TableData\New</Filter>
+    </ClInclude>
+    <ClInclude Include="QuestRewardSelectTable.h">
+      <Filter>TableData\New</Filter>
+    </ClInclude>
+    <ClInclude Include="MascotGradeTable.h">
+      <Filter>TableData\New</Filter>
+    </ClInclude>
+    <ClInclude Include="MascotStatusTable.h">
+      <Filter>TableData\New</Filter>
+    </ClInclude>
+    <ClInclude Include="ItemMixExpTable.h">
+      <Filter>TableData\New</Filter>
+    </ClInclude>
+    <ClInclude Include="ItemUpgradeRateNewTable.h">
+      <Filter>TableData\New</Filter>
+    </ClInclude>
+    <ClInclude Include="AirCostumeTable.h">
+      <Filter>TableData\New</Filter>
+    </ClInclude>
+    <ClInclude Include="CommonConfigTable.h">
+      <Filter>TableData\New</Filter>
+    </ClInclude>
+    <ClInclude Include="ItemDisassembleTable.h">
+      <Filter>TableData\New</Filter>
+    </ClInclude>
+    <ClInclude Include="ContentsOnOffTable.h">
+      <Filter>TableData\New</Filter>
+    </ClInclude>
+    <ClInclude Include="NpcServerTable.h">
+      <Filter>TableData\New</Filter>
+    </ClInclude>
+    <ClInclude Include="MobServerTable.h">
+      <Filter>TableData\New</Filter>
+    </ClInclude>
+    <ClInclude Include="DragonBallReturnPointTable.h">
+      <Filter>TableData\Misc</Filter>
+    </ClInclude>
+    <ClInclude Include="ServerConfigTable.h">
+      <Filter>TableData\Misc</Filter>
+    </ClInclude>
+    <ClInclude Include="DboNavi.h">
+      <Filter>DboNavi</Filter>
+    </ClInclude>
+    <ClInclude Include="DboWeInfoGroup.h">
+      <Filter>DboNavi</Filter>
+    </ClInclude>
+    <ClInclude Include="DynamicFieldSystemTable.h">
+      <Filter>TableData\ServerScriptEvent</Filter>
+    </ClInclude>
+    <ClInclude Include="EventSystemTable.h">
+      <Filter>TableData\ServerScriptEvent</Filter>
+    </ClInclude>
+    <ClInclude Include="HLSItemTable.h">
+      <Filter>TableData\HLS</Filter>
+    </ClInclude>
+    <ClInclude Include="SlotMachineTable.h">
+      <Filter>TableData\HLS</Filter>
+    </ClInclude>
+    <ClInclude Include="HlsSlotMachineItemTable.h">
+      <Filter>TableData\HLS</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

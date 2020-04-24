@@ -1,0 +1,51 @@
+HEADER 	RESOURCE 
+VERSION 0 
+
+[ 
+	GRID 
+	[ 
+			GRID_COUNT 	40 
+			GRID_WIDTH 	1.000000 
+	] 
+
+	TIME 
+	[ 
+			TIME_SPEED 	1.000000 
+			TIME_PAUSE 	0 
+			TIME_REPEAT 	1 
+	] 
+
+	DYMMY 
+	[ 
+			SHOW_GRID 	1 
+			SHOW_SKY 	1 
+			SHOW_TERRAIN 	0 
+	] 
+
+	LIGHT 
+	[ 
+			USE_AMBIENT 	1 
+			AMBIENT_COLOR 	1.000000 1.000000 1.000000 
+			USE_LIGHT 	1 
+			LIGHT_TYPE 	128 
+			LIGHT_COLOR 	0.454902 0.454902 0.454902 
+			LIGHT_RADIUS 	165.000000 
+			LIGHT_CONEANGLE 	36.000000 
+	] 
+
+	EVENT 
+	[ 
+			SPEED 	20.000000 
+			LIFETIME 	0.500000
+	] 
+
+	PATH 
+	[ 
+			CLUMP_TEXTURE_PATH 	.\Textures\Effect\Mesh\ 
+			CLUMP 	Object\Effect
+			ANIMATNION 	Object\Effect 
+			UVANIMATION 	Object\Effect 
+			EFFECT_TEXTURE_PATH 	Textures\Effect\Particle 
+	] 
+
+] 

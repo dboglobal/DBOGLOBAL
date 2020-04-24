@@ -1,0 +1,22 @@
+-- 1층
+-- 오브젝트에서 실행됨
+-- 동력실 스위치를 켜지 않고 문을 클릭한 경우 에러 메세지
+
+GameStage(0)
+--[
+	-- 시스템 메세지 "문에 전기가 공급되지 않았습니다"
+	Action( "system message" )
+	--[
+		Param( "notify", "caution" )
+		Param( "text index", 8 )
+	--]
+	End()
+	
+	Action( "system message" )
+	--[
+		Param( "notify", "system" )
+		Param( "text index", 8 )
+	--]
+	End()
+--]
+End()

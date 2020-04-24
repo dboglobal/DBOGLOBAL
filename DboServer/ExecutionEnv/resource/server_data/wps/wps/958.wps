@@ -1,0 +1,36 @@
+GameStage(0)
+--[
+	Action("add mob")
+	--[
+		Param("index", 9411319)
+		Param("group", 95801)
+		Param("loc x", 3580.87)
+		Param("loc y", -113)
+		Param("loc z", -557.52)
+		Param("dir x", -0.86)
+		Param("dir z", 0.5)
+		Param( "no spawn wait", "true" )
+	--]
+	End()
+	
+	Action("wait")
+	--[
+		Param( "operation", "or" )
+
+		Condition("check mobgroup")
+		--[
+			Param("group", 95801)
+			Param("count", 1)
+		--]
+		End()
+
+		Condition( "check time" )
+		--[
+			Param( "time", 180 )
+		--]
+		End()
+	--]
+	End()
+--]
+End()
+

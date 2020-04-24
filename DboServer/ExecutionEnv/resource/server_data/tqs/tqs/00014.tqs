@@ -1,0 +1,1732 @@
+------------------------------------------------------------------------------------------------------------
+-- Time Machine Quest 7
+--
+-- Begin : 2011-06-08
+--
+-- Copyright : ⓒ NTL-Inc Co., Ltd
+--
+-- Author : Rudin (byerror@ntl-inc.com)
+-- Supervisor : Rudin (byerror@ntl-inc.com)
+------------------------------------------------------------------------------------------------------------
+-- BGM_TMQ2_BOSS : 토와가 관계되어 있는 보스와의 전투
+-- BGM_TMQ2_FREEZA : 전투가 없는 프리저 등장
+-- BGM_TMQ2_FREEZA_B : 프리저와의 전투
+-- BGM_TMQ2_GINYU : 전투가 없는 기뉴 등장
+-- BGM_TMQ2_GINYU_B : 기뉴와의 전투
+-- BGM_TMQ2_MAIN : 기본 배경음
+-- BGM_TMQ_COMMON :  전투가 없는 시네마틱
+-- BGM_TMQ_EVENT :  전투로 이어지는 시네마틱, 이어지는 전투가 종료될 때까지 틈
+-- BGM_TMQ_BOSS :  중간보스 및 보스전
+------------------------------------------------------------------------------------------------------------
+
+GameBegin()
+--[
+	Action( "register condition" ) 
+	--[
+		Condition( "all player faint" )
+		--[   
+			Param( "tmq fail", "true" )
+		--]
+		End()
+	--]
+	End()
+
+	Action( "play bgm" ) 
+	--[
+		Param( "play", "true")
+		Param( "name", "BGM\\BGM_TMQ2_MAIN.ogg")
+		Param( "loop", "true")
+	--]
+	End()
+
+	Action( "add npc" )
+	--[
+		Param( "index", 7511101 )
+		Param( "loc x", -307.61 )
+		Param( "loc y", 138.12 )
+		Param( "loc z", -641.96 )
+		Param( "dir x", 0.72 )
+		Param( "dir z", 0.69 )
+		Param( "play script", 7511101 )
+		Param( "play scene", 19 )
+		Param( "char condition", "click disable" )
+		Param( "no spawn wait", "true" )
+	--]
+	End()
+
+	Action( "add npc" )
+	--[
+		Param( "index", 2413109 )
+		Param( "loc x", -309.12 ) 
+		Param( "loc y", 138.33 )
+		Param( "loc z", -640.69 )
+		Param( "dir x", 0.72 )
+		Param( "dir z", 0.69 )
+		Param( "char condition", "click disable" )
+		Param( "no spawn wait", "true" )
+	--]
+	End()
+
+	Action( "wait" )
+	--[
+		Condition( "check time" )
+		--[
+			Param( "time", 2 )
+		--]
+		End()
+	--]
+	End()
+
+	Action( "send ts event" )
+	--[
+		Param( "trigger type", "quest" )
+		Param( "event id", 23000 )
+	--]
+	End()
+
+	Action( "wait" )
+	--[
+		Condition( "recv ts event" )
+		--[
+			Param( "trigger type", "quest" )
+			Param( "event id", 23010 )
+			Param( "sync", "true" )
+		--]
+		End()
+	--]
+	End()
+
+	Action( "change stage" ) 
+	--[
+		Param( "stage", 1)
+	--]
+	End()
+--]
+End()
+
+------------------------------------------------------------------
+
+GameStage(1)
+--[
+	Action( "register condition" )  
+	--[
+		Condition( "all player faint" )
+		--[   
+			Param( "tmq fail", "true" )
+		--]
+		End()
+	--]
+	End()
+
+	Action( "progress message" ) 
+	--[
+		Param( "progress type", "tmq stage" )
+		Param( "message type", "start" )
+		Param( "message value", 1 )
+	--]
+	End()
+
+	Action( "information" )  
+	--[
+		Param( "info type", "stage" )
+	--]
+	End()
+
+	Action( "play jingle" ) 
+	--[
+		Param( "name", "BGM\\JINGLE_STAGE_START.ogg")
+	--]
+	End()
+
+	Action( "send tqs event" )
+	--[
+		Param( "target type", "npc" )
+		Param( "target index", 7511101 )
+		Param( "event id", 23020 )
+	--]
+	End()
+
+	Action( "add mobgroup" )
+	--[
+		Param( "group", 1 )
+		Param( "respawn", "false" )
+		Param( "no spawn wait", "true" )
+	--]
+	End()
+
+	Action( "send ts event" ) 
+	--[
+		Param( "trigger type", "quest" )
+		Param( "event id", 23030 )
+	--]
+	End()
+
+	Action( "wait" )
+	--[
+		Condition( "check time" )
+		--[
+			Param( "time", 2 )
+		--]
+		End()
+	--]
+	End()
+	
+	Action( "remove npc" )
+	--[
+		Param( "index", 2413109 )
+		Param( "type", "clear" )
+	--]
+	End()
+
+	Action( "wait" )
+	--[
+		Condition( "check time" )
+		--[
+			Param( "time", 3 )
+		--]
+		End()
+	--]
+	End()
+	
+	Action( "change object state" )
+	--[
+		Param( "index", 1 )
+		Param( "state", 2 )
+		Param( "substate show", 0 )
+	--]
+	End()
+
+	Action( "wait" )
+	--[
+		Condition( "recv ts event" )
+		--[
+			Param( "trigger type", "quest" )
+			Param( "event id", 23040 )
+			Param( "sync", "true" )
+		--]
+		End()
+	--]
+	End()
+
+	Action( "remove mobgroup" )
+	--[
+		Param( "group", 1 )
+		Param( "type", "clear" )
+	--]
+	End()
+
+	Action( "play bgm" ) 
+	--[
+		Param( "play", "true")
+		Param( "name", "BGM\\BGM_TMQ_EVENT.ogg")
+		Param( "loop", "true")
+	--]
+	End()
+
+	Action( "direct play" )	
+	--[
+		Param( "type", "cinematic" )
+		Param( "id", 1075 )
+		Param( "sync", "true" )
+		Param( "skip", "true" )
+	--]  
+	End()
+	
+	Action( "send ts event" ) 
+	--[
+		Param( "trigger type", "quest" )
+		Param( "event id", 23710 )
+	--]
+	End()
+
+	Action( "add mobgroup" )
+	--[
+		Param( "group", 12 )
+		Param( "respawn", "false" )
+		Param( "no spawn wait", "true" )
+	--]
+	End()
+
+	Action( "add npc" )
+	--[
+		Param( "index", 4401101 )
+		Param( "loc x", -167.690 )
+		Param( "loc y", 136.027 )
+		Param( "loc z", -445.329 )
+		Param( "dir x", 0.993 )
+		Param( "dir z", 0.12 )
+		Param( "play script", 4401101 )
+		Param( "play scene", 1 )
+		Param( "char condition", "click disable" )
+		Param( "no spawn wait", "true" )
+	--]
+	End()
+
+	Action( "direction indicate" )	
+	--[
+		Param( "apply", "true" )
+		Param( "indicate type", "point" )
+		Param( "auto hide", "false" )
+		Param( "loc x", -194.51 )
+		Param( "loc z", -430.32 )
+	--]
+	End()
+
+	Action( "wait" ) 
+	--[
+		Condition( "area enter" )
+		--[   
+			Param( "origin x", -228.00 )
+			Param( "origin z", -442.58 )
+			Param( "radius", 10 )
+			Param( "tmq fail", "false" )
+			Param( "all member", "false" )
+		--]
+	  	End()
+    	--]
+	End()
+
+	Action( "direction indicate" )
+	--[
+		Param( "apply", "false" )
+		Param( "indicate type", "point" )
+	--]
+	End()
+
+	Action( "play bgm" ) 
+	--[
+		Param( "play", "true")
+		Param( "name", "BGM\\BGM_TMQ2_BOSS.ogg")
+		Param( "loop", "true")
+	--]
+	End()
+
+	Action( "add mobgroup" )
+	--[
+		Param( "group", 2 )
+		Param( "respawn", "false" )
+		Param( "no spawn wait", "true" )
+	--]
+	End()
+
+	Action( "send ts event" )
+	--[
+		Param( "trigger type", "quest" )
+		Param( "event id", 23050 )
+	--]
+	End()
+
+	Action( "wait" )
+	--[
+		Condition( "recv ts event" )
+		--[
+			Param( "trigger type", "quest" )
+			Param( "event id", 23060 )
+			Param( "sync", "false" )
+		--]
+		End()
+	--]
+	End()
+
+	Action( "remove npc" )
+	--[
+		Param( "index", 4401101 )
+		Param( "type", "clear" )
+	--]
+	End()
+
+	Action( "remove mobgroup" )
+	--[
+		Param( "group", 2 )
+		Param( "type", "clear" )
+	--]
+	End()
+
+	Action( "remove mobgroup" )
+	--[
+		Param( "group", 12 )
+		Param( "type", "clear" )
+	--]
+	End()
+
+	Action( "direct play" )	
+	--[
+		Param( "type", "cinematic" )
+		Param( "id", 1076 )
+		Param( "sync", "true" )
+		Param( "skip", "true" )
+	--]  
+	End()
+
+	Action( "add npc" )
+	--[
+		Param( "index", 4401101 )
+		Param( "loc x", -167.690 )
+		Param( "loc y", 136.027 )
+		Param( "loc z", -445.329 )
+		Param( "dir x", 0.993 )
+		Param( "dir z", 0.12 )
+		Param( "play script", 4401101 )
+		Param( "play scene", 1 )
+		Param( "char condition", "click disable" )
+		Param( "no spawn wait", "true" )
+	--]
+	End()
+
+	Action( "change object state" )
+	--[
+		Param( "index", 2 )
+		Param( "state", 0 )
+		Param( "substate show", 1 )
+	--]
+	End()
+
+	Action( "wait" )
+	--[
+		Condition( "check time" )
+		--[
+			Param( "time", 5 )
+		--]
+		End()
+	--]
+	End()
+
+	Action( "change object state" )
+	--[
+		Param( "index", 2 )
+		Param( "state", 1 )
+		Param( "substate show", 1 )
+	--]
+	End()
+
+	Action( "add npc" )
+	--[
+		Param( "index", 7511101 )
+		Param( "loc x", -161.06 )
+		Param( "loc y", 134.78 )
+		Param( "loc z", -363.62 )
+		Param( "dir x", -0.81 )
+		Param( "dir z", -0.59 )
+		Param( "no spawn wait", "true" )
+	--]
+	End()
+
+	Action( "add npc" )
+	--[
+		Param( "index", 2413109 )
+		Param( "loc x", -159.24 ) 
+		Param( "loc y", 134.75 )
+		Param( "loc z", -365.45 )
+		Param( "dir x", -0.81 )
+		Param( "dir z", -0.59 )
+		Param( "char condition", "click disable" )
+		Param( "no spawn wait", "true" )
+	--]
+	End()
+
+	Action( "send ts event" )
+	--[
+		Param( "trigger type", "quest" )
+		Param( "event id", 23080 )
+	--]
+	End()
+
+	Action( "wait" )
+	--[
+		Condition( "recv ts event" )
+		--[
+			Param( "trigger type", "quest" )
+			Param( "event id", 23070 )
+			Param( "sync", "true" )
+		--]
+		End()
+	--]
+	End()
+
+	Action( "send ts event" )
+	--[
+		Param( "trigger type", "quest" )
+		Param( "event id", 23090 )
+	--]
+	End()
+
+	Action( "remove npc" )
+	--[
+		Param( "index", 4401101 )
+		Param( "type", "clear" )
+	--]
+	End()
+
+	Action( "remove npc" )
+	--[
+		Param( "index", 7511101 )
+		Param( "type", "clear" )
+	--]
+	End()
+
+	Action( "remove npc" )
+	--[
+		Param( "index", 2413109 )
+		Param( "type", "clear" )
+	--]
+	End()
+
+	Action( "change object state" )
+	--[
+		Param( "index", 2 )
+		Param( "state", 3 )
+		Param( "substate show", 1 )
+	--]
+	End()
+	
+	Action( "add npc" )
+	--[
+		Param( "index", 7511101 )
+		Param( "loc x", -510.53 )
+		Param( "loc y", 136.75 )
+		Param( "loc z", 493.63 )
+		Param( "dir x", -0.96 )
+		Param( "dir z", -0.29 )
+		Param( "char condition", "click disable" )
+		Param( "no spawn wait", "true" )
+	--]
+	End()
+
+	Action( "add npc" )
+	--[
+		Param( "index", 2413109 )
+		Param( "loc x", -509.42 )
+		Param( "loc y", 136.84 )
+		Param( "loc z", 491.35 )
+		Param( "dir x", -0.96 )
+		Param( "dir z", -0.29 )
+		Param( "char condition", "click disable" )		
+		Param( "no spawn wait", "true" )
+	--]
+	End()
+
+	Action( "teleport" )
+	--[
+		Param( "loc x", -517.69 )
+		Param( "loc y", 136.516 )
+		Param( "loc z", 489.37 )
+		Param( "dir x", 0.94 )
+		Param( "dir z", 0.34 )
+	--]
+	End()
+
+	Action( "change stage" ) 
+	--[
+		Param( "stage", 2)
+	--]
+	End()
+--]
+End()
+
+-----------------------------------------------------------------------
+	
+GameStage(2)
+--[
+	Action( "register condition" ) 
+	--[
+		Condition( "all player faint" )
+		--[   
+			Param( "tmq fail", "true" )
+		--]
+		End()
+	--]
+	End()
+
+	Action( "send ts event" ) 
+	--[
+		Param( "trigger type", "quest" )
+		Param( "event id", 23100 )
+	--]
+	End()
+
+	Action( "wait" )
+	--[
+		Condition( "recv ts event" )
+		--[
+			Param( "trigger type", "quest" )
+			Param( "event id", 23110 )
+			Param( "sync", "true" )
+		--]
+		End()
+	--]
+	End()
+	
+	Action( "play bgm" ) 
+	--[
+		Param( "play", "true")
+		Param( "name", "BGM\\BGM_TMQ_EVENT.ogg")
+		Param( "loop", "true")
+	--]
+	End()
+
+	Action( "direct play" ) 
+	--[
+		Param( "type", "cinematic" )
+		Param( "id", 1086 )
+		Param( "sync", "true" )
+		Param( "skip", "true" )
+	--]  
+	End()
+	
+	Action( "play bgm" ) 
+	--[
+		Param( "play", "true")
+		Param( "name", "BGM\\BGM_TMQ2_MAIN.ogg")
+		Param( "loop", "true")
+	--]
+	End()
+
+	Action( "send ts event" ) 
+	--[
+		Param( "trigger type", "quest" )
+		Param( "event id", 23140 )
+	--]
+	End()
+
+	Action( "direction indicate" )	
+	--[
+		Param( "apply", "true" )
+		Param( "indicate type", "point" )
+		Param( "auto hide", "false" )
+		Param( "loc x", -617.17 )
+		Param( "loc z", 268.91 )
+	--]
+	End()
+
+	Action( "add mobgroup" )
+	--[
+		Param( "group", 3 )
+		Param( "respawn", "false" )
+		Param( "no spawn wait", "true" )
+	--]
+	End()
+
+	Action( "progress message" ) 
+	--[
+		Param( "progress type", "tmq stage" )
+		Param( "message type", "start" )
+		Param( "message value", 2 )
+	--]
+	End()
+
+	Action( "information" ) 
+	--[
+		Param( "info type", "stage" )
+	--]
+	End()
+
+	Action( "play jingle" )
+	--[
+		Param( "name", "BGM\\JINGLE_STAGE_START.ogg")
+	--]
+	End()
+
+	Action( "wait" ) 
+	--[
+		Condition( "area enter" )
+		--[   
+			Param( "origin x", -589.532 )
+			Param( "origin z", 371.085 )
+			Param( "radius", 15 )
+			Param( "tmq fail", "false" )
+			Param( "all member", "false" )
+		--]
+	  	End()
+    	--]
+	End()
+
+	Action( "remove npc" )
+	--[
+		Param( "index", 7511101 )
+		Param( "type", "clear" )
+	--]
+	End()
+
+	Action( "remove npc" )
+	--[
+		Param( "index", 2413109 )
+		Param( "type", "clear" )
+	--]
+	End()
+
+	Action( "change object state" )
+	--[
+		Param( "index", 3 )
+		Param( "state", 3 )
+		Param( "substate show", 0 )
+	--]
+	End()
+
+	Action( "wait" )
+	--[
+		Condition( "recv ts event" )
+		--[
+			Param( "trigger type", "quest" )
+			Param( "event id", 23150 )
+			Param( "sync", "true" )
+		--]
+		End()
+	--]
+	End()
+
+	Action( "wait" ) 
+	--[
+		Condition( "area enter" )
+		--[   
+			Param( "origin x", -617.17 )
+			Param( "origin z", 268.91 )
+			Param( "radius", 10 )
+			Param( "tmq fail", "false" )
+			Param( "all member", "false" )
+		--]
+	  	End()
+    	--]
+	End()
+
+	Action( "direction indicate" )
+	--[
+		Param( "apply", "false" )
+		Param( "indicate type", "point" )
+	--]
+	End()
+
+	Action( "remove mobgroup" )
+	--[
+		Param( "group", 3 )
+		Param( "type", "clear" )
+	--]
+	End()
+
+	Action( "add npc" )
+	--[
+		Param( "index", 7511106 )
+		Param( "loc x", -635.97 )
+		Param( "loc y", 142.39 )
+		Param( "loc z", 280.75 )
+		Param( "dir x", 0.91 )
+		Param( "dir z", -0.42 )
+		Param( "char condition", "invincible" )
+		Param( "no spawn wait", "true" )
+	--]
+	End()
+
+	Action( "wait" )
+	--[
+		Condition( "check time" )
+		--[
+			Param( "time", 2 )
+		--]
+		End()
+	--]
+	End()
+
+	Action( "send ts event" ) 
+	--[
+		Param( "trigger type", "quest" )
+		Param( "event id", 23160 )
+	--]
+	End()
+
+	Action( "wait" )
+	--[
+		Condition( "recv ts event" )
+		--[
+			Param( "trigger type", "quest" )
+			Param( "event id", 23170 )
+			Param( "sync", "true" )
+		--]
+		End()
+	--]
+	End()
+
+	Action( "add mobgroup" )
+	--[
+		Param( "group", 4 )
+		Param( "respawn", "true" )
+		Param( "no spawn wait", "true" )
+	--]
+	End()
+
+-- Open Space Teleport Object
+
+	Action( "change object state" )
+	--[
+		Param( "index", 29 )
+		Param( "state", 1 )
+		Param( "substate show", 1 )
+	--]
+	End()
+
+	Action( "direction indicate" )	
+	--[
+		Param( "apply", "true" )
+		Param( "indicate type", "point" )
+		Param( "auto hide", "false" )
+		Param( "loc x", -622.13 )
+		Param( "loc z", 230.15 )
+	--]
+	End()
+
+	Action( "wait" ) 
+	--[
+		Condition( "area enter" )
+		--[   
+			Param( "origin x", -958.96 )
+			Param( "origin z", -1097.29 )
+			Param( "radius", 200 )
+			Param( "tmq fail", "false" )
+			Param( "all member", "true" )
+		--]
+	  	End()
+    	--]
+	End()
+
+	Action( "add mobgroup" )
+	--[
+		Param( "group", 5 )
+		Param( "respawn", "false" )
+		Param( "no spawn wait", "true" )
+	--]
+	End()
+
+-- Close outer space teleport object
+
+	Action( "change object state" )
+	--[
+		Param( "index", 29 )
+		Param( "state", 0 )
+		Param( "substate show", 0 )
+	--]
+	End()
+
+	Action( "direction indicate" )
+	--[
+		Param( "apply", "false" )
+		Param( "indicate type", "point" )
+	--]
+	End()
+
+	Action( "remove mobgroup" )
+	--[
+		Param( "group", 4 )
+		Param( "type", "clear" )
+	--]
+	End()
+
+	Action( "remove npc" )
+	--[
+		Param( "index", 7511106 )
+		Param( "type", "clear" )
+	--]
+	End()
+
+	Action( "remove npc" )
+	--[
+		Param( "index", 7511101 )
+		Param( "type", "clear" )
+	--]
+	End()
+
+	Action( "send ts event" ) 
+	--[
+		Param( "trigger type", "quest" )
+		Param( "event id", 23180 )
+	--]
+	End()
+
+	Action( "direction indicate" )	
+	--[
+		Param( "apply", "true" )
+		Param( "indicate type", "point" )
+		Param( "auto hide", "false" )
+		Param( "loc x", -857.03 )
+		Param( "loc z", -1185.15 )
+	--]
+	End()
+
+	Action( "send ts event" ) 
+	--[
+		Param( "trigger type", "quest" )
+		Param( "event id", 23190 )
+	--]
+	End()
+
+	Action( "wait" )
+	--[
+		Condition( "recv ts event" )
+		--[
+			Param( "trigger type", "quest" )
+			Param( "event id", 23200 )
+			Param( "sync", "true" )
+		--]
+		End()
+	--]
+	End()
+
+	Action( "wait" ) 
+	--[
+		Condition( "area enter" )
+		--[   
+			Param( "origin x", -857.03 )
+			Param( "origin z", -1185.15 )
+			Param( "radius", 10 )
+			Param( "tmq fail", "false" )
+			Param( "all member", "false" )
+		--]
+	  	End()
+    	--]
+	End()
+
+	Action( "send ts event" ) 
+	--[
+		Param( "trigger type", "quest" )
+		Param( "event id", 23290 )
+	--]
+	End()
+
+	Action( "direction indicate" )
+	--[
+		Param( "apply", "true" )
+		Param( "indicate type", "point" )
+		Param( "auto hide", "false" )
+		Param( "loc x", -958.96 )
+		Param( "loc z", -1097.29 )
+	--]
+	End()
+
+	Action( "wait" )
+	--[
+		Condition( "recv ts event" )
+		--[
+			Param( "trigger type", "quest" )
+			Param( "event id", 23330 )
+			Param( "sync", "false" )
+		--]
+		End()
+	--]
+	End()
+
+	Action( "direction indicate" )
+	--[
+		Param( "apply", "false" )
+		Param( "indicate type", "point" )
+	--]
+	End()
+
+-- Open the ship's internal teleport object
+
+	Action( "change object state" )
+	--[
+		Param( "index", 30 )
+		Param( "state", 1 )
+		Param( "substate show", 1 )
+	--]
+	End()
+
+	Action( "add npc" )
+	--[
+		Param( "index", 7511101 )
+		Param( "loc x", -661.056 )
+		Param( "loc y", 141.187 )
+		Param( "loc z", 255.009 )
+		Param( "dir x", 0.992 )
+		Param( "dir z", -0.13 )
+		Param( "char condition", "click disable" )
+		Param( "no spawn wait", "true" )
+	--]
+	End()
+
+	Action("wait")
+	--[
+		Condition( "area enter" )
+		--[   
+			Param( "origin x", -639.28 )
+			Param( "origin z", 266.50 )
+			Param( "radius", 300 )
+			Param( "tmq fail", "false" )
+			Param( "all member", "true" )
+		--]
+	   	End()
+	--]
+	End()
+
+	Action( "direct play" )	
+	--[
+		Param( "type", "cinematic" )
+		Param( "id", 1087 )
+		Param( "sync", "true" )
+		Param( "skip", "true" )
+	--]
+	End()
+
+	Action( "direction indicate" )
+	--[
+		Param( "apply", "true" )
+		Param( "indicate type", "point" )
+		Param( "auto hide", "false" )
+		Param( "loc x", -654.66 )
+		Param( "loc z", 256.23 )
+	--]
+	End()
+
+	Action("wait")
+	--[
+		Condition( "area enter" )
+		--[   
+			Param( "origin x", -654.66 )		
+			Param( "origin z", 256.23 )
+			Param( "radius", 10 )
+			Param( "tmq fail", "false" )
+			Param( "all member", "false" )
+		--]
+	   	End()
+	--]
+	End()
+
+	Action( "direction indicate" )
+	--[
+		Param( "apply", "false" )
+		Param( "indicate type", "point" )
+	--]
+	End()
+
+	Action( "send ts event" ) 
+	--[
+		Param( "trigger type", "quest" )
+		Param( "event id", 23340 )
+	--]
+	End()
+
+	Action( "wait" )
+	--[
+		Condition( "recv ts event" )
+		--[
+			Param( "trigger type", "quest" )
+			Param( "event id", 23350 )
+			Param( "sync", "true" )
+		--]
+		End()
+	--]
+	End()
+
+	Action( "add npc" )
+	--[
+		Param( "index", 2413109 )
+		Param( "loc x", 65.91 )
+		Param( "loc y", 149.94 )
+		Param( "loc z", 316.89 )
+		Param( "dir x", 0.98 )
+		Param( "dir z", -0.19 )
+		Param( "char condition", "click disable" )
+		Param( "no spawn wait", "true" )
+	--]
+	End()
+
+	Action( "teleport" )
+	--[
+		Param( "loc x", 74.42 )
+		Param( "loc y", 149.76)
+		Param( "loc z", 315.83)
+		Param( "dir x", -0.88 )
+		Param( "dir z", 0.47 )
+	--]
+	End()
+
+	Action( "change stage" ) 
+	--[
+		Param( "stage", 3)
+	--]
+	End()
+--]
+End()
+
+------------------------------------------------------------------------
+
+GameStage(3)
+--[
+	Action( "register condition" ) 
+	--[
+		Condition( "all player faint" ) 
+		--[   
+			Param( "tmq fail", "true" )
+		--]
+		End()
+	--]
+	End()
+
+	Action( "remove npc" )
+	--[
+		Param( "index", 7511101 )
+		Param( "type", "clear" )
+	--]
+	End()
+
+	Action( "direct play" )	
+	--[
+		Param( "type", "cinematic" )
+		Param( "id", 1087 )
+		Param( "sync", "true" )
+		Param( "skip", "true" )
+	--]
+	End()
+
+	Action( "send ts event" ) 
+	--[
+		Param( "trigger type", "quest" )
+		Param( "event id", 23120 )
+	--]
+	End()
+
+	Action( "wait" )
+	--[
+		Condition( "recv ts event" )
+		--[
+			Param( "trigger type", "quest" )
+			Param( "event id", 23130 )
+			Param( "sync", "true" )
+		--]
+		End()
+	--]
+	End()
+
+	Action( "change object state" )
+	--[
+		Param( "index", 31 )
+		Param( "state", 1 )
+		Param( "substate show", 0 )
+	--]
+	End()
+
+	Action( "remove npc" )
+	--[
+		Param( "index", 2413109 )
+		Param( "type", "clear" )
+	--]
+	End()
+
+	Action( "direct play" )	
+	--[
+		Param( "type", "cinematic" )
+		Param( "id", 1077 )
+		Param( "sync", "true" )
+		Param( "skip", "true" )
+	--]
+	End()
+
+	Action( "add npc" )
+	--[
+		Param( "index", 2413109 )
+		Param( "loc x", 65.91 )
+		Param( "loc y", 149.94 )
+		Param( "loc z", 316.89 )
+		Param( "dir x", 0.98 )
+		Param( "dir z", -0.19 )
+		Param( "char condition", "click disable" )
+		Param( "no spawn wait", "true" )
+	--]
+	End()
+
+	Action( "send ts event" )
+	--[
+		Param( "trigger type", "quest" )
+		Param( "event id", 23360 )
+	--]
+	End()
+
+	Action( "wait" )
+	--[
+		Condition( "recv ts event" )
+		--[
+			Param( "trigger type", "quest" )
+			Param( "event id", 23370 )
+			Param( "sync", "true" )
+		--]
+		End()
+	--]
+	End()
+
+	Action( "add mobgroup" )
+	--[
+		Param( "group", 14 )
+		Param( "respawn", "false" )
+		Param( "no spawn wait", "true" )
+	--]
+	End()
+
+	Action( "send ts event" )
+	--[
+		Param( "trigger type", "quest" )
+		Param( "event id", 23380 )
+	--]
+	End()
+
+	Action( "add npc" )
+	--[
+		Param( "index", 1483501 )
+		Param( "loc x", 165.32 )
+		Param( "loc y", 150.38 )
+		Param( "loc z", 303.92 )
+		Param( "dir x", 0.57 )
+		Param( "dir z", -0.82 )
+		Param( "play script", 1483501 )
+		Param( "play scene", 1 )
+		Param( "no spawn wait", "true" )
+	--]
+	End()
+
+	Action( "direction indicate" )
+	--[
+		Param( "apply", "true" )
+		Param( "indicate type", "point" )
+		Param( "auto hide", "false" )
+		Param( "loc x", 246.51 )
+		Param( "loc z", 229.32 )
+	--]
+	End()
+
+	Action( "progress message" ) 
+	--[
+		Param( "progress type", "tmq stage" )
+		Param( "message type", "start" )
+		Param( "message value", 3 )
+	--]
+	End()
+
+	Action( "information" ) 
+	--[
+		Param( "info type", "stage" )
+	--]
+	End()
+
+	Action( "play jingle" )
+	--[
+		Param( "name", "BGM\\JINGLE_STAGE_START.ogg" )
+	--]
+	End()
+
+	Action("wait")
+	--[
+		Condition( "area enter" )
+		--[   
+			Param( "origin x", 246.51 )
+			Param( "origin z", 229.32 )
+			Param( "radius", 15 )
+			Param( "tmq fail", "false" )
+			Param( "all member", "false" )
+		--]
+	   	End()
+	--]
+	End()
+
+	Action( "direction indicate" )
+	--[
+		Param( "apply", "false" )
+		Param( "indicate type", "point" )
+	--]
+	End()
+
+	Action( "direct play" )	
+	--[
+		Param( "type", "cinematic" )
+		Param( "id", 1078 )
+		Param( "sync", "true" )
+		Param( "skip", "true" )
+	--]
+	End()
+	
+	Action( "wait" )
+	--[
+		Condition( "recv sps event" )
+		--[
+			Param( "target index", 1483501 )
+			Param( "event id", 23460 )
+		--]
+		End()
+	--]
+	End()
+
+	Action( "remove npc" )
+	--[
+		Param( "index", 1483501 )
+		Param( "type", "clear" )
+	--]
+	End()
+
+	Action( "direct play" )	
+	--[
+		Param( "type", "cinematic" )
+		Param( "id", 1079 )
+		Param( "sync", "true" )
+		Param( "skip", "true" )
+	--]
+	End()
+
+	Action( "send ts event" )
+	--[
+		Param( "trigger type", "quest" )
+		Param( "event id", 23470 )
+	--]
+	End()
+
+	Action( "wait" )
+	--[
+		Condition( "recv ts event" )
+		--[
+			Param( "trigger type", "quest" )
+			Param( "event id", 23490 )
+			Param( "sync", "false" )
+		--]
+		End()
+	--]
+	End()
+
+	Action( "change stage" )
+	--[
+		Param( "stage", 4)
+	--]
+	End()
+--]
+End()
+
+--------------------------------------------------------------------
+
+GameStage(4)
+--[
+	Action( "register condition" )
+	--[
+		Condition( "all player faint" )
+		--[   
+			Param( "tmq fail", "true" )
+		--]
+		End()
+	--]
+	End()
+
+	Action( "add npc" )
+	--[
+		Param( "index", 7511101 )
+		Param( "loc x", 241.25 )
+		Param( "loc y", 148.30 )
+		Param( "loc z", -33.22 )
+		Param( "dir x", 0.41 )
+		Param( "dir z", 0.91 )
+		Param( "play script", 7511101 )
+		Param( "play scene", 20 )
+		Param( "char condition", "click disable" )
+		Param( "no spawn wait", "true" )
+	--]
+	End()
+
+	Action( "send ts event" )
+	--[
+		Param( "trigger type", "quest" )
+		Param( "event id", 23500 )
+	--]
+	End()
+
+	Action( "direction indicate" )
+	--[
+		Param( "apply", "true" )
+		Param( "indicate type", "point" )
+		Param( "auto hide", "false" )
+		Param( "loc x", 246.27 )
+		Param( "loc z", -17.23 )
+	--]
+	End()
+
+	Action("wait")
+	--[
+		Condition( "area enter" )
+		--[   
+			Param( "origin x", 246.27 )
+			Param( "origin z", -17.23 )
+			Param( "radius", 10 )
+			Param( "tmq fail", "false" )
+			Param( "all member", "false" )
+		--]
+	   	End()
+	--]
+	End()
+
+	Action( "direction indicate" )
+	--[
+		Param( "apply", "false" )
+		Param( "indicate type", "point" )
+	--]
+	End()
+
+	Action( "direct play" )	
+	--[
+		Param( "type", "cinematic" )
+		Param( "id", 1088 )
+		Param( "sync", "true" )
+		Param( "skip", "true" )
+	--]
+	End()
+
+	Action( "send ts event" )
+	--[
+		Param( "trigger type", "quest" )
+		Param( "event id", 23510 )
+	--]
+	End()
+
+	Action( "wait" )
+	--[
+		Condition( "recv ts event" )
+		--[
+			Param( "trigger type", "quest" )
+			Param( "event id", 23520 )
+			Param( "sync", "true" )
+		--]
+		End()
+	--]
+	End()
+
+	Action( "wait" )
+	--[
+		Condition( "check time" )
+		--[
+			Param( "time", 2 )
+		--]
+		End()
+	--]
+	End()
+
+	Action( "send tqs event" )
+	--[
+		Param( "target type", "npc" )
+		Param( "target index", 7511101 )
+		Param( "event id", 23520 )
+	--]
+	End()
+
+	Action( "add mobgroup" )
+	--[
+		Param( "group", 13 )
+		Param( "respawn", "false" )
+		Param( "no spawn wait", "true" )
+	--]
+	End()
+
+	Action( "direction indicate" )
+	--[
+		Param( "apply", "true" )
+		Param( "indicate type", "point" )
+		Param( "auto hide", "false" )
+		Param( "loc x", -20.19 )
+		Param( "loc z", 28.95 )
+	--]
+	End()
+
+	Action("wait")
+	--[
+		Condition( "area enter" )
+		--[   
+			Param( "origin x", -20.19 )
+			Param( "origin z", 28.95 )
+			Param( "radius", 15 )
+			Param( "tmq fail", "false" )
+			Param( "all member", "false" )
+		--]
+	   	End()
+	--]
+	End()
+
+	Action( "direction indicate" )
+	--[
+		Param( "apply", "false" )
+		Param( "indicate type", "point" )
+	--]
+	End()
+
+	Action( "direct play" )	
+	--[
+		Param( "type", "cinematic" )
+		Param( "id", 1080 )
+		Param( "sync", "true" )
+		Param( "skip", "true" )
+	--]
+	End()
+
+	Action( "progress message" ) 
+	--[
+		Param( "progress type", "tmq stage" )
+		Param( "message type", "start" )
+		Param( "message value", 4 )
+	--]
+	End()
+
+	Action( "information" ) 
+	--[
+		Param( "info type", "stage" )
+	--]
+	End()
+
+	Action( "play jingle" ) 
+	--[
+		Param( "name", "BGM\\JINGLE_STAGE_START.ogg")
+	--]
+	End()
+
+	Action( "send ts event" )
+	--[
+		Param( "trigger type", "quest" )
+		Param( "event id", 23530 )
+	--]
+	End()
+
+	Action( "wait" )
+	--[
+		Condition( "recv ts event" )
+		--[
+			Param( "trigger type", "quest" )
+			Param( "event id", 23550 )
+			Param( "sync", "false" )
+		--]
+		End()
+	--]
+	End()
+
+	Action( "change stage" )
+	--[
+		Param( "stage", 255)
+	--]
+	End()		
+--]
+End()
+
+----------------------------------------------------------------------
+
+GameEnd()
+--[
+	Action( "play bgm" ) 
+	--[
+		Param( "play", "true")
+		Param( "name", "BGM\\BGM_TMQ_common.ogg")
+		Param( "loop", "true")
+	--]
+	End()
+
+	Action( "play bgm" )
+	--[
+		Param( "play", "true")
+		Param( "name", "BGM\\JINGLE_STAGE_RESULT.ogg")
+		Param( "loop", "true")
+	--]
+	End()
+
+--	Action( "remove mobgroup" )
+--	--[
+--		Param( "group", 13 )
+--		Param( "type", "clear" )
+--	--]
+--	End()
+
+--	Action( "remove mobgroup" )
+--	--[
+--		Param( "group", 14 )
+--		Param( "type", "clear" )
+--	--]
+--	End()
+
+	Action( "send ts event" )
+	--[
+		Param( "trigger type", "quest" )
+		Param( "event id", 23560 )
+	--]
+	End()
+
+	Action( "direction indicate" )
+	--[
+		Param( "apply", "true" )
+		Param( "indicate type", "point" )
+		Param( "auto hide", "false" )
+		Param( "loc x", -105.76 )
+		Param( "loc z", 63.18 )
+	--]
+	End()
+
+	Action( "change object state" )
+	--[
+		Param( "index", 4 )
+		Param( "state", 0 )
+		Param( "substate show", 1 )
+	--]
+	End()
+	
+	Action( "wait" )
+	--[
+		Condition( "check time" )
+		--[
+			Param( "time", 5 )
+		--]
+		End()
+	--]
+	End()
+
+	Action( "change object state" )
+	--[
+		Param( "index", 4 )
+		Param( "state", 1 )
+		Param( "substate show", 1 )
+	--]
+	End()
+
+	Action( "wait" )
+	--[
+		Condition( "check time" )
+		--[
+			Param( "time", 2 )
+		--]
+		End()
+	--]
+	End()
+
+	Action( "add npc" )
+	--[
+		Param( "index", 7511101	)
+		Param( "loc x", -106.34 )
+		Param( "loc y", 140.91 )
+		Param( "loc z", 65.79 )
+		Param( "dir x", 0.44 )
+		Param( "dir z", -0.90 )
+		Param( "no spawn wait", "true" )
+	--]
+	End()
+
+	Action( "add npc" )
+	--[
+		Param( "index", 2413109 )
+		Param( "loc x", -108.17 )
+		Param( "loc y", 141.00 )
+		Param( "loc z", 64.17 )
+		Param( "dir x", 0.45 )
+		Param( "dir z", -0.89 )
+		Param( "char condition", "click disable" )
+		Param( "no spawn wait", "true" )
+	--]
+	End()
+
+	Action("wait") 
+	--[
+		Condition( "area enter" )
+		--[   
+			Param( "origin x", -105.76 )
+			Param( "origin z", 63.18 )
+			Param( "radius", 5 )
+			Param( "tmq fail", "false" )
+			Param( "all member", "false" )
+		--]
+	  	End()
+    	--]
+	End()
+
+	Action( "send ts event" )
+	--[
+		Param( "trigger type", "quest" )
+		Param( "event id", 23570 )
+	--]
+	End()
+
+	Action( "direction indicate" )
+	--[
+		Param( "apply", "false" )
+		Param( "indicate type", "point" )
+	--]
+	End()
+
+	Action("wait")
+	--[
+		Condition( "recv ts event" )
+		--[
+			Param( "trigger type", "quest" );
+			Param( "event id", 23590 )
+			Param( "sync", "true" )
+			Param( "time", 60 )
+		--]
+		End()
+	--]
+	End()
+
+	Action("wait")
+	--[
+		Condition( "check time" )
+		--[
+			Param( "time", 2 )
+		--]
+		End()
+	--]
+	End()
+
+	Action( "reward" )
+	--[
+		Param( "trigger type", "quest" )
+		Param( "event id", 23600 )
+		Param( "time", 60 )
+	--]
+	End()
+
+	Action( "send ts event" )
+	--[
+		Param( "trigger type", "quest" )
+		Param( "event id", 23580 )
+	--]
+	End()
+
+	Action("wait")
+	--[
+		Condition( "recv ts event" )
+		--[
+			Param( "trigger type", "quest" );
+			Param( "event id", 23610 )
+			Param( "sync", "true" )
+			Param( "time", 30 )
+		--]
+		End()
+	--]
+	End()
+
+	Action( "play bgm" )
+	--[
+		Param( "play", "false" )
+	--]
+	End()
+
+	Action( "remove npc" )
+	--[
+		Param( "index", 7511101 )
+		Param( "type", "clear" )
+	--]
+	End()
+
+	Action( "remove npc" )
+	--[
+		Param( "index", 2413109 )
+		Param( "type", "clear" )
+	--]
+	End()
+
+	Action( "change object state" )
+	--[
+		Param( "index", 4 )
+		Param( "state", 3 )
+		Param( "substate show", 0 )
+	--]
+	End()
+
+	Action( "direct play" )
+	--[
+		Param( "type", "cinematic" )
+		Param( "id", 1081 )
+		Param( "time", 90 )
+		Param( "ending", "true" )
+	--]  
+	End()
+--]
+End()

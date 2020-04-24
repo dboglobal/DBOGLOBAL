@@ -1,0 +1,84 @@
+
+GameStage(0)
+--[
+        Action( "add npc" )
+        --[
+                Param( "index", 3813104 )
+                Param( "loc x", 210.674 )
+                Param( "loc y", 3.716 )
+                Param( "loc z", 1102.884 )
+                Param( "dir x", -0.828 )
+                Param( "dir z", -0.561 )
+                Param( "play script", 3813104 )
+                Param( "play scene", 1 )
+                Param( "no spawn wait", "true" )
+        --]
+        End()
+        
+        Action( "add mob" )
+        --[
+                Param( "index", 4613101 )
+                Param( "group", 2458 )
+                Param( "loc x", 211.841 )
+                Param( "loc y", 3.434 )
+                Param( "loc z", 1100.567 )
+                Param( "dir x", -0.641 )
+                Param( "dir z", -0.767 )
+                Param( "play script", 4613101 )
+                Param( "play scene", 3 )
+                Param( "no spawn wait", "true" )
+        --]
+        End()
+
+        Action( "add mob" )
+        --[
+                Param( "index", 4613101 )
+                Param( "group", 2458 )
+                Param( "loc x", 208.064 )
+                Param( "loc y", 3.928 )
+                Param( "loc z", 1104.010 )
+                Param( "dir x", -0.994 )
+                Param( "dir z", 0.109 )
+                Param( "play script", 4613101 )
+                Param( "play scene", 4 )
+                Param( "no spawn wait", "true" )
+        --]
+        End()
+ 
+        Action( "wait" )
+        --[
+                Condition( "recv event from sps" )
+                --[
+                        Param( "object type", "npc" )
+                        Param( "object index", 3813104 )
+                        Param( "event id", 558 )
+                --]
+                End()
+        --]
+        End()
+        
+        Action( "send event to ts" )
+        --[
+                Param( "trigger type", "quest" )
+                Param( "apply type", "register all" )
+                Param( "event id", 559 )
+        --]
+        End()
+
+	Action( "wait" )
+	--[
+		Condition( "check time" )
+		--[
+			Param( "time", 2 )
+		--]
+		End()
+	--]
+	End()
+--]
+End()
+
+GameFailed()
+--[
+
+--]
+End()

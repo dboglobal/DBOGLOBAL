@@ -1,0 +1,404 @@
+-- BID2 - CELL X
+GameStage(0)
+--[
+
+	-- spawn mob group
+	Action( "add mobgroup" )
+	--[
+		Param( "group", 85002 )
+		Param( "no spawn wait", "true" )
+	--]
+	End()
+	
+	-- spawn mob group
+	Action( "add mobgroup" )
+	--[
+		Param( "group", 85003 )
+		Param( "no spawn wait", "true" )
+	--]
+	End()
+	
+	-- spawn mob group
+	Action( "add mobgroup" )
+	--[
+		Param( "group", 85004 )
+		Param( "no spawn wait", "true" )
+	--]
+	End()
+	
+	-- spawn mob group
+	Action( "add mobgroup" )
+	--[
+		Param( "group", 85005 )
+		Param( "no spawn wait", "true" )
+	--]
+	End()
+	
+	-- spawn mob group
+	Action( "add mobgroup" )
+	--[
+		Param( "group", 85006 )
+		Param( "no spawn wait", "true" )
+	--]
+	End()
+	
+	-- spawn mob group
+	Action( "add mobgroup" )
+	--[
+		Param( "group", 85009 )
+		Param( "no spawn wait", "true" )
+	--]
+	End()
+	
+	-- check if all mobs defeated
+	Action( "wait" )
+	--[
+		Condition( "check mobgroup" )
+		--[
+			Param( "group", 85002 )
+			Param( "count", 0 )
+		--]
+		End()
+		
+		Condition( "check mobgroup" )
+		--[
+			Param( "group", 85003 )
+			Param( "count", 0 )
+		--]
+		End()
+		
+		Condition( "check mobgroup" )
+		--[
+			Param( "group", 85004 )
+			Param( "count", 0 )
+		--]
+		End()
+		
+		Condition( "check mobgroup" )
+		--[
+			Param( "group", 85005 )
+			Param( "count", 0 )
+		--]
+		End()
+		
+		Condition( "check mobgroup" )
+		--[
+			Param( "group", 85006 )
+			Param( "count", 0 )
+		--]
+		End()
+		
+		Condition( "check mobgroup" )
+		--[
+			Param( "group", 85009 )
+			Param( "count", 0 )
+		--]
+		End()
+
+	--]
+	End()
+	
+
+	-- open the gate
+	Action( "change object state" )
+	--[
+		Param( "index", 2 )
+		Param( "state", 1 )
+	--]
+	End()
+	
+	-- spawn "bodyguards"
+	Action( "add mobgroup" )
+	--[
+		Param( "group", 85007 )
+		Param( "no spawn wait", "true" )
+	--]
+	End()
+	Action( "add mobgroup" )
+	--[
+		Param( "group", 85008 )
+		Param( "no spawn wait", "true" )
+	--]
+	End()
+	
+	-- spawn boss group
+	Action( "add mobgroup" )
+	--[
+		Param( "group", 85001 )
+		Param( "no spawn wait", "true" )
+		Param( "nest type", "fix" )
+	--]
+	End()
+	
+	-- check if boss start battle
+	Action( "wait" )
+	--[
+		Condition( "check battle" )
+		--[
+			Param( "type", "mob" )
+			Param( "group", 85001 )
+			Param( "is battle", "true" )
+		--]
+		End()
+	--]
+	End()
+	
+	-- remove "budyguards"
+	Action("remove mobgroup")
+	--[
+		Param( "group", 85007 )
+		Param( "type", "clear" )
+	--]
+	End()
+	Action("remove mobgroup")
+	--[
+		Param( "group", 85008 )
+		Param( "type", "clear" )
+	--]
+	End()
+	
+	
+	Action( "function" )
+	--[
+
+		Condition( "child" )
+		--[
+			-- Check if boss is 97% LP
+			Action( "wait" )
+			--[
+				Condition( "check lp" )
+				--[
+					Param( "type", "mob" )
+					Param( "group", 85001 )
+					Param( "lp", 97 )
+				--]
+				End()
+			--]
+			End()
+			
+			-- Add mob center
+			Action( "add mobgroup" )
+			--[
+				Param( "group", 85013 )
+				Param( "no spawn wait", "true" )
+			--]
+			End()
+			
+			-- wait 9 seconds
+			Action("wait")
+			--[
+				Condition("check time")
+				--[
+					Param("time", 9 )
+				--]
+				End()
+			--]
+			End()
+			
+			Action("remove mobgroup")
+			--[
+				Param( "group", 85013 )
+				Param( "type", "clear" )
+			--]
+			End()
+			
+			Action( "add mobgroup" )
+			--[
+				Param( "group", 85010 )
+				Param( "no spawn wait", "true" )
+			--]
+			End()
+		--]
+		End()
+		
+		Condition( "child" )
+		--[
+			-- Check if boss is 80% LP
+			Action( "wait" )
+			--[
+				Condition( "check lp" )
+				--[
+					Param( "type", "mob" )
+					Param( "group", 85001 )
+					Param( "lp", 80 )
+				--]
+				End()
+			--]
+			End()
+			
+			-- Add mob left & right
+			Action( "add mobgroup" )
+			--[
+				Param( "group", 85014 )
+				Param( "no spawn wait", "true" )
+			--]
+			End()
+			
+			-- wait 9 seconds
+			Action("wait")
+			--[
+				Condition("check time")
+				--[
+					Param("time", 9 )
+				--]
+				End()
+			--]
+			End()
+			
+			Action("remove mobgroup")
+			--[
+				Param( "group", 85014 )
+				Param( "type", "clear" )
+			--]
+			End()
+			
+			Action( "add mobgroup" )
+			--[
+				Param( "group", 85011 )
+				Param( "no spawn wait", "true" )
+			--]
+			End()
+			Action( "add mobgroup" )
+			--[
+				Param( "group", 85015 )
+				Param( "no spawn wait", "true" )
+			--]
+			End()
+		--]
+		End()
+		
+		Condition( "child" )
+		--[
+			-- Check if boss is 50% LP
+			Action( "wait" )
+			--[
+				Condition( "check lp" )
+				--[
+					Param( "type", "mob" )
+					Param( "group", 85001 )
+					Param( "lp", 50 )
+				--]
+				End()
+			--]
+			End()
+			
+			-- Add mob group behind left (THEY RESPAWN)
+			Action( "add mobgroup" )
+			--[
+				Param( "group", 85016 )
+				Param( "no spawn wait", "true" )
+				Param( "respawn", "true" )
+			--]
+			End()
+			
+			-- Add mob group behind right (THEY RESPAWN)
+			Action( "add mobgroup" )
+			--[
+				Param( "group", 85017 )
+				Param( "no spawn wait", "true" )
+				Param( "respawn", "true" )
+			--]
+			End()
+			
+		--]
+		End()
+		
+		Condition( "child" )
+		--[
+			-- Check if boss is 30% LP
+			Action( "wait" )
+			--[
+				Condition( "check lp" )
+				--[
+					Param( "type", "mob" )
+					Param( "group", 85001 )
+					Param( "lp", 30 )
+				--]
+				End()
+			--]
+			End()
+			
+			-- Add mob left & right
+			Action( "add mobgroup" )
+			--[
+				Param( "group", 85014 )
+				Param( "no spawn wait", "true" )
+			--]
+			End()
+			
+			-- wait 9 seconds
+			Action("wait")
+			--[
+				Condition("check time")
+				--[
+					Param("time", 9 )
+				--]
+				End()
+			--]
+			End()
+			
+			Action("remove mobgroup")
+			--[
+				Param( "group", 85014 )
+				Param( "type", "clear" )
+			--]
+			End()
+			
+			Action( "add mobgroup" )
+			--[
+				Param( "group", 85011 )
+				Param( "no spawn wait", "true" )
+			--]
+			End()
+			Action( "add mobgroup" )
+			--[
+				Param( "group", 85015 )
+				Param( "no spawn wait", "true" )
+			--]
+			End()
+		--]
+		End()
+		
+		
+		-- check if boss is dead. If true, then the function end and script continues
+		Action("wait")
+		--[
+			Condition("check mobgroup")
+			--[
+				Param("group", 85001 )
+				Param("count", 0 )
+			--]
+			End()
+		--]
+		End()	
+	--]
+	End()
+	
+	--- Finish. Remove all spawned groups and show the portal to get out
+	
+	Action("remove mobgroup")
+	--[
+		Param( "group", 85016 )
+		Param( "type", "clear" )
+	--]
+	End()
+	
+	Action("remove mobgroup")
+	--[
+		Param( "group", 85017 )
+		Param( "type", "clear" )
+	--]
+	End()
+	
+	-- show the portal to get out
+	Action( "change object state" )
+	--[
+		Param( "index", 3 )
+		Param( "state", 1 )
+		Param( "substate show", 1 )
+	--]
+	End()
+	
+		
+--]
+End()

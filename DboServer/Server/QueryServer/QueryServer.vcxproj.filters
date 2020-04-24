@@ -1,0 +1,167 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="Servermanager.cpp">
+      <Filter>ServerManager</Filter>
+    </ClCompile>
+    <ClCompile Include="QueryServer.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <Filter>stdafx</Filter>
+    </ClCompile>
+    <ClCompile Include="MasterServerSession.cpp">
+      <Filter>Session\MasterServer</Filter>
+    </ClCompile>
+    <ClCompile Include="CharServerSession.cpp">
+      <Filter>Session\CharServer</Filter>
+    </ClCompile>
+    <ClCompile Include="ChatServerSession.cpp">
+      <Filter>Session\ChatServer</Filter>
+    </ClCompile>
+    <ClCompile Include="GameServerSession.cpp">
+      <Filter>Session\GameServer</Filter>
+    </ClCompile>
+    <ClCompile Include="ItemManager.cpp">
+      <Filter>Item Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="CashshopManager.cpp">
+      <Filter>CashShop Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="GamePacket.cpp">
+      <Filter>Session\GameServer</Filter>
+    </ClCompile>
+    <ClCompile Include="ChatPacket.cpp">
+      <Filter>Session\ChatServer</Filter>
+    </ClCompile>
+    <ClCompile Include="CharPacket.cpp">
+      <Filter>Session\CharServer</Filter>
+    </ClCompile>
+    <ClCompile Include="CharacterManager.cpp">
+      <Filter>Character Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayerCache.cpp">
+      <Filter>Cache</Filter>
+    </ClCompile>
+    <ClCompile Include="AuctionHouse.cpp">
+      <Filter>AuctionHouse</Filter>
+    </ClCompile>
+    <ClCompile Include="Guild.cpp">
+      <Filter>Guild&amp;Dojo</Filter>
+    </ClCompile>
+    <ClCompile Include="Dojo.cpp">
+      <Filter>Guild&amp;Dojo</Filter>
+    </ClCompile>
+    <ClCompile Include="DynamicFieldSystem.cpp">
+      <Filter>DynamicFieldSystem%28Underworld Invasion%29</Filter>
+    </ClCompile>
+    <ClCompile Include="DatabaseTaskRun.cpp">
+      <Filter>Database</Filter>
+    </ClCompile>
+    <ClCompile Include="BudokaiManager.cpp">
+      <Filter>Budokai</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Servermanager.h">
+      <Filter>ServerManager</Filter>
+    </ClInclude>
+    <ClInclude Include="SessionFactory.h">
+      <Filter>Session</Filter>
+    </ClInclude>
+    <ClInclude Include="QueryServer.h" />
+    <ClInclude Include="stdafx.h">
+      <Filter>stdafx</Filter>
+    </ClInclude>
+    <ClInclude Include="MasterServerSession.h">
+      <Filter>Session\MasterServer</Filter>
+    </ClInclude>
+    <ClInclude Include="CharServerSession.h">
+      <Filter>Session\CharServer</Filter>
+    </ClInclude>
+    <ClInclude Include="ChatServerSession.h">
+      <Filter>Session\ChatServer</Filter>
+    </ClInclude>
+    <ClInclude Include="GameServerSession.h">
+      <Filter>Session\GameServer</Filter>
+    </ClInclude>
+    <ClInclude Include="ItemManager.h">
+      <Filter>Item Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="CashshopManager.h">
+      <Filter>CashShop Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="CharacterManager.h">
+      <Filter>Character Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayerCache.h">
+      <Filter>Cache</Filter>
+    </ClInclude>
+    <ClInclude Include="AuctionHouse.h">
+      <Filter>AuctionHouse</Filter>
+    </ClInclude>
+    <ClInclude Include="Guild.h">
+      <Filter>Guild&amp;Dojo</Filter>
+    </ClInclude>
+    <ClInclude Include="Dojo.h">
+      <Filter>Guild&amp;Dojo</Filter>
+    </ClInclude>
+    <ClInclude Include="DynamicFieldSystem.h">
+      <Filter>DynamicFieldSystem%28Underworld Invasion%29</Filter>
+    </ClInclude>
+    <ClInclude Include="DatabaseTaskRun.h">
+      <Filter>Database</Filter>
+    </ClInclude>
+    <ClInclude Include="BudokaiManager.h">
+      <Filter>Budokai</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Session">
+      <UniqueIdentifier>{618e4ba5-ea31-4241-95e9-8cd63c26fb6c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="stdafx">
+      <UniqueIdentifier>{021d8240-6d15-4101-a9b3-027ca566ca6d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Session\MasterServer">
+      <UniqueIdentifier>{47999fe5-cb06-4081-990e-43ed0a57cce4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Session\CharServer">
+      <UniqueIdentifier>{181bb326-5aa8-4599-a241-88fbabcd6929}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Session\ChatServer">
+      <UniqueIdentifier>{a0d67b10-afbc-4e28-ba22-3141e69bc859}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Session\GameServer">
+      <UniqueIdentifier>{a18bf110-4246-4781-8be3-8358abcfbd2b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ServerManager">
+      <UniqueIdentifier>{f8d1b159-d189-4c74-b0e5-6fd1d0ba735c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Item Manager">
+      <UniqueIdentifier>{02466689-90db-4fc3-a52f-2f758366f1dd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CashShop Manager">
+      <UniqueIdentifier>{ad4f4954-c6f9-4a31-8b0c-461e87c7f142}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Character Manager">
+      <UniqueIdentifier>{597167ce-f01e-4a46-a45c-9a4851623379}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Cache">
+      <UniqueIdentifier>{d6e2d17b-aeed-4722-a701-ac3ea00e4236}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AuctionHouse">
+      <UniqueIdentifier>{3919f47c-6774-4d6c-8999-c79fe93915f4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Guild&amp;Dojo">
+      <UniqueIdentifier>{6a1a2dbb-1a4b-4ddc-a3cc-d503395657a0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DynamicFieldSystem%28Underworld Invasion%29">
+      <UniqueIdentifier>{76e1e51f-cfae-400c-900c-7097a204623d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Database">
+      <UniqueIdentifier>{f2bd635b-9f7a-4343-95a7-c3c42ec1cc08}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Budokai">
+      <UniqueIdentifier>{5f40e12b-8208-4e38-956a-39c08f4d3be5}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

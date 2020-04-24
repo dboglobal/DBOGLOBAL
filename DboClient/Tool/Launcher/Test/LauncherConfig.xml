@@ -1,0 +1,8 @@
+﻿<Config>
+	<LauncherName CaptionName="Ntl_Korea_Dev" />
+	<PatchServer ServerName="10.0.0.32" FilePath="Download/Ntl_Korea_Dev" />
+	<HtmlInfo FullPathFileName="10.0.0.32/Download/Ntl_Korea_Dev/Web/main.htm" />
+</Config>
+
+
+

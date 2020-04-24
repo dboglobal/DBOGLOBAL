@@ -1,0 +1,1333 @@
+-- UD6
+-- Normal Mob Stage
+-- 키리 정제소
+-- 
+
+GameStage(0)
+--[
+	-- 십자 날개 안쪽의 door들을 모두 내리고 안보이게 만듬
+	Action("change object state")
+	--[
+		Param("index", 76)
+		Param("state", 1)
+		Param("substate show", 0)
+	--]
+	End()
+	
+	Action("change object state")
+	--[
+		Param("index", 77)
+		Param("state", 1)
+		Param("substate show", 0)
+	--]
+	End()
+	
+	Action("change object state")
+	--[
+		Param("index", 78)
+		Param("state", 1)
+		Param("substate show", 0)
+	--]
+	End()
+	
+	Action("change object state")
+	--[
+		Param("index", 79)
+		Param("state", 1)
+		Param("substate show", 0)
+	--]
+	End()
+	
+	--퀘스트 NPC [발간] 스폰
+	Action("add npc")
+	--[
+		Param("index", 4651109)
+		Param("loc x", -684.83)
+		Param("loc y", 124.00)
+		Param("loc z", 874.84)
+		Param("dir x", 0.07)
+		Param("dir z", -1.00)
+		Param("play script", 4651109)
+		Param("play scene", 1)
+		Param("no spawn wait", "true")
+	--]
+	End()
+	
+	--퀘스트 NPC [정제소 관리하사] 스폰
+	Action("add npc")
+	--[
+		Param("index", 1251170)
+		Param("loc x", -540.79)
+		Param("loc y", 97.99)
+		Param("loc z", 901.10)
+		Param("dir x", 0.89)
+		Param("dir z", -0.45)
+		Param("play script", 1251170)
+		Param("play scene", 1)
+		Param("no spawn wait", "true")
+	--]
+	End()
+	
+	--6313 오브젝트 트리거에서 이벤트를 받는다.
+	Action("wait")
+	--[
+		Condition("recv event from ts")
+		--[
+			Param("trigger type", "object")
+			Param("event id", 960)
+		--]
+		End()
+	--]
+	End()
+	
+	--106번 오브젝트 멈춤
+	Action("change object state")
+	--[
+		Param("index", 106)
+		Param("state", 1)
+		Param("substate show", 1)
+	--]
+	End()
+	
+	--105번 오브젝트 멈춤
+	Action("change object state")
+	--[
+		Param("index", 105)
+		Param("state", 1)
+		Param("substate show", 1)
+	--]
+	End()
+	
+	--키리 정제소 가동 중지 메시지
+	Action("system message")
+	--[
+		Param("notify", "notice")
+		Param("text index", 72)
+	--]
+	End()
+	
+	--6313 오브젝트 트리거에서 이벤트를 받는다.
+	Action("wait")
+	--[
+		Condition("recv event from ts")
+		--[
+			Param("trigger type", "object")
+			Param("event id", 961)
+		--]
+		End()
+	--]
+	End()
+	
+	--퀘스트 NPC [발간]에게 이벤트를 쏜다.
+	Action("send event to sps")
+	--[
+		Param("target type", "npc")
+		Param("target index", 4651109)
+		Param("event id", 975)
+	--]
+	End()
+	
+	--6313 퀘스트 트리거에서 이벤트를 받음.
+	Action("wait")
+	--[
+		Condition("recv event from ts")
+		--[
+			Param("trigger type", "quest")
+			Param("event id", 962)
+		--]
+		End()
+	--]
+	End()
+	
+	--35번 오브젝트를 연다.
+	Action("change object state")
+	--[
+		Param("index", 35)
+		Param("state", 1)
+		Param("substate show", 1)
+	--]
+	End()
+	
+	--76번 오브젝트를 연다.
+	Action("change object state")
+	--[
+		Param("index", 76)
+		Param("state", 1)
+		Param("substate show", 1)
+	--]
+	End()
+	
+	--77번 오브젝트를 연다.
+	Action("change object state")
+	--[
+		Param("index", 77)
+		Param("state", 1)
+		Param("substate show", 1)
+	--]
+	End()
+	
+	--36번 오브젝트를 연다.
+	Action("change object state")
+	--[
+		Param("index", 36)
+		Param("state", 1)
+		Param("substate show", 1)
+	--]
+	End()
+	
+	Action("function")
+	--[
+		--다음 Wait 구문이 만족될 때까지 Loop로 반복한다.
+		Condition("child")
+		--[
+			Action("while")
+			--[
+				Action("loop")
+				--[
+					Action("wait")
+					--[
+						--PC 중에 한명이라도 해당 영역에 들어섰을 때,
+						Condition("area enter")
+						--[
+							Param("origin x", -621.67)
+							Param("origin z", 926.54)
+							Param("radius", 40)
+							Param("all member", "false")
+						--]
+						End()
+					--]
+					End()
+					
+					--35번 오브젝트를 닫는다.
+					Action("change object state")
+					--[
+						Param("index", 35)
+						Param("state", 3)
+						Param("substate show", 1)
+					--]
+					End()
+					
+					--36번 오브젝트를 닫는다.
+					Action("change object state")
+					--[
+						Param("index", 36)
+						Param("state", 3)
+						Param("substate show", 1)
+					--]
+					End()
+					
+					--105번 오브젝트를 돌린다.
+					Action("change object state")
+					--[
+						Param("index", 105)
+						Param("state", 3)
+						Param("substate show", 1)
+					--]
+					End()
+					
+					--501번 스폰 그룹 Mob들을 스폰시킨다.
+					Action("add mobgroup")
+					--[
+						Param("group", 501)
+						Param("no spawn wait", "true")
+					--]
+					End()
+					
+					--1차 키리 가스 방출 경고 메시지
+					Action("system message")
+					--[
+						Param("notify", "notice")
+						Param("text index", 83)
+					--]
+					End()
+					
+					Action("wait")
+					--[
+						Condition("check time")
+						--[
+							Param("time", 40)
+						--]
+						End()
+					--]
+					End()
+					
+					--2차 키리 가스 방출 경고 메시지
+					Action("system message")
+					--[
+						Param("notify", "notice")
+						Param("text index", 73)
+					--]
+					End()
+					
+					Action("wait")
+					--[
+						Condition("check time")
+						--[
+							Param("time", 10)
+						--]
+						End()
+					--]
+					End()
+					
+					--3차 키리 가스 방출 경고 메시지
+					Action("system message")
+					--[
+						Param("notify", "notice")
+						Param("text index", 74)
+					--]
+					End()
+					
+					Action("wait")
+					--[
+						Condition("check time")
+						--[
+							Param("time", 5)
+						--]
+						End()
+					--]
+					End()
+					
+					--4차 키리 가스 방출 경고 메시지
+					Action("system message")
+					--[
+						Param("notify", "notice")
+						Param("text index", 75)
+					--]
+					End()
+					
+					Action("wait")
+					--[
+						Condition("check time")
+						--[
+							Param("time", 5)
+						--]
+						End()
+					--]
+					End()
+					
+					--키리 가스 방출 메시지
+					Action("system message")
+					--[
+						Param("notify", "notice")
+						Param("text index", 76)
+					--]
+					End()
+					
+					--[키리 정제소] Mob을 스폰
+					Action("add mob")
+					--[
+						Param("index", 29981101)
+						Param("group", 3401201)
+						Param("loc x", -621.51)
+						Param("loc y", 125.21)
+						Param("loc z", 926.71)
+						Param("dir x", 0.00)
+						Param("dir z", 1.00)
+						Param("party id", 3401201)
+						Param("party leader", "false")
+						Param("no spawn wait", "true")
+					--]
+					End()
+					
+					-- 이름없는 키리 정제소의 party mob 스폰
+					Action( "add mob" )
+					--[
+						Param("index", 29981102)
+						Param("group", 3401201)
+						Param("loc x", -566.915)
+						Param("loc y", 97.991)
+						Param("loc z", 925.48)
+						Param("dir x", -0.998)
+						Param("dir z", 0.062)
+						Param("party id", 3401201)
+						Param("party leader", "false")
+						Param("no spawn wait", "true")
+					--]
+					End()
+					
+					-- 이름없는 키리 정제소의 party mob 스폰
+					Action( "add mob" )
+					--[
+						Param("index", 29981102)
+						Param("group", 3401201)
+						Param("loc x", -615.182)
+						Param("loc y", 97.991)
+						Param("loc z", 984.24)
+						Param("dir x", 0.997)
+						Param("dir z", 0.081)
+						Param("party id", 3401201)
+						Param("party leader", "false")
+						Param("no spawn wait", "true")
+					--]
+					End()
+					
+					-- 이름없는 키리 정제소의 party mob 스폰
+					Action( "add mob" )
+					--[
+						Param("index", 29981102)
+						Param("group", 3401201)
+						Param("loc x", -676.411)
+						Param("loc y", 97.991)
+						Param("loc z", 924.615)
+						Param("dir x", 0.983)
+						Param("dir z", -0.183)
+						Param("party id", 3401201)
+						Param("party leader", "false")
+						Param("no spawn wait", "true")
+					--]
+					End()
+					
+					--가스 오브젝트를 발생시킨다.
+					Action("change object state")
+					--[
+						Param("index", 110)
+						Param("state", 1)
+						Param("substate show", 1)
+					--]
+					End()
+					
+					--501번 스폰 그룹 Mob들을 제거한다.
+					Action("remove mobgroup")
+					--[
+						Param("group", 501)
+						Param("type", "despawn")
+					--]
+					End()
+					
+					--가스 오브젝트가 퍼지는 모습을 보여주도록 12초를 대기한다.
+					Action("wait")
+					--[
+						Condition("check time")
+						--[
+							Param("time", 12)
+						--]
+						End()
+					--]
+					End()
+					
+					-- 키리 정제소 party를 제거해 준다.
+					Action("remove mobgroup")
+					--[
+						Param("group", 3401201)
+						Param("type", "clear")
+					--]
+					End()
+					
+					--35번 오브젝트를 연다.
+					Action("change object state")
+					--[
+						Param("index", 35)
+						Param("state", 1)
+						Param("substate show", 1)
+					--]
+					End()
+					
+					--36번 오브젝트를 연다.
+					Action("change object state")
+					--[
+						Param("index", 36)
+						Param("state", 1)
+						Param("substate show", 1)
+					--]
+					End()
+					
+					--105번 오브젝트를 멈춘다.
+					Action("change object state")
+					--[
+						Param("index", 105)
+						Param("state", 1)
+						Param("substate show", 1)
+					--]
+					End()
+					
+					--가스 오브젝트를 지운다.
+					Action("change object state")
+					--[
+						Param("index", 110)
+						Param("state", 0)
+						Param("substate show", 1)
+					--]
+					End()
+				--]
+				End()
+			--]
+			End()
+		--]
+		End()
+		
+		--501번 스폰 그룹 Mob이 6마리 죽을 때까지 대기
+		Action("wait")
+		--[
+			Condition("check mobgroup")
+			--[
+				Param("group", 501)
+				Param("count", 6)
+			--]
+			End()
+		--]
+		End()
+	--]
+	End()
+	
+	--키리 가스 방출장치 해제 메시지
+	Action("system message")
+	--[
+		Param("notify", "notice")
+		Param("text index", 77)
+	--]
+	End()
+	
+	--35번 오브젝트를 연다.
+	Action("change object state")
+	--[
+		Param("index", 35)
+		Param("state", 1)
+		Param("substate show", 1)
+	--]
+	End()
+		
+	--36번 오브젝트를 연다.
+	Action("change object state")
+	--[
+		Param("index", 36)
+		Param("state", 1)
+		Param("substate show", 1)
+	--]
+	End()
+	
+	--104번 오브젝트를 연다.
+	Action("change object state")
+	--[
+		Param("index", 104)
+		Param("state", 1)
+		Param("substate show", 1)
+	--]
+	End()
+	
+	--가스 오브젝트가 남아있다면 제거해 준다.
+	Action("change object state")
+	--[
+		Param("index", 110)
+		Param("state", 0)
+		Param("substate show", 1)
+	--]
+	End()
+	
+	--NPC [정제소 관리하사]에게 이벤트를 쏜다.
+	Action("send event to sps")
+	--[
+		Param("target type", "npc")
+		Param("target index", 1251170)
+		Param("event id", 963)
+	--]
+	End()
+	
+	--6313번 퀘스트가 완료되어 이벤트를 받을 때까지 대기.
+	Action("wait")
+	--[
+		Condition("recv event from ts")
+		--[
+			Param("trigger type", "quest")
+			Param("event id", 974)
+		--]
+		End()
+	--]
+	End()
+	
+	--NPC [정제소 관리하사]를 제거.
+	Action("remove npc")
+	--[
+		Param("index", 1251170)
+		Param("type", "clear")
+	--]
+	End()
+	
+	--다른 Index의 NPC [정제소 관리하사]를 스폰.
+	Action("add npc")
+	--[
+		Param("index", 1251171)
+		Param("loc x", -540.79)
+		Param("loc y", 97.99)
+		Param("loc z", 901.10)
+		Param("dir x", 0.89)
+		Param("dir z", -0.45)
+		Param("play script", 1251171)
+		Param("play scene", 1)
+		Param("no spawn wait", "true")
+		Param("stand alone", "true")
+	--]
+	End()
+	
+	--기존 NPC [발간]을 제거
+	Action("remove npc")
+	--[
+		Param("index", 4651109)
+		Param("type", "clear")
+	--]
+	End()
+			
+	--다른 Index의 NPC [발간]을 스폰.
+	Action("add npc")
+	--[
+		Param("index", 4651110)
+		Param("loc x", -684.83)
+		Param("loc y", 124.00)
+		Param("loc z", 874.84)
+		Param("dir x", -0.80)
+		Param("dir z", -0.60)
+		Param("no spawn wait", "true")
+		Param("stand alone", "true")
+	--]
+	End()
+	
+	--PC가 6314번 퀘스트를 받을 때까지 대기.
+	Action("wait")
+	--[
+		Condition("recv event from ts")
+		--[
+			Param("trigger type", "quest")
+			Param("event id", 964)
+		--]
+		End()
+	--]
+	End()
+	
+	--38번 오브젝트를 연다.
+	Action("change object state")
+	--[
+		Param("index", 38)
+		Param("state", 1)
+		Param("substate show", 1)
+	--]
+	End()
+	
+	--39번 오브젝트를 연다.
+	Action("change object state")
+	--[
+		Param("index", 39)
+		Param("state", 1)
+		Param("substate show", 1)
+	--]
+	End()
+	
+	--40번 오브젝트를 연다.
+	Action("change object state")
+	--[
+		Param("index", 40)
+		Param("state", 1)
+		Param("substate show", 1)
+	--]
+	End()
+	
+	--105번 오브젝트를 돌린다.
+	Action("change object state")
+	--[
+		Param("index", 105)
+		Param("state", 3)
+		Param("substate show", 1)
+	--]
+	End()
+	
+	--503번 스폰 그룹 Mob을 스폰.
+	Action("add mobgroup")
+	--[
+		Param("group", 503)
+		Param("no spawn wait", "true")
+	--]
+	End()
+	
+	--504번 스폰 그룹 Mob을 스폰.
+	Action("add mobgroup")
+	--[
+		Param("group", 504)
+		Param("no spawn wait", "true")
+	--]
+	End()
+	
+	--505번 스폰 그룹 Mob을 스폰.
+	Action("add mobgroup")
+	--[
+		Param("group", 505)
+		Param("no spawn wait", "true")
+	--]
+	End()
+	
+	Action("function")
+	--[
+		--다음 Wait 구문이 만족될 때까지 작동.
+		Condition("child")
+		--[
+			Action("function")
+			--[
+				Condition("child")
+				--[
+					--8154 오브젝트 트리거에서 이벤트 받을 때까지 대기.
+					Action("wait")
+					--[
+						Condition("recv event from ts")
+						--[
+							Param("trigger type", "object")
+							Param("event id", 965)
+						--]
+						End()
+					--]
+					End()
+					
+					--[키리 찌꺼기]를 제거했다는 메시지.
+					Action("system message")
+					--[
+						Param("notify", "notice")
+						Param("text index", 78)
+					--]
+					End()
+				--]
+				End()
+				
+				Condition("child")
+				--[
+					--8155 오브젝트 트리거에서 이벤트 받을 때까지 대기.
+					Action("wait")
+					--[
+						Condition("recv event from ts")
+						--[
+							Param("trigger type", "object")
+							Param("event id", 966)
+						--]
+						End()
+					--]
+					End()
+					
+					--[키리 찌꺼기]를 제거했다는 메시지.
+					Action("system message")
+					--[
+						Param("notify", "notice")
+						Param("text index", 78)
+					--]
+					End()
+				--]
+				End()
+				
+				Condition("child")
+				--[
+					--8156 오브젝트 트리거에서 이벤트 받을 때까지 대기.
+					Action("wait")
+					--[
+						Condition("recv event from ts")
+						--[
+							Param("trigger type", "object")
+							Param("event id", 967)
+						--]
+						End()
+					--]
+					End()
+					
+					--[키리 찌꺼기]를 제거했다는 메시지.
+					Action("system message")
+					--[
+						Param("notify", "notice")
+						Param("text index", 78)
+					--]
+					End()
+				--]
+				End()
+				
+				Condition("child")
+				--[
+					--8157 오브젝트 트리거에서 이벤트 받을 때까지 대기.
+					Action("wait")
+					--[
+						Condition("recv event from ts")
+						--[
+							Param("trigger type", "object")
+							Param("event id", 968)
+						--]
+						End()
+					--]
+					End()
+					
+					--[키리 찌꺼기]를 제거했다는 메시지.
+					Action("system message")
+					--[
+						Param("notify", "notice")
+						Param("text index", 78)
+					--]
+					End()
+				--]
+				End()
+				
+				Condition("child")
+				--[
+					--8158 오브젝트 트리거에서 이벤트 받을 때까지 대기.
+					Action("wait")
+					--[
+						Condition("recv event from ts")
+						--[
+							Param("trigger type", "object")
+							Param("event id", 969)
+						--]
+						End()
+					--]
+					End()
+					
+					--[키리 찌꺼기]를 제거했다는 메시지.
+					Action("system message")
+					--[
+						Param("notify", "notice")
+						Param("text index", 78)
+					--]
+					End()
+				--]
+				End()
+				
+				Condition("child")
+				--[
+					--8159 오브젝트 트리거에서 이벤트 받을 때까지 대기.
+					Action("wait")
+					--[
+						Condition("recv event from ts")
+						--[
+							Param("trigger type", "object")
+							Param("event id", 970)
+						--]
+						End()
+					--]
+					End()
+					
+					--[키리 찌꺼기]를 제거했다는 메시지.
+					Action("system message")
+					--[
+						Param("notify", "notice")
+						Param("text index", 78)
+					--]
+					End()
+				--]
+				End()
+				
+				--총 6개의 [키리 찌꺼기] 오브젝트를 모두 제거할 때까지 대기.
+				Action("wait")
+				--[
+					Param("operation", "and")
+					
+					Condition("recv event from ts")
+					--[
+						Param("trigger type", "object")
+						Param("event id", 965)
+					--]
+					End()
+					
+					Condition("recv event from ts")
+					--[
+						Param("trigger type", "object")
+						Param("event id", 966)
+					--]
+					End()
+					
+					Condition("recv event from ts")
+					--[
+						Param("trigger type", "object")
+						Param("event id", 967)
+					--]
+					End()
+					
+					Condition("recv event from ts")
+					--[
+						Param("trigger type", "object")
+						Param("event id", 968)
+					--]
+					End()
+					
+					Condition("recv event from ts")
+					--[
+						Param("trigger type", "object")
+						Param("event id", 969)
+					--]
+					End()
+					
+					Condition("recv event from ts")
+					--[
+						Param("trigger type", "object")
+						Param("event id", 970)
+					--]
+					End()
+				--]
+				End()
+			--]
+			End()
+			
+			--6314번 퀘스트 트리거에 이벤트를 쏜다.
+			Action("send event to ts")
+			--[
+				Param("trigger type", "quest")
+				Param("apply type", "register all")
+				Param("event id", 971)
+			--]
+			End()
+			
+			--103번 오브젝트를 연다.
+			Action("change object state")
+			--[
+				Param("index", 103)
+				Param("state", 1)
+				Param("substate show", 1)
+			--]
+			End()
+		--]
+		End()
+		
+		----다음 Wait 구문이 만족될 때까지 Loop로 반복한다.
+		Condition("child")
+		--[
+			Action("while")
+			--[
+				Action("loop")
+				--[
+					--1차 키리 가스 방출 경고 메시지
+					Action("system message")
+					--[
+						Param("notify", "notice")
+						Param("text index", 83)
+					--]
+					End()
+					
+					Action("wait")
+					--[
+						Condition("check time")
+						--[
+							Param("time", 40)
+						--]
+						End()
+					--]
+					End()
+					
+					--2차 키리 가스 방출 경고 메시지
+					Action("system message")
+					--[
+						Param("notify", "notice")
+						Param("text index", 73)
+					--]
+					End()
+					
+					Action("wait")
+					--[
+						Condition("check time")
+						--[
+							Param("time", 10)
+						--]
+						End()
+					--]
+					End()
+					
+					--3차 키리 가스 방출 경고 메시지
+					Action("system message")
+					--[
+						Param("notify", "notice")
+						Param("text index", 74)
+					--]
+					End()
+					
+					Action("wait")
+					--[
+						Condition("check time")
+						--[
+							Param("time", 10)
+						--]
+						End()
+					--]
+					End()
+					
+					--키리 가스 방출 메시지
+					Action("system message")
+					--[
+						Param("notify", "notice")
+						Param("text index", 76)
+					--]
+					End()
+					
+					--38번 오브젝트 닫음.
+					Action("change object state")
+					--[
+						Param("index", 38)
+						Param("state", 3)
+						Param("substate show", 1)
+					--]
+					End()
+					
+					--39번 오브젝트 닫음.
+					Action("change object state")
+					--[
+						Param("index", 39)
+						Param("state", 3)
+						Param("substate show", 1)
+					--]
+					End()
+					
+					--40번 오브젝트 닫음.
+					Action("change object state")
+					--[
+						Param("index", 40)
+						Param("state", 3)
+						Param("substate show", 1)
+					--]
+					End()
+					
+					--503번 스폰 그룹 Mob 제거.
+					Action("remove mobgroup")
+					--[
+						Param("group", 503)
+						Param("type", "despawn")
+					--]
+					End()
+					
+					--504번 스폰 그룹 Mob 제거.
+					Action("remove mobgroup")
+					--[
+						Param("group", 504)
+						Param("type", "despawn")
+					--]
+					End()
+					
+					--505번 스폰 그룹 Mob 제거.
+					Action("remove mobgroup")
+					--[
+						Param("group", 505)
+						Param("type", "despawn")
+					--]
+					End()
+					
+					--109번 가스 오브젝트 방출.
+					Action("change object state")
+					--[
+						Param("index", 109)
+						Param("state", 1)
+						Param("substate show", 1)
+					--]
+					End()
+					
+					--108번 가스 오브젝트 방출.
+					Action("change object state")
+					--[
+						Param("index", 108)
+						Param("state", 1)
+						Param("substate show", 1)
+					--]
+					End()
+					
+					--107번 가스 오브젝트 방출.
+					Action("change object state")
+					--[
+						Param("index", 107)
+						Param("state", 1)
+						Param("substate show", 1)
+					--]
+					End()
+
+					--110번 가스 오브젝트 방출.
+					Action("change object state")
+					--[
+						Param("index", 110)
+						Param("state", 1)
+						Param("substate show", 1)
+					--]
+					End()
+					
+					--[키리 정제소] Mob 스폰.
+					Action("add mob")
+					--[
+						Param("index", 29981101)
+						Param("group", 3401201)
+						Param("loc x", -621.51)
+						Param("loc y", 125.21)
+						Param("loc z", 926.71)
+						Param("dir x", 0.00)
+						Param("dir z", 1.00)
+						Param("party id", 3401201)
+						Param("party leader", "false")
+						Param("no spawn wait", "true")
+					--]
+					End()
+					
+					-- 이름없는 키리 정제소의 party mob 스폰
+					Action( "add mob" )
+					--[
+						Param("index", 29981102)
+						Param("group", 3401201)
+						Param("loc x", -566.915)
+						Param("loc y", 97.991)
+						Param("loc z", 925.48)
+						Param("dir x", -0.998)
+						Param("dir z", 0.062)
+						Param("party id", 3401201)
+						Param("party leader", "false")
+						Param("no spawn wait", "true")
+					--]
+					End()
+					
+					-- 이름없는 키리 정제소의 party mob 스폰
+					Action( "add mob" )
+					--[
+						Param("index", 29981102)
+						Param("group", 3401201)
+						Param("loc x", -615.182)
+						Param("loc y", 97.991)
+						Param("loc z", 984.24)
+						Param("dir x", 0.997)
+						Param("dir z", 0.081)
+						Param("party id", 3401201)
+						Param("party leader", "false")
+						Param("no spawn wait", "true")
+					--]
+					End()
+					
+					-- 이름없는 키리 정제소의 party mob 스폰
+					Action( "add mob" )
+					--[
+						Param("index", 29981102)
+						Param("group", 3401201)
+						Param("loc x", -676.411)
+						Param("loc y", 97.991)
+						Param("loc z", 924.615)
+						Param("dir x", 0.983)
+						Param("dir z", -0.183)
+						Param("party id", 3401201)
+						Param("party leader", "false")
+						Param("no spawn wait", "true")
+					--]
+					End()
+					
+					--가스 오브젝트가 충분히 퍼지는 모습을 보여주도록 12초간 대기.
+					Action("wait")
+					--[
+						Condition("check time")
+						--[
+							Param("time", 12)
+						--]
+						End()
+					--]
+					End()
+					
+					-- 키리 정제소 party를 제거해 준다.
+					Action("remove mobgroup")
+					--[
+						Param("group", 3401201)
+						Param("type", "clear")
+					--]
+					End()
+					
+					--38번 오브젝트를 연다.
+					Action("change object state")
+					--[
+						Param("index", 38)
+						Param("state", 1)
+						Param("substate show", 1)
+					--]
+					End()
+					
+					--39번 오브젝트를 연다.
+					Action("change object state")
+					--[
+						Param("index", 39)
+						Param("state", 1)
+						Param("substate show", 1)
+					--]
+					End()
+					
+					--40번 오브젝트를 연다.
+					Action("change object state")
+					--[
+						Param("index", 40)
+						Param("state", 1)
+						Param("substate show", 1)
+					--]
+					End()
+					
+					--109번 가스 오브젝트 제거.
+					Action("change object state")
+					--[
+						Param("index", 109)
+						Param("state", 0)
+						Param("substate show", 1)
+					--]
+					End()
+					
+					--108번 가스 오브젝트 제거.
+					Action("change object state")
+					--[
+						Param("index", 108)
+						Param("state", 0)
+						Param("substate show", 1)
+					--]
+					End()
+					
+					--107번 가스 오브젝트 제거.
+					Action("change object state")
+					--[
+						Param("index", 107)
+						Param("state", 0)
+						Param("substate show", 1)
+					--]
+					End()
+					
+					--110번 가스 오브젝트 제거.
+					Action("change object state")
+					--[
+						Param("index", 110)
+						Param("state", 0)
+						Param("substate show", 1)
+					--]
+					End()
+					
+					--503번 스폰 그룹 Mob 스폰.
+					Action("add mobgroup")
+					--[
+						Param("group", 503)
+						Param("no spawn wait", "true")
+					--]
+					End()
+					
+					--504번 스폰 그룹 Mob 스폰.
+					Action("add mobgroup")
+					--[
+						Param("group", 504)
+						Param("no spawn wait", "true")
+					--]
+					End()
+					
+					--505번 스폰 그룹 Mob 스폰.
+					Action("add mobgroup")
+					--[
+						Param("group", 505)
+						Param("no spawn wait", "true")
+					--]
+					End()
+				--]
+				End()
+			--]
+			End()
+		--]
+		End()
+		
+		--6314번 퀘스트 트리거가 완료되어 이벤트를 받을 때까지 대기.
+		Action("wait")
+		--[
+			Condition("recv event from ts")
+			--[
+				Param("trigger type", "quest")
+				Param("event id", 972)
+			--]
+			End()
+		--]
+		End()
+	--]
+	End()
+	
+	Action("send event to sps")
+	--[
+		Param("target type", "npc")
+		Param("target index", 1251171)
+		Param("event id", 976)
+	--]
+	End()
+	
+	--[키리 정제소] Mob 제거.
+	Action("remove mobgroup")
+	--[
+		Param("group", 3401201)
+		Param("type", "despawn")
+	--]
+	End()
+	
+	--503번 스폰 그룹 Mob 제거.
+	Action("remove mobgroup")
+	--[
+		Param("group", 503)
+		Param("type", "despawn")
+	--]
+	End()
+	
+	--504번 스폰 그룹 Mob 제거.
+	Action("remove mobgroup")
+	--[
+		Param("group", 504)
+		Param("type", "despawn")
+	--]
+	End()
+	
+	--505번 스폰 그룹 Mob 제거.
+	Action("remove mobgroup")
+	--[
+		Param("group", 505)
+		Param("type", "despawn")
+	--]
+	End()
+	
+	
+	
+	--아래 가스 오브젝트를 제거해 주지 않으면, 
+	--가스가 보일 때 퀘스트를 완료했을 경우 가스가 계속 보이는 상태에서 Boss battle을 진행하게 된다.
+	
+	--107번 가스 오브젝트 제거.
+	Action("change object state")
+	--[
+		Param("index", 107)
+		Param("state", 0)
+		Param("substate show", 1)
+	--]
+	End()
+	
+	--108번 가스 오브젝트 제거.
+	Action("change object state")
+	--[
+		Param("index", 108)
+		Param("state", 0)
+		Param("substate show", 1)
+	--]
+	End()
+	
+	--109번 가스 오브젝트 제거.
+	Action("change object state")
+	--[
+		Param("index", 109)
+		Param("state", 0)
+		Param("substate show", 1)
+	--]
+	End()
+	
+	--110번 가스 오브젝트 제거.
+	Action("change object state")
+	--[
+		Param("index", 110)
+		Param("state", 0)
+		Param("substate show", 1)
+	--]
+	End()
+	
+	
+	
+	--105번 오브젝트를 멈춘다.
+	Action("change object state")
+	--[
+		Param("index", 105)
+		Param("state", 1)
+		Param("substate show", 1)
+	--]
+	End()
+	
+	--35번 오브젝트를 연다.
+	Action("change object state")
+	--[
+		Param("index", 35)
+		Param("state", 1)
+		Param("substate show", 1)
+	--]
+	End()
+	
+	--WPS 34006번으로 이벤트를 보낸다.
+	Action("send event to wps")
+	--[
+		Param("wps index", 34006)
+		Param("event id", 973)
+	--]
+	End()
+
+--]
+End()

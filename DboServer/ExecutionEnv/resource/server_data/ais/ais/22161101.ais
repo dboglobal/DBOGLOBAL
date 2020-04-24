@@ -1,0 +1,18 @@
+Scene( 1, "³»¿ë" )
+--[
+	State( "fight" )
+	--[
+		Action( "point move" )
+		--[
+			Param("loc x", -621.51)
+			Param("loc y", 125.21)
+                       	Param("loc z", 926.71)
+                       	Param("dir x", 0)
+                       	Param("dir z", 1)
+			Param("run mode", 1)
+		--]
+		End()
+	--]     
+	End()
+--]     
+End()

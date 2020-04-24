@@ -1,0 +1,119 @@
+GameStage(0)
+--[
+
+	Action("remove npc")
+	--[
+		Param("index", 5591105)
+		Param("type", "clear")
+	--]
+	End()
+
+	Action("add npc")
+	--[
+		Param("index", 5591108)
+		Param("loc x", -113.89)
+		Param("loc y", -39.4)
+		Param("loc z", -1058.62)
+		Param("dir x", 0.639)
+		Param("dir z", 0.769)
+		Param("play script", 5591108)
+		Param("play scene", 1)
+		Param("no spawn wait", "true")
+		
+	--]
+	End()
+
+	Action("function")
+	--[
+		Condition("child")
+		--[
+			Action("wait")
+			--[
+				Condition("npc faint")
+				--[
+					Param("npc index", 5591108)
+				--]
+				End()
+
+			--]
+			End()
+
+			Action("wps fail")
+			--[
+			--]
+			End()
+
+		--]
+		End()
+
+		Action("wait")
+		--[
+			Condition("recv event from sps")
+			--[
+				Param("object type", "npc")
+				Param("object index", 5591108)
+				Param("event id", 441)
+			--]
+			End()
+		--]
+		End()
+
+	--]
+	End()
+
+	Action("send event to ts")
+	--[
+		Param("trigger type", "quest")
+		Param("apply type", "register all")
+		Param("event id", 6)
+	--]
+	End()
+
+	Action("remove npc")
+	--[
+		Param("index", 5591108)
+		Param("type", "clear")
+	--]
+	End()
+
+	Action("add npc")
+	--[
+		Param("index", 5591105)
+		Param("loc x", -113.89)
+		Param("loc y", -39.4)
+		Param("loc z", -1058.62)
+		Param("dir x", 0.639)
+		Param("dir z", 0.769)
+		Param("stand alone", "true")
+		Param("no spawn wait", "true")
+	--]
+	End()
+
+--]
+End()
+
+GameFailed()
+--[
+
+	Action("remove npc")
+	--[
+		Param("index", 5591108)
+		Param("type", "clear")
+	--]
+	End()
+
+	Action("add npc")
+	--[
+		Param("index", 5591105)
+		Param("loc x", -113.89)
+		Param("loc y", -39.4)
+		Param("loc z", -1058.62)
+		Param("dir x", 0.639)
+		Param("dir z", 0.769)
+		Param("no spawn wait", "true")
+		Param("stand alone", "true")
+	--]
+	End()
+--]
+End()
+

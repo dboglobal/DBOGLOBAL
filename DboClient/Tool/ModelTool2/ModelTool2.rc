@@ -1,0 +1,1027 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// ÇÑ±¹¾î resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_KOR)
+#ifdef _WIN32
+LANGUAGE LANG_KOREAN, SUBLANG_DEFAULT
+#pragma code_page(949)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_KOR)\r\n"
+    "LANGUAGE 18, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#include ""res\\ModelTool2.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\ModelTool2.ico"
+IDR_ModelTool2TYPE      ICON                    "res\\ModelTool2Doc.ico"
+IDI_ICON_SCRIPT         ICON                    "res\\aim.ico"
+IDI_ICON_CLOSE          ICON                    "res\\xp_folder_closed.ico"
+IDI_ICON_OPEN           ICON                    "res\\xp_folder_open.ico"
+IDI_ICON_OBJECT         ICON                    "res\\Animation.ico"
+IDI_ICON_OBJECT_SCRIPT  ICON                    "res\\script.ico"
+IDI_ICON_ITEM           ICON                    "res\\xbox.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDR_MAINFRAME           BITMAP                  "res\\Toolbar.bmp"
+IDB_BITMAP_ICONS        BITMAP                  "res\\PaneIcons.bmp"
+IDR_TOOLBAR1            BITMAP                  "res\\toolbar1.bmp"
+IDR_TOOLBAR2            BITMAP                  "res\\toolbar2.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Toolbar
+//
+
+IDR_MAINFRAME TOOLBAR  24, 24
+BEGIN
+    BUTTON      ID_VIEW_VIEWWORLD
+    BUTTON      ID_VIEW_VIEWWIREFRAME
+    BUTTON      ID_VIEW_VIEWHEIRARCHY
+    BUTTON      ID_VIEW_VIEWBBOX
+    BUTTON      ID_VIEW_VIEWTOONEDGE
+    SEPARATOR
+    BUTTON      ID_CAMERA_FRONTVIEW
+    BUTTON      ID_CAMERA_REARVIEW
+    BUTTON      ID_CAMERA_RIGHTVIEW
+    BUTTON      ID_CAMERA_LEFTVIEW
+    BUTTON      ID_CAMERA_TOPVIEW
+    BUTTON      ID_CAMERA_BOTTOMVIEW
+END
+
+IDR_TOOLBAR1 TOOLBAR  24, 23
+BEGIN
+    BUTTON      ID_TOOLBAR_CAMRAICON
+    BUTTON      ID_TOOL_CAMERA_SENSE
+    SEPARATOR
+    BUTTON      ID_TOOLBAR_THICKNESSICON
+    BUTTON      ID_TOOL_TOONCOLOR
+    BUTTON      ID_TOOL_THICKNESS
+END
+
+IDR_TOOLBAR2 TOOLBAR  24, 24
+BEGIN
+    BUTTON      ID_PANE_ITEMVIEW
+    BUTTON      ID_TOOLBAR_HEADSKINCOLOR
+    BUTTON      ID_TOOLBAR_BODYSKINCOLOR
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAINFRAME MENU 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&Convert Binary...",          ID_FILE_CONVERTBINARY
+        MENUITEM "Convert Encrypt Binary...",   ID_FILE_CONVERTENCRYPTBINARY
+        MENUITEM SEPARATOR
+        MENUITEM "Update Property Data",        ID_FILE_UPDATEPROPERTYDATA
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit",                       ID_APP_EXIT
+    END
+    POPUP "&View"
+    BEGIN
+        MENUITEM "View &World",                 ID_VIEW_VIEWWORLD
+        MENUITEM "View &Heirarchy",             ID_VIEW_VIEWHEIRARCHY
+        MENUITEM "View Wire&frame",             ID_VIEW_VIEWWIREFRAME
+        MENUITEM "View &BBox",                  ID_VIEW_VIEWBBOX
+        MENUITEM "View &Toon Edge",             ID_VIEW_VIEWTOONEDGE, INACTIVE
+        MENUITEM SEPARATOR
+        POPUP "&Toolbars"
+        BEGIN
+            MENUITEM "&Toolbar",                    ID_VIEW_TOOLBAR
+            MENUITEM SEPARATOR
+            MENUITEM "&Customize...",               35001
+        END
+        MENUITEM "&Status Bar",                 ID_VIEW_STATUS_BAR
+        MENUITEM SEPARATOR
+    END
+    POPUP "&Pane"
+    BEGIN
+        MENUITEM "PC Tree",                     ID_PANE_PCTREE
+        MENUITEM "Mob Tree",                    ID_PANE_MOBTREE
+        MENUITEM "Object Tree",                 ID_PANE_OBJECTTREE
+        MENUITEM "Item Treee",                  ID_PANE_ITEMTREEE
+        MENUITEM "NPC Tree",                    ID_PANE_NPCTREE
+        MENUITEM SEPARATOR
+        MENUITEM "Clump Edit",                  ID_PANE_CLUMPEDIT
+        MENUITEM "Material Edit",               ID_PANE_MATERIALEDIT
+        MENUITEM "Bone Edit",                   ID_PANE_BONEEDIT
+        MENUITEM "BBox Edit",                   ID_PANE_BBOXEDIT
+        MENUITEM SEPARATOR
+        MENUITEM "Animation Set",               ID_PANE_ANIMATIONSET
+        MENUITEM "Animation Play",              ID_PANE_ANIMATIONPLAY
+        MENUITEM SEPARATOR
+        MENUITEM "Attack Type",                 ID_PANE_ATTACKTYPE
+        MENUITEM "Event Properties",            ID_PANE_EVENTPROPERTIES
+        MENUITEM SEPARATOR
+        MENUITEM "Dummy Model",                 ID_PANE_DUMMYMODEL
+        MENUITEM "Enviroment Map",              ID_PANE_ENVIROMENTMAP
+        MENUITEM "Item View",                   ID_PANE_ITEMVIEW
+        MENUITEM "Vehicle View",                ID_PANE_VEHICLEVIEW
+    END
+    POPUP "&Camera"
+    BEGIN
+        MENUITEM "&Front View",                 ID_CAMERA_FRONTVIEW
+        MENUITEM "&Rear View",                  ID_CAMERA_REARVIEW
+        MENUITEM "&Left View",                  ID_CAMERA_LEFTVIEW
+        MENUITEM "R&ight View",                 ID_CAMERA_RIGHTVIEW
+        MENUITEM "&Top View",                   ID_CAMERA_TOPVIEW
+        MENUITEM "&Bottom View",                ID_CAMERA_BOTTOMVIEW
+        MENUITEM SEPARATOR
+        MENUITEM "Free Camera",                 ID_CAMERA_FREECAMERA
+    END
+    POPUP "&Option"
+    BEGIN
+        MENUITEM "&Hit Effect",                 ID_OPTION_HITEFFECT
+        MENUITEM "&Object Collision Mesh",      ID_OPTION_COLLISIONMESH
+        MENUITEM SEPARATOR
+        POPUP "&Item Grade Effect"
+        BEGIN
+            MENUITEM "None",                        ID_ITEMGRADEEFFECT_NONE
+            MENUITEM "1",                           ID_ITEMGRADEEFFECT_1
+            MENUITEM "2",                           ID_ITEMGRADEEFFECT_2
+            MENUITEM "3",                           ID_ITEMGRADEEFFECT_3
+            MENUITEM "4",                           ID_ITEMGRADEEFFECT_4
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "&Glow Filter",                ID_OPTION_GLOWFILTER
+        MENUITEM "&Blur Filter",                ID_OPTION_BLURFILTER
+        MENUITEM SEPARATOR
+        MENUITEM "&Frame Fix",                  ID_OPTION_FRAMEFIX
+        MENUITEM "Camera Distance Alpha",       ID_OPTION_CAMERADISTANCEALPHA
+        MENUITEM "Camera Shake Disable",        ID_OPTION_CAMERASHAKEDISABLE
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&About ModelTool2...",        ID_APP_ABOUT
+    END
+END
+
+IDR_MENU_POPUP MENU 
+BEGIN
+    POPUP "Folder"
+    BEGIN
+        MENUITEM "New Folder",                  ID_MENU_ADD_FOLDER
+        MENUITEM "New Script",                  ID_MENU_NEW_SCRIPT
+        MENUITEM "Load Script",                 ID_MENU_LOAD_SCRIPT
+        MENUITEM "Rename",                      ID_MENU_RENAME_FOLDER
+        MENUITEM "Delete",                      ID_MENU_DELETE_FOLDER
+    END
+    POPUP "Script"
+    BEGIN
+        MENUITEM "Save",                        ID_MENU_SCRIPT_SAVE
+        MENUITEM "Save All",                    ID_SCRIPT_SAVEALL
+        MENUITEM "Sava As...",                  ID_MENU_SCRIPT_SAVEAS
+        MENUITEM "Rename",                      ID_MENU_SCRIPT_RENAME
+        MENUITEM "Delete",                      ID_MENU_DELETE_SCRIPT
+        MENUITEM SEPARATOR
+        MENUITEM "SetClump",                    ID_SCRIPT_SETCLUMP
+    END
+    POPUP "SetAnim"
+    BEGIN
+        MENUITEM "Set Animation...",            ID_MENU_ANIM_SET
+        MENUITEM "Remove Animation",            ID_MENU_ANIM_DELETE
+    END
+    POPUP "Object Resource"
+    BEGIN
+        MENUITEM "Export to Script",            ID_OBJECTRESOURCE_EXPORTTOSCRIPT
+    END
+    POPUP "Object Folder"
+    BEGIN
+        MENUITEM "&New Folder",                 ID_OBJECTFOLDER_NEWFOLDER
+        MENUITEM "&Rename",                     ID_OBJECTFOLDER_RENAME
+        MENUITEM "&Import Script",              ID_OBJECTFOLDER_IMPORTSCRIPT
+        MENUITEM "Save Tree",                   ID_OBJECTFOLDER_SAVETREE
+        MENUITEM "&Delete",                     ID_OBJECTFOLDER_DELETE
+    END
+    POPUP "Object Script"
+    BEGIN
+        MENUITEM "&Save",                       ID_OBJECTSCRIPT_SAVE
+        MENUITEM "Save &As..",                  ID_OBJECTSCRIPT_SAVEAS
+        MENUITEM "Save Al&l",                   ID_OBJECTSCRIPT_SAVEALL
+        MENUITEM "Overwrite All",               ID_OBJECTSCRIPT_OVERWRITEALL
+        MENUITEM SEPARATOR
+        MENUITEM "&Rename",                     ID_OBJECTSCRIPT_RENAME
+        MENUITEM "&Delete",                     ID_OBJECTSCRIPT_DELETE
+    END
+    POPUP "Item Resource"
+    BEGIN
+        MENUITEM "&Export to Script",           ID_ITEMRESOURCE_EXPORTTOSCRIPT
+    END
+    POPUP "Item Folder"
+    BEGIN
+        MENUITEM "&New Folder",                 ID_ITEMFOLDER_NEWFOLDER
+        MENUITEM "&Rename",                     ID_ITEMFOLDER_RENAME
+        MENUITEM "&Import Script",              ID_ITEMFOLDER_IMPORTSCRIPT
+        MENUITEM "&Save Tree",                  ID_ITEMFOLDER_SAVETREE
+        MENUITEM "&Delete",                     ID_ITEMFOLDER_DELETE
+    END
+    POPUP "Item Script"
+    BEGIN
+        MENUITEM "&Save",                       ID_ITEMSCRIPT_SAVE
+        MENUITEM "Save A&s",                    ID_ITEMSCRIPT_SAVEAS
+        MENUITEM "Save &All",                   ID_ITEMSCRIPT_SAVEALL
+        MENUITEM SEPARATOR
+        MENUITEM "&Rename",                     ID_ITEMSCRIPT_RENAME
+        MENUITEM "&Delete",                     ID_ITEMSCRIPT_DELETE
+    END
+END
+
+IDR_MENU_HIDDEN MENU 
+BEGIN
+    POPUP "ToolBar"
+    BEGIN
+        MENUITEM "Camra Icon",                  ID_TOOLBAR_CAMRAICON
+        MENUITEM "Thickness Icon",              ID_TOOLBAR_THICKNESSICON
+        MENUITEM "Head Skin Color",             ID_TOOLBAR_HEADSKINCOLOR
+        MENUITEM "Body Skin Color",             ID_TOOLBAR_BODYSKINCOLOR
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_MAINFRAME ACCELERATORS 
+BEGIN
+    "C",            ID_EDIT_COPY,           VIRTKEY, CONTROL, NOINVERT
+    VK_INSERT,      ID_EDIT_COPY,           VIRTKEY, CONTROL, NOINVERT
+    VK_DELETE,      ID_EDIT_CUT,            VIRTKEY, SHIFT, NOINVERT
+    "X",            ID_EDIT_CUT,            VIRTKEY, CONTROL, NOINVERT
+    "V",            ID_EDIT_PASTE,          VIRTKEY, CONTROL, NOINVERT
+    VK_INSERT,      ID_EDIT_PASTE,          VIRTKEY, SHIFT, NOINVERT
+    VK_BACK,        ID_EDIT_UNDO,           VIRTKEY, ALT, NOINVERT
+    "Z",            ID_EDIT_UNDO,           VIRTKEY, CONTROL, NOINVERT
+    VK_F6,          ID_PREV_PANE,           VIRTKEY, SHIFT, NOINVERT
+    VK_F6,          ID_NEXT_PANE,           VIRTKEY, NOINVERT
+    "F",            ID_CAMERA_FRONTVIEW,    VIRTKEY, CONTROL, NOINVERT
+    "W",            ID_VIEW_VIEWWORLD,      VIRTKEY, CONTROL, NOINVERT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 235, 55
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About ModelTool2"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,17,20,20
+    LTEXT           "ModelTool2 Version 1.0",IDC_STATIC,40,10,119,8,SS_NOPREFIX
+    LTEXT           "Copyright (C) 2006",IDC_STATIC,40,25,119,8
+    DEFPUSHBUTTON   "OK",IDOK,178,7,50,16,WS_GROUP
+END
+
+IDD_CLUMPPANE DIALOGEX 0, 0, 119, 356
+STYLE DS_SETFONT | WS_CHILD | WS_THICKFRAME
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    EDITTEXT        IDC_EDIT_CLUMP_NAME,3,9,113,14,ES_AUTOHSCROLL | ES_READONLY
+    GROUPBOX        "Atomic",IDC_FRAME_ATOMIC,3,2,115,347
+    LISTBOX         IDC_LIST_ATOMIC,3,34,113,21,LBS_SORT | LBS_MULTIPLESEL | LBS_NOINTEGRALHEIGHT | WS_DISABLED | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "Delete Unselected ",IDC_BT_DELETE,3,73,112,14,WS_DISABLED
+    PUSHBUTTON      "Save Selected",IDC_BT_CLUMP_SAVE,3,88,112,14,WS_DISABLED
+    CONTROL         "Alpha Test",IDC_CHECK_ALPHA,"Button",BS_AUTOCHECKBOX | WS_DISABLED | WS_TABSTOP,6,169,51,10
+    CONTROL         "Toon Not Edge",IDC_CK_2SIDE,"Button",BS_AUTOCHECKBOX | WS_DISABLED | WS_TABSTOP,12,130,63,10
+    CONTROL         "Toon Detail Edge",IDC_CK_2SIDE_EDGE,"Button",BS_AUTOCHECKBOX | WS_DISABLED | WS_TABSTOP,12,141,71,10
+    PUSHBUTTON      "All Parts Split Save",IDC_BT_CLUMP_SAVE_ALL,3,103,112,14,WS_DISABLED
+    GROUPBOX        "Toon Render Option",IDC_STATIC_TOON,3,120,113,36
+    GROUPBOX        "Render Option",IDC_STATIC_RENDER,3,159,113,122
+    CONTROL         "Alpha",IDC_CHECK_ALPHA2,"Button",BS_AUTOCHECKBOX | WS_DISABLED | WS_TABSTOP,6,179,34,10
+    GROUPBOX        "Collision",IDC_STATIC_COLLISION,3,287,113,56
+    CONTROL         "Collision Check",IDC_CHECK_COLLISION,"Button",BS_AUTOCHECKBOX | WS_DISABLED | WS_TABSTOP,12,298,66,10
+    PUSHBUTTON      "Save Clump",IDC_BT_SAVECLUMP,3,58,112,14,WS_DISABLED
+    CONTROL         "Not Visible",IDC_CHECK_NOT_VISIBLE,"Button",BS_AUTOCHECKBOX | WS_DISABLED | WS_TABSTOP,12,308,51,10
+    CONTROL         "Decal Visible",IDC_CHECK_DECAL_VISIBLE,"Button",BS_AUTOCHECKBOX | WS_DISABLED | WS_TABSTOP,12,318,59,10
+    CONTROL         "Shadow Map",IDC_CHECK_SHADOWMAP,"Button",BS_AUTOCHECKBOX | WS_DISABLED | WS_TABSTOP,6,212,57,10
+    COMBOBOX        IDC_COMBO1,55,211,61,30,CBS_DROPDOWNLIST | WS_DISABLED | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Frustum Scale",IDC_STT_FRUSTUM,7,228,47,8,WS_DISABLED
+    EDITTEXT        IDC_ED_FRUSTUM,55,226,61,14,ES_AUTOHSCROLL | WS_DISABLED
+    CONTROL         "Camera Collision(Not Visible)",IDC_CHECK_CAMERA_COLLISION,
+                    "Button",BS_AUTOCHECKBOX | WS_DISABLED | WS_TABSTOP,12,328,109,10
+    EDITTEXT        IDC_EDIT_ENVMAP,55,261,61,14,ES_AUTOHSCROLL | ES_READONLY | WS_DISABLED
+    LTEXT           "EnvMap Atomic",IDC_ST_ENV_ATOMIC,7,247,50,8
+    LTEXT           "EnvMap Texture",IDC_ST_ENV_TEXTURE,7,263,52,8
+    COMBOBOX        IDC_CB_ENV,55,244,61,30,CBS_DROPDOWNLIST | WS_DISABLED | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "2Side",IDC_CHECK_ALPHA3,"Button",BS_AUTOCHECKBOX | WS_DISABLED | WS_TABSTOP,6,189,34,10
+    CONTROL         "Emblem Mark",IDC_CHECK_EMBLEM_MARK,"Button",BS_AUTOCHECKBOX | WS_DISABLED | WS_TABSTOP,6,199,57,10
+END
+
+IDD_MATERIALPANE DIALOGEX 0, 0, 109, 121
+STYLE DS_SETFONT | WS_CHILD | WS_THICKFRAME
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    GROUPBOX        "Material List",IDC_FRAME_MATERIAL,3,5,102,110
+    LISTBOX         IDC_LIST_MATERIAL,5,14,94,27,LBS_SORT | LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "ADD",IDC_BT_MATERIAL_ADD,16,93,29,14
+    PUSHBUTTON      "Delete",IDC_BT_MATERIAL_DEL,52,93,29,14
+    LTEXT           "Name : ",IDC_ST_NAME,6,60,24,8
+    EDITTEXT        IDC_EDIT_NAME,33,57,63,14,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "Size :",IDC_ST_SIZE,6,78,19,8
+    EDITTEXT        IDC_EDIT_SIZE,33,75,63,14,ES_AUTOHSCROLL | ES_READONLY
+    GROUPBOX        "MultiTexture",IDC_STATIC_MULTI_TEXTURE,5,44,96,70
+END
+
+IDD_ANIMSETPANE DIALOGEX 0, 0, 171, 222
+STYLE DS_SETFONT | WS_CHILD | WS_THICKFRAME
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    GROUPBOX        "Base Animation List",IDC_STATIC_GROUP,2,2,165,213
+    COMBOBOX        IDC_CB_ANIM_SET,2,13,161,30,CBS_DROPDOWNLIST | CBS_SORT | WS_DISABLED | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "",IDC_LT_ANIM_ITEM,"SysListView32",LVS_REPORT | LVS_SINGLESEL | LVS_SHOWSELALWAYS | LVS_ALIGNLEFT | WS_DISABLED | WS_BORDER | WS_TABSTOP,2,29,161,186
+END
+
+IDD_ATTACKTYPEPANE DIALOGEX 0, 0, 195, 78
+STYLE DS_SETFONT | WS_CHILD | WS_THICKFRAME
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    GROUPBOX        "Damage Text %",IDC_STATIC,2,26,186,45
+    EDITTEXT        IDC_ED_DAMAGE00,2,36,21,14,ES_AUTOHSCROLL | ES_NUMBER | WS_DISABLED
+    EDITTEXT        IDC_ED_DAMAGE01,25,36,21,14,ES_AUTOHSCROLL | ES_NUMBER | WS_DISABLED
+    EDITTEXT        IDC_ED_DAMAGE02,48,36,21,14,ES_AUTOHSCROLL | ES_NUMBER | WS_DISABLED
+    EDITTEXT        IDC_ED_DAMAGE03,71,36,21,14,ES_AUTOHSCROLL | ES_NUMBER | WS_DISABLED
+    EDITTEXT        IDC_ED_DAMAGE04,94,36,21,14,ES_AUTOHSCROLL | ES_NUMBER | WS_DISABLED
+    EDITTEXT        IDC_ED_DAMAGE05,117,36,21,14,ES_AUTOHSCROLL | ES_NUMBER | WS_DISABLED
+    EDITTEXT        IDC_ED_DAMAGE06,140,36,21,14,ES_AUTOHSCROLL | ES_NUMBER | WS_DISABLED
+    EDITTEXT        IDC_ED_DAMAGE07,163,36,21,14,ES_AUTOHSCROLL | ES_NUMBER | WS_DISABLED
+    GROUPBOX        "Attack Type",IDC_STATIC,2,0,186,22
+    CONTROL         "Physical",IDC_RA_PHYSICAL,"Button",BS_AUTORADIOBUTTON | WS_DISABLED,6,10,44,10
+    CONTROL         "Energy",IDC_RA_ENERGY,"Button",BS_AUTORADIOBUTTON | WS_DISABLED,51,10,38,10
+    EDITTEXT        IDC_ED_DAMAGE08,2,53,21,14,ES_AUTOHSCROLL | ES_NUMBER | WS_DISABLED
+    EDITTEXT        IDC_ED_DAMAGE09,25,53,21,14,ES_AUTOHSCROLL | ES_NUMBER | WS_DISABLED
+    EDITTEXT        IDC_ED_DAMAGE10,48,53,21,14,ES_AUTOHSCROLL | ES_NUMBER | WS_DISABLED
+    EDITTEXT        IDC_ED_DAMAGE11,71,53,21,14,ES_AUTOHSCROLL | ES_NUMBER | WS_DISABLED
+    EDITTEXT        IDC_ED_DAMAGE12,94,53,21,14,ES_AUTOHSCROLL | ES_NUMBER | WS_DISABLED
+    EDITTEXT        IDC_ED_DAMAGE13,117,53,21,14,ES_AUTOHSCROLL | ES_NUMBER | WS_DISABLED
+    EDITTEXT        IDC_ED_DAMAGE14,140,53,21,14,ES_AUTOHSCROLL | ES_NUMBER | WS_DISABLED
+    EDITTEXT        IDC_ED_DAMAGE15,163,53,21,14,ES_AUTOHSCROLL | ES_NUMBER | WS_DISABLED
+END
+
+IDD_BONEEDITPANE DIALOGEX 0, 0, 165, 117
+STYLE DS_SETFONT | WS_CHILD
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    GROUPBOX        "Bone",IDC_STATIC,3,0,159,111
+    LTEXT           "+Insert",IDC_STATIC,83,41,26,8
+    LTEXT           "+Home",IDC_STATIC,83,57,24,8
+    LTEXT           "+PageUp",IDC_STATIC,83,72,32,9
+    LTEXT           "Control Sensitive ",IDC_STATIC,6,93,59,8
+    EDITTEXT        IDC_ET_SENSE,65,89,20,14,ES_AUTOHSCROLL
+    LTEXT           "-Del",IDC_STATIC,119,41,14,8
+    LTEXT           "-End",IDC_STATIC,119,57,16,8
+    LTEXT           "-PageDn",IDC_STATIC,119,72,29,8
+    CONTROL         "Enable Bone Scale",IDC_CK_BONE_EDIT,"Button",BS_AUTOCHECKBOX | WS_DISABLED | WS_TABSTOP,7,9,77,10
+    LTEXT           "LENGTH",IDC_ST_SCALE_X,10,41,33,8
+    LTEXT           "WIDTH",IDC_ST_SCALE_Y,10,57,30,8
+    LTEXT           "MOVE",IDC_ST_SCALE_Z,10,73,26,8
+    EDITTEXT        IDC_ED_BONE_LENGTH,44,39,21,14,ES_AUTOHSCROLL | WS_DISABLED
+    EDITTEXT        IDC_ED_BONE_WIDTH,44,54,21,14,ES_AUTOHSCROLL | WS_DISABLED
+    EDITTEXT        IDC_BONE_MOVE,44,70,21,14,ES_AUTOHSCROLL | WS_DISABLED
+    CONTROL         "",IDC_SPIN1,"msctls_updown32",UDS_ARROWKEYS | WS_DISABLED,65,39,10,14
+    CONTROL         "",IDC_SPIN2,"msctls_updown32",UDS_ARROWKEYS | WS_DISABLED,65,54,10,14
+    CONTROL         "",IDC_SPIN3,"msctls_updown32",UDS_ARROWKEYS | WS_DISABLED,65,70,10,14
+    CONTROL         "",IDC_SPIN4,"msctls_updown32",UDS_ARROWKEYS,85,89,10,14
+    CONTROL         "Enable Base Scale",IDC_CK_BONE_EDIT2,"Button",BS_AUTOCHECKBOX | WS_DISABLED | WS_TABSTOP,87,9,71,10
+    EDITTEXT        IDC_ED_BONE_LENGTH2,124,21,24,14,ES_AUTOHSCROLL | WS_DISABLED
+    LTEXT           "Base Scale",IDC_STATIC,86,24,38,8
+    CONTROL         "",IDC_SPIN5,"msctls_updown32",UDS_ARROWKEYS | WS_DISABLED,149,21,10,14
+    COMBOBOX        IDC_CB_BONE,6,22,72,30,CBS_DROPDOWNLIST | WS_DISABLED | WS_VSCROLL | WS_TABSTOP
+END
+
+IDD_ANIMPLAYPANE DIALOGEX 0, 0, 214, 24
+STYLE DS_SETFONT | WS_CHILD | WS_THICKFRAME
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    PUSHBUTTON      "¢º",IDC_BT_ANIM_PLAY,7,3,18,20,WS_DISABLED
+    PUSHBUTTON      "¡á",IDC_BT_ANIM_STOP,26,3,18,20,WS_DISABLED
+    CONTROL         "",IDC_SLIDER,"msctls_trackbar32",TBS_AUTOTICKS | TBS_NOTICKS | WS_DISABLED | WS_TABSTOP,47,2,31,20
+    EDITTEXT        IDC_ED_TIME,137,6,40,14,ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_ED_SPEED,178,6,17,14,ES_AUTOHSCROLL | ES_READONLY,WS_EX_RIGHT
+    CONTROL         "",IDC_SPIN_ANIM_SPEED,"msctls_updown32",UDS_ARROWKEYS,194,6,10,14
+    LTEXT           "X",IDC_STATIC_X,205,9,8,8
+    COMBOBOX        IDC_CB_EVENT,88,6,48,30,CBS_DROPDOWNLIST | WS_DISABLED | WS_VSCROLL | WS_TABSTOP
+END
+
+IDD_EVENTPROPERY DIALOG  0, 0, 320, 200
+STYLE DS_SETFONT | WS_CHILD
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "TODO: Place form controls on this dialog.",IDC_STATIC,24,42,280,8
+END
+
+IDD_PROPERTYPANE DIALOGEX 0, 0, 114, 92
+STYLE DS_SETFONT | WS_CHILD
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME | NOT WS_VISIBLE,0,0,114,92
+END
+
+IDD_BBOXPANE DIALOGEX 0, 0, 79, 33
+STYLE DS_SETFONT | WS_CHILD
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME | NOT WS_VISIBLE,0,0,75,31
+END
+
+IDD_TREEOBJECTPANE DIALOGEX 0, 0, 97, 86
+STYLE DS_SETFONT | WS_CHILD
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    GROUPBOX        "Script Tree",IDC_STATIC_SCRIPT,0,0,97,40
+    CONTROL         "",IDC_TREE_SCRIPT,"SysTreeView32",TVS_HASBUTTONS | TVS_HASLINES | TVS_EDITLABELS | TVS_SHOWSELALWAYS | WS_BORDER | WS_TABSTOP,0,11,96,27
+    GROUPBOX        "Resource Tree",IDC_STATIC_RESOURCE,0,44,97,40
+    CONTROL         "",IDC_TREE_RESOURCE,"SysTreeView32",TVS_HASBUTTONS | TVS_HASLINES | TVS_SHOWSELALWAYS | WS_BORDER | WS_TABSTOP,0,55,96,27
+END
+
+IDD_DUMMYMODELPANE DIALOGEX 0, 0, 120, 47
+STYLE DS_SETFONT | WS_CHILD
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    EDITTEXT        IDC_EDIT_FILENAME,2,2,116,14,ES_AUTOHSCROLL | ES_READONLY
+    CONTROL         "Visible Dummy Model",IDC_CHECK_VISIBLE,"Button",BS_AUTOCHECKBOX | WS_DISABLED | WS_TABSTOP,2,19,85,10
+    LTEXT           "POS :",IDC_STATIC,2,33,19,8
+    LTEXT           "X",IDC_STATIC,22,33,8,8
+    EDITTEXT        IDC_EDIT_POSX,31,30,22,14,ES_AUTOHSCROLL | WS_DISABLED
+    LTEXT           "Z",IDC_STATIC,71,33,8,8
+    EDITTEXT        IDC_EDIT_POSY,80,30,22,14,ES_AUTOHSCROLL | WS_DISABLED
+    CONTROL         "",IDC_SPIN1,"msctls_updown32",UDS_ARROWKEYS,53,30,10,14
+    CONTROL         "",IDC_SPIN2,"msctls_updown32",UDS_ARROWKEYS,102,30,10,14
+END
+
+IDD_ITEMPANE DIALOG  0, 0, 320, 200
+STYLE DS_SETFONT | WS_CHILD
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "TODO: Place form controls on this dialog.",IDC_STATIC,24,42,280,8
+END
+
+IDD_TREEITEMPANE DIALOGEX 0, 0, 104, 91
+STYLE DS_SETFONT | WS_CHILD
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    GROUPBOX        "Script Tree",IDC_STATIC_SCRIPT,3,2,97,40
+    CONTROL         "",IDC_TREE_SCRIPT,"SysTreeView32",TVS_HASBUTTONS | TVS_HASLINES | TVS_EDITLABELS | TVS_SHOWSELALWAYS | WS_BORDER | WS_TABSTOP,3,13,96,27
+    GROUPBOX        "Resource Tree",IDC_STATIC_RESOURCE,3,47,97,40
+    CONTROL         "",IDC_TREE_RESOURCE,"SysTreeView32",TVS_HASBUTTONS | TVS_HASLINES | TVS_SHOWSELALWAYS | WS_BORDER | WS_TABSTOP,3,58,96,27
+END
+
+IDD_ENVMAPPANE DIALOGEX 0, 0, 119, 105
+STYLE DS_SETFONT | WS_CHILD
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    GROUPBOX        "Normal Map ",IDC_STATIC,2,2,115,25
+    CONTROL         "Set Normal Map",IDC_CK_NORM_MAP,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,9,14,66,10
+    GROUPBOX        "Enviroment Map",IDC_STATIC,4,31,115,65
+    CONTROL         "Set Env Map",IDC_CK_ENV_MAP,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,10,45,57,10
+    EDITTEXT        IDC_ED_ENV_MAP,9,60,106,14,ES_AUTOHSCROLL | ES_READONLY | WS_DISABLED
+    CONTROL         "",IDC_SL_SHINE,"msctls_trackbar32",TBS_AUTOTICKS | TBS_BOTH | TBS_NOTICKS | TBS_TOOLTIPS | WS_DISABLED | WS_TABSTOP,44,77,73,15
+    LTEXT           "Shininess",IDC_STATIC,9,79,33,8,WS_DISABLED
+END
+
+IDD_LINKEFFECTPANE DIALOGEX 0, 0, 69, 46
+STYLE DS_SETFONT | WS_CHILD | WS_THICKFRAME
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    COMBOBOX        IDC_CB_EFFECT,2,24,62,30,CBS_DROPDOWN | CBS_SORT | WS_DISABLED | WS_VSCROLL | WS_TABSTOP
+    LISTBOX         IDC_LIST_EFFECT,2,2,62,20,LBS_SORT | LBS_NOINTEGRALHEIGHT | WS_DISABLED | WS_VSCROLL | WS_TABSTOP
+END
+
+IDD_ITEMVIEWPANE DIALOGEX 0, 0, 54, 59
+STYLE DS_SETFONT | WS_CHILD
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    CONTROL         "",IDC_TREE_ITEM,"SysTreeView32",TVS_HASBUTTONS | TVS_HASLINES | TVS_DISABLEDRAGDROP | TVS_SHOWSELALWAYS | WS_DISABLED | WS_BORDER | WS_TABSTOP,0,0,52,41
+    CONTROL         "Item View",IDC_CHECK_ITEM,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,3,44,47,10
+END
+
+IDD_CONVERTDLG DIALOGEX 0, 0, 342, 223
+STYLE DS_SETFONT | DS_MODALFRAME | DS_3DLOOK | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Dialog"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,147,202,50,14
+    LTEXT           "XML Data -> Binary Data Converting...",IDC_STATIC,101,15,126,8
+    CONTROL         "",IDC_PROG,"msctls_progress32",WS_BORDER,23,44,285,14
+    EDITTEXT        IDC_MSG,23,28,285,14,ES_AUTOHSCROLL | ES_READONLY | NOT WS_BORDER,WS_EX_CLIENTEDGE
+    CONTROL         "",IDC_RE_LOG,"RichEdit20A",ES_MULTILINE | ES_AUTOHSCROLL | ES_READONLY | WS_BORDER | WS_VSCROLL | WS_TABSTOP,23,68,285,128
+END
+
+IDD_NAVIMESHPANE DIALOGEX 0, 0, 232, 86
+STYLE DS_SETFONT | WS_CHILD | WS_THICKFRAME
+FONT 9, "MS Sans Serif, ±¼¸²", 0, 0, 0x0
+BEGIN
+    LISTBOX         IDC_LIST_NAVI,7,21,218,18,LBS_SORT | LBS_MULTIPLESEL | LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Navigation Meshs",IDC_ST_NAVI,7,9,218,8,NOT WS_GROUP
+    LTEXT           "Obstacle Meshs",IDC_ST_OBS,7,44,51,8
+    LISTBOX         IDC_LIST_OBS,7,54,218,18,LBS_SORT | LBS_MULTIPLESEL | LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+END
+
+IDD_VEHICLEVIEWPANE DIALOGEX 0, 0, 110, 69
+STYLE DS_SETFONT | WS_CHILD
+FONT 9, "MS Sans Serif, ±¼¸²", 0, 0, 0x0
+BEGIN
+    CONTROL         "",IDC_TREE_VEHICLE,"SysTreeView32",TVS_HASBUTTONS | TVS_HASLINES | TVS_SHOWSELALWAYS | WS_BORDER | WS_TABSTOP,7,7,96,48
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904e4"
+        BEGIN
+            VALUE "CompanyName", "TODO: <Company name>"
+            VALUE "FileDescription", "TODO: <File description>"
+            VALUE "FileVersion", "1.0.0.1"
+            VALUE "InternalName", "ModelTool2.exe"
+            VALUE "LegalCopyright", "TODO: (c) <Company name>.  All rights reserved."
+            VALUE "OriginalFilename", "ModelTool2.exe"
+            VALUE "ProductName", "TODO: <Product name>"
+            VALUE "ProductVersion", "1.0.0.1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1252
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 228
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 48
+    END
+
+    IDD_CLUMPPANE, DIALOG
+    BEGIN
+        LEFTMARGIN, 3
+        RIGHTMARGIN, 116
+        TOPMARGIN, 2
+        BOTTOMMARGIN, 349
+    END
+
+    IDD_MATERIALPANE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 102
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 114
+    END
+
+    IDD_ANIMSETPANE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 164
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 215
+    END
+
+    IDD_ATTACKTYPEPANE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 188
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 71
+    END
+
+    IDD_BONEEDITPANE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 158
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 110
+    END
+
+    IDD_ANIMPLAYPANE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 202
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 17
+    END
+
+    IDD_EVENTPROPERY, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 313
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 193
+    END
+
+    IDD_PROPERTYPANE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 107
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 85
+    END
+
+    IDD_BBOXPANE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 72
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 26
+    END
+
+    IDD_TREEOBJECTPANE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 90
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 79
+    END
+
+    IDD_DUMMYMODELPANE, DIALOG
+    BEGIN
+        LEFTMARGIN, 2
+        RIGHTMARGIN, 118
+        TOPMARGIN, 2
+        BOTTOMMARGIN, 45
+    END
+
+    IDD_ITEMPANE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 313
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 193
+    END
+
+    IDD_TREEITEMPANE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 97
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 84
+    END
+
+    IDD_ENVMAPPANE, DIALOG
+    BEGIN
+        LEFTMARGIN, 2
+        RIGHTMARGIN, 117
+        TOPMARGIN, 2
+        BOTTOMMARGIN, 103
+    END
+
+    IDD_LINKEFFECTPANE, DIALOG
+    BEGIN
+        LEFTMARGIN, 2
+        RIGHTMARGIN, 64
+        TOPMARGIN, 2
+        BOTTOMMARGIN, 43
+    END
+
+    IDD_ITEMVIEWPANE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 47
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 52
+    END
+
+    IDD_CONVERTDLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 335
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 216
+    END
+
+    IDD_NAVIMESHPANE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 225
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 79
+    END
+
+    IDD_VEHICLEVIEWPANE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 103
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 62
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Cursor
+//
+
+IDC_CURSOR1             CURSOR                  "res\\move4way.cur"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDP_OLE_INIT_FAILED     "OLE initialization failed.  Make sure that the OLE libraries are the correct version."
+    ID_TOON_MORE            "More Colors...\nMore Colors..."
+    ID_TOON_SELECTOR        "Toon Color"
+    IDR_PANE_TREEITEM       "ITEM List"
+    IDR_PANE_ENVMAP         "Normal & Env Map"
+    IDR_PANE_LINKEFFECT     "Link Effect"
+    IDR_PANE_ITEMVIEW       "Item Viewer"
+    IDR_PANE_NPC            "NPC List"
+    IDR_PANE_TREENPC        "NPC List"
+    ID_HEAD_SKIN_SELECT     "Head Skin Color Selector"
+    ID_BODY_SKIN_SELECT     "Body Skin Color Selector"
+    IDR_PANE_TREEVEHICLE    "Vehicle List"
+END
+
+STRINGTABLE 
+BEGIN
+    IDR_MAINFRAME           "ModelTool2\n\nModelTool2\n\n\nModelTool2.Document\nModelTool2.Document"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_APP_TITLE       "ModelTool2"
+    AFX_IDS_IDLEMESSAGE     "Ready"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_INDICATOR_EXT        "EXT"
+    ID_INDICATOR_CAPS       "CAP"
+    ID_INDICATOR_NUM        "NUM"
+    ID_INDICATOR_SCRL       "SCRL"
+    ID_INDICATOR_OVR        "OVR"
+    ID_INDICATOR_REC        "REC"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_FILE_NEW             "Create a new document\nNew"
+    ID_FILE_OPEN            "Open an existing document\nOpen"
+    ID_FILE_CLOSE           "Close the active document\nClose"
+    ID_FILE_SAVE            "Save the active document\nSave"
+    ID_FILE_SAVE_AS         "Save the active document with a new name\nSave As"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_APP_ABOUT            "Display program information, version number and copyright\nAbout"
+    ID_APP_EXIT             "Quit the application; prompts to save documents\nExit"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_FILE_MRU_FILE1       "Open this document"
+    ID_FILE_MRU_FILE2       "Open this document"
+    ID_FILE_MRU_FILE3       "Open this document"
+    ID_FILE_MRU_FILE4       "Open this document"
+    ID_FILE_MRU_FILE5       "Open this document"
+    ID_FILE_MRU_FILE6       "Open this document"
+    ID_FILE_MRU_FILE7       "Open this document"
+    ID_FILE_MRU_FILE8       "Open this document"
+    ID_FILE_MRU_FILE9       "Open this document"
+    ID_FILE_MRU_FILE10      "Open this document"
+    ID_FILE_MRU_FILE11      "Open this document"
+    ID_FILE_MRU_FILE12      "Open this document"
+    ID_FILE_MRU_FILE13      "Open this document"
+    ID_FILE_MRU_FILE14      "Open this document"
+    ID_FILE_MRU_FILE15      "Open this document"
+    ID_FILE_MRU_FILE16      "Open this document"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_NEXT_PANE            "Switch to the next window pane\nNext Pane"
+    ID_PREV_PANE            "Switch back to the previous window pane\nPrevious Pane"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_WINDOW_SPLIT         "Split the active window into panes\nSplit"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_EDIT_CLEAR           "Erase the selection\nErase"
+    ID_EDIT_CLEAR_ALL       "Erase everything\nErase All"
+    ID_EDIT_COPY            "Copy the selection and put it on the Clipboard\nCopy"
+    ID_EDIT_CUT             "Cut the selection and put it on the Clipboard\nCut"
+    ID_EDIT_FIND            "Find the specified text\nFind"
+    ID_EDIT_PASTE           "Insert Clipboard contents\nPaste"
+    ID_EDIT_REPEAT          "Repeat the last action\nRepeat"
+    ID_EDIT_REPLACE         "Replace specific text with different text\nReplace"
+    ID_EDIT_SELECT_ALL      "Select the entire document\nSelect All"
+    ID_EDIT_UNDO            "Undo the last action\nUndo"
+    ID_EDIT_REDO            "Redo the previously undone action\nRedo"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_VIEW_TOOLBAR         "Show or hide the toolbar\nToggle ToolBar"
+    ID_VIEW_STATUS_BAR      "Show or hide the status bar\nToggle StatusBar"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_SCSIZE          "Change the window size"
+    AFX_IDS_SCMOVE          "Change the window position"
+    AFX_IDS_SCMINIMIZE      "Reduce the window to an icon"
+    AFX_IDS_SCMAXIMIZE      "Enlarge the window to full size"
+    AFX_IDS_SCNEXTWINDOW    "Switch to the next document window"
+    AFX_IDS_SCPREVWINDOW    "Switch to the previous document window"
+    AFX_IDS_SCCLOSE         "Close the active window and prompts to save the documents"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_SCRESTORE       "Restore the window to normal size"
+    AFX_IDS_SCTASKLIST      "Activate Task List"
+END
+
+STRINGTABLE 
+BEGIN
+    IDR_PANE_OPTIONS        "Options"
+    IDR_PANE_PROPERTIES     "Properties"
+    IDR_PANE_CLUMP          "Clump"
+    IDR_PANE_MATERIAL       "Material"
+    IDR_PANE_ANIMSET        "AnimSet"
+    IDR_PANE_ATTACKTYPE     "AttackType"
+    IDR_PANE_BONEEDIT       "BoneEdit"
+    IDR_PANE_ANIMPLAY       "AnimPlay"
+    IDR_PANE_PROPERTY       "Properties"
+    IDR_PANE_TREEPC         "PC List"
+    IDR_PANE_BBOX           "Anim BBox"
+    IDR_PANE_TREEMOB        "MOB List"
+    IDR_PANE_TREEOBJECT     "Object List"
+    IDR_PANE_DUMMY          "Dummy Model"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_VIEW_VIEWWORLD       "View World"
+    ID_VIEW_VIEWHEIRARCHY   "View Hierarchy"
+    ID_VIEW_VIEWWIREFRAME   "View Wireframe"
+    ID_VIEW_VIEWBBOX        "View BBox"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_CAMERA_LEFTVIEW      "View Left of Model"
+    ID_CAMERA_FRONTVIEW     "View Front of Model"
+    ID_CAMERA_TOPVIEW       "View Top of Model"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_TOOL_CAMERA_SENSE    "Setup Camera Panning Sensitive"
+    ID_CAMERA_REARVIEW      "View Rear of Model"
+    ID_CAMERA_RIGHTVIEW     "View Right of Model"
+    ID_CAMERA_BOTTOMVIEW    "View Bottom of Model"
+    ID_VIEW_VIEWTOONEDGE    "Switch On/Off Toon Edge "
+    ID_TOOL_THICKNESS       "Setup Toon Thickness"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_TOOL_TOONCOLOR       "Setup Toon Ink Color"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_PANE_ITEMVIEW        "Item Equip View"
+    ID_OPTION_OBJECTCOLLISIONBOX "Render Object Coliison Mesh Enable/Disable"
+    ID_TOOLBAR_HEADSKINCOLOR "Change Character Head Skin Color"
+    ID_TOOLBAR_BODYSKINCOLOR "Change Character Body Skin Color"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_HEADSKIN_MORE        "More Colors..."
+    ID_BODYSKIN_MORE        "More Colors..."
+END
+
+STRINGTABLE 
+BEGIN
+    IDR_PANE_NAVI           "Navigation Meshs"
+    IDR_PANE_VEHICLEVIEW    "Vehicle View"
+END
+
+#endif    // ÇÑ±¹¾î resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_KOR)
+LANGUAGE 18, 1
+#pragma code_page(1252)
+#include "res\ModelTool2.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

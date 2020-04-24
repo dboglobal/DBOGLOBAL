@@ -1,0 +1,91 @@
+GameStage(0)
+--[
+	-- 대사를 띄움
+	Action( "change sps scene" )
+	--[
+		Param( "index", 4751312 )
+		Param( "play script", 4751312 )
+		Param( "play scene", 1 )
+	--]
+	End()
+
+	-- 일단 3초간 대기
+	Action( "wait" )
+	--[
+		Condition( "check time" )
+		--[
+			Param( "time", 3 )
+		--]
+		End()
+	--]
+	End()
+
+	-- 출발신호 보냄(나메칸아트 만들러 어디론가 이동)
+	Action( "send event to sps" )
+	--[
+		Param( "target type", "npc" )
+		Param( "target index", 4751312 )
+		Param( "event id", 530 )
+	--]
+	End()
+
+	-- npc이동 끝나면
+	Action( "wait" )
+	--[
+		Condition( "recv event from sps" )
+		--[
+			Param( "object type", "npc" )
+			Param( "object index", 4751312 )
+			Param( "event id", 527 )
+		--]
+		End()
+	--]
+	End()
+
+	-- npc사라짐
+	Action( "remove npc" )
+	--[
+		Param( "index", 4751312 )
+		Param( "type", "clear" )
+	--]
+	End()
+
+	-- 원래 자리에 다시 spawn
+	Action( "add npc" )
+	--[
+		Param( "index", 4751312 )
+		Param( "loc x", -1161.42 )
+		Param( "loc y", -131.96 )
+		Param( "loc z", -3853.35 )
+		Param( "dir x", 0.00 )
+		Param( "dir z", 1.00 )
+		Param( "no spawn wait", "true" )
+		Param( "stand alone", "true" )
+	--]
+	End()
+--]
+End()
+
+GameFailed()
+--[
+	Action( "remove npc" )
+	--[
+		Param( "index", 4751312 )
+		Param( "type", "clear" )
+	--]
+	End()
+	
+	Action( "add npc" )
+	--[
+		Param( "index", 4751312 )
+		Param( "loc x", -1161.42 )
+		Param( "loc y", -131.96 )
+		Param( "loc z", -3853.35 )
+		Param( "dir x", 0.00 )
+		Param( "dir z", 1.00 )
+		Param( "no spawn wait", "true" )
+		Param( "stand alone", "true" )
+	--]
+	End()
+--]
+End()

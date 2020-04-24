@@ -1,0 +1,292 @@
+-- UD2 Hard
+-- Dr. Gero clone script Battle
+-- (Also see wps 1329 and wps 20007)
+-- When Dr. Gero original clone battle begins, but the room door closing phrase of Dr. Gero clones,
+-- Since Dr. Gero clones are placed too close to the door to the room of fear abuse should comment
+
+GameStage( 0 )
+--[
+
+	-- New podongyi died waiting
+	Action( "wait" )
+	--[
+		Condition( "recv event from wps" )
+		--[
+			Param( "wps index", 23001 )
+			Param( "event id", 618 )
+		--]
+		End()
+	--]
+	End()
+
+	-- Dr. Gero spawn clones
+	Action( "add mobgroup" )
+	--[
+		Param( "group", 9 )
+		Param( "no spawn wait", "true" )
+	--]
+	End()
+	
+	-- boss stage 문을 연다
+	Action( "change object state" )
+	--[
+		Param( "index", 12 )
+		Param( "state", 1 )
+		Param( "substate show", 1 )
+	--]
+	End()
+	
+	-- Check killed Dr. Gero clones (outer loop)
+	Action( "function" )
+	--[
+		Condition( "child" )
+		--[
+			Action( "while" )
+			--[
+				Action( "loop" )
+				--[
+					-- Dr. Gero Clone Battle loosening check (inner loop)
+					Action( "function" )
+					--[
+						Condition( "child" )
+						--[
+							Action( "while" )
+							--[
+								Action( "loop" )
+								--[
+									-- 닥터 게로 클론이 전투상태에 들어갔는지 체크함
+									Action( "wait" )
+									--[
+										Condition( "check battle" )
+										--[
+											Param( "type", "mob" )
+											Param( "group", 9 )
+											Param( "is battle", "true" )
+										--]
+										End()
+									--]
+									End()
+									
+								--	-- boss stage 문을 잠근다
+								--	Action( "change object state" )
+								--	--[
+								--		Param( "index", 12 )
+								--		Param( "state", 0 )
+								--		Param( "substate show", 1 )
+								--	--]
+								--	End()
+									
+									-- When Dr. Gero clones stamina left over 80%, 19000SP summoned first Android
+									Action( "wait" )
+									--[
+										Condition( "check lp" )
+										--[
+											Param( "type", "mob" )
+											Param( "group", 9 )
+											Param( "index", 3631102 )
+											Param( "lp", 80 )
+										--]
+										End()
+									--]
+									End()
+				
+									Action( "add mobgroup" )
+									--[
+										Param( "group", 10 )
+										Param( "no spawn wait", "true" )
+									--]
+									End()
+				
+									-- 닥터 게로 클론 체력이 60% 남았을 때, 두 번째 인조인간 19000SP 소환
+									Action( "wait" )
+									--[
+										Condition( "check lp" )
+										--[
+											Param( "type", "mob" )
+											Param( "group", 9 )
+											Param( "index", 3631102 )
+											Param( "lp", 60 )
+										--]
+										End()
+									--]
+									End()
+				
+									Action( "add mobgroup" )
+									--[
+										Param( "group", 11 )
+										Param( "no spawn wait", "true" )
+									--]
+									End()
+				
+									-- 닥터 게로 클론 체력이 30% 남았을 때, 세 번째 인조인간 19000SP 소환
+									Action( "wait" )
+									--[
+										Condition( "check lp" )
+										--[
+											Param( "type", "mob" )
+											Param( "group", 9 )
+											Param( "index", 3631102 )
+											Param( "lp", 30 )
+										--]
+										End()
+									--]
+									End()
+				
+									Action( "add mobgroup" )
+									--[
+										Param( "group", 12 )
+										Param( "no spawn wait", "true" )
+									--]
+									End()
+									
+									-- Dr. Gero clones wait for death
+									-- (The Android 19000SP infinite spawn in the absence of this phrase)
+									Action( "wait" )
+									--[
+										Condition( "check mobgroup" )
+										--[
+											Param( "group", 9 )
+											Param( "count", 2 )
+										--]
+										End()
+									--]
+									End()
+									
+								-- loop 닫음
+								--]
+								End()
+							
+							-- while 닫음
+							--]
+							End()
+						-- child 닫음
+						--]
+						End()
+					
+						-- 전투상태가 풀리면 안쪽 loop에서 탈출하고, 인조인간 제거함
+						Action( "wait" )
+						--[
+							Condition( "check battle" )
+							--[
+								Param( "type", "mob" )
+								Param( "group", 9 )
+								Param( "is battle", "false" )
+							--]
+							End()
+						--]
+						End()
+						
+					--	-- boss stage 문을 연다
+					--	Action( "change object state" )
+					--	--[
+					--		Param( "index", 12 )
+					--		Param( "state", 1 )
+					--		Param( "substate show", 1 )
+					--	--]
+					--	End()
+						
+						-- 첫 번째 인조인간 19000SP 제거
+						Action( "remove mobgroup" )
+						--[
+							Param( "group", 10 )
+							Param( "type", "clear" )	
+						--]
+						End()
+						
+						-- 두 번째 인조인간 19000SP 제거
+						Action( "remove mobgroup" )
+						--[
+							Param( "group", 11 )
+							Param( "type", "clear" )
+						--]
+						End()
+							
+						-- 세 번째 인조인간 19000SP 제거
+						Action( "remove mobgroup" )
+						--[
+							Param( "group", 12 )
+							Param( "type", "clear" )
+						--]
+						End()
+
+					-- function 닫음
+					--]
+					End()
+					-- 닥터 게로 클론 전투 풀림 체크 종료
+
+				-- loop 닫음
+				--]
+				End()
+
+			-- while 닫음
+			--]
+			End()
+
+		-- child 닫음
+		--]
+		End()
+
+		-- Dr. Gero escapes death from the outer loop
+		-- Dr. Gero death does not end until the wps
+		Action( "wait" )
+		--[
+			Condition( "check mobgroup" )
+			--[
+				Param( "group", 9 )
+				Param( "count", 1 )
+			--]
+			End()
+		--]
+		End()
+		
+	-- function 닫음
+	--]
+	End()
+	-- 닥터 게로 클론 사망 체크 종료
+
+--	-- boss stage 문을 연다
+--	Action( "change object state" )
+--	--[
+--		Param( "index", 12 )
+--		Param( "state", 1 )
+--		Param( "substate show", 1 )
+--	--]
+--	End()
+	
+						
+	-- 첫 번째 인조인간 19000SP 제거
+	Action( "remove mobgroup" )
+	--[
+		Param( "group", 10 )
+		Param( "type", "clear" )	
+	--]
+	End()
+						
+	-- 두 번째 인조인간 19000SP 제거
+	Action( "remove mobgroup" )
+	--[
+		Param( "group", 11 )
+		Param( "type", "clear" )
+	--]
+	End()
+							
+	-- 세 번째 인조인간 19000SP 제거
+	Action( "remove mobgroup" )
+	--[
+		Param( "group", 12 )
+		Param( "type", "clear" )
+	--]
+	End()
+	
+	Action( "wait" )
+	--[
+		Condition( "recv event from wps" )
+		--[
+			Param( "wps index", 23000 )
+			Param( "event id", 666 )
+		--]
+		End()
+	--]
+	End()
+--]
+End()

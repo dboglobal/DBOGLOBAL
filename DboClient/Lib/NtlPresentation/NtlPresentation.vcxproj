@@ -1,0 +1,570 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Release4Client|Win32">
+      <Configuration>Release4Client</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release4Tools|Win32">
+      <Configuration>Release4Tools</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{0EC8E06B-8138-4BFD-8AF7-9CAD1F2F65AC}</ProjectGuid>
+    <RootNamespace>NtlPresentation</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release4Client|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v80</PlatformToolset>
+    <CharacterSet>NotSet</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release4Tools|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v80</PlatformToolset>
+    <CharacterSet>NotSet</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release4Client|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release4Tools|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>14.0.25431.1</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release4Client|Win32'">
+    <OutDir>$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release4Tools|Win32'">
+    <OutDir>$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release4Client|Win32'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <AdditionalIncludeDirectories>$(SolutionDir)Renderware\Include;$(SolutionDir)..\NtlLib\Shared\NtlXMLLoader;$(SolutionDir)..\NtlLib\Shared;$(SolutionDir)..\NtlLib\Shared\Util;$(SolutionDir)..\NtlLib\Shared\NtlTrigger;$(SolutionDir)Lib\Ntl_Plugin_Collis\collis;$(SolutionDir)Lib\Ntl_Plugin_Toon\toon;$(SolutionDir)Lib\Ntl_Plugin_World\driver\d3d9;..\NtlCore;..\NtlFramework;..\NtlGui;..\NtlSound;.\Addin\Devil;$(DXSDK_DIR)Include;$(SolutionDir)..\DboShared\NtlShared2;$(SolutionDir)..\DboShared\NtlGameTable;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_LIB;_CRT_SECURE_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <OpenMPSupport>false</OpenMPSupport>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>precomp_ntlpresentation.h</PrecompiledHeaderFile>
+      <WarningLevel>Level2</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4311;4312;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <BufferSecurityCheck>true</BufferSecurityCheck>
+      <MinimalRebuild>false</MinimalRebuild>
+      <WholeProgramOptimization>true</WholeProgramOptimization>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Lib>
+      <AdditionalDependencies>comsuppw.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>.\Addin\Devil;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release4Tools|Win32'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <AdditionalIncludeDirectories>$(SolutionDir)Renderware\Include;$(SolutionDir)..\NtlLib\Shared\NtlXMLLoader;$(SolutionDir)..\NtlLib\Shared;$(SolutionDir)..\NtlLib\Shared\Util;$(SolutionDir)..\NtlLib\Shared\NtlTrigger;$(SolutionDir)Lib\Ntl_Plugin_Collis\collis;$(SolutionDir)Lib\Ntl_Plugin_Toon\toon;$(SolutionDir)Lib\Ntl_Plugin_World\driver\d3d9;..\NtlCore;..\NtlFramework;..\NtlGui;..\NtlSound;.\Addin\Devil;$(DXSDK_DIR)Include;$(SolutionDir)..\DboShared\NtlShared2;$(SolutionDir)..\DboShared\NtlGameTable;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_LIB;_CRT_SECURE_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <OpenMPSupport>false</OpenMPSupport>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>precomp_ntlpresentation.h</PrecompiledHeaderFile>
+      <WarningLevel>Level2</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4311;4312;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <BufferSecurityCheck>true</BufferSecurityCheck>
+      <MinimalRebuild>false</MinimalRebuild>
+      <WholeProgramOptimization>true</WholeProgramOptimization>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Lib>
+      <AdditionalDependencies>comsuppw.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>.\Addin\Devil;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="C2DAABB.cpp" />
+    <ClCompile Include="FieldMethodImp.cpp" />
+    <ClCompile Include="FileController.cpp" />
+    <ClCompile Include="FileMem.cpp" />
+    <ClCompile Include="ISectorMethod.cpp" />
+    <ClCompile Include="ISectorMethodContainer.cpp" />
+    <ClCompile Include="LinkItemTrasformList.cpp" />
+    <ClCompile Include="NtlAnimChannel.cpp" />
+    <ClCompile Include="NtlAnimEventData.cpp" />
+    <ClCompile Include="NtlAnimLayer.cpp" />
+    <ClCompile Include="NtlCharacterXMLScript.cpp" />
+    <ClCompile Include="NtlDefaultItemData.cpp" />
+    <ClCompile Include="NtlDNController.cpp" />
+    <ClCompile Include="NtlEffectAPI.cpp" />
+    <ClCompile Include="NtlEffectSplinePath.cpp" />
+    <ClCompile Include="NtlEffectSystemFreeList.cpp" />
+    <ClCompile Include="NtlFieldColorManager.cpp" />
+    <ClCompile Include="NtlInstanceAnimData.cpp" />
+    <ClCompile Include="NtlInstanceBeamSystem.cpp" />
+    <ClCompile Include="NtlInstanceComponentSystem.cpp" />
+    <ClCompile Include="NtlInstanceDecalSystem.cpp" />
+    <ClCompile Include="NtlInstanceEffect.cpp" />
+    <ClCompile Include="NtlInstanceHurricaneSystem.cpp" />
+    <ClCompile Include="NtlInstanceImVertexSystem.cpp" />
+    <ClCompile Include="NtlInstanceLightningSystem.cpp" />
+    <ClCompile Include="NtlInstanceLineSystem.cpp" />
+    <ClCompile Include="NtlInstanceMeshSystem.cpp" />
+    <ClCompile Include="NtlInstanceParticleSystem.cpp" />
+    <ClCompile Include="NtlInstancePostEffectSystem.cpp" />
+    <ClCompile Include="NtlInstanceTraceSystem.cpp" />
+    <ClCompile Include="NtlInstanceTrailSystem.cpp" />
+    <ClCompile Include="NtlOccluderManager.cpp" />
+    <ClCompile Include="NtlPicking.cpp" />
+    <ClCompile Include="NtlPLAccelController.cpp" />
+    <ClCompile Include="NtlPLApi.cpp" />
+    <ClCompile Include="NtlPLAtomicSorter.cpp" />
+    <ClCompile Include="NtlPLAttach.cpp" />
+    <ClCompile Include="NtlPLBloom.cpp" />
+    <ClCompile Include="NtlPLCameraRenderTexture.cpp" />
+    <ClCompile Include="NtlPLCameraRT.cpp" />
+    <ClCompile Include="NtlPLCharacter.cpp" />
+    <ClCompile Include="NtlPLCharacterParser.cpp" />
+    <ClCompile Include="NtlPLCharacterProperty.cpp" />
+    <ClCompile Include="NtlPLCharMeshRenderPipe.cpp" />
+    <ClCompile Include="NtlPLCharMeshRenderPipe00.cpp" />
+    <ClCompile Include="NtlPLCharMeshRenderPipe01.cpp" />
+    <ClCompile Include="NtlPLCharMeshRenderPipeFarAway.cpp" />
+    <ClCompile Include="NtlPLChatBalloonManager.cpp" />
+    <ClCompile Include="NtlPLCinematicGui.cpp" />
+    <ClCompile Include="NtlPLCinematicObject.cpp" />
+    <ClCompile Include="NtlPLCollision.cpp" />
+    <ClCompile Include="NtlPLCullingScheduling.cpp" />
+    <ClCompile Include="NtlPLDamageBox.cpp" />
+    <ClCompile Include="NtlPLDecal.cpp" />
+    <ClCompile Include="NtlPLDecalVolume.cpp" />
+    <ClCompile Include="NtlPLDistanceFilterGroup.cpp" />
+    <ClCompile Include="NtlPLDojo.cpp" />
+    <ClCompile Include="NtlPLDojoContainer.cpp" />
+    <ClCompile Include="NtlPLDummyWorld.cpp" />
+    <ClCompile Include="NtlPLElapsedController.cpp" />
+    <ClCompile Include="NtlPLEmblemMaker.cpp" />
+    <ClCompile Include="NtlPLEmblemStuffList.cpp" />
+    <ClCompile Include="NtlPLEntity.cpp" />
+    <ClCompile Include="NtlPLEntityBlend.cpp" />
+    <ClCompile Include="NtlPLEntityFactory.cpp" />
+    <ClCompile Include="NtlPLEntityFreeList.cpp" />
+    <ClCompile Include="NtlPLEntityRenderHelpers.cpp" />
+    <ClCompile Include="NtlPLEquipItem.cpp" />
+    <ClCompile Include="NtlPLEvent.cpp" />
+    <ClCompile Include="NtlPLEventGenerator.cpp" />
+    <ClCompile Include="NtlPLEventHandler.cpp" />
+    <ClCompile Include="NtlPLFadeController.cpp" />
+    <ClCompile Include="NtlPlFog.cpp" />
+    <ClCompile Include="NtlPLGameProperty.cpp" />
+    <ClCompile Include="NtlPLGlobal.cpp" />
+    <ClCompile Include="NtlPLGui.cpp" />
+    <ClCompile Include="NtlPLGuiGroup.cpp" />
+    <ClCompile Include="NtlPLGuiManager.cpp" />
+    <ClCompile Include="NtlPLGuiProperty.cpp" />
+    <ClCompile Include="NtlPLHeatHaze.cpp" />
+    <ClCompile Include="NtlPLHelpers.cpp" />
+    <ClCompile Include="NtlPLItem.cpp" />
+    <ClCompile Include="NtlPLItemParser.cpp" />
+    <ClCompile Include="NtlPLItemProperty.cpp" />
+    <ClCompile Include="NtlPLItemUVTimeLine.cpp" />
+    <ClCompile Include="NtlPLItemXMLScript.cpp" />
+    <ClCompile Include="NtlPLLensFlare.cpp" />
+    <ClCompile Include="NtlPLLight.cpp" />
+    <ClCompile Include="NtlPLLightObject.cpp" />
+    <ClCompile Include="NtlPlLightProperty.cpp" />
+    <ClCompile Include="NtlPLLinkEffect.cpp" />
+    <ClCompile Include="NtlPLMaterialExtWrapper.cpp" />
+    <ClCompile Include="NtlPLObject.cpp" />
+    <ClCompile Include="NtlPLObjectProperty.cpp" />
+    <ClCompile Include="NtlPLObjectType.cpp" />
+    <ClCompile Include="NtlPLObjectXMLScript.cpp" />
+    <ClCompile Include="NtlPLOccluder_Base.cpp" />
+    <ClCompile Include="NtlPLOccluder_Quad.cpp" />
+    <ClCompile Include="NtlPLOptionManager.cpp" />
+    <ClCompile Include="NtlPLPalette.cpp" />
+    <ClCompile Include="NtlPLPicking.cpp" />
+    <ClCompile Include="NtlPLPlanet.cpp" />
+    <ClCompile Include="NtlPLPlanetHandler.cpp" />
+    <ClCompile Include="NtlPLPlant.cpp" />
+    <ClCompile Include="NtlPLPlantProperty.cpp" />
+    <ClCompile Include="NtlPLPlayerName.cpp" />
+    <ClCompile Include="NtlPLProfilerGui.cpp" />
+    <ClCompile Include="NtlPLPropertyContainer.cpp" />
+    <ClCompile Include="NtlPLRandDistribution.cpp" />
+    <ClCompile Include="NtlPLRefractionEffect.cpp" />
+    <ClCompile Include="NtlPLRenderCallback.cpp" />
+    <ClCompile Include="NtlPLRenderGeometry.cpp" />
+    <ClCompile Include="NtlPLRenderGroup.cpp" />
+    <ClCompile Include="NtlPLRenderState.cpp" />
+    <ClCompile Include="NtlPLResourceManager.cpp" />
+    <ClCompile Include="NtlPLResourcePack.cpp" />
+    <ClCompile Include="NtlPLResourceScheduling.cpp" />
+    <ClCompile Include="NtlPLSceneChangerGui.cpp" />
+    <ClCompile Include="NtlPLSceneManagerFactroy.cpp" />
+    <ClCompile Include="NtlPLShoreLine.cpp" />
+    <ClCompile Include="NtlPLShoreLineProp.cpp" />
+    <ClCompile Include="NtlPLSky.cpp" />
+    <ClCompile Include="NtlPLSkyDragon.cpp" />
+    <ClCompile Include="NtlPLSkySphere.cpp" />
+    <ClCompile Include="NtlPLSoftSpot.cpp" />
+    <ClCompile Include="NtlPLSound.cpp" />
+    <ClCompile Include="NtlPLSoundProp.cpp" />
+    <ClCompile Include="NtlPLSun.cpp" />
+    <ClCompile Include="NtlPLUVAnim.cpp" />
+    <ClCompile Include="NtlPLVisualManager.cpp" />
+    <ClCompile Include="NtlPLWater.cpp" />
+    <ClCompile Include="NtlPLWaterProp.cpp" />
+    <ClCompile Include="NtlPLWeather.cpp" />
+    <ClCompile Include="NtlPLWeatherController.cpp" />
+    <ClCompile Include="NtlPLWeatherDefine.cpp" />
+    <ClCompile Include="NtlPLWeatherHandler.cpp" />
+    <ClCompile Include="NtlPLWeatherProperty.cpp" />
+    <ClCompile Include="NtlPLWorldDecal.cpp" />
+    <ClCompile Include="NtlPLWorldEntity.cpp" />
+    <ClCompile Include="NtlPLWorldLight_Base.cpp" />
+    <ClCompile Include="NtlPLWorldLight_Box.cpp" />
+    <ClCompile Include="NtlPLWorldLight_Sphere.cpp" />
+    <ClCompile Include="NtlPLWorldProp.cpp" />
+    <ClCompile Include="NtlPLWorldState.cpp" />
+    <ClCompile Include="NtlPLXMLScriptHelper.cpp" />
+    <ClCompile Include="NtlPostEffectCamera.cpp" />
+    <ClCompile Include="NtlResourceBeamSystem.cpp" />
+    <ClCompile Include="NtlResourceComponentSystem.cpp" />
+    <ClCompile Include="NtlResourceDecalSystem.cpp" />
+    <ClCompile Include="NtlResourceEffect.cpp" />
+    <ClCompile Include="NtlResourceHurricaneSystem.cpp" />
+    <ClCompile Include="NtlResourceImVertexSystem.cpp" />
+    <ClCompile Include="NtlResourceLightningSystem.cpp" />
+    <ClCompile Include="NtlResourceLineSystem.cpp" />
+    <ClCompile Include="NtlResourceMeshSystem.cpp" />
+    <ClCompile Include="NtlResourceParticleSystem.cpp" />
+    <ClCompile Include="NtlResourcePostEffectSystem.cpp" />
+    <ClCompile Include="NtlSpawnMergeManager.cpp" />
+    <ClCompile Include="NtlSpecularManager.cpp" />
+    <ClCompile Include="NtlTypeAnimData.cpp" />
+    <ClCompile Include="NtlWorldBGMManager.cpp" />
+    <ClCompile Include="NtlWorldBlockManager.cpp" />
+    <ClCompile Include="NtlWorldBrush.cpp" />
+    <ClCompile Include="NtlWorldBrush3DCircle.cpp" />
+    <ClCompile Include="NtlWorldBrushController.cpp" />
+    <ClCompile Include="ntlworldcommon.cpp" />
+    <ClCompile Include="NtlWorldField.cpp" />
+    <ClCompile Include="ntlworldfieldinfo.cpp" />
+    <ClCompile Include="NtlWorldFieldManager.cpp" />
+    <ClCompile Include="NtlWorldFieldManager4RWWorld.cpp" />
+    <ClCompile Include="NtlWorldFileAccessor.cpp" />
+    <ClCompile Include="NtlWorldFileMemAccessor.cpp" />
+    <ClCompile Include="ntlworldinterface.cpp" />
+    <ClCompile Include="NtlWorldLTManager.cpp" />
+    <ClCompile Include="NtlWorldMaterialPlugin.cpp" />
+    <ClCompile Include="NtlWorldMergeManager.cpp" />
+    <ClCompile Include="NtlWorldPaletteDefine.cpp" />
+    <ClCompile Include="NtlWorldPathEngineManager.cpp" />
+    <ClCompile Include="ntlworldplugin.cpp" />
+    <ClCompile Include="NtlWorldRpLightManager.cpp" />
+    <ClCompile Include="NtlWorldSchedule.cpp" />
+    <ClCompile Include="NtlWorldSector.cpp" />
+    <ClCompile Include="ntlworldsectorinfo.cpp" />
+    <ClCompile Include="NtlWorldSectorLOD.cpp" />
+    <ClCompile Include="NtlWorldSectorManager.cpp" />
+    <ClCompile Include="NtlWorldSectorPVS.cpp" />
+    <ClCompile Include="NtlWorldShadow.cpp" />
+    <ClCompile Include="NtlWorldShadowManager.cpp" />
+    <ClCompile Include="NtlWorldSLManger.cpp" />
+    <ClCompile Include="OccluderProxy.cpp" />
+    <ClCompile Include="PathList.cpp" />
+    <ClCompile Include="PathPoint.cpp" />
+    <ClCompile Include="precomp_ntlpresentation.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release4Client|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release4Tools|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="SectorMethodImp.cpp" />
+    <ClCompile Include="SM_GetAABB.cpp" />
+    <ClCompile Include="SM_GetDoodadNum.cpp" />
+    <ClCompile Include="SM_GetRuleOutDoodad.cpp" />
+    <ClCompile Include="SM_GetRuleOutWater.cpp" />
+    <ClCompile Include="SM_GetTileTransparency.cpp" />
+    <ClCompile Include="SM_SplatTexMaxBlend.cpp" />
+    <ClCompile Include="SM_SplatTexMinBlend.cpp" />
+    <ClCompile Include="Spawn.cpp" />
+    <ClCompile Include="SpawnContainer.cpp" />
+    <ClCompile Include="SpawnInstNode.cpp" />
+    <ClCompile Include="SpawnMacro.cpp" />
+    <ClCompile Include="SpawnMacroManager.cpp" />
+    <ClCompile Include="SpawnMOB.cpp" />
+    <ClCompile Include="SpawnNPC.cpp" />
+    <ClCompile Include="SpawnParty.cpp" />
+    <ClCompile Include="SpawnPartyPath.cpp" />
+    <ClCompile Include="SpawnTreeNode.cpp" />
+    <ClCompile Include="TextureStageStateView.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C2DAABB.h" />
+    <ClInclude Include="FieldMethodImp.h" />
+    <ClInclude Include="FileController.h" />
+    <ClInclude Include="FileMem.h" />
+    <ClInclude Include="ISectorMethod.h" />
+    <ClInclude Include="ISectorMethodContainer.h" />
+    <ClInclude Include="LinkItemTrasformList.h" />
+    <ClInclude Include="NtlAnimChannel.h" />
+    <ClInclude Include="NtlAnimEventData.h" />
+    <ClInclude Include="NtlAnimLayer.h" />
+    <ClInclude Include="NtlCharacterData.h" />
+    <ClInclude Include="NtlCharacterXMLScript.h" />
+    <ClInclude Include="NtlDefaultItemData.h" />
+    <ClInclude Include="NtlDNController.h" />
+    <ClInclude Include="NtlEffectAPI.h" />
+    <ClInclude Include="NtlEffectDefine.h" />
+    <ClInclude Include="NtlEffectSplinePath.h" />
+    <ClInclude Include="NtlEffectSystemFreeList.h" />
+    <ClInclude Include="NtlFieldColorManager.h" />
+    <ClInclude Include="NtlInstanceAnimData.h" />
+    <ClInclude Include="NtlInstanceBeamSystem.h" />
+    <ClInclude Include="NtlInstanceComponentSystem.h" />
+    <ClInclude Include="NtlInstanceDecalSystem.h" />
+    <ClInclude Include="NtlInstanceEffect.h" />
+    <ClInclude Include="NtlInstanceHurricaneSystem.h" />
+    <ClInclude Include="NtlInstanceImVertexSystem.h" />
+    <ClInclude Include="NtlInstanceLightningSystem.h" />
+    <ClInclude Include="NtlInstanceLineSystem.h" />
+    <ClInclude Include="NtlInstanceMeshSystem.h" />
+    <ClInclude Include="NtlInstanceParticleSystem.h" />
+    <ClInclude Include="NtlInstancePostEffectSystem.h" />
+    <ClInclude Include="NtlInstanceTraceSystem.h" />
+    <ClInclude Include="NtlInstanceTrailSystem.h" />
+    <ClInclude Include="NtlOccluderManager.h" />
+    <ClInclude Include="NtlPicking.h" />
+    <ClInclude Include="NtlPLAccelController.h" />
+    <ClInclude Include="NtlPLApi.h" />
+    <ClInclude Include="NtlPLAtomicSorter.h" />
+    <ClInclude Include="NtlPLAttach.h" />
+    <ClInclude Include="NtlPLBloom.h" />
+    <ClInclude Include="NtlPLCameraRenderTexture.h" />
+    <ClInclude Include="NtlPLCameraRT.h" />
+    <ClInclude Include="NtlPLCharacter.h" />
+    <ClInclude Include="NtlPLCharacterParser.h" />
+    <ClInclude Include="NtlPLCharacterProperty.h" />
+    <ClInclude Include="NtlPLCharMeshRenderPipe.h" />
+    <ClInclude Include="NtlPLCharMeshRenderPipe00.h" />
+    <ClInclude Include="NtlPLCharMeshRenderPipe01.h" />
+    <ClInclude Include="NtlPLCharMeshRenderPipeFarAway.h" />
+    <ClInclude Include="NtlPLChatBalloonManager.h" />
+    <CustomBuild Include="NtlPLCinematicGui.h" />
+    <CustomBuild Include="NtlPLCinematicObject.h" />
+    <ClInclude Include="NtlPLCollision.h" />
+    <ClInclude Include="NtlPLCullingScheduling.h" />
+    <ClInclude Include="NtlPLDamageBox.h" />
+    <ClInclude Include="NtlPLDecal.h" />
+    <ClInclude Include="NtlPLDecalVolume.h" />
+    <ClInclude Include="NtlPLDef.h" />
+    <ClInclude Include="NtlPLDistanceFilterGroup.h" />
+    <ClInclude Include="NtlPLDojo.h" />
+    <ClInclude Include="NtlPLDojoContainer.h" />
+    <ClInclude Include="NtlPLDummyWorld.h" />
+    <ClInclude Include="NtlPLElapsedController.h" />
+    <ClInclude Include="NtlPLEmblemMaker.h" />
+    <ClInclude Include="NtlPLEmblemStuffList.h" />
+    <ClInclude Include="NtlPLEntity.h" />
+    <ClInclude Include="NtlPLEntityBlend.h" />
+    <ClInclude Include="NtlPLEntityFactory.h" />
+    <ClInclude Include="NtlPLEntityFreeList.h" />
+    <ClInclude Include="NtlPLEntityRenderHelpers.h" />
+    <ClInclude Include="NtlPLEquipItem.h" />
+    <ClInclude Include="NtlPLEvent.h" />
+    <ClInclude Include="NtlPLEventGenerator.h" />
+    <ClInclude Include="NtlPLEventHandler.h" />
+    <ClInclude Include="NtlPLFadeController.h" />
+    <ClInclude Include="NtlPlFog.h" />
+    <ClInclude Include="NtlPLGameProperty.h" />
+    <ClInclude Include="NtlPLGlobal.h" />
+    <ClInclude Include="NtlPLGui.h" />
+    <CustomBuild Include="NtlPLGuiGroup.h" />
+    <ClInclude Include="NtlPLGuiManager.h" />
+    <ClInclude Include="NtlPLGuiProperty.h" />
+    <ClInclude Include="NtlPLHeatHaze.h" />
+    <ClInclude Include="NtlPLHelpers.h" />
+    <ClInclude Include="NtlPLItem.h" />
+    <ClInclude Include="NtlPLItemData.h" />
+    <ClInclude Include="NtlPLItemParser.h" />
+    <ClInclude Include="NtlPLItemProperty.h" />
+    <ClInclude Include="NtlPLItemUVTimeLine.h" />
+    <ClInclude Include="NtlPLItemXMLScript.h" />
+    <ClInclude Include="NtlPLLensFlare.h" />
+    <ClInclude Include="NtlPLLight.h" />
+    <ClInclude Include="NtlPLLightObject.h" />
+    <ClInclude Include="NtlPlLightProperty.h" />
+    <ClInclude Include="NtlPLLinkEffect.h" />
+    <ClInclude Include="NtlPLMaterialExtWrapper.h" />
+    <ClInclude Include="NtlPLObject.h" />
+    <ClInclude Include="NtlPLObjectProperty.h" />
+    <ClInclude Include="NtlPLObjectType.h" />
+    <ClInclude Include="NtlPLObjectXMLScript.h" />
+    <ClInclude Include="NtlPLOccluder_Base.h" />
+    <ClInclude Include="NtlPLOccluder_Quad.h" />
+    <ClInclude Include="NtlPLOptionManager.h" />
+    <ClInclude Include="NtlPLPalette.h" />
+    <ClInclude Include="NtlPLPicking.h" />
+    <ClInclude Include="NtlPLPlanet.h" />
+    <ClInclude Include="NtlPLPlanetHandler.h" />
+    <ClInclude Include="NtlPLPlant.h" />
+    <ClInclude Include="NtlPLPlantProperty.h" />
+    <ClInclude Include="NtlPLPlayerName.h" />
+    <ClInclude Include="NtlPLProfilerGui.h" />
+    <ClInclude Include="NtlPLProperty.h" />
+    <ClInclude Include="NtlPLPropertyContainer.h" />
+    <ClInclude Include="NtlPLRandDistribution.h" />
+    <ClInclude Include="NtlPLRefractionEffect.h" />
+    <ClInclude Include="NtlPLRenderCallback.h" />
+    <ClInclude Include="NtlPLRenderGeometry.h" />
+    <ClInclude Include="NtlPLRenderGroup.h" />
+    <ClInclude Include="NtlPLRenderState.h" />
+    <ClInclude Include="NtlPLResource.h" />
+    <ClInclude Include="NtlPLResourceManager.h" />
+    <ClInclude Include="NtlPLResourcePack.h" />
+    <ClInclude Include="NtlPLResourceScheduling.h" />
+    <CustomBuild Include="NtlPLSceneChangerGui.h" />
+    <ClInclude Include="NtlPLSceneManager.h" />
+    <ClInclude Include="NtlPLSceneManagerFactory.h" />
+    <ClInclude Include="NtlPLShoreLine.h" />
+    <ClInclude Include="NtlPLShoreLineProp.h" />
+    <ClInclude Include="NtlPLSky.h" />
+    <ClInclude Include="NtlPLSkyDragon.h" />
+    <ClInclude Include="NtlPLSkySphere.h" />
+    <ClInclude Include="NtlPLSoftSpot.h" />
+    <ClInclude Include="NtlPLSound.h" />
+    <ClInclude Include="NtlPLSoundProp.h" />
+    <ClInclude Include="NtlPLSun.h" />
+    <ClInclude Include="NtlPLUVAnim.h" />
+    <ClInclude Include="NtlPLVisualManager.h" />
+    <ClInclude Include="NtlPLWater.h" />
+    <ClInclude Include="NtlPLWaterProp.h" />
+    <ClInclude Include="NtlPLWeather.h" />
+    <ClInclude Include="NtlPLWeatherController.h" />
+    <ClInclude Include="NtlPLWeatherDefine.h" />
+    <ClInclude Include="NtlPLWeatherHandler.h" />
+    <ClInclude Include="NtlPLWeatherProperty.h" />
+    <ClInclude Include="NtlPLWorldDecal.h" />
+    <ClInclude Include="NtlPLWorldEntity.h" />
+    <ClInclude Include="NtlPLWorldLight_Base.h" />
+    <ClInclude Include="NtlPLWorldLight_Box.h" />
+    <ClInclude Include="NtlPLWorldLight_Sphere.h" />
+    <ClInclude Include="NtlPLWorldProp.h" />
+    <ClInclude Include="NtlPLWorldState.h" />
+    <ClInclude Include="NtlPLXMLScriptHelper.h" />
+    <ClInclude Include="NtlPostEffectCamera.h" />
+    <ClInclude Include="NtlResourceBeamSystem.h" />
+    <ClInclude Include="NtlResourceComponentSystem.h" />
+    <ClInclude Include="NtlResourceDecalSystem.h" />
+    <ClInclude Include="NtlResourceEffect.h" />
+    <ClInclude Include="NtlResourceHurricaneSystem.h" />
+    <ClInclude Include="NtlResourceImVertexSystem.h" />
+    <ClInclude Include="NtlResourceLightningSystem.h" />
+    <ClInclude Include="NtlResourceLineSystem.h" />
+    <ClInclude Include="NtlResourceMeshSystem.h" />
+    <ClInclude Include="NtlResourceParticleSystem.h" />
+    <ClInclude Include="NtlResourcePostEffectSystem.h" />
+    <ClInclude Include="NtlSpawnMergeManager.h" />
+    <ClInclude Include="NtlSpecularManager.h" />
+    <ClInclude Include="NtlTypeAnimData.h" />
+    <ClInclude Include="NtlWorldBGMManager.h" />
+    <ClInclude Include="NtlWorldBlockManager.h" />
+    <ClInclude Include="NtlWorldBrush.h" />
+    <ClInclude Include="NtlWorldBrush2DCircle.h" />
+    <ClInclude Include="NtlWorldBrush3DCircle.h" />
+    <ClInclude Include="NtlWorldBrushCircle.h" />
+    <ClInclude Include="NtlWorldBrushController.h" />
+    <ClInclude Include="NtlWorldBrushFrustum.h" />
+    <ClInclude Include="NtlWorldBrushLine.h" />
+    <ClInclude Include="NtlWorldBrushRectangle.h" />
+    <ClInclude Include="NtlWorldBrushRectangleInDetail.h" />
+    <ClInclude Include="NtlWorldBrushRoad.h" />
+    <ClInclude Include="NtlWorldBrushTile.h" />
+    <ClInclude Include="NtlWorldBrushTileEx.h" />
+    <ClInclude Include="ntlworldcommon.h" />
+    <ClInclude Include="NtlWorldField.h" />
+    <ClInclude Include="ntlworldfieldinfo.h" />
+    <ClInclude Include="NtlWorldFieldManager.h" />
+    <ClInclude Include="NtlWorldFieldManager4RWWorld.h" />
+    <ClInclude Include="NtlWorldFileAccessor.h" />
+    <ClInclude Include="NtlWorldFileMemAccessor.h" />
+    <ClInclude Include="ntlworldinterface.h" />
+    <ClInclude Include="NtlWorldLTManager.h" />
+    <ClInclude Include="NtlWorldMaterialPlugin.h" />
+    <ClInclude Include="NtlWorldMergeManager.h" />
+    <ClInclude Include="NtlWorldPaletteDefine.h" />
+    <ClInclude Include="NtlWorldPathEngineManager.h" />
+    <ClInclude Include="ntlworldplugin.h" />
+    <ClInclude Include="NtlWorldRpLightManager.h" />
+    <ClInclude Include="NtlWorldSchedule.h" />
+    <ClInclude Include="NtlWorldSector.h" />
+    <ClInclude Include="ntlworldsectorinfo.h" />
+    <ClInclude Include="NtlWorldSectorLOD.h" />
+    <ClInclude Include="NtlWorldSectorLODStaticIB.h" />
+    <ClInclude Include="NtlWorldSectorManager.h" />
+    <ClInclude Include="NtlWorldSectorPVS.h" />
+    <ClInclude Include="NtlWorldShadow.h" />
+    <ClInclude Include="NtlWorldShadowManager.h" />
+    <ClInclude Include="NtlWorldSLManger.h" />
+    <ClInclude Include="OccluderProxy.h" />
+    <ClInclude Include="PathList.h" />
+    <ClInclude Include="PathPoint.h" />
+    <ClInclude Include="precomp_ntlpresentation.h" />
+    <ClInclude Include="SectorMethodImp.h" />
+    <ClInclude Include="SM_GetAABB.h" />
+    <ClInclude Include="SM_GetDoodadNum.h" />
+    <ClInclude Include="SM_GetRuleOutDoodad.h" />
+    <ClInclude Include="SM_GetRuleOutWater.h" />
+    <ClInclude Include="SM_GetTileTransparency.h" />
+    <ClInclude Include="SM_SplatTexMaxBlend.h" />
+    <ClInclude Include="SM_SplatTexMinBlend.h" />
+    <ClInclude Include="Spawn.h" />
+    <ClInclude Include="SpawnContainer.h" />
+    <ClInclude Include="SpawnInstNode.h" />
+    <ClInclude Include="SpawnMacro.h" />
+    <ClInclude Include="SpawnMacroManager.h" />
+    <ClInclude Include="SpawnMOB.h" />
+    <ClInclude Include="SpawnNPC.h" />
+    <ClInclude Include="SpawnParty.h" />
+    <ClInclude Include="SpawnPartyPath.h" />
+    <ClInclude Include="SpawnTreeNode.h" />
+    <ClInclude Include="TextureStageStateView.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Doc\Effect Library.doc" />
+    <None Include="Doc\Effect Library.vsd" />
+    <None Include="NtlWorldSectorLOD.inl" />
+  </ItemGroup>
+  <ItemGroup>
+    <Xml Include="Doc\Palette.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\NtlCore\NtlCore.vcxproj">
+      <Project>{2d91cafc-1814-4cb4-b844-4e55f937d051}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\Ntl_Plugin_Collis\Ntl_Plugin_Collis.vcxproj">
+      <Project>{4bd7b6fb-4afc-4880-a136-3b59f384ed9e}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\Ntl_Plugin_Toon\Ntl_Plugin_Toon.vcxproj">
+      <Project>{0a07ccc0-9f5d-4e94-b7d6-68bd00dfd37d}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

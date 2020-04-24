@@ -1,0 +1,70 @@
+<content majorRelease="5" minorRelease="2">
+	<mesh>
+		<vertex x="-4" y="-27" z="0"/>
+		<vertex x="4" y="-27" z="0"/>
+		<vertex x="12" y="-27" z="0"/>
+		<vertex x="-62" y="-14" z="0"/>
+		<vertex x="-4" y="-14" z="0"/>
+		<vertex x="4" y="-14" z="0"/>
+		<vertex x="12" y="-14" z="0"/>
+		<vertex x="-62" y="0" z="0"/>
+		<vertex x="-4" y="0" z="0"/>
+		<vertex x="4" y="0" z="0"/>
+		<vertex x="12" y="0" z="0"/>
+		<vertex x="-62" y="12" z="0"/>
+		<vertex x="-4" y="12" z="0"/>
+		<vertex x="4" y="12" z="0"/>
+		<vertex x="12" y="12" z="0"/>
+		<vertex x="-47" y="-27" z="x41b5900f"/>
+		<vertex x="-47" y="-14" z="x41b5900f"/>
+		<vertex x="-60" y="-27" z="x41b5900f"/>
+		<vertex x="-60" y="-14" z="x41b5900f"/>
+		<vertex x="-47" y="-9" z="x41b5900f"/>
+		<vertex x="-23" y="-9" z="x41b5900f"/>
+		<vertex x="-23" y="14" z="x41b5900f"/>
+		<vertex x="-59" y="14" z="x41b5900f"/>
+		<vertex x="-51" y="14" z="x41b5900f"/>
+		<vertex x="-32" y="14" z="x41b5900f"/>
+		<vertex x="-51" y="25" z="x41b5900f"/>
+		<vertex x="-32" y="25" z="x41b5900f"/>
+		<face v1="5" v2="0" v3="4"/>
+		<face v1="0" v2="5" v3="1"/>
+		<face v1="6" v2="1" v3="5"/>
+		<face v1="1" v2="6" v3="2"/>
+		<face v1="8" v2="3" v3="7"/>
+		<face v1="3" v2="8" v3="4"/>
+		<face v1="9" v2="4" v3="8"/>
+		<face v1="4" v2="9" v3="5"/>
+		<face v1="10" v2="5" v3="9"/>
+		<face v1="5" v2="10" v3="6"/>
+		<face v1="12" v2="7" v3="11"/>
+		<face v1="7" v2="12" v3="8"/>
+		<face v1="13" v2="8" v3="12"/>
+		<face v1="8" v2="13" v3="9"/>
+		<face v1="14" v2="9" v3="13"/>
+		<face v1="9" v2="14" v3="10"/>
+		<face v1="0" v2="16" v3="4"/>
+		<face v1="15" v2="16" v3="0"/>
+		<face v1="17" v2="18" v3="16"/>
+		<face v1="15" v2="17" v3="16"/>
+		<face v1="18" v2="22" v3="19"/>
+		<face v1="16" v2="18" v3="19"/>
+		<face v1="22" v2="23" v3="19"/>
+		<face v1="23" v2="24" v3="19"/>
+		<face v1="21" v2="20" v3="19"/>
+		<face v1="24" v2="21" v3="19"/>
+		<face v1="23" v2="25" v3="26"/>
+		<face v1="24" v2="23" v3="26"/>
+	</mesh>
+	<anchorsAndPinnedShapes>
+		<anchors>
+			<anchor x="-50" y="-9" zStart="x41a7b1c1" zEnd="x41dbce0d" orientation="0"/>
+			<anchor x="-3" y="0" zStart="xc121e55f" zEnd="x3fc2ea59" orientation="0"/>
+			<anchor name="startPosition" x="-29" y="1" zStart="x4183b925" zEnd="x41d3b925" orientation="367468"/>
+		</anchors>
+		<pinnedShapes>
+			<pinnedShape name="door" anchorIndex="0" vertices="2,0,-8,1,-8,-1,2,-1" _type="1"/>
+			<pinnedShape anchorIndex="1" vertices="5,0,2,4,-4,4,-7,0,-4,-6,2,-6"/>
+		</pinnedShapes>
+	</anchorsAndPinnedShapes>
+</content>

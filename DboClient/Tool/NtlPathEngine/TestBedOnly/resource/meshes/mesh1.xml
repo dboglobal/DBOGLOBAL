@@ -1,0 +1,760 @@
+<mesh majorRelease="4" minorRelease="51">
+	<mesh3D>
+		<verts>
+			<vert x="233" y="53" z="58"/>
+			<vert x="-88" y="-53" z="45"/>
+			<vert x="-88" y="53" z="46"/>
+			<vert x="-205" y="125" z="-18"/>
+			<vert x="-198" y="-88" z="-18"/>
+			<vert x="-296" y="125" z="-18"/>
+			<vert x="-286" y="-92" z="-18"/>
+			<vert x="-198" y="-170" z="-18"/>
+			<vert x="0" y="-165" z="-18"/>
+			<vert x="31" y="-82" z="-18"/>
+			<vert x="122" y="-72" z="-18"/>
+			<vert x="23" y="71" z="-18"/>
+			<vert x="118" y="72" z="-18"/>
+			<vert x="24" y="162" z="-18"/>
+			<vert x="-189" y="196" z="-17"/>
+			<vert x="155" y="-52" z="59"/>
+			<vert x="234" y="-53" z="56"/>
+			<vert x="231" y="-230" z="58"/>
+			<vert x="147" y="-154" z="58"/>
+			<vert x="161" y="-227" z="60"/>
+			<vert x="-281" y="-150" z="58"/>
+			<vert x="-142" y="-243" z="58"/>
+			<vert x="-280" y="-221" z="58"/>
+			<vert x="-202" y="-358" z="40"/>
+			<vert x="-90" y="-359" z="59"/>
+			<vert x="-150" y="-453" z="40"/>
+			<vert x="-68" y="-387" z="40"/>
+			<vert x="-66" y="-507" z="23"/>
+			<vert x="-43" y="-404" z="23"/>
+			<vert x="32" y="-496" z="5"/>
+			<vert x="-13" y="-401" z="5"/>
+			<vert x="103" y="-426" z="-12"/>
+			<vert x="7" y="-381" z="-12"/>
+			<vert x="491" y="76" z="-64"/>
+			<vert x="388" y="126" z="-65"/>
+			<vert x="727" y="213" z="-64"/>
+			<vert x="661" y="301" z="-65"/>
+			<vert x="746" y="188" z="-64"/>
+			<vert x="1279" y="136" z="-64"/>
+			<vert x="1070" y="120" z="-64"/>
+			<vert x="621" y="354" z="-65"/>
+			<vert x="603" y="378" z="-65"/>
+			<vert x="397" y="751" z="-64"/>
+			<vert x="-492" y="753" z="-103"/>
+			<vert x="398" y="851" z="-64"/>
+			<vert x="-589" y="753" z="-103"/>
+			<vert x="-583" y="848" z="-64"/>
+			<vert x="948" y="111" z="-64"/>
+			<vert x="939" y="-1041" z="-101"/>
+			<vert x="938" y="-932" z="-101"/>
+			<vert x="1062" y="-1041" z="-64"/>
+			<vert x="603" y="-22" z="-35"/>
+			<vert x="701" y="-124" z="-35"/>
+			<vert x="587" y="-928" z="-91"/>
+			<vert x="703" y="-23" z="-35"/>
+			<vert x="687" y="-929" z="-88"/>
+			<vert x="903" y="-27" z="47"/>
+			<vert x="901" y="-127" z="47"/>
+			<vert x="1003" y="-29" z="47"/>
+			<vert x="1001" y="-129" z="47"/>
+			<vert x="998" y="-329" z="126"/>
+			<vert x="898" y="-327" z="126"/>
+			<vert x="-481" y="-139" z="-142"/>
+			<vert x="-582" y="-40" z="-141"/>
+			<vert x="-581" y="-140" z="-142"/>
+			<vert x="-781" y="-142" z="-59"/>
+			<vert x="-782" y="-42" z="-59"/>
+			<vert x="-881" y="-142" z="-59"/>
+			<vert x="-882" y="-42" z="-59"/>
+			<vert x="-884" y="157" z="19"/>
+			<vert x="-784" y="158" z="19"/>
+			<vert x="-482" y="-1035" z="-143"/>
+			<vert x="-583" y="-936" z="-143"/>
+			<vert x="-582" y="-1036" z="-143"/>
+			<vert x="-782" y="-1038" z="-60"/>
+			<vert x="-783" y="-938" z="-60"/>
+			<vert x="-882" y="-1038" z="-60"/>
+			<vert x="-883" y="-938" z="-60"/>
+			<vert x="-882" y="-738" z="20"/>
+			<vert x="-778" y="-737" z="18"/>
+			<vert x="34" y="-1024" z="-35"/>
+			<vert x="135" y="-925" z="-35"/>
+			<vert x="35" y="-924" z="-35"/>
+			<vert x="36" y="-724" z="47"/>
+			<vert x="137" y="-725" z="47"/>
+			<vert x="37" y="-624" z="47"/>
+			<vert x="137" y="-625" z="47"/>
+			<vert x="338" y="-626" z="126"/>
+			<vert x="337" y="-726" z="126"/>
+			<vert x="-491" y="-656" z="202"/>
+			<vert x="-379" y="402" z="187"/>
+			<vert x="-492" y="-756" z="203"/>
+			<vert x="-477" y="503" z="187"/>
+			<vert x="-377" y="502" z="187"/>
+			<vert x="-393" y="-760" z="207"/>
+			<vert x="-177" y="498" z="78"/>
+			<vert x="-177" y="398" z="78"/>
+			<vert x="-77" y="496" z="78"/>
+			<vert x="-78" y="396" z="78"/>
+			<vert x="-88" y="196" z="-14"/>
+			<vert x="-1177" y="-1030" z="227"/>
+			<vert x="-1078" y="-930" z="227"/>
+			<vert x="418" y="-996" z="127"/>
+			<vert x="-1178" y="-930" z="227"/>
+			<vert x="395" y="-919" z="127"/>
+			<vert x="-1180" y="-730" z="118"/>
+			<vert x="-1079" y="-729" z="118"/>
+			<vert x="-1180" y="-630" z="118"/>
+			<vert x="-1080" y="-629" z="118"/>
+			<vert x="-868" y="-643" z="24"/>
+			<vert x="-774" y="-647" z="18"/>
+			<vert x="-1041" y="285" z="17"/>
+			<vert x="-1047" y="598" z="17"/>
+			<vert x="-803" y="708" z="17"/>
+			<vert x="-206" y="360" z="17"/>
+			<vert x="-310" y="163" z="17"/>
+			<vert x="-270" y="639" z="17"/>
+			<vert x="436" y="-1042" z="128"/>
+			<vert x="518" y="-403" z="128"/>
+			<vert x="819" y="-1039" z="128"/>
+			<vert x="1180" y="-1051" z="128"/>
+			<vert x="1179" y="-356" z="128"/>
+			<vert x="987" y="280" z="-64"/>
+			<vert x="788" y="220" z="-64"/>
+			<vert x="795" y="387" z="-64"/>
+			<vert x="706" y="329" z="-64"/>
+			<vert x="659" y="391" z="-65"/>
+			<vert x="878" y="491" z="-64"/>
+			<vert x="760" y="491" z="-64"/>
+			<vert x="1097" y="471" z="-64"/>
+			<vert x="1019" y="457" z="-64"/>
+			<vert x="945" y="491" z="-64"/>
+			<vert x="983" y="481" z="-64"/>
+			<vert x="1290" y="1009" z="-64"/>
+			<vert x="1086" y="532" z="-64"/>
+			<vert x="1008" y="518" z="-64"/>
+			<vert x="698" y="658" z="-64"/>
+			<vert x="931" y="658" z="-64"/>
+			<vert x="400" y="1020" z="-64"/>
+			<vert x="579" y="688" z="-64"/>
+			<vert x="526" y="734" z="-64"/>
+			<vert x="522" y="324" z="-65"/>
+			<vert x="488" y="324" z="-65"/>
+			<vert x="945" y="658" z="-64"/>
+			<vert x="945" y="575" z="-64"/>
+			<vert x="469" y="667" z="-64"/>
+			<vert x="417" y="324" z="-65"/>
+			<vert x="391" y="324" z="-65"/>
+			<vert x="522" y="621" z="-64"/>
+			<vert x="433" y="430" z="-64"/>
+			<vert x="522" y="430" z="-64"/>
+			<vert x="783" y="227" z="-64"/>
+			<vert x="698" y="491" z="-64"/>
+			<vert x="638" y="419" z="-64"/>
+			<vert x="592" y="480" z="-64"/>
+			<vert x="550" y="448" z="-64"/>
+			<vert x="522" y="393" z="-65"/>
+			<vert x="392" y="430" z="-64"/>
+		</verts>
+		<tris>
+			<tri edge0StartVert="0" edge1StartVert="1" edge2StartVert="2"/>
+			<tri edge0StartVert="3" edge1StartVert="2" edge1Connection="0" edge2StartVert="1"/>
+			<tri edge0StartVert="4" edge1StartVert="3" edge1Connection="1" edge2StartVert="1"/>
+			<tri edge0StartVert="5" edge1StartVert="3" edge1Connection="2" edge2StartVert="4"/>
+			<tri edge0StartVert="6" edge1StartVert="5" edge1Connection="3" edge2StartVert="4"/>
+			<tri edge0StartVert="7" edge1StartVert="6" edge1Connection="4" edge2StartVert="4"/>
+			<tri edge0StartVert="8" edge1StartVert="7" edge1Connection="5" edge2StartVert="4"/>
+			<tri edge0StartVert="4" edge1StartVert="9" edge2StartVert="8" edge2Connection="6"/>
+			<tri edge0StartVert="9" edge1StartVert="10" edge2StartVert="8" edge2Connection="7"/>
+			<tri edge0StartVert="11" edge1StartVert="12" edge2StartVert="10"/>
+			<tri edge0StartVert="10" edge0Connection="8" edge1StartVert="9" edge2StartVert="11" edge2Connection="9"/>
+			<tri edge0StartVert="11" edge1StartVert="13" edge2StartVert="12" edge2Connection="9"/>
+			<tri edge0StartVert="3" edge1StartVert="13" edge1Connection="11" edge2StartVert="11"/>
+			<tri edge0StartVert="3" edge0Connection="3" edge1StartVert="5" edge2StartVert="14"/>
+			<tri edge0StartVert="15" edge1StartVert="0" edge2StartVert="16"/>
+			<tri edge0StartVert="1" edge0Connection="0" edge1StartVert="0" edge1Connection="14" edge2StartVert="15"/>
+			<tri edge0StartVert="17" edge1StartVert="15" edge1Connection="14" edge2StartVert="16"/>
+			<tri edge0StartVert="17" edge1StartVert="18" edge2StartVert="15" edge2Connection="16"/>
+			<tri edge0StartVert="17" edge1StartVert="19" edge2StartVert="18" edge2Connection="17"/>
+			<tri edge0StartVert="19" edge1StartVert="20" edge2StartVert="18" edge2Connection="18"/>
+			<tri edge0StartVert="19" edge1StartVert="21" edge2StartVert="20" edge2Connection="19"/>
+			<tri edge0StartVert="21" edge1StartVert="22" edge2StartVert="20" edge2Connection="20"/>
+			<tri edge0StartVert="23" edge1StartVert="22" edge1Connection="21" edge2StartVert="21"/>
+			<tri edge0StartVert="24" edge1StartVert="23" edge1Connection="22" edge2StartVert="21"/>
+			<tri edge0StartVert="24" edge1StartVert="25" edge2StartVert="23" edge2Connection="23"/>
+			<tri edge0StartVert="25" edge0Connection="24" edge1StartVert="24" edge2StartVert="26"/>
+			<tri edge0StartVert="26" edge1StartVert="27" edge2StartVert="25" edge2Connection="25"/>
+			<tri edge0StartVert="27" edge0Connection="26" edge1StartVert="26" edge2StartVert="28"/>
+			<tri edge0StartVert="28" edge1StartVert="29" edge2StartVert="27" edge2Connection="27"/>
+			<tri edge0StartVert="29" edge0Connection="28" edge1StartVert="28" edge2StartVert="30"/>
+			<tri edge0StartVert="30" edge1StartVert="31" edge2StartVert="29" edge2Connection="29"/>
+			<tri edge0StartVert="31" edge0Connection="30" edge1StartVert="30" edge2StartVert="32"/>
+			<tri edge0StartVert="32" edge1StartVert="33" edge2StartVert="31" edge2Connection="31"/>
+			<tri edge0StartVert="34" edge1StartVert="33" edge1Connection="32" edge2StartVert="32"/>
+			<tri edge0StartVert="35" edge1StartVert="34" edge2StartVert="36"/>
+			<tri edge0StartVert="37" edge1StartVert="34" edge1Connection="34" edge2StartVert="35"/>
+			<tri edge0StartVert="34" edge1StartVert="38" edge2StartVert="39"/>
+			<tri edge0StartVert="40" edge1StartVert="34" edge2StartVert="41"/>
+			<tri edge0StartVert="42" edge1StartVert="43" edge2StartVert="44"/>
+			<tri edge0StartVert="43" edge1StartVert="45" edge2StartVert="44" edge2Connection="38"/>
+			<tri edge0StartVert="45" edge1StartVert="46" edge2StartVert="44" edge2Connection="39"/>
+			<tri edge0StartVert="34" edge1StartVert="47" edge2StartVert="33" edge2Connection="33"/>
+			<tri edge0StartVert="34" edge0Connection="36" edge1StartVert="39" edge2StartVert="47" edge2Connection="41"/>
+			<tri edge0StartVert="39" edge1StartVert="48" edge2StartVert="49"/>
+			<tri edge0StartVert="39" edge0Connection="43" edge1StartVert="49" edge2StartVert="47" edge2Connection="42"/>
+			<tri edge0StartVert="50" edge1StartVert="48" edge1Connection="43" edge2StartVert="39"/>
+			<tri edge0StartVert="51" edge1StartVert="52" edge2StartVert="53"/>
+			<tri edge0StartVert="54" edge1StartVert="52" edge1Connection="46" edge2StartVert="51"/>
+			<tri edge0StartVert="52" edge1StartVert="55" edge2StartVert="53" edge2Connection="46"/>
+			<tri edge0StartVert="54" edge1StartVert="56" edge2StartVert="52" edge2Connection="47"/>
+			<tri edge0StartVert="56" edge1StartVert="57" edge2StartVert="52" edge2Connection="49"/>
+			<tri edge0StartVert="56" edge1StartVert="58" edge2StartVert="57" edge2Connection="50"/>
+			<tri edge0StartVert="58" edge1StartVert="59" edge2StartVert="57" edge2Connection="51"/>
+			<tri edge0StartVert="59" edge1StartVert="60" edge2StartVert="57" edge2Connection="52"/>
+			<tri edge0StartVert="61" edge1StartVert="57" edge1Connection="53" edge2StartVert="60"/>
+			<tri edge0StartVert="62" edge1StartVert="63" edge2StartVert="43"/>
+			<tri edge0StartVert="64" edge1StartVert="63" edge1Connection="55" edge2StartVert="62"/>
+			<tri edge0StartVert="63" edge1StartVert="45" edge1Connection="39" edge2StartVert="43" edge2Connection="55"/>
+			<tri edge0StartVert="64" edge1StartVert="65" edge2StartVert="63" edge2Connection="56"/>
+			<tri edge0StartVert="65" edge1StartVert="66" edge2StartVert="63" edge2Connection="58"/>
+			<tri edge0StartVert="65" edge1StartVert="67" edge2StartVert="66" edge2Connection="59"/>
+			<tri edge0StartVert="67" edge1StartVert="68" edge2StartVert="66" edge2Connection="60"/>
+			<tri edge0StartVert="68" edge1StartVert="69" edge2StartVert="66" edge2Connection="61"/>
+			<tri edge0StartVert="70" edge1StartVert="66" edge1Connection="62" edge2StartVert="69"/>
+			<tri edge0StartVert="71" edge1StartVert="72" edge2StartVert="62"/>
+			<tri edge0StartVert="73" edge1StartVert="72" edge1Connection="64" edge2StartVert="71"/>
+			<tri edge0StartVert="72" edge1StartVert="64" edge1Connection="56" edge2StartVert="62" edge2Connection="64"/>
+			<tri edge0StartVert="73" edge1StartVert="74" edge2StartVert="72" edge2Connection="65"/>
+			<tri edge0StartVert="74" edge1StartVert="75" edge2StartVert="72" edge2Connection="67"/>
+			<tri edge0StartVert="74" edge1StartVert="76" edge2StartVert="75" edge2Connection="68"/>
+			<tri edge0StartVert="76" edge1StartVert="77" edge2StartVert="75" edge2Connection="69"/>
+			<tri edge0StartVert="77" edge1StartVert="78" edge2StartVert="75" edge2Connection="70"/>
+			<tri edge0StartVert="79" edge1StartVert="75" edge1Connection="71" edge2StartVert="78"/>
+			<tri edge0StartVert="80" edge1StartVert="81" edge2StartVert="48"/>
+			<tri edge0StartVert="82" edge1StartVert="81" edge1Connection="73" edge2StartVert="80"/>
+			<tri edge0StartVert="81" edge1StartVert="53" edge2StartVert="48" edge2Connection="73"/>
+			<tri edge0StartVert="53" edge0Connection="48" edge1StartVert="55" edge2StartVert="48" edge2Connection="75"/>
+			<tri edge0StartVert="82" edge1StartVert="83" edge2StartVert="81" edge2Connection="74"/>
+			<tri edge0StartVert="83" edge1StartVert="84" edge2StartVert="81" edge2Connection="77"/>
+			<tri edge0StartVert="83" edge1StartVert="85" edge2StartVert="84" edge2Connection="78"/>
+			<tri edge0StartVert="85" edge1StartVert="86" edge2StartVert="84" edge2Connection="79"/>
+			<tri edge0StartVert="86" edge1StartVert="87" edge2StartVert="84" edge2Connection="80"/>
+			<tri edge0StartVert="88" edge1StartVert="84" edge1Connection="81" edge2StartVert="87"/>
+			<tri edge0StartVert="55" edge1StartVert="49" edge1Connection="43" edge2StartVert="48" edge2Connection="76"/>
+			<tri edge0StartVert="89" edge1StartVert="90" edge2StartVert="91"/>
+			<tri edge0StartVert="92" edge1StartVert="90" edge1Connection="84" edge2StartVert="89"/>
+			<tri edge0StartVert="93" edge1StartVert="90" edge1Connection="85" edge2StartVert="92"/>
+			<tri edge0StartVert="90" edge1StartVert="94" edge2StartVert="91" edge2Connection="84"/>
+			<tri edge0StartVert="93" edge1StartVert="95" edge2StartVert="90" edge2Connection="86"/>
+			<tri edge0StartVert="95" edge1StartVert="96" edge2StartVert="90" edge2Connection="88"/>
+			<tri edge0StartVert="95" edge1StartVert="97" edge2StartVert="96" edge2Connection="89"/>
+			<tri edge0StartVert="97" edge1StartVert="98" edge2StartVert="96" edge2Connection="90"/>
+			<tri edge0StartVert="98" edge1StartVert="99" edge2StartVert="96" edge2Connection="91"/>
+			<tri edge0StartVert="14" edge1StartVert="96" edge1Connection="92" edge2StartVert="99"/>
+			<tri edge0StartVert="3" edge0Connection="13" edge1StartVert="14" edge1Connection="93" edge2StartVert="99"/>
+			<tri edge0StartVert="3" edge0Connection="94" edge1StartVert="99" edge2StartVert="13" edge2Connection="12"/>
+			<tri edge0StartVert="100" edge1StartVert="101" edge2StartVert="102"/>
+			<tri edge0StartVert="103" edge1StartVert="101" edge1Connection="96" edge2StartVert="100"/>
+			<tri edge0StartVert="101" edge1StartVert="104" edge2StartVert="102" edge2Connection="96"/>
+			<tri edge0StartVert="103" edge1StartVert="105" edge2StartVert="101" edge2Connection="97"/>
+			<tri edge0StartVert="105" edge1StartVert="106" edge2StartVert="101" edge2Connection="99"/>
+			<tri edge0StartVert="105" edge1StartVert="107" edge2StartVert="106" edge2Connection="100"/>
+			<tri edge0StartVert="107" edge1StartVert="108" edge2StartVert="106" edge2Connection="101"/>
+			<tri edge0StartVert="108" edge1StartVert="109" edge2StartVert="106" edge2Connection="102"/>
+			<tri edge0StartVert="78" edge1StartVert="106" edge1Connection="103" edge2StartVert="109"/>
+			<tri edge0StartVert="109" edge1StartVert="79" edge1Connection="72" edge2StartVert="78" edge2Connection="104"/>
+			<tri edge0StartVert="110" edge1StartVert="79" edge1Connection="105" edge2StartVert="109"/>
+			<tri edge0StartVert="91" edge1StartVert="79" edge1Connection="106" edge2StartVert="110"/>
+			<tri edge0StartVert="110" edge1StartVert="89" edge1Connection="84" edge2StartVert="91" edge2Connection="107"/>
+			<tri edge0StartVert="111" edge1StartVert="112" edge2StartVert="69"/>
+			<tri edge0StartVert="112" edge1StartVert="113" edge2StartVert="69" edge2Connection="109"/>
+			<tri edge0StartVert="113" edge1StartVert="70" edge1Connection="63" edge2StartVert="69" edge2Connection="110"/>
+			<tri edge0StartVert="114" edge1StartVert="115" edge2StartVert="70"/>
+			<tri edge0StartVert="116" edge1StartVert="114" edge1Connection="112" edge2StartVert="70"/>
+			<tri edge0StartVert="113" edge1StartVert="116" edge1Connection="113" edge2StartVert="70" edge2Connection="111"/>
+			<tri edge0StartVert="87" edge1StartVert="61" edge2StartVert="88" edge2Connection="82"/>
+			<tri edge0StartVert="61" edge1StartVert="117" edge2StartVert="102"/>
+			<tri edge0StartVert="61" edge0Connection="116" edge1StartVert="102" edge1Connection="98" edge2StartVert="104"/>
+			<tri edge0StartVert="61" edge0Connection="54" edge1StartVert="60" edge2StartVert="117" edge2Connection="116"/>
+			<tri edge0StartVert="118" edge1StartVert="61" edge1Connection="115" edge2StartVert="87"/>
+			<tri edge0StartVert="60" edge1StartVert="119" edge2StartVert="117" edge2Connection="118"/>
+			<tri edge0StartVert="60" edge1StartVert="120" edge2StartVert="119" edge2Connection="120"/>
+			<tri edge0StartVert="60" edge1StartVert="121" edge2StartVert="120" edge2Connection="121"/>
+			<tri edge0StartVert="61" edge0Connection="117" edge1StartVert="104" edge2StartVert="88" edge2Connection="115"/>
+			<tri edge0StartVert="37" edge1StartVert="122" edge2StartVert="38"/>
+			<tri edge0StartVert="122" edge0Connection="124" edge1StartVert="37" edge2StartVert="123"/>
+			<tri edge0StartVert="124" edge1StartVert="125" edge2StartVert="126"/>
+			<tri edge0StartVert="127" edge1StartVert="126" edge2StartVert="128"/>
+			<tri edge0StartVert="126" edge0Connection="127" edge1StartVert="127" edge2StartVert="124" edge2Connection="126"/>
+			<tri edge0StartVert="129" edge1StartVert="122" edge2StartVert="130"/>
+			<tri edge0StartVert="122" edge0Connection="129" edge1StartVert="129" edge2StartVert="38" edge2Connection="124"/>
+			<tri edge0StartVert="131" edge1StartVert="132" edge2StartVert="127"/>
+			<tri edge0StartVert="124" edge0Connection="128" edge1StartVert="127" edge1Connection="131" edge2StartVert="132"/>
+			<tri edge0StartVert="129" edge1StartVert="133" edge2StartVert="38" edge2Connection="130"/>
+			<tri edge0StartVert="134" edge1StartVert="133" edge1Connection="133" edge2StartVert="129"/>
+			<tri edge0StartVert="130" edge0Connection="129" edge1StartVert="122" edge2StartVert="132"/>
+			<tri edge0StartVert="130" edge0Connection="135" edge1StartVert="132" edge2StartVert="135"/>
+			<tri edge0StartVert="136" edge1StartVert="133" edge2StartVert="137"/>
+			<tri edge0StartVert="138" edge1StartVert="133" edge2StartVert="44"/>
+			<tri edge0StartVert="136" edge1StartVert="44" edge1Connection="138" edge2StartVert="133" edge2Connection="137"/>
+			<tri edge0StartVert="139" edge1StartVert="44" edge1Connection="139" edge2StartVert="136"/>
+			<tri edge0StartVert="140" edge1StartVert="44" edge1Connection="140" edge2StartVert="139"/>
+			<tri edge0StartVert="141" edge1StartVert="34" edge2StartVert="142"/>
+			<tri edge0StartVert="143" edge1StartVert="133" edge2StartVert="144"/>
+			<tri edge0StartVert="134" edge1StartVert="135" edge2StartVert="133" edge2Connection="134"/>
+			<tri edge0StartVert="135" edge1StartVert="144" edge1Connection="143" edge2StartVert="133" edge2Connection="144"/>
+			<tri edge0StartVert="131" edge1StartVert="135" edge1Connection="136" edge2StartVert="132" edge2Connection="131"/>
+			<tri edge0StartVert="144" edge0Connection="145" edge1StartVert="135" edge1Connection="146" edge2StartVert="131"/>
+			<tri edge0StartVert="143" edge1StartVert="137" edge1Connection="137" edge2StartVert="133" edge2Connection="143"/>
+			<tri edge0StartVert="140" edge1StartVert="42" edge1Connection="38" edge2StartVert="44" edge2Connection="141"/>
+			<tri edge0StartVert="140" edge1StartVert="145" edge2StartVert="42" edge2Connection="149"/>
+			<tri edge0StartVert="146" edge1StartVert="34" edge2StartVert="147"/>
+			<tri edge0StartVert="148" edge1StartVert="149" edge2StartVert="145"/>
+			<tri edge0StartVert="149" edge0Connection="152" edge1StartVert="148" edge2StartVert="150"/>
+			<tri edge0StartVert="124" edge1StartVert="122" edge2StartVert="151"/>
+			<tri edge0StartVert="123" edge1StartVert="151" edge1Connection="154" edge2StartVert="122" edge2Connection="125"/>
+			<tri edge0StartVert="151" edge1StartVert="125" edge1Connection="126" edge2StartVert="124" edge2Connection="154"/>
+			<tri edge0StartVert="36" edge0Connection="34" edge1StartVert="34" edge1Connection="37" edge2StartVert="40"/>
+			<tri edge0StartVert="37" edge0Connection="124" edge1StartVert="38" edge1Connection="36" edge2StartVert="34" edge2Connection="35"/>
+			<tri edge0StartVert="152" edge1StartVert="128" edge1Connection="127" edge2StartVert="126"/>
+			<tri edge0StartVert="126" edge1StartVert="153" edge2StartVert="152" edge2Connection="159"/>
+			<tri edge0StartVert="152" edge1StartVert="139" edge1Connection="140" edge2StartVert="136"/>
+			<tri edge0StartVert="154" edge1StartVert="152" edge1Connection="160" edge2StartVert="153"/>
+			<tri edge0StartVert="154" edge1StartVert="139" edge1Connection="161" edge2StartVert="152" edge2Connection="162"/>
+			<tri edge0StartVert="139" edge0Connection="163" edge1StartVert="154" edge2StartVert="148"/>
+			<tri edge0StartVert="154" edge1StartVert="155" edge2StartVert="148" edge2Connection="164"/>
+			<tri edge0StartVert="141" edge1StartVert="41" edge1Connection="37" edge2StartVert="34" edge2Connection="142"/>
+			<tri edge0StartVert="150" edge1StartVert="155" edge2StartVert="156"/>
+			<tri edge0StartVert="41" edge1StartVert="156" edge1Connection="167" edge2StartVert="155"/>
+			<tri edge0StartVert="142" edge0Connection="142" edge1StartVert="34" edge1Connection="151" edge2StartVert="146"/>
+			<tri edge0StartVert="150" edge0Connection="153" edge1StartVert="148" edge1Connection="165" edge2StartVert="155" edge2Connection="167"/>
+			<tri edge0StartVert="41" edge0Connection="166" edge1StartVert="141" edge2StartVert="156" edge2Connection="168"/>
+			<tri edge0StartVert="157" edge1StartVert="145" edge1Connection="152" edge2StartVert="149"/>
+			<tri edge0StartVert="145" edge0Connection="172" edge1StartVert="157" edge2StartVert="42" edge2Connection="150"/>
+		</tris>
+	</mesh3D>
+	<mappingTo2D>
+		<poly>
+			<edge startVert="148"/>
+			<edge startVert="139"/>
+			<edge startVert="136"/>
+			<edge startVert="152"/>
+			<edge startVert="153"/>
+			<edge startVert="154"/>
+		</poly>
+		<poly>
+			<edge startVert="138"/>
+			<edge startVert="133"/>
+			<edge startVert="143"/>
+			<edge startVert="136" connection="0"/>
+			<edge startVert="139"/>
+			<edge startVert="140"/>
+			<edge startVert="44"/>
+		</poly>
+		<poly>
+			<edge startVert="87"/>
+			<edge startVert="118"/>
+			<edge startVert="61"/>
+			<edge startVert="60"/>
+			<edge startVert="121"/>
+			<edge startVert="120"/>
+			<edge startVert="119"/>
+			<edge startVert="104"/>
+			<edge startVert="88"/>
+		</poly>
+		<poly>
+			<edge startVert="104" connection="2"/>
+			<edge startVert="119"/>
+			<edge startVert="117"/>
+			<edge startVert="102"/>
+		</poly>
+		<poly>
+			<edge startVert="70"/>
+			<edge startVert="69"/>
+			<edge startVert="111"/>
+			<edge startVert="112"/>
+			<edge startVert="113"/>
+			<edge startVert="116"/>
+			<edge startVert="114"/>
+			<edge startVert="115"/>
+		</poly>
+		<poly>
+			<edge startVert="79"/>
+			<edge startVert="110"/>
+			<edge startVert="89"/>
+			<edge startVert="94"/>
+			<edge startVert="91"/>
+		</poly>
+		<poly>
+			<edge startVert="78"/>
+			<edge startVert="106"/>
+			<edge startVert="107"/>
+			<edge startVert="108"/>
+			<edge startVert="109"/>
+			<edge startVert="79"/>
+		</poly>
+		<poly>
+			<edge startVert="88"/>
+			<edge startVert="84"/>
+			<edge startVert="83"/>
+			<edge startVert="85"/>
+			<edge startVert="86"/>
+		</poly>
+		<poly>
+			<edge startVert="84"/>
+			<edge startVert="81"/>
+			<edge startVert="80"/>
+			<edge startVert="82"/>
+		</poly>
+		<poly>
+			<edge startVert="48"/>
+			<edge startVert="80" connection="8"/>
+			<edge startVert="81"/>
+			<edge startVert="53"/>
+			<edge startVert="55"/>
+			<edge startVert="49"/>
+			<edge startVert="50"/>
+		</poly>
+		<poly>
+			<edge startVert="70"/>
+			<edge startVert="66"/>
+			<edge startVert="67"/>
+			<edge startVert="68"/>
+		</poly>
+		<poly>
+			<edge startVert="61"/>
+			<edge startVert="57"/>
+			<edge startVert="58"/>
+			<edge startVert="59"/>
+		</poly>
+		<poly>
+			<edge startVert="46"/>
+			<edge startVert="44"/>
+			<edge startVert="42"/>
+			<edge startVert="43"/>
+		</poly>
+		<poly>
+			<edge startVert="35"/>
+			<edge startVert="33"/>
+			<edge startVert="34"/>
+			<edge startVert="141"/>
+			<edge startVert="40"/>
+			<edge startVert="36"/>
+		</poly>
+		<poly>
+			<edge startVert="40" connection="13"/>
+			<edge startVert="141"/>
+			<edge startVert="150"/>
+			<edge startVert="155"/>
+			<edge startVert="41"/>
+		</poly>
+		<poly>
+			<edge startVert="39"/>
+			<edge startVert="47"/>
+			<edge startVert="37"/>
+			<edge startVert="123"/>
+			<edge startVert="122"/>
+			<edge startVert="38"/>
+		</poly>
+		<poly>
+			<edge startVert="35"/>
+			<edge startVert="37"/>
+			<edge startVert="33" connection="13"/>
+		</poly>
+		<poly>
+			<edge startVert="37" connection="15"/>
+			<edge startVert="47"/>
+			<edge startVert="33" connection="16"/>
+		</poly>
+		<poly>
+			<edge startVert="34" connection="13"/>
+			<edge startVert="33"/>
+			<edge startVert="31"/>
+			<edge startVert="29"/>
+			<edge startVert="32"/>
+		</poly>
+		<poly>
+			<edge startVert="27"/>
+			<edge startVert="30"/>
+			<edge startVert="32" connection="18"/>
+			<edge startVert="29"/>
+		</poly>
+		<poly>
+			<edge startVert="25"/>
+			<edge startVert="28"/>
+			<edge startVert="30" connection="19"/>
+			<edge startVert="27"/>
+		</poly>
+		<poly>
+			<edge startVert="20"/>
+			<edge startVert="18"/>
+			<edge startVert="19"/>
+			<edge startVert="21"/>
+			<edge startVert="22"/>
+		</poly>
+		<poly>
+			<edge startVert="18"/>
+			<edge startVert="15"/>
+			<edge startVert="0"/>
+			<edge startVert="16"/>
+			<edge startVert="17"/>
+			<edge startVert="19" connection="21"/>
+		</poly>
+		<poly>
+			<edge startVert="99"/>
+			<edge startVert="13"/>
+			<edge startVert="12"/>
+			<edge startVert="11"/>
+			<edge startVert="3"/>
+			<edge startVert="14"/>
+		</poly>
+		<poly>
+			<edge startVert="4"/>
+			<edge startVert="6"/>
+			<edge startVert="5"/>
+			<edge startVert="3"/>
+			<edge startVert="2"/>
+			<edge startVert="1"/>
+		</poly>
+		<poly>
+			<edge startVert="15"/>
+			<edge startVert="1" connection="24"/>
+			<edge startVert="2"/>
+			<edge startVert="0" connection="22"/>
+		</poly>
+		<poly>
+			<edge startVert="152"/>
+			<edge startVert="131"/>
+			<edge startVert="132"/>
+			<edge startVert="124"/>
+			<edge startVert="126"/>
+			<edge startVert="153" connection="0"/>
+		</poly>
+		<poly>
+			<edge startVert="134"/>
+			<edge startVert="135"/>
+			<edge startVert="143" connection="1"/>
+			<edge startVert="133"/>
+		</poly>
+		<poly>
+			<edge startVert="143" connection="27"/>
+			<edge startVert="135"/>
+			<edge startVert="132" connection="26"/>
+			<edge startVert="131"/>
+		</poly>
+		<poly>
+			<edge startVert="150"/>
+			<edge startVert="157"/>
+			<edge startVert="145"/>
+			<edge startVert="148" connection="0"/>
+			<edge startVert="154"/>
+			<edge startVert="155" connection="14"/>
+		</poly>
+		<poly>
+			<edge startVert="96"/>
+			<edge startVert="90"/>
+			<edge startVert="92"/>
+			<edge startVert="93"/>
+			<edge startVert="97"/>
+		</poly>
+		<poly>
+			<edge startVert="57"/>
+			<edge startVert="52"/>
+			<edge startVert="51"/>
+			<edge startVert="54"/>
+			<edge startVert="58" connection="11"/>
+		</poly>
+		<poly>
+			<edge startVert="7"/>
+			<edge startVert="6" connection="24"/>
+			<edge startVert="4"/>
+			<edge startVert="9"/>
+			<edge startVert="8"/>
+		</poly>
+		<poly>
+			<edge startVert="9"/>
+			<edge startVert="10"/>
+			<edge startVert="8" connection="32"/>
+		</poly>
+		<poly>
+			<edge startVert="11" connection="23"/>
+			<edge startVert="12"/>
+			<edge startVert="10" connection="33"/>
+			<edge startVert="9"/>
+		</poly>
+		<poly>
+			<edge startVert="3" connection="24"/>
+			<edge startVert="5"/>
+			<edge startVert="14" connection="23"/>
+		</poly>
+		<poly>
+			<edge startVert="23"/>
+			<edge startVert="22" connection="21"/>
+			<edge startVert="21"/>
+			<edge startVert="24"/>
+		</poly>
+		<poly>
+			<edge startVert="23" connection="36"/>
+			<edge startVert="24"/>
+			<edge startVert="26"/>
+			<edge startVert="25"/>
+		</poly>
+		<poly>
+			<edge startVert="25" connection="37"/>
+			<edge startVert="26"/>
+			<edge startVert="28" connection="20"/>
+		</poly>
+		<poly>
+			<edge startVert="46" connection="12"/>
+			<edge startVert="43"/>
+			<edge startVert="62"/>
+			<edge startVert="64"/>
+			<edge startVert="63"/>
+			<edge startVert="45"/>
+		</poly>
+		<poly>
+			<edge startVert="50" connection="9"/>
+			<edge startVert="49"/>
+			<edge startVert="47" connection="15"/>
+			<edge startVert="39"/>
+		</poly>
+		<poly>
+			<edge startVert="51" connection="31"/>
+			<edge startVert="52"/>
+			<edge startVert="55" connection="9"/>
+			<edge startVert="53"/>
+		</poly>
+		<poly>
+			<edge startVert="59"/>
+			<edge startVert="60" connection="2"/>
+			<edge startVert="61" connection="11"/>
+		</poly>
+		<poly>
+			<edge startVert="64"/>
+			<edge startVert="65"/>
+			<edge startVert="67" connection="10"/>
+			<edge startVert="66"/>
+			<edge startVert="63" connection="39"/>
+		</poly>
+		<poly>
+			<edge startVert="68"/>
+			<edge startVert="69" connection="4"/>
+			<edge startVert="70" connection="10"/>
+		</poly>
+		<poly>
+			<edge startVert="71"/>
+			<edge startVert="72"/>
+			<edge startVert="64" connection="39"/>
+			<edge startVert="62"/>
+		</poly>
+		<poly>
+			<edge startVert="71"/>
+			<edge startVert="74"/>
+			<edge startVert="76"/>
+			<edge startVert="75"/>
+			<edge startVert="72" connection="45"/>
+		</poly>
+		<poly>
+			<edge startVert="76"/>
+			<edge startVert="77"/>
+			<edge startVert="78" connection="6"/>
+			<edge startVert="79"/>
+			<edge startVert="75" connection="46"/>
+		</poly>
+		<poly>
+			<edge startVert="82"/>
+			<edge startVert="83" connection="7"/>
+			<edge startVert="84" connection="8"/>
+		</poly>
+		<poly>
+			<edge startVert="86"/>
+			<edge startVert="87" connection="2"/>
+			<edge startVert="88" connection="7"/>
+		</poly>
+		<poly>
+			<edge startVert="94" connection="5"/>
+			<edge startVert="89"/>
+			<edge startVert="92" connection="30"/>
+			<edge startVert="90"/>
+		</poly>
+		<poly>
+			<edge startVert="97"/>
+			<edge startVert="98"/>
+			<edge startVert="99" connection="23"/>
+			<edge startVert="14"/>
+			<edge startVert="96" connection="30"/>
+		</poly>
+		<poly>
+			<edge startVert="100"/>
+			<edge startVert="101"/>
+			<edge startVert="104" connection="3"/>
+			<edge startVert="102"/>
+		</poly>
+		<poly>
+			<edge startVert="100"/>
+			<edge startVert="105"/>
+			<edge startVert="107" connection="6"/>
+			<edge startVert="106"/>
+			<edge startVert="101" connection="52"/>
+		</poly>
+		<poly>
+			<edge startVert="110" connection="5"/>
+			<edge startVert="79" connection="6"/>
+			<edge startVert="109"/>
+		</poly>
+		<poly>
+			<edge startVert="124"/>
+			<edge startVert="125"/>
+			<edge startVert="126" connection="26"/>
+		</poly>
+		<poly>
+			<edge startVert="130"/>
+			<edge startVert="129"/>
+			<edge startVert="38" connection="15"/>
+			<edge startVert="122"/>
+		</poly>
+		<poly>
+			<edge startVert="38" connection="56"/>
+			<edge startVert="129"/>
+			<edge startVert="134" connection="27"/>
+			<edge startVert="133"/>
+		</poly>
+		<poly>
+			<edge startVert="130" connection="56"/>
+			<edge startVert="122"/>
+			<edge startVert="132" connection="28"/>
+			<edge startVert="135"/>
+		</poly>
+		<poly>
+			<edge startVert="147"/>
+			<edge startVert="141" connection="13"/>
+			<edge startVert="34"/>
+		</poly>
+		<poly>
+			<edge startVert="44" connection="1"/>
+			<edge startVert="140"/>
+			<edge startVert="145"/>
+			<edge startVert="42" connection="12"/>
+		</poly>
+		<poly>
+			<edge startVert="124"/>
+			<edge startVert="122" connection="15"/>
+			<edge startVert="123"/>
+			<edge startVert="151"/>
+		</poly>
+		<poly>
+			<edge startVert="151"/>
+			<edge startVert="125" connection="55"/>
+			<edge startVert="124" connection="61"/>
+		</poly>
+		<poly>
+			<edge startVert="145" connection="29"/>
+			<edge startVert="157"/>
+			<edge startVert="42" connection="60"/>
+		</poly>
+	</mappingTo2D>
+</mesh>

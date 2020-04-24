@@ -1,0 +1,172 @@
+-- UD5 Root
+
+GameStage(0)
+--[
+	Action( "exec wps" )
+	--[
+		Param( "wps tblidx", 32004 )
+	--]
+	End()
+
+	Action( "exec wps" )
+	--[
+		Param( "wps tblidx", 32005 )
+	--]
+	End()
+	
+	Action( "exec wps" )
+	--[
+		Param( "wps tblidx", 32006 )
+	--]
+	End()
+	
+	Action( "exec wps" )
+	--[
+		Param( "wps tblidx", 32007 )
+	--]
+	End()
+
+	-- wps 32008篮 32006俊辑 角青矫糯
+	
+	Action( "exec wps" )
+	--[
+		Param( "wps tblidx", 32009 )
+	--]
+	End()
+	
+	Action( "exec wps" )
+	--[
+		Param( "wps tblidx", 32010 )
+	--]
+	End()
+	
+	Action( "exec wps" )
+	--[
+		Param( "wps tblidx", 32011 )
+	--]
+	End()
+	
+	Action( "exec wps" )
+	--[
+		Param( "wps tblidx", 32012 )
+	--]
+	End()
+
+	-- stage 1 窍摸狼 dome 3俺 葛滴 uncheck矫难淋
+	Action( "change object state" )
+	--[
+		Param( "index", 20 )
+		Param( "substate unselect", 1 )
+	--]
+	End()
+	
+	Action( "change object state" )
+	--[
+		Param( "index", 23 )
+		Param( "substate unselect", 1 )
+	--]
+	End()
+	
+	Action( "change object state" )
+	--[
+		Param( "index", 26 )
+		Param( "substate unselect", 1 )
+	--]
+	End()
+
+	-- dome救狼 dummy npc spawn
+
+	-- dome1 备府备府荤快风胶 哭率
+	Action( "add npc" )
+	--[
+		Param( "index", 7081102 )
+		Param( "loc x", -225.60 )
+		Param( "loc y", -27.38 )
+		Param( "loc z", 681.17 )
+		Param( "dir x", 0.00 )
+		Param( "dir z", 1.00 )
+		Param( "stand alone", "true" )
+	--]
+	End()
+	
+	-- dome1 备府备府荤快风胶 坷弗率
+	Action( "add npc" )
+	--[
+		Param( "index", 7081103 )
+		Param( "loc x", -196.40 )
+		Param( "loc y", -27.08 )
+		Param( "loc z", 685.85 )
+		Param( "dir x", 0.00 )
+		Param( "dir z", 1.00 )
+		Param( "stand alone", "true" )
+	--]
+	End()
+	
+
+	-- dome2 备府备府荤快风胶 哭率
+	Action( "add npc" )
+	--[
+		Param( "index", 7081104 )
+		Param( "loc x", -134.85 )
+		Param( "loc y", -27.18 )
+		Param( "loc z", 543.75 )
+		Param( "dir x", -0.91 )
+		Param( "dir z", 0.42 )
+		Param( "stand alone", "true" )
+	--]
+	End()
+	
+	-- dome2 备府备府荤快风胶 坷弗率
+	Action( "add npc" )
+	--[
+		Param( "index", 7081105 )
+		Param( "loc x", -119.98 )
+		Param( "loc y", -27.08 )
+		Param( "loc z", 568.67 )
+		Param( "dir x", -0.91 )
+		Param( "dir z", 0.42 )
+		Param( "stand alone", "true" )
+	--]
+	End()
+	
+
+	-- dome3 备府备府荤快风胶 哭率
+	Action( "add npc" )
+	--[
+		Param( "index", 7081106 )
+		Param( "loc x", 20.65 )
+		Param( "loc y", -27.68 )
+		Param( "loc z", 533.20 )
+		Param( "dir x", -0.93 )
+		Param( "dir z", -0.36 )
+		Param( "stand alone", "true" )
+	--]
+	End()
+	
+	-- dome3 蠕气 备府备府荤快风胶 啊款单
+	Action( "add npc" )
+	--[
+		Param( "index", 7083101 )
+		Param( "loc x", 13.22 )
+		Param( "loc y", -26.78 )
+		Param( "loc z", 545.74 )
+		Param( "dir x", -0.96 )
+		Param( "dir z", -0.29 )
+		Param( "stand alone", "true" )
+	--]
+	End()
+	
+	-- dome3 备府备府荤快风胶 坷弗率
+	Action( "add npc" )
+	--[
+		Param( "index", 7081107 )
+		Param( "loc x", 9.61 )
+		Param( "loc y", -27.58 )
+		Param( "loc z", 560.28 )
+		Param( "dir x", -0.91 )
+		Param( "dir z", -0.42 )
+		Param( "stand alone", "true" )
+	--]
+	End()
+--]
+End()

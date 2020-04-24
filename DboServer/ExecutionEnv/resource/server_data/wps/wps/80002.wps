@@ -1,0 +1,1075 @@
+GameStage(0)
+--[
+	Action("function")
+	--[
+
+		Action( "calculate" )
+		--[
+			Param( "declare", "vector aLoc = Vector(0,0,0), vector aDir = Vector(0,0,0)" )
+		--]
+		End()
+
+		Action( "calculate" )
+		--[
+			Param( "declare", "vector bLoc = Vector(0,0,0), vector bDir = Vector(0,0,0)" )
+		--]
+		End()
+
+		Action( "calculate" )
+		--[
+			Param( "declare", "vector cLoc = Vector(0,0,0), vector cDir = Vector(0,0,0)" )
+		--]
+		End()
+
+		Action( "calculate" )
+		--[
+			Param( "declare", "vector dLoc = Vector(0,0,0), vector dDir = Vector(0,0,0)" )
+		--]
+		End()
+
+		Action( "calculate" )
+		--[
+			Param( "declare", "vector eLoc = Vector(0,0,0), vector eDir = Vector(0,0,0)" )
+		--]
+		End()
+
+		Action( "calculate" )
+		--[
+			Param( "declare", "vector fLoc = Vector(0,0,0), vector fDir = Vector(0,0,0)" )
+		--]
+		End()
+
+		Action("calculate")
+		--[
+			Param("declare","vector gLoc=Vector(0,0,0),vector gDir=Vector(0,0,0)")
+		--]
+		End()
+
+		Action("calculate")
+		--[
+			Param("declare","vector hLoc=Vector(0,0,0), vector hDir=Vector(0,0,0)")
+		--]
+		End()
+
+		Action("calculate")
+		--[
+			Param("declare","vector iLoc=Vector(0,0,0), vector iDir=Vector(0,0,0)")
+		--]
+		End()
+
+		Action("calculate")
+		--[
+			Param("declare","vector jLoc=Vector(0,0,0), vector jDir=Vector(0,0,0)")
+		--]
+		End()
+
+		Action("calculate")
+		--[
+			Param("declare","vector kLoc=Vector(0,0,0), vector kDir=Vector(0,0,0)")
+		--]
+		End()
+
+		Action("calculate")
+		--[
+			Param("declare","vector lLoc=Vector(0,0,0),vector lDir=Vector(0,0,0)")
+		--]
+		End()
+
+		Condition("child")
+		--[
+			Action("add mob")
+			--[
+				Param("index",14351201)
+				Param("group",1)
+				Param("loc x",-1365.872)
+				Param("loc y",-52.927)
+				Param("loc z",2052.257)
+				Param("dir x",0.999)
+				Param("dir z",0.044)
+				Param("no spawn wait","true")
+			--]
+			End()
+
+			Action("wait")
+			--[
+				Condition("check mobgroup")
+				--[
+					Param("group",1)
+					Param("count",1)
+				--]
+				End()
+			--]
+			End()
+			
+			Action("get faint location")
+			--[
+				Param("target type","mob")
+				Param("target index",1)
+				Param("loc var","aLoc")
+				Param("dir var","aDir")
+				Param("default","Loc(-1365.872,-52.927,2052.257),Dir(0.999,0,0.044)")
+			--]
+			End()
+	
+			Action("add npc")
+			--[
+				Param("index",2413115)
+				Param("use loc var","true")
+				Param("loc var","aLoc")
+				Param("dir var","aDir")
+				Param("no spawn wait","true")
+			--]
+			End()
+					
+			Action("wait")
+			--[
+				Condition("check time")
+				--[
+					Param("time",600)
+				--]
+				End()
+			--]
+			End()
+
+			Action("remove npc")
+			--[
+				Param("index",2413115)
+				Param("type","clear")
+			--]
+			End()
+		--]
+		End()
+
+----------------------------1		
+
+		Condition("child")
+		--[
+			Action("add mob")
+			--[
+				Param("index",14351201)
+				Param("group",2)
+				Param("loc x",-1346.847)
+				Param("loc y",-81.772)
+				Param("loc z",1319.092)
+				Param("dir x",-0.858)
+				Param("dir z",-0.514)
+				Param("no spawn wait","true")
+			--]
+			End()
+
+			Action("wait")
+			--[
+				Condition("check mobgroup")
+				--[
+					Param("group",2)
+					Param("count",1)
+				--]
+				End()
+			--]
+			End()
+			
+			Action("get faint location")
+			--[
+				Param("target type","mob")
+				Param("target index",2)
+				Param("loc var","bLoc")
+				Param("dir var","bDir")
+				Param("default","Loc(-1346.847,-81.772,-1319.092),Dir(-0.858,0,-0.514)")
+			--]
+			End()
+
+			Action("add npc")
+			--[
+				Param("index",2413116)
+				Param("use loc var","true")
+				Param("loc var","bLoc")
+				Param("dir var","bDir")
+				Param("no spawn wait","true")
+			--]
+			End()
+					
+			Action("wait")
+			--[
+				Condition("check time")
+				--[
+					Param("time",600)
+				--]
+				End()
+			--]
+			End()
+
+			Action("remove npc")
+			--[
+				Param("index",2413116)
+				Param("type","clear")
+			--]
+			End()
+		--]
+		End()
+
+----------------------2
+
+		Condition("child")
+		--[
+			Action("add mob")
+			--[
+				Param("index",14351201)
+				Param("group",3)
+				Param("loc x",-2810.547)
+				Param("loc y",-39.24)
+				Param("loc z",1298.88)
+				Param("dir x",0.704)
+				Param("dir z",0.71)
+				Param("no spawn wait","true")
+			--]
+			End()
+
+			Action("wait")
+			--[
+				Condition("check mobgroup")
+				--[
+					Param("group",3)
+					Param("count",1)
+				--]
+				End()
+			--]
+			End()
+			
+			Action("get faint location")
+			--[
+				Param("target type","mob")
+				Param("target index",3)
+				Param("loc var","cLoc")
+				Param("dir var","cDir")
+				Param("default","Loc(-2810.547,-39.24,1298.88),Dir(0.704,0,0.71)")
+			--]
+			End()
+
+			Action("add npc")
+			--[
+				Param("index",2413117)
+				Param("use loc var","true")
+				Param("loc var","cLoc")
+				Param("dir var","cDir")
+				Param("no spawn wait","true")
+			--]
+			End()
+					
+			Action("wait")
+			--[
+				Condition("check time")
+				--[
+					Param("time",600)
+				--]
+				End()
+			--]
+			End()
+
+			Action("remove npc")
+			--[
+				Param("index",2413117)
+				Param("type","clear")
+			--]
+			End()
+		--]
+		End()
+
+-----------------------3
+
+		Condition("child")
+		--[
+			Action("add mob")
+			--[
+				Param("index",14351201)
+				Param("group",4)
+				Param("loc x",-709.135)
+				Param("loc y",-84.618)
+				Param("loc z",-1350.275)
+				Param("dir x",1)
+				Param("dir z",0.021)
+				Param("no spawn wait","true")
+			--]
+			End()
+
+			Action("wait")
+			--[
+				Condition("check mobgroup")
+				--[
+					Param("group",4)
+					Param("count",1)
+				--]
+				End()
+			--]
+			End()
+		
+			Action("get faint location")
+			--[
+				Param("target type","mob")
+				Param("target index",4)
+				Param("loc var","dLoc")
+				Param("dir var","dDir")
+				Param("default","Loc(-709.135,-84.618,-1350.275),Dir(1,0,0.21)")
+			--]
+			End()
+	
+			Action("add npc")
+			--[
+				Param("index",2413118)
+				Param("use loc var","true")
+				Param("loc var","dLoc")
+				Param("dir var","dDir")
+				Param("no spawn wait","true")	
+			--]
+			End()
+					
+			Action("wait")
+			--[
+				Condition("check time")
+				--[
+					Param("time",600)
+				--]
+				End()
+			--]
+			End()
+
+			Action("remove npc")
+			--[
+				Param("index",2413118)
+				Param("type","clear")
+			--]
+			End()
+		--]
+		End()
+-------------------------------------4
+
+
+		Condition("child")
+		--[
+			Action("add mob")
+			--[
+				Param("index",14351201)
+				Param("group",5)
+				Param("loc x",-1485.401)
+				Param("loc y",-80.38)
+				Param("loc z",-159.543)
+				Param("dir x",0.852)
+				Param("dir z",-0.524)
+				Param("no spawn wait","true")
+			--]
+			End()
+
+			Action("wait")
+			--[
+				Condition("check mobgroup")
+				--[
+					Param("group",5)
+					Param("count",1)
+				--]
+				End()
+			--]
+			End()
+
+			Action("get faint location")
+			--[
+				Param("target type","mob")
+				Param("target index",5)
+				Param("loc var","eLoc")
+				Param("dir var","eDir")
+				Param("default","Loc(-1485.401,-80.38,-159.543),Dir(0.852,0,-0.524)")
+			--]
+			End()			
+
+			Action("add npc")
+			--[
+				Param("index",2413119)
+				Param("use loc var","true")
+				Param("loc var","eLoc")
+				Param("dir var","eDir")
+				Param("no spawn wait","true")
+			--]
+			End()
+					
+			Action("wait")
+			--[
+				Condition("check time")
+				--[
+					Param("time",600)
+				--]
+				End()
+			--]
+			End()
+
+			Action("remove npc")
+			--[
+				Param("index",2413119)
+				Param("type","clear")
+			--]
+			End()
+		--]
+		End()
+-----------------------------------------------5
+
+
+		Condition("child")
+		--[
+			Action("add mob")
+			--[
+				Param("index",14351201)
+				Param("group",6)
+				Param("loc x",-2709.099)
+				Param("loc y",-116.954)
+				Param("loc z",-542.137)
+				Param("dir x",0.168)
+				Param("dir z",0.986)
+				Param("no spawn wait","true")
+			--]
+			End()
+
+			Action("wait")
+			--[
+				Condition("check mobgroup")
+				--[
+					Param("group",6)
+					Param("count",1)
+				--]
+				End()
+			--]
+			End()
+
+		
+			Action("get faint location")
+			--[
+				Param( "target type", "mob" )
+				Param( "target index", 6 )
+				Param( "loc var", "fLoc" )
+				Param( "dir var", "fDir" )
+				Param( "default", "Loc(-2709.099,-116.954,-542.137), Dir(0.168,0,0.986)" )
+			--]
+			End()
+		
+			Action("add npc")
+			--[
+				Param("index",2413120)
+				Param("use loc var","true")
+				Param("loc var","fLoc")
+				Param("dir var","fDir")
+				Param("no spawn wait","true")
+			--]
+			End()
+			
+			Action("wait")
+			--[
+				Condition("check time")
+				--[
+					Param("time",600)
+				--]
+				End()
+			--]
+			End()
+
+			Action("remove npc")
+			--[
+				Param("index",2413120)
+				Param("type","clear")
+			--]
+			End()
+		--]
+		End()
+--------------------------------6
+
+		Condition("child")
+		--[
+			Action("add mob")
+			--[
+				Param("index",11151101)
+				Param("group",7)
+				Param("loc x",-1147.492)
+				Param("loc y",-74.36)
+				Param("loc z",-1631.892)
+				Param("dir x",-0.611)				
+				Param("dir z",-0.792)
+				Param("no spawn wait","true")
+			--]
+			End()
+
+			Action("wait")
+			--[
+				Condition("check mobgroup")
+				--[
+					Param("group",7)
+					Param("count",1)
+				--]
+				End()
+			End()
+
+			Action("get faint location")
+			--[
+				Param("target type","mob")
+				Param("target index",7)
+				Param("loc var","gLoc")
+				Param("dir var","gDir")
+				Param("default","Loc(-1147.492,-74.36,-1631.892),Dir(-0.611,0,-0.792)")
+			--]
+			End()
+
+			Action("add npc")
+			--[
+				Param("index",2413121)
+				Param("use loc var","true")
+				Param("loc var","gLoc")
+				Param("dir var","gDir")
+				Param("no spawn wait","true")
+			--]
+			End()
+		
+			Action("wait")
+			--[
+				Condition("check time")
+				--[
+					Param("time",600)
+				--]
+				End()
+			--]
+			End()
+
+			Action("remove npc")
+			--[
+				Param("index",2413121)
+				Param("type","clear")
+			--]
+			End()
+		--]
+		End()
+---------------------------------7
+
+			Condition("child")
+			--[
+				Action("add mob")
+				--[
+					Param("index",11151101)
+					Param("group",8)
+					Param("loc x",-3082.602)
+					Param("loc y",-95.835)
+					Param("loc z",-1960.631)
+					Param("dir x",0.795)
+					Param("dir z",-0.607)
+					Param("no spawn wait","true")
+				--]
+				End()
+
+			Action("wait")
+			--[
+				Condition("check mobgroup")
+				--[
+					Param("group",8)
+					Param("count",1)
+				--]
+				End()
+			--]
+			End()
+
+			Action("get faint location")
+			--[
+				Param("target type","mob")
+				Param("target index",8)
+				Param("loc var","hLoc")
+				Param("dir var","hDir")
+				Param("default","Loc(-3082.602,-95.835,-1960.631),Dir(0.795,0,-0.607)")
+			--]
+			End()
+
+			Action("add npc")
+			--[
+				Param("index",2413122)
+				Param("use loc var","true")
+				Param("loc var","hLoc")
+				Param("dir var","hDir")
+				Param("no spawn wait","true")
+			--]
+			End()
+
+			Action("wait")
+			--[
+				Condition("check time")
+				--[
+					Param("time",600)
+				--]
+				End()
+			End()
+
+			Action("remove npc")
+			--[
+				Param("index",2413122)
+				Param("type","clear")
+			--]
+			End()
+		--]
+		End()
+--------------------------------8
+
+		Condition("child")
+		--[
+			Action("add mob")
+			--[
+				Param("index",11151101)
+				Param("group",9)
+				Param("loc x",-3791.233)
+				Param("loc y",-136.08)
+				Param("loc z",-3845.255)
+				Param("dir x",-0.073)
+				Param("dir z",0.997)
+				Param("no spawn wait","true")
+			--]
+			End()
+		
+			Action("wait")
+			--[
+				Condition("check mobgroup")
+				--[
+					Param("group",9)
+					Param("count",1)
+				--]
+				End()
+			End()
+
+			Action("get faint location")
+			--[
+				Param("target type","mob")
+				Param("target index",9)
+				Param("loc var","iLoc")
+				Param("dir var","iDir")
+				Param("default","Loc(-3791.233,-136.08,-3845.255),Dir(-0.073,0,0.997)")
+			--]
+			End()
+
+			Action("add npc")
+			--[
+				Param("index",2413123)
+				Param("use loc var","true")
+				Param("loc var","iLoc")
+				Param("dir var","iDir")
+				Param("no spawn wait","true")
+			--]
+			End()
+
+			Action("wait")
+			--[
+				Condition("check time")
+				--[
+					Param("time",600)
+				--]
+				End()
+			--]
+			End()
+
+			Action("remove npc")
+			--[
+				Param("index",2413123)
+				Param("type","clear")
+			--]
+			End()
+		--]
+		End()
+----------------------------9
+		Condition("child")
+		--[
+			Action("add mob")
+			--[
+				Param("index",11151101)
+				Param("group",10)
+				Param("loc x",-956.54)
+				Param("loc y",-125.801)
+				Param("loc z",-3515.083)
+				Param("dir x",-0.755)
+				Param("dir z",-0.656)
+				Param("no spawn wait","true")
+			--]
+			End()
+	
+			Action("wait")
+			--[
+				Condition("check mobgroup")
+				--[
+					Param("group",10)
+					Param("count",1)
+				--]
+				End()
+			--]
+			End()
+
+
+			Action("get faint location")
+			--[
+				Param("target type","mob")
+				Param("target index",10)
+				Param("loc var","jLoc")
+				Param("dir var","jDir")
+				Param("default","Loc(-956.54,-125.801,-3515.083),Dir(-0.755,0,-0.656)")
+			--]
+			End()
+
+			Action("add npc")
+			--[
+				Param("index",2413124)
+				Param("use loc var","true")
+				Param("loc var","jLoc")
+				Param("dir var","jDir")
+				Param("no spawn wait","true")
+			--]
+			End()
+
+			Action("wait")
+			--[
+				Condition("check time")
+				--[
+					Param("time",600)
+				--]
+				End()
+			--]
+			End()
+
+			Action("remove npc")
+			--[
+				Param("index",2413124)
+				Param("type","clear")
+			--]
+			End()
+		--]
+		End()
+-------------------------10
+
+		Condition("child")
+		--[
+			Action("add mob")
+			--[
+				Param("index",11151101)
+				Param("group",11)
+				Param("loc x",747.967)
+				Param("loc y",-96.114)
+				Param("loc z",-4370.864)
+				Param("dir x",-0.806)
+				Param("dir z",-0.591)
+				Param("no spawn wait","true")
+			--]
+			End()
+
+			Action("wait")
+			--[
+				Condition("check mobgroup")
+				--[
+					Param("group",11)
+					Param("count",1)
+				--]
+				End()
+			--]
+			End()
+
+			Action("get faint location")
+			--[
+				Param("target type","mob")
+				Param("target index",11)
+				Param("loc var","kLoc")
+				Param("dir var","kDir")
+				Param("default","Loc(747.967,-96.114,-4370.864),Dir(-0.806,0,-0.591)")
+			--]
+			End()
+
+			Action("add npc")
+			--[
+				Param("index",2413125)
+				Param("use loc var","true")
+				Param("loc var","kLoc")
+				Param("dir var","kDir")
+				Param("no spawn wait","true")
+			--]
+			End()
+
+			Action("wait")
+			--[
+				Condition("check time")
+				--[
+					Param("time",600)
+
+				--]
+				End()
+			--]
+			End()
+
+			Action("remove npc")
+			--[
+				Param("index",2413125)
+				Param("type","clear")
+			--]
+			End()
+		--]
+		End()
+--------------------------------11
+		Condition("child")
+		--[
+			Action("add mob")
+			--[
+				Param("index",11151101)
+				Param("group",12)
+				Param("loc x",1193.661)
+				Param("loc y",-107.313)
+				Param("loc z",-2670.712)
+				Param("dir x",-0.956)
+				Param("dir z",0.293)
+				Param("no spawn wait","true")
+			--]
+			End()
+
+			Action("wait")
+			--[
+				Condition("check mobgroup")
+				--[
+					Param("group",12)
+					Param("count",1)
+				--]
+				End()
+			--]
+			End()
+
+			Action("get faint location")
+			--[
+				Param("target type","mob")
+				Param("target index",12)
+				Param("loc var","lLoc")
+				Param("dir var","lDir")
+				Param("default","Loc(1193.661,-107.313,-2670.712),Dir(-0.956,0,0.293)")
+			--]
+			End()
+
+			Action("add npc")
+			--[
+				Param("index",2413126)
+				Param("use loc var","true")
+				Param("loc var","lLoc")
+				Param("dir var","lDir")
+				Param("no spawn wait","true")
+			--]
+			End()
+
+			Action("wait")
+			--[
+				Condition("check time")
+				--[
+					Param("time",600)
+				--]
+				End()
+			--]
+			End()
+
+			Action("remove npc")
+			--[
+				Param("index",2413126)
+				Param("type","clear")
+			--]
+			End()
+		--]
+		End()
+----------------------------12
+
+		Action("wait")
+		--[
+			Condition("check time")
+			--[
+				Param("time",7200)
+			--]
+			End()
+		
+		--]
+		End()
+		
+		Action("remove mobgroup")
+		--[
+			Param("group",1)
+			Param("type","clear")
+		--]
+		End()
+
+		Action("remove mobgroup")
+		--[
+			Param("group",2)
+			Param("type","clear")
+		--]
+		End()
+
+		Action("remove mobgroup")
+		--[
+			Param("group",3)
+			Param("type","clear")
+		--]
+		End()
+
+		Action("remove mobgroup")
+		--[
+			Param("group",4)
+			Param("type","clear")
+		--]
+		End()
+
+		Action("remove mobgroup")
+		--[
+			Param("group",5)
+			Param("type","clear")
+		--]
+		End()
+
+		Action("remove mobgroup")
+		--[
+			Param("group",6)
+			Param("type","clear")
+		--]
+		End()
+
+		Action("remove mobgroup")
+		--[
+			Param("group",7)
+			Param("type","clear")
+		--]
+		End()
+
+		Action("remove mobgroup")
+		--[
+			Param("group",8)
+			Param("type","clear")
+		--]
+		End()
+
+		Action("remove mobgroup")
+		--[
+			Param("group",9)
+			Param("type","clear")
+		--]
+		End()
+
+		Action("remove mobgroup")
+		--[
+			Param("group",10)
+			Param("type","clear")
+		--]
+		End()
+
+		Action("remove mobgroup")
+		--[
+			Param("group",11)
+			Param("type","clear")
+		--]
+		End()
+
+		Action("remove mobgroup")
+		--[
+			Param("group",12)
+			Param("type","clear")
+		--]
+		End()
+
+		Action("wait")
+		--[
+			Condition("check time")
+			--[
+				Param("time",600)
+			--]
+			End()
+		--]
+		End()
+
+		Action("remove npc")
+		--[
+			Param("index",2413115)
+			Param("type","clear")
+		--]
+		End()
+
+		Action("remove npc")
+		--[
+			Param("index",2413116)
+			Param("type","clear")
+		--]
+		End()
+
+		Action("remove npc")
+		--[
+			Param("index",2413117)
+			Param("type","clear")
+		--]
+		End()
+
+		Action("remove npc")
+		--[
+			Param("index",2413118)
+			Param("type","clear")
+		--]
+		End()
+
+		Action("remove npc")
+		--[
+			Param("index",2413119)
+			Param("type","clear")
+		--]
+		End()
+
+		Action("remove npc")
+		--[
+			Param("index",2413120)
+			Param("type","clear")
+		--]
+		End()
+
+		Action("remove npc")
+		--[
+			Param("index",2413121)
+			Param("type","clear")
+		--]
+		End()
+
+		Action("remove npc")
+		--[
+			Param("index",2413122)
+			Param("type","clear")
+		--]
+		End()
+
+		Action("remove npc")
+		--[
+			Param("index",2413123)
+			Param("type","clear")
+		--]
+		End()
+
+		Action("remove npc")
+		--[
+			Param("index",2413124)
+			Param("type","clear")
+		--]
+		End()
+
+		Action("remove npc")
+		--[
+			Param("index",2413125)
+			Param("type","clear")
+		--]
+		End()
+
+		Action("remove npc")
+		--[
+			Param("index",2413126)
+			Param("type","clear")
+		--]
+		End()
+
+		Action("wps fail")
+		--[
+		--]
+		End()
+	--]
+	End()
+
+--]
+End()
+
+GameFailed()
+--[
+--]
+End()

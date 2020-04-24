@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="d3d9">
+      <UniqueIdentifier>{12b2f0b8-69f8-4672-9d1c-b7368237f158}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="plugin">
+      <UniqueIdentifier>{46c2ee24-98ac-43d6-9a24-815630840fe2}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="toon\d3d9\brutesilhouette.c">
+      <Filter>d3d9</Filter>
+    </ClCompile>
+    <ClCompile Include="toon\d3d9\crease.c">
+      <Filter>d3d9</Filter>
+    </ClCompile>
+    <ClCompile Include="toon\d3d9\d3d9paint.c">
+      <Filter>d3d9</Filter>
+    </ClCompile>
+    <ClCompile Include="toon\d3d9\edgerender.c">
+      <Filter>d3d9</Filter>
+    </ClCompile>
+    <ClCompile Include="toon\NtlMaterialExt.c">
+      <Filter>plugin</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Renderware\Include\rpdbgerr.c">
+      <Filter>plugin</Filter>
+    </ClCompile>
+    <ClCompile Include="toon\rptoon.c">
+      <Filter>plugin</Filter>
+    </ClCompile>
+    <ClCompile Include="toon\toongeo.c">
+      <Filter>plugin</Filter>
+    </ClCompile>
+    <ClCompile Include="toon\toonink.c">
+      <Filter>plugin</Filter>
+    </ClCompile>
+    <ClCompile Include="toon\toonmaterial.c">
+      <Filter>plugin</Filter>
+    </ClCompile>
+    <ClCompile Include="toon\toonpaint.c">
+      <Filter>plugin</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="toon\d3d9\brutesilhouette.h">
+      <Filter>d3d9</Filter>
+    </ClInclude>
+    <ClInclude Include="toon\d3d9\crease.h">
+      <Filter>d3d9</Filter>
+    </ClInclude>
+    <ClInclude Include="toon\d3d9\d3d9toon.h">
+      <Filter>d3d9</Filter>
+    </ClInclude>
+    <ClInclude Include="toon\d3d9\edgerender.h">
+      <Filter>d3d9</Filter>
+    </ClInclude>
+    <ClInclude Include="toon\d3d9\toonpixelshader.h">
+      <Filter>d3d9</Filter>
+    </ClInclude>
+    <ClInclude Include="toon\d3d9\toonpixelshadernobase.h">
+      <Filter>d3d9</Filter>
+    </ClInclude>
+    <ClInclude Include="toon\d3d9\toonpixelshadernobasenocolor.h">
+      <Filter>d3d9</Filter>
+    </ClInclude>
+    <ClInclude Include="toon\d3d9\toonpixelshadernocolor.h">
+      <Filter>d3d9</Filter>
+    </ClInclude>
+    <ClInclude Include="toon\d3d9\toonplatform.h">
+      <Filter>d3d9</Filter>
+    </ClInclude>
+    <ClInclude Include="toon\d3d9\toonsilhouettevertexshader.h">
+      <Filter>d3d9</Filter>
+    </ClInclude>
+    <ClInclude Include="toon\d3d9\toonvertexshader.h">
+      <Filter>d3d9</Filter>
+    </ClInclude>
+    <ClInclude Include="toon\d3d9\toonvertexshaderflat.h">
+      <Filter>d3d9</Filter>
+    </ClInclude>
+    <ClInclude Include="toon\NtlMaterialExt.h">
+      <Filter>plugin</Filter>
+    </ClInclude>
+    <ClInclude Include="toon\pipes.h">
+      <Filter>plugin</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Renderware\Include\rpdbgerr.h">
+      <Filter>plugin</Filter>
+    </ClInclude>
+    <ClInclude Include="toon\rpplugin.h">
+      <Filter>plugin</Filter>
+    </ClInclude>
+    <ClInclude Include="toon\toon.h">
+      <Filter>plugin</Filter>
+    </ClInclude>
+    <ClInclude Include="toon\toonapi.h">
+      <Filter>plugin</Filter>
+    </ClInclude>
+    <ClInclude Include="toon\toongeo.h">
+      <Filter>plugin</Filter>
+    </ClInclude>
+    <ClInclude Include="toon\toonink.h">
+      <Filter>plugin</Filter>
+    </ClInclude>
+    <ClInclude Include="toon\toonmaterial.h">
+      <Filter>plugin</Filter>
+    </ClInclude>
+    <ClInclude Include="toon\toonpaint.h">
+      <Filter>plugin</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="toon\rperror.def">
+      <Filter>plugin</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+</Project>

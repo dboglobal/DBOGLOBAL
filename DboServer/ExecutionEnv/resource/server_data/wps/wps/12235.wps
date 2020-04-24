@@ -1,0 +1,92 @@
+-- TMQ 2-2 Hard Mode
+
+GameStage(0)
+--[
+	Action( "calculate" )
+	--[
+		Param( "declare", "vector ReLoc = Vector(0,0,0), vector ReDir = Vector(0,0,0)" )
+	--]
+	End()
+
+	Action( "add mob" )	-- ¼¼³ú ¸®Äñ
+	--[
+		Param( "index", 37122101 )
+		Param( "group", 10 )
+		Param( "loc x", -222.981 )
+		Param( "loc y", 136.804 )
+		Param( "loc z", 31.576 )
+		Param( "dir x", 0.45 )
+		Param( "dir z", -0.893 )
+		Param( "immortal", "true" )
+		Param( "no spawn wait", "true" )
+	--]
+	End()
+
+	Action( "wait" )
+	--[
+		Condition( "check lp" )
+		--[
+			Param( "type", "mob" )
+			Param( "group", 10 )
+			Param( "lp", 10 )
+		--]
+		End()
+	--]
+	End()
+
+	Action( "get location" )
+	--[
+		Param( "target type", "mob" )
+		Param( "target index", 10 )
+		Param( "loc var", "ReLoc" )
+		Param( "dir var", "ReDir" )
+		Param( "default", "Loc( -222.981, 136.804, 31.576), Dir(0.45, 0.00, -0.893)" )
+	--]
+	End()
+
+	Action( "send event to ts" )
+	--[
+		Param( "trigger type", "quest" )
+		Param( "apply type", "register all" )
+		Param( "event id", 1057 )
+	--]
+	End()
+
+	Action( "remove mobgroup" )
+	--[
+		Param( "group", 10 )
+		Param( "type", "clear" )
+	--]
+	End()
+
+	Action( "add mob" )
+	--[
+		Param( "index", 31753416 )
+		Param( "group", 12235 )
+		Param( "use loc var", "true" )
+		Param( "loc var", "ReLoc" )
+		Param( "dir var", "ReDir" )
+		Param( "no spawn wait", "true" )
+	--]
+	End()
+
+	Action( "wait" )
+	--[
+		Param( "operation", "or" )
+	
+		Condition( "check mobgroup" )
+		--[
+			Param( "group", 12235 )
+			Param( "count", 1 )
+		--]
+		End()
+	
+		Condition( "check time" )
+		--[
+			Param( "time", 600 )
+		--]
+		End()
+	--]
+	End()
+--]
+End()

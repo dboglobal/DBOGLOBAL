@@ -1,0 +1,80 @@
+-- TMQ 2-1 Hard Mode
+
+GameStage(0)
+--[
+	Action( "change object state" )
+	--[
+		Param( "index", 3 )
+		Param( "substate unselect", 1 )
+	--]
+	End()
+			
+	Action( "change object state" )
+	--[
+		Param( "index", 4 )
+		Param( "substate unselect", 1 )
+	--]
+	End()
+	
+	Action( "change object state" )
+	--[
+		Param( "index", 5 )
+		Param( "substate unselect", 1 )
+	--]
+	End()
+	
+	Action( "change object state" )
+	--[
+		Param( "index", 6 )
+		Param( "substate unselect", 1 )
+	--]
+	End()
+	
+	Action( "change object state" )
+	--[
+		Param( "index", 7 )
+		Param( "substate unselect", 1 )
+	--]
+	End()
+
+	Action( "add npc" )
+	--[
+		Param( "index", 7511107 )
+		Param( "loc x", 26.301 )
+		Param( "loc y", 149.830 )
+		Param( "loc z", 272.799 )
+		Param( "dir x", 0.533 )
+		Param( "dir z", -0.846 )
+		Param( "play script", 7511107 )
+		Param( "play scene", 1 )
+		Param( "no spawn wait", "true" )
+		Param( "stand alone", "true" )
+	--]
+	End()
+
+	Action( "wait" )
+	--[
+		Condition( "recv event from sps" )
+		--[
+			Param( "object type", "npc" )
+			Param( "object index", 7511107 )
+			Param( "event id", 1041 )
+		--]
+		End()
+	--]
+	End()
+
+	Action( "remove npc" )
+	--[
+		Param( "index", 7511107 )
+		Param( "type", "clear" )
+	--]
+	End()
+--]
+End()
+
+GameFailed()
+--[
+
+--]
+End()

@@ -1,0 +1,52 @@
+-- 1번방 2구역 몹 전부 사망시 스위치 활성화
+
+GameStage( 0 )
+--[
+	Action( "wait" )
+	--[
+		Condition( "recv event from ts" )
+		--[
+			Param( "trigger type", "object" )
+			Param( "event id", 434 )
+		--]
+		End()
+	--]
+	End()
+	
+	Action( "add mobgroup" )
+	--[
+		Param( "group", 2 )
+		Param( "no spawn wait", "true" )
+	--]
+	End()
+
+	Action( "wait" )
+	--[
+		Condition( "check mobgroup" )
+		--[
+			Param( "group", 2 )
+			Param( "count", 13 )
+		--]
+		End()
+	--]
+	End()
+
+	Action( "wait" )
+	--[
+		Condition( "check time" )
+		--[
+			Param( "time", 2 )
+		--]
+		End()
+	--]
+	End()
+
+	Action( "change object state" )
+	--[
+		Param( "index", 5 )
+		Param( "state", 1 )
+		Param( "substate show", 1 )
+	--]
+	End()
+--]
+End()

@@ -1,0 +1,88 @@
+GameStage(0)
+--[
+	Action( "add npc" )
+	--[
+		Param( "index", 3721301 )
+		Param( "loc x", -1412.759 )
+		Param( "loc y", -123.495 )
+		Param( "loc z", -2470.021 )
+		Param( "dir x", 0.943 )
+		Param( "dir z", -0.333 )
+		Param( "play script", 3721301 )
+		Param( "play scene", 1 )
+		Param( "no spawn wait", "true" )
+	--]
+	End()
+
+	Action( "function" )
+	--[
+		Condition( "child" )
+		--[
+			Action( "wait" )
+			--[
+				Condition( "npc faint" )
+				--[
+					Param( "npc index", 3721301 )
+				--]
+				End()
+			--]
+			End()
+
+			Action( "wps fail" )
+			--[
+			--]
+			End()
+		--]
+		End()
+
+		Action( "wait" )
+		--[
+			Condition( "recv event from sps" )
+			--[
+				Param( "object type", "npc" )
+				Param( "object index", 3721301 )
+				Param( "event id", 490 )
+			--]
+			End()
+		--]
+		End()
+	--]
+	End()
+
+	Action( "send event to ts" )
+	--[
+		Param( "trigger type", "quest" )
+		Param( "apply type", "register all" )
+		Param( "event id", 491 )
+	--]
+	End()
+
+	Action( "wait" )
+	--[
+		Condition( "check time" )
+		--[
+			Param( "time", 3 )
+		--]
+		End()
+	--]
+	End()
+
+	Action( "remove npc" )
+	--[
+		Param( "index", 3721301 )
+		Param( "type", "clear" )
+	--]
+	End()
+--]
+End()
+
+GameFailed()
+--[
+	Action( "remove npc" )
+	--[
+		Param( "index", 3721301 )
+		Param( "type", "clear" )
+	--]
+	End()
+--]
+End()

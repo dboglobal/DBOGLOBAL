@@ -1,0 +1,87 @@
+GameStage(0)
+--[
+	Action("add npc")
+	--[
+		Param("index", 4123101)
+		Param("loc x", -1214.28)
+		Param("loc y", -69)
+		Param("loc z", 1303.206)
+		Param("dir x", 0.517)
+		Param("dir z", 0.856)
+		Param("play script", 4123101)
+		Param("play scene", 1)
+		Param("no spawn wait", "true")
+	--]
+	End()
+
+	Action("wait")
+	--[
+		Condition("recv event from sps")
+		--[
+			Param("object type", "npc")
+			Param("object index", 4123101)
+			Param("event id", 387)
+		--]
+		End()
+	--]
+	End()
+
+	Action("remove npc")
+	--[
+		Param("index", 4123101)
+		Param("type", "clear")
+	--]
+	End()
+
+	Action("add mob")
+	--[
+		Param("index", 5653104)
+		Param("group", 1582)
+		Param("loc x", -1202.506)
+		Param("loc y", -68)
+		Param("loc z", 1319.571)
+		Param("dir x", 0.517)
+		Param("dir z", 0.856)
+	--]
+	End()
+
+	Action("wait")
+	--[
+		Param("operation","or")
+
+		Condition("check mobgroup")
+		--[
+			Param("group", 1582)
+			Param("count", 1)
+		--]
+		End()
+
+		Condition("child")
+		--[
+			Action("wait")
+			--[
+				Condition("check time")
+				--[
+					Param("time", 400)
+				--]
+				End()
+			--]
+			End()
+
+			Action("wps fail")
+			--[
+			--]
+			End()
+		--]
+		End()
+	--]
+	End()
+
+--]
+End()
+
+GameFailed()
+--[
+--]
+End()
+	

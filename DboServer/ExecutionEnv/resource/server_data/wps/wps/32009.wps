@@ -1,0 +1,292 @@
+-- stage 2
+-- Which runs from wps
+-- Gas geosan grown man (boss) (also self-destruct) of the top 50% remains, IP, gas Commando Spawn Cultivation
+
+GameStage(0)
+--[
+	-- 가스 거산 재배맨 spawn
+	Action( "add mobgroup" )
+	--[
+		Param( "group", 210 )
+		Param( "no spawn wait", "true" )
+	--]
+	End()
+	
+	-- 가스 거산 재배맨의 위치 정보 변수 선언
+	Action( "calculate" )
+	--[
+		Param( "declare", "vector norLoc = Vector(0,0,0), vector norDir = Vector(0,0,0)" )
+	--]
+	End()
+	
+	-- 가스 특공 재배맨의 위치 정보 변수 선언
+	Action( "calculate" )
+	--[
+		Param( "declare", "vector pucLoc = Vector(0,0,0), vector pucDir = Vector(0,0,0)" )
+	--]
+	End()
+	
+	-- 가스 거산 재배맨 사망 체크(바깥쪽 loop)
+	Action( "function" )
+	--[
+		Condition( "child" )
+		--[
+			Action( "while" )
+			--[
+				Action( "loop" )
+				--[
+
+					-- 가스 거산 재배맨 전투 풀림 체크(안쪽 loop)
+					Action( "function" )
+					--[
+						Condition( "child" )
+						--[
+							Action( "while" )
+							--[
+								Action( "loop" )
+								--[
+
+									-- 전투상태가 풀리면 안쪽 loop에서 탈출하고, 스폰한 mob 제거함
+									Action( "wait" )
+									--[
+										Condition( "check battle" )
+										--[
+											Param( "type", "mob" )
+											Param( "group", 210 )
+											Param( "is battle", "true" )
+										--]
+										End()
+									--]
+									End()
+
+									Action( "wait" )
+									--[
+										Condition( "check lp" )
+										--[
+											Param( "type", "mob" )
+											Param( "group", 210 )
+											Param( "index", 5765101 )
+											Param( "lp", 50 )
+										--]
+										End()
+									--]
+									End()
+									
+									-- 가스 거산 재배맨의 위치 get
+									Action( "get location" )
+									--[
+										Param( "target type", "mob" )
+										Param( "target index", 210 )
+										Param( "loc var", "norLoc" )
+										Param( "dir var", "norDir" )
+										Param( "default", "Loc(638.31, -14.51, -183.66), Dir(0.14, 0.00, 0.99)" )
+									--]
+									End()
+									
+									-- 특공 방향에 거산의 방향 복사
+									Action( "calculate" )
+									--[
+										Param( "express", "pucDir = norDir" )
+									--]
+									End()
+									
+									-- 90도 위치에 특공 위치 지정, 각도, 거리
+									Action( "calculate" )
+									--[
+										Param( "express", "pucLoc = RelativeCoord( norLoc, norDir, 90, 5 )" )
+									--]
+									End()
+									
+									-- 90도 위치에 특공을 spawn한다
+									Action( "add mob" )
+									--[
+										Param( "index", 6811146 )
+										Param( "group", 3200901 )
+										Param( "use loc var", "true" )
+										Param( "loc var", "pucLoc" )
+										Param( "dir var", "pucDir" )
+										Param( "no spawn wait", "true" )
+									--]
+									End()
+									
+
+
+									
+									-- 270도 위치에 특공 위치 지정, 각도, 거리
+									Action( "calculate" )
+									--[
+										Param( "express", "pucLoc = RelativeCoord( norLoc, norDir, 270, 5 )" )
+									--]
+									End()
+									
+									-- 270도 위치에 특공을 spawn한다
+									Action( "add mob" )
+									--[
+										Param( "index", 6811146 )
+										Param( "group", 3200901 )
+										Param( "use loc var", "true" )
+										Param( "loc var", "pucLoc" )
+										Param( "dir var", "pucDir" )
+										Param( "no spawn wait", "true" )
+									--]
+									End()
+									
+
+
+
+									
+									-- 135도 위치에 특공 위치 지정, 각도, 거리
+									Action( "calculate" )
+									--[
+										Param( "express", "pucLoc = RelativeCoord( norLoc, norDir, 135, 7 )" )
+									--]
+									End()
+									
+									-- 135도 위치에 특공을 spawn한다
+									Action( "add mob" )
+									--[
+										Param( "index", 6811146 )
+										Param( "group", 3200901 )
+										Param( "use loc var", "true" )
+										Param( "loc var", "pucLoc" )
+										Param( "dir var", "pucDir" )
+										Param( "no spawn wait", "true" )
+									--]
+									End()
+									
+
+
+
+									
+									-- 225도 위치에 특공 위치 지정, 각도, 거리
+									Action( "calculate" )
+									--[
+										Param( "express", "pucLoc = RelativeCoord( norLoc, norDir, 225, 7 )" )
+									--]
+									End()
+									
+									-- 225도 위치에 특공을 spawn한다
+									Action( "add mob" )
+									--[
+										Param( "index", 6811146 )
+										Param( "group", 3200901 )
+										Param( "use loc var", "true" )
+										Param( "loc var", "pucLoc" )
+										Param( "dir var", "pucDir" )
+										Param( "no spawn wait", "true" )
+									--]
+									End()
+									
+
+									
+									
+								--	-- 가스 특공 재배맨 mob spawn
+								--	Action( "add mobgroup" )
+								--	--[
+								--		Param( "group", 212 )
+								--		Param( "no spawn wait", "true" )
+								--	--]
+								--	End()
+									
+								--	-- spawn한 mob 잡을 때 까지 대기
+								--	Action( "wait" )
+								--	--[
+								--		Condition( "check mobgroup" )
+								--		--[
+								--			Param( "group", 212 )
+								--			Param( "count", 0 )
+								--		--]
+								--		End()
+								--	--]
+								--	End()
+									
+									-- 90초 후에 다시 LP check 하도록 함
+									-- (spawn된 mob만 먼저 잡은 후에 전투 해제하고
+									-- 다시 boss mob만 편하게 사냥하는 것을 막기 위함)
+									Action( "wait" )
+									--[
+										Condition( "check time" )
+										--[
+											Param( "time", 90 )
+										--]
+										End()
+									--]
+									End()
+
+								-- loop 닫음
+								--]
+								End()
+							
+							-- while 닫음
+							--]
+							End()
+						-- child 닫음
+						--]
+						End()
+
+						-- 전투상태가 풀리면 안쪽 loop에서 탈출하고, 스폰한 mob 제거함
+						-- (버그로 인해, 죽으면 해당 코드 작동되지만,
+						-- 그냥 도망치면 작동되지 않음. UD2의 닥터 게로 클론과 동일함)
+						Action( "wait" )
+						--[
+							Condition( "check battle" )
+							--[
+								Param( "type", "mob" )
+								Param( "group", 210 )
+								Param( "is battle", "false" )
+							--]
+							End()
+						--]
+						End()
+						
+						-- spawn한 mob제거
+						Action( "remove mobgroup" )
+						--[
+							Param( "group", 3200901 )
+							Param( "type", "clear" )
+						--]
+						End()
+
+					-- function 닫음
+					--]
+					End()
+					-- 원래 거산 가스 재배맨 전투 풀림 체크 종료
+				
+				-- loop 닫음
+				--]
+				End()
+			
+			-- while 닫음
+			--]
+			End()
+			
+		-- child 닫음
+		--]
+		End()
+
+		-- 원래 가스 거산 재배맨 사망시 바깥쪽 loop에서 탈출
+		Action( "wait" )
+		--[
+			Condition( "check mobgroup" )
+			--[
+				Param( "group", 210 )
+				Param( "count", 0 ) 
+			--]
+			End()
+		--]
+		End()
+		
+	-- function 닫음	
+	--]
+	End()
+
+
+	-- 나가는 portal 열어줌
+	Action( "change object state" )
+	--[
+		Param( "index", 45 )
+		Param( "state", 1 )
+	--]
+	End()
+--]
+End()

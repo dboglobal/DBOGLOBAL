@@ -1,0 +1,35 @@
+<placement3D>
+	<meshObjects>
+		<meshObject name="spiralStaircase" type="spiralStaircase" rotation="2.24" scale="1" x="16000" y="-32920" z="-3680"/>
+		<meshObject name="simpleBridge" type="simpleBridge" rotation="0" scale="1" x="-9120" y="-9120" z="0"/>
+		<meshObject name="spiralStaircase" type="spiralStaircase" rotation="-2.63999" scale="1.43" x="49000" y="-11240" z="-5960"/>
+		<meshObject name="straightStaircase" type="straightStaircase" rotation="-0.96" scale="1" x="34560" y="-35680" z="-7360"/>
+	</meshObjects>
+	<solidObjects>
+		<solidObject name="bigRock0" type="floatingRock" rotation="-0.0500004" scale="1" x="16320" y="-44120" z="-3200"/>
+		<solidObject name="bigRock1" type="floatingRock" rotation="-3.86" scale="1.82" x="32720" y="-12480" z="-5480"/>
+		<solidObject name="bigRock2" type="floatingRock2" rotation="2.7" scale="1" x="800" y="-25920" z="1120"/>
+		<solidObject name="bigRock3" type="floatingRock2" rotation="-0.08" scale="1" x="29400" y="-2680" z="280"/>
+		<solidObject name="fence0" type="fence" rotation="0" scale="1" x="32960" y="-15400" z="-6000"/>
+		<solidObject name="fence1" type="fence" rotation="0" scale="1" x="36120" y="-15720" z="-5840"/>
+		<solidObject name="fence2" type="fence" rotation="0" scale="1" x="38960" y="-15360" z="-5960"/>
+		<solidObject name="fence3" type="fence" rotation="0.54" scale="1" x="41760" y="-16200" z="-6000"/>
+		<solidObject name="fence4" type="fence" rotation="0.76" scale="1" x="44000" y="-17480" z="-6400"/>
+		<solidObject name="fence5" type="fence" rotation="0.5" scale="1" x="46280" y="-18960" z="-6520"/>
+		<solidObject name="table" type="table" rotation="0" scale="1" x="12200" y="11480" z="0"/>
+		<solidObject name="chair0" type="chair" rotation="0" scale="1" x="10800" y="11760" z="0"/>
+		<solidObject name="chair1" type="chair" rotation="-1.69" scale="1" x="12520" y="9640" z="0"/>
+		<solidObject name="chair2" type="chair" rotation="2.7" scale="1" x="13960" y="12200" z="0"/>
+		<solidObject name="chair3" type="chair" rotation="1.54" scale="1" x="12160" y="14400" z="-160"/>
+		<solidObject name="barrel0" type="barrel" rotation="0" scale="1" x="1120" y="2440" z="0"/>
+		<solidObject name="barrel1" type="barrel" rotation="0" scale="1" x="-400" y="5680" z="0"/>
+		<solidObject name="barrel2" type="barrel" rotation="0" scale="1" x="720" y="6240" z="0"/>
+		<solidObject name="crate0" type="crate" rotation="0" scale="1" x="3880" y="3080" z="0"/>
+		<solidObject name="crate1" type="crate" rotation="0" scale="1.15" x="5560" y="2920" z="0"/>
+		<solidObject name="crate2" type="crate" rotation="0.35" scale="1" x="5800" y="2520" z="1000"/>
+		<solidObject name="archway0" type="archway" rotation="0" scale="1" x="160" y="11960" z="0"/>
+		<solidObject name="archway2" type="archway" rotation="0" scale="0.82" x="-2520" y="12240" z="0"/>
+		<solidObject name="archway3" type="archway" rotation="0" scale="0.65" x="-5000" y="12880" z="0"/>
+		<solidObject name="floor" type="bigFlatFloor" rotation="0" scale="0.14" x="10080" y="19800" z="0"/>
+	</solidObjects>
+</placement3D>

@@ -1,0 +1,2218 @@
+
+GameStage(0)
+--[
+	Action( "add mob" )
+	--[
+		Param( "index", 3212107 )
+		Param( "group", 3481 )
+		Param( "loc x", 4478.498 )
+		Param( "loc y", -83)
+		Param( "loc z", -1580.956 )
+		Param( "dir x", -0.574 )
+		Param( "dir z", 0.819 )
+		Param( "no spawn wait", "true" )
+	--]
+	End()
+
+	Action( "add mob" )
+	--[
+		Param( "index", 3212107 )
+		Param( "group", 3482 )
+		Param( "loc x", 4473.804 )
+		Param( "loc y", -84)
+		Param( "loc z", -1582.745 )
+		Param( "dir x", 0.121 )
+		Param( "dir z", 0.993 )
+		Param( "no spawn wait", "true" )
+	--]
+	End()
+
+	Action( "add mob" )
+	--[
+		Param( "index", 3212107 )
+		Param( "group", 3483 )
+		Param( "loc x", 4469.341 )
+		Param( "loc y", -84)
+		Param( "loc z", -1578.872 )
+		Param( "dir x", 0.959 )
+		Param( "dir z", 0.285 )
+		Param( "no spawn wait", "true" )
+	--]
+	End()
+
+	Action( "function" )
+	--[
+		Condition( "child" )
+		--[
+			Action( "wait" )
+			--[
+				Condition( "check mobgroup" )
+				--[
+					Param( "group", 3481 )
+					Param( "count", 0 )
+				--]
+				End()
+			--]
+			End()
+			
+			Action( "wait" )
+			--[
+				Condition( "check time" )
+				--[
+					Param( "time", 3 )
+				--]
+				End()
+			--]
+			End()
+
+			Action( "add mob" )
+			--[
+				Param( "index", 3212107 )
+				Param( "group", 3481 )
+				Param( "loc x", 4478.498 )
+				Param( "loc y", -83)
+				Param( "loc z", -1580.956 )
+				Param( "dir x", -0.574 )
+				Param( "dir z", 0.819 )
+				Param( "no spawn wait", "true" )
+			--]
+			End()			
+
+			Action( "wait" )
+			--[
+				Condition( "check mobgroup" )
+				--[
+					Param( "group", 3481 )
+					Param( "count", 0 )
+				--]
+				End()
+			--]
+			End()
+			
+			Action( "wait" )
+			--[
+				Condition( "check time" )
+				--[
+					Param( "time", 3 )
+				--]
+				End()
+			--]
+			End()
+
+			Action( "add mob" )
+			--[
+				Param( "index", 3212107 )
+				Param( "group", 3481 )
+				Param( "loc x", 4478.498 )
+				Param( "loc y", -83)
+				Param( "loc z", -1580.956 )
+				Param( "dir x", -0.574 )
+				Param( "dir z", 0.819 )
+				Param( "no spawn wait", "true" )
+			--]
+			End()
+
+			Action( "wait" )
+			--[
+				Condition( "check mobgroup" )
+				--[
+					Param( "group", 3481 )
+					Param( "count", 0 )
+				--]
+				End()
+			--]
+			End()
+			
+			Action( "wait" )
+			--[
+				Condition( "check time" )
+				--[
+					Param( "time", 3 )
+				--]
+				End()
+			--]
+			End()
+
+			Action( "add mob" )
+			--[
+				Param( "index", 3212107 )
+				Param( "group", 3481 )
+				Param( "loc x", 4478.498 )
+				Param( "loc y", -83)
+				Param( "loc z", -1580.956 )
+				Param( "dir x", -0.574 )
+				Param( "dir z", 0.819 )
+				Param( "no spawn wait", "true" )
+			--]
+			End()
+
+			Action( "wait" )
+			--[
+				Condition( "check mobgroup" )
+				--[
+					Param( "group", 3481 )
+					Param( "count", 0 )
+				--]
+				End()
+			--]
+			End()
+			
+			Action( "wait" )
+			--[
+				Condition( "check time" )
+				--[
+					Param( "time", 3 )
+				--]
+				End()
+			--]
+			End()
+
+			Action( "add mob" )
+			--[
+				Param( "index", 3212107 )
+				Param( "group", 3481 )
+				Param( "loc x", 4478.498 )
+				Param( "loc y", -83)
+				Param( "loc z", -1580.956 )
+				Param( "dir x", -0.574 )
+				Param( "dir z", 0.819 )
+				Param( "no spawn wait", "true" )
+			--]
+			End()
+
+			Action( "wait" )
+			--[
+				Condition( "check mobgroup" )
+				--[
+					Param( "group", 3481 )
+					Param( "count", 0 )
+				--]
+				End()
+			--]
+			End()
+			
+			Action( "wait" )
+			--[
+				Condition( "check time" )
+				--[
+					Param( "time", 3 )
+				--]
+				End()
+			--]
+			End()
+
+			Action( "add mob" )
+			--[
+				Param( "index", 3212107 )
+				Param( "group", 3481 )
+				Param( "loc x", 4478.498 )
+				Param( "loc y", -83)
+				Param( "loc z", -1580.956 )
+				Param( "dir x", -0.574 )
+				Param( "dir z", 0.819 )
+				Param( "no spawn wait", "true" )
+			--]
+			End()
+
+			Action( "wait" )
+			--[
+				Condition( "check mobgroup" )
+				--[
+					Param( "group", 3481 )
+					Param( "count", 0 )
+				--]
+				End()
+			--]
+			End()
+			
+			Action( "wait" )
+			--[
+				Condition( "check time" )
+				--[
+					Param( "time", 3 )
+				--]
+				End()
+			--]
+			End()
+
+			Action( "add mob" )
+			--[
+				Param( "index", 3212107 )
+				Param( "group", 3481 )
+				Param( "loc x", 4478.498 )
+				Param( "loc y", -83)
+				Param( "loc z", -1580.956 )
+				Param( "dir x", -0.574 )
+				Param( "dir z", 0.819 )
+				Param( "no spawn wait", "true" )
+			--]
+			End()
+
+			Action( "wait" )
+			--[
+				Condition( "check mobgroup" )
+				--[
+					Param( "group", 3481 )
+					Param( "count", 0 )
+				--]
+				End()
+			--]
+			End()
+			
+			Action( "wait" )
+			--[
+				Condition( "check time" )
+				--[
+					Param( "time", 3 )
+				--]
+				End()
+			--]
+			End()
+
+			Action( "add mob" )
+			--[
+				Param( "index", 3212107 )
+				Param( "group", 3481 )
+				Param( "loc x", 4478.498 )
+				Param( "loc y", -83)
+				Param( "loc z", -1580.956 )
+				Param( "dir x", -0.574 )
+				Param( "dir z", 0.819 )
+				Param( "no spawn wait", "true" )
+			--]
+			End()
+
+			Action( "wait" )
+			--[
+				Condition( "check mobgroup" )
+				--[
+					Param( "group", 3481 )
+					Param( "count", 0 )
+				--]
+				End()
+			--]
+			End()
+			
+			Action( "wait" )
+			--[
+				Condition( "check time" )
+				--[
+					Param( "time", 3 )
+				--]
+				End()
+			--]
+			End()
+
+			Action( "add mob" )
+			--[
+				Param( "index", 3212107 )
+				Param( "group", 3481 )
+				Param( "loc x", 4478.498 )
+				Param( "loc y", -83)
+				Param( "loc z", -1580.956 )
+				Param( "dir x", -0.574 )
+				Param( "dir z", 0.819 )
+				Param( "no spawn wait", "true" )
+			--]
+			End()
+
+			Action( "wait" )
+			--[
+				Condition( "check mobgroup" )
+				--[
+					Param( "group", 3481 )
+					Param( "count", 0 )
+				--]
+				End()
+			--]
+			End()
+			
+			Action( "wait" )
+			--[
+				Condition( "check time" )
+				--[
+					Param( "time", 3 )
+				--]
+				End()
+			--]
+			End()
+
+			Action( "add mob" )
+			--[
+				Param( "index", 3212107 )
+				Param( "group", 3481 )
+				Param( "loc x", 4478.498 )
+				Param( "loc y", -83)
+				Param( "loc z", -1580.956 )
+				Param( "dir x", -0.574 )
+				Param( "dir z", 0.819 )
+				Param( "no spawn wait", "true" )
+			--]
+			End()
+
+			Action( "wait" )
+			--[
+				Condition( "check mobgroup" )
+				--[
+					Param( "group", 3481 )
+					Param( "count", 0 )
+				--]
+				End()
+			--]
+			End()
+			
+			Action( "wait" )
+			--[
+				Condition( "check time" )
+				--[
+					Param( "time", 3 )
+				--]
+				End()
+			--]
+			End()
+
+			Action( "add mob" )
+			--[
+				Param( "index", 3212107 )
+				Param( "group", 3481 )
+				Param( "loc x", 4478.498 )
+				Param( "loc y", -83)
+				Param( "loc z", -1580.956 )
+				Param( "dir x", -0.574 )
+				Param( "dir z", 0.819 )
+				Param( "no spawn wait", "true" )
+			--]
+			End()
+
+			Action( "wait" )
+			--[
+				Condition( "check mobgroup" )
+				--[
+					Param( "group", 3481 )
+					Param( "count", 0 )
+				--]
+				End()
+			--]
+			End()
+			
+			Action( "wait" )
+			--[
+				Condition( "check time" )
+				--[
+					Param( "time", 3 )
+				--]
+				End()
+			--]
+			End()
+
+			Action( "add mob" )
+			--[
+				Param( "index", 3212107 )
+				Param( "group", 3481 )
+				Param( "loc x", 4478.498 )
+				Param( "loc y", -83)
+				Param( "loc z", -1580.956 )
+				Param( "dir x", -0.574 )
+				Param( "dir z", 0.819 )
+				Param( "no spawn wait", "true" )
+			--]
+			End()
+
+			Action( "wait" )
+			--[
+				Condition( "check mobgroup" )
+				--[
+					Param( "group", 3481 )
+					Param( "count", 0 )
+				--]
+				End()
+			--]
+			End()
+			
+			Action( "wait" )
+			--[
+				Condition( "check time" )
+				--[
+					Param( "time", 3 )
+				--]
+				End()
+			--]
+			End()
+
+			Action( "add mob" )
+			--[
+				Param( "index", 3212107 )
+				Param( "group", 3481 )
+				Param( "loc x", 4478.498 )
+				Param( "loc y", -83)
+				Param( "loc z", -1580.956 )
+				Param( "dir x", -0.574 )
+				Param( "dir z", 0.819 )
+				Param( "no spawn wait", "true" )
+			--]
+			End()
+
+			Action( "wait" )
+			--[
+				Condition( "check mobgroup" )
+				--[
+					Param( "group", 3481 )
+					Param( "count", 0 )
+				--]
+				End()
+			--]
+			End()
+			
+			Action( "wait" )
+			--[
+				Condition( "check time" )
+				--[
+					Param( "time", 3 )
+				--]
+				End()
+			--]
+			End()
+
+			Action( "add mob" )
+			--[
+				Param( "index", 3212107 )
+				Param( "group", 3481 )
+				Param( "loc x", 4478.498 )
+				Param( "loc y", -83)
+				Param( "loc z", -1580.956 )
+				Param( "dir x", -0.574 )
+				Param( "dir z", 0.819 )
+				Param( "no spawn wait", "true" )
+			--]
+			End()
+
+			Action( "wait" )
+			--[
+				Condition( "check mobgroup" )
+				--[
+					Param( "group", 3481 )
+					Param( "count", 0 )
+				--]
+				End()
+			--]
+			End()
+			
+			Action( "wait" )
+			--[
+				Condition( "check time" )
+				--[
+					Param( "time", 3 )
+				--]
+				End()
+			--]
+			End()
+
+			Action( "add mob" )
+			--[
+				Param( "index", 3212107 )
+				Param( "group", 3481 )
+				Param( "loc x", 4478.498 )
+				Param( "loc y", -83)
+				Param( "loc z", -1580.956 )
+				Param( "dir x", -0.574 )
+				Param( "dir z", 0.819 )
+				Param( "no spawn wait", "true" )
+			--]
+			End()
+
+			Action( "wait" )
+			--[
+				Condition( "check mobgroup" )
+				--[
+					Param( "group", 3481 )
+					Param( "count", 0 )
+				--]
+				End()
+			--]
+			End()
+			
+			Action( "wait" )
+			--[
+				Condition( "check time" )
+				--[
+					Param( "time", 3 )
+				--]
+				End()
+			--]
+			End()
+
+			Action( "add mob" )
+			--[
+				Param( "index", 3212107 )
+				Param( "group", 3481 )
+				Param( "loc x", 4478.498 )
+				Param( "loc y", -83)
+				Param( "loc z", -1580.956 )
+				Param( "dir x", -0.574 )
+				Param( "dir z", 0.819 )
+				Param( "no spawn wait", "true" )
+			--]
+			End()
+
+			Action( "wait" )
+			--[
+				Condition( "check mobgroup" )
+				--[
+					Param( "group", 3481 )
+					Param( "count", 0 )
+				--]
+				End()
+			--]
+			End()
+			
+			Action( "wait" )
+			--[
+				Condition( "check time" )
+				--[
+					Param( "time", 3 )
+				--]
+				End()
+			--]
+			End()
+
+			Action( "add mob" )
+			--[
+				Param( "index", 3212107 )
+				Param( "group", 3481 )
+				Param( "loc x", 4478.498 )
+				Param( "loc y", -83)
+				Param( "loc z", -1580.956 )
+				Param( "dir x", -0.574 )
+				Param( "dir z", 0.819 )
+				Param( "no spawn wait", "true" )
+			--]
+			End()
+
+			Action( "wait" )
+			--[
+				Condition( "check mobgroup" )
+				--[
+					Param( "group", 3481 )
+					Param( "count", 0 )
+				--]
+				End()
+			--]
+			End()
+			
+			Action( "wait" )
+			--[
+				Condition( "check time" )
+				--[
+					Param( "time", 3 )
+				--]
+				End()
+			--]
+			End()
+
+			Action( "add mob" )
+			--[
+				Param( "index", 3212107 )
+				Param( "group", 3481 )
+				Param( "loc x", 4478.498 )
+				Param( "loc y", -83)
+				Param( "loc z", -1580.956 )
+				Param( "dir x", -0.574 )
+				Param( "dir z", 0.819 )
+				Param( "no spawn wait", "true" )
+			--]
+			End()
+
+			Action( "wait" )
+			--[
+				Condition( "check mobgroup" )
+				--[
+					Param( "group", 3481 )
+					Param( "count", 0 )
+				--]
+				End()
+			--]
+			End()
+			
+			Action( "wait" )
+			--[
+				Condition( "check time" )
+				--[
+					Param( "time", 3 )
+				--]
+				End()
+			--]
+			End()
+
+			Action( "add mob" )
+			--[
+				Param( "index", 3212107 )
+				Param( "group", 3481 )
+				Param( "loc x", 4478.498 )
+				Param( "loc y", -83)
+				Param( "loc z", -1580.956 )
+				Param( "dir x", -0.574 )
+				Param( "dir z", 0.819 )
+				Param( "no spawn wait", "true" )
+			--]
+			End()
+
+			Action( "wait" )
+			--[
+				Condition( "check mobgroup" )
+				--[
+					Param( "group", 3481 )
+					Param( "count", 0 )
+				--]
+				End()
+			--]
+			End()
+			
+			Action( "wait" )
+			--[
+				Condition( "check time" )
+				--[
+					Param( "time", 3 )
+				--]
+				End()
+			--]
+			End()
+
+			Action( "add mob" )
+			--[
+				Param( "index", 3212107 )
+				Param( "group", 3481 )
+				Param( "loc x", 4478.498 )
+				Param( "loc y", -83)
+				Param( "loc z", -1580.956 )
+				Param( "dir x", -0.574 )
+				Param( "dir z", 0.819 )
+				Param( "no spawn wait", "true" )
+			--]
+			End()
+
+			Action( "wait" )
+			--[
+				Condition( "check mobgroup" )
+				--[
+					Param( "group", 3481 )
+					Param( "count", 0 )
+				--]
+				End()
+			--]
+			End()
+			
+			Action( "wait" )
+			--[
+				Condition( "check time" )
+				--[
+					Param( "time", 3 )
+				--]
+				End()
+			--]
+			End()
+
+			Action( "add mob" )
+			--[
+				Param( "index", 3212107 )
+				Param( "group", 3481 )
+				Param( "loc x", 4478.498 )
+				Param( "loc y", -83)
+				Param( "loc z", -1580.956 )
+				Param( "dir x", -0.574 )
+				Param( "dir z", 0.819 )
+				Param( "no spawn wait", "true" )
+			--]
+			End()
+
+			Action( "wait" )
+			--[
+				Condition( "check mobgroup" )
+				--[
+					Param( "group", 3481 )
+					Param( "count", 0 )
+				--]
+				End()
+			--]
+			End()
+			
+			Action( "wait" )
+			--[
+				Condition( "check time" )
+				--[
+					Param( "time", 3 )
+				--]
+				End()
+			--]
+			End()
+
+			Action( "add mob" )
+			--[
+				Param( "index", 3212107 )
+				Param( "group", 3481 )
+				Param( "loc x", 4478.498 )
+				Param( "loc y", -83)
+				Param( "loc z", -1580.956 )
+				Param( "dir x", -0.574 )
+				Param( "dir z", 0.819 )
+				Param( "no spawn wait", "true" )
+			--]
+			End()
+		--]
+		End()
+
+		Condition( "child" )
+		--[
+			Action( "wait" )
+			--[
+				Condition( "check mobgroup" )
+				--[
+					Param( "group", 3482 )
+					Param( "count", 0 )
+				--]
+				End()
+			--]
+			End()
+			
+			Action( "wait" )
+			--[
+				Condition( "check time" )
+				--[
+					Param( "time", 3 )
+				--]
+				End()
+			--]
+			End()
+
+			Action( "add mob" )
+			--[
+				Param( "index", 3212107 )
+				Param( "group", 3482 )
+				Param( "loc x", 4473.804 )
+				Param( "loc y", -83)
+				Param( "loc z", -1582.745 )
+				Param( "dir x", 0.121 )
+				Param( "dir z", 0.993 )
+				Param( "no spawn wait", "true" )
+			--]
+			End()		
+
+			Action( "wait" )
+			--[
+				Condition( "check mobgroup" )
+				--[
+					Param( "group", 3482 )
+					Param( "count", 0 )
+				--]
+				End()
+			--]
+			End()
+			
+			Action( "wait" )
+			--[
+				Condition( "check time" )
+				--[
+					Param( "time", 3 )
+				--]
+				End()
+			--]
+			End()
+
+			Action( "add mob" )
+			--[
+				Param( "index", 3212107 )
+				Param( "group", 3482 )
+				Param( "loc x", 4473.804 )
+				Param( "loc y", -83)
+				Param( "loc z", -1582.745 )
+				Param( "dir x", 0.121 )
+				Param( "dir z", 0.993 )
+				Param( "no spawn wait", "true" )
+			--]
+			End()	
+
+			Action( "wait" )
+			--[
+				Condition( "check mobgroup" )
+				--[
+					Param( "group", 3482 )
+					Param( "count", 0 )
+				--]
+				End()
+			--]
+			End()
+			
+			Action( "wait" )
+			--[
+				Condition( "check time" )
+				--[
+					Param( "time", 3 )
+				--]
+				End()
+			--]
+			End()
+
+			Action( "add mob" )
+			--[
+				Param( "index", 3212107 )
+				Param( "group", 3482 )
+				Param( "loc x", 4473.804 )
+				Param( "loc y", -83)
+				Param( "loc z", -1582.745 )
+				Param( "dir x", 0.121 )
+				Param( "dir z", 0.993 )
+				Param( "no spawn wait", "true" )
+			--]
+			End()	
+
+			Action( "wait" )
+			--[
+				Condition( "check mobgroup" )
+				--[
+					Param( "group", 3482 )
+					Param( "count", 0 )
+				--]
+				End()
+			--]
+			End()
+			
+			Action( "wait" )
+			--[
+				Condition( "check time" )
+				--[
+					Param( "time", 3 )
+				--]
+				End()
+			--]
+			End()
+
+			Action( "add mob" )
+			--[
+				Param( "index", 3212107 )
+				Param( "group", 3482 )
+				Param( "loc x", 4473.804 )
+				Param( "loc y", -83)
+				Param( "loc z", -1582.745 )
+				Param( "dir x", 0.121 )
+				Param( "dir z", 0.993 )
+				Param( "no spawn wait", "true" )
+			--]
+			End()	
+
+			Action( "wait" )
+			--[
+				Condition( "check mobgroup" )
+				--[
+					Param( "group", 3482 )
+					Param( "count", 0 )
+				--]
+				End()
+			--]
+			End()
+			
+			Action( "wait" )
+			--[
+				Condition( "check time" )
+				--[
+					Param( "time", 3 )
+				--]
+				End()
+			--]
+			End()
+
+			Action( "add mob" )
+			--[
+				Param( "index", 3212107 )
+				Param( "group", 3482 )
+				Param( "loc x", 4473.804 )
+				Param( "loc y", -83)
+				Param( "loc z", -1582.745 )
+				Param( "dir x", 0.121 )
+				Param( "dir z", 0.993 )
+				Param( "no spawn wait", "true" )
+			--]
+			End()	
+
+			Action( "wait" )
+			--[
+				Condition( "check mobgroup" )
+				--[
+					Param( "group", 3482 )
+					Param( "count", 0 )
+				--]
+				End()
+			--]
+			End()
+			
+			Action( "wait" )
+			--[
+				Condition( "check time" )
+				--[
+					Param( "time", 3 )
+				--]
+				End()
+			--]
+			End()
+
+			Action( "add mob" )
+			--[
+				Param( "index", 3212107 )
+				Param( "group", 3482 )
+				Param( "loc x", 4473.804 )
+				Param( "loc y", -83)
+				Param( "loc z", -1582.745 )
+				Param( "dir x", 0.121 )
+				Param( "dir z", 0.993 )
+				Param( "no spawn wait", "true" )
+			--]
+			End()	
+
+			Action( "wait" )
+			--[
+				Condition( "check mobgroup" )
+				--[
+					Param( "group", 3482 )
+					Param( "count", 0 )
+				--]
+				End()
+			--]
+			End()
+			
+			Action( "wait" )
+			--[
+				Condition( "check time" )
+				--[
+					Param( "time", 3 )
+				--]
+				End()
+			--]
+			End()
+
+			Action( "add mob" )
+			--[
+				Param( "index", 3212107 )
+				Param( "group", 3482 )
+				Param( "loc x", 4473.804 )
+				Param( "loc y", -83)
+				Param( "loc z", -1582.745 )
+				Param( "dir x", 0.121 )
+				Param( "dir z", 0.993 )
+				Param( "no spawn wait", "true" )
+			--]
+			End()	
+
+			Action( "wait" )
+			--[
+				Condition( "check mobgroup" )
+				--[
+					Param( "group", 3482 )
+					Param( "count", 0 )
+				--]
+				End()
+			--]
+			End()
+			
+			Action( "wait" )
+			--[
+				Condition( "check time" )
+				--[
+					Param( "time", 3 )
+				--]
+				End()
+			--]
+			End()
+
+			Action( "add mob" )
+			--[
+				Param( "index", 3212107 )
+				Param( "group", 3482 )
+				Param( "loc x", 4473.804 )
+				Param( "loc y", -83)
+				Param( "loc z", -1582.745 )
+				Param( "dir x", 0.121 )
+				Param( "dir z", 0.993 )
+				Param( "no spawn wait", "true" )
+			--]
+			End()	
+
+			Action( "wait" )
+			--[
+				Condition( "check mobgroup" )
+				--[
+					Param( "group", 3482 )
+					Param( "count", 0 )
+				--]
+				End()
+			--]
+			End()
+			
+			Action( "wait" )
+			--[
+				Condition( "check time" )
+				--[
+					Param( "time", 3 )
+				--]
+				End()
+			--]
+			End()
+
+			Action( "add mob" )
+			--[
+				Param( "index", 3212107 )
+				Param( "group", 3482 )
+				Param( "loc x", 4473.804 )
+				Param( "loc y", -83)
+				Param( "loc z", -1582.745 )
+				Param( "dir x", 0.121 )
+				Param( "dir z", 0.993 )
+				Param( "no spawn wait", "true" )
+			--]
+			End()	
+
+			Action( "wait" )
+			--[
+				Condition( "check mobgroup" )
+				--[
+					Param( "group", 3482 )
+					Param( "count", 0 )
+				--]
+				End()
+			--]
+			End()
+			
+			Action( "wait" )
+			--[
+				Condition( "check time" )
+				--[
+					Param( "time", 3 )
+				--]
+				End()
+			--]
+			End()
+
+			Action( "add mob" )
+			--[
+				Param( "index", 3212107 )
+				Param( "group", 3482 )
+				Param( "loc x", 4473.804 )
+				Param( "loc y", -83)
+				Param( "loc z", -1582.745 )
+				Param( "dir x", 0.121 )
+				Param( "dir z", 0.993 )
+				Param( "no spawn wait", "true" )
+			--]
+			End()	
+
+			Action( "wait" )
+			--[
+				Condition( "check mobgroup" )
+				--[
+					Param( "group", 3482 )
+					Param( "count", 0 )
+				--]
+				End()
+			--]
+			End()
+			
+			Action( "wait" )
+			--[
+				Condition( "check time" )
+				--[
+					Param( "time", 3 )
+				--]
+				End()
+			--]
+			End()
+
+			Action( "add mob" )
+			--[
+				Param( "index", 3212107 )
+				Param( "group", 3482 )
+				Param( "loc x", 4473.804 )
+				Param( "loc y", -83)
+				Param( "loc z", -1582.745 )
+				Param( "dir x", 0.121 )
+				Param( "dir z", 0.993 )
+				Param( "no spawn wait", "true" )
+			--]
+			End()	
+
+			Action( "wait" )
+			--[
+				Condition( "check mobgroup" )
+				--[
+					Param( "group", 3482 )
+					Param( "count", 0 )
+				--]
+				End()
+			--]
+			End()
+			
+			Action( "wait" )
+			--[
+				Condition( "check time" )
+				--[
+					Param( "time", 3 )
+				--]
+				End()
+			--]
+			End()
+
+			Action( "add mob" )
+			--[
+				Param( "index", 3212107 )
+				Param( "group", 3482 )
+				Param( "loc x", 4473.804 )
+				Param( "loc y", -83)
+				Param( "loc z", -1582.745 )
+				Param( "dir x", 0.121 )
+				Param( "dir z", 0.993 )
+				Param( "no spawn wait", "true" )
+			--]
+			End()	
+
+			Action( "wait" )
+			--[
+				Condition( "check mobgroup" )
+				--[
+					Param( "group", 3482 )
+					Param( "count", 0 )
+				--]
+				End()
+			--]
+			End()
+			
+			Action( "wait" )
+			--[
+				Condition( "check time" )
+				--[
+					Param( "time", 3 )
+				--]
+				End()
+			--]
+			End()
+
+			Action( "add mob" )
+			--[
+				Param( "index", 3212107 )
+				Param( "group", 3482 )
+				Param( "loc x", 4473.804 )
+				Param( "loc y", -83)
+				Param( "loc z", -1582.745 )
+				Param( "dir x", 0.121 )
+				Param( "dir z", 0.993 )
+				Param( "no spawn wait", "true" )
+			--]
+			End()	
+
+			Action( "wait" )
+			--[
+				Condition( "check mobgroup" )
+				--[
+					Param( "group", 3482 )
+					Param( "count", 0 )
+				--]
+				End()
+			--]
+			End()
+			
+			Action( "wait" )
+			--[
+				Condition( "check time" )
+				--[
+					Param( "time", 3 )
+				--]
+				End()
+			--]
+			End()
+
+			Action( "add mob" )
+			--[
+				Param( "index", 3212107 )
+				Param( "group", 3482 )
+				Param( "loc x", 4473.804 )
+				Param( "loc y", -83)
+				Param( "loc z", -1582.745 )
+				Param( "dir x", 0.121 )
+				Param( "dir z", 0.993 )
+				Param( "no spawn wait", "true" )
+			--]
+			End()	
+
+			Action( "wait" )
+			--[
+				Condition( "check mobgroup" )
+				--[
+					Param( "group", 3482 )
+					Param( "count", 0 )
+				--]
+				End()
+			--]
+			End()
+			
+			Action( "wait" )
+			--[
+				Condition( "check time" )
+				--[
+					Param( "time", 3 )
+				--]
+				End()
+			--]
+			End()
+
+			Action( "add mob" )
+			--[
+				Param( "index", 3212107 )
+				Param( "group", 3482 )
+				Param( "loc x", 4473.804 )
+				Param( "loc y", -83)
+				Param( "loc z", -1582.745 )
+				Param( "dir x", 0.121 )
+				Param( "dir z", 0.993 )
+				Param( "no spawn wait", "true" )
+			--]
+			End()	
+
+			Action( "wait" )
+			--[
+				Condition( "check mobgroup" )
+				--[
+					Param( "group", 3482 )
+					Param( "count", 0 )
+				--]
+				End()
+			--]
+			End()
+			
+			Action( "wait" )
+			--[
+				Condition( "check time" )
+				--[
+					Param( "time", 3 )
+				--]
+				End()
+			--]
+			End()
+
+			Action( "add mob" )
+			--[
+				Param( "index", 3212107 )
+				Param( "group", 3482 )
+				Param( "loc x", 4473.804 )
+				Param( "loc y", -83)
+				Param( "loc z", -1582.745 )
+				Param( "dir x", 0.121 )
+				Param( "dir z", 0.993 )
+				Param( "no spawn wait", "true" )
+			--]
+			End()	
+
+			Action( "wait" )
+			--[
+				Condition( "check mobgroup" )
+				--[
+					Param( "group", 3482 )
+					Param( "count", 0 )
+				--]
+				End()
+			--]
+			End()
+			
+			Action( "wait" )
+			--[
+				Condition( "check time" )
+				--[
+					Param( "time", 3 )
+				--]
+				End()
+			--]
+			End()
+
+			Action( "add mob" )
+			--[
+				Param( "index", 3212107 )
+				Param( "group", 3482 )
+				Param( "loc x", 4473.804 )
+				Param( "loc y", -83)
+				Param( "loc z", -1582.745 )
+				Param( "dir x", 0.121 )
+				Param( "dir z", 0.993 )
+				Param( "no spawn wait", "true" )
+			--]
+			End()	
+
+			Action( "wait" )
+			--[
+				Condition( "check mobgroup" )
+				--[
+					Param( "group", 3482 )
+					Param( "count", 0 )
+				--]
+				End()
+			--]
+			End()
+			
+			Action( "wait" )
+			--[
+				Condition( "check time" )
+				--[
+					Param( "time", 3 )
+				--]
+				End()
+			--]
+			End()
+
+			Action( "add mob" )
+			--[
+				Param( "index", 3212107 )
+				Param( "group", 3482 )
+				Param( "loc x", 4473.804 )
+				Param( "loc y", -83)
+				Param( "loc z", -1582.745 )
+				Param( "dir x", 0.121 )
+				Param( "dir z", 0.993 )
+				Param( "no spawn wait", "true" )
+			--]
+			End()	
+
+			Action( "wait" )
+			--[
+				Condition( "check mobgroup" )
+				--[
+					Param( "group", 3482 )
+					Param( "count", 0 )
+				--]
+				End()
+			--]
+			End()
+			
+			Action( "wait" )
+			--[
+				Condition( "check time" )
+				--[
+					Param( "time", 3 )
+				--]
+				End()
+			--]
+			End()
+
+			Action( "add mob" )
+			--[
+				Param( "index", 3212107 )
+				Param( "group", 3482 )
+				Param( "loc x", 4473.804 )
+				Param( "loc y", -83)
+				Param( "loc z", -1582.745 )
+				Param( "dir x", 0.121 )
+				Param( "dir z", 0.993 )
+				Param( "no spawn wait", "true" )
+			--]
+			End()	
+
+			Action( "wait" )
+			--[
+				Condition( "check mobgroup" )
+				--[
+					Param( "group", 3482 )
+					Param( "count", 0 )
+				--]
+				End()
+			--]
+			End()
+			
+			Action( "wait" )
+			--[
+				Condition( "check time" )
+				--[
+					Param( "time", 3 )
+				--]
+				End()
+			--]
+			End()
+
+			Action( "add mob" )
+			--[
+				Param( "index", 3212107 )
+				Param( "group", 3482 )
+				Param( "loc x", 4473.804 )
+				Param( "loc y", -83)
+				Param( "loc z", -1582.745 )
+				Param( "dir x", 0.121 )
+				Param( "dir z", 0.993 )
+				Param( "no spawn wait", "true" )
+			--]
+			End()	
+
+			Action( "wait" )
+			--[
+				Condition( "check mobgroup" )
+				--[
+					Param( "group", 3482 )
+					Param( "count", 0 )
+				--]
+				End()
+			--]
+			End()
+			
+			Action( "wait" )
+			--[
+				Condition( "check time" )
+				--[
+					Param( "time", 3 )
+				--]
+				End()
+			--]
+			End()
+
+			Action( "add mob" )
+			--[
+				Param( "index", 3212107 )
+				Param( "group", 3482 )
+				Param( "loc x", 4473.804 )
+				Param( "loc y", -83)
+				Param( "loc z", -1582.745 )
+				Param( "dir x", 0.121 )
+				Param( "dir z", 0.993 )
+				Param( "no spawn wait", "true" )
+			--]
+			End()	
+		--]
+		End()
+		
+		Condition( "child" )
+		--[
+			Action( "wait" )
+			--[
+				Condition( "check mobgroup" )
+				--[
+					Param( "group", 3483 )
+					Param( "count", 0 )
+				--]
+				End()
+			--]
+			End()
+
+			Action( "wait" )
+			--[
+				Condition( "check time" )
+				--[
+					Param( "time", 3 )
+				--]
+				End()
+			--]
+			End()
+
+			Action( "add mob" )
+			--[
+				Param( "index", 3212107 )
+				Param( "group", 3483 )
+				Param( "loc x", 4469.341 )
+				Param( "loc y", -83)
+				Param( "loc z", -1578.872 )
+				Param( "dir x", 0.959 )
+				Param( "dir z", 0.285 )
+				Param( "no spawn wait", "true" )
+			--]
+			End()
+
+			Action( "wait" )
+			--[
+				Condition( "check mobgroup" )
+				--[
+					Param( "group", 3483 )
+					Param( "count", 0 )
+				--]
+				End()
+			--]
+			End()
+
+			Action( "wait" )
+			--[
+				Condition( "check time" )
+				--[
+					Param( "time", 3 )
+				--]
+				End()
+			--]
+			End()
+
+			Action( "add mob" )
+			--[
+				Param( "index", 3212107 )
+				Param( "group", 3483 )
+				Param( "loc x", 4469.341 )
+				Param( "loc y", -83)
+				Param( "loc z", -1578.872 )
+				Param( "dir x", 0.959 )
+				Param( "dir z", 0.285 )
+				Param( "no spawn wait", "true" )
+			--]
+			End()
+
+			Action( "wait" )
+			--[
+				Condition( "check mobgroup" )
+				--[
+					Param( "group", 3483 )
+					Param( "count", 0 )
+				--]
+				End()
+			--]
+			End()
+
+			Action( "wait" )
+			--[
+				Condition( "check time" )
+				--[
+					Param( "time", 3 )
+				--]
+				End()
+			--]
+			End()
+
+			Action( "add mob" )
+			--[
+				Param( "index", 3212107 )
+				Param( "group", 3483 )
+				Param( "loc x", 4469.341 )
+				Param( "loc y", -83)
+				Param( "loc z", -1578.872 )
+				Param( "dir x", 0.959 )
+				Param( "dir z", 0.285 )
+				Param( "no spawn wait", "true" )
+			--]
+			End()
+
+			Action( "wait" )
+			--[
+				Condition( "check mobgroup" )
+				--[
+					Param( "group", 3483 )
+					Param( "count", 0 )
+				--]
+				End()
+			--]
+			End()
+
+			Action( "wait" )
+			--[
+				Condition( "check time" )
+				--[
+					Param( "time", 3 )
+				--]
+				End()
+			--]
+			End()
+
+			Action( "add mob" )
+			--[
+				Param( "index", 3212107 )
+				Param( "group", 3483 )
+				Param( "loc x", 4469.341 )
+				Param( "loc y", -83)
+				Param( "loc z", -1578.872 )
+				Param( "dir x", 0.959 )
+				Param( "dir z", 0.285 )
+				Param( "no spawn wait", "true" )
+			--]
+			End()
+
+			Action( "wait" )
+			--[
+				Condition( "check mobgroup" )
+				--[
+					Param( "group", 3483 )
+					Param( "count", 0 )
+				--]
+				End()
+			--]
+			End()
+
+			Action( "wait" )
+			--[
+				Condition( "check time" )
+				--[
+					Param( "time", 3 )
+				--]
+				End()
+			--]
+			End()
+
+			Action( "add mob" )
+			--[
+				Param( "index", 3212107 )
+				Param( "group", 3483 )
+				Param( "loc x", 4469.341 )
+				Param( "loc y", -83)
+				Param( "loc z", -1578.872 )
+				Param( "dir x", 0.959 )
+				Param( "dir z", 0.285 )
+				Param( "no spawn wait", "true" )
+			--]
+			End()
+
+			Action( "wait" )
+			--[
+				Condition( "check mobgroup" )
+				--[
+					Param( "group", 3483 )
+					Param( "count", 0 )
+				--]
+				End()
+			--]
+			End()
+
+			Action( "wait" )
+			--[
+				Condition( "check time" )
+				--[
+					Param( "time", 3 )
+				--]
+				End()
+			--]
+			End()
+
+			Action( "add mob" )
+			--[
+				Param( "index", 3212107 )
+				Param( "group", 3483 )
+				Param( "loc x", 4469.341 )
+				Param( "loc y", -83)
+				Param( "loc z", -1578.872 )
+				Param( "dir x", 0.959 )
+				Param( "dir z", 0.285 )
+				Param( "no spawn wait", "true" )
+			--]
+			End()
+
+			Action( "wait" )
+			--[
+				Condition( "check mobgroup" )
+				--[
+					Param( "group", 3483 )
+					Param( "count", 0 )
+				--]
+				End()
+			--]
+			End()
+
+			Action( "wait" )
+			--[
+				Condition( "check time" )
+				--[
+					Param( "time", 3 )
+				--]
+				End()
+			--]
+			End()
+
+			Action( "add mob" )
+			--[
+				Param( "index", 3212107 )
+				Param( "group", 3483 )
+				Param( "loc x", 4469.341 )
+				Param( "loc y", -83)
+				Param( "loc z", -1578.872 )
+				Param( "dir x", 0.959 )
+				Param( "dir z", 0.285 )
+				Param( "no spawn wait", "true" )
+			--]
+			End()
+
+			Action( "wait" )
+			--[
+				Condition( "check mobgroup" )
+				--[
+					Param( "group", 3483 )
+					Param( "count", 0 )
+				--]
+				End()
+			--]
+			End()
+
+			Action( "wait" )
+			--[
+				Condition( "check time" )
+				--[
+					Param( "time", 3 )
+				--]
+				End()
+			--]
+			End()
+
+			Action( "add mob" )
+			--[
+				Param( "index", 3212107 )
+				Param( "group", 3483 )
+				Param( "loc x", 4469.341 )
+				Param( "loc y", -83)
+				Param( "loc z", -1578.872 )
+				Param( "dir x", 0.959 )
+				Param( "dir z", 0.285 )
+				Param( "no spawn wait", "true" )
+			--]
+			End()
+
+			Action( "wait" )
+			--[
+				Condition( "check mobgroup" )
+				--[
+					Param( "group", 3483 )
+					Param( "count", 0 )
+				--]
+				End()
+			--]
+			End()
+
+			Action( "wait" )
+			--[
+				Condition( "check time" )
+				--[
+					Param( "time", 3 )
+				--]
+				End()
+			--]
+			End()
+
+			Action( "add mob" )
+			--[
+				Param( "index", 3212107 )
+				Param( "group", 3483 )
+				Param( "loc x", 4469.341 )
+				Param( "loc y", -83)
+				Param( "loc z", -1578.872 )
+				Param( "dir x", 0.959 )
+				Param( "dir z", 0.285 )
+				Param( "no spawn wait", "true" )
+			--]
+			End()
+
+			Action( "wait" )
+			--[
+				Condition( "check mobgroup" )
+				--[
+					Param( "group", 3483 )
+					Param( "count", 0 )
+				--]
+				End()
+			--]
+			End()
+
+			Action( "wait" )
+			--[
+				Condition( "check time" )
+				--[
+					Param( "time", 3 )
+				--]
+				End()
+			--]
+			End()
+
+			Action( "add mob" )
+			--[
+				Param( "index", 3212107 )
+				Param( "group", 3483 )
+				Param( "loc x", 4469.341 )
+				Param( "loc y", -83)
+				Param( "loc z", -1578.872 )
+				Param( "dir x", 0.959 )
+				Param( "dir z", 0.285 )
+				Param( "no spawn wait", "true" )
+			--]
+			End()
+
+			Action( "wait" )
+			--[
+				Condition( "check mobgroup" )
+				--[
+					Param( "group", 3483 )
+					Param( "count", 0 )
+				--]
+				End()
+			--]
+			End()
+
+			Action( "wait" )
+			--[
+				Condition( "check time" )
+				--[
+					Param( "time", 3 )
+				--]
+				End()
+			--]
+			End()
+
+			Action( "add mob" )
+			--[
+				Param( "index", 3212107 )
+				Param( "group", 3483 )
+				Param( "loc x", 4469.341 )
+				Param( "loc y", -83)
+				Param( "loc z", -1578.872 )
+				Param( "dir x", 0.959 )
+				Param( "dir z", 0.285 )
+				Param( "no spawn wait", "true" )
+			--]
+			End()
+
+			Action( "wait" )
+			--[
+				Condition( "check mobgroup" )
+				--[
+					Param( "group", 3483 )
+					Param( "count", 0 )
+				--]
+				End()
+			--]
+			End()
+
+			Action( "wait" )
+			--[
+				Condition( "check time" )
+				--[
+					Param( "time", 3 )
+				--]
+				End()
+			--]
+			End()
+
+			Action( "add mob" )
+			--[
+				Param( "index", 3212107 )
+				Param( "group", 3483 )
+				Param( "loc x", 4469.341 )
+				Param( "loc y", -83)
+				Param( "loc z", -1578.872 )
+				Param( "dir x", 0.959 )
+				Param( "dir z", 0.285 )
+				Param( "no spawn wait", "true" )
+			--]
+			End()
+
+			Action( "wait" )
+			--[
+				Condition( "check mobgroup" )
+				--[
+					Param( "group", 3483 )
+					Param( "count", 0 )
+				--]
+				End()
+			--]
+			End()
+
+			Action( "wait" )
+			--[
+				Condition( "check time" )
+				--[
+					Param( "time", 3 )
+				--]
+				End()
+			--]
+			End()
+
+			Action( "add mob" )
+			--[
+				Param( "index", 3212107 )
+				Param( "group", 3483 )
+				Param( "loc x", 4469.341 )
+				Param( "loc y", -83)
+				Param( "loc z", -1578.872 )
+				Param( "dir x", 0.959 )
+				Param( "dir z", 0.285 )
+				Param( "no spawn wait", "true" )
+			--]
+			End()
+
+			Action( "wait" )
+			--[
+				Condition( "check mobgroup" )
+				--[
+					Param( "group", 3483 )
+					Param( "count", 0 )
+				--]
+				End()
+			--]
+			End()
+
+			Action( "wait" )
+			--[
+				Condition( "check time" )
+				--[
+					Param( "time", 3 )
+				--]
+				End()
+			--]
+			End()
+
+			Action( "add mob" )
+			--[
+				Param( "index", 3212107 )
+				Param( "group", 3483 )
+				Param( "loc x", 4469.341 )
+				Param( "loc y", -83)
+				Param( "loc z", -1578.872 )
+				Param( "dir x", 0.959 )
+				Param( "dir z", 0.285 )
+				Param( "no spawn wait", "true" )
+			--]
+			End()
+
+			Action( "wait" )
+			--[
+				Condition( "check mobgroup" )
+				--[
+					Param( "group", 3483 )
+					Param( "count", 0 )
+				--]
+				End()
+			--]
+			End()
+
+			Action( "wait" )
+			--[
+				Condition( "check time" )
+				--[
+					Param( "time", 3 )
+				--]
+				End()
+			--]
+			End()
+
+			Action( "add mob" )
+			--[
+				Param( "index", 3212107 )
+				Param( "group", 3483 )
+				Param( "loc x", 4469.341 )
+				Param( "loc y", -83)
+				Param( "loc z", -1578.872 )
+				Param( "dir x", 0.959 )
+				Param( "dir z", 0.285 )
+				Param( "no spawn wait", "true" )
+			--]
+			End()
+
+			Action( "wait" )
+			--[
+				Condition( "check mobgroup" )
+				--[
+					Param( "group", 3483 )
+					Param( "count", 0 )
+				--]
+				End()
+			--]
+			End()
+
+			Action( "wait" )
+			--[
+				Condition( "check time" )
+				--[
+					Param( "time", 3 )
+				--]
+				End()
+			--]
+			End()
+
+			Action( "add mob" )
+			--[
+				Param( "index", 3212107 )
+				Param( "group", 3483 )
+				Param( "loc x", 4469.341 )
+				Param( "loc y", -83)
+				Param( "loc z", -1578.872 )
+				Param( "dir x", 0.959 )
+				Param( "dir z", 0.285 )
+				Param( "no spawn wait", "true" )
+			--]
+			End()
+
+			Action( "wait" )
+			--[
+				Condition( "check mobgroup" )
+				--[
+					Param( "group", 3483 )
+					Param( "count", 0 )
+				--]
+				End()
+			--]
+			End()
+
+			Action( "wait" )
+			--[
+				Condition( "check time" )
+				--[
+					Param( "time", 3 )
+				--]
+				End()
+			--]
+			End()
+
+			Action( "add mob" )
+			--[
+				Param( "index", 3212107 )
+				Param( "group", 3483 )
+				Param( "loc x", 4469.341 )
+				Param( "loc y", -83)
+				Param( "loc z", -1578.872 )
+				Param( "dir x", 0.959 )
+				Param( "dir z", 0.285 )
+				Param( "no spawn wait", "true" )
+			--]
+			End()
+
+			Action( "wait" )
+			--[
+				Condition( "check mobgroup" )
+				--[
+					Param( "group", 3483 )
+					Param( "count", 0 )
+				--]
+				End()
+			--]
+			End()
+
+			Action( "wait" )
+			--[
+				Condition( "check time" )
+				--[
+					Param( "time", 3 )
+				--]
+				End()
+			--]
+			End()
+
+			Action( "add mob" )
+			--[
+				Param( "index", 3212107 )
+				Param( "group", 3483 )
+				Param( "loc x", 4469.341 )
+				Param( "loc y", -83)
+				Param( "loc z", -1578.872 )
+				Param( "dir x", 0.959 )
+				Param( "dir z", 0.285 )
+				Param( "no spawn wait", "true" )
+			--]
+			End()
+
+			Action( "wait" )
+			--[
+				Condition( "check mobgroup" )
+				--[
+					Param( "group", 3483 )
+					Param( "count", 0 )
+				--]
+				End()
+			--]
+			End()
+
+			Action( "wait" )
+			--[
+				Condition( "check time" )
+				--[
+					Param( "time", 3 )
+				--]
+				End()
+			--]
+			End()
+
+			Action( "add mob" )
+			--[
+				Param( "index", 3212107 )
+				Param( "group", 3483 )
+				Param( "loc x", 4469.341 )
+				Param( "loc y", -83)
+				Param( "loc z", -1578.872 )
+				Param( "dir x", 0.959 )
+				Param( "dir z", 0.285 )
+				Param( "no spawn wait", "true" )
+			--]
+			End()
+
+			Action( "wait" )
+			--[
+				Condition( "check mobgroup" )
+				--[
+					Param( "group", 3483 )
+					Param( "count", 0 )
+				--]
+				End()
+			--]
+			End()
+
+			Action( "wait" )
+			--[
+				Condition( "check time" )
+				--[
+					Param( "time", 3 )
+				--]
+				End()
+			--]
+			End()
+
+			Action( "add mob" )
+			--[
+				Param( "index", 3212107 )
+				Param( "group", 3483 )
+				Param( "loc x", 4469.341 )
+				Param( "loc y", -83)
+				Param( "loc z", -1578.872 )
+				Param( "dir x", 0.959 )
+				Param( "dir z", 0.285 )
+				Param( "no spawn wait", "true" )
+			--]
+			End()
+
+			Action( "wait" )
+			--[
+				Condition( "check mobgroup" )
+				--[
+					Param( "group", 3483 )
+					Param( "count", 0 )
+				--]
+				End()
+			--]
+			End()
+
+			Action( "wait" )
+			--[
+				Condition( "check time" )
+				--[
+					Param( "time", 3 )
+				--]
+				End()
+			--]
+			End()
+
+			Action( "add mob" )
+			--[
+				Param( "index", 3212107 )
+				Param( "group", 3483 )
+				Param( "loc x", 4469.341 )
+				Param( "loc y", -83)
+				Param( "loc z", -1578.872 )
+				Param( "dir x", 0.959 )
+				Param( "dir z", 0.285 )
+				Param( "no spawn wait", "true" )
+			--]
+			End()
+		--]
+		End()
+
+		Action( "wait" )
+		--[
+			Condition( "check time" )
+			--[
+				Param( "time", 30 )	
+			--]
+			End()
+		--]
+		End()
+	--]
+	End()
+--]
+End()
+
+
+GameFailed()
+--[
+	
+--]
+End()

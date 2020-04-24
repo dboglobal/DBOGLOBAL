@@ -1,0 +1,49 @@
+GameStage(0)
+--[
+
+--대사 대기
+	Action("wait")
+	--[
+		Condition( "check time" )
+		--[
+			Param( "time", 3 )
+		--]
+		End()
+	--]
+	End()
+
+--레진 재배대 스폰
+	Action( "add mobgroup" )
+	--[
+		Param( "group", 6 )
+	--]
+	End()
+	
+--밀밀 지우기
+	Action( "remove npc" )
+	--[
+		Param( "index", 3131207 )
+		Param( "type", "clear" )
+	--]
+	End()
+	
+--더미 이벤트 대기
+	Action("wait")
+	--[
+		Condition( "recv ts event" )
+		--[
+			Param( "trigger type", "quest" );
+			Param( "event id", 16020 )
+		--]
+		End()
+	--]
+	End()
+	
+--]
+End()
+
+GameFailed()
+--[
+
+--]
+End()

@@ -1,0 +1,712 @@
+------------------------------------------------------------------------------------------------------------
+-- Time Leap Quest 2 Ver 0.1
+--
+-- Begin : 2008-08-25
+--
+-- Copyright : ⓒ NTL-Inc Co., Ltd
+--
+-- Author : YeoHyeonJoon (souled@ntl-inc.com)
+------------------------------------------------------------------------------------------------------------
+
+GameStage(0)
+--[
+
+-- Wait until PC enter area
+	Action("wait")
+	--[
+		Condition( "area enter" )
+		--[   
+			Param( "origin x", 349.418)
+			Param( "origin z", 129.1)
+			Param( "radius",10)
+		--]
+	    End()
+	--]
+	End()
+
+--BGM Play
+	Action( "play bgm" )
+	--[
+		Param( "play", "true")
+		Param( "name", "BGM\\BGM_TMQ_EVENT.ogg")
+		Param( "loop", "true")
+	--]
+	End()
+	
+--cinematic chichi father (ox-king) throw the axe
+	Action( "direct play" )
+	--[
+		Param( "type", "cinematic" )
+		Param( "id", 1037 )
+		Param("sync","true")
+	--]  
+	End()
+	
+--Send notification to quest that cinematic is finished
+	Action( "send event to ts" )
+	--[
+		Param( "trigger type", "quest" )
+		Param( "apply type", "register all")
+		Param( "event id",16502)
+	--]
+	End()
+	
+--ox-king spawn
+	Action( "add npc" )
+	--[
+		Param( "index", 2991101)
+		Param( "loc x", 349.418)
+		Param( "loc y", -92)
+		Param( "loc z", 129.1)
+		Param( "dir x", 1.00)
+		Param( "dir z", 0.00)
+	--]
+	End()
+	
+--Wait until receive quest event
+	Action("wait")
+	--[
+		Condition( "recv ts event" )
+		--[
+			Param( "trigger type", "quest" );
+			Param( "event id", 16500 )
+		--]
+		End()
+	--]
+	End()
+	
+--Ox-King spawn(mob)
+	Action( "add mob" )
+	--[
+		Param( "index", 3751101)
+		Param( "group", 101)
+		Param( "loc x", 349.418)
+		Param( "loc y", -92)
+		Param( "loc z", 129.1)
+		Param( "dir x", 1.00)
+		Param( "dir z", 0.00)
+		Param( "no spawn wait", "true" )
+	--]
+	End()
+	
+--Remove Ox King NPC
+	Action( "remove npc" )
+	--[
+		Param( "index", 2991101 )
+		Param( "type", "clear" )
+	--]
+	End()
+	
+--우마왕 LP 체크
+	Action( "wait" )
+	--[
+		Condition( "check lp" )
+		--[
+			Param( "type", "mob" )
+			Param("group", 101)
+			Param("lp", 30)
+		--]
+		End()
+	--]
+	End()
+	
+--우마왕 스폰
+	Action( "add npc" )
+	--[
+		Param( "index", 2991101)
+		Param( "loc x", 349.418)
+		Param( "loc y", -92)
+		Param( "loc z", 129.1)
+		Param( "dir x", 1.00)
+		Param( "dir z", 0.00)
+	--]
+	End()
+	
+--우마왕 확인사살
+	Action( "remove mobgroup" )
+	--[
+		Param( "group", 101 )
+		Param( "type", "clear" )
+	--]
+	End()	
+	
+--user 해명 시작
+	Action( "send event to ts" )
+	--[
+		Param( "trigger type", "quest" )
+		Param( "apply type", "register all")
+		Param( "event id",16510)
+	--]
+	End()
+	
+--user 해명 종료까지 대기
+	Action("wait")
+	--[
+		Condition( "recv ts event" )
+		--[
+			Param( "trigger type", "quest" );
+			Param( "event id", 16511 )
+		--]
+		End()
+	--]
+	End()
+	
+--BGM Play
+	Action( "play bgm" )
+	--[
+		Param( "play", "true")
+		Param( "name", "BGM\\BGM_TLQ1.ogg")
+		Param( "loop", "true")
+	--]
+	End()
+	
+--우마왕 지우기	
+	Action( "remove npc" )
+	--[
+		Param( "index", 2991101 )
+		Param( "type", "clear" )
+	--]
+	End()
+	
+--cinematic 손오공 우마왕 곁에 착지.
+	Action( "direct play" )
+	--[
+		Param( "type", "cinematic" )
+		Param( "id", 1038 )
+		Param("sync","true")
+	--]  
+	End()
+	
+--우마왕 스폰
+	Action( "add npc" )
+	--[
+		Param( "index", 2991101)
+		Param( "loc x", 349.418)
+		Param( "loc y", -92)
+		Param( "loc z", 129.1)
+		Param( "dir x", 1.00)
+		Param( "dir z", 0.00)
+	--]
+	End()
+	
+--오공 스폰
+	Action( "add npc" )
+	--[
+		Param( "index", 2741101)
+		Param( "loc x", 350.85)
+		Param( "loc y", -92)
+		Param( "loc z", 131.06)
+		Param( "dir x", 0.92)
+		Param( "dir z", -0.39)
+	--]
+	End()
+	
+--손오공 대사 시작
+	Action( "send event to ts" )
+	--[
+		Param( "trigger type", "quest" )
+		Param( "apply type", "register all")
+		Param( "event id",16512)
+	--]
+	End()
+	
+--user 해명 종료까지 대기
+	Action("wait")
+	--[
+		Condition( "recv ts event" )
+		--[
+			Param( "trigger type", "quest" );
+			Param( "event id", 16516 )
+		--]
+		End()
+	--]
+	End()
+	
+-- 우마왕 지우기	
+	Action( "remove npc" )
+	--[
+		Param( "index", 2991101 )
+		Param( "type", "clear" )
+	--]
+	End()
+
+-- 손오공 지우기	
+	Action( "remove npc" )
+	--[
+		Param( "index", 2741101 )
+		Param( "type", "clear" )
+	--]
+	End()
+	
+--cinematic 손오공 우마왕 떠나기
+	Action( "direct play" )
+	--[
+		Param( "type", "cinematic" )
+		Param( "id", 1039 )
+		Param("sync","true")
+	--]  
+	End()
+
+--우마왕 스폰
+	Action( "add npc" )
+	--[
+		Param( "index", 2991101)
+		Param( "loc x", 349.418)
+		Param( "loc y", -92)
+		Param( "loc z", 129.1)
+		Param( "dir x", -0.00)
+		Param( "dir z", -1.00)
+	--]
+	End()
+
+--기습공룡들 스폰
+	Action( "add mobgroup" )
+	--[
+		Param( "group", 1 )
+	--]
+	End()
+	
+--찌찌 스폰
+	Action( "add npc" )
+	--[
+		Param( "index", 1711201)
+		Param( "loc x", 137.20)
+		Param( "loc y", -88)
+		Param( "loc z", -199.18)
+		Param( "dir x", -0.53)
+		Param( "dir z", 0.85)
+		--Param( "play script", 1711101 )
+		--Param( "play scene", 1 )
+	--]
+	End()
+	
+--PC 진입까지 대기
+	Action("wait")
+	--[
+		Condition( "area enter" )
+		--[   
+			Param( "origin x", 137.20)
+			Param( "origin z", -199.18)
+			Param( "radius",20)
+		--]
+	    End()
+    --]
+	End()
+	
+--BGM Play
+	Action( "play bgm" )
+	--[
+		Param( "play", "true")
+		Param( "name", "BGM\\BGM_TMQ_EVENT.ogg")
+		Param( "loop", "true")
+	--]
+	End()
+	
+--찌찌 지우기	
+	Action( "remove npc" )
+	--[
+		Param( "index", 1711201 )
+		Param( "type", "clear" )
+	--]
+	End()
+	
+--cinematic 찌찌를 노리는 공룡
+	Action( "direct play" )
+	--[
+		Param( "type", "cinematic" )
+		Param( "id", 1036 )
+		Param("sync","true")
+	--]  
+	End()
+	
+--찌찌 스폰
+	Action( "add npc" )
+	--[
+		Param( "index", 1711201)
+		Param( "loc x", 137.20)
+		Param( "loc y", -88)
+		Param( "loc z", -199.18)
+		Param( "dir x", -0.53)
+		Param( "dir z", 0.85)
+		Param( "play script", 1711101 )
+		Param( "play scene", 1 )
+	--]
+	End()
+	
+--찌찌 곁 공룡  스폰
+	Action( "add mobgroup" )
+	--[
+		Param( "group", 2 )
+	--]
+	End()
+	
+--찌찌 곁 공룡 LP 체크
+	Action( "wait" )
+	--[
+		Condition( "check lp" )
+		--[
+			Param( "type", "mob" )
+			Param("group", 2)
+			Param("lp", 95)
+		--]
+		End()
+	--]
+	End()
+	
+--찌찌 발견 대사
+	Action( "send event to ts" )
+	--[
+		Param( "trigger type", "quest" )
+		Param( "apply type", "register all")
+		Param( "event id",16515)
+	--]
+	End()
+	
+--찌찌 곁 공룡 LP 체크
+	Action( "wait" )
+	--[
+		Condition( "check lp" )
+		--[
+			Param( "type", "mob" )
+			Param("group", 2)
+			Param("lp", 80)
+		--]
+		End()
+	--]
+	End()
+	
+--지원 공룡1  스폰
+	Action( "add mobgroup" )
+	--[
+		Param( "group", 3 )
+		Param( "play script", 8211100 )
+		Param( "play scene", 1 )
+	--]
+	End()
+	
+--지원 공룡1 LP 체크
+	Action( "wait" )
+	--[
+		Condition( "check lp" )
+		--[
+			Param( "type", "mob" )
+			Param("group", 3)
+			Param("lp", 80)
+		--]
+		End()
+	--]
+	End()
+	
+--지원 공룡2  스폰
+	Action( "add mobgroup" )
+	--[
+		Param( "group", 4 )
+		Param( "play script", 8211100 )
+		Param( "play scene", 1 )
+	--]
+	End()
+	
+--지원 공룡2 LP 체크
+	Action( "wait" )
+	--[
+		Condition( "check lp" )
+		--[
+			Param( "type", "mob" )
+			Param("group", 4)
+			Param("lp", 75)
+		--]
+		End()
+	--]
+	End()
+	
+--지원 공룡3  스폰
+	Action( "add mobgroup" )
+	--[
+		Param( "group", 5 )
+		Param( "play script", 8211100 )
+		Param( "play scene", 1 )
+	--]
+	End()
+	
+--몹 카운트
+	Action( "wait" )
+	--[ 
+		Param( "operation", "and" )
+		
+		Condition( "check mobgroup" )
+		--[   
+			Param( "group", 2)
+			Param( "count", 1)
+		--]
+		End()
+		
+		Condition( "check mobgroup" )
+		--[   
+			Param( "group", 3)
+			Param( "count", 1)
+		--]
+		End()
+		
+		Condition( "check mobgroup" )
+		--[   
+			Param( "group", 4)
+			Param( "count", 1)
+		--]
+		End()
+		
+		Condition( "check mobgroup" )
+		--[   
+			Param( "group", 5)
+			Param( "count", 1)
+		--]
+		End()
+	--]
+	End()
+	
+--BGM Play
+	Action( "play bgm" )
+	--[
+		Param( "play", "true")
+		Param( "name", "BGM\\BGM_TLQ1.ogg")
+		Param( "loop", "true")
+	--]
+	End()
+	
+--찌찌 클릭 활성화
+	Action( "send event to ts" )
+	--[
+		Param( "trigger type", "quest" )
+		Param( "apply type", "register all")
+		Param( "event id",16530)
+	--]
+	End()
+	
+--찌찌 대화 종료까지 대기
+	Action("wait")
+	--[
+		Condition( "recv ts event" )
+		--[
+			Param( "trigger type", "quest" );
+			Param( "event id", 16540 )
+		--]
+		End()
+	--]
+	End()
+	
+--BGM Play
+	Action( "play bgm" )
+	--[
+		Param( "play", "true")
+		Param( "name", "BGM\\BGM_TMQ_EVENT.ogg")
+		Param( "loop", "true")
+	--]
+	End()
+	
+--찌찌 스폰
+	Action( "add mob" )
+	--[
+		Param( "index", 2451101)
+		Param( "group", 102)
+		Param( "loc x", 137.20)
+		Param( "loc y", -88)
+		Param( "loc z", -199.18)
+		Param( "dir x", -0.53)
+		Param( "dir z", 0.85)
+	--]
+	End()
+	
+--찌찌 지우기	
+	Action( "remove npc" )
+	--[
+		Param( "index", 1711201 )
+		Param( "type", "clear" )
+	--]
+	End()
+	
+--찌찌 LP 체크
+	Action( "wait" )
+	--[
+		Condition( "check lp" )
+		--[
+			Param( "type", "mob" )
+			Param("group", 102)
+			Param("lp", 30)
+		--]
+		End()
+	--]
+	End()
+	
+--찌찌 스폰
+	Action( "add npc" )
+	--[
+		Param( "index", 1711101)
+		Param( "loc x", 137.20)
+		Param( "loc y", -88)
+		Param( "loc z", -199.18)
+		Param( "dir x", -0.53)
+		Param( "dir z", 0.85)
+	--]
+	End()
+	
+--BGM Play
+	Action( "play bgm" )
+	--[
+		Param( "play", "true")
+		Param( "name", "BGM\\BGM_TLQ1.ogg")
+		Param( "loop", "true")
+	--]
+	End()
+	
+--찌찌 확인사살
+	Action( "remove mobgroup" )
+	--[
+		Param( "group", 102 )
+		Param( "type", "clear" )
+	--]
+	End()
+	
+--찌찌 대사(오해풀기)
+	Action( "send event to ts" )
+	--[
+		Param( "trigger type", "quest" )
+		Param( "apply type", "register all")
+		Param( "event id",16550)
+	--]
+	End()
+	
+--찌찌 대화 종료까지 대기
+	Action("wait")
+	--[
+		Condition( "recv ts event" )
+		--[
+			Param( "trigger type", "quest" );
+			Param( "event id", 16560 )
+		--]
+		End()
+	--]
+	End()
+	
+--찌찌 지우기	
+	Action( "remove npc" )
+	--[
+		Param( "index", 1711101 )
+		Param( "type", "clear" )
+	--]
+	End()
+	
+--기습공룡 확인사살
+	Action( "remove mobgroup" )
+	--[
+		Param( "group", 1 )
+		Param( "type", "clear" )
+	--]
+	End()
+	
+--cinematic 손오공이 근두운을 타고 나타난다.
+	Action( "direct play" )
+	--[
+		Param( "type", "cinematic" )
+		Param( "id", 1031 )
+		Param("sync","true")
+	--]  
+	End()
+	
+--찌찌 스폰
+	Action( "add npc" )
+	--[
+		Param( "index", 1711101)
+		Param( "loc x", 137.20)
+		Param( "loc y", -88)
+		Param( "loc z", -199.18)
+		Param( "dir x", 0.50)
+		Param( "dir z", 0.87)
+	--]
+	End()
+	
+--오공 스폰
+	Action( "add npc" )
+	--[
+		Param( "index", 2741101)
+		Param( "loc x", 137.98)
+		Param( "loc y", -88)
+		Param( "loc z", -198.06)
+		Param( "dir x", -0.28)
+		Param( "dir z", -0.96)
+	--]
+	End()
+	
+--오공 대사 시작
+	Action( "send event to ts" )
+	--[
+		Param( "trigger type", "quest" )
+		Param( "apply type", "register all")
+		Param( "event id",16570)
+	--]
+	End()
+	
+--오공 대화 종료까지 대기
+	Action("wait")
+	--[
+		Condition( "recv ts event" )
+		--[
+			Param( "trigger type", "quest" );
+			Param( "event id", 16580 )
+		--]
+		End()
+	--]
+	End()
+
+--찌찌 지우기	
+	Action( "remove npc" )
+	--[
+		Param( "index", 1711101 )
+		Param( "type", "clear" )
+	--]
+	End()
+	
+--오공 지우기	
+	Action( "remove npc" )
+	--[
+		Param( "index", 2741101 )
+		Param( "type", "clear" )
+	--]
+	End()
+	
+--cinematic goku takes chi-chi and fly away
+	Action( "direct play" )
+	--[
+		Param( "type", "cinematic" )
+		Param( "id", 1032 )
+		Param("sync","true")
+	--]  
+	End()	
+
+--우마왕한테 가야지 대사
+	Action( "send event to ts" )
+	--[
+		Param( "trigger type", "quest" )
+		Param( "apply type", "register all")
+		Param( "event id",16610)
+	--]
+	End()
+	
+--더미 이벤트로 대기
+	Action("wait")
+	--[
+		Condition( "recv ts event" )
+		--[
+			Param( "trigger type", "quest" );
+			Param( "event id", 16020 )
+		--]
+		End()
+	--]
+	End()
+
+--]
+End()
+
+GameFailed()
+--[
+
+--]
+End()

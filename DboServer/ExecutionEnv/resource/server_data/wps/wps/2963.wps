@@ -1,0 +1,1696 @@
+GameStage(0)
+--[
+--- 첫번째 오브젝트
+	Condition("child")
+	--[
+		Action("while")
+		--[
+			Action("loop")
+			--[
+				Action("wait")
+				--[
+					Condition("recv event from ts")
+					--[
+						Param("trigger type", "object")
+						Param("event id", 753)
+					--]
+					End()
+				--]
+				End()
+				
+				Action("add mob")
+				--[
+					Param("index", 17114201)
+					Param("group", 296301)
+					Param("loc x", 4381.39)
+					Param("loc y", -52.73)
+					Param("loc z", -4675.09)
+					Param("dir x", 0.00)
+					Param("dir z", 1.00)
+					Param("no spawn wait", "true")
+				--]
+				End()
+				
+				Action( "wait" )
+				--[
+					Param( "operation", "or" )
+					
+					Condition( "check mobgroup" )
+					--[
+						Param( "group", 296301 )
+						Param( "count", 1 )
+					--]
+					End()
+					
+					Condition( "check time" )
+					--[
+						Param( "time", 60 )
+					--]
+					End()
+				--]
+				End()
+				
+				Action( "remove mobgroup" )
+				--[
+					Param( "group", 296301)
+					Param( "type", "clear" )
+				--]
+				End()
+				
+				Action( "clear event" )
+				--[
+					Param( "clear all", "false" )
+					Param( "event id", 753 )
+				--]
+				End()
+			--]
+			End()
+		--]
+		End()
+	--]
+	End()
+	
+--- 두번째 오브젝트
+	Condition("child")
+	--[
+		Action("while")
+		--[
+			Action("loop")
+			--[
+				Action("wait")
+				--[
+					Condition("recv event from ts")
+					--[
+						Param("trigger type", "object")
+						Param("event id", 754)
+					--]
+					End()
+				--]
+				End()
+				
+				Action("add mob")
+				--[
+					Param("index", 17114201)
+					Param("group", 296302)
+					Param("loc x", 4330.41)
+					Param("loc y", -56.95)
+					Param("loc z", -4661.84)
+					Param("dir x", -0.53)
+					Param("dir z", 0.85)
+					Param("no spawn wait", "true")
+				--]
+				End()
+				
+				Action( "wait" )
+				--[
+					Param( "operation", "or" )
+					
+					Condition( "check mobgroup" )
+					--[
+						Param( "group", 296302 )
+						Param( "count", 1 )
+					--]
+					End()
+					
+					Condition( "check time" )
+					--[
+						Param( "time", 60 )
+					--]
+					End()
+				--]
+				End()
+				
+				Action( "remove mobgroup" )
+				--[
+					Param( "group", 296302)
+					Param( "type", "clear" )
+				--]
+				End()
+				
+				Action( "clear event" )
+				--[
+					Param( "clear all", "false" )
+					Param( "event id", 754 )
+				--]
+				End()
+			--]
+			End()
+		--]
+		End()
+	--]
+	End()
+	
+--- 세번째 오브젝트
+	Condition("child")
+	--[
+		Action("while")
+		--[
+			Action("loop")
+			--[
+				Action("wait")
+				--[
+					Condition("recv event from ts")
+					--[
+						Param("trigger type", "object")
+						Param("event id", 755)
+					--]
+					End()
+				--]
+				End()
+				
+				Action("add mob")
+				--[
+					Param("index", 17114201)
+					Param("group", 296303)
+					Param("loc x", 4291.77)
+					Param("loc y", -56.35)
+					Param("loc z", -4614.33)
+					Param("dir x", 0.93)
+					Param("dir z", 0.37)
+					Param("no spawn wait", "true")
+				--]
+				End()
+				
+				Action( "wait" )
+				--[
+					Param( "operation", "or" )
+					
+					Condition( "check mobgroup" )
+					--[
+						Param( "group", 296303 )
+						Param( "count", 1 )
+					--]
+					End()
+					
+					Condition( "check time" )
+					--[
+						Param( "time", 60 )
+					--]
+					End()
+				--]
+				End()
+				
+				Action( "remove mobgroup" )
+				--[
+					Param( "group", 296303)
+					Param( "type", "clear" )
+				--]
+				End()
+				
+				Action( "clear event" )
+				--[
+					Param( "clear all", "false" )
+					Param( "event id", 755 )
+				--]
+				End()
+			--]
+			End()
+		--]
+		End()
+	--]
+	End()
+
+--- 네번째 오브젝트
+	Condition("child")
+	--[
+		Action("while")
+		--[
+			Action("loop")
+			--[
+				Action("wait")
+				--[
+					Condition("recv event from ts")
+					--[
+						Param("trigger type", "object")
+						Param("event id", 756)
+					--]
+					End()
+				--]
+				End()
+				
+				Action("add mob")
+				--[
+					Param("index", 17114201)
+					Param("group", 296304)
+					Param("loc x", 4290.78)
+					Param("loc y", -56.61)
+					Param("loc z", -4568.58)
+					Param("dir x", 0.99)
+					Param("dir z", -0.16)
+					Param("no spawn wait", "true")
+				--]
+				End()
+				
+				Action( "wait" )
+				--[
+					Param( "operation", "or" )
+					
+					Condition( "check mobgroup" )
+					--[
+						Param( "group", 296304 )
+						Param( "count", 1 )
+					--]
+					End()
+					
+					Condition( "check time" )
+					--[
+						Param( "time", 60 )
+					--]
+					End()
+				--]
+				End()
+				
+				Action( "remove mobgroup" )
+				--[
+					Param( "group", 296304)
+					Param( "type", "clear" )
+				--]
+				End()
+				
+				Action( "clear event" )
+				--[
+					Param( "clear all", "false" )
+					Param( "event id", 756 )
+				--]
+				End()
+			--]
+			End()
+		--]
+		End()
+	--]
+	End()
+
+--- 다섯번째 오브젝트
+	Condition("child")
+	--[
+		Action("while")
+		--[
+			Action("loop")
+			--[
+				Action("wait")
+				--[
+					Condition("recv event from ts")
+					--[
+						Param("trigger type", "object")
+						Param("event id", 757)
+					--]
+					End()
+				--]
+				End()
+				
+				Action("add mob")
+				--[
+					Param("index", 17114201)
+					Param("group", 296305)
+					Param("loc x", 4277.90)
+					Param("loc y", -53.68)
+					Param("loc z", -4513.03)
+					Param("dir x", 0.99)
+					Param("dir z", -0.16)
+					Param("no spawn wait", "true")
+				--]
+				End()
+				
+				Action( "wait" )
+				--[
+					Param( "operation", "or" )
+					
+					Condition( "check mobgroup" )
+					--[
+						Param( "group", 296305 )
+						Param( "count", 1 )
+					--]
+					End()
+					
+					Condition( "check time" )
+					--[
+						Param( "time", 60 )
+					--]
+					End()
+				--]
+				End()
+				
+				Action( "remove mobgroup" )
+				--[
+					Param( "group", 296305)
+					Param( "type", "clear" )
+				--]
+				End()
+				
+				Action( "clear event" )
+				--[
+					Param( "clear all", "false" )
+					Param( "event id", 757 )
+				--]
+				End()
+			--]
+			End()
+		--]
+		End()
+	--]
+	End()
+
+--- 여섯번째 오브젝트
+	Condition("child")
+	--[
+		Action("while")
+		--[
+			Action("loop")
+			--[
+				Action("wait")
+				--[
+					Condition("recv event from ts")
+					--[
+						Param("trigger type", "object")
+						Param("event id", 758)
+					--]
+					End()
+				--]
+				End()
+				
+				Action("add mob")
+				--[
+					Param("index", 17114201)
+					Param("group", 296306)
+					Param("loc x", 4274.98)
+					Param("loc y", -52.49)
+					Param("loc z", -4469.82)
+					Param("dir x", 0.99)
+					Param("dir z", -0.16)
+					Param("no spawn wait", "true")
+				--]
+				End()
+				
+				Action( "wait" )
+				--[
+					Param( "operation", "or" )
+					
+					Condition( "check mobgroup" )
+					--[
+						Param( "group", 296306 )
+						Param( "count", 1 )
+					--]
+					End()
+					
+					Condition( "check time" )
+					--[
+						Param( "time", 60 )
+					--]
+					End()
+				--]
+				End()
+				
+				Action( "remove mobgroup" )
+				--[
+					Param( "group", 296306)
+					Param( "type", "clear" )
+				--]
+				End()
+				
+				Action( "clear event" )
+				--[
+					Param( "clear all", "false" )
+					Param( "event id", 758 )
+				--]
+				End()
+			--]
+			End()
+		--]
+		End()
+	--]
+	End()
+
+--- 일곱번째 오브젝트
+	Condition("child")
+	--[
+		Action("while")
+		--[
+			Action("loop")
+			--[
+				Action("wait")
+				--[
+					Condition("recv event from ts")
+					--[
+						Param("trigger type", "object")
+						Param("event id", 759)
+					--]
+					End()
+				--]
+				End()
+				
+				Action("add mob")
+				--[
+					Param("index", 17114201)
+					Param("group", 296307)
+					Param("loc x", 4261.79)
+					Param("loc y", -53.21)
+					Param("loc z", -4432.25)
+					Param("dir x", 0.99)
+					Param("dir z", -0.16)
+					Param("no spawn wait", "true")
+				--]
+				End()
+				
+				Action( "wait" )
+				--[
+					Param( "operation", "or" )
+					
+					Condition( "check mobgroup" )
+					--[
+						Param( "group", 296307 )
+						Param( "count", 1 )
+					--]
+					End()
+					
+					Condition( "check time" )
+					--[
+						Param( "time", 60 )
+					--]
+					End()
+				--]
+				End()
+				
+				Action( "remove mobgroup" )
+				--[
+					Param( "group", 296307)
+					Param( "type", "clear" )
+				--]
+				End()
+				
+				Action( "clear event" )
+				--[
+					Param( "clear all", "false" )
+					Param( "event id", 759 )
+				--]
+				End()
+			--]
+			End()
+		--]
+		End()
+	--]
+	End()
+
+--- 여덟번째 오브젝트
+	Condition("child")
+	--[
+		Action("while")
+		--[
+			Action("loop")
+			--[
+				Action("wait")
+				--[
+					Condition("recv event from ts")
+					--[
+						Param("trigger type", "object")
+						Param("event id", 760)
+					--]
+					End()
+				--]
+				End()
+				
+				Action("add mob")
+				--[
+					Param("index", 17114201)
+					Param("group", 296308)
+					Param("loc x", 4257.75)
+					Param("loc y", -56.61)
+					Param("loc z", -4382.71)
+					Param("dir x", 0.99)
+					Param("dir z", -0.16)
+					Param("no spawn wait", "true")
+				--]
+				End()
+				
+				Action( "wait" )
+				--[
+					Param( "operation", "or" )
+					
+					Condition( "check mobgroup" )
+					--[
+						Param( "group", 296308 )
+						Param( "count", 1 )
+					--]
+					End()
+					
+					Condition( "check time" )
+					--[
+						Param( "time", 60 )
+					--]
+					End()
+				--]
+				End()
+				
+				Action( "remove mobgroup" )
+				--[
+					Param( "group", 296308)
+					Param( "type", "clear" )
+				--]
+				End()
+				
+				Action( "clear event" )
+				--[
+					Param( "clear all", "false" )
+					Param( "event id", 760 )
+				--]
+				End()
+			--]
+			End()
+		--]
+		End()
+	--]
+	End()
+
+--- 아홉번째 오브젝트
+	Condition("child")
+	--[
+		Action("while")
+		--[
+			Action("loop")
+			--[
+				Action("wait")
+				--[
+					Condition("recv event from ts")
+					--[
+						Param("trigger type", "object")
+						Param("event id", 761)
+					--]
+					End()
+				--]
+				End()
+				
+				Action("add mob")
+				--[
+					Param("index", 17114201)
+					Param("group", 296309)
+					Param("loc x", 4289.20)
+					Param("loc y", -46.87)
+					Param("loc z", -4330.18)
+					Param("dir x", 0.36)
+					Param("dir z", -0.93)
+					Param("no spawn wait", "true")
+				--]
+				End()
+				
+				Action( "wait" )
+				--[
+					Param( "operation", "or" )
+					
+					Condition( "check mobgroup" )
+					--[
+						Param( "group", 296309 )
+						Param( "count", 1 )
+					--]
+					End()
+					
+					Condition( "check time" )
+					--[
+						Param( "time", 60 )
+					--]
+					End()
+				--]
+				End()
+				
+				Action( "remove mobgroup" )
+				--[
+					Param( "group", 296309)
+					Param( "type", "clear" )
+				--]
+				End()
+				
+				Action( "clear event" )
+				--[
+					Param( "clear all", "false" )
+					Param( "event id", 761 )
+				--]
+				End()
+			--]
+			End()
+		--]
+		End()
+	--]
+	End()
+
+--- 열번째 오브젝트
+	Condition("child")
+	--[
+		Action("while")
+		--[
+			Action("loop")
+			--[
+				Action("wait")
+				--[
+					Condition("recv event from ts")
+					--[
+						Param("trigger type", "object")
+						Param("event id", 762)
+					--]
+					End()
+				--]
+				End()
+				
+				Action("add mob")
+				--[
+					Param("index", 17114201)
+					Param("group", 296310)
+					Param("loc x", 4335.37)
+					Param("loc y", -41.83)
+					Param("loc z", -4316.57)
+					Param("dir x", -0.17)
+					Param("dir z", -0.98)
+					Param("no spawn wait", "true")
+				--]
+				End()
+				
+				Action( "wait" )
+				--[
+					Param( "operation", "or" )
+					
+					Condition( "check mobgroup" )
+					--[
+						Param( "group", 296310 )
+						Param( "count", 1 )
+					--]
+					End()
+					
+					Condition( "check time" )
+					--[
+						Param( "time", 60 )
+					--]
+					End()
+				--]
+				End()
+				
+				Action( "remove mobgroup" )
+				--[
+					Param( "group", 296310)
+					Param( "type", "clear" )
+				--]
+				End()
+				
+				Action( "clear event" )
+				--[
+					Param( "clear all", "false" )
+					Param( "event id", 762 )
+				--]
+				End()
+			--]
+			End()
+		--]
+		End()
+	--]
+	End()
+
+--- 열한번째 오브젝트
+	Condition("child")
+	--[
+		Action("while")
+		--[
+			Action("loop")
+			--[
+				Action("wait")
+				--[
+					Condition("recv event from ts")
+					--[
+						Param("trigger type", "object")
+						Param("event id", 763)
+					--]
+					End()
+				--]
+				End()
+				
+				Action("add mob")
+				--[
+					Param("index", 17114201)
+					Param("group", 296311)
+					Param("loc x", 4371.86)
+					Param("loc y", -39.35)
+					Param("loc z", -4315.22)
+					Param("dir x", -0.17)
+					Param("dir z", -0.98)
+					Param("no spawn wait", "true")
+				--]
+				End()
+				
+				Action( "wait" )
+				--[
+					Param( "operation", "or" )
+					
+					Condition( "check mobgroup" )
+					--[
+						Param( "group", 296311 )
+						Param( "count", 1 )
+					--]
+					End()
+					
+					Condition( "check time" )
+					--[
+						Param( "time", 60 )
+					--]
+					End()
+				--]
+				End()
+				
+				Action( "remove mobgroup" )
+				--[
+					Param( "group", 296311)
+					Param( "type", "clear" )
+				--]
+				End()
+				
+				Action( "clear event" )
+				--[
+					Param( "clear all", "false" )
+					Param( "event id", 763 )
+				--]
+				End()
+			--]
+			End()
+		--]
+		End()
+	--]
+	End()
+
+--- 열두번째 오브젝트
+	Condition("child")
+	--[
+		Action("while")
+		--[
+			Action("loop")
+			--[
+				Action("wait")
+				--[
+					Condition("recv event from ts")
+					--[
+						Param("trigger type", "object")
+						Param("event id", 764)
+					--]
+					End()
+				--]
+				End()
+				
+				Action("add mob")
+				--[
+					Param("index", 17114201)
+					Param("group", 296312)
+					Param("loc x", 4419.94)
+					Param("loc y", -39.24)
+					Param("loc z", -4296.83)
+					Param("dir x", -0.07)
+					Param("dir z", -1.00)
+					Param("no spawn wait", "true")
+				--]
+				End()
+				
+				Action( "wait" )
+				--[
+					Param( "operation", "or" )
+					
+					Condition( "check mobgroup" )
+					--[
+						Param( "group", 296312 )
+						Param( "count", 1 )
+					--]
+					End()
+					
+					Condition( "check time" )
+					--[
+						Param( "time", 60 )
+					--]
+					End()
+				--]
+				End()
+				
+				Action( "remove mobgroup" )
+				--[
+					Param( "group", 296312)
+					Param( "type", "clear" )
+				--]
+				End()
+				
+				Action( "clear event" )
+				--[
+					Param( "clear all", "false" )
+					Param( "event id", 764 )
+				--]
+				End()
+			--]
+			End()
+		--]
+		End()
+	--]
+	End()
+
+--- 열세번째 오브젝트
+	Condition("child")
+	--[
+		Action("while")
+		--[
+			Action("loop")
+			--[
+				Action("wait")
+				--[
+					Condition("recv event from ts")
+					--[
+						Param("trigger type", "object")
+						Param("event id", 765)
+					--]
+					End()
+				--]
+				End()
+				
+				Action("add mob")
+				--[
+					Param("index", 17114201)
+					Param("group", 296313)
+					Param("loc x", 4457.57)
+					Param("loc y", -35.05)
+					Param("loc z", -4287.61)
+					Param("dir x", -0.07)
+					Param("dir z", -1.00)
+					Param("no spawn wait", "true")
+				--]
+				End()
+				
+				Action( "wait" )
+				--[
+					Param( "operation", "or" )
+					
+					Condition( "check mobgroup" )
+					--[
+						Param( "group", 296313 )
+						Param( "count", 1 )
+					--]
+					End()
+					
+					Condition( "check time" )
+					--[
+						Param( "time", 60 )
+					--]
+					End()
+				--]
+				End()
+				
+				Action( "remove mobgroup" )
+				--[
+					Param( "group", 296313)
+					Param( "type", "clear" )
+				--]
+				End()
+				
+				Action( "clear event" )
+				--[
+					Param( "clear all", "false" )
+					Param( "event id", 765 )
+				--]
+				End()
+			--]
+			End()
+		--]
+		End()
+	--]
+	End()
+
+--- 열네번째 오브젝트
+	Condition("child")
+	--[
+		Action("while")
+		--[
+			Action("loop")
+			--[
+				Action("wait")
+				--[
+					Condition("recv event from ts")
+					--[
+						Param("trigger type", "object")
+						Param("event id", 766)
+					--]
+					End()
+				--]
+				End()
+				
+				Action("add mob")
+				--[
+					Param("index", 17114201)
+					Param("group", 296314)
+					Param("loc x", 4494.45)
+					Param("loc y", -29.53)
+					Param("loc z", -4266.73)
+					Param("dir x", -0.07)
+					Param("dir z", -1.00)
+					Param("no spawn wait", "true")
+				--]
+				End()
+				
+				Action( "wait" )
+				--[
+					Param( "operation", "or" )
+					
+					Condition( "check mobgroup" )
+					--[
+						Param( "group", 296314 )
+						Param( "count", 1 )
+					--]
+					End()
+					
+					Condition( "check time" )
+					--[
+						Param( "time", 60 )
+					--]
+					End()
+				--]
+				End()
+				
+				Action( "remove mobgroup" )
+				--[
+					Param( "group", 296314)
+					Param( "type", "clear" )
+				--]
+				End()
+				
+				Action( "clear event" )
+				--[
+					Param( "clear all", "false" )
+					Param( "event id", 766 )
+				--]
+				End()
+			--]
+			End()
+		--]
+		End()
+	--]
+	End()
+
+--- 열다섯번째 오브젝트
+	Condition("child")
+	--[
+		Action("while")
+		--[
+			Action("loop")
+			--[
+				Action("wait")
+				--[
+					Condition("recv event from ts")
+					--[
+						Param("trigger type", "object")
+						Param("event id", 767)
+					--]
+					End()
+				--]
+				End()
+				
+				Action("add mob")
+				--[
+					Param("index", 17114201)
+					Param("group", 296315)
+					Param("loc x", 4538.29)
+					Param("loc y", -37.40)
+					Param("loc z", -4308.63)
+					Param("dir x", -0.99)
+					Param("dir z", -0.12)
+					Param("no spawn wait", "true")
+				--]
+				End()
+				
+				Action( "wait" )
+				--[
+					Param( "operation", "or" )
+					
+					Condition( "check mobgroup" )
+					--[
+						Param( "group", 296315 )
+						Param( "count", 1 )
+					--]
+					End()
+					
+					Condition( "check time" )
+					--[
+						Param( "time", 60 )
+					--]
+					End()
+				--]
+				End()
+				
+				Action( "remove mobgroup" )
+				--[
+					Param( "group", 296315 )
+					Param( "type", "clear" )
+				--]
+				End()
+				
+				Action( "clear event" )
+				--[
+					Param( "clear all", "false" )
+					Param( "event id", 767 )
+				--]
+				End()
+			--]
+			End()
+		--]
+		End()
+	--]
+	End()
+
+--- 열여섯번째 오브젝트
+	Condition("child")
+	--[
+		Action("while")
+		--[
+			Action("loop")
+			--[
+				Action("wait")
+				--[
+					Condition("recv event from ts")
+					--[
+						Param("trigger type", "object")
+						Param("event id", 768)
+					--]
+					End()
+				--]
+				End()
+				
+				Action("add mob")
+				--[
+					Param("index", 17114201)
+					Param("group", 296316)
+					Param("loc x", 4547.11)
+					Param("loc y", -41.14)
+					Param("loc z", -4344.24)
+					Param("dir x", -0.91)
+					Param("dir z", 0.41)
+					Param("no spawn wait", "true")
+				--]
+				End()
+				
+				Action( "wait" )
+				--[
+					Param( "operation", "or" )
+					
+					Condition( "check mobgroup" )
+					--[
+						Param( "group", 296316 )
+						Param( "count", 1 )
+					--]
+					End()
+					
+					Condition( "check time" )
+					--[
+						Param( "time", 60 )
+					--]
+					End()
+				--]
+				End()
+				
+				Action( "remove mobgroup" )
+				--[
+					Param( "group", 296316 )
+					Param( "type", "clear" )
+				--]
+				End()
+				
+				Action( "clear event" )
+				--[
+					Param( "clear all", "false" )
+					Param( "event id", 768 )
+				--]
+				End()
+			--]
+			End()
+		--]
+		End()
+	--]
+	End()
+
+--- 열일곱번째 오브젝트
+	Condition("child")
+	--[
+		Action("while")
+		--[
+			Action("loop")
+			--[
+				Action("wait")
+				--[
+					Condition("recv event from ts")
+					--[
+						Param("trigger type", "object")
+						Param("event id", 769)
+					--]
+					End()
+				--]
+				End()
+				
+				Action("add mob")
+				--[
+					Param("index", 17114201)
+					Param("group", 296317)
+					Param("loc x", 4541.28)
+					Param("loc y", -41.72)
+					Param("loc z", -4383.38)
+					Param("dir x", -1.00)
+					Param("dir z", 0.09)
+					Param("no spawn wait", "true")
+				--]
+				End()
+				
+				Action( "wait" )
+				--[
+					Param( "operation", "or" )
+					
+					Condition( "check mobgroup" )
+					--[
+						Param( "group", 296317 )
+						Param( "count", 1 )
+					--]
+					End()
+					
+					Condition( "check time" )
+					--[
+						Param( "time", 60 )
+					--]
+					End()
+				--]
+				End()
+				
+				Action( "remove mobgroup" )
+				--[
+					Param( "group", 296317)
+					Param( "type", "clear" )
+				--]
+				End()
+				
+				Action( "clear event" )
+				--[
+					Param( "clear all", "false" )
+					Param( "event id", 769 )
+				--]
+				End()
+			--]
+			End()
+		--]
+		End()
+	--]
+	End()
+
+--- 열여덟번째 오브젝트
+	Condition("child")
+	--[
+		Action("while")
+		--[
+			Action("loop")
+			--[
+				Action("wait")
+				--[
+					Condition("recv event from ts")
+					--[
+						Param("trigger type", "object")
+						Param("event id", 770)
+					--]
+					End()
+				--]
+				End()
+				
+				Action("add mob")
+				--[
+					Param("index", 17114201)
+					Param("group", 296318)
+					Param("loc x", 4531.78)
+					Param("loc y", -40.65)
+					Param("loc z", -4422.60)
+					Param("dir x", -1.00)
+					Param("dir z", 0.03)
+					Param("no spawn wait", "true")
+				--]
+				End()
+				
+				Action( "wait" )
+				--[
+					Param( "operation", "or" )
+					
+					Condition( "check mobgroup" )
+					--[
+						Param( "group", 296318 )
+						Param( "count", 1 )
+					--]
+					End()
+					
+					Condition( "check time" )
+					--[
+						Param( "time", 60 )
+					--]
+					End()
+				--]
+				End()
+				
+				Action( "remove mobgroup" )
+				--[
+					Param( "group", 296318)
+					Param( "type", "clear" )
+				--]
+				End()
+				
+				Action( "clear event" )
+				--[
+					Param( "clear all", "false" )
+					Param( "event id", 770 )
+				--]
+				End()
+			--]
+			End()
+		--]
+		End()
+	--]
+	End()
+
+--- 열아홉번째 오브젝트
+	Condition("child")
+	--[
+		Action("while")
+		--[
+			Action("loop")
+			--[
+				Action("wait")
+				--[
+					Condition("recv event from ts")
+					--[
+						Param("trigger type", "object")
+						Param("event id", 771)
+					--]
+					End()
+				--]
+				End()
+				
+				Action("add mob")
+				--[
+					Param("index", 17114201)
+					Param("group", 296319)
+					Param("loc x", 4530.39)
+					Param("loc y", -42.80)
+					Param("loc z", -4466.27)
+					Param("dir x", -1.00)
+					Param("dir z", 0.03)
+					Param("no spawn wait", "true")
+				--]
+				End()
+				
+				Action( "wait" )
+				--[
+					Param( "operation", "or" )
+					
+					Condition( "check mobgroup" )
+					--[
+						Param( "group", 296319 )
+						Param( "count", 1 )
+					--]
+					End()
+					
+					Condition( "check time" )
+					--[
+						Param( "time", 60 )
+					--]
+					End()
+				--]
+				End()
+				
+				Action( "remove mobgroup" )
+				--[
+					Param( "group", 296319)
+					Param( "type", "clear" )
+				--]
+				End()
+				
+				Action( "clear event" )
+				--[
+					Param( "clear all", "false" )
+					Param( "event id", 771 )
+				--]
+				End()
+			--]
+			End()
+		--]
+		End()
+	--]
+	End()
+
+--- 스무번째 오브젝트
+	Condition("child")
+	--[
+		Action("while")
+		--[
+			Action("loop")
+			--[
+				Action("wait")
+				--[
+					Condition("recv event from ts")
+					--[
+						Param("trigger type", "object")
+						Param("event id", 772)
+					--]
+					End()
+				--]
+				End()
+				
+				Action("add mob")
+				--[
+					Param("index", 17114201)
+					Param("group", 296320)
+					Param("loc x", 4542.13)
+					Param("loc y", -44.41)
+					Param("loc z", -4508.70)
+					Param("dir x", -0.88)
+					Param("dir z", 0.47)
+					Param("no spawn wait", "true")
+				--]
+				End()
+				
+				Action( "wait" )
+				--[
+					Param( "operation", "or" )
+					
+					Condition( "check mobgroup" )
+					--[
+						Param( "group", 296320 )
+						Param( "count", 1 )
+					--]
+					End()
+					
+					Condition( "check time" )
+					--[
+						Param( "time", 60 )
+					--]
+					End()
+				--]
+				End()
+				
+				Action( "remove mobgroup" )
+				--[
+					Param( "group", 296320)
+					Param( "type", "clear" )
+				--]
+				End()
+				
+				Action( "clear event" )
+				--[
+					Param( "clear all", "false" )
+					Param( "event id", 772 )
+				--]
+				End()
+			--]
+			End()
+		--]
+		End()
+	--]
+	End()
+
+--- 스물한번째 오브젝트
+	Condition("child")
+	--[
+		Action("while")
+		--[
+			Action("loop")
+			--[
+				Action("wait")
+				--[
+					Condition("recv event from ts")
+					--[
+						Param("trigger type", "object")
+						Param("event id", 773)
+					--]
+					End()
+				--]
+				End()
+				
+				Action("add mob")
+				--[
+					Param("index", 17114201)
+					Param("group", 296321)
+					Param("loc x", 4556.86)
+					Param("loc y", -48.69)
+					Param("loc z", -4575.52)
+					Param("dir x", -0.97)
+					Param("dir z", 0.24)
+					Param("no spawn wait", "true")
+				--]
+				End()
+				
+				Action( "wait" )
+				--[
+					Param( "operation", "or" )
+					
+					Condition( "check mobgroup" )
+					--[
+						Param( "group", 296321 )
+						Param( "count", 1 )
+					--]
+					End()
+					
+					Condition( "check time" )
+					--[
+						Param( "time", 60 )
+					--]
+					End()
+				--]
+				End()
+				
+				Action( "remove mobgroup" )
+				--[
+					Param( "group", 296321)
+					Param( "type", "clear" )
+				--]
+				End()
+				
+				Action( "clear event" )
+				--[
+					Param( "clear all", "false" )
+					Param( "event id", 773 )
+				--]
+				End()
+			--]
+			End()
+		--]
+		End()
+	--]
+	End()
+
+--- 스물두번째 오브젝트
+	Condition("child")
+	--[
+		Action("while")
+		--[
+			Action("loop")
+			--[
+				Action("wait")
+				--[
+					Condition("recv event from ts")
+					--[
+						Param("trigger type", "object")
+						Param("event id", 774)
+					--]
+					End()
+				--]
+				End()
+				
+				Action("add mob")
+				--[
+					Param("index", 17114201)
+					Param("group", 296322)
+					Param("loc x", 4546.36)
+					Param("loc y", -51.83)
+					Param("loc z", -4613.77)
+					Param("dir x", -0.97)
+					Param("dir z", 0.24)
+					Param("no spawn wait", "true")
+				--]
+				End()
+				
+				Action( "wait" )
+				--[
+					Param( "operation", "or" )
+					
+					Condition( "check mobgroup" )
+					--[
+						Param( "group", 296322 )
+						Param( "count", 1 )
+					--]
+					End()
+					
+					Condition( "check time" )
+					--[
+						Param( "time", 60 )
+					--]
+					End()
+				--]
+				End()
+				
+				Action( "remove mobgroup" )
+				--[
+					Param( "group", 296322)
+					Param( "type", "clear" )
+				--]
+				End()
+				
+				Action( "clear event" )
+				--[
+					Param( "clear all", "false" )
+					Param( "event id", 774 )
+				--]
+				End()
+			--]
+			End()
+		--]
+		End()
+	--]
+	End()
+
+--- 스물세번째 오브젝트
+	Condition("child")
+	--[
+		Action("while")
+		--[
+			Action("loop")
+			--[
+				Action("wait")
+				--[
+					Condition("recv event from ts")
+					--[
+						Param("trigger type", "object")
+						Param("event id", 775)
+					--]
+					End()
+				--]
+				End()
+				
+				Action("add mob")
+				--[
+					Param("index", 17114201)
+					Param("group", 296323)
+					Param("loc x", 4507.30)
+					Param("loc y", -51.97)
+					Param("loc z", -4669.49)
+					Param("dir x", -0.42)
+					Param("dir z", 0.91)
+					Param("no spawn wait", "true")
+				--]
+				End()
+				
+				Action( "wait" )
+				--[
+					Param( "operation", "or" )
+					
+					Condition( "check mobgroup" )
+					--[
+						Param( "group", 296323 )
+						Param( "count", 1 )
+					--]
+					End()
+					
+					Condition( "check time" )
+					--[
+						Param( "time", 60 )
+					--]
+					End()
+				--]
+				End()
+				
+				Action( "remove mobgroup" )
+				--[
+					Param( "group", 296323)
+					Param( "type", "clear" )
+				--]
+				End()
+				
+				Action( "clear event" )
+				--[
+					Param( "clear all", "false" )
+					Param( "event id", 775 )
+				--]
+				End()
+			--]
+			End()
+		--]
+		End()
+	--]
+	End()
+
+--- 스물네번째 오브젝트
+	Condition("child")
+	--[
+		Action("while")
+		--[
+			Action("loop")
+			--[
+				Action("wait")
+				--[
+					Condition("recv event from ts")
+					--[
+						Param("trigger type", "object")
+						Param("event id", 776)
+					--]
+					End()
+				--]
+				End()
+				
+				Action("add mob")
+				--[
+					Param("index", 17114201)
+					Param("group", 296324)
+					Param("loc x", 4464.49)
+					Param("loc y", -49.27)
+					Param("loc z", -4664.78)
+					Param("dir x", -0.22)
+					Param("dir z", 0.97)
+					Param("no spawn wait", "true")
+				--]
+				End()
+				
+				Action( "wait" )
+				--[
+					Param( "operation", "or" )
+					
+					Condition( "check mobgroup" )
+					--[
+						Param( "group", 296324 )
+						Param( "count", 1 )
+					--]
+					End()
+					
+					Condition( "check time" )
+					--[
+						Param( "time", 60 )
+					--]
+					End()
+				--]
+				End()
+				
+				Action( "remove mobgroup" )
+				--[
+					Param( "group", 296324)
+					Param( "type", "clear" )
+				--]
+				End()
+				
+				Action( "clear event" )
+				--[
+					Param( "clear all", "false" )
+					Param( "event id", 776 )
+				--]
+				End()
+			--]
+			End()
+		--]
+		End()
+	--]
+	End()
+
+	Action( "wait" )
+	--[
+		Condition( "recv event from ts" )
+		--[
+			Param( "trigger type", "quest" )
+			Param( "event id", 666 )
+		--]
+		End()
+	--]
+	End()
+--]
+End()
+
+

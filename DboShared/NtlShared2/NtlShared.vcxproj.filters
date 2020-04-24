@@ -1,0 +1,530 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Game">
+      <UniqueIdentifier>{ff4d7e90-38b8-4709-bb32-21ee25dae6ac}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Base">
+      <UniqueIdentifier>{3ba6b349-9606-4326-abfe-d6b7446f61bc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Protocol">
+      <UniqueIdentifier>{4beb5d12-cb45-48d4-a5ad-6564a0b637f3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Protocol\Client ↔ Server">
+      <UniqueIdentifier>{7866123d-6387-40c9-96af-ae19891c0b8e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Protocol\Client ↔ Server\Auth">
+      <UniqueIdentifier>{6f4cbaf2-8c7c-4bff-9495-b98fdea84df7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Protocol\Client ↔ Server\Game">
+      <UniqueIdentifier>{a014d57b-4daa-4da8-8609-d15689c68630}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Protocol\Client ↔ Server\Character">
+      <UniqueIdentifier>{c97b9041-7a0a-4b29-a40b-7a77a1a37444}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Protocol\Client ↔ Server\Community">
+      <UniqueIdentifier>{6ceb933f-b506-456b-8fea-480758af02c8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Protocol\Master ↔ Server">
+      <UniqueIdentifier>{141ba034-2b06-4a6c-99b3-ef217d06823f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Protocol\Master ↔ Server\Auth">
+      <UniqueIdentifier>{32a94309-331e-4193-b1e9-81f84f0095c5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Protocol\Master ↔ Server\Character">
+      <UniqueIdentifier>{bbdb350c-1b62-4b0d-ab37-e54910334244}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Protocol\Master ↔ Server\Game">
+      <UniqueIdentifier>{36da9871-0ed8-4434-9752-1785be29a9cf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Protocol\Master ↔ Server\Community">
+      <UniqueIdentifier>{0ce42f94-d808-46f4-ba58-41c2f1f4db12}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Protocol\Server ↔ Server">
+      <UniqueIdentifier>{551f6f82-e71e-4ff8-86cc-9cfae19882e6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Protocol\Server ↔ Server\Game ↔ NPC">
+      <UniqueIdentifier>{c21cfd0b-6873-4636-85c2-316403c9c1c0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Protocol\Server ↔ Server\Character ↔ Query">
+      <UniqueIdentifier>{5287f310-1a5d-40c2-a263-91e7330c0ee9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Protocol\Server ↔ Server\Game ↔ Query">
+      <UniqueIdentifier>{598d55cf-2741-44f8-89ca-09c4083b0636}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Protocol\Server ↔ Server\Game ↔ Community">
+      <UniqueIdentifier>{32d7b411-4802-4ad1-9f46-bc8802be4603}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Protocol\Server ↔ Server\Log">
+      <UniqueIdentifier>{166af98c-04b8-4d8a-aae6-9f3a5ac4a2e9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Protocol\Server ↔ Server\Community ↔ Query">
+      <UniqueIdentifier>{5ac34d34-90c7-434e-ae76-894ad1c67f5c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Protocol\Server ↔ Server\Report">
+      <UniqueIdentifier>{fe40b1d2-6ceb-46e8-a447-87ff1595f65a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Math">
+      <UniqueIdentifier>{78ce539c-5dcb-46c9-b044-845ef838579f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\new">
+      <UniqueIdentifier>{47eca7cb-9669-42b3-ae42-8b7f3832e133}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Protocol\Master ↔ Server\Web">
+      <UniqueIdentifier>{aecdad96-0c1c-42ed-ae12-6ec1f62bb0bf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Protocol\Master ↔ Server\Query">
+      <UniqueIdentifier>{90bb6643-7123-4aea-b5bf-7ba6af43068a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Protocol\MrPoPo">
+      <UniqueIdentifier>{2b773479-6dec-4e11-962f-626d002e9617}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="NtlActionPattern.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlAdmin.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlAvatar.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlBattle.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlBudokai.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlCharacter.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlCharacterState.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlChat.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlCSArchitecture.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlDirection.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlDojo.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlDragonBall.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlFriend.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlGuild.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlHlsItem.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlItem.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlMail.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlMatch.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlMovement.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlNetP.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlObject.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlParty.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlPartyDungeon.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlPet.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlPetition.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlQuest.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlRankBattle.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlReport.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlRide.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlServer.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlService.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlSkill.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlStatistics.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlSystemEffect.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlSystemTool.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlTeleport.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlTimeQuest.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlWorld.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlPacketCommon.h">
+      <Filter>Base</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlRandom.h">
+      <Filter>Base</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlSharedDef.h">
+      <Filter>Base</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlSharedType.h">
+      <Filter>Base</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlPacketAll.h">
+      <Filter>Protocol</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlPacketUtil.h">
+      <Filter>Protocol</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlResultCode.h">
+      <Filter>Protocol</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlPacketAU.h">
+      <Filter>Protocol\Client ↔ Server\Auth</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlPacketUA.h">
+      <Filter>Protocol\Client ↔ Server\Auth</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlPacketGU.h">
+      <Filter>Protocol\Client ↔ Server\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlPacketUG.h">
+      <Filter>Protocol\Client ↔ Server\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlPacketCU.h">
+      <Filter>Protocol\Client ↔ Server\Character</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlPacketUC.h">
+      <Filter>Protocol\Client ↔ Server\Character</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlPacketTU.h">
+      <Filter>Protocol\Client ↔ Server\Community</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlPacketUT.h">
+      <Filter>Protocol\Client ↔ Server\Community</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlPacketAM.h">
+      <Filter>Protocol\Master ↔ Server\Auth</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlPacketMA.h">
+      <Filter>Protocol\Master ↔ Server\Auth</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlPacketCM.h">
+      <Filter>Protocol\Master ↔ Server\Character</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlPacketMC.h">
+      <Filter>Protocol\Master ↔ Server\Character</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlPacketGM.h">
+      <Filter>Protocol\Master ↔ Server\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlPacketMG.h">
+      <Filter>Protocol\Master ↔ Server\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlPacketMT.h">
+      <Filter>Protocol\Master ↔ Server\Community</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlPacketTM.h">
+      <Filter>Protocol\Master ↔ Server\Community</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlPacketGN.h">
+      <Filter>Protocol\Server ↔ Server\Game ↔ NPC</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlPacketNG.h">
+      <Filter>Protocol\Server ↔ Server\Game ↔ NPC</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlPacketCQ.h">
+      <Filter>Protocol\Server ↔ Server\Character ↔ Query</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlPacketQC.h">
+      <Filter>Protocol\Server ↔ Server\Character ↔ Query</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlPacketGQ.h">
+      <Filter>Protocol\Server ↔ Server\Game ↔ Query</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlPacketQG.h">
+      <Filter>Protocol\Server ↔ Server\Game ↔ Query</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlPacketGT.h">
+      <Filter>Protocol\Server ↔ Server\Game ↔ Community</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlPacketTG.h">
+      <Filter>Protocol\Server ↔ Server\Game ↔ Community</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlPacketTL.h">
+      <Filter>Protocol\Server ↔ Server\Log</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlPacketQT.h">
+      <Filter>Protocol\Server ↔ Server\Community ↔ Query</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlPacketTQ.h">
+      <Filter>Protocol\Server ↔ Server\Community ↔ Query</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlPacketXR.h">
+      <Filter>Protocol\Server ↔ Server\Report</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlBBox.h">
+      <Filter>Math</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlLine.h">
+      <Filter>Math</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlSphere.h">
+      <Filter>Math</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlSvrMath.h">
+      <Filter>Math</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlVector.h">
+      <Filter>Math</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="NtlCharTitle.h">
+      <Filter>Game\new</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlDWC.h">
+      <Filter>Game\new</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlMascot.h">
+      <Filter>Game\new</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlHlsMachine.h">
+      <Filter>Game\new</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlHlsMerchant.h">
+      <Filter>Game\new</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlEventDef.h">
+      <Filter>Game\new</Filter>
+    </ClInclude>
+    <ClInclude Include="NewUnknownStructs.h">
+      <Filter>Game\new</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlPacketWM.h">
+      <Filter>Protocol\Master ↔ Server\Web</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlPacketMQ.h">
+      <Filter>Protocol\Master ↔ Server\Query</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlPacketQM.h">
+      <Filter>Protocol\Master ↔ Server\Query</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlPacketMW.h">
+      <Filter>Protocol\Master ↔ Server\Web</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlMrPoPoMsg.h">
+      <Filter>Protocol\MrPoPo</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlMarket.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="NtlCCBD.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="NtlAvatar.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlBattle.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlBudokai.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlCharacter.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlCharacterState.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlGuild.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlItem.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlMovement.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlObject.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlPetition.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlReport.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlService.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlSkill.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlStatistics.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlSystemTool.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlWorld.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlRandom.cpp">
+      <Filter>Base</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlPacketUtil.cpp">
+      <Filter>Protocol</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlPacketAU.cpp">
+      <Filter>Protocol\Client ↔ Server\Auth</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlPacketUA.cpp">
+      <Filter>Protocol\Client ↔ Server\Auth</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlPacketGU.cpp">
+      <Filter>Protocol\Client ↔ Server\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlPacketUG.cpp">
+      <Filter>Protocol\Client ↔ Server\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlPacketCU.cpp">
+      <Filter>Protocol\Client ↔ Server\Character</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlPacketUC.cpp">
+      <Filter>Protocol\Client ↔ Server\Character</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlPacketTU.cpp">
+      <Filter>Protocol\Client ↔ Server\Community</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlPacketUT.cpp">
+      <Filter>Protocol\Client ↔ Server\Community</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlPacketAM.cpp">
+      <Filter>Protocol\Master ↔ Server\Auth</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlPacketMA.cpp">
+      <Filter>Protocol\Master ↔ Server\Auth</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlPacketCM.cpp">
+      <Filter>Protocol\Master ↔ Server\Character</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlPacketMC.cpp">
+      <Filter>Protocol\Master ↔ Server\Character</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlPacketGM.cpp">
+      <Filter>Protocol\Master ↔ Server\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlPacketMG.cpp">
+      <Filter>Protocol\Master ↔ Server\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlPacketMT.cpp">
+      <Filter>Protocol\Master ↔ Server\Community</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlPacketTM.cpp">
+      <Filter>Protocol\Master ↔ Server\Community</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlPacketGN.cpp">
+      <Filter>Protocol\Server ↔ Server\Game ↔ NPC</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlPacketNG.cpp">
+      <Filter>Protocol\Server ↔ Server\Game ↔ NPC</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlPacketCQ.cpp">
+      <Filter>Protocol\Server ↔ Server\Character ↔ Query</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlPacketQC.cpp">
+      <Filter>Protocol\Server ↔ Server\Character ↔ Query</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlPacketGQ.cpp">
+      <Filter>Protocol\Server ↔ Server\Game ↔ Query</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlPacketQG.cpp">
+      <Filter>Protocol\Server ↔ Server\Game ↔ Query</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlPacketGT.cpp">
+      <Filter>Protocol\Server ↔ Server\Game ↔ Community</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlPacketTG.cpp">
+      <Filter>Protocol\Server ↔ Server\Game ↔ Community</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlPacketTL.cpp">
+      <Filter>Protocol\Server ↔ Server\Log</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlPacketQT.cpp">
+      <Filter>Protocol\Server ↔ Server\Community ↔ Query</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlPacketTQ.cpp">
+      <Filter>Protocol\Server ↔ Server\Community ↔ Query</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlPacketXR.cpp">
+      <Filter>Protocol\Server ↔ Server\Report</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlBBox.cpp">
+      <Filter>Math</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlLine.cpp">
+      <Filter>Math</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlSphere.cpp">
+      <Filter>Math</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlSvrMath.cpp">
+      <Filter>Math</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlVector.cpp">
+      <Filter>Math</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp" />
+    <ClCompile Include="NtlRankBattle.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlPacketMQ.cpp">
+      <Filter>Protocol\Master ↔ Server\Query</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlPacketQM.cpp">
+      <Filter>Protocol\Master ↔ Server\Query</Filter>
+    </ClCompile>
+    <ClCompile Include="NtlCCBD.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

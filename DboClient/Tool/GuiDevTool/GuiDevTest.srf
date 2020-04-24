@@ -1,0 +1,1477 @@
+surface "srfOut"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrChat";
+
+	x		= 0;
+	y		= 0;
+	width		= 200;
+	height		= 200;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 0;
+	uv_top		= 0;
+	uv_right	= 200;
+	uv_bottom	= 200;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfOutIncUp"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrChat";
+
+	x		= 0;
+	y		= 0;
+	width		= 16;
+	height		= 16;
+
+	color_red	= 150;
+	color_green	= 0;
+	color_blue	= 0;
+	color_alpha	= 255;
+
+	uv_left		= 0;
+	uv_top		= 0;
+	uv_right	= 16;
+	uv_bottom	= 16;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfOutIncDown"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrChat";
+
+	x		= 0;
+	y		= 0;
+	width		= 16;
+	height		= 16;
+
+	color_red	= 255;
+	color_green	= 0;
+	color_blue	= 0;
+	color_alpha	= 255;
+
+	uv_left		= 0;
+	uv_top		= 0;
+	uv_right	= 16;
+	uv_bottom	= 16;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfOutDecUp"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrChat";
+
+	x		= 0;
+	y		= 0;
+	width		= 16;
+	height		= 16;
+
+	color_red	= 0;
+	color_green	= 150;
+	color_blue	= 0;
+	color_alpha	= 255;
+
+	uv_left		= 0;
+	uv_top		= 0;
+	uv_right	= 16;
+	uv_bottom	= 16;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfOutDecDown"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrChat";
+
+	x		= 0;
+	y		= 0;
+	width		= 16;
+	height		= 16;
+
+	color_red	= 0;
+	color_green	= 255;
+	color_blue	= 0;
+	color_alpha	= 255;
+
+	uv_left		= 0;
+	uv_top		= 0;
+	uv_right	= 16;
+	uv_bottom	= 16;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfOutSlider"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrChat";
+
+	x		= 0;
+	y		= 0;
+	width		= 16;
+	height		= 16;
+
+	color_red	= 0;
+	color_green	= 0;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 0;
+	uv_top		= 0;
+	uv_right	= 16;
+	uv_bottom	= 16;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfOutLayout"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrChat";
+
+	x		= 0;
+	y		= 0;
+	width		= 16;
+	height		= 168;
+
+	color_red	= 255;
+	color_green	= 0;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 0;
+	uv_top		= 0;
+	uv_right	= 16;
+	uv_bottom	= 16;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfChat"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrChat";
+
+	x		= 0;
+	y		= 0;
+	width		= 200;
+	height		= 20;
+
+	color_red	= 255;
+	color_green	= 0;
+	color_blue	= 0;
+	color_alpha	= 255;
+
+	uv_left		= 0;
+	uv_top		= 0;
+	uv_right	= 200;
+	uv_bottom	= 20;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfStaticBlack"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrStatic";
+
+	x		= 0;
+	y		= 0;
+	width		= 256;
+	height		= 256;
+
+	color_red	= 0;
+	color_green	= 0;
+	color_blue	= 0;
+	color_alpha	= 255;
+
+	uv_left		= 0;
+	uv_top		= 0;
+	uv_right	= 256;
+	uv_bottom	= 256;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfStaticWhite"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrStatic";
+
+	x		= 0;
+	y		= 0;
+	width		= 256;
+	height		= 256;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 0;
+	uv_top		= 0;
+	uv_right	= 256;
+	uv_bottom	= 256;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfStaticSky"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrStatic";
+
+	x		= 0;
+	y		= 0;
+	width		= 256;
+	height		= 256;
+
+	color_red	= 200;
+	color_green	= 220;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 0;
+	uv_top		= 0;
+	uv_right	= 256;
+	uv_bottom	= 256;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfStaticNamek"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrStatic";
+
+	x		= 0;
+	y		= 0;
+	width		= 256;
+	height		= 256;
+
+	color_red	= 200;
+	color_green	= 255;
+	color_blue	= 220;
+	color_alpha	= 255;
+
+	uv_left		= 0;
+	uv_top		= 0;
+	uv_right	= 256;
+	uv_bottom	= 256;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfStaticMajin"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrStatic";
+
+	x		= 0;
+	y		= 0;
+	width		= 256;
+	height		= 256;
+
+	color_red	= 255;
+	color_green	= 200;
+	color_blue	= 220;
+	color_alpha	= 255;
+
+	uv_left		= 0;
+	uv_top		= 0;
+	uv_right	= 256;
+	uv_bottom	= 256;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfStaticGray"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrStatic";
+
+	x		= 0;
+	y		= 0;
+	width		= 256;
+	height		= 256;
+
+	color_red	= 200;
+	color_green	= 200;
+	color_blue	= 200;
+	color_alpha	= 255;
+
+	uv_left		= 0;
+	uv_top		= 0;
+	uv_right	= 256;
+	uv_bottom	= 256;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfButtonUp"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrButton";
+
+	x		= 0;
+	y		= 0;
+	width		= 56;
+	height		= 55;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 1;
+	uv_top		= 1;
+	uv_right	= 57;
+	uv_bottom	= 56;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfButtonFocus"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrButton";
+
+	x		= 0;
+	y		= 0;
+	width		= 56;
+	height		= 55;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 58;
+	uv_top		= 1;
+	uv_right	= 114;
+	uv_bottom	= 56;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfButtonMask"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrButton";
+
+	x		= 0;
+	y		= 0;
+	width		= 56;
+	height		= 55;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 115;
+	uv_top		= 1;
+	uv_right	= 171;
+	uv_bottom	= 56;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "balloonLTC"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "balloon";
+
+	x		= 0;
+	y		= 0;
+	width		= 6;
+	height		= 5;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 7;
+	uv_top		= 7;
+	uv_right	= 13;
+	uv_bottom	= 12;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "balloonRTC"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "balloon";
+
+	x		= 193;
+	y		= 0;
+	width		= 7;
+	height		= 5;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 22;
+	uv_top		= 7;
+	uv_right	= 29;
+	uv_bottom	= 12;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "balloonLBC"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "balloon";
+
+	x		= 0;
+	y		= 95;
+	width		= 5;
+	height		= 5;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 7;
+	uv_top		= 18;
+	uv_right	= 12;
+	uv_bottom	= 23;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "balloonRBC"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "balloon";
+
+	x		= 193;
+	y		= 94;
+	width		= 7;
+	height		= 6;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 22;
+	uv_top		= 17;
+	uv_right	= 29;
+	uv_bottom	= 23;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "balloonTL"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "balloon";
+
+	x		= 6;
+	y		= 0;
+	width		= 187;
+	height		= 2;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 15;
+	uv_top		= 7;
+	uv_right	= 17;
+	uv_bottom	= 9;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "balloonLL"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "balloon";
+
+	x		= 0;
+	y		= 5;
+	width		= 2;
+	height		= 90;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 7;
+	uv_top		= 14;
+	uv_right	= 9;
+	uv_bottom	= 16;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "balloonRL"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "balloon";
+
+	x		= 196;
+	y		= 7;
+	width		= 4;
+	height		= 86;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 25;
+	uv_top		= 14;
+	uv_right	= 29;
+	uv_bottom	= 16;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "balloonBL"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "balloon";
+
+	x		= 5;
+	y		= 97;
+	width		= 188;
+	height		= 3;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 15;
+	uv_top		= 20;
+	uv_right	= 17;
+	uv_bottom	= 23;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "balloonTail"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "balloon";
+
+	x		= 0;
+	y		= 0;
+	width		= 8;
+	height		= 10;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 16;
+	uv_top		= 25;
+	uv_right	= 24;
+	uv_bottom	= 35;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "balloonCenter"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "balloon";
+
+	x		= 0;
+	y		= 0;
+	width		= 3;
+	height		= 3;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 15;
+	uv_top		= 13;
+	uv_right	= 18;
+	uv_bottom	= 16;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "listboximage"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "balloon";
+
+	x		= 0;
+	y		= 0;
+	width		= 99;
+	height		= 149;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 105;
+	uv_top		= 0;
+	uv_right	= 204;
+	uv_bottom	= 149;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "combolist"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "balloon";
+
+	x		= 0;
+	y		= 0;
+	width		= 99;
+	height		= 82;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 54;
+	uv_top		= 155;
+	uv_right	= 153;
+	uv_bottom	= 237;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "combo"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "balloon";
+
+	x		= 0;
+	y		= 0;
+	width		= 99;
+	height		= 22;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 54;
+	uv_top		= 241;
+	uv_right	= 153;
+	uv_bottom	= 263;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "combobuttonup"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "balloon";
+
+	x		= 0;
+	y		= 0;
+	width		= 14;
+	height		= 14;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 184;
+	uv_top		= 245;
+	uv_right	= 198;
+	uv_bottom	= 259;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "combobuttondown"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "balloon";
+
+	x		= 0;
+	y		= 0;
+	width		= 14;
+	height		= 14;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 166;
+	uv_top		= 245;
+	uv_right	= 180;
+	uv_bottom	= 259;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "tab1"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrTabButton";
+
+	x		= 0;
+	y		= 0;
+	width		= 315;
+	height		= 15;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 0;
+	uv_top		= 204;
+	uv_right	= 315;
+	uv_bottom	= 219;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "tab2"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrTabButton";
+
+	x		= 0;
+	y		= 0;
+	width		= 315;
+	height		= 15;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 0;
+	uv_top		= 220;
+	uv_right	= 315;
+	uv_bottom	= 235;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "tab3"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrTabButton";
+
+	x		= 0;
+	y		= 0;
+	width		= 315;
+	height		= 15;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 0;
+	uv_top		= 236;
+	uv_right	= 315;
+	uv_bottom	= 251;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "tab4"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrTabButton";
+
+	x		= 0;
+	y		= 0;
+	width		= 315;
+	height		= 15;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 0;
+	uv_top		= 252;
+	uv_right	= 315;
+	uv_bottom	= 267;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "tab5"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrTabButton";
+
+	x		= 0;
+	y		= 0;
+	width		= 315;
+	height		= 15;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 0;
+	uv_top		= 268;
+	uv_right	= 315;
+	uv_bottom	= 283;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfTabLeft"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrTabButton";
+
+	x		= 0;
+	y		= 0;
+	width		= 10;
+	height		= 22;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 321;
+	uv_top		= 0;
+	uv_right	= 331;
+	uv_bottom	= 22;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfTabCenter"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrTabButton";
+
+	x		= 0;
+	y		= 0;
+	width		= 10;
+	height		= 22;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 332;
+	uv_top		= 0;
+	uv_right	= 342;
+	uv_bottom	= 22;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfTabRight"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrTabButton";
+
+	x		= 0;
+	y		= 0;
+	width		= 10;
+	height		= 22;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 343;
+	uv_top		= 0;
+	uv_right	= 353;
+	uv_bottom	= 22;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfTabFocLeft"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrTabButton";
+
+	x		= 0;
+	y		= 0;
+	width		= 10;
+	height		= 22;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 354;
+	uv_top		= 0;
+	uv_right	= 364;
+	uv_bottom	= 22;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfTabFocCenter"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrTabButton";
+
+	x		= 0;
+	y		= 0;
+	width		= 10;
+	height		= 22;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 365;
+	uv_top		= 0;
+	uv_right	= 375;
+	uv_bottom	= 22;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfTabFocRight"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrTabButton";
+
+	x		= 0;
+	y		= 0;
+	width		= 10;
+	height		= 22;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 376;
+	uv_top		= 0;
+	uv_right	= 386;
+	uv_bottom	= 22;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfTabSelLeft"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrTabButton";
+
+	x		= 0;
+	y		= 0;
+	width		= 10;
+	height		= 22;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 387;
+	uv_top		= 0;
+	uv_right	= 397;
+	uv_bottom	= 22;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfTabSelCenter"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrTabButton";
+
+	x		= 0;
+	y		= 0;
+	width		= 10;
+	height		= 22;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 398;
+	uv_top		= 0;
+	uv_right	= 408;
+	uv_bottom	= 22;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfTabSelRight"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrTabButton";
+
+	x		= 0;
+	y		= 0;
+	width		= 10;
+	height		= 22;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 409;
+	uv_top		= 0;
+	uv_right	= 419;
+	uv_bottom	= 22;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfTabLine"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrTabButton";
+
+	x		= 0;
+	y		= 0;
+	width		= 2;
+	height		= 22;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 420;
+	uv_top		= 0;
+	uv_right	= 422;
+	uv_bottom	= 22;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "testhtml"
+{
+	resource_file	= "GuiDevTest.rsr";
+
+	x		= 0;
+	y		= 0;
+	width		= 480;
+	height		= 640;
+
+	color_red	= 100;
+	color_green	= 100;
+	color_blue	= 100;
+	color_alpha	= 255;
+
+	uv_left		= 0;
+	uv_top		= 0;
+	uv_right	= 200;
+	uv_bottom	= 300;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfScrollPrevBtnUp"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrCommon_1";
+
+	x		= 0;
+	y		= 0;
+	width		= 12;
+	height		= 19;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 391;
+	uv_top		= 142;
+	uv_right	= 403;
+	uv_bottom	= 161;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfScrollPrevBtnFoc"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrCommon_1";
+
+	x		= 0;
+	y		= 0;
+	width		= 12;
+	height		= 19;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 404;
+	uv_top		= 142;
+	uv_right	= 416;
+	uv_bottom	= 161;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfScrollPrevBtnDown"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrCommon_1";
+
+	x		= 0;
+	y		= 0;
+	width		= 12;
+	height		= 19;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 417;
+	uv_top		= 142;
+	uv_right	= 429;
+	uv_bottom	= 161;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfScrollNextBtnUp"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrCommon_1";
+
+	x		= 0;
+	y		= 0;
+	width		= 12;
+	height		= 19;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 430;
+	uv_top		= 142;
+	uv_right	= 442;
+	uv_bottom	= 161;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfScrollNextBtnFoc"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrCommon_1";
+
+	x		= 0;
+	y		= 0;
+	width		= 12;
+	height		= 19;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 443;
+	uv_top		= 142;
+	uv_right	= 455;
+	uv_bottom	= 161;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfScrollNextBtnDown"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrCommon_1";
+
+	x		= 0;
+	y		= 0;
+	width		= 12;
+	height		= 19;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 456;
+	uv_top		= 142;
+	uv_right	= 468;
+	uv_bottom	= 161;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfScrollLayout"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrCommon_1";
+
+	x		= 0;
+	y		= 0;
+	width		= 12;
+	height		= 3;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 447;
+	uv_top		= 82;
+	uv_right	= 459;
+	uv_bottom	= 85;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfScrollLayout_2"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrRaceCommon";
+
+	x		= 0;
+	y		= 0;
+	width		= 12;
+	height		= 106;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 270;
+	uv_top		= 355;
+	uv_right	= 282;
+	uv_bottom	= 461;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfScrollSmall"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrCommon_1";
+
+	x		= 0;
+	y		= 0;
+	width		= 12;
+	height		= 26;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 347;
+	uv_top		= 133;
+	uv_right	= 359;
+	uv_bottom	= 159;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfScrollMedium"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrCommon_1";
+
+	x		= 0;
+	y		= 0;
+	width		= 12;
+	height		= 39;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 334;
+	uv_top		= 133;
+	uv_right	= 346;
+	uv_bottom	= 172;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfScrollLarge"
+{
+	resource_file	= "GuiDevTest.rsr";
+	resource_name	= "rsrCommon_1";
+
+	x		= 0;
+	y		= 0;
+	width		= 12;
+	height		= 52;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 321;
+	uv_top		= 133;
+	uv_right	= 333;
+	uv_bottom	= 185;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfParent"
+{
+	x		= 0;
+	y		= 0;
+	width		= 320;
+	height		= 240;
+
+	color_red	= 255;
+	color_green	= 0;
+	color_blue	= 0;
+	color_alpha	= 255;
+
+	uv_left		= 0;
+	uv_top		= 0;
+	uv_right	= 0;
+	uv_bottom	= 0;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfChild"
+{
+	x		= 0;
+	y		= 0;
+	width		= 200;
+	height		= 100;
+
+	color_red	= 0;
+	color_green	= 255;
+	color_blue	= 0;
+	color_alpha	= 255;
+
+	uv_left		= 0;
+	uv_top		= 0;
+	uv_right	= 0;
+	uv_bottom	= 0;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfGrandChild"
+{
+	x		= 0;
+	y		= 0;
+	width		= 150;
+	height		= 200;
+
+	color_red	= 0;
+	color_green	= 0;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 0;
+	uv_top		= 0;
+	uv_right	= 0;
+	uv_bottom	= 0;
+
+	handle		= 0;
+	blend		= 0;
+}

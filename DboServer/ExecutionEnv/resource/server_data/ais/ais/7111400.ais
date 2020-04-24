@@ -1,0 +1,318 @@
+------------------------------------------------------
+--
+-- ·¹Áø Àç¹è´ë
+-- Author : YeoHyeonJoon (souled@ntl-inc.com)
+--
+------------------------------------------------------
+
+Scene(1, "tmq1-1e¼¼³ú ÄáÀç¹è¸Ç ¼ÒÈ¯" )
+--[
+	State("fight")
+	--[
+		Condition("himself check")
+		--[
+			
+			Param("event type", "lp")
+			Param("%", 50)
+			
+			Action( "add mob" )
+			--[
+					Param("index", 1415101)
+					Param("type", "recall")
+			--]
+			End()
+
+		--]     
+		End()
+	--]     
+	End()
+--]     
+End()
+
+------------------------------------------------------
+
+Scene(2, "tmq1-1h¼¼³ú ÄáÀç¹è¸Ç ¼ÒÈ¯" )
+--[
+	State("fight")
+	--[
+		Condition("himself check")
+		--[
+			
+			Param("event type", "lp")
+			Param("%", 50)
+			
+			Action( "add mob" )
+			--[
+					Param("index", 1415107)
+					Param("type", "recall")
+			--]
+			End()
+
+		--]     
+		End()
+	--]     
+	End()
+--]     
+End()
+
+------------------------------------------------------
+
+Scene(3, "tmq1-1e¼¼³ú ÆÄ¿ö¾÷ ÄáÀç¹è¸Ç ¼ÒÈ¯" )
+--[
+	State("fight")
+	--[
+		Condition("himself check")
+		--[
+			
+			Param("event type", "lp")
+			Param("%", 50)
+			
+			Action( "add mob" )
+			--[
+					Param("index", 1415201)
+					Param("type", "recall")
+			--]
+			End()
+
+		--]     
+		End()
+	--]     
+	End()
+--]     
+End()
+
+------------------------------------------------------
+
+Scene(4, "tmq1-1h¼¼³ú ÆÄ¿ö¾÷ ÄáÀç¹è¸Ç ¼ÒÈ¯" )
+--[
+	State("fight")
+	--[
+		Condition("himself check")
+		--[
+			
+			Param("event type", "lp")
+			Param("%", 50)
+			
+			Action( "add mob" )
+			--[
+					Param("index", 1415204)
+					Param("type", "recall")
+			--]
+			End()
+
+		--]     
+		End()
+	--]     
+	End()
+--]     
+End()
+
+------------------------------------------------------
+
+Scene(5, "tmq1-1e¼¼³ú ºØºØ Àç¹è¸Ç" )
+--[
+	State("fight")
+	--[
+		Condition("himself check")
+		--[
+			
+			Param("event type", "lp")
+			Param("%", 50)
+			
+			Action( "add mob" )
+			--[
+					Param("index", 1815101)
+					Param("type", "recall")
+			--]
+			End()
+
+		--]     
+		End()
+	--]     
+	End()
+--]     
+End()
+
+------------------------------------------------------
+
+Scene(6, "tmq1-1h¼¼³ú ºØºØ Àç¹è¸Ç" )
+--[
+	State("fight")
+	--[
+		Condition("himself check")
+		--[
+			
+			Param("event type", "lp")
+			Param("%", 50)
+			
+			Action( "add mob" )
+			--[
+					Param("index", 1815107)
+					Param("type", "recall")
+			--]
+			End()
+
+		--]     
+		End()
+	--]     
+	End()
+--]     
+End()
+
+------------------------------------------------------
+
+Scene(7, "tmq1-1e¼¼³ú ²ÞÆ²ÀÌ Àç¹è¸Ç" )
+--[
+	State("fight")
+	--[
+		Condition("himself check")
+		--[
+			
+			Param("event type", "lp")
+			Param("%", 50)
+			
+			Action( "add mob" )
+			--[
+					Param("index", 5817101)
+					Param("type", "recall")
+			--]
+			End()
+
+		--]     
+		End()
+	--]     
+	End()
+--]     
+End()
+
+------------------------------------------------------
+
+Scene(8, "tmq1-1h¼¼³ú ²ÞÆ²ÀÌ Àç¹è¸Ç" )
+--[
+	State("fight")
+	--[
+		Condition("himself check")
+		--[
+			
+			Param("event type", "lp")
+			Param("%", 50)
+			
+			Action( "add mob" )
+			--[
+					Param("index", 5817107)
+					Param("type", "recall")
+			--]
+			End()
+
+		--]     
+		End()
+	--]     
+	End()
+--]     
+End()
+
+------------------------------------------------------
+
+Scene(9, "tmq1-1L¼¼³ú ÄáÀç¹è¸Ç" )
+--[
+	State("fight")
+	--[
+		Condition("himself check")
+		--[
+			
+			Param("event type", "lp")
+			Param("%", 50)
+			
+			Action( "add mob" )
+			--[
+					Param("index", 1415113)
+					Param("type", "recall")
+			--]
+			End()
+
+		--]     
+		End()
+	--]     
+	End()
+--]     
+End()
+
+------------------------------------------------------
+
+Scene(10, "tmq1-1L¼¼³ú ÆÄ¿ö¾÷ ÄáÀç¹è¸Ç" )
+--[
+	State("fight")
+	--[
+		Condition("himself check")
+		--[
+			
+			Param("event type", "lp")
+			Param("%", 50)
+			
+			Action( "add mob" )
+			--[
+					Param("index", 1415207)
+					Param("type", "recall")
+			--]
+			End()
+
+		--]     
+		End()
+	--]     
+	End()
+--]     
+End()
+
+------------------------------------------------------
+
+Scene(11, "tmq1-1L¼¼³ú ºØºØ Àç¹è¸Ç" )
+--[
+	State("fight")
+	--[
+		Condition("himself check")
+		--[
+			
+			Param("event type", "lp")
+			Param("%", 50)
+			
+			Action( "add mob" )
+			--[
+					Param("index", 1815119)
+					Param("type", "recall")
+			--]
+			End()
+
+		--]     
+		End()
+	--]     
+	End()
+--]     
+End()
+
+------------------------------------------------------
+
+Scene(12, "tmq1-1L¼¼³ú ²ÞÆ²ÀÌ Àç¹è¸Ç" )
+--[
+	State("fight")
+	--[
+		Condition("himself check")
+		--[
+			
+			Param("event type", "lp")
+			Param("%", 50)
+			
+			Action( "add mob" )
+			--[
+					Param("index", 5817113)
+					Param("type", "recall")
+			--]
+			End()
+
+		--]     
+		End()
+	--]     
+	End()
+--]     
+End()
+
+------------------------------------------------------

@@ -1,0 +1,15 @@
+CharServer:
+There can be up to 10 character servers. Id range 0-9
+
+Game Server:
+Up to 9 channels.
+Channel 0-8 = normal channels
+Channel 9 = event channel where budokai etc is hosted.
+
+How to start the server:
+1. run start_master_server.bat
+2. run start_query_server.bat and wait until its done.
+3. run start_char_server_0.bat
+4. run start_channel_0.bat and wait until it finished. Then close it.
+5. run start_chat_server.bat and wait until its done.
+6. run start_channel_0, start_channel_1.bat (if you need 2 channels) and start_channel_9.bat

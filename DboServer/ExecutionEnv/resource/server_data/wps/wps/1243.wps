@@ -1,0 +1,236 @@
+--ver 0.1
+
+GameStage(0)
+--[
+	
+	Action("remove npc")
+	--[
+		Param("index", 5042101)
+		Param("type", "clear")
+	--]
+	End()
+
+	Action("remove npc")
+	--[
+		Param("index", 5042102)
+		Param("type", "clear")
+	--]
+	End()
+
+
+	Action("function")
+	--[
+		Condition("child")
+		--[
+			Action("add npc")
+			--[
+				Param("index", 5042101)
+				Param("loc x", 2434.52)
+				Param("loc y", -45)
+				Param("loc z", 3184.59)
+				Param("dir x", -0.99)
+				Param("dir z", 0.12)
+				Param("play script", 5042101)
+				Param("play scene", 1)
+				Param( "no spawn wait", "true" )
+				Param("stand alone", "true")
+			--]
+			End()
+
+
+			Action("add npc")
+			--[
+				Param("index", 5042102)
+				Param("loc x", 2433.64)
+				Param("loc y", -43)
+				Param("loc z", 3170.00)
+				Param("dir x", -0.97)
+				Param("dir z", 0.22)
+				Param("play script", 5042102)
+				Param("play scene", 2)
+				Param( "no spawn wait", "true" )
+				Param("stand alone", "true")
+			--]
+			End()
+		--]
+		End()
+		
+
+		Action("wait")
+		--[
+			Condition("recv event from sps")
+			--[
+				Param("object type", "npc")
+				Param("object index", 5042101)
+				Param("event id", 169)
+			--]
+			End()
+
+			Condition("recv event from sps")
+			--[
+				Param("object type", "npc")
+				Param("object index", 5042102)
+				Param("event id", 170)
+			--]
+			End()
+		--]
+		End()
+
+	--]
+	End()
+
+
+	Action("function")
+	--[
+		Condition("child")
+		--[
+			Action("send event to sps")
+			--[
+				Param("target type", "npc")
+				Param("target index", 5042101)
+				Param("event id", 173)
+			--]
+			End()
+
+			Action("send event to sps")
+			--[
+				Param("target type", "npc")
+				Param("target index", 5042102)
+				Param("event id", 171)
+			--]
+			End()
+
+		--]
+		End()
+
+
+		Action("wait")
+		--[
+			Condition("recv event from sps")
+			--[
+				Param("object type", "npc")
+				Param("object index", 5042101)
+				Param("event id", 200)
+			--]
+			End()
+
+			Condition("recv event from sps")
+			--[
+				Param("object type", "npc")
+				Param("object index", 5042102)
+				Param("event id", 201)
+			--]
+			End()
+		--]
+		End()
+	--]
+	End()
+	-- end function
+
+
+	Action("remove npc")
+	--[
+		Param("index", 5042102)
+		Param("type", "clear")
+	--]
+	End()
+
+	Action("add npc")
+	--[
+		Param("index", 5042102)
+		Param("loc x", 2433.64)
+		Param("loc y", -43)
+		Param("loc z", 3170.00)
+		Param("dir x", -0.97)
+		Param("dir z", 0.22)
+		Param("play script", 5042102)
+		Param("play scene", 1)
+		Param( "no spawn wait", "true" )
+		Param("stand alone", "true")
+	--]
+	End()
+
+
+
+--]
+End()
+
+
+GameFailed()
+--[
+	Action("if")
+	--[
+		Condition("spawned npc")
+		--[
+			Param("tblidx", 5042101)
+		--]
+		End()
+
+		Action("then")
+		--[
+			Action("remove npc")
+			--[
+				Param("index", 5042101)
+				Param("type", "clear")
+			--]
+			End()
+		--]
+		End()
+	--]
+	End()
+
+	Action("add npc")
+	--[
+		Param("index", 5042101)
+		Param("loc x", 2434.52)
+		Param("loc y", -45)
+		Param("loc z", 3184.59)
+		Param("dir x", -0.99)
+		Param("dir z", 0.12)
+		Param("play script", 5042101)
+		Param("play scene", 1)
+		Param( "no spawn wait", "true" )
+		Param("stand alone", "true")
+	--]
+	End()
+
+
+--------두번째 거시기-----------------
+
+	Action("if")
+	--[
+		Condition("spawned npc")
+		--[
+			Param("tblidx", 5042102)
+		--]
+		End()
+
+		Action("then")
+		--[
+			Action("remove npc")
+			--[
+				Param("index", 5042102)
+				Param("type", "clear")
+			--]
+			End()
+		--]
+		End()
+	--]
+	End()
+
+	Action("add npc")
+	--[
+		Param("index", 5042102)
+		Param("loc x", 2433.64)
+		Param("loc y", -43)
+		Param("loc z", 3170.00)
+		Param("dir x", -0.97)
+		Param("dir z", 0.22)
+		Param("play script", 5042102)
+		Param("play scene", 1)
+		Param( "no spawn wait", "true" )
+		Param("stand alone", "true")
+	--]
+	End()
+--]
+End()

@@ -1,0 +1,432 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Release4Client|Win32">
+      <Configuration>Release4Client</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release4Client|x64">
+      <Configuration>Release4Client</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release4Tools|Win32">
+      <Configuration>Release4Tools</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release4Tools|x64">
+      <Configuration>Release4Tools</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release4Server|Win32">
+      <Configuration>Release4Server</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release4Server|x64">
+      <Configuration>Release4Server</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{9A4DC8E8-16EF-463B-8F14-77F447A782CC}</ProjectGuid>
+    <RootNamespace>NtlGameTable</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release4Server|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release4Client|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <PlatformToolset>v80</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release4Tools|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <PlatformToolset>v80</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release4Server|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release4Client|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release4Tools|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release4Server|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release4Client|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release4Tools|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release4Server|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release4Client|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release4Tools|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.40219.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release4Server|Win32'">$(OutDir)/</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release4Client|Win32'">$(OutDir)/</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release4Tools|Win32'">$(OutDir)/</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release4Server|Win32'">$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release4Client|Win32'">$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release4Tools|Win32'">$(Configuration)\</IntDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release4Server|x64'">$(OutDir)</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release4Client|x64'">$(OutDir)/</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release4Tools|x64'">$(OutDir)/</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release4Server|x64'">$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release4Client|x64'">$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release4Tools|x64'">$(Configuration)\</IntDir>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Release4Server|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Release4Client|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Release4Tools|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release4Server|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>..\NtlShared2;..\..\NtlLib\Shared\Util;..\..\NtlLib\Shared;..\..\NtlLib\Server\NtlSystem;..\..\NtlLib\Shared\NtlTrigger;..\..\NtlLib\Shared\NtlXMLLoader;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN64;_LIB;_CRT_SECURE_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+      <Optimization>MaxSpeed</Optimization>
+      <MinimalRebuild>false</MinimalRebuild>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <IntrinsicFunctions>false</IntrinsicFunctions>
+      <WholeProgramOptimization>false</WholeProgramOptimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <UndefinePreprocessorDefinitions>
+      </UndefinePreprocessorDefinitions>
+    </ClCompile>
+    <Lib>
+      <LinkTimeCodeGeneration>true</LinkTimeCodeGeneration>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release4Client|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>..\NtlShared2;..\..\NtlLib\Shared\Util;..\..\NtlLib\Shared;..\..\NtlLib\Server\NtlSystem;..\..\NtlLib\Shared\NtlTrigger;..\..\NtlLib\Shared\NtlXMLLoader;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+      <Optimization>MaxSpeed</Optimization>
+      <MinimalRebuild>false</MinimalRebuild>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <IntrinsicFunctions>false</IntrinsicFunctions>
+      <WholeProgramOptimization>true</WholeProgramOptimization>
+      <FunctionLevelLinking>
+      </FunctionLevelLinking>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <BufferSecurityCheck>true</BufferSecurityCheck>
+    </ClCompile>
+    <Lib>
+      <LinkTimeCodeGeneration>true</LinkTimeCodeGeneration>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release4Tools|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>..\NtlShared2;..\..\NtlLib\Shared\Util;..\..\NtlLib\Shared;..\..\NtlLib\Server\NtlSystem;..\..\NtlLib\Shared\NtlTrigger;..\..\NtlLib\Shared\NtlXMLLoader;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+      <Optimization>MaxSpeed</Optimization>
+      <MinimalRebuild>false</MinimalRebuild>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <IntrinsicFunctions>false</IntrinsicFunctions>
+      <WholeProgramOptimization>true</WholeProgramOptimization>
+      <FunctionLevelLinking>
+      </FunctionLevelLinking>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <BufferSecurityCheck>true</BufferSecurityCheck>
+    </ClCompile>
+    <Lib>
+      <LinkTimeCodeGeneration>true</LinkTimeCodeGeneration>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release4Server|x64'">
+    <Midl>
+      <TargetEnvironment>X64</TargetEnvironment>
+    </Midl>
+    <ClCompile>
+      <AdditionalIncludeDirectories>..\NtlShared2;..\..\NtlLib\Shared\Util;..\..\NtlLib\Shared;..\..\NtlLib\Server\NtlSystem;..\..\NtlLib\Shared\NtlTrigger;..\..\NtlLib\Shared\NtlXMLLoader;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN64;_LIB;_IS_SERVER_;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <TreatWarningAsError>false</TreatWarningAsError>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <WholeProgramOptimization>true</WholeProgramOptimization>
+      <OmitFramePointers>false</OmitFramePointers>
+      <StringPooling>false</StringPooling>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <UndefinePreprocessorDefinitions>
+      </UndefinePreprocessorDefinitions>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release4Client|x64'">
+    <Midl>
+      <TargetEnvironment>X64</TargetEnvironment>
+    </Midl>
+    <ClCompile>
+      <AdditionalIncludeDirectories>..\NtlShared2;..\..\NtlLib\Shared\Util;..\..\NtlLib\Shared;..\..\NtlLib\Server\NtlSystem;..\..\NtlLib\Shared\NtlTrigger;..\..\NtlLib\Shared\NtlXMLLoader;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN64;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <TreatWarningAsError>false</TreatWarningAsError>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <WholeProgramOptimization>false</WholeProgramOptimization>
+      <OmitFramePointers>false</OmitFramePointers>
+      <StringPooling>false</StringPooling>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
+      <FloatingPointModel>Fast</FloatingPointModel>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release4Tools|x64'">
+    <Midl>
+      <TargetEnvironment>X64</TargetEnvironment>
+    </Midl>
+    <ClCompile>
+      <AdditionalIncludeDirectories>..\NtlShared2;..\..\NtlLib\Shared\Util;..\..\NtlLib\Shared;..\..\NtlLib\Server\NtlSystem;..\..\NtlLib\Shared\NtlTrigger;..\..\NtlLib\Shared\NtlXMLLoader;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN64;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <TreatWarningAsError>false</TreatWarningAsError>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <WholeProgramOptimization>false</WholeProgramOptimization>
+      <OmitFramePointers>false</OmitFramePointers>
+      <StringPooling>false</StringPooling>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
+      <FloatingPointModel>Fast</FloatingPointModel>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="AirCostumeTable.cpp" />
+    <ClCompile Include="CharTitleTable.cpp" />
+    <ClCompile Include="CommonConfigTable.cpp" />
+    <ClCompile Include="ContentsOnOffTable.cpp" />
+    <ClCompile Include="DboNavi.cpp" />
+    <ClCompile Include="DboWeInfoGroup.cpp" />
+    <ClCompile Include="DragonBallReturnPointTable.cpp" />
+    <ClCompile Include="DragonBallRewardTable.cpp" />
+    <ClCompile Include="DragonBallTable.cpp" />
+    <ClCompile Include="DwcMissionTable.cpp" />
+    <ClCompile Include="DwcTable.cpp" />
+    <ClCompile Include="DynamicFieldSystemTable.cpp" />
+    <ClCompile Include="EventSystemTable.cpp" />
+    <ClCompile Include="HlsSlotMachineItemTable.cpp" />
+    <ClCompile Include="ItemBagListTable.cpp" />
+    <ClCompile Include="ItemDisassembleTable.cpp" />
+    <ClCompile Include="ItemEnchantTable.cpp" />
+    <ClCompile Include="ItemGroupListTable.cpp" />
+    <ClCompile Include="ItemMixExpTable.cpp" />
+    <ClCompile Include="ItemMixMachineTable.cpp" />
+    <ClCompile Include="ItemOptionTable.cpp" />
+    <ClCompile Include="ItemRecipeTable.cpp" />
+    <ClCompile Include="ItemTable.cpp" />
+    <ClCompile Include="ItemUpgradeRateNewTable.cpp" />
+    <ClCompile Include="MascotGradeTable.cpp" />
+    <ClCompile Include="MascotStatusTable.cpp" />
+    <ClCompile Include="MascotTable.cpp" />
+    <ClCompile Include="MobServerTable.cpp" />
+    <ClCompile Include="NpcServerTable.cpp" />
+    <ClCompile Include="QuestRewardSelectTable.cpp" />
+    <ClCompile Include="ServerConfigTable.cpp" />
+    <ClCompile Include="SetItemTable.cpp" />
+    <ClCompile Include="SlotMachineTable.cpp" />
+    <ClCompile Include="UseItemTable.cpp" />
+    <ClCompile Include="VehicleTable.cpp" />
+    <ClCompile Include="ExpTable.cpp" />
+    <ClCompile Include="GuideHintTable.cpp" />
+    <ClCompile Include="HelpTable.cpp" />
+    <ClCompile Include="HLSItemTable.cpp" />
+    <ClCompile Include="MerchantTable.cpp" />
+    <ClCompile Include="MobMovePatternTable.cpp" />
+    <ClCompile Include="MobTable.cpp" />
+    <ClCompile Include="NewbieTable.cpp" />
+    <ClCompile Include="NewbieTableCheck.cpp" />
+    <ClCompile Include="NpcSpeechTable.cpp" />
+    <ClCompile Include="NPCTable.cpp" />
+    <ClCompile Include="PCTable.cpp" />
+    <ClCompile Include="PortalTable.cpp" />
+    <ClCompile Include="StatusTransformTable.cpp" />
+    <ClCompile Include="HTBSetTable.cpp" />
+    <ClCompile Include="SkillTable.cpp" />
+    <ClCompile Include="SystemEffectTable.cpp" />
+    <ClCompile Include="CharmTable.cpp" />
+    <ClCompile Include="DynamicObjectTable.cpp" />
+    <ClCompile Include="LandMarkTable.cpp" />
+    <ClCompile Include="ObjectTable.cpp" />
+    <ClCompile Include="SpawnTable.cpp" />
+    <ClCompile Include="WorldMapTable.cpp" />
+    <ClCompile Include="WorldPlayTable.cpp" />
+    <ClCompile Include="WorldTable.cpp" />
+    <ClCompile Include="WorldZoneTable.cpp" />
+    <ClCompile Include="QuestDropTable.cpp" />
+    <ClCompile Include="QuestItemTable.cpp" />
+    <ClCompile Include="QuestNarrationTable.cpp" />
+    <ClCompile Include="QuestProbabilityTable.cpp" />
+    <ClCompile Include="QuestRewardTable.cpp" />
+    <ClCompile Include="QuestTextDataTable.cpp" />
+    <ClCompile Include="ActionTable.cpp" />
+    <ClCompile Include="ChatCommandTable.cpp" />
+    <ClCompile Include="DirectionLinkTable.cpp" />
+    <ClCompile Include="FormulaTable.cpp" />
+    <ClCompile Include="ScriptLinkTable.cpp" />
+    <ClCompile Include="ChattingFilterTable.cpp" />
+    <ClCompile Include="TextAllTable.cpp" />
+    <ClCompile Include="BudokaiTable.cpp" />
+    <ClCompile Include="DojoTable.cpp" />
+    <ClCompile Include="DungeonTable.cpp" />
+    <ClCompile Include="RankBattleTable.cpp" />
+    <ClCompile Include="TimeQuestTable.cpp" />
+    <ClCompile Include="CheckTable.cpp" />
+    <ClCompile Include="Table.cpp" />
+    <ClCompile Include="TableContainer.cpp" />
+    <ClCompile Include="TableFileNameList.cpp" />
+    <ClCompile Include="ModelToolCharDataTable.cpp" />
+    <ClCompile Include="ModelToolObjDataTable.cpp" />
+    <ClCompile Include="WorldPathTable.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release4Server|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release4Client|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release4Tools|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release4Server|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release4Client|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release4Tools|x64'">Create</PrecompiledHeader>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AirCostumeTable.h" />
+    <ClInclude Include="CharTitleTable.h" />
+    <ClInclude Include="CommonConfigTable.h" />
+    <ClInclude Include="ContentsOnOffTable.h" />
+    <ClInclude Include="DboNavi.h" />
+    <ClInclude Include="DboWeInfoGroup.h" />
+    <ClInclude Include="DragonBallReturnPointTable.h" />
+    <ClInclude Include="DragonBallRewardTable.h" />
+    <ClInclude Include="DragonBallTable.h" />
+    <ClInclude Include="DwcMissionTable.h" />
+    <ClInclude Include="DwcTable.h" />
+    <ClInclude Include="DynamicFieldSystemTable.h" />
+    <ClInclude Include="EventSystemTable.h" />
+    <ClInclude Include="HlsSlotMachineItemTable.h" />
+    <ClInclude Include="ItemBagListTable.h" />
+    <ClInclude Include="ItemDisassembleTable.h" />
+    <ClInclude Include="ItemEnchantTable.h" />
+    <ClInclude Include="ItemGroupListTable.h" />
+    <ClInclude Include="ItemMixExpTable.h" />
+    <ClInclude Include="ItemMixMachineTable.h" />
+    <ClInclude Include="ItemOptionTable.h" />
+    <ClInclude Include="ItemRecipeTable.h" />
+    <ClInclude Include="ItemTable.h" />
+    <ClInclude Include="ItemUpgradeRateNewTable.h" />
+    <ClInclude Include="MascotGradeTable.h" />
+    <ClInclude Include="MascotStatusTable.h" />
+    <ClInclude Include="MascotTable.h" />
+    <ClInclude Include="MobServerTable.h" />
+    <ClInclude Include="NpcServerTable.h" />
+    <ClInclude Include="QuestRewardSelectTable.h" />
+    <ClInclude Include="ServerConfigTable.h" />
+    <ClInclude Include="SetItemTable.h" />
+    <ClInclude Include="SlotMachineTable.h" />
+    <ClInclude Include="UseItemTable.h" />
+    <ClInclude Include="VehicleTable.h" />
+    <ClInclude Include="ExpTable.h" />
+    <ClInclude Include="GuideHintTable.h" />
+    <ClInclude Include="HelpTable.h" />
+    <ClInclude Include="HLSItemTable.h" />
+    <ClInclude Include="MerchantTable.h" />
+    <ClInclude Include="MobMovePatternTable.h" />
+    <ClInclude Include="MobTable.h" />
+    <ClInclude Include="NewbieTable.h" />
+    <ClInclude Include="NewbieTableCheck.h" />
+    <ClInclude Include="NpcSpeechTable.h" />
+    <ClInclude Include="NPCTable.h" />
+    <ClInclude Include="PCTable.h" />
+    <ClInclude Include="PortalTable.h" />
+    <ClInclude Include="StatusTransformTable.h" />
+    <ClInclude Include="HTBSetTable.h" />
+    <ClInclude Include="SkillTable.h" />
+    <ClInclude Include="SystemEffectTable.h" />
+    <ClInclude Include="CharmTable.h" />
+    <ClInclude Include="DynamicObjectTable.h" />
+    <ClInclude Include="LandMarkTable.h" />
+    <ClInclude Include="ObjectTable.h" />
+    <ClInclude Include="SpawnTable.h" />
+    <ClInclude Include="WorldMapTable.h" />
+    <ClInclude Include="WorldPlayTable.h" />
+    <ClInclude Include="WorldTable.h" />
+    <ClInclude Include="WorldZoneTable.h" />
+    <ClInclude Include="QuestDropTable.h" />
+    <ClInclude Include="QuestItemTable.h" />
+    <ClInclude Include="QuestNarrationTable.h" />
+    <ClInclude Include="QuestProbabilityTable.h" />
+    <ClInclude Include="QuestRewardTable.h" />
+    <ClInclude Include="QuestTextDataTable.h" />
+    <ClInclude Include="ActionTable.h" />
+    <ClInclude Include="ChatCommandTable.h" />
+    <ClInclude Include="DirectionLinkTable.h" />
+    <ClInclude Include="FormulaTable.h" />
+    <ClInclude Include="ScriptLinkTable.h" />
+    <ClInclude Include="ChattingFilterTable.h" />
+    <ClInclude Include="TextAllTable.h" />
+    <ClInclude Include="BudokaiTable.h" />
+    <ClInclude Include="DojoTable.h" />
+    <ClInclude Include="DungeonTable.h" />
+    <ClInclude Include="RankBattleTable.h" />
+    <ClInclude Include="TimeQuestTable.h" />
+    <ClInclude Include="CheckTable.h" />
+    <ClInclude Include="Table.h" />
+    <ClInclude Include="TableContainer.h" />
+    <ClInclude Include="TableFileNameList.h" />
+    <ClInclude Include="GraphicDataTable.h" />
+    <ClInclude Include="ModelToolCharDataTable.h" />
+    <ClInclude Include="ModelToolObjDataTable.h" />
+    <ClInclude Include="WorldPathTable.h" />
+    <ClInclude Include="stdafx.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

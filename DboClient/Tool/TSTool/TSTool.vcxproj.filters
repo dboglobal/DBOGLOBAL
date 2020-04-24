@@ -1,0 +1,1183 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="리소스 파일">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav</Extensions>
+    </Filter>
+    <Filter Include="Basic MFC">
+      <UniqueIdentifier>{3547c3f6-874c-4eab-a6a3-47e39cb1b627}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Global">
+      <UniqueIdentifier>{44adf912-bb5c-495d-9916-e599293df151}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Theme">
+      <UniqueIdentifier>{5ec058aa-d868-4a6f-abca-e6258fb0f37c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Attributes">
+      <UniqueIdentifier>{b97074b3-77a1-4c12-bab1-6d70a1754017}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Attributes\Container">
+      <UniqueIdentifier>{8c0a8513-4413-4732-b87d-ad2e4524de17}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Attributes\Event">
+      <UniqueIdentifier>{6bdca5a7-5996-4aa3-8cdf-34b7213f3d4f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Attributes\Action">
+      <UniqueIdentifier>{4b866261-92f0-42c5-886e-ae15dd366475}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Attributes\Condition">
+      <UniqueIdentifier>{69ebc13c-a629-42dd-89bb-d3e1f4c5f333}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Attributes\Group">
+      <UniqueIdentifier>{ab3074ee-3803-4ffd-a12d-9b4f84b638bf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Attributes\Trigger">
+      <UniqueIdentifier>{36f6bd6e-8177-47e6-945b-5c47d8847db1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Attributes\Link">
+      <UniqueIdentifier>{492b9741-a457-4113-9d3a-443a3b025efb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Shape">
+      <UniqueIdentifier>{c139b618-9482-4d54-b00d-83f3612d4e7b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Shape\Basic shapes">
+      <UniqueIdentifier>{6d48edab-6881-41c0-925b-43aecf53d4ad}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Shape\TS shapes">
+      <UniqueIdentifier>{cf78dbb1-1abd-4f20-b10c-444845158932}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Controller">
+      <UniqueIdentifier>{84ca24e5-399e-45ed-bb53-a1691039b26c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Controller\Basic controller">
+      <UniqueIdentifier>{100ab690-c18e-471d-88ec-5e4ba1688d82}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Controller\TS controller">
+      <UniqueIdentifier>{6dcf7b65-9ca6-44bb-81c4-3de8bce8a036}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Project">
+      <UniqueIdentifier>{f28a794d-523a-4dcc-a4b6-7c91dda75716}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ETC">
+      <UniqueIdentifier>{f3f5adea-b800-44e1-941d-774f2a112bae}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Core">
+      <UniqueIdentifier>{e5182f70-fe47-42dc-a232-385fb42ac91f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MainMenu">
+      <UniqueIdentifier>{c6c9b01a-5007-4a8d-9e93-9b92592458bc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="TS">
+      <UniqueIdentifier>{6a7d3952-30f5-402d-8d4e-ec997ea0ebc9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Changer">
+      <UniqueIdentifier>{c9011c09-b155-4824-9159-a724ddd41def}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="QuestText">
+      <UniqueIdentifier>{f5461f5e-07ea-4453-94ac-76e926616a34}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\containerbar.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\Toolbar.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\TSTool.ico">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\TSToolDoc.ico">
+      <Filter>리소스 파일</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="TSTool.rc">
+      <Filter>리소스 파일</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\TSTool.rc2">
+      <Filter>리소스 파일</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="TSDoc.cpp">
+      <Filter>Basic MFC</Filter>
+    </ClCompile>
+    <ClCompile Include="TSFrame.cpp">
+      <Filter>Basic MFC</Filter>
+    </ClCompile>
+    <ClCompile Include="TSTool.cpp">
+      <Filter>Basic MFC</Filter>
+    </ClCompile>
+    <ClCompile Include="TSView.cpp">
+      <Filter>Basic MFC</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Global</Filter>
+    </ClCompile>
+    <ClCompile Include="Theme.cpp">
+      <Filter>Theme</Filter>
+    </ClCompile>
+    <ClCompile Include="Attr_Page.cpp">
+      <Filter>Attributes</Filter>
+    </ClCompile>
+    <ClCompile Include="AttrEntityMng.cpp">
+      <Filter>Attributes</Filter>
+    </ClCompile>
+    <ClCompile Include="EntityRegisterDiag.cpp">
+      <Filter>Attributes</Filter>
+    </ClCompile>
+    <ClCompile Include="Attr_CONT_End.cpp">
+      <Filter>Attributes\Container</Filter>
+    </ClCompile>
+    <ClCompile Include="Attr_CONT_GAct.cpp">
+      <Filter>Attributes\Container</Filter>
+    </ClCompile>
+    <ClCompile Include="Attr_CONT_GCond.cpp">
+      <Filter>Attributes\Container</Filter>
+    </ClCompile>
+    <ClCompile Include="Attr_CONT_Narration.cpp">
+      <Filter>Attributes\Container</Filter>
+    </ClCompile>
+    <ClCompile Include="Attr_CONT_Proposal.cpp">
+      <Filter>Attributes\Container</Filter>
+    </ClCompile>
+    <ClCompile Include="Attr_CONT_Reward.cpp">
+      <Filter>Attributes\Container</Filter>
+    </ClCompile>
+    <ClCompile Include="Attr_CONT_Start.cpp">
+      <Filter>Attributes\Container</Filter>
+    </ClCompile>
+    <ClCompile Include="Attr_CONT_Switch.cpp">
+      <Filter>Attributes\Container</Filter>
+    </ClCompile>
+    <ClCompile Include="Attr_CONT_UnifiedNarration.cpp">
+      <Filter>Attributes\Container</Filter>
+    </ClCompile>
+    <ClCompile Include="Attr_CONT_UserSel.cpp">
+      <Filter>Attributes\Container</Filter>
+    </ClCompile>
+    <ClCompile Include="Attr_EVT_BindStone.cpp">
+      <Filter>Attributes\Event</Filter>
+    </ClCompile>
+    <ClCompile Include="Attr_EVT_Budokai.cpp">
+      <Filter>Attributes\Event</Filter>
+    </ClCompile>
+    <ClCompile Include="Attr_EVT_ClickMob.cpp">
+      <Filter>Attributes\Event</Filter>
+    </ClCompile>
+    <ClCompile Include="Attr_EVT_ClickNPC.cpp">
+      <Filter>Attributes\Event</Filter>
+    </ClCompile>
+    <ClCompile Include="Attr_EVT_ClickObject.cpp">
+      <Filter>Attributes\Event</Filter>
+    </ClCompile>
+    <ClCompile Include="Attr_EVT_ColObject.cpp">
+      <Filter>Attributes\Event</Filter>
+    </ClCompile>
+    <ClCompile Include="Attr_EVT_ColRgn.cpp">
+      <Filter>Attributes\Event</Filter>
+    </ClCompile>
+    <ClCompile Include="Attr_EVT_FreeBattle.cpp">
+      <Filter>Attributes\Event</Filter>
+    </ClCompile>
+    <ClCompile Include="Attr_EVT_HoipoiMix.cpp">
+      <Filter>Attributes\Event</Filter>
+    </ClCompile>
+    <ClCompile Include="Attr_EVT_ItemEquip.cpp">
+      <Filter>Attributes\Event</Filter>
+    </ClCompile>
+    <ClCompile Include="Attr_EVT_ItemGet.cpp">
+      <Filter>Attributes\Event</Filter>
+    </ClCompile>
+    <ClCompile Include="Attr_EVT_ItemIdentity.cpp">
+      <Filter>Attributes\Event</Filter>
+    </ClCompile>
+    <ClCompile Include="Attr_EVT_ItemUpgrade.cpp">
+      <Filter>Attributes\Event</Filter>
+    </ClCompile>
+    <ClCompile Include="Attr_EVT_ItemUse.cpp">
+      <Filter>Attributes\Event</Filter>
+    </ClCompile>
+    <ClCompile Include="Attr_EVT_Party.cpp">
+      <Filter>Attributes\Event</Filter>
+    </ClCompile>
+    <ClCompile Include="Attr_EVT_PrivateShop.cpp">
+      <Filter>Attributes\Event</Filter>
+    </ClCompile>
+    <ClCompile Include="Attr_EVT_RB.cpp">
+      <Filter>Attributes\Event</Filter>
+    </ClCompile>
+    <ClCompile Include="Attr_EVT_RcvSvrEvt.cpp">
+      <Filter>Attributes\Event</Filter>
+    </ClCompile>
+    <ClCompile Include="Attr_EVT_ScoutUse.cpp">
+      <Filter>Attributes\Event</Filter>
+    </ClCompile>
+    <ClCompile Include="Attr_EVT_SearchQuest.cpp">
+      <Filter>Attributes\Event</Filter>
+    </ClCompile>
+    <ClCompile Include="Attr_EVT_SkillUse.cpp">
+      <Filter>Attributes\Event</Filter>
+    </ClCompile>
+    <ClCompile Include="Attr_EVT_SlotMachine.cpp">
+      <Filter>Attributes\Event</Filter>
+    </ClCompile>
+    <ClCompile Include="Attr_EVT_Teleport.cpp">
+      <Filter>Attributes\Event</Filter>
+    </ClCompile>
+    <ClCompile Include="Attr_EVT_UseMail.cpp">
+      <Filter>Attributes\Event</Filter>
+    </ClCompile>
+    <ClCompile Include="Attr_ACT_BroadCast.cpp">
+      <Filter>Attributes\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="Attr_ACT_BroadMsg.cpp">
+      <Filter>Attributes\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="Attr_ACT_ConcCheck.cpp">
+      <Filter>Attributes\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="Attr_ACT_CustomEvt.cpp">
+      <Filter>Attributes\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="Attr_ACT_Dir.cpp">
+      <Filter>Attributes\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="Attr_ACT_DirIndicator.cpp">
+      <Filter>Attributes\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="Attr_ACT_Dojo.cpp">
+      <Filter>Attributes\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="Attr_ACT_DoSkill.cpp">
+      <Filter>Attributes\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="Attr_ACT_Drop.cpp">
+      <Filter>Attributes\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="Attr_ACT_Escort.cpp">
+      <Filter>Attributes\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="Attr_ACT_ETimerE.cpp">
+      <Filter>Attributes\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="Attr_ACT_ETimerS.cpp">
+      <Filter>Attributes\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="Attr_ACT_ExcCGroup.cpp">
+      <Filter>Attributes\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="Attr_ACT_Hint.cpp">
+      <Filter>Attributes\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="Attr_ACT_InSSM.cpp">
+      <Filter>Attributes\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="Attr_ACT_Item.cpp">
+      <Filter>Attributes\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="Attr_ACT_MiniNarration.cpp">
+      <Filter>Attributes\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="Attr_ACT_NPCConv.cpp">
+      <Filter>Attributes\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="Attr_ACT_ObjConv.cpp">
+      <Filter>Attributes\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="Attr_ACT_ObjState.cpp">
+      <Filter>Attributes\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="Attr_ACT_ObjWPS.cpp">
+      <Filter>Attributes\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="Attr_ACT_OPCam.cpp">
+      <Filter>Attributes\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="Attr_ACT_OpenWindow.cpp">
+      <Filter>Attributes\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="Attr_ACT_OperateObject.cpp">
+      <Filter>Attributes\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="Attr_ACT_PCConv.cpp">
+      <Filter>Attributes\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="Attr_ACT_PIDgn.cpp">
+      <Filter>Attributes\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="Attr_ACT_Portal.cpp">
+      <Filter>Attributes\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="Attr_ACT_QItem.cpp">
+      <Filter>Attributes\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="Attr_ACT_RegCTiming.cpp">
+      <Filter>Attributes\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="Attr_ACT_RegQInfo.cpp">
+      <Filter>Attributes\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="Attr_ACT_RmvCoupon.cpp">
+      <Filter>Attributes\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="Attr_ACT_SendSvrEvt.cpp">
+      <Filter>Attributes\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="Attr_ACT_SkipCont.cpp">
+      <Filter>Attributes\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="Attr_ACT_SToCEvt.cpp">
+      <Filter>Attributes\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="Attr_ACT_SWProbSF.cpp">
+      <Filter>Attributes\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="Attr_ACT_TelMinorMatch.cpp">
+      <Filter>Attributes\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="Attr_ACT_TelMudosa.cpp">
+      <Filter>Attributes\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="Attr_ACT_TLQ.cpp">
+      <Filter>Attributes\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="Attr_ACT_TMQInfoShow.cpp">
+      <Filter>Attributes\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="Attr_ACT_TMQStage.cpp">
+      <Filter>Attributes\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="Attr_ACT_TMQTimeBonus.cpp">
+      <Filter>Attributes\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="Attr_ACT_TObjFriendly.cpp">
+      <Filter>Attributes\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="Attr_ACT_TSState.cpp">
+      <Filter>Attributes\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="Attr_ACT_TWaitTS.cpp">
+      <Filter>Attributes\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="Attr_ACT_WorldPlayScript.cpp">
+      <Filter>Attributes\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="Attr_COND_AttachObj.cpp">
+      <Filter>Attributes\Condition</Filter>
+    </ClCompile>
+    <ClCompile Include="Attr_COND_AvatarDead.cpp">
+      <Filter>Attributes\Condition</Filter>
+    </ClCompile>
+    <ClCompile Include="Attr_COND_BudokaiState.cpp">
+      <Filter>Attributes\Condition</Filter>
+    </ClCompile>
+    <ClCompile Include="Attr_COND_ClrQst.cpp">
+      <Filter>Attributes\Condition</Filter>
+    </ClCompile>
+    <ClCompile Include="Attr_COND_DistNPC.cpp">
+      <Filter>Attributes\Condition</Filter>
+    </ClCompile>
+    <ClCompile Include="Attr_COND_HasCoupon.cpp">
+      <Filter>Attributes\Condition</Filter>
+    </ClCompile>
+    <ClCompile Include="Attr_COND_InNPC.cpp">
+      <Filter>Attributes\Condition</Filter>
+    </ClCompile>
+    <ClCompile Include="Attr_COND_InWorld.cpp">
+      <Filter>Attributes\Condition</Filter>
+    </ClCompile>
+    <ClCompile Include="Attr_COND_Item.cpp">
+      <Filter>Attributes\Condition</Filter>
+    </ClCompile>
+    <ClCompile Include="Attr_COND_Lvl.cpp">
+      <Filter>Attributes\Condition</Filter>
+    </ClCompile>
+    <ClCompile Include="Attr_COND_NPCDead.cpp">
+      <Filter>Attributes\Condition</Filter>
+    </ClCompile>
+    <ClCompile Include="Attr_COND_ObjItem.cpp">
+      <Filter>Attributes\Condition</Filter>
+    </ClCompile>
+    <ClCompile Include="Attr_COND_ObjState.cpp">
+      <Filter>Attributes\Condition</Filter>
+    </ClCompile>
+    <ClCompile Include="Attr_COND_OperateObject.cpp">
+      <Filter>Attributes\Condition</Filter>
+    </ClCompile>
+    <ClCompile Include="Attr_COND_OutRgn.cpp">
+      <Filter>Attributes\Condition</Filter>
+    </ClCompile>
+    <ClCompile Include="Attr_COND_PCCls.cpp">
+      <Filter>Attributes\Condition</Filter>
+    </ClCompile>
+    <ClCompile Include="Attr_COND_PCRace.cpp">
+      <Filter>Attributes\Condition</Filter>
+    </ClCompile>
+    <ClCompile Include="Attr_COND_ProgCustomEvt.cpp">
+      <Filter>Attributes\Condition</Filter>
+    </ClCompile>
+    <ClCompile Include="Attr_COND_ProgQuest.cpp">
+      <Filter>Attributes\Condition</Filter>
+    </ClCompile>
+    <ClCompile Include="Attr_COND_QItem.cpp">
+      <Filter>Attributes\Condition</Filter>
+    </ClCompile>
+    <ClCompile Include="Attr_COND_Reputation.cpp">
+      <Filter>Attributes\Condition</Filter>
+    </ClCompile>
+    <ClCompile Include="Attr_COND_SSM.cpp">
+      <Filter>Attributes\Condition</Filter>
+    </ClCompile>
+    <ClCompile Include="Attr_COND_SToCDelivery.cpp">
+      <Filter>Attributes\Condition</Filter>
+    </ClCompile>
+    <ClCompile Include="Attr_COND_SToCEvt.cpp">
+      <Filter>Attributes\Condition</Filter>
+    </ClCompile>
+    <ClCompile Include="Attr_COND_WItem.cpp">
+      <Filter>Attributes\Condition</Filter>
+    </ClCompile>
+    <ClCompile Include="Attr_Group.cpp">
+      <Filter>Attributes\Group</Filter>
+    </ClCompile>
+    <ClCompile Include="Attr_Trigger.cpp">
+      <Filter>Attributes\Trigger</Filter>
+    </ClCompile>
+    <ClCompile Include="Attr_Link.cpp">
+      <Filter>Attributes\Link</Filter>
+    </ClCompile>
+    <ClCompile Include="Shape.cpp">
+      <Filter>Shape\Basic shapes</Filter>
+    </ClCompile>
+    <ClCompile Include="Shape_GEntityCont.cpp">
+      <Filter>Shape\Basic shapes</Filter>
+    </ClCompile>
+    <ClCompile Include="Shape_Link.cpp">
+      <Filter>Shape\Basic shapes</Filter>
+    </ClCompile>
+    <ClCompile Include="Shape_Note.cpp">
+      <Filter>Shape\Basic shapes</Filter>
+    </ClCompile>
+    <ClCompile Include="Shape_End.cpp">
+      <Filter>Shape\TS shapes</Filter>
+    </ClCompile>
+    <ClCompile Include="Shape_GAct.cpp">
+      <Filter>Shape\TS shapes</Filter>
+    </ClCompile>
+    <ClCompile Include="Shape_GCond.cpp">
+      <Filter>Shape\TS shapes</Filter>
+    </ClCompile>
+    <ClCompile Include="Shape_Narration.cpp">
+      <Filter>Shape\TS shapes</Filter>
+    </ClCompile>
+    <ClCompile Include="Shape_Proposal.cpp">
+      <Filter>Shape\TS shapes</Filter>
+    </ClCompile>
+    <ClCompile Include="Shape_Reward.cpp">
+      <Filter>Shape\TS shapes</Filter>
+    </ClCompile>
+    <ClCompile Include="Shape_Start.cpp">
+      <Filter>Shape\TS shapes</Filter>
+    </ClCompile>
+    <ClCompile Include="Shape_Switch.cpp">
+      <Filter>Shape\TS shapes</Filter>
+    </ClCompile>
+    <ClCompile Include="Shape_UnifiedNarration.cpp">
+      <Filter>Shape\TS shapes</Filter>
+    </ClCompile>
+    <ClCompile Include="Shape_UsrSel.cpp">
+      <Filter>Shape\TS shapes</Filter>
+    </ClCompile>
+    <ClCompile Include="SCtrl.cpp">
+      <Filter>Controller\Basic controller</Filter>
+    </ClCompile>
+    <ClCompile Include="SCtrl_GEntityCont.cpp">
+      <Filter>Controller\Basic controller</Filter>
+    </ClCompile>
+    <ClCompile Include="SCtrl_Link.cpp">
+      <Filter>Controller\Basic controller</Filter>
+    </ClCompile>
+    <ClCompile Include="SCtrl_Note.cpp">
+      <Filter>Controller\Basic controller</Filter>
+    </ClCompile>
+    <ClCompile Include="SCtrl_Select.cpp">
+      <Filter>Controller\Basic controller</Filter>
+    </ClCompile>
+    <ClCompile Include="SCtrl_End.cpp">
+      <Filter>Controller\TS controller</Filter>
+    </ClCompile>
+    <ClCompile Include="SCtrl_GAct.cpp">
+      <Filter>Controller\TS controller</Filter>
+    </ClCompile>
+    <ClCompile Include="SCtrl_GCond.cpp">
+      <Filter>Controller\TS controller</Filter>
+    </ClCompile>
+    <ClCompile Include="SCtrl_Link_Def.cpp">
+      <Filter>Controller\TS controller</Filter>
+    </ClCompile>
+    <ClCompile Include="SCtrl_Link_Error.cpp">
+      <Filter>Controller\TS controller</Filter>
+    </ClCompile>
+    <ClCompile Include="SCtrl_Link_LogIn.cpp">
+      <Filter>Controller\TS controller</Filter>
+    </ClCompile>
+    <ClCompile Include="SCtrl_Link_No.cpp">
+      <Filter>Controller\TS controller</Filter>
+    </ClCompile>
+    <ClCompile Include="SCtrl_Link_Yes.cpp">
+      <Filter>Controller\TS controller</Filter>
+    </ClCompile>
+    <ClCompile Include="SCtrl_Narration.cpp">
+      <Filter>Controller\TS controller</Filter>
+    </ClCompile>
+    <ClCompile Include="SCtrl_Proposal.cpp">
+      <Filter>Controller\TS controller</Filter>
+    </ClCompile>
+    <ClCompile Include="SCtrl_Reward.cpp">
+      <Filter>Controller\TS controller</Filter>
+    </ClCompile>
+    <ClCompile Include="SCtrl_Start.cpp">
+      <Filter>Controller\TS controller</Filter>
+    </ClCompile>
+    <ClCompile Include="SCtrl_Switch.cpp">
+      <Filter>Controller\TS controller</Filter>
+    </ClCompile>
+    <ClCompile Include="SCtrl_UnifiedNarration.cpp">
+      <Filter>Controller\TS controller</Filter>
+    </ClCompile>
+    <ClCompile Include="SCtrl_UsrSel.cpp">
+      <Filter>Controller\TS controller</Filter>
+    </ClCompile>
+    <ClCompile Include="TSProject.cpp">
+      <Filter>Project</Filter>
+    </ClCompile>
+    <ClCompile Include="TSProjectProperty.cpp">
+      <Filter>Project</Filter>
+    </ClCompile>
+    <ClCompile Include="DirDialog.cpp">
+      <Filter>ETC</Filter>
+    </ClCompile>
+    <ClCompile Include="ExportEventDlg.cpp">
+      <Filter>ETC</Filter>
+    </ClCompile>
+    <ClCompile Include="FinderDlg.cpp">
+      <Filter>ETC</Filter>
+    </ClCompile>
+    <ClCompile Include="OptionListBox.cpp">
+      <Filter>ETC</Filter>
+    </ClCompile>
+    <ClCompile Include="OptionPage.cpp">
+      <Filter>ETC</Filter>
+    </ClCompile>
+    <ClCompile Include="OptionSheet.cpp">
+      <Filter>ETC</Filter>
+    </ClCompile>
+    <ClCompile Include="scbarcf.cpp">
+      <Filter>ETC</Filter>
+    </ClCompile>
+    <ClCompile Include="scbarg.cpp">
+      <Filter>ETC</Filter>
+    </ClCompile>
+    <ClCompile Include="sizecbar.cpp">
+      <Filter>ETC</Filter>
+    </ClCompile>
+    <ClCompile Include="TSTrigger.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="MainMenuListCtrl.cpp">
+      <Filter>MainMenu</Filter>
+    </ClCompile>
+    <ClCompile Include="MainMenuTreeCtrl.cpp">
+      <Filter>MainMenu</Filter>
+    </ClCompile>
+    <ClCompile Include="TSGroupIDInputDlg.cpp">
+      <Filter>MainMenu</Filter>
+    </ClCompile>
+    <ClCompile Include="TSProjectMainMenuBar.cpp">
+      <Filter>MainMenu</Filter>
+    </ClCompile>
+    <ClCompile Include="TSProjectMainMenuForm.cpp">
+      <Filter>MainMenu</Filter>
+    </ClCompile>
+    <ClCompile Include="ExportEvtTSMng.cpp">
+      <Filter>TS</Filter>
+    </ClCompile>
+    <ClCompile Include="TSMng.cpp">
+      <Filter>TS</Filter>
+    </ClCompile>
+    <ClCompile Include="Changer.cpp">
+      <Filter>Changer</Filter>
+    </ClCompile>
+    <ClCompile Include="Finder.cpp">
+      <Filter>Changer</Filter>
+    </ClCompile>
+    <ClCompile Include="MobGroupIdxChanger.cpp">
+      <Filter>Changer</Filter>
+    </ClCompile>
+    <ClCompile Include="RwdTblIdxChanger.cpp">
+      <Filter>Changer</Filter>
+    </ClCompile>
+    <ClCompile Include="TextIdxChanger.cpp">
+      <Filter>Changer</Filter>
+    </ClCompile>
+    <ClCompile Include="TSUtil.cpp">
+      <Filter>Changer</Filter>
+    </ClCompile>
+    <ClCompile Include="TSQuestTextBar.cpp">
+      <Filter>QuestText</Filter>
+    </ClCompile>
+    <ClCompile Include="TSQuestTextForm.cpp">
+      <Filter>QuestText</Filter>
+    </ClCompile>
+    <ClCompile Include="TSQuestTextListCtrl.cpp">
+      <Filter>QuestText</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="TSDoc.h">
+      <Filter>Basic MFC</Filter>
+    </ClInclude>
+    <ClInclude Include="TSFrame.h">
+      <Filter>Basic MFC</Filter>
+    </ClInclude>
+    <ClInclude Include="TSTool.h">
+      <Filter>Basic MFC</Filter>
+    </ClInclude>
+    <ClInclude Include="TSView.h">
+      <Filter>Basic MFC</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>Global</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>Global</Filter>
+    </ClInclude>
+    <ClInclude Include="TSToolDefine.h">
+      <Filter>Global</Filter>
+    </ClInclude>
+    <ClInclude Include="Theme.h">
+      <Filter>Theme</Filter>
+    </ClInclude>
+    <ClInclude Include="Attr_Page.h">
+      <Filter>Attributes</Filter>
+    </ClInclude>
+    <ClInclude Include="AttrEntityMng.h">
+      <Filter>Attributes</Filter>
+    </ClInclude>
+    <ClInclude Include="EntityRegisterDiag.h">
+      <Filter>Attributes</Filter>
+    </ClInclude>
+    <ClInclude Include="Attr_CONT_End.h">
+      <Filter>Attributes\Container</Filter>
+    </ClInclude>
+    <ClInclude Include="Attr_CONT_GAct.h">
+      <Filter>Attributes\Container</Filter>
+    </ClInclude>
+    <ClInclude Include="Attr_CONT_GCond.h">
+      <Filter>Attributes\Container</Filter>
+    </ClInclude>
+    <ClInclude Include="Attr_CONT_Narration.h">
+      <Filter>Attributes\Container</Filter>
+    </ClInclude>
+    <ClInclude Include="Attr_CONT_Proposal.h">
+      <Filter>Attributes\Container</Filter>
+    </ClInclude>
+    <ClInclude Include="Attr_CONT_Reward.h">
+      <Filter>Attributes\Container</Filter>
+    </ClInclude>
+    <ClInclude Include="Attr_CONT_Start.h">
+      <Filter>Attributes\Container</Filter>
+    </ClInclude>
+    <ClInclude Include="Attr_CONT_Switch.h">
+      <Filter>Attributes\Container</Filter>
+    </ClInclude>
+    <ClInclude Include="Attr_CONT_UnifiedNarration.h">
+      <Filter>Attributes\Container</Filter>
+    </ClInclude>
+    <ClInclude Include="Attr_CONT_UserSel.h">
+      <Filter>Attributes\Container</Filter>
+    </ClInclude>
+    <ClInclude Include="Attr_EVT_BindStone.h">
+      <Filter>Attributes\Event</Filter>
+    </ClInclude>
+    <ClInclude Include="Attr_EVT_Budokai.h">
+      <Filter>Attributes\Event</Filter>
+    </ClInclude>
+    <ClInclude Include="Attr_EVT_ClickMob.h">
+      <Filter>Attributes\Event</Filter>
+    </ClInclude>
+    <ClInclude Include="Attr_EVT_ClickNPC.h">
+      <Filter>Attributes\Event</Filter>
+    </ClInclude>
+    <ClInclude Include="Attr_EVT_ClickObject.h">
+      <Filter>Attributes\Event</Filter>
+    </ClInclude>
+    <ClInclude Include="Attr_EVT_ColObject.h">
+      <Filter>Attributes\Event</Filter>
+    </ClInclude>
+    <ClInclude Include="Attr_EVT_ColRgn.h">
+      <Filter>Attributes\Event</Filter>
+    </ClInclude>
+    <ClInclude Include="Attr_EVT_FreeBattle.h">
+      <Filter>Attributes\Event</Filter>
+    </ClInclude>
+    <ClInclude Include="Attr_EVT_HoipoiMix.h">
+      <Filter>Attributes\Event</Filter>
+    </ClInclude>
+    <ClInclude Include="Attr_EVT_ItemEquip.h">
+      <Filter>Attributes\Event</Filter>
+    </ClInclude>
+    <ClInclude Include="Attr_EVT_ItemGet.h">
+      <Filter>Attributes\Event</Filter>
+    </ClInclude>
+    <ClInclude Include="Attr_EVT_ItemIdentity.h">
+      <Filter>Attributes\Event</Filter>
+    </ClInclude>
+    <ClInclude Include="Attr_EVT_ItemUpgrade.h">
+      <Filter>Attributes\Event</Filter>
+    </ClInclude>
+    <ClInclude Include="Attr_EVT_ItemUse.h">
+      <Filter>Attributes\Event</Filter>
+    </ClInclude>
+    <ClInclude Include="Attr_EVT_Party.h">
+      <Filter>Attributes\Event</Filter>
+    </ClInclude>
+    <ClInclude Include="Attr_EVT_PrivateShop.h">
+      <Filter>Attributes\Event</Filter>
+    </ClInclude>
+    <ClInclude Include="Attr_EVT_RB.h">
+      <Filter>Attributes\Event</Filter>
+    </ClInclude>
+    <ClInclude Include="Attr_EVT_RcvSvrEvt.h">
+      <Filter>Attributes\Event</Filter>
+    </ClInclude>
+    <ClInclude Include="Attr_EVT_ScoutUse.h">
+      <Filter>Attributes\Event</Filter>
+    </ClInclude>
+    <ClInclude Include="Attr_EVT_SearchQuest.h">
+      <Filter>Attributes\Event</Filter>
+    </ClInclude>
+    <ClInclude Include="Attr_EVT_SkillUse.h">
+      <Filter>Attributes\Event</Filter>
+    </ClInclude>
+    <ClInclude Include="Attr_EVT_SlotMachine.h">
+      <Filter>Attributes\Event</Filter>
+    </ClInclude>
+    <ClInclude Include="Attr_EVT_Teleport.h">
+      <Filter>Attributes\Event</Filter>
+    </ClInclude>
+    <ClInclude Include="Attr_EVT_UseMail.h">
+      <Filter>Attributes\Event</Filter>
+    </ClInclude>
+    <ClInclude Include="Attr_ACT_BroadCast.h">
+      <Filter>Attributes\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="Attr_ACT_BroadMsg.h">
+      <Filter>Attributes\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="Attr_ACT_ConcCheck.h">
+      <Filter>Attributes\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="Attr_ACT_CustomEvt.h">
+      <Filter>Attributes\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="Attr_ACT_Dir.h">
+      <Filter>Attributes\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="Attr_ACT_DirIndicator.h">
+      <Filter>Attributes\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="Attr_ACT_Dojo.h">
+      <Filter>Attributes\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="Attr_ACT_DoSkill.h">
+      <Filter>Attributes\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="Attr_ACT_Drop.h">
+      <Filter>Attributes\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="Attr_ACT_Escort.h">
+      <Filter>Attributes\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="Attr_ACT_ETimerE.h">
+      <Filter>Attributes\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="Attr_ACT_ETimerS.h">
+      <Filter>Attributes\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="Attr_ACT_ExcCGroup.h">
+      <Filter>Attributes\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="Attr_ACT_Hint.h">
+      <Filter>Attributes\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="Attr_ACT_InSSM.h">
+      <Filter>Attributes\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="Attr_ACT_Item.h">
+      <Filter>Attributes\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="Attr_ACT_MiniNarration.h">
+      <Filter>Attributes\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="Attr_ACT_NPCConv.h">
+      <Filter>Attributes\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="Attr_ACT_ObjConv.h">
+      <Filter>Attributes\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="Attr_ACT_ObjState.h">
+      <Filter>Attributes\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="Attr_ACT_ObjWPS.h">
+      <Filter>Attributes\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="Attr_ACT_OPCam.h">
+      <Filter>Attributes\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="Attr_ACT_OpenWindow.h">
+      <Filter>Attributes\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="Attr_ACT_OperateObject.h">
+      <Filter>Attributes\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="Attr_ACT_PCConv.h">
+      <Filter>Attributes\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="Attr_ACT_PIDgn.h">
+      <Filter>Attributes\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="Attr_ACT_Portal.h">
+      <Filter>Attributes\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="Attr_ACT_QItem.h">
+      <Filter>Attributes\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="Attr_ACT_RegCTiming.h">
+      <Filter>Attributes\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="Attr_ACT_RegQInfo.h">
+      <Filter>Attributes\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="Attr_ACT_RmvCoupon.h">
+      <Filter>Attributes\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="Attr_ACT_SendSvrEvt.h">
+      <Filter>Attributes\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="Attr_ACT_SkipCont.h">
+      <Filter>Attributes\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="Attr_ACT_SToCEvt.h">
+      <Filter>Attributes\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="Attr_ACT_SWProbSF.h">
+      <Filter>Attributes\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="Attr_ACT_TelMinorMatch.h">
+      <Filter>Attributes\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="Attr_ACT_TelMudosa.h">
+      <Filter>Attributes\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="Attr_ACT_TLQ.h">
+      <Filter>Attributes\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="Attr_ACT_TMQInfoShow.h">
+      <Filter>Attributes\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="Attr_ACT_TMQStage.h">
+      <Filter>Attributes\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="Attr_ACT_TMQTimeBonus.h">
+      <Filter>Attributes\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="Attr_ACT_TObjFriendly.h">
+      <Filter>Attributes\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="Attr_ACT_TSState.h">
+      <Filter>Attributes\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="Attr_ACT_TWaitTS.h">
+      <Filter>Attributes\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="Attr_ACT_WorldPlayScript.h">
+      <Filter>Attributes\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="Attr_COND_AttachObj.h">
+      <Filter>Attributes\Condition</Filter>
+    </ClInclude>
+    <ClInclude Include="Attr_COND_AvatarDead.h">
+      <Filter>Attributes\Condition</Filter>
+    </ClInclude>
+    <ClInclude Include="Attr_COND_BudokaiState.h">
+      <Filter>Attributes\Condition</Filter>
+    </ClInclude>
+    <ClInclude Include="Attr_COND_ClrQst.h">
+      <Filter>Attributes\Condition</Filter>
+    </ClInclude>
+    <ClInclude Include="Attr_COND_DistNPC.h">
+      <Filter>Attributes\Condition</Filter>
+    </ClInclude>
+    <ClInclude Include="Attr_COND_HasCoupon.h">
+      <Filter>Attributes\Condition</Filter>
+    </ClInclude>
+    <ClInclude Include="Attr_COND_InNPC.h">
+      <Filter>Attributes\Condition</Filter>
+    </ClInclude>
+    <ClInclude Include="Attr_COND_InWorld.h">
+      <Filter>Attributes\Condition</Filter>
+    </ClInclude>
+    <ClInclude Include="Attr_COND_Item.h">
+      <Filter>Attributes\Condition</Filter>
+    </ClInclude>
+    <ClInclude Include="Attr_COND_Lvl.h">
+      <Filter>Attributes\Condition</Filter>
+    </ClInclude>
+    <ClInclude Include="Attr_COND_NPCDead.h">
+      <Filter>Attributes\Condition</Filter>
+    </ClInclude>
+    <ClInclude Include="Attr_COND_ObjItem.h">
+      <Filter>Attributes\Condition</Filter>
+    </ClInclude>
+    <ClInclude Include="Attr_COND_ObjState.h">
+      <Filter>Attributes\Condition</Filter>
+    </ClInclude>
+    <ClInclude Include="Attr_COND_OperateObject.h">
+      <Filter>Attributes\Condition</Filter>
+    </ClInclude>
+    <ClInclude Include="Attr_COND_OutRgn.h">
+      <Filter>Attributes\Condition</Filter>
+    </ClInclude>
+    <ClInclude Include="Attr_COND_PCCls.h">
+      <Filter>Attributes\Condition</Filter>
+    </ClInclude>
+    <ClInclude Include="Attr_COND_PCRace.h">
+      <Filter>Attributes\Condition</Filter>
+    </ClInclude>
+    <ClInclude Include="Attr_COND_ProgCustomEvt.h">
+      <Filter>Attributes\Condition</Filter>
+    </ClInclude>
+    <ClInclude Include="Attr_COND_ProgQuest.h">
+      <Filter>Attributes\Condition</Filter>
+    </ClInclude>
+    <ClInclude Include="Attr_COND_QItem.h">
+      <Filter>Attributes\Condition</Filter>
+    </ClInclude>
+    <ClInclude Include="Attr_COND_Reputation.h">
+      <Filter>Attributes\Condition</Filter>
+    </ClInclude>
+    <ClInclude Include="Attr_COND_SSM.h">
+      <Filter>Attributes\Condition</Filter>
+    </ClInclude>
+    <ClInclude Include="Attr_COND_SToCDelivery.h">
+      <Filter>Attributes\Condition</Filter>
+    </ClInclude>
+    <ClInclude Include="Attr_COND_SToCEvt.h">
+      <Filter>Attributes\Condition</Filter>
+    </ClInclude>
+    <ClInclude Include="Attr_COND_WItem.h">
+      <Filter>Attributes\Condition</Filter>
+    </ClInclude>
+    <ClInclude Include="Attr_Group.h">
+      <Filter>Attributes\Group</Filter>
+    </ClInclude>
+    <ClInclude Include="Attr_Trigger.h">
+      <Filter>Attributes\Trigger</Filter>
+    </ClInclude>
+    <ClInclude Include="Attr_Link.h">
+      <Filter>Attributes\Link</Filter>
+    </ClInclude>
+    <ClInclude Include="Shape.h">
+      <Filter>Shape\Basic shapes</Filter>
+    </ClInclude>
+    <ClInclude Include="Shape_GEntityCont.h">
+      <Filter>Shape\Basic shapes</Filter>
+    </ClInclude>
+    <ClInclude Include="Shape_Link.h">
+      <Filter>Shape\Basic shapes</Filter>
+    </ClInclude>
+    <ClInclude Include="Shape_Note.h">
+      <Filter>Shape\Basic shapes</Filter>
+    </ClInclude>
+    <ClInclude Include="Shape_End.h">
+      <Filter>Shape\TS shapes</Filter>
+    </ClInclude>
+    <ClInclude Include="Shape_GAct.h">
+      <Filter>Shape\TS shapes</Filter>
+    </ClInclude>
+    <ClInclude Include="Shape_GCond.h">
+      <Filter>Shape\TS shapes</Filter>
+    </ClInclude>
+    <ClInclude Include="Shape_Narration.h">
+      <Filter>Shape\TS shapes</Filter>
+    </ClInclude>
+    <ClInclude Include="Shape_Proposal.h">
+      <Filter>Shape\TS shapes</Filter>
+    </ClInclude>
+    <ClInclude Include="Shape_Reward.h">
+      <Filter>Shape\TS shapes</Filter>
+    </ClInclude>
+    <ClInclude Include="Shape_Start.h">
+      <Filter>Shape\TS shapes</Filter>
+    </ClInclude>
+    <ClInclude Include="Shape_Switch.h">
+      <Filter>Shape\TS shapes</Filter>
+    </ClInclude>
+    <ClInclude Include="Shape_UnifiedNarration.h">
+      <Filter>Shape\TS shapes</Filter>
+    </ClInclude>
+    <ClInclude Include="Shape_UsrSel.h">
+      <Filter>Shape\TS shapes</Filter>
+    </ClInclude>
+    <ClInclude Include="SCtrl.h">
+      <Filter>Controller\Basic controller</Filter>
+    </ClInclude>
+    <ClInclude Include="SCtrl_GEntityCont.h">
+      <Filter>Controller\Basic controller</Filter>
+    </ClInclude>
+    <ClInclude Include="SCtrl_Link.h">
+      <Filter>Controller\Basic controller</Filter>
+    </ClInclude>
+    <ClInclude Include="SCtrl_Note.h">
+      <Filter>Controller\Basic controller</Filter>
+    </ClInclude>
+    <ClInclude Include="SCtrl_Select.h">
+      <Filter>Controller\Basic controller</Filter>
+    </ClInclude>
+    <ClInclude Include="SCtrl_End.h">
+      <Filter>Controller\TS controller</Filter>
+    </ClInclude>
+    <ClInclude Include="SCtrl_GAct.h">
+      <Filter>Controller\TS controller</Filter>
+    </ClInclude>
+    <ClInclude Include="SCtrl_GCond.h">
+      <Filter>Controller\TS controller</Filter>
+    </ClInclude>
+    <ClInclude Include="SCtrl_Link_Def.h">
+      <Filter>Controller\TS controller</Filter>
+    </ClInclude>
+    <ClInclude Include="SCtrl_Link_Error.h">
+      <Filter>Controller\TS controller</Filter>
+    </ClInclude>
+    <ClInclude Include="SCtrl_Link_LogIn.h">
+      <Filter>Controller\TS controller</Filter>
+    </ClInclude>
+    <ClInclude Include="SCtrl_Link_No.h">
+      <Filter>Controller\TS controller</Filter>
+    </ClInclude>
+    <ClInclude Include="SCtrl_Link_Yes.h">
+      <Filter>Controller\TS controller</Filter>
+    </ClInclude>
+    <ClInclude Include="SCtrl_Narration.h">
+      <Filter>Controller\TS controller</Filter>
+    </ClInclude>
+    <ClInclude Include="SCtrl_Proposal.h">
+      <Filter>Controller\TS controller</Filter>
+    </ClInclude>
+    <ClInclude Include="SCtrl_Reward.h">
+      <Filter>Controller\TS controller</Filter>
+    </ClInclude>
+    <ClInclude Include="SCtrl_Start.h">
+      <Filter>Controller\TS controller</Filter>
+    </ClInclude>
+    <ClInclude Include="SCtrl_Switch.h">
+      <Filter>Controller\TS controller</Filter>
+    </ClInclude>
+    <ClInclude Include="SCtrl_UnifiedNarration.h">
+      <Filter>Controller\TS controller</Filter>
+    </ClInclude>
+    <ClInclude Include="SCtrl_UsrSel.h">
+      <Filter>Controller\TS controller</Filter>
+    </ClInclude>
+    <ClInclude Include="TSProject.h">
+      <Filter>Project</Filter>
+    </ClInclude>
+    <ClInclude Include="TSProjectProperty.h">
+      <Filter>Project</Filter>
+    </ClInclude>
+    <ClInclude Include="DirDialog.h">
+      <Filter>ETC</Filter>
+    </ClInclude>
+    <ClInclude Include="ExportEventDlg.h">
+      <Filter>ETC</Filter>
+    </ClInclude>
+    <ClInclude Include="FinderDlg.h">
+      <Filter>ETC</Filter>
+    </ClInclude>
+    <ClInclude Include="OptionListBox.h">
+      <Filter>ETC</Filter>
+    </ClInclude>
+    <ClInclude Include="OptionPage.h">
+      <Filter>ETC</Filter>
+    </ClInclude>
+    <ClInclude Include="OptionSheet.h">
+      <Filter>ETC</Filter>
+    </ClInclude>
+    <ClInclude Include="scbarcf.h">
+      <Filter>ETC</Filter>
+    </ClInclude>
+    <ClInclude Include="scbarg.h">
+      <Filter>ETC</Filter>
+    </ClInclude>
+    <ClInclude Include="sizecbar.h">
+      <Filter>ETC</Filter>
+    </ClInclude>
+    <ClInclude Include="TSTrigger.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="MainMenuListCtrl.h">
+      <Filter>MainMenu</Filter>
+    </ClInclude>
+    <ClInclude Include="MainMenuTreeCtrl.h">
+      <Filter>MainMenu</Filter>
+    </ClInclude>
+    <ClInclude Include="TSGroupIDInputDlg.h">
+      <Filter>MainMenu</Filter>
+    </ClInclude>
+    <ClInclude Include="TSProjectMainMenuBar.h">
+      <Filter>MainMenu</Filter>
+    </ClInclude>
+    <ClInclude Include="TSProjectMainMenuForm.h">
+      <Filter>MainMenu</Filter>
+    </ClInclude>
+    <ClInclude Include="ExportEvtTSMng.h">
+      <Filter>TS</Filter>
+    </ClInclude>
+    <ClInclude Include="TSMng.h">
+      <Filter>TS</Filter>
+    </ClInclude>
+    <ClInclude Include="Changer.h">
+      <Filter>Changer</Filter>
+    </ClInclude>
+    <ClInclude Include="Finder.h">
+      <Filter>Changer</Filter>
+    </ClInclude>
+    <ClInclude Include="MobGroupIdxChanger.h">
+      <Filter>Changer</Filter>
+    </ClInclude>
+    <ClInclude Include="RwdTblIdxChanger.h">
+      <Filter>Changer</Filter>
+    </ClInclude>
+    <ClInclude Include="TextIdxChanger.h">
+      <Filter>Changer</Filter>
+    </ClInclude>
+    <ClInclude Include="TSUtil.h">
+      <Filter>Changer</Filter>
+    </ClInclude>
+    <ClInclude Include="TSQuestTextBar.h">
+      <Filter>QuestText</Filter>
+    </ClInclude>
+    <ClInclude Include="TSQuestTextForm.h">
+      <Filter>QuestText</Filter>
+    </ClInclude>
+    <ClInclude Include="TSQuestTextListCtrl.h">
+      <Filter>QuestText</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

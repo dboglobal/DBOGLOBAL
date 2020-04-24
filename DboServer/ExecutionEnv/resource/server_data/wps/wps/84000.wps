@@ -1,0 +1,510 @@
+-- BID3 - BACTERIAN
+GameStage(0)
+--[
+
+	-- spawn mob group
+	Action( "add mobgroup" )
+	--[
+		Param( "group", 378304 )
+		Param( "no spawn wait", "true" )
+	--]
+	End()
+	
+	-- check if all mobs defeated
+	Action( "wait" )
+	--[
+		Condition( "check mobgroup" )
+		--[
+			Param( "group", 378304 )
+			Param( "count", 0 )
+		--]
+		End()
+	--]
+	End()
+
+	-- open the main gate
+	Action( "change object state" )
+	--[
+		Param( "index", 10 )
+		Param( "state", 1 )
+	--]
+	End()
+	
+	-- open the gate
+	Action( "change object state" )
+	--[
+		Param( "index", 1 )
+		Param( "state", 1 )
+	--]
+	End()
+	
+	
+	-- spawn mob
+	Action( "add mob" )
+	--[
+		Param( "index", 16642107 )
+		Param( "group", 999999 )
+		Param( "loc x", -188.207 )
+		Param( "loc y", -27.195 )
+		Param( "loc z", 100.626 )
+		Param( "dir x", 1.00 )
+		Param( "dir z", 0.015 )
+		Param( "no spawn wait", "true" )
+	--]
+	End()
+	
+
+	Action( "wait" )
+	--[
+		Condition( "check battle" )
+		--[
+			Param( "type", "mob" )
+			Param( "group", 999999 )
+			Param( "is battle", "true" )
+		--]
+		End()
+	--]
+	End()
+	
+	-- close the main gate
+	Action( "change object state" )
+	--[
+		Param( "index", 10 )
+		Param( "state", 0 )
+	--]
+	End()
+
+	-- close the gate
+	Action( "change object state" )
+	--[
+		Param( "index", 1 )
+		Param( "state", 0 )
+	--]
+	End()
+	
+	-- spawn boss
+	Action( "add mob" )
+	--[
+		Param( "index", 12351207 )
+		Param( "group", 9999991 )
+		Param( "loc x", -173.331 )
+		Param( "loc y", -27.195 )
+		Param( "loc z", 101.167 )
+		Param( "dir x", 1.00 )
+		Param( "dir z", 0.021 )
+		Param( "no spawn wait", "true" )
+		Param( "nest type", "fix" )
+	--]
+	End()
+	
+	Action( "wait" )
+	--[
+		Condition( "check battle" )
+		--[
+			Param( "type", "mob" )
+			Param( "group", 9999991 )
+			Param( "is battle", "true" )
+		--]
+		End()
+	--]
+	End()
+
+	
+	Action( "function" )
+	--[
+
+				Condition( "child" )
+				--[
+					-- Check if boss is 90% LP
+					Action( "wait" )
+					--[
+						Condition( "check lp" )
+						--[
+							Param( "type", "mob" )
+							Param( "group", 9999991 )
+							Param( "index", 12351207 )
+							Param( "lp", 90 )
+						--]
+						End()
+					--]
+					End()
+							
+					-- SPAWN YELLOW GHOSTS
+					Action( "add mobgroup" )
+					--[
+						Param( "group", 378302 )
+						Param( "no spawn wait", "true" )
+					--]
+					End()
+				
+					Action( "function" )
+					--[
+						Condition( "child" )
+						--[
+							Action( "while" )
+							--[
+								Action( "loop" )
+								--[
+									Action( "wait" )
+									--[
+										Condition( "check battle" )
+										--[
+											Param( "type", "mob" )
+											Param( "group", 378302 )
+											Param( "is battle", "true" )
+										--]
+										End() 
+									--]
+									End()	
+									
+									-- SPAWN THE BEES
+									Action( "add mobgroup" )
+									--[
+										Param( "group", 378308 )
+										Param( "no spawn wait", "true" )
+									--]
+									End()
+									
+									Action( "wait" )
+									--[
+										Condition( "check time" )
+										--[
+											Param( "time", 30 )
+										--]
+										End()
+									--]
+									End()
+								--]
+								End()
+							--]
+							End()
+						--]
+						End()
+
+						Action( "wait" )
+						--[
+							Condition( "check mobgroup" )
+							--[
+								Param( "group", 378302 )
+								Param( "count", 0 )
+							--]
+							End()
+						--]
+						End()
+						
+						-- open gate
+						Action( "change object state" )
+						--[
+							Param( "index", 2 )
+							Param( "state", 1 )
+						--]
+						End()
+						
+						-- open gate
+						Action( "change object state" )
+						--[
+							Param( "index", 3 )
+							Param( "state", 1 )
+						--]
+						End()
+						
+					--]
+					End()
+				--]
+				End()
+				
+				Condition( "child" )
+				--[
+					-- Check if boss is 60% LP
+					Action( "wait" )
+					--[
+						Condition( "check lp" )
+						--[
+							Param( "type", "mob" )
+							Param( "group", 9999991 )
+							Param( "index", 12351207 )
+							Param( "lp", 60 )
+						--]
+						End()
+					--]
+					End()
+					
+					-- SPAWN RED GHOSTS
+					Action( "add mobgroup" )
+					--[
+						Param( "group", 378303 )
+						Param( "no spawn wait", "true" )
+					--]
+					End()
+					
+					Action( "function" )
+					--[
+						Condition( "child" )
+						--[
+							Action( "while" )
+							--[
+								Action( "loop" )
+								--[
+									Action( "wait" )
+									--[
+										Condition( "check battle" )
+										--[
+											Param( "type", "mob" )
+											Param( "group", 378303 )
+											Param( "is battle", "true" )
+										--]
+										End() 
+									--]
+									End()	
+									
+									-- spawn deputiy of capt. bacterian
+									Action( "add mobgroup" )
+									--[
+										Param( "group", 378310 )
+										Param( "no spawn wait", "true" )
+									--]
+									End()
+									
+									Action( "wait" )
+									--[
+										Condition( "check time" )
+										--[
+											Param( "time", 30 )
+										--]
+										End()
+									--]
+									End()
+								--]
+								End()
+							--]
+							End()
+						--]
+						End()
+
+						Action( "wait" )
+						--[
+							Condition( "check mobgroup" )
+							--[
+								Param( "group", 378303 )
+								Param( "count", 0 )
+							--]
+							End()
+						--]
+						End()
+						
+						-- open gate
+						Action( "change object state" )
+						--[
+							Param( "index", 4 )
+							Param( "state", 1 )
+						--]
+						End()
+						
+						-- open gate
+						Action( "change object state" )
+						--[
+							Param( "index", 5 )
+							Param( "state", 1 )
+						--]
+						End()
+					--]
+					End()
+				--]
+				End()
+				
+				Condition( "child" )
+				--[
+					-- Check if boss is 30% LP
+					Action( "wait" )
+					--[
+						Condition( "check lp" )
+						--[
+							Param( "type", "mob" )
+							Param( "group", 9999991 )
+							Param( "index", 12351207 )
+							Param( "lp", 30 )
+						--]
+						End()
+					--]
+					End()
+					
+					-- SPAWN RED GHOSTS
+					Action( "add mobgroup" )
+					--[
+						Param( "group", 378307 )
+						Param( "no spawn wait", "true" )
+					--]
+					End()
+					
+					Action( "function" )
+					--[
+						Condition( "child" )
+						--[
+							Action( "while" )
+							--[
+								Action( "loop" )
+								--[
+									Action( "wait" )
+									--[
+										Condition( "check battle" )
+										--[
+											Param( "type", "mob" )
+											Param( "group", 378307 )
+											Param( "is battle", "true" )
+										--]
+										End() 
+									--]
+									End()	
+									
+									-- SPAWN RED BEES
+									Action( "add mobgroup" )
+									--[
+										Param( "group", 378306 )
+										Param( "no spawn wait", "true" )
+									--]
+									End()
+									
+									Action( "wait" )
+									--[
+										Condition( "check time" )
+										--[
+											Param( "time", 30 )
+										--]
+										End()
+									--]
+									End()
+								--]
+								End()
+							--]
+							End()
+						--]
+						End()
+
+						Action( "wait" )
+						--[
+							Condition( "check mobgroup" )
+							--[
+								Param( "group", 378307 )
+								Param( "count", 0 )
+							--]
+							End()
+						--]
+						End()
+						
+						-- open gate
+						Action( "change object state" )
+						--[
+							Param( "index", 6 )
+							Param( "state", 1 )
+						--]
+						End()
+						
+						-- open gate
+						Action( "change object state" )
+						--[
+							Param( "index", 7 )
+							Param( "state", 1 )
+						--]
+						End()
+						
+						-- open gate
+						Action( "change object state" )
+						--[
+							Param( "index", 8 )
+							Param( "state", 1 )
+						--]
+						End()
+					--]
+					End()
+				--]
+				End()
+		
+		-- check if boss is dead. If true, then the function end and script continues
+		Action("wait")
+		--[
+			Condition("check mobgroup")
+			--[
+				Param("group", 9999991 )
+				Param("count", 0 )
+			--]
+			End()
+		--]
+		End()
+		
+	--]
+	End()
+
+	-- remove mob group
+	Action("remove mobgroup")
+	--[
+		Param( "group", 999999 )
+		Param( "type", "clear" )
+	--]
+	End()
+
+	-- remove mob group
+	Action("remove mobgroup")
+	--[
+		Param( "group", 378302 )
+		Param( "type", "clear" )
+	--]
+	End()
+	
+	-- remove mob group
+	Action("remove mobgroup")
+	--[
+		Param( "group", 378308 )
+		Param( "type", "clear" )
+	--]
+	End()
+
+	-- remove mob group
+	Action("remove mobgroup")
+	--[
+		Param( "group", 378303 )
+		Param( "type", "clear" )
+	--]
+	End()
+	
+	-- remove mob group
+	Action("remove mobgroup")
+	--[
+		Param( "group", 378310 )
+		Param( "type", "clear" )
+	--]
+	End()
+
+	-- remove mob group
+	Action("remove mobgroup")
+	--[
+		Param( "group", 378306 )
+		Param( "type", "clear" )
+	--]
+	End()
+
+	-- remove mob group
+	Action("remove mobgroup")
+	--[
+		Param( "group", 378307 )
+		Param( "type", "clear" )
+	--]
+	End()
+	
+	-- open the main gate
+	Action( "change object state" )
+	--[
+		Param( "index", 10 )
+		Param( "state", 1 )
+	--]
+	End()
+
+	-- open the gate
+	Action( "change object state" )
+	--[
+		Param( "index", 1 )
+		Param( "state", 1 )
+	--]
+	End()
+		
+--]
+End()

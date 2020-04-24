@@ -1,0 +1,2045 @@
+------------------------------------------------------------------------------------------------------------
+-- Time Machine Quest 5 Ver 0.5
+--
+-- Begin : 2009-12-08
+--
+-- Copyright : ⓒ NTL-Inc Co., Ltd
+--
+-- Author : Rudin (byerror@ntl-inc.com)
+-- Supervisor : Kaervek (kaervek@ntl-inc.com)
+------------------------------------------------------------------------------------------------------------
+-- bgm 규칙
+-- BGM_TMQ2_BOSS : 토와가 관계되어 있는 보스와의 전투
+-- BGM_TMQ2_FREEZA : 전투가 없는 프리저 등장
+-- BGM_TMQ2_FREEZA_B : 프리저와의 전투
+-- BGM_TMQ2_GINYU : 전투가 없는 기뉴 등장
+-- BGM_TMQ2_GINYU_B : 기뉴와의 전투
+-- BGM_TMQ2_MAIN : 기본 배경음
+-- BGM_TMQ_COMMON :  전투가 없는 시네마틱
+-- BGM_TMQ_EVENT :  전투로 이어지는 시네마틱, 이어지는 전투가 종료될 때까지 틈
+-- BGM_TMQ_BOSS :  중간보스 및 보스전
+------------------------------------------------------------------------------------------------------------
+
+GameBegin()
+--[
+
+-- Player Faint Check
+
+	Action( "register condition" ) 
+	--[
+		Condition( "all player faint" )
+		--[   
+			Param( "tmq fail", "true" )
+		--]
+		End()
+	--]
+	End()
+
+--Time Machine 숨기기
+
+	Action( "change object state" )
+	--[
+		Param( "index", 8 )
+		Param( "state", 3 )
+		Param( "substate show", 0 )
+	--]
+	End()
+
+	Action( "change object state" )
+	--[
+		Param( "index", 9 )
+		Param( "state", 3 )
+		Param( "substate show", 0 )
+	--]
+	End()
+
+--시체 8구 추가
+
+	Action( "add npc" )
+	--[
+		Param( "index", 4651104 )
+		Param( "loc x", 158.29 )
+		Param( "loc z", 228.48 )
+		Param( "dir x", 0.98 )
+		Param( "dir z", -0.021 )
+		Param( "play script", 4651204 )
+		Param( "play scene", 2 )
+	--]
+	End()
+
+	Action( "add npc" )
+	--[
+		Param( "index", 4651102 )
+		Param( "loc x", 158.43 )
+		Param( "loc z", 184.71 )
+		Param( "dir x", 0.98 )
+		Param( "dir z", -0.021 )
+		Param( "play script", 4651204 )
+		Param( "play scene", 3 )
+	--]
+	End()
+
+	Action( "add npc" )
+	--[
+		Param( "index", 4651201 )
+		Param( "loc x", 163.06 )
+		Param( "loc z", 150.49 )
+		Param( "dir x", 1 )
+		Param( "dir z", 1 )
+		Param( "play script", 4651204 )
+		Param( "play scene", 4 )
+	--]
+	End()
+
+	Action( "add npc" )
+	--[
+		Param( "index", 4651202 )
+		Param( "loc x", 177.05 )
+		Param( "loc z", 239.01 )
+		Param( "dir x", 0.5 )
+		Param( "dir z", -0.1 )
+		Param( "play script", 4651204 )
+		Param( "play scene", 5 )
+	--]
+	End()
+
+	Action( "add npc" )
+	--[
+		Param( "index", 4753101 )
+		Param( "loc x", 177.53 )
+		Param( "loc z", 189.32 )
+		Param( "dir x", 0.3 )
+		Param( "dir z", -0.2 )
+		Param( "play script", 4651204 )
+		Param( "play scene", 2 )
+	--]
+	End()
+
+	Action( "add npc" )
+	--[
+		Param( "index", 4651103 )
+		Param( "loc x", 182.39 )
+		Param( "loc z", 183.27 )
+		Param( "dir x", 0.7 )
+		Param( "dir z", -0.4 )
+		Param( "play script", 4651204 )
+		Param( "play scene", 2 )
+	--]
+	End()
+
+	Action( "add npc" )
+	--[
+		Param( "index", 4651203 )
+		Param( "loc x", 190.86 )
+		Param( "loc z", 191.70 )
+		Param( "dir x", 0.9 )
+		Param( "dir z", -0.9 )
+		Param( "play script", 4651204 )
+		Param( "play scene", 4 )
+	--]
+	End()
+
+	Action( "add npc" )
+	--[
+		Param( "index", 4753102 )
+		Param( "loc x", 221.42 )
+		Param( "loc z", 181.15 )
+		Param( "dir x", 0.1 )
+		Param( "dir z", -0.8 )
+		Param( "play script", 4651204 )
+		Param( "play scene", 2 )
+	--]
+	End()
+
+-- Frieza BGM Play
+
+	Action( "play bgm" ) 
+	--[
+		Param( "play", "true")
+		Param( "name", "BGM\\BGM_TMQ_COMMON.ogg")
+		Param( "loop", "true")
+	--]
+	End()
+
+-- Towa 첫 출연 Cinematic
+
+	Action( "direct play" )	
+	--[
+		Param( "type", "cinematic" )
+		Param( "id", 1047 )
+		Param( "sync", "true" )
+		Param( "skip", "true" )
+	--]  
+	End()
+
+-- Trunks Spawn Start
+
+	Action( "send ts event" ) 
+	--[
+		Param( "trigger type", "quest" )
+		Param( "event id", 21000 )
+	--]
+	End()
+
+	Action( "add mob" )
+	--[
+		Param( "index", 7111482 )
+		Param( "loc x", 55.05 )
+		Param( "loc z", 235.373 )
+		Param( "dir x", -0.600 )
+		Param( "dir z", 0.800 )
+		Param( "party id", 10 )
+		Param( "party leader", "true" )
+		Param( "play script", 7111482 )
+		Param( "play scene", 1 )
+		Param( "no spawn wait", "true" )
+		Param( "respawn", "false" )
+	--]
+	End()
+	
+	Action( "add mob" )
+	--[
+		Param( "index", 7111482 )
+		Param( "loc x", 48.177 )
+		Param( "loc z", 235.959 )
+		Param( "dir x", -0.649 )
+		Param( "dir z", 0.761 )
+		Param( "party id", 10 )
+		Param( "party leader", "false" )
+		Param( "play script", 7111482 )
+		Param( "play scene", 2 )		
+		Param( "no spawn wait", "true" )
+		Param( "respawn", "false" )
+	--]
+	End()
+	
+	Action( "add mob" )
+	--[
+		Param( "index", 7111482 )
+		Param( "loc x", 50.844 )
+		Param( "loc z", 234.792 )
+		Param( "dir x", -0.583 )
+		Param( "dir z", 0.813 )
+		Param( "party id", 10 )
+		Param( "party leader", "false" )
+		Param( "play script", 7111482 )
+		Param( "play scene", 3 )		
+		Param( "no spawn wait", "true" )
+		Param( "respawn", "false" )
+	--]
+	End()
+	
+	Action( "add mob" )
+	--[
+		Param( "index", 7113207 )
+		Param( "loc x", 50.735 )
+		Param( "loc z", 237.526 )
+		Param( "dir x", -0.588 )
+		Param( "dir z", 0.809 )
+		Param( "party id", 10 )
+		Param( "party leader", "false" )
+		Param( "play script", 7113207 )
+		Param( "play scene", 1 )			
+		Param( "no spawn wait", "true" )
+		Param( "respawn", "false" )
+	--]
+	End()
+	
+	Action( "add mob" )
+	--[
+		Param( "index", 7113207 )
+		Param( "loc x", 48.397 )
+		Param( "loc z", 230.593 )
+		Param( "dir x", -0.464 )
+		Param( "dir z", 0.886 )
+		Param( "party id", 10 )
+		Param( "party leader", "false" )
+		Param( "play script", 7113207 )
+		Param( "play scene", 2 )
+		Param( "no spawn wait", "true" )
+		Param( "respawn", "false" )
+	--]
+	End()	
+
+-- Stage 1 Start
+
+	Action( "change stage" ) 
+	--[
+		Param( "stage", 1)
+	--]
+	End()
+--]
+End()
+
+------------------------------------------------------------------
+
+GameStage(1)
+--[
+
+-- Play Faint Check
+	Action( "register condition" )  
+	--[
+		Condition( "all player faint" )
+		--[   
+			Param( "tmq fail", "true" )
+		--]
+		End()
+	--]
+	End()
+
+	Action( "register condition" )
+	--[
+		Condition( "npc faint" )
+		--[
+			Param( "npc index", 7511104 )
+			Param( "tmq fail", "true" )
+		--]
+		End()
+	--]
+	End()
+
+-- Time Start
+	Action( "time countdown" ) 
+	--[
+		Param( "mode", "start" )
+	--]
+	End()
+
+-- Stage 1 Start Message
+
+	Action( "progress message" ) 
+	--[
+		Param( "progress type", "tmq stage" )
+		Param( "message type", "start" )
+		Param( "message value", 1 )
+	--]
+	End()
+
+-- Stage Information
+
+	Action( "information" )  
+	--[
+		Param( "info type", "stage" )
+	--]
+	End()
+
+-- Stage Start Jingle
+
+	Action( "play jingle" ) 
+	--[
+		Param( "name", "BGM\\JINGLE_STAGE_START.ogg")
+	--]
+	End()
+
+-- Time Breaker Spawn 01
+
+	Action( "add mobgroup" )
+	--[
+		Param( "group", 1 )
+		Param( "respawn", "false" )
+		Param( "no spawn wait", "true" )
+	--]
+	End()
+	
+	Action("wait")
+	--[
+		Condition( "check time" )
+		--[
+			Param( "time", 3 )
+		--]
+		End()
+	--]
+	End()
+
+-- Play BGM
+
+	Action( "play bgm" ) 
+	--[
+		Param( "play", "true")
+		Param( "name", "BGM\\BGM_TMQ2_MAIN.ogg")
+		Param( "loop", "true")
+	--]
+	End()
+
+-- Trunks Escort Complete wait
+
+	Action( "wait" )
+	--[
+		Condition( "recv sps event" )
+		--[
+			Param( "target index", 7511104 )
+			Param( "event id", 590 )
+		--]
+		End()
+	--]
+	End()
+	
+	Action( "register condition" )
+	--[
+		Condition( "npc faint" )
+		--[
+			Param( "npc index", 7511104 )
+			Param( "tmq fail", "false" )
+		--]
+		End()
+	--]
+	End()
+
+	Action( "send ts event" )
+	--[
+		Param( "trigger type", "quest" )
+		Param( "event id", 591 )
+	--]
+	End()
+
+-- BGM Play
+
+	Action( "play bgm" ) -- Play BGM
+	--[
+		Param( "play", "true")
+		Param( "name", "BGM\\BGM_TMQ_COMMON.ogg")
+		Param( "loop", "true")
+	--]
+	End()
+
+-- Time Stop
+
+	Action( "time countdown" )
+	--[
+		Param("mode","stop")
+	--]
+	End()
+
+	Action( "remove mobgroup" )
+	--[
+		Param( "group", 1 )
+		Param( "type", "clear" )
+	--]
+	End()
+	
+-- Cui & Towa Cinematic
+
+	Action( "direct play" )	
+	--[
+		Param( "type", "cinematic" )
+		Param( "id", 1048 )
+		Param( "sync", "true" )
+		Param( "skip", "true" )
+	--]  
+	End()
+
+	Action( "send ts event" )
+	--[
+		Param( "trigger type", "quest" )
+		Param( "event id", 592 )
+	--]
+	End()
+	
+-- Time Start
+	Action( "time countdown" ) 
+	--[
+		Param( "mode", "start" )
+	--]
+	End()
+
+-- Play BGM
+
+	Action( "play bgm" ) 
+	--[
+		Param( "play", "true")
+		Param( "name", "BGM\\BGM_TMQ2_BOSS.ogg")
+		Param( "loop", "true")
+	--]
+	End()
+
+-- Cui Monster Spawn
+
+	Action( "add mobgroup" ) 
+	--[
+		Param( "group", 4 )
+		Param( "respawn", "false" )
+		Param( "no spawn wait", "true" )
+	--]
+	End()
+
+-- Cui Faint Check
+
+	Action( "wait" ) 
+	--[
+		Condition( "check mobgroup" )
+		--[
+			Param( "group", 4 )
+			Param( "count", 1 )
+		--]
+		End()
+	--]
+	End()
+
+-- 너무 갑작스럽게 Flash 오반이 튀어나오면 어색함
+
+	Action( "wait" )
+	--[
+		Condition( "check time" )
+		--[
+			Param( "time", 5 )
+		--]
+		End()
+	--]
+	End()
+
+-- BGM Start
+
+	Action( "play bgm" )  
+	--[
+		Param( "play", "true")
+		Param( "name", "BGM\\BGM_TMQ_EVENT.ogg")
+		Param( "loop", "true")
+	--]
+	End()
+
+-- Time Stop
+	Action( "time countdown" )
+	--[
+		Param("mode","stop")
+	--]
+	End()
+
+-- Dodoria & Gohan, Krillin Flash
+
+	Action( "direct play" )	
+	--[
+		Param( "type", "cinematic" )
+		Param( "id", 1061 )
+		Param( "sync", "true" )
+		Param( "skip", "true" )
+	--]  
+	End()
+
+-- Time Start
+	Action( "time countdown" ) 
+	--[
+		Param( "mode", "start" )
+	--]
+	End()
+
+-- Play BGM
+
+	Action( "play bgm" ) 
+	--[
+		Param( "play", "true")
+		Param( "name", "BGM\\BGM_TMQ2_MAIN.ogg")
+		Param( "loop", "true")
+	--]
+	End()
+
+-- Briefing Start
+
+	Action( "send ts event" ) 
+	--[
+		Param( "trigger type", "quest" )
+		Param( "event id", 21050 )
+	--]
+	End()
+
+-- Briefing End
+
+	Action("wait") 
+	--[
+		Condition( "recv ts event" )
+		--[
+			Param( "trigger type", "quest" )
+			Param( "event id", 21060 )
+			Param( "sync", "true" )
+		--]
+		End()
+	--]
+	End()
+
+ -- Stage 2 Start
+
+	Action( "change stage" )
+	--[
+		Param( "stage", 2)
+	--]
+	End()
+--]
+End()
+
+-----------------------------------------------------------------------
+	
+GameStage(2)
+--[
+
+-- Player Faint Check
+
+	Action( "register condition" ) 
+	--[
+		Condition( "all player faint" )
+		--[   
+			Param( "tmq fail", "true" )
+		--]
+		End()
+	--]
+	End()
+
+-- Kill Quest Start
+
+	Action( "send ts event" ) 
+	--[
+		Param( "trigger type", "quest" )
+		Param( "event id", 21090 )
+	--]
+	End()
+
+	Action( "direction indicate" )
+	--[
+		Param( "apply", "true" )
+		Param( "indicate type", "point" )
+		Param( "loc x", -24.60 )
+		Param( "loc z", 18.33)
+	--]
+	End()
+
+-- Stage 2 Start Message
+	
+	Action( "progress message" )  
+	--[
+		Param( "progress type", "tmq stage" )
+		Param( "message type", "start" )
+		Param( "message value", 2 )
+	--]
+	End()
+
+-- Stage Information
+	
+	Action( "information" )  
+	--[
+		Param( "info type", "stage" )
+	--]
+	End()
+
+-- Jingle Start
+
+	Action( "play jingle" ) 
+	--[
+		Param( "name", "BGM\\JINGLE_STAGE_START.ogg")
+	--]
+	End()
+
+-- PC Enter Area Wait
+
+	Action("wait") 
+	--[
+		Condition( "area enter" )
+		--[   
+			Param( "origin x", -24.60 )
+			Param( "origin z", 18.33 )
+			Param( "radius", 30 )
+			Param( "tmq fail", "false" )
+			Param( "all member", "false" )
+		--]
+	  	End()
+    	--]
+	End()
+
+	Action( "direction indicate" )
+	--[
+		Param( "apply", "false" )
+		Param( "indicate type", "point" )
+	--]
+	End()
+
+	Action( "add mobgroup" )
+	--[
+		Param( "group", 10 )
+		Param( "respawn", "false" )
+		Param( "no spawn wait", "true" )
+	--]
+	End()
+
+	Action("wait")
+	--[
+		Condition( "recv ts event" )
+		--[
+			Param( "trigger type", "quest" )
+			Param( "event id", 21270 )
+			Param( "sync", "false" )
+		--]
+		End()
+	--]
+	End()
+
+-- BGM Start
+
+	Action( "play bgm" )  
+	--[
+		Param( "play", "true")
+		Param( "name", "BGM\\BGM_TMQ_EVENT.ogg")
+		Param( "loop", "true")
+	--]
+	End()
+
+-- Time Stop
+	Action( "time countdown" )
+	--[
+		Param("mode","stop")
+	--]
+	End()
+
+-- Vegeta, Dodoria & Towa Cinematic
+
+	Action( "direct play" )	
+	--[
+		Param( "type", "cinematic" )
+		Param( "id", 1049 )
+		Param( "sync", "true" )
+		Param( "skip", "true" )
+	--]  
+	End()
+
+-- Time Start
+	Action( "time countdown" ) 
+	--[
+		Param( "mode", "start" )
+	--]
+	End()
+
+-- Play BGM
+
+	Action( "play bgm" )
+	--[
+		Param( "play", "true")
+		Param( "name", "BGM\\BGM_TMQ2_MAIN.ogg")
+		Param( "loop", "true")
+	--]
+	End()
+
+-- Briefing Start
+
+	Action( "send ts event" ) 
+	--[
+		Param( "trigger type", "quest" )
+		Param( "event id", 21070 )
+	--]
+	End()
+
+	Action( "add mobgroup" )
+	--[
+		Param( "group", 11 )
+		Param( "respawn", "false" )
+		Param( "no spawn wait", "true" )
+	--]
+	End()
+
+	Action( "play bgm" )
+	--[
+		Param( "play", "true")
+		Param( "name", "BGM\\BGM_TMQ2_BOSS.ogg")
+		Param( "loop", "true")
+	--]
+	End()
+
+-- Briefing End
+
+	Action("wait") 
+	--[
+		Condition( "recv ts event" )
+		--[
+			Param( "trigger type", "quest" )
+			Param( "event id", 21080 )
+			Param( "sync", "true" )
+		--]
+		End()
+	--]
+	End()
+
+	Action( "send ts event" )
+	--[
+		Param( "trigger type", "quest" )
+		Param( "event id", 21280 )
+	--]
+	End()
+
+-- Dialog End
+
+	Action("wait") 
+	--[
+		Condition( "recv ts event" )
+		--[
+			Param( "trigger type", "quest" )
+			Param( "event id", 21290 )
+			Param( "sync", "true" )
+		--]
+		End()
+	--]
+	End()
+
+	Action( "remove mobgroup" )
+	--[
+		Param( "group", 11 )
+		Param( "type", "clear" )
+	--]
+	End()
+
+-- 트랭크스, GBT-Hope 클리어
+
+--	Action( "remove npc" )
+	--[
+--		Param( "index", 7511101 )
+--		Param( "type", "clear" )
+	--]
+--	End()
+
+--	Action( "remove npc" )
+	--[
+--		Param( "index", 2413109 )
+--		Param( "type", "clear" )
+	--]
+--	End()
+
+	Action( "play bgm" )
+	--[
+		Param( "play", "true")
+		Param( "name", "BGM\\BGM_TMQ2_MAIN.ogg")
+		Param( "loop", "true")
+	--]
+	End()
+	
+-- Time Machine Arrive
+
+	Action( "change object state" )
+	--[
+		Param( "index", 1 )
+		Param( "state", 3 )
+		Param( "substate show", 0 )
+	--]
+	End()
+	
+	Action( "change object state" )
+	--[
+		Param( "index", 8 )
+		Param( "state", 0 )
+		Param( "substate show", 1 )
+	--]
+	End()
+	
+	Action( "wait" )
+	--[
+		Condition( "check time" )
+		--[
+			Param( "time", 5 )
+		--]
+		End()
+	--]
+	End()
+
+	Action( "change object state" )
+	--[
+		Param( "index", 8 )
+		Param( "state", 1 )
+		Param( "substate show", 1 )
+	--]
+	End()
+
+	Action( "wait" )
+	--[
+		Condition( "check time" )
+		--[
+			Param( "time", 2 )
+		--]
+		End()
+	--]
+	End()
+
+	Action( "add npc" )
+	--[
+		Param( "index", 7511101 )
+		Param( "loc x", -92.89 )
+		Param( "loc z", 62.12 )
+		Param( "dir x", 0.98 )
+		Param( "dir z", -0.021 )
+--		Param( "char condition", "click disable" )
+		Param( "no spawn wait", "true" )
+	--]
+	End()
+	
+	Action( "add npc" )
+	--[
+		Param( "index", 2413109 )
+		Param( "loc x", -92.61 )
+		Param( "loc z", 64.97 )
+		Param( "dir x", 0.98 )
+		Param( "dir z", -0.21 )
+--		Param( "char condition", "click disable" )		
+		Param( "no spawn wait", "true" )
+	--]
+	End()
+
+	Action( "send ts event" )
+	--[
+		Param( "trigger type", "quest" )
+		Param( "event id", 21320  )
+	--]
+	End()
+
+-- Dialog End
+	
+	Action("wait") 
+	--[
+		Condition( "recv ts event" )
+		--[
+			Param( "trigger type", "quest" )
+			Param( "event id", 21110 )
+			Param( "sync", "true" )
+		--]
+		End()
+	--]
+	End()
+
+-- 도착 Time Machine 소환
+
+	Action( "change object state" )
+	--[
+		Param( "index", 9 )
+		Param( "state", 1 )
+		Param( "substate show", 1 )
+	--]
+	End()
+
+-- Teleport 더미퀘 시작
+
+	Action( "send ts event" )
+	--[
+		Param( "trigger type", "quest" )
+		Param( "event id", 21112 )
+	--]
+	End()
+
+-- 트랭크스 클릭 대기
+
+	Action( "wait" )
+	--[
+		Condition( "recv ts event" )
+		--[
+			Param( "trigger type", "quest" )
+			Param( "event id", 21111 )
+			Param( "sync", "true" )
+		--]
+		End()
+	--]
+	End()
+
+-- Teleport 더미퀘 종료
+
+	Action( "send ts event" )
+	--[
+		Param( "trigger type", "quest" )
+		Param( "event id", 21113 )
+	--]
+	End()
+
+--텔레포트
+
+	Action("teleport")
+	--[
+		Param( "loc x", -454.383 )
+		Param( "loc y", 142.00 )
+		Param( "loc z", 337.120 )
+		Param( "dir x", -0.992 )
+		Param( "dir z", 0.128 )
+	--]
+	End()
+
+-- 트랭크스, GBT-Hope 클리어
+
+	Action( "remove npc" )
+	--[
+		Param( "index", 7511101 )
+		Param( "type", "clear" )
+	--]
+	End()
+
+	Action( "remove npc" )
+	--[
+		Param( "index", 2413109 )
+		Param( "type", "clear" )
+	--]
+	End()
+
+-- 새로 트랭크스 일행 스폰
+
+	Action( "add npc" )
+	--[
+		Param( "index", 7511101 )
+		Param( "loc x", -463.71 )
+		Param( "loc z", 336.45 )
+		Param( "dir x", 0.99 )
+		Param( "dir z", 0.14 )
+		Param( "char condition", "click disable" )
+		Param( "no spawn wait", "true" )
+	--]
+	End()
+	
+	Action( "add npc" )
+	--[
+		Param( "index", 2413109 )
+		Param( "loc x", -464.04 )
+		Param( "loc z", 338.06 )
+		Param( "dir x", 0.99 )
+		Param( "dir z", 0.14 )
+		Param( "char condition", "click disable" )		
+		Param( "no spawn wait", "true" )
+	--]
+	End()
+
+-- 출발 Time Machine 숨김
+
+	Action( "change object state" )
+	--[
+		Param( "index", 8 )
+		Param( "state", 3 )
+		Param( "substate show", 0 )
+	--]
+	End()
+
+-- Stage 3 Start
+
+	Action( "change stage" ) 
+	--[
+		Param( "stage", 3)
+	--]
+	End()
+--]
+End()
+
+------------------------------------------------------------------------
+
+GameStage(3)
+--[
+
+-- Player Faint Check
+
+	Action( "register condition" ) 
+	--[
+		Condition( "all player faint" ) 
+		--[   
+			Param( "tmq fail", "true" )
+		--]
+		End()
+	--]
+	End()
+
+-- Dialog Start (중간에 한 번 끊어서 Flash 보고 재개하도록 함)
+
+	Action( "send ts event" ) 
+	--[
+		Param( "trigger type", "quest" )
+		Param( "event id", 21120 )
+	--]
+	End()
+
+-- Dialog 중간 완료 신호 기다림
+
+	Action("wait") 
+	--[
+		Condition( "recv ts event" )
+		--[
+			Param( "trigger type", "quest" )
+			Param( "event id", 21122 )
+			Param( "sync", "true" )
+		--]
+		End()
+	--]
+	End()
+
+-- Play BGM
+
+	Action( "play bgm" ) 
+	--[
+		Param( "play", "true")
+		Param( "name", "BGM\\BGM_TMQ_common.ogg")
+		Param( "loop", "true")
+	--]
+	End()
+
+-- Time Stop
+
+	Action( "time countdown" )
+	--[
+		Param("mode","stop")
+	--]
+	End()
+
+-- Mob Spawn
+
+	Action( "add mobgroup" ) 
+	--[
+		Param( "group", 6 )
+		Param( "respawn", "false" )
+	--]
+	End()
+
+-- Flash Start 베지터 소생 및 DB 던지기
+
+	Action( "direct play" ) 
+	--[
+		Param( "type", "cinematic" )
+		Param( "id", 1062 )
+		Param( "sync", "true" )
+		Param( "skip", "true" )
+	--]
+	End()
+
+-- Play BGM
+
+	Action( "play bgm" ) 
+	--[
+		Param( "play", "true")
+		Param( "name", "BGM\\BGM_TMQ2_MAIN.ogg")
+		Param( "loop", "true")
+	--]
+	End()
+
+-- Time Start
+
+	Action( "time countdown" ) 
+	--[
+		Param( "mode", "start" )
+	--]
+	End()
+
+-- Flash 이후 TS 재개 (컨트롤 운운 대사 치고 완료)
+
+	Action( "send ts event" )
+	--[
+		Param( "trigger type", "quest" )
+		Param( "event id", 21121 )
+	--]
+	End()
+
+-- Dialog End (TS 나머지 대사 다 봤냐?)
+
+	Action("wait") 
+	--[
+		Condition( "recv ts event" )
+		--[
+			Param( "trigger type", "quest" )
+			Param( "event id", 21130 )
+			Param( "sync", "true" )
+		--]
+		End()
+	--]
+	End()
+
+-- Stage 3 Start Message
+
+	Action( "progress message" ) 
+	--[
+		Param( "progress type", "tmq stage" )
+		Param( "message type", "start" )
+		Param( "message value", 3 )
+	--]
+	End()
+
+-- Stage Information
+
+	Action( "information" ) 
+	--[
+		Param( "info type", "stage" )
+	--]
+	End()
+
+-- Jingle Start
+
+	Action( "play jingle" )
+	--[
+		Param( "name", "BGM\\JINGLE_STAGE_START.ogg")
+	--]
+	End()
+
+-- 드래곤볼 5개 수집 했는지 여부 체크
+
+	Action("wait")
+	--[
+		Param( "operation", "and" )
+		
+		Condition( "recv ts event" )
+		--[
+			Param( "trigger type", "object" );
+			Param( "event id", 21150)
+			Param( "time", 1200)
+			Param( "tmq fail", "true" )
+		--]
+		End()
+		
+		Condition( "recv ts event" )
+		--[
+			Param( "trigger type", "object" );
+			Param( "event id", 21151)
+			Param( "time", 1200)
+			Param( "tmq fail", "true" )
+		--]
+		End()	
+		
+		Condition( "recv ts event" )
+		--[
+			Param( "trigger type", "object" );
+			Param( "event id", 21152)
+			Param( "time", 1200)
+			Param( "tmq fail", "true" )
+		--]
+		End()	
+		
+		Condition( "recv ts event" )
+		--[
+			Param( "trigger type", "object" );
+			Param( "event id", 21153)
+			Param( "time", 1200)
+			Param( "tmq fail", "true" )
+		--]
+		End()	
+		
+		Condition( "recv ts event" )
+		--[
+			Param( "trigger type", "object" );
+			Param( "event id", 21154)
+			Param( "time", 1200)
+			Param( "tmq fail", "true" )
+		--]
+		End()	
+	--]
+	End()
+
+-- 다 모았으면 진행하는 것으로...
+
+	Action( "send ts event" ) 
+	--[
+		Param( "trigger type", "quest" )
+		Param( "event id", 21155 )
+	--]
+	End()
+
+	Action( "remove npc" )
+	--[
+		Param( "index", 7511101 )
+		Param( "type", "clear" )
+	--]
+	End()
+	
+	Action( "add npc" )
+	--[
+		Param( "index", 7511101 )
+		Param( "loc x", -262.071 )
+		Param( "loc z", 490.546 )
+		Param( "dir x", -0.786 )
+		Param( "dir z", -0.619 )
+		Param( "play script", 7511101 )
+		Param( "play scene", 18 )
+		Param( "char condition", "click disable" )
+		Param( "no spawn wait", "true" )
+	--]
+	End()
+
+-- Direction Indicator On
+
+	Action( "direction indicate" )	
+	--[
+		Param( "apply", "true" )
+		Param( "indicate type", "point" )
+		Param( "loc x", -272.385 )
+		Param( "loc z", 484.819 )
+	--]
+	End()
+
+-- PC Enter Area Wait
+
+	Action("wait") 
+	--[
+		Condition( "area enter" )
+		--[   
+			Param( "origin x", -272.385 )
+			Param( "origin z", 484.819 )
+			Param( "radius", 20 )
+			Param( "tmq fail", "false" )
+			Param( "all member", "true" )
+		--]
+	  	End()
+    	--]
+	End()
+
+	Action( "remove mobgroup" )
+	--[
+		Param( "group", 6 )
+		Param( "type", "clear" )
+	--]
+	End()
+	
+-- Direction Indicator On
+
+	Action( "direction indicate" )
+	--[
+		Param( "apply", "False" )
+		Param( "indicate type", "point" )
+	--]
+	End()
+
+--5개 모인 Dragonball 보여주기
+
+	Action( "change object state" )
+	--[
+		Param( "index", 10 )
+		Param( "state", 1 )
+		Param( "substate show", 1 )
+	--]
+	End()
+
+	Action( "send ts event" ) 
+	--[
+		Param( "trigger type", "quest" )
+		Param( "event id", 21330 )
+	--]
+	End()
+
+	Action( "wait" )
+	--[
+		Condition( "recv sps event" )
+		--[
+			Param( "target index", 7511101 )
+			Param( "event id", 599 )
+		--]
+		End()
+	--]
+	End()
+
+	Action( "remove npc" )
+	--[
+		Param( "index", 7511101 )
+		Param( "type", "clear" )
+	--]
+	End()
+
+	Action( "add npc" )
+	--[
+		Param( "index", 7511101 )
+		Param( "loc x", -463.71 )
+		Param( "loc z", 336.45 )
+		Param( "dir x", 0.99 )
+		Param( "dir z", 0.14 )
+		Param( "char condition", "click disable" )
+		Param( "no spawn wait", "true" )
+	--]
+	End()	
+
+-- Direction Indicator On
+
+	Action( "direction indicate" )	
+	--[
+		Param( "apply", "true" )
+		Param( "indicate type", "point" )
+		Param( "loc x", -454.383 )
+		Param( "loc z", 337.120 )
+	--]
+	End()
+
+-- PC Enter Area Wait
+
+	Action("wait") 
+	--[
+		Condition( "area enter" )
+		--[   
+			Param( "origin x", -454.383 )
+			Param( "origin z", 337.120 )
+			Param( "radius", 30 )
+			Param( "tmq fail", "false" )
+			Param( "all member", "true" )
+		--]
+	  	End()
+    	--]
+	End()
+
+-- Direction Indicator On
+
+	Action( "direction indicate" )
+	--[
+		Param( "apply", "False" )
+		Param( "indicate type", "point" )
+	--]
+	End()
+		
+-- Time Stop
+	Action( "time countdown" )
+	--[
+		Param("mode","stop")
+	--]
+	End()
+
+-- Play BGM
+
+	Action( "play bgm" ) 
+	--[
+		Param( "play", "true")
+		Param( "name", "BGM\\BGM_TMQ_COMMON.ogg")
+		Param( "loop", "true")
+	--]
+	End()
+
+-- Flash Start DB찾고 기뻐하는 베지터
+
+	Action( "direct play" ) 
+	--[
+		Param( "type", "cinematic" )
+		Param( "id", 1063 )
+		Param( "sync", "true" )
+		Param( "skip", "true" )
+	--]
+	End()
+
+--5개 모인 Dragonball 다시 없애기
+
+	Action( "change object state" )
+	--[
+		Param( "index", 10 )
+		Param( "state", 0 )
+		Param( "substate show", 0 )
+	--]
+	End()
+
+-- Time Start
+
+	Action( "time countdown" ) 
+	--[
+		Param( "mode", "start" )
+	--]
+	End()
+
+-- Play BGM
+
+	Action( "play bgm" ) 
+	--[
+		Param( "play", "true")
+		Param( "name", "BGM\\BGM_TMQ2_MAIN.ogg")
+		Param( "loop", "true")
+	--]
+	End()
+
+-- Change Stage
+
+	Action( "change stage" )
+	--[
+		Param( "stage", 4)
+	--]
+	End()
+--]
+End()
+
+--------------------------------------------------------------------
+
+GameStage(4)
+--[
+	Action( "register condition" )
+	--[
+		Condition( "all player faint" )
+		--[   
+			Param( "tmq fail", "true" )
+		--]
+		End()
+	--]
+	End()
+
+	Action( "add mobgroup" )
+	--[
+		Param( "group", 12 )
+		Param( "no spawn wait", "true" )
+	--]
+	End()
+
+-- Dialog Start
+
+	Action( "send ts event" ) 
+	--[
+		Param( "trigger type", "quest" )
+		Param( "event id", 21160 )
+	--]
+	End()
+
+-- Dialog End
+
+	Action("wait") 
+	--[
+		Condition( "recv ts event" )
+		--[
+			Param( "trigger type", "quest" )
+			Param( "event id", 21170 )
+			Param( "sync", "true" )
+		--]
+		End()
+	--]
+	End()
+
+	Action( "wait" )
+	--[
+		Condition( "check time" )
+		--[
+			Param( "time", 2 )
+		--]
+		End()
+	--]
+	End()
+
+-- Direction Indicator On
+
+	Action( "direction indicate" )	
+	--[
+		Param( "apply", "true" )
+		Param( "indicate type", "point" )
+		Param( "loc x", -305.58 )
+		Param( "loc z", -34.34 )
+	--]
+	End()
+
+-- Stage 4 Start Message
+
+	Action( "progress message" ) 
+	--[
+		Param( "progress type", "tmq stage" )
+		Param( "message type", "start" )
+		Param( "message value", 4 )
+	--]
+	End()
+	
+-- Stage Information
+
+	Action( "information" ) 
+	--[
+		Param( "info type", "stage" )
+	--]
+	End()
+
+-- Jingle Start
+
+	Action( "play jingle" ) 
+	--[
+		Param( "name", "BGM\\JINGLE_STAGE_START.ogg")
+	--]
+	End()
+
+	Action( "add npc" )
+	--[
+		Param( "index", 3511201 )
+		Param( "loc x", -305.898 )
+		Param( "loc z", -67.626 )
+		Param( "dir x", 0 )
+		Param( "dir z", 0 )
+		Param( "char condition", "click disable" )
+		Param( "no spawn wait", "true" )
+	--]
+	End()
+	
+	Action( "add npc" )
+	--[
+		Param( "index", 1211401 )
+		Param( "loc x", -309.73 )
+		Param( "loc z", -57.893 )
+		Param( "dir x", 0.159 )
+		Param( "dir z", -0.987 )
+		Param( "no spawn wait", "true" )
+	--]
+	End()
+
+-- PC Enter Area Wait
+
+	Action("wait") 
+	--[
+		Condition( "area enter" )
+		--[   
+			Param( "origin x", -305.58 )
+			Param( "origin z", -34.34 )
+			Param( "radius", 10 )
+			Param( "tmq fail", "false" )
+			Param( "all member", "false" )
+		--]
+	  	End()
+    	--]
+	End()
+
+	Action( "remove mobgroup" )
+	--[
+		Param( "group", 12 )
+		Param( "type", "clear" )
+	--]
+	End()
+	
+	Action( "register condition" )
+	--[
+		Condition( "npc faint" )
+		--[
+			Param( "npc index", 1211401 )
+			Param( "tmq fail", "true" )
+		--]
+		End()
+	--]
+	End()
+
+-- Direction Indicator On
+
+	Action( "direction indicate" )	
+	--[
+		Param( "apply", "False" )
+		Param( "indicate type", "point" )
+	--]
+	End()
+
+	Action( "remove npc" )
+	--[
+		Param( "index", 3511201 )
+		Param( "type", "clear" )
+	--]
+	End()
+
+	Action( "remove npc" )
+	--[
+		Param( "index", 1211401 )
+		Param( "type", "clear" )
+	--]
+	End()
+
+	Action( "play bgm" )  -- BGM Start
+	--[
+		Param( "play", "true")
+		Param( "name", "BGM\\BGM_TMQ_common.ogg")
+		Param( "loop", "true")
+	--]
+	End()
+
+-- Time Stop
+
+	Action( "time countdown" )
+	--[
+		Param("mode","stop")
+	--]
+	End()
+
+-- Vegeta & Zarbon
+
+	Action( "direct play" )	
+	--[
+		Param( "type", "cinematic" )
+		Param( "id", 1050 )
+		Param( "sync", "true" )
+		Param( "skip", "true" )
+	--]  
+	End()
+
+-- Time Start
+	Action( "time countdown" ) 
+	--[
+		Param( "mode", "start" )
+	--]
+	End()
+
+	Action( "play bgm" )
+	--[
+		Param( "play", "true")
+		Param( "name", "BGM\\BGM_TMQ2_FREEZA_B.ogg")
+		Param( "prev bgm fadeout", "false" )
+		Param( "loop", "true")
+	--]
+	End()
+
+	Action( "add npc" )
+	--[
+		Param( "index", 3511201 )
+		Param( "loc x", -305.898 )
+		Param( "loc z", -67.626 )
+		Param( "dir x", 0 )
+		Param( "dir z", 0 )
+		Param( "char condition", "click disable" )
+		Param( "no spawn wait", "true" )
+	--]
+	End()
+	
+	Action( "add npc" )
+	--[
+		Param( "index", 1211401 )
+		Param( "loc x", -309.73 )
+		Param( "loc z", -57.893 )
+		Param( "dir x", 0 )
+		Param( "dir z", 0 )
+		Param( "no spawn wait", "true" )
+	--]
+	End()
+
+	Action( "send ts event" )
+	--[
+		Param( "trigger type", "quest" )
+		Param( "event id", 21220 )
+	--]
+	End()
+
+	Action("wait")
+	--[
+		Condition( "recv ts event" )
+		--[
+			Param( "trigger type", "quest" );
+			Param( "event id", 21230 )
+			Param( "sync", "true" )
+		--]
+		End()
+	--]
+	End()
+
+	Action( "register condition" )
+	--[
+		Condition( "npc faint" )
+		--[
+			Param( "npc index", 1211401 )
+			Param( "tmq fail", "false" )
+		--]
+		End()
+	--]
+	End()
+
+	Action( "remove npc" )
+	--[
+		Param( "index", 3511201 )
+		Param( "type", "clear" )
+	--]
+	End()
+
+	Action( "remove npc" )
+	--[
+		Param( "index", 1211401 )
+		Param( "type", "clear" )
+	--]
+	End()
+
+-- Play BGM
+
+	Action( "play bgm" ) 
+	--[
+		Param( "play", "true")
+		Param( "name", "BGM\\BGM_TMQ_event.ogg")
+		Param( "loop", "true")
+	--]
+	End()
+
+-- Time Stop
+	Action( "time countdown" )
+	--[
+		Param("mode","stop")
+	--]
+	End()
+
+	Action( "direct play" )
+	--[
+		Param( "type", "cinematic" )
+		Param( "id", 1051 )
+		Param( "sync", "true" )
+		Param( "skip", "true" )
+	--]  
+	End()
+
+-- Time Start
+	Action( "time countdown" ) 
+	--[
+		Param( "mode", "start" )
+	--]
+	End()
+
+-- Play BGM
+
+	Action( "play bgm" ) 
+	--[
+		Param( "play", "true")
+		Param( "name", "BGM\\BGM_TMQ2_MAIN.ogg")
+		Param( "loop", "true")
+	--]
+	End()
+
+	Action( "send ts event" )
+	--[
+		Param( "trigger type", "quest" )
+		Param( "event id", 21300 )
+	--]
+	End()
+
+	Action("wait")
+	--[
+		Condition( "recv ts event" )
+		--[
+			Param( "trigger type", "quest" );
+			Param( "event id", 21240 )
+			Param( "sync", "true" )
+		--]
+		End()
+	--]
+	End()
+
+	Action( "time countdown" )
+	--[
+		Param("mode","stop")
+	--]
+	End()
+
+	Action( "play bgm" ) -- Play BGM
+	--[
+		Param( "play", "true")
+		Param( "name", "BGM\\BGM_TMQ_common.ogg")
+		Param( "loop", "true")
+	--]
+	End()
+
+	Action( "direct play" ) -- Flash Start
+	--[
+		Param( "type", "cinematic" )
+		Param( "id", 1064 )
+		Param( "sync", "true" )
+		Param( "skip", "true" )
+	--]
+	End()
+	
+	Action( "change stage" )
+	--[
+		Param( "stage", 255)
+	--]
+	End()		
+--]
+End()
+
+GameEnd()
+--[
+	Action( "play bgm" )
+	--[
+		Param( "play", "true")
+		Param( "name", "BGM\\JINGLE_STAGE_RESULT.ogg")
+		Param( "loop", "true")
+	--]
+	End()
+
+	Action( "wait" )
+	--[
+		Condition( "check time" )
+		--[
+			Param( "time", 2 )
+		--]
+		End()
+	--]
+	End()
+
+	Action( "remove npc" )
+	--[
+		Param( "index", 7511101 )
+		Param( "type", "clear" )
+	--]
+	End()
+
+	Action( "remove npc" )
+	--[
+		Param( "index", 2413109 )
+		Param( "type", "clear" )
+	--]
+	End()
+
+-- (이동용) 도착 Time Machine 숨김
+
+	Action( "change object state" )
+	--[
+		Param( "index", 9 )
+		Param( "state", 3 )
+		Param( "substate show", 0 )
+	--]
+	End()
+
+-- 마지막 타고 갈 Time Machine 나타남
+
+	Action( "change object state" )
+	--[
+		Param( "index", 2 )
+		Param( "state", 0 )
+		Param( "substate show", 1 )
+	--]
+	End()
+	
+	Action( "wait" )
+	--[
+		Condition( "check time" )
+		--[
+			Param( "time", 5 )
+		--]
+		End()
+	--]
+	End()
+
+	Action( "change object state" )
+	--[
+		Param( "index", 2 )
+		Param( "state", 1 )
+		Param( "substate show", 1 )
+	--]
+	End()
+
+	Action( "wait" )
+	--[
+		Condition( "check time" )
+		--[
+			Param( "time", 2 )
+		--]
+		End()
+	--]
+	End()
+
+	Action( "add npc" )
+	--[
+		Param( "index", 7511101 )
+		Param( "loc x", -306.70 )
+		Param( "loc z", -53.96 )
+		Param( "dir x", 0.29 )
+		Param( "dir z", 0.96 )
+	--]
+	End()
+
+	Action( "add npc" )
+	--[
+		Param( "index", 2413109 )
+		Param( "loc x", -309.78 )
+		Param( "loc z", -53.27 )
+		Param( "dir x", 0.29 )
+		Param( "dir z", 0.96 )
+		Param( "char condition", "click disable" )
+	--]
+	End()
+
+	Action( "send ts event" )
+	--[
+		Param( "trigger type", "quest" )
+		Param( "event id", 21180 )
+	--]
+	End()
+
+	Action("wait")
+	--[
+		Condition( "recv ts event" )
+		--[
+			Param( "trigger type", "quest" );
+			Param( "event id", 21190 )
+		--]
+		End()
+	--]
+	End()
+	
+	Action( "send ts event" )
+	--[
+		Param( "trigger type", "quest" )
+		Param( "event id", 21220 )
+	--]
+	End()
+
+	Action( "send ts event" )
+	--[
+		Param( "trigger type", "quest" )
+		Param( "event id", 21990 )
+	--]
+	End()
+
+	Action("wait")
+	--[
+		Condition( "recv ts event" )
+		--[
+			Param( "trigger type", "quest" )
+			Param( "event id", 21980 )
+			Param( "sync", "true" )
+			Param( "time", 60 )
+		--]
+		End()
+	--]
+	End()
+
+	Action("wait")
+	--[
+		Condition( "check time" )
+		--[
+			Param( "time", 2 )
+		--]
+		End()
+	--]
+	End()
+	
+	Action( "reward" )
+	--[
+		Param( "trigger type", "quest" )
+		Param( "event id", 21970 )
+		Param( "time", 60 )
+	--]
+	End()
+
+	Action("wait")
+	--[
+		Condition( "recv ts event" )
+		--[
+			Param( "trigger type", "quest" );
+			Param( "event id", 21960)
+			Param( "sync", "true" )
+		--]
+		End()
+	--]
+	End()
+
+	Action( "remove npc" )
+	--[
+		Param( "index", 7511101 )
+		Param( "type", "clear" )
+	--]
+	End()
+
+	Action( "remove npc" )
+	--[
+		Param( "index", 2413109 )
+		Param( "type", "clear" )
+	--]
+	End()
+
+	Action( "change object state" )
+	--[
+		Param( "index", 2 )
+		Param( "state", 2 )
+		Param( "substate show", 0 )
+	--]
+	End()
+
+-- BGM Start
+
+	Action( "play bgm" )  
+	--[
+		Param( "play", "true")
+		Param( "name", "BGM\\BGM_TMQ_EVENT.ogg")
+		Param( "loop", "true")
+	--]
+	End()
+
+	Action( "play bgm" )
+	--[
+		Param( "play", "false")
+	--]
+	End()
+
+-- Cinematic Start
+
+	Action( "direct play" ) 
+	--[
+		Param( "type", "cinematic" )
+		Param( "id", 1052 )
+		Param( "time", 35 )
+		Param( "ending", "true" )
+	--]
+	End()
+
+--	Action( "change object state" )
+	--[
+--		Param( "index", 2 )
+--		Param( "state", 3 )
+--		Param( "substate show", 0 )
+	--]
+--	End()
+
+--]
+End()

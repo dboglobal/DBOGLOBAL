@@ -1,0 +1,41 @@
+-- 인조인간 19000 파티(5마리) 사망시 문 열음
+
+GameStage( 0 )
+--[
+	Action( "add mobgroup" )
+	--[
+		Param( "group", 4 )
+		Param( "no spawn wait", "true" )
+	--]
+	End()
+
+	Action( "wait" )
+	--[
+		Condition( "check mobgroup" )
+		--[
+			Param( "group", 4 )
+			Param( "count", 5 )
+		--]
+		End()
+	--]
+	End()
+
+	Action( "wait" )
+	--[
+		Condition( "check time" )
+		--[
+			Param( "time", 2 )
+		--]
+		End()
+	--]
+	End()
+
+	Action( "change object state" )
+	--[
+		Param( "index", 10 )
+		Param( "state", 1 )
+		Param( "substate show", 1 )
+	--]
+	End()
+--]
+End()

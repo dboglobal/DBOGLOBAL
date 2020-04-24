@@ -1,0 +1,27 @@
+GameStage( 0 )
+--[
+	Action( "wait" )
+	--[
+		Condition( "recv event from wps" )
+		--[
+			Param( "wps index", 20006 )
+			Param( "event id", 393 )
+		--]
+		End()
+	--]
+	End()
+
+	Action( "add npc" )
+	--[
+		Param( "index", 1491101 )
+		Param( "loc x", 174.142 )
+		Param( "loc y", 9.565 )
+		Param( "loc z", 20.149 )
+		Param( "dir x", 0.997 )
+		Param( "dir z", 0.077 )
+		Param( "no spawn wait", "true" )
+		Param( "stand alone", "true" )
+	--]
+	End()
+--]
+End()

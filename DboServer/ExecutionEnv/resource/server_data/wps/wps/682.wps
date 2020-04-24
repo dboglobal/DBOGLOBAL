@@ -1,0 +1,97 @@
+
+GameStage(0)
+--[
+	Action( "add mob" )
+	--[
+		Param( "index", 5211201 )
+		Param( "group", 682 )
+		Param( "loc x", 5515 )
+		Param( "loc y", -81)
+		Param( "loc z", 17 )
+		Param( "dir x", -0.992 )
+		Param( "dir z", -0.129 )
+		Param( "no spawn wait", "true" )
+	--]
+	End()
+
+	Action( "add mob" )
+	--[
+		Param( "index", 5211201 )
+		Param( "group", 682 )
+		Param( "loc x", 5508 )
+		Param( "loc y", -81)
+		Param( "loc z", 4 )
+		Param( "dir x", -0.146 )
+		Param( "dir z", 0.989 )
+		Param( "no spawn wait", "true" )
+	--]
+	End()
+
+	Action( "add mob" )
+	--[
+		Param( "index", 5211201 )
+		Param( "group", 682 )
+		Param( "loc x", 5498 )
+		Param( "loc y", -81)
+		Param( "loc z", 27 )
+		Param( "dir x", 0.661 )
+		Param( "dir z", -0.750 )
+		Param( "no spawn wait", "true" )
+	--]
+	End()
+
+	Action( "add mob" )
+	--[
+		Param( "index", 5211201 )
+		Param( "group", 682 )
+		Param( "loc x", 5494)
+		Param( "loc y", -81)
+		Param( "loc z", 17 )
+		Param( "dir x", 0.995 )
+		Param( "dir z", 0.103 )
+		Param( "no spawn wait", "true" )
+	--]
+	End()
+
+	Action("wait")
+	--[
+
+		Param( "operation", "or" )
+
+		Condition( "check mobgroup" )
+		--[   
+			Param( "group", 682 )
+			Param( "count", 4 )
+		--]
+		End()
+		
+		Condition("child")
+		--[
+			Action("wait")
+			--[
+
+				Condition( "check time" )
+				--[
+					Param( "time", 600 )
+				--]
+				End()
+			--]
+			End()
+
+			Action( "wps fail" )
+			--[
+
+			--]
+			End()
+		--]
+		End()
+	--]
+	End()
+--]
+End()
+
+GameFailed()
+--[
+
+--]
+End()

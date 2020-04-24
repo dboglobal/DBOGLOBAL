@@ -1,0 +1,71 @@
+GameStage(0)
+--[
+
+-- 서버 시작하고 일정시간을 대기시켜 준다.
+	Action("wait")
+	--[
+		Condition( "check time" )
+		--[
+			Param( "time", 60 )
+		--]
+		End()
+	--]
+	End()
+
+
+-- 버스 코스 등록
+	Action( "exec wps" )
+	--[
+		Param( "wps tblidx", 91000 )
+	--]
+	End()
+
+	Action( "exec wps" )
+	--[
+		Param( "wps tblidx", 91001 )
+	--]
+	End()	
+
+	Action( "exec wps" )
+	--[
+		Param( "wps tblidx", 91002 )
+	--]
+	End()
+
+	Action( "exec wps" )
+	--[
+		Param( "wps tblidx", 91003 )
+	--]
+	End()	
+
+	Action( "exec wps" )
+	--[
+		Param( "wps tblidx", 91004 )
+	--]
+	End()
+
+	Action( "exec wps" )
+	--[
+		Param( "wps tblidx", 91005 )
+	--]
+	End()
+
+	Action( "exec wps" )
+	--[
+		Param( "wps tblidx", 91006 )
+	--]
+	End()
+
+	Action( "exec wps" )
+	--[
+		Param( "wps tblidx", 91007 )
+	--]
+	End()
+--]
+End()
+
+GameFailed()
+--[
+
+--]
+End()

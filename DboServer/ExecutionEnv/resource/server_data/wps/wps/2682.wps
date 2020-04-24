@@ -1,0 +1,18 @@
+
+GameStage(0)
+--[
+        Action( "send event to ts" )
+        --[
+                Param( "trigger type", "quest" )
+                Param( "apply type", "register all" )
+                Param( "event id", 584 )
+        --]
+        End()       
+--]
+End()
+
+GameFailed()
+--[
+
+--]
+End()

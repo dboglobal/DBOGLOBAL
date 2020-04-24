@@ -1,0 +1,60 @@
+GameStage(0)
+--[
+	Action( "change object state" )
+	--[
+		Param( "index", 11 )
+		Param( "state", 0 )
+		Param( "substate show", 0 )
+		Param( "substate unselect", 1 )
+	--]
+	End()
+
+	Action( "function" )
+	--[
+		Action( "while" )
+		--[
+			Action( "loop" )
+			--[
+				Condition( "child" )
+				--[
+					Action( "wait" )
+					--[
+						Condition( "recv event from ts" )
+						--[
+							Param( "trigger type", "quest" )
+							Param( "event id", 23230 )
+						--]
+						End()
+					--]
+					End()
+					
+					Action( "change object state" )
+					--[
+						Param( "index", 11 )
+						Param( "state", 0 )
+						Param( "substate show", 0 )
+						Param( "substate unselect", 0 )
+					--]
+					End()
+				--]
+				End()
+				
+				Action( "wait" )
+				--[
+					Condition( "recv event from ts" )
+					--[
+						Param( "trigger type", "quest" )
+						Param( "event id", 23240 )
+					--]
+					End()
+				--]
+				End()
+			--]
+			End()
+		--]
+		End()
+	--]
+	End()
+--]
+End()
+

@@ -1,0 +1,4107 @@
+-- UD6
+-- Boss Stage
+-- Gamelan throne
+-- 비브라 - 가멜란 - 위크
+
+GameStage(0)
+--[
+	-- Normal Stage Clear 될 때까지 대기
+	-- boss script 작동 시작하라는 지시 내려올 때 까지 대기
+	Action( "wait" )
+	--[
+		Condition( "recv event from wps" )
+		--[
+			Param( "wps index", 34013 )
+			Param( "event id", 996 )
+		--]
+		End()
+	--]
+	End()
+
+
+--비브라
+	Action( "calculate" )
+	--[
+		Param( "declare", "vector bivaLoc = Vector(0,0,0), vector bivaDir = Vector(0,0,0)") 
+	--]
+	End()
+
+	Action( "calculate" )
+	--[
+		Param( "declare", "vector newmobLoc = Vector(0,0,0), vector newmobDir = Vector(0,0,0)")
+	--]
+	End()
+
+	Action( "calculate" )
+	--[
+		Param( "declare", "int randomVal = 0" )
+	--]
+	End()
+ 
+	Action( "add npc" )
+	--[
+		Param( "index", 4754102 )
+		Param( "loc x", -402.83 )
+		Param( "loc y", 144.86 )
+		Param( "loc z", 705.07 )
+		Param( "dir x", 0.83 )
+		Param( "dir z", 0.56 )
+		Param( "play script", 4754102 )
+		Param( "play scene", 1 )
+		Param( "immortal", "true" )
+		Param( "no spawn wait", "true" )
+	--]
+	End()
+
+	Action("add mob")
+	--[
+		Param( "index", 25911101 )
+		Param( "group", 3400701 )
+		Param( "loc x", -399.42 )
+		Param( "loc y", 144.86 )
+		Param( "loc z", 708.25 )
+		Param( "dir x", -0.78 )
+		Param( "dir z", -0.63 )
+		Param( "ais script", 25911101 )
+		Param( "ais scene", 1 )
+		Param( "no spawn wait", "true" )
+	--]
+	End()
+
+	Action("add mob")
+	--[
+		Param( "index", 25911101 )
+		Param( "group", 3400701 )
+		Param( "loc x", -404.23 )
+		Param( "loc y", 144.86 )
+		Param( "loc z", 709.63 )
+		Param( "dir x", -0.57 )
+		Param( "dir z", -0.82 )
+		Param( "ais script", 25911101 )
+		Param( "ais scene", 1 )
+		Param( "no spawn wait", "true" )
+	--]
+	End()
+
+	Action( "wait" )
+	--[
+		Condition( "check mobgroup" )
+		--[
+			Param( "group", 3400701 )
+			Param( "count", 0 )
+		--]
+		End()
+	--]
+	End()
+
+--가멜란 등장
+	Action( "add npc" )
+	--[
+		Param( "index", 4861101 )
+		Param( "loc x", -399.32 )
+		Param( "loc y", 144.86 )
+		Param( "loc z", 716.23 )
+		Param( "dir x", -0.26 )
+		Param( "dir z", -0.97 )
+		Param( "play script", 4861101 )
+		Param( "play scene", 1 )
+		Param( "no spawn wait", "true" )
+	--]
+	End()
+
+-- 대사해라 이벤트 줌
+	Action( "send event to sps" )
+	--[
+		Param( "target type", "npc" )
+		Param( "target index", 4754102 )
+		Param( "event id", 893 )
+	--]
+	End()
+
+	Action( "wait" )
+	--[
+		Condition( "recv event from sps" )
+		--[
+			Param( "object type", "npc" )
+			Param( "object index", 4754102 )
+			Param( "event id", 890 )
+		--]
+		End()
+	--]
+	End()
+--비브라 대사 완료를 가멜란한테 보냄
+	Action( "send event to sps" )
+	--[
+		Param( "target type", "npc" )
+		Param( "target index", 4861101 )
+		Param( "event id", 891 )
+	--]
+	End()
+
+-- 가멜란 역마봉파 썼다 이벤트 기다림
+	Action( "wait" )
+	--[
+		Condition( "recv event from sps" )
+		--[
+			Param( "object type", "npc" )
+			Param( "object index", 4861101 )
+			Param( "event id", 892 )
+		--]
+		End()
+	--]
+	End()
+
+	--- 비브라는 몹으로 변하고, 가멜란은 공중으로 뜸 ---
+	Action("function")
+	--[
+		Condition("child")
+		--[
+			Action( "remove npc" )
+			--[
+				Param( "index", 4754102 )
+				Param( "type", "clear" )
+			--]
+			End()
+
+			-- 비브라 몹 변신
+			Action( "add mob" )
+			--[
+				Param( "index", 25734101 )
+				Param( "group", 3400702 )
+				Param( "loc x", -402.83 )
+				Param( "loc y", 144.86 )
+				Param( "loc z", 705.07 )
+				Param( "dir x", 0.83 )
+				Param( "dir z", 0.56 )
+				Param( "party id", 3400701)
+				Param( "party leader", "true")
+				Param( "nest type", "fix" )
+				Param( "nest range", 60 )
+				Param( "immortal", "true")
+				Param( "no spawn wait", "true" )
+			--]
+			End()
+		--]
+		End()
+		
+		Condition("child")
+		--[
+			Action( "remove npc" )
+			--[
+				Param( "index", 4861101 )
+				Param( "type", "clear" )
+			--]
+			End()
+		
+			-- 공중 가멜란 등장
+			Action( "add npc" )
+			--[
+				Param( "index", 4861102 )
+				Param( "loc x", -399.32 )
+				Param( "loc y", 144.86 )
+				Param( "loc z", 716.23 )
+				Param( "dir x", -0.26 )
+				Param( "dir z", -0.97 )
+				Param( "play script", 4861102 )
+				Param( "play scene", 1 )
+				Param( "char condition", "click disable")
+				Param( "no spawn wait", "true" )
+			--]
+			End()
+		--]
+		End()
+		
+		Action("wait")
+		--[
+			Condition("spawned mob")
+			--[
+				Param("group", 3400702)
+				Param("count", 1)
+			--]
+			End()
+		--]
+		End()
+	--]
+	End()
+	
+
+	
+
+-- 비브라 전투
+	Action( "function" )
+	--[
+		--- 비브라 전투 종료 조건을 위한 변수 설정 ---
+		--- LP가 20이하가 되면 비브라엔드가 1이 되어서, 전투 종료 ---
+		Action("calculate")
+		--[
+			Param("declare", "int Bibra1 = 0, int Bibra2 = 1, int BibraEnd = 0")
+		--]
+		End()
+		
+		-- add Bibras bonggo mob
+		Condition( "child" )
+		--[
+			--30
+			Action( "while" )
+			--[
+				Action( "loop" )
+				--[		
+					Action( "wait" )
+					--[
+						Condition( "check battle" )
+						--[
+							Param( "type", "mob" )
+							Param( "group", 3400702 )
+							Param( "is battle", "true" )
+						--]
+						End()
+					--]
+					End()				
+
+					Action( "get location" )
+					--[
+						Param( "target type", "mob" )
+						Param( "target index", 3400702 )
+						Param( "loc var", "bivaLoc" )
+						Param( "dir var", "bivaDir" )
+						Param( "default", "Loc( -402.83, 144.86, 705.07 ), Dir( 0.83, 0.00, 0.56 )" )
+					--]
+					End()	
+
+					Action( "calculate" )
+					--[
+						Param( "express", "randomVal = RandomRange( 0, 360 )" )
+					--]
+					End()
+
+					Action( "calculate" )
+					--[
+						Param( "express", "newmobDir = bivaDir" )
+					--]
+					End()
+
+					Action( "calculate" )
+					--[
+						Param( "express", "newmobLoc = RelativeCoord( bivaLoc, bivaDir, randomVal, 4 )" )
+					--]
+					End()
+
+					Action( "add mob" )
+					--[
+						Param( "index", 26632301 )
+						Param( "group", 3400705 )
+						Param( "use loc var", "true" )
+						Param( "loc var", "newmobLoc" )
+						Param( "dir var", "newmobDir" )
+						Param( "party id", 3400701)
+						Param( "party leader", "false")
+						Param( "no spawn wait", "true" )
+					--]
+					End()
+					
+					Action( "wait" )
+					--[
+						Condition("check mobgroup")
+						--[
+							Param("group", 3400705)
+							Param("count", 0)
+						--]
+						End()
+					--]
+					End()
+
+					Action( "wait" )
+					--[
+						Condition( "check time" )
+						--[
+							Param( "time", 10 )
+						--]
+						End()
+					--]
+					End()
+				--]
+				End()
+			--]
+			End()
+		--]
+		End()
+		
+		
+
+		Condition( "child" )
+		--[
+			--44
+			Action ( "while" )
+			--[
+				Action( "loop" )
+				--[
+					Action( "wait" )
+					--[
+						Condition( "check battle" )
+						--[
+							Param( "type", "mob" )
+							Param( "group", 3400702 )
+							Param( "is battle", "true" )
+						--]
+						End()
+					--]
+					End()
+	
+					Action( "wait" )
+					--[
+						Condition( "check battle" )
+						--[
+							Param( "type", "mob" )
+							Param( "group", 3400702 )
+							Param( "is battle", "false" )
+						--]
+						End()
+					--]
+					End()
+					
+					-- 전투가 풀려도 boss mob은 지우지 않는다.
+					-- boss mob을 지우면 check mobgroup이 되어버려, 다음 단계로 넘어가 버리기 때문
+--					Action( "remove mobgroup" )
+--					--[
+--						Param( "group", 3400702 )
+--						Param( "type", "despawn" )
+--					--]
+--					End()
+
+					Action( "remove mobgroup" )
+					--[
+						Param( "group", 3400705 )
+						Param( "type", "despawn" )
+					--]
+					End()
+					
+					-- npc를 지웠다가 다시 spawn하면, 지울 때의 sps상태와 다시 spawn했을 때의 sps상태가 다를 경우
+					-- 더 이상 진행이 안되고 block될 수가 있다. 따라서 주석처리함.
+--					Action( "remove npc" )
+--					--[
+--						Param( "index", 4861102 )
+--						Param( "type", "clear" )
+--					--]
+--					End()
+					
+					-- 위에서 지우지 않으므로 다시 spawn시킬 필요도 없다
+					-- 비브라 등장 --
+--					Action( "add mob" )
+--					--[
+--						Param( "index", 25734101 )
+--						Param( "group", 3400702 )
+--						Param( "loc x", -402.83 )
+--						Param( "loc y", 144.86 )
+--						Param( "loc z", 705.07 )
+--						Param( "dir x", 0.83 )
+--						Param( "dir z", 0.56 )
+--						Param( "nest type", "fix" )
+--						Param( "nest range", 60 )
+--						Param( "party id", 3400701)
+--						Param( "party leader", "true")
+--						Param( "immortal", "true")
+--						Param( "no spawn wait", "true" )
+--					--]
+--					End()
+					
+					-- 위에서 지우지 않으므로 다시 spawn시킬 필요도 없다
+					-- 공중 가멜란 등장
+--					Action( "add npc" )
+--					--[
+--						Param( "index", 4861102 )
+--						Param( "loc x", -399.32 )
+--						Param( "loc y", 144.86 )
+--						Param( "loc z", 716.23 )
+--						Param( "dir x", -0.26 )
+--						Param( "dir z", -0.97 )
+--						Param( "play script", 4861102 )
+--						Param( "play scene", 1 )
+--						Param( "char condition", "click disable")
+--						Param( "no spawn wait", "true" )
+--					--]
+--					End()
+				--]
+				End()
+			--]
+			End()
+		--]
+		End()
+		
+		--- 전투에 들어가면, 다리가 접힘, 그리고 전투가 풀리면 다리가 원래대로 ---
+		Condition("child")
+		--[
+			--52
+			Action("while")
+			--[
+				Action("loop")
+				--[
+					-- 전투에 들어가면 다리가 접힘 ---
+					Action("wait")
+					--[
+						Condition("check battle")
+						--[
+							Param("type", "mob")
+							Param("group", 3400702)
+							Param("is battle", "true")
+						--]
+						End()
+					--]
+					End()
+					
+					Action("change object state")
+					--[
+						Param("index", 47)
+						Param("state", 0)
+						Param("substate show", 1)
+					--]
+					End()
+					
+					Action("change object state")
+					--[
+						Param("index", 48)
+						Param("state", 0)
+						Param("substate show", 1)
+					--]
+					End()
+					
+					Action("change object state")
+					--[
+						Param("index", 49)
+						Param("state", 0)
+						Param("substate show", 1)
+					--]
+					End()
+					
+					Action("change object state")
+					--[
+						Param("index", 50)
+						Param("state", 0)
+						Param("substate show", 1)
+					--]
+					End()
+					
+					Action("change object state")
+					--[
+						Param("index", 51)
+						Param("state", 0)
+						Param("substate show", 1)
+					--]
+					End()
+					
+					Action("change object state")
+					--[
+						Param("index", 52)
+						Param("state", 0)
+						Param("substate show", 1)
+					--]
+					End()
+					
+					-- 전투가 풀리면 다리가 펼쳐짐 ---
+					Action("wait")
+					--[
+						Condition("check battle")
+						--[
+							Param("type", "mob")
+							Param("group", 3400702)
+							Param("is battle", "false")
+						--]
+						End()
+					--]
+					End()
+					
+					Action("change object state")
+					--[
+						Param("index", 47)
+						Param("state", 1)
+						Param("substate show", 1)
+					--]
+					End()
+					
+					Action("change object state")
+					--[
+						Param("index", 48)
+						Param("state", 1)
+						Param("substate show", 1)
+					--]
+					End()
+					
+					Action("change object state")
+					--[
+						Param("index", 49)
+						Param("state", 1)
+						Param("substate show", 1)
+					--]
+					End()
+					
+					Action("change object state")
+					--[
+						Param("index", 50)
+						Param("state", 1)
+						Param("substate show", 1)
+					--]
+					End()
+					
+					Action("change object state")
+					--[
+						Param("index", 51)
+						Param("state", 1)
+						Param("substate show", 1)
+					--]
+					End()
+					
+					Action("change object state")
+					--[
+						Param("index", 52)
+						Param("state", 1)
+						Param("substate show", 1)
+					--]
+					End()
+				--]
+				End()
+			--]
+			End()
+		--]
+		End()
+
+		--- 전투 중 가멜란의 대사 ---
+		Condition( "child" )
+		--[
+			Action("while")
+			--[
+				Action("loop")
+				--[
+					-- 비브라랑 싸움 시작
+					Action( "wait" )
+					--[
+						Condition( "check battle" )
+						--[
+							Param( "type", "mob" )
+    						Param( "group", 3400702 )
+   		 					Param( "is battle", "true" )
+						--]
+						End()
+					--]
+					End()
+
+					-- 가멜란 대사치라고 신호 줌	
+					Action( "send event to sps" )
+					--[
+						Param( "target type", "npc" )
+						Param( "target index", 4861102 )
+						Param( "event id", 894 )
+					--]
+					End()
+					
+					Condition("child")
+					--[
+						Action( "wait" )
+						--[
+							Condition( "check lp" )
+							--[
+								Param( "type", "mob" )
+								Param( "group", 3400702 )
+								Param( "lp", 80 )
+							--]
+							End()
+						--]
+						End()
+		
+						Action( "send event to sps" )
+						--[
+							Param( "target type", "npc" )
+							Param( "target index", 4861102 )
+							Param( "event id", 895 )
+						--]
+						End()
+					--]
+					End()
+					
+					Condition("child")
+					--[
+						Action( "wait" )
+						--[
+							Condition( "check lp" )
+							--[
+								Param( "type", "mob" )
+								Param( "group", 3400702 )
+								Param( "lp", 50 )
+							--]
+							End()
+						--]
+						End()
+	
+						Action( "send event to sps" )
+						--[
+							Param( "target type", "npc" )
+							Param( "target index", 4861102 )
+							Param( "event id", 896 )
+						--]
+						End()
+					--]
+					End()
+					
+					-- 비브라랑 싸움 멈추게 될 경우 ---
+					Action( "wait" )
+					--[
+						Condition( "check battle" )
+						--[
+							Param( "type", "mob" )
+    						Param( "group", 3400702 )
+   		 					Param( "is battle", "false" )
+						--]
+						End()
+					--]
+					End()
+				--]
+				End()
+			--]
+			End()
+		--]
+		End()
+		
+		--- 비브라가 LP20이 되면, 비브라 엔드가1이 되면서, 전투 종료 조건이 완성이 된다. ---
+		Condition("child")
+		--[
+			Action("while")
+			--[
+				Action("loop")
+				--[
+					Action("wait")
+					--[
+						Condition( "check battle" )
+						--[
+							Param( "type", "mob" )
+    						Param( "group", 3400702 )
+   		 					Param( "is battle", "true" )
+						--]
+						End()
+					--]
+					End()
+					
+					Action("wait")
+					--[
+						Condition("check lp")
+						--[
+							Param("type", "mob")
+							Param("group", 3400702)
+							Param("lp", 20)
+						--]
+						End()
+					--]
+					End()
+					
+					Action("if")
+					--[
+						Param("reverse", "false")
+						
+						Condition("spawned mob")
+						--[
+							Param("group", 3400702)
+							Param("count", 1)
+						--]
+						End()
+						
+						Action("then")
+						--[
+							Action("calculate")
+							--[
+								Param("express", "BibraEnd = BibraEnd + Bibra2")
+							--]
+							End()
+						--]
+						End()
+						
+						Action("else")
+						--[
+							Action("calculate")
+							--[
+								Param("express", "BibraEnd = Bibra1")
+							--]
+							End()
+						--]
+						End()
+					--]
+					End()
+				--]
+				End()
+			--]
+			End()
+		--]
+		End()
+
+		Action( "wait" )
+		--[
+			Condition("compare")
+			--[
+				Param("express", "BibraEnd == Bibra2")
+			--]
+			End()
+		--]
+		End()
+	--]
+	End()
+
+	Action( "get location" )
+	--[
+		Param( "target type", "mob" )
+		Param( "target index", 3400702 )
+		Param( "loc var", "bivaLoc" )
+		Param( "dir var", "bivaDir" )
+		Param( "default", "Loc( -402.83, 144.86, 705.07 ), Dir( 0.83, 0.00, 0.56 )" )
+	--]
+	End()
+
+	Action( "remove mobgroup" )
+	--[
+		Param( "group", 3400705 )
+		Param( "type", "clear" )
+	--]
+	End()
+
+	Action( "remove mobgroup" )
+	--[
+		Param( "group", 3400702 )
+		Param( "type", "clear" )
+	--]
+	End()
+
+-- 자폭 비브라 스폰
+	Action( "add npc" )
+	--[
+		Param( "index", 4754401 )
+		Param( "use loc var", "true" )
+		Param( "loc var", "bivaLoc" )
+		Param( "dir var", "bivaDir" )
+		Param( "play script", 4754401 )
+		Param( "play scene", 1 )
+		Param( "no spawn wait", "true" )
+	--]
+	End()
+
+	Action( "send event to sps" )
+	--[
+		Param( "target type", "npc" )
+		Param( "target index", 4754401 )
+		Param( "event id", 897 )
+	--]
+	End()
+
+--자폭 이벤트 기다림
+	Action( "wait" )
+	--[
+		Condition( "recv event from sps" )
+		--[
+			Param( "object type", "npc" )
+			Param( "object index", 4754401 )
+			Param( "event id", 898 )
+		--]
+		End()
+	--]
+	End()
+
+--자폭 이벤트
+	Action( "send event to sps" )
+	--[
+		Param( "target type", "npc" )
+		Param( "target index", 4861102 )
+		Param( "event id", 901 )
+	--]
+	End()
+
+-- 비브라 자폭
+	Action( "remove npc" )
+	--[
+		Param( "index", 4754401 )
+		Param( "type", "faint" )
+	--]
+	End()
+
+-- 가멜란 direct play 그만 하라는 이벤트 보냄
+	Action( "send event to sps" )
+	--[
+		Param( "target type", "npc" )
+		Param( "target index", 4861102 )
+		Param( "event id", 899 )
+	--]
+	End(
+	)
+
+-- 가멜란 sps 완료 이벤트 받음
+	Action( "wait" )
+	--[
+		Condition( "recv event from sps" )
+		--[
+			Param( "object type", "npc" )
+			Param( "object index", 4861102 )
+			Param( "event id", 902 )
+		--]
+		End()
+	--]
+	End()
+
+	Action( "remove npc" )
+	--[
+		Param( "index", 4861102 )
+		Param( "type", "clear" )
+	--]
+	End()
+	
+	-- 마장 가멜란 기본: 3400706
+	-- 마장 가멜란 전사: 3400707
+	-- 마장 가멜란 덴덴: 3400708
+	-- 사악한 내면의 자아: 3400709
+	-- 스테츄라돈: 3400710
+	
+	-- 가멜란 위치 변수 선언
+	Action( "calculate" )
+	--[
+		Param( "declare", "vector gamLoc = Vector(0, 0, 0), vector gamDir = Vector(0, 0, 0)" )
+		Param( "express", "gamLoc = Vector(0, 0, 0)" )
+	--]
+	End()
+	
+	-- 사악한 내면의 자아 위치 변수 선언 (6개)
+	Action( "calculate" )
+	--[
+		Param( "declare", "vector gstLoc1 = Vector(0, 0, 0)" )
+		Param( "express", "gstLoc1 = Vector(0, 0, 0)" )
+	--]
+	End()
+	
+	Action( "calculate" )
+	--[
+		Param( "declare", "vector gstLoc2 = Vector(0, 0, 0)" )
+		Param( "express", "gstLoc2 = Vector(0, 0, 0)" )
+	--]
+	End()
+	
+	Action( "calculate" )
+	--[
+		Param( "declare", "vector gstLoc3 = Vector(0, 0, 0)" )
+		Param( "express", "gstLoc3 = Vector(0, 0, 0)" )
+	--]
+	End()
+	
+	Action( "calculate" )
+	--[
+		Param( "declare", "vector gstLoc4 = Vector(0, 0, 0)" )
+		Param( "express", "gstLoc4 = Vector(0, 0, 0)" )
+	--]
+	End()
+	
+	Action( "calculate" )
+	--[
+		Param( "declare", "vector gstLoc5 = Vector(0, 0, 0)" )
+		Param( "express", "gstLoc5 = Vector(0, 0, 0)" )
+	--]
+	End()
+	
+	Action( "calculate" )
+	--[
+		Param( "declare", "vector gstLoc6 = Vector(0, 0, 0)" )
+		Param( "express", "gstLoc6 = Vector(0, 0, 0)" )
+	--]
+	End()
+	
+	-- 마장 가멜란과의 전투는 가멜란이 3단 변신을 하기 때문에,
+	-- 가멜란, 전사형, 덴덴형, 사악한 내면의 자아, 이 중 어떤 mob이라도 전투가 풀리면 최초 단계의 가멜란으로 돌려줄 필요가 있다.
+	-- 따라서 noBattle 변수를 flag로 사용하여 해당 변수가 1이 되면 전투를 초기화시키도록 한다.
+	Action( "calculate" )
+	--[
+		Param( "declare", "int noBattle = 0, int gamClear = 0, int statueOn = 0, int TRUE = 1, int FALSE = 0" )
+		Param( "express", "noBattle = 0" )
+	--]
+	End()
+	
+	-- 가멜란 전투가 풀어지면 전투를 초기화함
+	Action( "calculate" )
+	--[
+		Param( "express", "noBattle = FALSE" )
+	--]
+	End()
+	
+	-- 가멜란 스테이지를 클리어하면 loop에서 빠져나옴
+	Action( "calculate" )
+	--[
+		Param( "express", "gamClear = FALSE" )
+	--]
+	End()
+	
+	-- 스테츄라돈 가동모드가 TRUE일 때만 스테츄라돈이 나옴
+	Action( "calculate" )
+	--[
+		Param( "express", "statueOn = FALSE" )
+	--]
+	End()
+	
+	
+	Action( "function" )
+	--[
+		Condition( "child" )
+		--[
+			Action( "while" )
+			--[
+				Action( "loop" )
+				--[
+					Action( "function" )
+					--[
+						-------------------------------------------------
+						-- 마장 가멜란 3단 변신하는 부분
+						-------------------------------------------------
+						Condition( "child" )
+						--[
+							Action( "while" )
+							--[
+								Action( "loop" )
+								--[
+									-- 마장 가멜란 spawn
+									Action( "add mob" )
+									--[
+										Param( "index", 25791101 )
+										Param( "group", 3400706 )
+										Param( "loc x", -399.32 )
+										Param( "loc y", 144.86 )
+										Param( "loc z", 716.23 )
+										Param( "dir x", -0.26 )
+										Param( "dir z", -0.97 )
+										Param( "nest type", "fix" )
+										Param( "nest range", 60 )
+										Param( "immortal", "true" )
+										Param( "no spawn wait", "true" )
+									--]
+									End()
+									
+									-- 마장 가멜란과의 전투가 시작될 때 까지 대기
+									Action( "wait" )
+									--[
+										Condition( "check battle" )
+										--[
+											Param( "type", "mob" )
+											Param( "group", 3400706 )
+											Param( "is battle", "true" )
+										--]
+										End()
+									--]
+									End()
+
+									-- 전투 시작되면 스테츄라돈 가동 모드 TRUE
+									Action( "calculate" )
+									--[
+										Param( "express", "statueOn = TRUE" )
+									--]
+									End()
+									
+									-- 전투가 시작되면 출구 6개 모두 닫아주기
+									Action( "change object state" )
+									--[
+										Param( "index", 47 )
+										Param( "state", 3 )
+										Param( "substate show", 1 )
+									--]
+									End()
+									
+									Action( "change object state" )
+									--[
+										Param( "index", 48 )
+										Param( "state", 3 )
+										Param( "substate show", 1 )
+									--]
+									End()
+									
+									Action( "change object state" )
+									--[
+										Param( "index", 49 )
+										Param( "state", 3 )
+										Param( "substate show", 1 )
+									--]
+									End()
+									
+									Action( "change object state" )
+									--[
+										Param( "index", 50 )
+										Param( "state", 3 )
+										Param( "substate show", 1 )
+									--]
+									End()
+									
+									Action( "change object state" )
+									--[
+										Param( "index", 51 )
+										Param( "state", 3 )
+										Param( "substate show", 1 )
+									--]
+									End()
+									
+									Action( "change object state" )
+									--[
+										Param( "index", 52 )
+										Param( "state", 3 )
+										Param( "substate show", 1 )
+									--]
+									End()
+									
+									Action( "function" )
+									--[
+										Condition( "child" )
+										--[
+											-- 전투가 풀리면 빠져나가고 초기화 함
+											Action( "wait" )
+											--[
+												Condition( "check battle" )
+												--[
+													Param( "type", "mob" )
+													Param( "group", 3400706 )
+													Param( "is battle", "false" )
+												--]
+												End()
+											--]
+											End()
+											
+											Action( "calculate" )
+											--[
+												Param( "express", "noBattle = TRUE" )
+											--]
+											End()
+										--]
+										End()
+										
+										-- lp 80% check
+										Action( "wait" )
+										--[
+											Condition( "check lp" )
+											--[
+												Param( "type", "mob" )
+												Param( "group", 3400706 )
+												Param( "lp", 80 )
+											--]
+											End()
+										--]
+										End()
+										
+										-- 마장 가멜란 mob 위치 저장
+										-- 가멜란 spawn되는 위치를 default값으로
+										Action( "get location" )
+										--[
+											Param( "target type", "mob" )
+											Param( "target index", 3400706 )
+											Param( "loc var", "gamLoc" )
+											Param( "dir var", "gamDir" )
+											Param( "default", "Loc(-399.32, 144.86, 716.23), Dir(-0.26, 0, -0.97)" )
+										--]
+										End()
+									-- function end
+									--]
+									End()
+									
+									-- 마장 가멜란 mob 삭제
+									Action( "remove mobgroup" )
+									--[
+										Param( "group", 3400706 )
+										Param( "type", "clear" )
+									--]
+									End()
+									
+									-- 가멜란 mob 없으므로 스테츄라돈 가동 모드 FALSE
+									Action( "calculate" )
+									--[
+										Param( "express", "statueOn = FALSE" )
+									--]
+									End()
+									
+									-- 스테츄라돈 mob 삭제
+									Action( "remove mobgroup" )
+									--[
+										Param( "group", 3400710 )
+										Param( "type", "clear" )
+									--]
+									End()
+									
+									-- 마장 가멜란 NPC spawn
+									Action( "add npc" )
+									--[
+										Param( "index", 4861101 )
+										Param( "use loc var", "true" )
+										Param( "loc var", "gamLoc" )
+										Param( "dir var", "gamDir" )
+										Param( "play script", 4861101 )
+										Param( "play scene", 2 )
+										Param( "no spawn wait", "true" )
+									--]
+									End()
+									
+									-- 가멜란 이동 완료하고 대사 할 때까지 대기
+									Action( "wait" )
+									--[
+										Condition( "recv event from sps" )
+										--[
+											Param( "object type", "npc" )
+											Param( "object index", 4861101 )
+											Param( "event id", 987 )
+										--]
+										End()
+									--]
+									End()
+									
+									Action( "wait" )
+									--[
+										Condition( "check time" )
+										--[
+											Param( "time", 0.5 )
+										--]
+										End()
+									--]
+									End()
+									
+									-- 포로 3마리 spawn
+									Action( "function" )
+									--[
+										Condition( "child" )
+										--[
+											-- 전사
+											Action( "add npc" )
+											--[
+												Param( "index", 4511001 )
+												Param( "loc x", -400 )
+												Param( "loc y", 144.86 )
+												Param( "loc z", 715.42 )
+												Param( "dir x", -0.56 )
+												Param( "dir z", -0.83 )
+												Param( "play script", 4511001 )
+												Param( "play scene", 1 )
+												Param( "no spawn wait", "true" )
+											--]
+											End()
+										--]
+										End()
+										
+										Condition( "child" )
+										--[
+											-- 덴덴
+											Action( "add npc" )
+											--[
+												Param( "index", 4651302 )
+												Param( "loc x", -403.4 )
+												Param( "loc y", 144.86 )
+												Param( "loc z", 717.81 )
+												Param( "dir x", -1 )
+												Param( "dir z", 0.09 )
+												Param( "play script", 4651302 )
+												Param( "play scene", 1 )
+												Param( "no spawn wait", "true" )
+											--]
+											End()
+										--]
+										End()
+										
+										Condition( "child" )
+										--[
+											-- 장로
+											Action( "add npc" )
+											--[
+												Param( "index", 4751701 )
+												Param( "loc x", -395.73 )
+												Param( "loc y", 144.86 )
+												Param( "loc z", 716.93 )
+												Param( "dir x", 0.29 )
+												Param( "dir z", -0.96 )
+												Param( "play script", 4751701 )
+												Param( "play scene", 1 )
+												Param( "no spawn wait", "true" )
+											--]
+											End()
+										--]
+										End()
+										
+										-- 포로 3마리 모두 spawn완료되어 sps에서 이벤트 보내줄 때 까지 대기
+										Action( "wait" )
+										--[
+											Param( "operation", "and" )
+								
+											Condition( "recv event from sps" )
+											--[
+												Param( "object type", "npc" )
+												Param( "object index", 4511001 )
+												Param( "event id", 993 )
+											--]
+											End()
+											
+											Condition( "recv event from sps" )
+											--[
+												Param( "object type", "npc" )
+												Param( "object index", 4651302 )
+												Param( "event id", 994 )
+											--]
+											End()
+											
+											Condition( "recv event from sps" )
+											--[
+												Param( "object type", "npc" )
+												Param( "object index", 4751701 )
+												Param( "event id", 995 )
+											--]
+											End()
+										--]
+										End()
+									--]
+									End()
+									
+									-- sps에게 포로 npc 모두 spawn시켰다고 알려줌.
+									-- sps에서는 포로에게 한발 가까이 이동하고 대사 함
+									Action( "send event to sps" )
+									--[
+										Param( "target type", "npc" )
+										Param( "target index", 4861101 )
+										Param( "event id", 988 )
+									--]
+									End()
+									
+									-- sps에서 대사 끝날때 까지 대기
+									Action( "wait" )
+									--[
+										Condition( "recv event from sps" )
+										--[
+											Param( "object type", "npc" )
+											Param( "object index", 4861101 )
+											Param( "event id", 989 )
+										--]
+										End()
+									--]
+									End()
+									
+									-- 가멜란이 포로 흡수하는 애니메이션 대기하는 딜레이
+									Action( "wait" )
+									--[
+										Condition( "check time" )
+										--[
+											Param( "time", 0.5 )
+										--]
+										End()
+									--]
+									End()
+									
+									-- 전사 포로 지움
+									Action( "remove npc" )
+									--[
+										Param( "index", 4511001 )
+										Param( "type", "clear" )
+									--]
+									End()
+									
+									-- 잠시 딜레이 후
+									Action( "wait" )
+									--[
+										Condition( "check time" )
+										--[
+											Param( "time", 0.5 )
+										--]
+										End()
+									--]
+									End()
+									
+									-- 마장 가멜란 npc 지움
+									Action( "remove npc" )
+									--[
+										Param( "index", 4861101 )
+										Param( "type", "clear" )
+									--]
+									End()
+									
+									
+									
+									
+									
+									---------------------------------------------
+									-- 전사형 마장 가멜란과의 전투
+									---------------------------------------------
+									
+									-- 마장 가멜란 전사형 mob spawn
+									Action( "add mob" )
+									--[
+										Param( "index", 25791301 )
+										Param( "group", 3400707 )
+										Param( "loc x", -399.47 )
+										Param( "loc y", 144.86 )
+										Param( "loc z", 718.12 )
+										Param( "dir x", -0.59 )
+										Param( "dir z", -0.81 )
+										Param( "nest type", "fix" )
+										Param( "nest range", 60 )
+										Param( "immortal", "true" )
+										Param( "no spawn wait", "true" )
+									--]
+									End()
+									
+									-- 마장 가멜란과의 전투가 시작될 때 까지 대기
+									Action( "wait" )
+									--[
+										Condition( "check battle" )
+										--[
+											Param( "type", "mob" )
+											Param( "group", 3400707 )
+											Param( "is battle", "true" )
+										--]
+										End()
+									--]
+									End()
+									
+									-- 전투 시작되면 스테츄라돈 가동 모드 TRUE
+									Action( "calculate" )
+									--[
+										Param( "express", "statueOn = TRUE" )
+									--]
+									End()
+									
+									Action( "function" )
+									--[
+										Condition( "child" )
+										--[
+											-- 전투가 풀리면 빠져나가고 초기화 함
+											Action( "wait" )
+											--[
+												Condition( "check battle" )
+												--[
+													Param( "type", "mob" )
+													Param( "group", 3400707 )
+													Param( "is battle", "false" )
+												--]
+												End()
+											--]
+											End()
+											
+											Action( "calculate" )
+											--[
+												Param( "express", "noBattle = TRUE" )
+											--]
+											End()
+										--]
+										End()
+										
+										-- lp 55% check
+										Action( "wait" )
+										--[
+											Condition( "check lp" )
+											--[
+												Param( "type", "mob" )
+												Param( "group", 3400707 )
+												Param( "lp", 55 )
+											--]
+											End()
+										--]
+										End()
+										
+										-- 마장 가멜란 mob 위치 저장
+										-- 가멜란 spawn되는 위치를 default값으로
+										Action( "get location" )
+										--[
+											Param( "target type", "mob" )
+											Param( "target index", 3400707 )
+											Param( "loc var", "gamLoc" )
+											Param( "dir var", "gamDir" )
+											Param( "default", "Loc(-399.32, 144.86, 716.23), Dir(-0.26, 0, -0.97)" )
+										--]
+										End()
+									-- function end
+									--]
+									End()
+									
+									-- 마장 가멜란 mob 삭제
+									Action( "remove mobgroup" )
+									--[
+										Param( "group", 3400707 )
+										Param( "type", "clear" )
+									--]
+									End()
+									
+									-- 가멜란 mob 없으므로 스테츄라돈 가동 모드 FALSE
+									Action( "calculate" )
+									--[
+										Param( "express", "statueOn = FALSE" )
+									--]
+									End()
+									
+									-- 스테츄라돈 mob 삭제
+									Action( "remove mobgroup" )
+									--[
+										Param( "group", 3400710 )
+										Param( "type", "clear" )
+									--]
+									End()
+									
+									-- 마장 가멜란 NPC spawn
+									Action( "add npc" )
+									--[
+										Param( "index", 4861101 )
+										Param( "use loc var", "true" )
+										Param( "loc var", "gamLoc" )
+										Param( "dir var", "gamDir" )
+										Param( "play script", 4861101 )
+										Param( "play scene", 3 )
+										Param( "no spawn wait", "true" )
+									--]
+									End()
+									
+									-- sps에서 대사 끝날때 까지 대기
+									Action( "wait" )
+									--[
+										Condition( "recv event from sps" )
+										--[
+											Param( "object type", "npc" )
+											Param( "object index", 4861101 )
+											Param( "event id", 990 )
+										--]
+										End()
+									--]
+									End()
+									
+									-- 가멜란이 포로 흡수하는 애니메이션 대기하는 딜레이
+									Action( "wait" )
+									--[
+										Condition( "check time" )
+										--[
+											Param( "time", 0.5 )
+										--]
+										End()
+									--]
+									End()
+									
+									-- 덴덴 포로 지움
+									Action( "remove npc" )
+									--[
+										Param( "index", 4751701 )
+										Param( "type", "clear" )
+									--]
+									End()
+								
+									
+									-- 잠시 딜레이 후
+									Action( "wait" )
+									--[
+										Condition( "check time" )
+										--[
+											Param( "time", 0.5 )
+										--]
+										End()
+									--]
+									End()
+									
+									-- 마장 가멜란 npc 지움
+									Action( "remove npc" )
+									--[
+										Param( "index", 4861101 )
+										Param( "type", "clear" )
+									--]
+									End()
+									
+									
+									
+									
+									---------------------------------------------
+									-- 덴덴형 마장 가멜란과의 전투
+									---------------------------------------------
+									
+									-- 마장 가멜란 덴덴형 mob spawn
+									Action( "add mob" )
+									--[
+										Param( "index", 25791401 )
+										Param( "group", 3400708 )
+										Param( "loc x", -398.01 )
+										Param( "loc y", 144.86 )
+										Param( "loc z", 718.66 )
+										Param( "dir x", 0.41 )
+										Param( "dir z", -0.91 )
+										Param( "nest type", "fix" )
+										Param( "nest range", 60 )
+										Param( "immortal", "true" )
+										Param( "no spawn wait", "true" )
+									--]
+									End()
+									
+									-- 마장 가멜란과의 전투가 시작될 때 까지 대기
+									Action( "wait" )
+									--[
+										Condition( "check battle" )
+										--[
+											Param( "type", "mob" )
+											Param( "group", 3400708 )
+											Param( "is battle", "true" )
+										--]
+										End()
+									--]
+									End()
+									
+									-- 전투 시작되면 스테츄라돈 가동 모드 TRUE
+									Action( "calculate" )
+									--[
+										Param( "express", "statueOn = TRUE" )
+									--]
+									End()
+									
+									
+									Action( "function" )
+									--[
+										Condition( "child" )
+										--[
+											-- 전투가 풀리면 빠져나가고 초기화 함
+											Action( "wait" )
+											--[
+												Condition( "check battle" )
+												--[
+													Param( "type", "mob" )
+													Param( "group", 3400708 )
+													Param( "is battle", "false" )
+												--]
+												End()
+											--]
+											End()
+											
+											Action( "calculate" )
+											--[
+												Param( "express", "noBattle = TRUE" )
+											--]
+											End()
+										--]
+										End()
+									
+										-- lp 30% check
+										Action( "wait" )
+										--[
+											Condition( "check lp" )
+											--[
+												Param( "type", "mob" )
+												Param( "group", 3400708 )
+												Param( "lp", 30 )
+											--]
+											End()
+										--]
+										End()
+									
+										-- 마장 가멜란 mob 위치 저장
+										-- 가멜란 spawn되는 위치를 default값으로
+										Action( "get location" )
+										--[
+											Param( "target type", "mob" )
+											Param( "target index", 3400708 )
+											Param( "loc var", "gamLoc" )
+											Param( "dir var", "gamDir" )
+											Param( "default", "Loc(-399.32, 144.86, 716.23), Dir(-0.26, 0, -0.97)" )
+										--]
+										End()
+									--]
+									End()
+
+									-- 마장 가멜란 mob 삭제
+									Action( "remove mobgroup" )
+									--[
+										Param( "group", 3400708 )
+										Param( "type", "clear" )
+									--]
+									End()
+									
+									-- 가멜란 mob 없으므로 스테츄라돈 가동 모드 FALSE
+									Action( "calculate" )
+									--[
+										Param( "express", "statueOn = FALSE" )
+									--]
+									End()
+									
+									-- 스테츄라돈 mob 삭제
+									Action( "remove mobgroup" )
+									--[
+										Param( "group", 3400710 )
+										Param( "type", "clear" )
+									--]
+									End()
+									
+									-- 마장 가멜란 NPC spawn
+									Action( "add npc" )
+									--[
+										Param( "index", 4861101 )
+										Param( "use loc var", "true" )
+										Param( "loc var", "gamLoc" )
+										Param( "dir var", "gamDir" )
+										Param( "play script", 4861101 )
+										Param( "play scene", 4 )
+										Param( "no spawn wait", "true" )
+									--]
+									End()
+									
+									-- sps에서 대사 끝날때 까지 대기
+									Action( "wait" )
+									--[
+										Condition( "recv event from sps" )
+										--[
+											Param( "object type", "npc" )
+											Param( "object index", 4861101 )
+											Param( "event id", 991 )
+										--]
+										End()
+									--]
+									End()
+									
+									-- 가멜란이 포로 흡수하는 애니메이션 대기하는 딜레이
+									Action( "wait" )
+									--[
+										Condition( "check time" )
+										--[
+											Param( "time", 0.5 )
+										--]
+										End()
+									--]
+									End()
+									
+									-- 장로 포로 지움
+									Action( "remove npc" )
+									--[
+										Param( "index", 4651302 )
+										Param( "type", "clear" )
+									--]
+									End()
+									
+									-- 잠시 딜레이 후
+									Action( "wait" )
+									--[
+										Condition( "check time" )
+										--[
+											Param( "time", 0.5 )
+										--]
+										End()
+									--]
+									End()
+									
+									-- 마장 가멜란 npc 지움
+									Action( "remove npc" )
+									--[
+										Param( "index", 4861101 )
+										Param( "type", "clear" )
+									--]
+									End()
+									
+									
+									
+									
+									
+									---------------------------------------------
+									-- 장료형 마장 가멜란과의 전투
+									---------------------------------------------
+									
+									-- 장로형 마장 가멜란은 npc임
+									-- 사악한 내면의 자아와의 전투
+									
+									-- 마장 가멜란 장로형 NPC spawn
+									Action( "add npc" )
+									--[
+										Param( "index", 4861501 )
+										Param( "loc x", -400.53 )
+										Param( "loc y", 144.86 )
+										Param( "loc z", 718.96 )
+										Param( "dir x", -1 )
+										Param( "dir z", 0.07 )
+										Param( "play script", 4861501 )
+										Param( "play scene", 1 )
+										Param( "no spawn wait", "true" )
+									--]
+									End()
+									
+									-- 마장 가멜란 장로형 NPC 이동 완료할 때 까지 대기
+									Action( "wait" )
+									--[
+										Condition( "recv event from sps" )
+										--[
+											Param( "object type", "npc" )
+											Param( "object index", 4861601 )
+											Param( "event id", 992 )
+										--]
+										End()
+									--]
+									End()
+									
+									-- 가멜란의 위치를 알아내어
+									Action( "get location" )
+									--[
+										Param( "target type", "npc" )
+										Param( "target index", 4861501 )
+										Param( "loc var", "gamLoc" )
+										Param( "dir var", "gamDir" )
+										Param( "default", "Loc(-402.78, 144.86, 704.6), Dir(-0.71, 0, -0.71)" )
+									--]
+									End()
+									
+									-- 주변 6개의 지점에 사악한 내면의 자아를 spawn시킴. 동시에 spawn시키기 위하여 child 사용 함.
+									Action( "function" )
+									--[
+										Condition( "child" )
+										--[
+											Action( "calculate" )
+											--[
+												Param( "express", "gstLoc1 = RelativeCoord( gamLoc, gamDir, 30, 12 )" )
+											--]
+											End()
+											
+											Action( "add mob" )
+											--[
+												Param( "index", 25793101 )
+												Param( "group", 3400717 )
+												Param( "use loc var", "true" )
+												Param( "loc var", "gstLoc1" )
+												Param( "dir var", "gamDir" )
+												Param( "party id", 3400709 )
+												Param( "party leader", "false" )
+												Param( "no spawn wait", "true" )
+											--]
+											End()
+										--]
+										End()
+										
+										Condition( "child" )
+										--[
+											Action( "calculate" )
+											--[
+												Param( "express", "gstLoc2 = RelativeCoord( gamLoc, gamDir, 90, 12 )" )
+											--]
+											End()
+											
+											Action( "add mob" )
+											--[
+												Param( "index", 25793101 )
+												Param( "group", 3400718 )
+												Param( "use loc var", "true" )
+												Param( "loc var", "gstLoc2" )
+												Param( "dir var", "gamDir" )
+												Param( "party id", 3400709 )
+												Param( "party leader", "false" )
+												Param( "no spawn wait", "true" )
+											--]
+											End()
+										--]
+										End()
+										
+										Condition( "child" )
+										--[
+											Action( "calculate" )
+											--[
+												Param( "express", "gstLoc3 = RelativeCoord( gamLoc, gamDir, 150, 12 )" )
+											--]
+											End()
+											
+											Action( "add mob" )
+											--[
+												Param( "index", 25793101 )
+												Param( "group", 3400719 )
+												Param( "use loc var", "true" )
+												Param( "loc var", "gstLoc3" )
+												Param( "dir var", "gamDir" )
+												Param( "party id", 3400709 )
+												Param( "party leader", "false" )
+												Param( "no spawn wait", "true" )
+											--]
+											End()
+										--]
+										End()
+										
+										Condition( "child" )
+										--[
+											Action( "calculate" )
+											--[
+												Param( "express", "gstLoc4 = RelativeCoord( gamLoc, gamDir, 210, 12 )" )
+											--]
+											End()
+											
+											Action( "add mob" )
+											--[
+												Param( "index", 25793101 )
+												Param( "group", 3400720 )
+												Param( "use loc var", "true" )
+												Param( "loc var", "gstLoc4" )
+												Param( "dir var", "gamDir" )
+												Param( "party id", 3400709 )
+												Param( "party leader", "false" )
+												Param( "no spawn wait", "true" )
+											--]
+											End()
+										--]
+										End()
+										
+										Condition( "child" )
+										--[
+											Action( "calculate" )
+											--[
+												Param( "express", "gstLoc5 = RelativeCoord( gamLoc, gamDir, 270, 12 )" )
+											--]
+											End()
+											
+											Action( "add mob" )
+											--[
+												Param( "index", 25793101 )
+												Param( "group", 3400721 )
+												Param( "use loc var", "true" )
+												Param( "loc var", "gstLoc5" )
+												Param( "dir var", "gamDir" )
+												Param( "party id", 3400709 )
+												Param( "party leader", "false" )
+												Param( "no spawn wait", "true" )
+											--]
+											End()
+										--]
+										End()
+										
+										Condition( "child" )
+										--[
+											Action( "calculate" )
+											--[
+												Param( "express", "gstLoc6 = RelativeCoord( gamLoc, gamDir, 330, 12 )" )
+											--]
+											End()
+											
+											Action( "add mob" )
+											--[
+												Param( "index", 25793101 )
+												Param( "group", 3400722 )
+												Param( "use loc var", "true" )
+												Param( "loc var", "gstLoc6" )
+												Param( "dir var", "gamDir" )
+												Param( "party id", 3400709 )
+												Param( "party leader", "false" )
+												Param( "no spawn wait", "true" )
+											--]
+											End()
+										--]
+										End()
+										
+										Condition( "child" )
+										--[
+											Action( "wait" )
+											--[
+												Condition( "check time" )
+												--[
+													Param( "time", 10 )
+												--]
+												End()
+											--]
+											End()
+											
+											-- 마장 가멜란을 혼자서 중얼거리는 상태로 바꿈
+											Action( "change sps scene" )
+											--[
+												Param( "index", 4861501 )
+												Param( "play script", 4861501 )
+												Param( "play scene", 2 )
+											--]
+											End()
+										--]
+										End()
+										
+										-- 전투 풀렸을 때 초기화 시켜주는 부분
+										Condition( "child" )
+										--[
+											-- 여기에 5초간 대기를 넣지 않으면 사악한 내면의 자아가 spawn되자마자 전투가 풀린것처럼 초기화된다.
+											Action( "wait" )
+											--[
+												Condition( "check time" )
+												--[
+													Param( "time", 5 )
+												--]
+												End()
+											--]
+											End()
+											
+											-- 사악한 내면의 자아가 모두 전투에 들어가고
+											Action( "wait" )
+											--[
+												Param( "operation", "and" )
+												
+												Condition( "check battle" )
+												--[
+													Param( "type", "mob" )
+													Param( "group", 3400717 )
+													Param( "is battle", "true" )
+												--]
+												End()
+												
+												Condition( "check battle" )
+												--[
+													Param( "type", "mob" )
+													Param( "group", 3400718 )
+													Param( "is battle", "true" )
+												--]
+												End()
+												
+												Condition( "check battle" )
+												--[
+													Param( "type", "mob" )
+													Param( "group", 3400719 )
+													Param( "is battle", "true" )
+												--]
+												End()
+													
+												Condition( "check battle" )
+												--[
+													Param( "type", "mob" )
+													Param( "group", 3400720 )
+													Param( "is battle", "true" )
+												--]
+												End()
+												
+												Condition( "check battle" )
+												--[
+													Param( "type", "mob" )
+													Param( "group", 3400721 )
+													Param( "is battle", "true" )
+												--]
+												End()
+												
+												Condition( "check battle" )
+												--[
+													Param( "type", "mob" )
+													Param( "group", 3400722 )
+													Param( "is battle", "true" )
+												--]
+												End()
+											--]
+											End()
+											
+											-- 사악한 내면의 자아가 모두 전투가 풀리면
+											Action( "wait" )
+											--[
+												Param( "operation", "and" )
+												
+												Condition( "check battle" )
+												--[
+													Param( "type", "mob" )
+													Param( "group", 3400717 )
+													Param( "is battle", "false" )
+												--]
+												End()
+												
+												Condition( "check battle" )
+												--[
+													Param( "type", "mob" )
+													Param( "group", 3400718 )
+													Param( "is battle", "false" )
+												--]
+												End()
+												
+												Condition( "check battle" )
+												--[
+													Param( "type", "mob" )
+													Param( "group", 3400719 )
+													Param( "is battle", "false" )
+												--]
+												End()
+												
+												Condition( "check battle" )
+												--[
+													Param( "type", "mob" )
+													Param( "group", 3400720 )
+													Param( "is battle", "false" )
+												--]
+												End()
+												
+												Condition( "check battle" )
+												--[
+													Param( "type", "mob" )
+													Param( "group", 3400721 )
+													Param( "is battle", "false" )
+												--]
+												End()
+												
+												Condition( "check battle" )
+												--[
+													Param( "type", "mob" )
+													Param( "group", 3400722 )
+													Param( "is battle", "false" )
+												--]
+												End()
+											--]
+											End()
+											
+											-- 마장 가멜란 전투가 모두 초기화된다
+											Action( "calculate" )
+											--[
+												Param( "express", "noBattle = TRUE" )
+											--]
+											End()
+											
+										--]
+										End()
+										
+										-- 사악한 내면의 자아 모두 잡으면 function에서 빠져나감
+										Action( "wait" )
+										--[
+											Param( "operation", "and" )
+											
+											Condition( "check mobgroup" )
+											--[
+												Param( "group", 3400717 )
+												Param( "count", 1 )
+											--]
+											End()
+											
+											Condition( "check mobgroup" )
+											--[
+												Param( "group", 3400718 )
+												Param( "count", 1 )
+											--]
+											End()
+											
+											Condition( "check mobgroup" )
+											--[
+												Param( "group", 3400719 )
+												Param( "count", 1 )
+											--]
+											End()
+											
+											Condition( "check mobgroup" )
+											--[
+												Param( "group", 3400720 )
+												Param( "count", 1 )
+											--]
+											End()
+											
+											Condition( "check mobgroup" )
+											--[
+												Param( "group", 3400721 )
+												Param( "count", 1 )
+											--]
+											End()
+											
+											Condition( "check mobgroup" )
+											--[
+												Param( "group", 3400722 )
+												Param( "count", 1 )
+											--]
+											End()
+										--]
+										End()
+										
+										
+									
+									
+									-- 나중에 지울것
+									--	Action( "wait" )
+									--	--[
+									--		Condition( "check mobgroup" )
+									--		--[
+									--			Param( "group", 3400709 )
+									--			Param( "count", 6 )
+									--		--]
+									--		End()
+									--	--]
+									--	End()
+									
+									
+									
+									-- function end
+									--]
+									End()
+									
+									-- 가멜란 stage가 끝났다는 것을 표시해 줌. 이것으로 loop에서 빠져나감.
+									Action( "calculate" )
+									--[
+										Param( "express", "gamClear = TRUE" )
+									--]
+									End()
+									
+									Action( "wait" )
+									--[
+										Condition( "check time" )
+										--[
+											Param( "time", 10 )
+										--]
+										End()
+									--]
+									End()
+									
+								-- loop 닫음
+								--]
+								End()
+							-- while 닫음
+							--]
+							End()
+						-- child 닫음
+						--]
+						End()
+						-- 마장 가멜란 3단 변신하는 부분 완료
+						
+						
+						-------------------------------------------------
+						-- 스테츄라돈 무한스폰되는 부분
+						-------------------------------------------------
+						Condition( "child" )
+						--[
+							Action( "while" )
+							--[
+								Action( "loop" )
+								--[
+									-- 스테츄라돈 가동 허용이 TRUE가 될 때 까지 대기
+									Action( "wait" )
+									--[
+										Condition( "compare" )
+										--[
+											Param( "express", "statueOn == TRUE" )
+										--]
+										End()
+									End()
+									
+									Action( "wait" )
+									--[
+										Condition( "check time" )
+										--[
+											Param( "time", 17 )
+										--]
+										End()
+									--]
+									End()
+									
+									-- 기존에 있던 mob을 일단 지워줌
+									Action( "remove mobgroup" )
+									--[
+										Param( "group", 3400710 )
+										Param( "type", "clear" )
+									--]
+									End()
+									
+									-- 스테츄라돈 가동 허용이 TRUE가 될 때 까지 대기
+									Action( "wait" )
+									--[
+										Condition( "compare" )
+										--[
+											Param( "express", "statueOn == TRUE" )
+										--]
+										End()
+									End()
+									
+									Action( "wait" )
+									--[
+										Condition( "check time" )
+										--[
+											Param( "time", 3 )
+										--]
+										End()
+									--]
+									End()
+									
+									Action( "function" )
+									--[
+										Condition( "child" )
+										--[
+											-- 석상을 안보이게 하고
+											Action( "change object state" )
+											--[
+												Param( "index", 59 )
+												Param( "substate show", 0 )
+											--]
+											End()
+											
+											-- mob이 spawn됨
+											Action( "add mob" )
+											--[
+												Param( "index", 27583201 )
+												Param( "group", 3400710 )
+												Param( "loc x", -408.36 )
+												Param( "loc y", 144.86 )
+												Param( "loc z", 724.28 )
+												Param( "dir x", 0.21 )
+												Param( "dir z", -0.98 )
+												Param( "no spawn wait", "true" )
+											--]
+											End()
+										--]
+										End()
+											
+										Condition( "child" )
+										--[
+											Action( "change object state" )
+											--[
+												Param( "index", 60 )
+												Param( "substate show", 0 )
+											--]
+											End()
+											
+											Action( "add mob" )
+											--[
+												Param( "index", 27583201 )
+												Param( "group", 3400710 )
+												Param( "loc x", -421.55 )
+												Param( "loc y", 144.86 )
+												Param( "loc z", 709.5 )
+												Param( "dir x", 0.96 )
+												Param( "dir z", -0.29 )
+												Param( "no spawn wait", "true" )
+											--]
+											End()
+										--]
+										End()
+										
+										Condition( "child" )
+										--[
+											Action( "change object state" )
+											--[
+												Param( "index", 61 )
+												Param( "substate show", 0 )
+											--]
+											End()
+											
+											Action( "add mob" )
+											--[
+												Param( "index", 27583201 )
+												Param( "group", 3400710 )
+												Param( "loc x", -416.84 )
+												Param( "loc y", 144.86 )
+												Param( "loc z", 691.95 )
+												Param( "dir x", 0.74 )
+												Param( "dir z", 0.67 )
+												Param( "no spawn wait", "true" )
+											--]
+											End()
+										--]
+										End()
+										
+										Condition( "child" )
+										--[
+											Action( "change object state" )
+											--[
+												Param( "index", 62 )
+												Param( "substate show", 0 )
+											--]
+											End()
+											
+											Action( "add mob" )
+											--[
+												Param( "index", 27583201 )
+												Param( "group", 3400710 )
+												Param( "loc x", -396.99 )
+												Param( "loc y", 144.86 )
+												Param( "loc z", 686.54 )
+												Param( "dir x", -0.21 )
+												Param( "dir z", 0.98 )
+												Param( "no spawn wait", "true" )
+											--]
+											End()
+										--]
+										End()
+										
+										Condition( "child" )
+										--[
+											Action( "change object state" )
+											--[
+												Param( "index", 63 )
+												Param( "substate show", 0 )
+											--]
+											End()
+											
+											Action( "add mob" )
+											--[
+												Param( "index", 27583201 )
+												Param( "group", 3400710 )
+												Param( "loc x", -383.17 )
+												Param( "loc y", 144.86 )
+												Param( "loc z", 700.21 )
+												Param( "dir x", -0.95 )
+												Param( "dir z", 0.33 )
+												Param( "no spawn wait", "true" )
+											--]
+											End()
+										--]
+										End()
+										
+										Condition( "child" )
+										--[
+											Action( "change object state" )
+											--[
+												Param( "index", 64 )
+												Param( "substate show", 0 )
+											--]
+											End()
+											
+											Action( "add mob" )
+											--[
+												Param( "index", 27583201 )
+												Param( "group", 3400710 )
+												Param( "loc x", -387.98 )
+												Param( "loc y", 144.86 )
+												Param( "loc z", 718.81 )
+												Param( "dir x", -0.75 )
+												Param( "dir z", -0.66 )
+												Param( "no spawn wait", "true" )
+											--]
+											End()
+										--]
+										End()
+										
+										Action( "wait" )
+										--[
+											Condition( "check time" )
+											--[
+												Param( "time", 5 )
+											--]
+											End()
+										--]
+										End()
+									-- function end
+									--]
+									End()
+									
+									Action( "change object state" )
+									--[
+										Param( "index", 59 )
+										Param( "substate show", 1 )
+									--]
+									End()
+									
+									Action( "change object state" )
+									--[
+										Param( "index", 60 )
+										Param( "substate show", 1 )
+									--]
+									End()
+									
+									Action( "change object state" )
+									--[
+										Param( "index", 61 )
+										Param( "substate show", 1 )
+									--]
+									End()
+									
+									Action( "change object state" )
+									--[
+										Param( "index", 62 )
+										Param( "substate show", 1 )
+									--]
+									End()
+									
+									Action( "change object state" )
+									--[
+										Param( "index", 63 )
+										Param( "substate show", 1 )
+									--]
+									End()
+									
+									Action( "change object state" )
+									--[
+										Param( "index", 64 )
+										Param( "substate show", 1 )
+									--]
+									End()
+									
+								-- loop end
+								--]
+								End()
+							-- while end
+							--]
+							End()
+						-- child end
+						--]
+						End()
+						-- 스테츄라돈 무한스폰되는 부분 종료
+						
+						-- 안쪽 loop 탈출조건
+						-- 전투가 풀리면 안쪽 loop 탈출
+						Action( "wait" )
+						--[
+							Condition( "compare" )
+							--[
+								Param( "express", "noBattle == TRUE" )
+							--]
+							End()
+						--]
+						End()
+						
+					-- function 닫음
+					--]
+					End()
+					
+					-- 이하 전투가 풀렸을 때 조치들
+					
+					--------------------------------
+					-- 모든 mob despawn
+					--------------------------------
+					
+					-- 마장 가멜란 기본
+					Action( "remove mobgroup" )
+					--[
+						Param( "group", 3400706 )
+						Param( "type", "clear" )
+					--]
+					End()
+					
+					-- 마장 가멜란 전사
+					Action( "remove mobgroup" )
+					--[
+						Param( "group", 3400707 )
+						Param( "type", "clear" )
+					--]
+					End()
+					
+					-- 마장 가멜란 덴덴
+					Action( "remove mobgroup" )
+					--[
+						Param( "group", 3400708 )
+						Param( "type", "clear" )
+					--]
+					End()
+					
+					----------------------------------
+					-- 사악한 내면의 자아 모두 지움
+					----------------------------------
+					Action( "remove mobgroup" )
+					--[
+						Param( "group", 3400717 )
+						Param( "type", "clear" )
+					--]
+					End()
+					
+					Action( "remove mobgroup" )
+					--[
+						Param( "group", 3400718 )
+						Param( "type", "clear" )
+					--]
+					End()
+					
+					Action( "remove mobgroup" )
+					--[
+						Param( "group", 3400719 )
+						Param( "type", "clear" )
+					--]
+					End()
+					
+					Action( "remove mobgroup" )
+					--[
+						Param( "group", 3400720 )
+						Param( "type", "clear" )
+					--]
+					End()
+					
+					Action( "remove mobgroup" )
+					--[
+						Param( "group", 3400721 )
+						Param( "type", "clear" )
+					--]
+					End()
+					
+					Action( "remove mobgroup" )
+					--[
+						Param( "group", 3400722 )
+						Param( "type", "clear" )
+					--]
+					End()
+					
+					-- 스테츄라돈 모두 지움
+					Action( "remove mobgroup" )
+					--[
+						Param( "group", 3400710 )
+						Param( "type", "clear" )
+					--]
+					End()
+					
+					--------------------------------
+					-- 모든 npc despawn
+					--------------------------------
+					
+					-- 마장 가멜란 장로
+					Action( "remove npc" )
+					--[
+						Param( "index", 4861501 )
+						Param( "type", "clear" )
+					--]
+					End()
+					
+					-- 속박된 나메크 전사
+					Action( "remove npc" )
+					--[
+						Param( "index", 4511001 )
+						Param( "type", "clear" )
+					--]
+					End()
+					
+					-- 속박된 나메크 장로
+					Action( "remove npc" )
+					--[
+						Param( "index", 4651302 )
+						Param( "type", "clear" )
+					--]
+					End()
+					
+					-- 속박된 덴덴도사
+					Action( "remove npc" )
+					--[
+						Param( "index", 4751701 )
+						Param( "type", "clear" )
+					--]
+					End()
+					
+					
+					--------------------------------
+					-- 모든 trigger object를 제자리에 할것
+					--------------------------------
+					
+					-- 스테츄라돈 석상 모두 제자리에									
+					Action( "change object state" )
+					--[
+						Param( "index", 59 )
+						Param( "substate show", 1 )
+					--]
+					End()
+					
+					Action( "change object state" )
+					--[
+						Param( "index", 60 )
+						Param( "substate show", 1 )
+					--]
+					End()
+					
+					Action( "change object state" )
+					--[
+						Param( "index", 61 )
+						Param( "substate show", 1 )
+					--]
+					End()
+					
+					Action( "change object state" )
+					--[
+						Param( "index", 62 )
+						Param( "substate show", 1 )
+					--]
+					End()
+					
+					Action( "change object state" )
+					--[
+						Param( "index", 63 )
+						Param( "substate show", 1 )
+					--]
+					End()
+					
+					Action( "change object state" )
+					--[
+						Param( "index", 64 )
+						Param( "substate show", 1 )
+					--]
+					End()
+					
+					-- 전투가 풀렸으니 출구 모두 열어주기
+					Action( "change object state" )
+					--[
+						Param( "index", 47 )
+						Param( "state", 1 )
+						Param( "substate show", 1 )
+					--]
+					End()
+					
+					Action( "change object state" )
+					--[
+						Param( "index", 48 )
+						Param( "state", 1 )
+						Param( "substate show", 1 )
+					--]
+					End()
+					
+					Action( "change object state" )
+					--[
+						Param( "index", 49 )
+						Param( "state", 1 )
+						Param( "substate show", 1 )
+					--]
+					End()
+					
+					Action( "change object state" )
+					--[
+						Param( "index", 50 )
+						Param( "state", 1 )
+						Param( "substate show", 1 )
+					--]
+					End()
+					
+					Action( "change object state" )
+					--[
+						Param( "index", 51 )
+						Param( "state", 1 )
+						Param( "substate show", 1 )
+					--]
+					End()
+					
+					Action( "change object state" )
+					--[
+						Param( "index", 52 )
+						Param( "state", 1 )
+						Param( "substate show", 1 )
+					--]
+					End()
+					
+					
+					--------------------------------
+					-- 이벤트 삭제
+					--------------------------------
+					Action( "clear event" )
+					--[
+						Param( "clear all", "false" )
+						Param( "event id", 987 )
+					--]
+					End()
+					
+					Action( "clear event" )
+					--[
+						Param( "clear all", "false" )
+						Param( "event id", 989 )
+					--]
+					End()
+					
+					Action( "clear event" )
+					--[
+						Param( "clear all", "false" )
+						Param( "event id", 990 )
+					--]
+					End()
+					
+					Action( "clear event" )
+					--[
+						Param( "clear all", "false" )
+						Param( "event id", 991 )
+					--]
+					End()
+					
+					Action( "clear event" )
+					--[
+						Param( "clear all", "false" )
+						Param( "event id", 992 )
+					--]
+					End()
+					
+					Action( "clear event" )
+					--[
+						Param( "clear all", "false" )
+						Param( "event id", 993 )
+					--]
+					End()
+					
+					Action( "clear event" )
+					--[
+						Param( "clear all", "false" )
+						Param( "event id", 994 )
+					--]
+					End()
+										
+					Action( "clear event" )
+					--[
+						Param( "clear all", "false" )
+						Param( "event id", 995 )
+					--]
+					End()
+					
+					-- 전투풀림상태를 해제한다
+					Action( "calculate" )
+					--[
+						Param( "express", "noBattle = FALSE" )
+					--]
+					End()
+					
+				-- loop 닫음
+				--]
+				End()
+			--while 닫음
+			--]
+			End()
+		--child 닫음
+		--]
+		End()
+		
+		-- 바깥쪽 loop 탈출조건
+		-- 가멜란 stage를 clear하면 바깥쪽 loop 탈출
+		Action( "wait" )
+		--[
+			Condition( "compare" )
+			--[
+				Param( "express", "gamClear == TRUE" )
+			--]
+			End()
+		--]
+		End()
+	-- function end
+	--]
+	End()
+	
+	-- 스테츄라돈 석상 모두 없애줌. 다음에 나오는 키리 충전 연출을 위해
+	Action( "change object state" )
+	--[
+		Param( "index", 59 )
+		Param( "substate show", 0 )
+	--]
+	End()
+	
+	Action( "change object state" )
+	--[
+		Param( "index", 60 )
+		Param( "substate show", 0 )
+	--]
+	End()
+	
+	Action( "change object state" )
+	--[
+		Param( "index", 61 )
+		Param( "substate show", 0 )
+	--]
+	End()
+	
+	Action( "change object state" )
+	--[
+		Param( "index", 62 )
+		Param( "substate show", 0 )
+	--]
+	End()
+	
+	Action( "change object state" )
+	--[
+		Param( "index", 63 )
+		Param( "substate show", 0 )
+	--]
+	End()
+	
+	Action( "change object state" )
+	--[
+		Param( "index", 64 )
+		Param( "substate show", 0 )
+	--]
+	End()
+
+	-- 마장 가멜란 장로 despawn
+	Action( "remove npc" )
+	--[
+		Param( "index", 4861501 )
+		Param( "type", "clear" )
+	--]
+	End()
+	
+-- 철푸덕 가멜란 스폰
+	Action( "add npc" )
+	--[
+		Param( "index", 4861601 )
+		Param( "loc x", -402.83 )
+		Param( "loc y", 144.86 )
+		Param( "loc z", 705.07 )
+		Param( "dir x", 0.83 )
+		Param( "dir z", 0.56 )
+		Param( "play script", 4861601 )
+		Param( "play scene", 1 )
+		Param( "no spawn wait", "true" )
+	--]
+	End()
+
+-- 가멜란 대사치라고 보냄
+	Action( "send event to sps" )
+	--[
+		Param( "target type", "npc" )
+		Param( "target index", 4861601 )
+		Param( "event id", 881 )
+	--]
+	End()
+
+	Action( "wait" )
+	--[
+		Condition( "recv event from sps" )
+		--[
+			Param( "object type", "npc" )
+			Param( "object index", 4861601 )
+			Param( "event id", 886 )
+		--]
+		End()
+	--]
+	End()
+
+-- 키리 오브젝트 움직임
+	Action( "change object state" )
+	--[
+		Param( "index", 53 )
+		Param( "state", 1 )
+		Param( "substate show", 1 )
+	--]	
+	End()
+
+	Action( "wait" )
+	--[
+		Condition( "check time" )
+		--[
+			Param( "time", 2 )
+		--]
+		End()
+	--]
+	End()
+
+	Action( "change object state" )
+	--[
+		Param( "index", 54 )
+		Param( "state", 1 )
+		Param( "substate show", 1 )
+	--]	
+	End()
+
+	Action( "wait" )
+	--[
+		Condition( "check time" )
+		--[
+			Param( "time", 2 )
+		--]
+		End()
+	--]
+	End()
+	Action( "change object state" )
+	--[
+		Param( "index", 55 )
+		Param( "state", 1 )
+		Param( "substate show", 1 )
+	--]	
+	End()
+
+	Action( "wait" )
+	--[
+		Condition( "check time" )
+		--[
+			Param( "time", 2 )
+		--]
+		End()
+	--]
+	End()
+	Action( "change object state" )
+	--[
+		Param( "index", 56 )
+		Param( "state", 1 )
+		Param( "substate show", 1 )
+	--]	
+	End()
+
+--위크 등장
+	Action( "add npc" )
+	--[
+		Param( "index", 4912101 )
+		Param( "loc x", -399.42 )
+		Param( "loc y", 144.86 )
+		Param( "loc z", 708.25 )
+		Param( "dir x", -0.78 )
+		Param( "dir z", -0.63 )
+		Param( "play script", 4912101 )
+		Param( "play scene", 1 )
+		Param( "no spawn wait", "true" )
+	--]
+	End()
+
+-- 위크 대사 치라고 이벤트 줌
+	Action( "send event to sps" )
+	--[
+		Param( "target type", "npc" )
+		Param( "target index", 4912101 )
+		Param( "event id", 882 )
+	--]
+	End()
+
+	Action( "wait" )
+	--[
+		Condition( "check time" )
+		--[
+			Param( "time", 8 )
+		--]
+		End()
+	--]
+	End()	
+
+--철푸덕 가멜란 없앰
+	Action( "remove npc" )
+	--[
+		Param( "index", 4861601 )
+		Param( "type", "clear" )
+	--]
+	End()
+
+-- 가멜란 죽이는 이펙트 그만 쏘라고 이벤트 보냄
+	Action( "send event to sps" )
+	--[
+		Param( "target type", "npc" )
+		Param( "target index", 4912101 )
+		Param( "event id", 884 )
+	--]
+	End()
+
+-- 대사 완료 이벤트 받음
+	Action( "wait" )
+	--[
+		Condition( "recv event from sps" )
+		--[
+			Param( "object type", "npc" )
+			Param( "object index", 4912101 )
+			Param( "event id", 885 )
+		--]
+		End()
+	--]
+	End()
+
+-- 위크 없앰
+	Action( "remove npc" )
+	--[
+		Param( "index", 4912101 )
+		Param( "type", "clear" )
+	--]
+	End()
+
+	--- 위크 스폰 ---
+	Action("add mob")
+	--[
+		Param("index", 25902101)
+		Param("group", 3400713)
+		Param("loc x", -399.42 )
+		Param("loc y", 144.86 )
+		Param("loc z", 708.25 )
+		Param("dir x", -0.78 )
+		Param("dir z", -0.63 )
+		Param( "nest type", "fix" )
+		Param( "nest range", 60 )
+		Param("party id", 3400713)
+		Param("party leader", "true")
+		Param("no spawn wait", "true")
+	--]
+	End()
+	
+	-- 키리 오브젝트 움직임
+	Action( "change object state" )
+	--[
+		Param( "index", 53 )
+		Param( "state", 3 )
+		Param( "substate show", 1 )
+	--]	
+	End()
+	
+	Action( "change object state" )
+	--[
+		Param( "index", 54 )
+		Param( "state", 3 )
+		Param( "substate show", 1 )
+	--]	
+	End()
+
+	Action( "change object state" )
+	--[
+		Param( "index", 55 )
+		Param( "state", 3 )
+		Param( "substate show", 1 )
+	--]	
+	End()
+	
+	Action( "change object state" )
+	--[
+		Param( "index", 56 )
+		Param( "state", 3 )
+		Param( "substate show", 1 )
+	--]	
+	End()
+	
+	Action("function")
+	--[
+		--- 위크 전투 중 or 전투 끝 체크 ---
+		Condition("child")
+		--[
+			Action("while")
+			--[
+				Action("loop")
+				--[
+					Action("wait")
+					--[
+						Condition("check battle")
+						--[
+							Param("type", "mob")
+							Param("group", 3400713)
+							Param("is battle", "true")
+						--]
+						End()
+					--]
+					End()
+					
+					Action("wait")
+					--[
+						Condition("check battle")
+						--[
+							Param("type", "mob")
+							Param("group", 3400713)
+							Param("is battle", "false")
+						--]
+						End()
+					--]
+					End()
+					
+					-- 전투가 풀려도 boss mob은 지우지 않는다.
+					-- boss mob을 지우면 check mobgroup이 되어버려, 다음 단계로 넘어가 버리기 때문
+					-- 위크의 삭제 후 다시 리스폰
+--					Action("remove mobgroup")
+--					--[
+--						Param("group", 3400713)
+--						Param("type", "despawn")
+--					--]
+--					End()
+					
+					-- 위에서 지우지 않으므로 다시 spawn시킬 필요도 없다
+--					Action("add mob")
+--					--[
+--						Param("index", 25902101)
+--						Param("group", 3400713)
+--						Param("loc x", -399.42 )
+--						Param("loc y", 144.86 )
+--						Param("loc z", 708.25 )
+--						Param("dir x", -0.78 )
+--						Param("dir z", -0.63 )
+--						Param( "nest type", "fix" )
+--						Param( "nest range", 60 )
+--						Param("party id", 3400713)
+--						Param("party leader", "true")
+--						Param("no spawn wait", "true")
+--					--]
+--					End()
+				--]
+				End()
+			--]
+			End()
+		--]
+		End()
+		
+		--- 전투에 들어가면, 다리가 접힘, 그리고 전투가 풀리면 다리가 원래대로 ---
+		Condition("child")
+		--[
+			Action("while")
+			--[
+				Action("loop")
+				--[
+					-- 전투에 들어가면 다리가 접힘 ---
+					Action("wait")
+					--[
+						Condition("check battle")
+						--[
+							Param("type", "mob")
+							Param("group", 3400713)
+							Param("is battle", "true")
+						--]
+						End()
+					--]
+					End()
+					
+					Action("change object state")
+					--[
+						Param("index", 47)
+						Param("state", 0)
+						Param("substate show", 1)
+					--]
+					End()
+					
+					Action("change object state")
+					--[
+						Param("index", 48)
+						Param("state", 0)
+						Param("substate show", 1)
+					--]
+					End()
+					
+					Action("change object state")
+					--[
+						Param("index", 49)
+						Param("state", 0)
+						Param("substate show", 1)
+					--]
+					End()
+					
+					Action("change object state")
+					--[
+						Param("index", 50)
+						Param("state", 0)
+						Param("substate show", 1)
+					--]
+					End()
+					
+					Action("change object state")
+					--[
+						Param("index", 51)
+						Param("state", 0)
+						Param("substate show", 1)
+					--]
+					End()
+					
+					Action("change object state")
+					--[
+						Param("index", 52)
+						Param("state", 0)
+						Param("substate show", 1)
+					--]
+					End()
+					
+					-- 전투가 풀리면 다리가 펼쳐짐 ---
+					Action("wait")
+					--[
+						Condition("check battle")
+						--[
+							Param("type", "mob")
+							Param("group", 3400713)
+							Param("is battle", "false")
+						--]
+						End()
+					--]
+					End()
+					
+					Action("change object state")
+					--[
+						Param("index", 47)
+						Param("state", 1)
+						Param("substate show", 1)
+					--]
+					End()
+					
+					Action("change object state")
+					--[
+						Param("index", 48)
+						Param("state", 1)
+						Param("substate show", 1)
+					--]
+					End()
+					
+					Action("change object state")
+					--[
+						Param("index", 49)
+						Param("state", 1)
+						Param("substate show", 1)
+					--]
+					End()
+					
+					Action("change object state")
+					--[
+						Param("index", 50)
+						Param("state", 1)
+						Param("substate show", 1)
+					--]
+					End()
+					
+					Action("change object state")
+					--[
+						Param("index", 51)
+						Param("state", 1)
+						Param("substate show", 1)
+					--]
+					End()
+					
+					Action("change object state")
+					--[
+						Param("index", 52)
+						Param("state", 1)
+						Param("substate show", 1)
+					--]
+					End()
+				--]
+				End()
+			--]
+			End()
+		--]
+		End()
+		
+		--- 디버프 사용 하는 오브젝트 ---
+		Condition("child")
+		--[
+			Action("while")
+			--[
+				Action("loop")
+				--[
+					--- 위크가 전투에 돌입 할때까지 대기                 ---
+					--- 위크 체력이 90% 이하가 되면 오브젝트가 반응      ---
+					--- 위크 체력이 50% 이하가 되면 오브젝트 단체로 반응 ---
+					Action("wait")
+					--[
+						Condition("check battle")
+						--[
+							Param("type", "mob")
+							Param("group", 3400713)
+							Param("is battle", "true")
+						--]
+						End()
+					--]
+					End()
+					
+					Action("if")
+					--[
+						Param("reverse", "false")
+						
+						Condition("check lp")
+						--[
+							Param("type", "mob")
+							Param("group", 3400713)
+							Param("lp", 50)
+						--]
+						End()
+						
+						Action("then")
+						--[
+							--- 단체로 오브젝트가 내려가기 위해서, 각각 Child문 적용 ---
+							--- 1시 방향 빨간 오브젝트 ---
+							Condition("child")
+							--[
+								Action("add mob")
+								--[
+									Param("index", 29981104)
+									Param("group", 3400715)
+									Param("loc x", -409.42)
+									Param("loc y", 144.87)
+									Param("loc z", 729.32)
+									Param("dir x", 1)
+									Param("dir z", 0)
+									Param("party id", 3400713)
+									Param("party leader", "false")
+									Param("no spawn wait", "true")
+								--]
+								End()
+								
+								Action("change object state")
+								--[
+									Param("index", 53)
+									Param("state", 5)
+									Param("substate show", 1)
+								--]
+								End()
+								
+								Action("wait")
+								--[
+									Condition("check time")
+									--[
+										Param("time", 5)
+									--]
+									End()
+								--]
+								End()
+								
+								--- 폭발 후 오브젝트가 원래대로 ---
+								Action("change object state")
+								--[
+									Param("index", 53)
+									Param("state", 6)
+									Param("substate show", 1)
+								--]
+								End()
+							--]
+							End()
+							
+							--- 3시 방향 파란 오브젝트 ---
+							Condition("child")
+							--[
+								--- 더미 몹 생성 ---
+								Action("add mob")
+								--[
+									Param("index", 29981105)
+									Param("group", 3400715)
+									Param("loc x", -426.71)
+									Param("loc y", 144.87)
+									Param("loc z", 710.46)
+									Param("dir x", 1)
+									Param("dir z", 0)
+									Param("party id", 3400713)
+									Param("party leader", "false")
+									Param("no spawn wait", "true")
+								--]
+								End()
+								
+								--- 오브젝트가 내려가면서, 범위가 표시 ---
+								Action("change object state")
+								--[
+									Param("index", 54)
+									Param("state", 5)
+									Param("substate show", 1)
+								--]
+								End()
+								
+								Action("wait")
+								--[
+									Condition("check time")
+									--[
+										Param("time", 5)
+									--]
+									End()
+								--]
+								End()
+								
+								--- 폭발 후 오브젝트가 원래대로 ---
+								Action("change object state")
+								--[
+									Param("index", 54)
+									Param("state", 6)
+									Param("substate show", 1)
+								--]
+								End()
+							--]
+							End()
+							
+							--- 5시 방향 녹색 오브젝트 ---
+							Condition("child")
+							--[
+								--- 더미 몹 생성 ---
+								Action("add mob")
+								--[
+									Param("index", 29981106)
+									Param("group", 3400715)
+									Param("loc x", -420.77)
+									Param("loc y", 144.87)
+									Param("loc z", 688.43)
+									Param("dir x", 1)
+									Param("dir z", 0)
+									Param("party id", 3400713)
+									Param("party leader", "false")
+									Param("no spawn wait", "true")
+								--]
+								End()
+								
+								--- 오브젝트가 내려가면서, 범위가 표시 ---
+								Action("change object state")
+								--[
+									Param("index", 55)
+									Param("state", 5)
+									Param("substate show", 1)
+								--]
+								End()
+								
+								Action("wait")
+								--[
+									Condition("check time")
+									--[
+										Param("time", 5)
+									--]
+									End()
+								--]
+								End()
+								
+								--- 폭발 후 오브젝트가 원래대로 ---
+								Action("change object state")
+								--[
+									Param("index", 55)
+									Param("state", 6)
+									Param("substate show", 1)
+								--]
+								End()
+							--]
+							End()
+							
+							---7시 방향 빨간 오브젝트 ---
+							Condition("child")
+							--[
+								--- 더미 몹 생성 ---
+								Action("add mob")
+								--[
+									Param("index", 29981104)
+									Param("group", 3400715)
+									Param("loc x", -395.86)
+									Param("loc y", 144.87)
+									Param("loc z", 681.65)
+									Param("dir x", 1)
+									Param("dir z", 0)
+									Param("party id", 3400713)
+									Param("party leader", "false")
+									Param("no spawn wait", "true")
+								--]
+								End()
+								
+								--- 오브젝트가 내려가면서, 범위가 표시 ---
+								Action("change object state")
+								--[
+									Param("index", 56)
+									Param("state", 5)
+									Param("substate show", 1)
+								--]
+								End()
+								
+								Action("wait")
+								--[
+									Condition("check time")
+									--[
+										Param("time", 5)
+									--]
+									End()
+								--]
+								End()
+								
+								--- 폭발 후 오브젝트가 원래대로 ---
+								Action("change object state")
+								--[
+									Param("index", 56)
+									Param("state", 6)
+									Param("substate show", 1)
+								--]
+								End()
+							--]
+							End()
+							
+							---9시 방향 파란 오브젝트 ---
+							Condition("child")
+							--[
+								--- 더미 몹 생성 ---
+								Action("add mob")
+								--[
+									Param("index", 29981105)
+									Param("group", 3400715)
+									Param("loc x", -378.44)
+									Param("loc y", 144.87)
+									Param("loc z", 699.08)
+									Param("dir x", 1)
+									Param("dir z", 0)
+									Param("party id", 3400713)
+									Param("party leader", "false")
+									Param("no spawn wait", "true")
+								--]
+								End()
+								
+								--- 오브젝트가 내려가면서, 범위가 표시 ---
+								Action("change object state")
+								--[
+									Param("index", 57)
+									Param("state", 5)
+									Param("substate show", 1)
+								--]
+								End()
+								
+								Action("wait")
+								--[
+									Condition("check time")
+									--[
+										Param("time", 5)
+									--]
+									End()
+								--]
+								End()
+								
+								--- 폭발 후 오브젝트가 원래대로 ---
+								Action("change object state")
+								--[
+									Param("index", 57)
+									Param("state", 6)
+									Param("substate show", 1)
+								--]
+								End()
+							--]
+							End()
+							
+							---11시 방향 녹색 오브젝트 ---
+							Condition("child")
+							--[
+								--- 더미 몹 생성 ---
+								Action("add mob")
+								--[
+									Param("index", 29981106)
+									Param("group", 3400715)
+									Param("loc x", -384.26)
+									Param("loc y", 144.87)
+									Param("loc z", 722.16)
+									Param("dir x", 1)
+									Param("dir z", 0)
+									Param("party id", 3400713)
+									Param("party leader", "false")
+									Param("no spawn wait", "true")
+								--]
+								End()
+								
+								--- 오브젝트가 내려가면서, 범위가 표시 ---
+								Action("change object state")
+								--[
+									Param("index", 58)
+									Param("state", 5)
+									Param("substate show", 1)
+								--]
+								End()
+								
+								Action("wait")
+								--[
+									Condition("check time")
+									--[
+										Param("time", 5)
+									--]
+									End()
+								--]
+								End()
+								
+								--- 폭발 후 오브젝트가 원래대로 ---
+								Action("change object state")
+								--[
+									Param("index", 58)
+									Param("state", 6)
+									Param("substate show", 1)
+								--]
+								End()
+							--]
+							End()
+							
+							Action("wait")
+							--[
+								Condition("check time")
+								--[
+									Param("time", 8)
+								--]
+								End()
+							--]
+							End()
+						--]
+						End()
+						
+						Action("else")
+						--[
+							Action("wait")
+							--[
+								Condition("check lp")
+								--[
+									Param("type", "mob")
+									Param("group", 3400713)
+									Param("lp", 90)
+								--]
+								End()
+							--]
+							End()
+								
+							--- Walk around the energy charging device triggered one (object) is ---
+							Action("calculate")
+							--[
+								Param("declare", "int WKRand = 0")
+								Param("express", "WKRand = RandomRange(1,6)")
+							--]
+							End()
+							
+							Action("switch")
+							--[
+							Param("compare variable", "WKRand")
+							
+								--- 1시방향 빨간 오브젝트 (공격력 증가)---
+								Action("case")
+								--[
+									Param("value", 1)
+									
+									--- 더미 몹 생성 ---
+									Action("add mob")
+									--[
+										Param("index", 29981104)
+										Param("group", 3400715)
+										Param("loc x", -409.42)
+										Param("loc y", 144.87)
+										Param("loc z", 729.32)
+										Param("dir x", 1)
+										Param("dir z", 0)
+										Param("party id", 3400713)
+										Param("party leader", "false")
+										Param("no spawn wait", "true")
+									--]
+									End()
+									
+									--- 오브젝트가 내려가면서, 범위가 표시 ---
+									Action("change object state")
+									--[
+										Param("index", 53)
+										Param("state", 5)
+										Param("substate show", 1)
+									--]
+									End()
+									
+									Action("wait")
+									--[
+										Condition("check time")
+										--[
+											Param("time", 5)
+										--]
+										End()
+									--]
+									End()
+									
+									--- 오브젝트가 원래대로 ---
+									Action("change object state")
+									--[
+										Param("index", 53)
+										Param("state", 6)
+										Param("substate show", 1)
+									--]
+									End()
+								--]
+								End()
+								
+								--- 3시방향 파란 오브젝트 (캐스팅 속도 증가)---
+								Action("case")
+								--[
+									Param("value", 2)
+									
+									--- 더미 몹 생성 ---
+									Action("add mob")
+									--[
+										Param("index", 29981105)
+										Param("group", 3400715)
+										Param("loc x", -426.71)
+										Param("loc y", 144.87)
+										Param("loc z", 710.46)
+										Param("dir x", 1)
+										Param("dir z", 0)
+										Param("party id", 3400713)
+										Param("party leader", "false")
+										Param("no spawn wait", "true")
+									--]
+									End()
+									
+									--- 오브젝트가 내려가면서, 범위가 표시 ---
+									Action("change object state")
+									--[
+										Param("index", 54)
+										Param("state", 5)
+										Param("substate show", 1)
+									--]
+									End()
+									
+									Action("wait")
+									--[
+										Condition("check time")
+										--[
+											Param("time", 5)
+										--]
+										End()
+									--]
+									End()
+									
+									--- 오브젝트가 원래대로 ---
+									Action("change object state")
+									--[
+										Param("index", 54)
+										Param("state", 6)
+										Param("substate show", 1)
+									--]
+									End()
+								--]
+								End()
+								
+								--- 5시방향 녹색 오브젝트 (LP 재생)---
+								Action("case")
+								--[
+									Param("value", 3)
+									
+									--- 더미 몹 생성 ---
+									Action("add mob")
+									--[
+										Param("index", 29981106)
+										Param("group", 3400715)
+										Param("loc x", -420.77)
+										Param("loc y", 144.87)
+										Param("loc z", 688.43)
+										Param("dir x", 1)
+										Param("dir z", 0)
+										Param("party id", 3400713)
+										Param("party leader", "false")
+										Param("no spawn wait", "true")
+									--]
+									End()
+									
+									--- 오브젝트가 내려가면서, 범위가 표시 ---
+									Action("change object state")
+									--[
+										Param("index", 55)
+										Param("state", 5)
+										Param("substate show", 1)
+									--]
+									End()
+									
+									Action("wait")
+									--[
+										Condition("check time")
+										--[
+											Param("time", 5)
+										--]
+										End()
+									--]
+									End()
+									
+									--- 오브젝트가 원래대로 ---
+									Action("change object state")
+									--[
+										Param("index", 55)
+										Param("state", 6)
+										Param("substate show", 1)
+									--]
+									End()
+								--]
+								End()
+								
+								--- 7시방향 빨간 오브젝트 (공격력 증가)---
+								Action("case")
+								--[
+									Param("value", 4)
+									
+									--- 더미 몹 생성 ---
+									Action("add mob")
+									--[
+										Param("index", 29981104)
+										Param("group", 3400715)
+										Param("loc x", -395.86)
+										Param("loc y", 144.87)
+										Param("loc z", 681.65)
+										Param("dir x", 1)
+										Param("dir z", 0)
+										Param("party id", 3400713)
+										Param("party leader", "false")
+										Param("no spawn wait", "true")
+									--]
+									End()
+									
+									--- 오브젝트가 내려가면서, 범위가 표시 ---
+									Action("change object state")
+									--[
+										Param("index", 56)
+										Param("state", 5)
+										Param("substate show", 1)
+									--]
+									End()
+									
+									Action("wait")
+									--[
+										Condition("check time")
+										--[
+											Param("time", 5)
+										--]
+										End()
+									--]
+									End()
+									
+									--- 오브젝트가 원래대로 ---
+									Action("change object state")
+									--[
+										Param("index", 56)
+										Param("state", 6)
+										Param("substate show", 1)
+									--]
+									End()
+								--]
+								End()
+								
+								--- 9시방향 파란 오브젝트 (캐스팅 속도 증가)---
+								Action("case")
+								--[
+									Param("value", 5)
+									
+									--- 더미 몹 생성 ---
+									Action("add mob")
+									--[
+										Param("index", 29981105)
+										Param("group", 3400715)
+										Param("loc x", -378.44)
+										Param("loc y", 144.87)
+										Param("loc z", 699.08)
+										Param("dir x", 1)
+										Param("dir z", 0)
+										Param("party id", 3400713)
+										Param("party leader", "false")
+										Param("no spawn wait", "true")
+									--]
+									End()
+									
+									--- 오브젝트가 내려가면서, 범위가 표시 ---
+									Action("change object state")
+									--[
+										Param("index", 57)
+										Param("state", 5)
+										Param("substate show", 1)
+									--]
+									End()
+									
+									Action("wait")
+									--[
+										Condition("check time")
+										--[
+											Param("time", 5)
+										--]
+										End()
+									--]
+									End()
+									
+									--- 오브젝트가 원래대로 ---
+									Action("change object state")
+									--[
+										Param("index", 57)
+										Param("state", 6)
+										Param("substate show", 1)
+									--]
+									End()
+								--]
+								End()
+								
+								--- 11시방향 녹색 오브젝트 (LP 재생)---
+								Action("case")
+								--[
+									Param("value", 6)
+									
+									--- 더미 몹 생성 ---
+									Action("add mob")
+									--[
+										Param("index", 29981106)
+										Param("group", 3400715)
+										Param("loc x", -384.26)
+										Param("loc y", 144.87)
+										Param("loc z", 722.16)
+										Param("dir x", 1)
+										Param("dir z", 0)
+										Param("party id", 3400713)
+										Param("party leader", "false")
+										Param("no spawn wait", "true")
+											--]
+									End()
+									
+									--- 오브젝트가 내려가면서, 범위가 표시 ---
+									Action("change object state")
+									--[
+										Param("index", 58)
+										Param("state", 5)
+										Param("substate show", 1)
+									--]
+									End()
+									
+									Action("wait")
+									--[
+										Condition("check time")
+										--[
+											Param("time", 5)
+										--]
+										End()
+									--]
+									End()
+									
+									--- 오브젝트가 원래대로 ---
+									Action("change object state")
+									--[
+										Param("index", 58)
+										Param("state", 6)
+										Param("substate show", 1)
+									--]
+									End()
+								--]
+								End()
+							--]
+							End()
+						--]
+						End()
+					--]
+					End()
+					
+					Action("wait")
+					--[
+						Condition("check time")
+						--[
+							Param("time", 10)
+						--]
+						End()
+					--]
+					End()
+				--]
+				End()
+			--]
+			End()
+		--]
+		End()
+		
+		--- 나메크의 원혼 등장 ---
+		Condition("child")
+		--[
+			Action("while")
+			--[
+				Action("loop")
+				--[
+					--- 위크의 전투에 들어가면 원혼 등장 ---
+					Action("wait")
+					--[
+						Condition("check battle")
+						--[
+							Param("type", "mob")
+							Param("group", 3400713)
+							Param("is battle", "true")
+						--]
+						End()
+					End()
+					
+					Action("add mobgroup")
+					--[
+						Param("group", 701)
+						Param("no spawn wait", "true")
+						Param("faint buff index", 2393)
+						Param("faint buff apply type", "party")
+						Param("faint buff range", 15)
+					--]
+					End()
+					
+					Action("wait")
+					--[
+						Condition("check battle")
+						--[
+							Param("type", "mob")
+							Param("group", 3400713)
+							Param("is battle", "false")
+						--]
+						End()
+					--]
+					End()
+					
+					Action("remove mobgroup")
+					--[
+						Param("group", 701)
+						Param("type", "clear")
+					--]
+					End()
+				--]
+				End()
+			--]
+			End()
+		--]
+		End()
+		
+		-- 위크를 잡을때 까지 대기 ---
+		Action("wait")
+		--[
+			Condition("check mobgroup")
+			--[
+				Param("group", 3400713)
+				Param("count", 1)
+			--]
+			End()
+		--]
+		End()
+	--]
+	End()
+	
+	--- 나메크의 원혼 삭제 ---
+	Action("remove mobgroup")
+	--[
+		Param("group", 701)
+		Param("type", "faint")
+	--]
+	End()
+	
+	--- 바닥 오브젝트 변경 ---
+	Action("change object state")
+	--[
+		Param("index", 138)
+		Param("state", 1)
+		Param("substate show", 1)
+	--]
+	End()
+	
+	--- 위크의 보상품 생성 ---
+	Action("add mob")
+	--[
+		Param("index", 21759301)
+		Param("group", 3400716)
+		Param("loc x", -395.92)
+		Param("loc y", 144.87)
+		Param("loc z", 730.44)
+		Param("dir x", 0)
+		Param("dir z", -1)
+		Param("no spawn wait", "true")
+	--]
+	End()
+	
+	---- 다리를 다시 펼쳐서, 길을 만듬 ---
+	Action("change object state")
+	--[
+		Param("index", 47)
+		Param("state", 1)
+		Param("substate show", 1)
+	--]
+	End()
+	
+	Action("change object state")
+	--[
+		Param("index", 48)
+		Param("state", 1)
+		Param("substate show", 1)
+	--]
+	End()
+	
+	Action("change object state")
+	--[
+		Param("index", 49)
+		Param("state", 1)
+		Param("substate show", 1)
+	--]
+	End()
+	
+	Action("change object state")
+	--[
+		Param("index", 50)
+		Param("state", 1)
+		Param("substate show", 1)
+	--]
+	End()
+	
+	Action("change object state")
+	--[
+		Param("index", 51)
+		Param("state", 1)
+		Param("substate show", 1)
+	--]
+	End()
+	
+	Action("change object state")
+	--[
+		Param("index", 52)
+		Param("state", 1)
+		Param("substate show", 1)
+	--]
+	End()
+	
+	--- 에너지 충전장치 원래 대로 ---
+	Action("change object state")
+	--[
+		Param("index", 53)
+		Param("state", 4)
+		Param("substate show", 1)
+	--]
+	End()
+	
+	Action("change object state")
+	--[
+		Param("index", 54)
+		Param("state", 4)
+		Param("substate show", 1)
+	--]
+	End()
+	
+	Action("change object state")
+	--[
+		Param("index", 55)
+		Param("state", 4)
+		Param("substate show", 1)
+	--]
+	End()
+	
+	Action("change object state")
+	--[
+		Param("index", 56)
+		Param("state", 4)
+		Param("substate show", 1)
+	--]
+	End()
+	
+	Action("change object state")
+	--[
+		Param("index", 57)
+		Param("state", 4)
+		Param("substate show", 1)
+	--]
+	End()
+	
+	Action("change object state")
+	--[
+		Param("index", 58)
+		Param("state", 4)
+		Param("substate show", 1)
+	--]
+	End()
+	
+	--- 밖으로 나가는 포탈이 열림 ---
+	Action("change object state")
+	--[
+		Param("index", 139)
+		Param("state", 1)
+		Param("substate show", 1)
+	--]
+	End()
+	
+	--- UD를 종료 할때까지 대기 ---
+	Action("wait")
+	--[
+		Condition("recv event from wps")
+		--[
+			Param("wps index", 34001)
+			Param("event id", 666)
+		--]
+		End()
+	--]
+	End()
+--]
+End()

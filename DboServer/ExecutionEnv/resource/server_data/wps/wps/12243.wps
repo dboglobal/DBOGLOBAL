@@ -1,0 +1,31 @@
+-- TMQ 2-2 Hard Mode
+
+GameStage(0)
+--[
+	Action( "add mobgroup" )
+	--[
+		Param( "group", 5 )
+		Param( "no spawn wait", "true" )
+	--]
+	End()
+	
+	Action( "wait" )
+	--[
+		Condition( "check mobgroup" )
+		--[
+			Param( "group", 5 )
+			Param( "count", 0 )
+		--]
+		End()
+	--]
+	End()
+
+	Action( "send event to ts" )
+	--[
+		Param( "trigger type", "quest" )
+		Param( "apply type", "register all" )
+		Param( "event id", 1069 )
+	--]
+	End()
+--]
+End()

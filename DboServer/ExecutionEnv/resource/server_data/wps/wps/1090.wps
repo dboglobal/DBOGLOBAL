@@ -1,0 +1,69 @@
+GameStage(0)
+--[
+
+	Action("change sps scene")
+	--[
+		Param("index", 1651106)
+		Param("play script",1651106)
+		Param("play scene", 1)
+	--]
+	End()
+
+	Action("wait")
+	--[
+		Condition("recv event from sps")
+		--[
+			Param("object type","npc")
+			Param("object index",1651106)
+			Param("event id",109001)
+		--]
+		End()
+	--]
+	End()
+
+	Action("remove npc")
+	--[
+		Param("index", 1651106)
+		Param("type", "clear")
+	--]
+	End()
+
+	Action("add npc")
+	--[
+		Param("index", 1651106)
+		Param("loc x",-106.59)
+		Param("loc y",-59.13)
+		Param("loc z",41.19)
+		Param("dir x",0.19)
+		Param("dir z",0.982)
+		Param("stand alone", "true")
+		Param("no spawn wait", "true")
+	--]
+	End()
+--]
+End()
+
+GameFailed()
+--[
+
+	Action("remove npc")
+	--[
+		Param("index",1651106)
+		Param("type","clear")
+	--]
+	End()
+	
+	Action("add npc")
+	--[
+		Param("index",1651106)
+		Param("loc x",-106.59)
+		Param("loc y",-59.13)
+		Param("loc z",41.19)
+		Param("dir x",0.19)
+		Param("dir z",0.982)
+		Param("stand alone", "true")
+		Param("no spawn wait","true")
+	--]
+	End()
+--]
+End()

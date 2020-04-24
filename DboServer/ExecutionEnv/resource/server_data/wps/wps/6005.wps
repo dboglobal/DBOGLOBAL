@@ -1,0 +1,52 @@
+-- WPS used to show weapons when changing class
+GameStage( 0 )
+--[
+	Action( "change object state" )
+	--[
+		Param( "index", 2 )
+		Param( "state", 0 )
+		Param( "substate show", 1 )
+	--]
+	End()
+
+	Action( "change object state" )
+	--[
+		Param( "index", 3 )
+		Param( "state", 0 )
+		Param( "substate show", 1 )
+	--]
+	End()
+	
+	-- Wait until receiving message from TS that player picked up one object
+	Action( "wait" )
+	--[
+		Condition( "recv event from ts" )
+		--[
+			Param( "trigger type", "object" )
+			Param( "event id", 196 )
+		--]
+		End()
+	--]
+	End()
+--]
+End()
+
+GameFailed()
+--[
+	Action( "change object state" )
+	--[
+		Param( "index", 2 )
+		Param( "state", 1 )
+		Param( "substate show", 0 )
+	--]
+	End()
+
+	Action( "change object state" )
+	--[
+		Param( "index", 3 )
+		Param( "state", 1 )
+		Param( "substate show", 0 )
+	--]
+	End()
+--]
+End()

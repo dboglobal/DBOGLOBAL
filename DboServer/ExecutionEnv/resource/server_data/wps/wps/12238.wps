@@ -1,0 +1,250 @@
+-- TMQ 2-2 Hard Mode
+
+GameStage(0)
+--[
+	Action( "add mob" )	--	거대 기뉴 개구리
+	--[
+		Param( "index", 33431101 )
+		Param( "group", 13 )
+		Param( "loc x", -231.15 )
+		Param( "loc y", 136.80 )
+		Param( "loc z", 49.59 )
+		Param( "dir x", -0.243 )
+		Param( "dir z", -0.970 )
+		Param( "no spawn wait", "true" )
+	--]
+	End()
+
+	Action( "function" )
+	--[
+		Condition( "child" )
+		--[
+			Action( "while" )
+			--[
+				Action( "loop" )
+				--[
+					Action( "wait" )
+					--[
+						Condition( "check battle" )
+						--[
+							Param( "type", "mob" )
+							Param( "group", 13 )
+							Param( "is battle", "true" )
+						--]
+						End() 
+					--]
+					End()
+
+					Action( "function" )
+					--[
+						Condition( "child" )
+						--[
+							Action( "wait" )
+							--[
+								Condition( "check lp" )
+								--[
+									Param( "type", "mob" )
+									Param( "group", 13 )
+									Param( "lp", 90 )
+								--]
+								End()
+							End()								
+
+							Action( "add mobgroup" )
+							--[
+								Param( "group", 10 )
+								Param( "no spawn wait", "true" )
+							--]
+							End()
+					
+							Action( "wait" )
+							--[
+								Condition( "check lp" )
+								--[
+									Param( "type", "mob" )
+									Param( "group", 13 )
+									Param( "lp", 70 )
+								--]
+								End()
+							--]
+							End()
+					
+							Action( "add mobgroup" )
+							--[
+								Param( "group", 10 )
+								Param( "no spawn wait", "true" )
+							--]
+							End()			
+					
+							Action( "wait" )
+							--[
+								Condition( "check lp" )
+								--[
+									Param( "type", "mob" )
+									Param( "group", 13 )
+									Param( "lp", 50 )
+								--]
+								End()
+							--]
+							End()
+					
+							Action( "add mobgroup" )
+							--[
+								Param( "group", 10 )
+								Param( "no spawn wait", "true" )
+							--]
+							End()	
+
+							Action( "wait" )
+							--[
+								Condition( "check lp" )
+								--[
+									Param( "type", "mob" )
+									Param( "group", 13 )
+									Param( "lp", 30 )
+								--]
+								End()
+							--]
+							End()
+					
+							Action( "add mobgroup" )
+							--[
+								Param( "group", 10 )
+								Param( "no spawn wait", "true" )
+							--]
+							End()
+	
+							Action( "wait" )
+							--[
+								Condition( "check lp" )
+								--[
+									Param( "type", "mob" )
+									Param( "group", 13 )
+									Param( "lp", 10 )
+								--]
+								End()
+							--]
+							End()
+					
+							Action( "add mobgroup" )
+							--[
+								Param( "group", 10 )
+								Param( "no spawn wait", "true" )
+							--]
+							End()
+
+						--]
+						End()
+					
+
+						Action( "wait" )
+						--[
+							Condition( "check battle" )
+							--[
+								Param( "type", "mob" )
+								Param( "group", 13 )
+								Param( "is battle", "false" )
+							--]
+							End() 
+						--]
+						End()
+					--]
+					End()
+								
+					Action( "remove mobgroup" )
+					--[
+						Param( "group", 10 )
+						Param( "type", "clear" )
+					--]
+					End()	
+				--]
+				End()
+			--]
+			End()
+		--]
+		End()
+
+		Condition( "child" )
+		--[
+			Action( "while" )
+			--[
+				Action( "loop" )
+				--[
+					Action( "wait" )
+					--[
+						Condition( "check battle" )
+						--[
+							Param( "type", "mob" )
+							Param( "group", 13 )
+							Param( "is battle", "true" )
+						--]
+						End() 
+					--]
+					End()
+
+					Action( "wait" )
+					--[
+						Condition( "check battle" )
+						--[
+							Param( "type", "mob" )
+							Param( "group", 13 )
+							Param( "is battle", "false" )
+						--]
+						End() 
+					--]
+					End()
+					
+					Action( "remove mobgroup" )
+					--[
+						Param( "group", 10 )
+						Param( "type", "clear" )
+					--]
+					End()
+					
+					Action( "remove mobgroup" )
+					--[
+						Param( "group", 13 )
+						Param( "type", "clear" )
+					--]
+					End()
+
+					Action( "add mob" )
+					--[
+						Param( "index", 33431101 )
+						Param( "group", 13 )
+						Param( "loc x", -231.15 )
+						Param( "loc y", 136.80 )
+						Param( "loc z", 49.59 )
+						Param( "dir x", -0.243 )
+						Param( "dir z", -0.970 )
+						Param( "no spawn wait", "true" )
+					--]
+					End()
+
+					Action( "remove mobgroup" )
+					--[
+						Param( "group", 10 )
+						Param( "type", "clear" )
+					--]
+					End()
+				--]
+				End()
+			--]
+			End()
+		--]
+		End()
+		
+		Action( "wait" )
+		--[
+			Condition( "check mobgroup" )
+			--[
+				Param( "group", 13 )
+				Param( "count", 1 )
+			--]
+			End()
+		--]
+		End()
+	--]
+	End()
+--]
+End()

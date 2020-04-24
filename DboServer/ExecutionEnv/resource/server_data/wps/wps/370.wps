@@ -1,0 +1,45 @@
+
+GameStage(0)
+--[
+	Action("add npc")
+	--[
+		Param("index", 3401102)
+		Param("loc x", 536.714)
+		Param("loc y", -31)
+		Param("loc z", 575.054)
+		Param("dir x", 0.178)
+		Param("dir z", -0.984)
+		Param("play script", 3401102)
+		Param("play scene", 1)
+		Param( "no spawn wait", "true" )
+	--]
+	End()
+
+	Action("wait")
+	--[
+		Condition( "recv sps event" )
+		--[
+			Param( "target index", 3401102 )
+			Param( "event id", 11 )
+		--]
+		End()
+	--]
+	End()
+
+	Action("wait")
+	--[
+		Condition( "check time")
+		--[
+			Param("time", 2 )
+		--]
+		End()
+	--]
+	End()
+--]
+End()
+
+GameFailed()
+--[
+
+--]
+End()

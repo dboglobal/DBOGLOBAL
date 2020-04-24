@@ -1,0 +1,602 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Release4Client|Win32">
+      <Configuration>Release4Client</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release4Tools|Win32">
+      <Configuration>Release4Tools</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{7BB7020C-506B-47F4-B54B-C91C6F5246CA}</ProjectGuid>
+    <RootNamespace>NtlSimulation</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release4Client|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v80</PlatformToolset>
+    <CharacterSet>NotSet</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release4Tools|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v80</PlatformToolset>
+    <CharacterSet>NotSet</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release4Client|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release4Tools|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>14.0.25431.1</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release4Client|Win32'">
+    <OutDir>$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release4Tools|Win32'">
+    <OutDir>$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release4Client|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(SolutionDir)..\NtlLib\Shared;$(SolutionDir)..\NtlLib\Shared\Util;$(SolutionDir)..\NtlLib\Shared\Zip\zlib123;$(SolutionDir)..\NtlLib\Shared\Lua;$(SolutionDir)..\NtlLib\Shared\Lua\Lua-5.1.0\src;$(SolutionDir)..\NtlLib\Shared\NtlXMLLoader;$(SolutionDir)..\NtlLib\Shared\NtlTrigger;$(SolutionDir)..\NtlLib\Client\NtlClientNet;$(SolutionDir)..\DboShared\NtlShared2;$(SolutionDir)..\DboShared\NtlGameTable;$(SolutionDir)..\DboShared\DboTrigger;$(SolutionDir)Renderware\Include;..\NtlCore;..\NtlPresentation;..\NtlGui;..\NtlSound;..\NtlFramework;$(DXSDK_DIR)Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>precomp_ntlsimulation.h</PrecompiledHeaderFile>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4311;4312;4996;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <BufferSecurityCheck>true</BufferSecurityCheck>
+      <MinimalRebuild>false</MinimalRebuild>
+      <WholeProgramOptimization>true</WholeProgramOptimization>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Lib>
+      <AdditionalDependencies>Psapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release4Tools|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(SolutionDir)..\NtlLib\Shared;$(SolutionDir)..\NtlLib\Shared\Util;$(SolutionDir)..\NtlLib\Shared\Zip\zlib123;$(SolutionDir)..\NtlLib\Shared\Lua;$(SolutionDir)..\NtlLib\Shared\Lua\Lua-5.1.0\src;$(SolutionDir)..\NtlLib\Shared\NtlXMLLoader;$(SolutionDir)..\NtlLib\Shared\NtlTrigger;$(SolutionDir)..\NtlLib\Client\NtlClientNet;$(SolutionDir)..\DboShared\NtlShared2;$(SolutionDir)..\DboShared\NtlGameTable;$(SolutionDir)..\DboShared\DboTrigger;$(SolutionDir)Renderware\Include;..\NtlCore;..\NtlPresentation;..\NtlGui;..\NtlSound;..\NtlFramework;$(DXSDK_DIR)Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>precomp_ntlsimulation.h</PrecompiledHeaderFile>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4311;4312;4996;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <BufferSecurityCheck>true</BufferSecurityCheck>
+      <MinimalRebuild>false</MinimalRebuild>
+      <WholeProgramOptimization>true</WholeProgramOptimization>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Lib>
+      <AdditionalDependencies>Psapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <Reference Include="System">
+      <CopyLocalSatelliteAssemblies>true</CopyLocalSatelliteAssemblies>
+      <ReferenceOutputAssembly>true</ReferenceOutputAssembly>
+    </Reference>
+    <Reference Include="System.Data">
+      <CopyLocalSatelliteAssemblies>true</CopyLocalSatelliteAssemblies>
+      <ReferenceOutputAssembly>true</ReferenceOutputAssembly>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <CopyLocalSatelliteAssemblies>true</CopyLocalSatelliteAssemblies>
+      <ReferenceOutputAssembly>true</ReferenceOutputAssembly>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <CopyLocalSatelliteAssemblies>true</CopyLocalSatelliteAssemblies>
+      <ReferenceOutputAssembly>true</ReferenceOutputAssembly>
+    </Reference>
+    <Reference Include="System.Xml">
+      <CopyLocalSatelliteAssemblies>true</CopyLocalSatelliteAssemblies>
+      <ReferenceOutputAssembly>true</ReferenceOutputAssembly>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="ActionMap.cpp" />
+    <ClCompile Include="DBODirectorIndicate.cpp" />
+    <ClCompile Include="DboMovingAlgorithm.cpp" />
+    <ClCompile Include="DboTLConditionCheck.cpp" />
+    <ClCompile Include="DboTLConditionCheckState.cpp" />
+    <ClCompile Include="DboTLController.cpp" />
+    <ClCompile Include="DboTLEntity.cpp" />
+    <ClCompile Include="DboTLLoader.cpp" />
+    <ClCompile Include="DboTLSystem.cpp" />
+    <ClCompile Include="DboTSCMain.cpp" />
+    <ClCompile Include="DboTSCObjAgency.cpp" />
+    <ClCompile Include="DboTSCQAgency.cpp" />
+    <ClCompile Include="DboTSCQCtrl.cpp" />
+    <ClCompile Include="DboTSCQRecv.cpp" />
+    <ClCompile Include="DboTSCTAgency.cpp" />
+    <ClCompile Include="DboTSCTCtrl.cpp" />
+    <ClCompile Include="DboTSCTRecv.cpp" />
+    <ClCompile Include="DboTSDefine.cpp" />
+    <ClCompile Include="DboTSEntityFastFinder.cpp" />
+    <ClCompile Include="DboTSFactory.cpp" />
+    <ClCompile Include="DboTSFactoryType.cpp" />
+    <ClCompile Include="DboUnifiedQuestNarration.cpp" />
+    <ClCompile Include="InputActionMap.cpp" />
+    <ClCompile Include="InputHandler.cpp" />
+    <ClCompile Include="NtlBehaviorBase.cpp" />
+    <ClCompile Include="NtlBehaviorChar.cpp" />
+    <ClCompile Include="NtlBehaviorCharAdjustMove.cpp" />
+    <ClCompile Include="NtlBehaviorCharAirMove.cpp" />
+    <ClCompile Include="NtlBehaviorCharGroundMove.cpp" />
+    <ClCompile Include="NtlBehaviorCharIdlePattern.cpp" />
+    <ClCompile Include="NtlBehaviorCharJump.cpp" />
+    <ClCompile Include="NtlBehaviorCharMove.cpp" />
+    <ClCompile Include="NtlBehaviorCharSwimmingMove.cpp" />
+    <ClCompile Include="NtlBehaviorData.cpp" />
+    <ClCompile Include="NtlBehaviorProj.cpp" />
+    <ClCompile Include="NtlBehaviorVehicle.cpp" />
+    <ClCompile Include="NtlBehaviorVehicleDirHelper.cpp" />
+    <ClCompile Include="NtlBehaviorVehicleMove.cpp" />
+    <ClCompile Include="NtlBuffContainer.cpp" />
+    <ClCompile Include="NtlCameraController.cpp" />
+    <ClCompile Include="NtlCameraManager.cpp" />
+    <ClCompile Include="NtlClock.cpp" />
+    <ClCompile Include="NtlDTCinematicManager.cpp" />
+    <ClCompile Include="NtlDTCinematicNode.cpp" />
+    <ClCompile Include="NtlDTNode.cpp" />
+    <ClCompile Include="NtlDTProp.cpp" />
+    <ClCompile Include="NtlFSMAgent.cpp" />
+    <ClCompile Include="NtlFSMBase.cpp" />
+    <ClCompile Include="NtlFSMCharAct.cpp" />
+    <ClCompile Include="NtlFSMCharActAgent.cpp" />
+    <ClCompile Include="NtlFSMCharActEventProc.cpp" />
+    <ClCompile Include="NtlFSMCharActLayer.cpp" />
+    <ClCompile Include="NtlFSMCharActState.cpp" />
+    <ClCompile Include="NtlFSMCharActStateBase.cpp" />
+    <ClCompile Include="NtlFSMCharController.cpp" />
+    <ClCompile Include="NtlFSMCharControllerAI.cpp" />
+    <ClCompile Include="NtlFSMCharControllerUtil.cpp" />
+    <ClCompile Include="NtlFSMEventQueue.cpp" />
+    <ClCompile Include="NtlFSMEventQueuingHelper.cpp" />
+    <ClCompile Include="NtlFSMLayer.cpp" />
+    <ClCompile Include="NtlFSMLookAtManager.cpp" />
+    <ClCompile Include="NtlFSMStateBase.cpp" />
+    <ClCompile Include="NtlFSMUtil.cpp" />
+    <ClCompile Include="NtlFSMVehicleAct.cpp" />
+    <ClCompile Include="NtlFSMVehicleActAgent.cpp" />
+    <ClCompile Include="NtlFSMVehicleActLayer.cpp" />
+    <ClCompile Include="NtlFSMVehicleActState.cpp" />
+    <ClCompile Include="NtlFSMVehicleActStateBase.cpp" />
+    <ClCompile Include="NtlFSMVehicleController.cpp" />
+    <ClCompile Include="NtlGuildWarehouse.cpp" />
+    <ClCompile Include="NtlInventory.cpp" />
+    <ClCompile Include="NtlNetSender.cpp" />
+    <ClCompile Include="NtlOtherParam.cpp" />
+    <ClCompile Include="NtlPacketGenerator.cpp" />
+    <ClCompile Include="NtlPacketHandler.cpp" />
+    <ClCompile Include="NtlPacketLockManager.cpp" />
+    <ClCompile Include="NtlRangeBGM.cpp" />
+    <ClCompile Include="NtlShareTargetMark.cpp" />
+    <ClCompile Include="NtlSkillContainer.cpp" />
+    <ClCompile Include="NtlSLApi.cpp" />
+    <ClCompile Include="NtlSLBlackList.cpp" />
+    <ClCompile Include="NtlSLCCBD.cpp" />
+    <ClCompile Include="NtlSLCENode.cpp" />
+    <ClCompile Include="NtlSLCommunityAgent.cpp" />
+    <ClCompile Include="NtlSLCommunityGroup.cpp" />
+    <ClCompile Include="NtlSLDojo.cpp" />
+    <ClCompile Include="NtlSLEvent.cpp" />
+    <ClCompile Include="NtlSLEventFunc.cpp" />
+    <ClCompile Include="NtlSLEventHandler.cpp" />
+    <ClCompile Include="NtlSLFriendList.cpp" />
+    <ClCompile Include="NtlSLGlobal.cpp" />
+    <ClCompile Include="NtlSLGuild.cpp" />
+    <ClCompile Include="NtlSLHelpers.cpp" />
+    <ClCompile Include="NtlSLHoipoiMix.cpp" />
+    <ClCompile Include="NtlSLLogic.cpp" />
+    <ClCompile Include="NtlSLLogicApply.cpp" />
+    <ClCompile Include="NtlSLLuaGlue.cpp" />
+    <ClCompile Include="NtlSLLuaGlueStuff.cpp" />
+    <ClCompile Include="NtlSLMailSystem.cpp" />
+    <ClCompile Include="NtlSLPacketGenerator.cpp" />
+    <ClCompile Include="NtlSLParty.cpp" />
+    <ClCompile Include="NtlSLPrivateShop.cpp" />
+    <ClCompile Include="NtlSLRankBattle.cpp" />
+    <ClCompile Include="NtlSLTBCrowdController.cpp" />
+    <ClCompile Include="NtlSLTBCrowdManager.cpp" />
+    <ClCompile Include="NtlSLTBudokai.cpp" />
+    <ClCompile Include="NtlSLTMQ.cpp" />
+    <ClCompile Include="NtlSLVisualLogic.cpp" />
+    <ClCompile Include="NtlSob.cpp" />
+    <ClCompile Include="NtlSobActionSkill.cpp" />
+    <ClCompile Include="NtlSobActionSkillAttr.cpp" />
+    <ClCompile Include="NtlSobActionSkillIcon.cpp" />
+    <ClCompile Include="NtlSobActor.cpp" />
+    <ClCompile Include="NtlSobActorCtrlData.cpp" />
+    <ClCompile Include="NtlSobAttr.cpp" />
+    <ClCompile Include="NtlSobAttrFactory.cpp" />
+    <ClCompile Include="NtlSobAvatar.cpp" />
+    <ClCompile Include="NtlSobAvatarAttr.cpp" />
+    <ClCompile Include="NtlSobBuff.cpp" />
+    <ClCompile Include="NtlSobBuffAttr.cpp" />
+    <ClCompile Include="NtlSobBuffIcon.cpp" />
+    <ClCompile Include="NtlSobCharPerfController.cpp" />
+    <ClCompile Include="NtlSobCharProxy.cpp" />
+    <ClCompile Include="NtlSobCharProxyDecoration.cpp" />
+    <ClCompile Include="NtlSobCharProxyEquip.cpp" />
+    <ClCompile Include="NtlSobCharProxyTransform.cpp" />
+    <ClCompile Include="NtlSobDynamicObject.cpp" />
+    <ClCompile Include="NtlSobDynamicObjectAttr.cpp" />
+    <ClCompile Include="NtlSobDynamicObjectProxy.cpp" />
+    <ClCompile Include="NtlSobElapsedController.cpp" />
+    <ClCompile Include="NtlSobEventObject.cpp" />
+    <ClCompile Include="NtlSobEventObjectProxy.cpp" />
+    <ClCompile Include="NtlSobFactory.cpp" />
+    <ClCompile Include="NtlSobFeelingActor.cpp" />
+    <ClCompile Include="NtlSobGroup.cpp" />
+    <ClCompile Include="NtlSobHTBSkill.cpp" />
+    <ClCompile Include="NtlSobHTBSkillAttr.cpp" />
+    <ClCompile Include="NtlSobHTBSkillIcon.cpp" />
+    <ClCompile Include="NtlSobIcon.cpp" />
+    <ClCompile Include="NtlSobInfluence.cpp" />
+    <ClCompile Include="NtlSobItem.cpp" />
+    <ClCompile Include="NtlSobItemAttr.cpp" />
+    <ClCompile Include="NtlSobItemIcon.cpp" />
+    <ClCompile Include="NtlSobManager.cpp" />
+    <ClCompile Include="NtlSobMonster.cpp" />
+    <ClCompile Include="NtlSobMonsterAttr.cpp" />
+    <ClCompile Include="NtlSobNpc.cpp" />
+    <ClCompile Include="NtlSobNpcAttr.cpp" />
+    <ClCompile Include="NtlSobPet.cpp" />
+    <ClCompile Include="NtlSobPetAttr.cpp" />
+    <ClCompile Include="NtlSobPlayer.cpp" />
+    <ClCompile Include="NtlSobPlayerAttr.cpp" />
+    <ClCompile Include="NtlSobProjectile.cpp" />
+    <ClCompile Include="NtlSobProjectileAttr.cpp" />
+    <ClCompile Include="NtlSobProxy.cpp" />
+    <ClCompile Include="NtlSobProxySystemEffect.cpp" />
+    <ClCompile Include="NtlSobQuestItem.cpp" />
+    <ClCompile Include="NtlSobQuestItemAttr.cpp" />
+    <ClCompile Include="NtlSobQuestItemIcon.cpp" />
+    <ClCompile Include="NtlSobSkill.cpp" />
+    <ClCompile Include="NtlSobSkillAttr.cpp" />
+    <ClCompile Include="NtlSobSkillIcon.cpp" />
+    <ClCompile Include="NtlSobStatusAnimSyncManager.cpp" />
+    <ClCompile Include="NtlSobSyncStatus.cpp" />
+    <ClCompile Include="NtlSobTriggerObject.cpp" />
+    <ClCompile Include="NtlSobTriggerObjectAttr.cpp" />
+    <ClCompile Include="NtlSobTriggerObjectProxy.cpp" />
+    <ClCompile Include="NtlSobVehicle.cpp" />
+    <ClCompile Include="NtlSobVehicleAttr.cpp" />
+    <ClCompile Include="NtlSobVehicleProxy.cpp" />
+    <ClCompile Include="NtlSobWorldItem.cpp" />
+    <ClCompile Include="NtlSobWorldItemAttr.cpp" />
+    <ClCompile Include="NtlSobWorldItemProxy.cpp" />
+    <ClCompile Include="NtlSoundMoodManager.cpp" />
+    <ClCompile Include="NtlStorageBinarySerializer.cpp" />
+    <ClCompile Include="NtlStorageDefine.cpp" />
+    <ClCompile Include="NtlStorageGroup.cpp" />
+    <ClCompile Include="NtlStorageGroupAccount.cpp" />
+    <ClCompile Include="NtlStorageGroupCharacter.cpp" />
+    <ClCompile Include="NtlStorageGroupGameInfo.cpp" />
+    <ClCompile Include="NtlStorageGroupQuest.cpp" />
+    <ClCompile Include="NtlStorageGroupScouter.cpp" />
+    <ClCompile Include="NtlStorageGroupSystem.cpp" />
+    <ClCompile Include="NtlStorageManager.cpp" />
+    <ClCompile Include="NtlStorageMTContainer.cpp" />
+    <ClCompile Include="NtlStorageSerializer.cpp" />
+    <ClCompile Include="NtlStorageTextSerializer.cpp" />
+    <ClCompile Include="NtlStorageUnit.cpp" />
+    <ClCompile Include="NtlThemeBGM.cpp" />
+    <ClCompile Include="NtlTriggerDirectSync.cpp" />
+    <ClCompile Include="NtlVehicleHelper.cpp" />
+    <ClCompile Include="NtlWareHouse.cpp" />
+    <ClCompile Include="NtlWorldConcept.cpp" />
+    <ClCompile Include="NtlWorldConceptCCBD.cpp" />
+    <ClCompile Include="NtlWorldConceptController.cpp" />
+    <ClCompile Include="NtlWorldConceptDBC.cpp" />
+    <ClCompile Include="NtlWorldConceptDirect.cpp" />
+    <ClCompile Include="NtlWorldConceptDuel.cpp" />
+    <ClCompile Include="NtlWorldConceptFreePvpZone.cpp" />
+    <ClCompile Include="NtlWorldConceptNPCCommu.cpp" />
+    <ClCompile Include="NtlWorldConceptPartyDungeon.cpp" />
+    <ClCompile Include="NtlWorldConceptPrivateShop.cpp" />
+    <ClCompile Include="NtlWorldConceptPVP.cpp" />
+    <ClCompile Include="NtlWorldConceptRB.cpp" />
+    <ClCompile Include="NtlWorldConceptScramble.cpp" />
+    <ClCompile Include="NtlWorldConceptTB.cpp" />
+    <ClCompile Include="NtlWorldConceptTLQ.cpp" />
+    <ClCompile Include="NtlWorldConceptTMQ.cpp" />
+    <ClCompile Include="NtlWorldConceptTrade.cpp" />
+    <ClCompile Include="NtlWorldConceptTutorial.cpp" />
+    <ClCompile Include="precomp_ntlsimulation.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release4Client|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release4Tools|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="ResultCodeString.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ActionMap.h" />
+    <ClInclude Include="DBODirectorIndicate.h" />
+    <ClInclude Include="DboMovingAlgorithm.h" />
+    <ClInclude Include="DboTLConditionCheck.h" />
+    <ClInclude Include="DboTLConditionCheckState.h" />
+    <ClInclude Include="DboTLController.h" />
+    <ClInclude Include="DboTLDefine.h" />
+    <ClInclude Include="DboTLEntity.h" />
+    <ClInclude Include="DboTLLoader.h" />
+    <ClInclude Include="DboTLSystem.h" />
+    <ClInclude Include="DboTSCMain.h" />
+    <ClInclude Include="DboTSCObjAgency.h" />
+    <ClInclude Include="DboTSCQAgency.h" />
+    <ClInclude Include="DboTSCQCtrl.h" />
+    <ClInclude Include="DboTSCQRecv.h" />
+    <ClInclude Include="DboTSCTAgency.h" />
+    <ClInclude Include="DboTSCTCtrl.h" />
+    <ClInclude Include="DboTSCTRecv.h" />
+    <ClInclude Include="DboTSDefine.h" />
+    <ClInclude Include="DboTSEntityFastFinder.h" />
+    <ClInclude Include="DboTSFactory.h" />
+    <ClInclude Include="DboTSFactoryType.h" />
+    <ClInclude Include="DboUnifiedQuestNarration.h" />
+    <ClInclude Include="InputActionMap.h" />
+    <ClInclude Include="InputHandler.h" />
+    <ClInclude Include="NtlActionMapDef.h" />
+    <ClInclude Include="NtlBehaviorCharAirMove.h" />
+    <ClInclude Include="NtlSLCCBD.h" />
+    <ClInclude Include="NtlWorldConceptCCBD.h" />
+    <ClInclude Include="NtlWorldConceptFreePvpZone.h" />
+    <ClInclude Include="ResultCodeString.h" />
+    <CustomBuild Include="NtlBehaviorBase.h" />
+    <ClInclude Include="NtlBehaviorChar.h" />
+    <ClInclude Include="NtlBehaviorCharAdjustMove.h" />
+    <ClInclude Include="NtlBehaviorCharGroundMove.h" />
+    <ClInclude Include="NtlBehaviorCharIdlePattern.h" />
+    <ClInclude Include="NtlBehaviorCharJump.h" />
+    <ClInclude Include="NtlBehaviorCharMove.h" />
+    <ClInclude Include="NtlBehaviorCharSwimmingMove.h" />
+    <ClInclude Include="NtlBehaviorData.h" />
+    <ClInclude Include="NtlBehaviorDef.h" />
+    <ClInclude Include="NtlBehaviorProj.h" />
+    <ClInclude Include="NtlBehaviorVehicle.h" />
+    <ClInclude Include="NtlBehaviorVehicleDirHelper.h" />
+    <ClInclude Include="NtlBehaviorVehicleMove.h" />
+    <ClInclude Include="NtlBuffContainer.h" />
+    <ClInclude Include="NtlCameraController.h" />
+    <ClInclude Include="NtlCameraManager.h" />
+    <ClInclude Include="NtlClock.h" />
+    <ClInclude Include="NtlDTCinematicManager.h" />
+    <ClInclude Include="NtlDTCinematicNode.h" />
+    <ClInclude Include="NtlDTNode.h" />
+    <ClInclude Include="NtlDTProp.h" />
+    <CustomBuild Include="NtlFSMAgent.h" />
+    <CustomBuild Include="NtlFSMBase.h" />
+    <CustomBuild Include="NtlFSMCharAct.h" />
+    <CustomBuild Include="NtlFSMCharActAgent.h" />
+    <ClInclude Include="NtlFSMCharActEventProc.h" />
+    <CustomBuild Include="NtlFSMCharActLayer.h" />
+    <ClInclude Include="NtlFSMCharActState.h" />
+    <ClInclude Include="NtlFSMCharActStateBase.h" />
+    <ClInclude Include="NtlFSMCharController.h" />
+    <CustomBuild Include="NtlFSMController.h" />
+    <ClInclude Include="NtlFSMDef.h" />
+    <ClInclude Include="NtlFSMEventQueue.h" />
+    <ClInclude Include="NtlFSMEventQueuingHelper.h" />
+    <CustomBuild Include="NtlFSMLayer.h" />
+    <ClInclude Include="NtlFSMLookAtManager.h" />
+    <ClInclude Include="NtlFSMStateBase.h" />
+    <ClInclude Include="NtlFSMUtil.h" />
+    <ClInclude Include="NtlFSMVehicleAct.h" />
+    <ClInclude Include="NtlFSMVehicleActAgent.h" />
+    <ClInclude Include="NtlFSMVehicleActLayer.h" />
+    <ClInclude Include="NtlFSMVehicleActState.h" />
+    <ClInclude Include="NtlFSMVehicleActStateBase.h" />
+    <ClInclude Include="NtlFSMVehicleController.h" />
+    <ClInclude Include="NtlGuildWarehouse.h" />
+    <ClInclude Include="NtlInventory.h" />
+    <ClInclude Include="NtlNetSender.h" />
+    <ClInclude Include="NtlOtherParam.h" />
+    <ClInclude Include="NtlPacketGenerator.h" />
+    <ClInclude Include="NtlPacketHandler.h" />
+    <ClInclude Include="NtlPacketLockManager.h" />
+    <ClInclude Include="NtlRangeBGM.h" />
+    <ClInclude Include="NtlShareTargetMark.h" />
+    <ClInclude Include="NtlSkillContainer.h" />
+    <ClInclude Include="NtlSLApi.h" />
+    <ClInclude Include="NtlSLBlackList.h" />
+    <ClInclude Include="NtlSLCENode.h" />
+    <ClInclude Include="NtlSLCommunityAgent.h" />
+    <ClInclude Include="NtlSLCommunityGroup.h" />
+    <ClInclude Include="NtlSLDef.h" />
+    <ClInclude Include="NtlSLDojo.h" />
+    <ClInclude Include="NtlSLEvent.h" />
+    <ClInclude Include="NtlSLEventFunc.h" />
+    <ClInclude Include="NtlSLEventHandler.h" />
+    <ClInclude Include="NtlSLFriendList.h" />
+    <ClInclude Include="NtlSLGlobal.h" />
+    <ClInclude Include="NtlSLGuild.h" />
+    <ClInclude Include="NtlSLHelpers.h" />
+    <ClInclude Include="NtlSLHoipoiMix.h" />
+    <ClInclude Include="NtlSLLogic.h" />
+    <ClInclude Include="NtlSLLogicDef.h" />
+    <ClInclude Include="NtlSLLuaGlue.h" />
+    <ClInclude Include="NtlSLLuaGlueStuff.h" />
+    <ClInclude Include="NtlSLMailSystem.h" />
+    <ClInclude Include="NtlSLPacketGenerator.h" />
+    <ClInclude Include="NtlSLParty.h" />
+    <ClInclude Include="NtlSLPrivateShop.h" />
+    <ClInclude Include="NtlSLRankBattle.h" />
+    <ClInclude Include="NtlSLServerDeclear.h" />
+    <ClInclude Include="NtlSLTBCrowdController.h" />
+    <ClInclude Include="NtlSLTBCrowdManager.h" />
+    <ClInclude Include="NtlSLTBudokai.h" />
+    <ClInclude Include="NtlSLTMQ.h" />
+    <ClInclude Include="NtlSLVisualDeclear.h" />
+    <ClInclude Include="NtlSLVisualLogic.h" />
+    <ClInclude Include="NtlSob.h" />
+    <ClInclude Include="NtlSobActionSkill.h" />
+    <ClInclude Include="NtlSobActionSkillAttr.h" />
+    <ClInclude Include="NtlSobActionSkillIcon.h" />
+    <ClInclude Include="NtlSobActor.h" />
+    <ClInclude Include="NtlSobActorCtrlData.h" />
+    <ClInclude Include="NtlSobAttr.h" />
+    <ClInclude Include="NtlSobAttrFactory.h" />
+    <ClInclude Include="NtlSobAvatar.h" />
+    <ClInclude Include="NtlSobAvatarAttr.h" />
+    <ClInclude Include="NtlSobBuff.h" />
+    <ClInclude Include="NtlSobBuffAttr.h" />
+    <ClInclude Include="NtlSobBuffIcon.h" />
+    <ClInclude Include="NtlSobCharPerfController.h" />
+    <ClInclude Include="NtlSobCharProxy.h" />
+    <ClInclude Include="NtlSobCharProxyDecoration.h" />
+    <ClInclude Include="NtlSobCharProxyEquip.h" />
+    <ClInclude Include="NtlSobCharProxyTransform.h" />
+    <ClInclude Include="NtlSobDynamicObject.h" />
+    <ClInclude Include="NtlSobDynamicObjectAttr.h" />
+    <ClInclude Include="NtlSobDynamicObjectProxy.h" />
+    <ClInclude Include="NtlSobElapsedController.h" />
+    <ClInclude Include="NtlSobEventObject.h" />
+    <ClInclude Include="NtlSobEventObjectProxy.h" />
+    <ClInclude Include="NtlSobFactory.h" />
+    <ClInclude Include="NtlSobFeelingActor.h" />
+    <ClInclude Include="NtlSobGroup.h" />
+    <ClInclude Include="NtlSobHTBSkill.h" />
+    <ClInclude Include="NtlSobHTBSkillAttr.h" />
+    <ClInclude Include="NtlSobHTBSkillIcon.h" />
+    <ClInclude Include="NtlSobIcon.h" />
+    <ClInclude Include="NtlSobInfluence.h" />
+    <ClInclude Include="NtlSobItem.h" />
+    <ClInclude Include="NtlSobItemAttr.h" />
+    <ClInclude Include="NtlSobItemIcon.h" />
+    <ClInclude Include="NtlSobManager.h" />
+    <ClInclude Include="NtlSobMonster.h" />
+    <ClInclude Include="NtlSobMonsterAttr.h" />
+    <ClInclude Include="NtlSobNpc.h" />
+    <ClInclude Include="NtlSobNpcAttr.h" />
+    <ClInclude Include="NtlSobPet.h" />
+    <ClInclude Include="NtlSobPetAttr.h" />
+    <ClInclude Include="NtlSobPlayer.h" />
+    <ClInclude Include="NtlSobPlayerAttr.h" />
+    <ClInclude Include="NtlSobProjectile.h" />
+    <ClInclude Include="NtlSobProjectileAttr.h" />
+    <ClInclude Include="NtlSobProxy.h" />
+    <ClInclude Include="NtlSobProxyDef.h" />
+    <ClInclude Include="NtlSobProxySystemEffect.h" />
+    <ClInclude Include="NtlSobQuestItem.h" />
+    <ClInclude Include="NtlSobQuestItemAttr.h" />
+    <ClInclude Include="NtlSobQuestItemIcon.h" />
+    <ClInclude Include="NtlSobSkill.h" />
+    <ClInclude Include="NtlSobSkillAttr.h" />
+    <ClInclude Include="NtlSobSkillIcon.h" />
+    <ClInclude Include="NtlSobStatusAnimSyncManager.h" />
+    <ClInclude Include="NtlSobSyncStatus.h" />
+    <ClInclude Include="NtlSobTriggerObject.h" />
+    <ClInclude Include="NtlSobTriggerObjectAttr.h" />
+    <ClInclude Include="NtlSobTriggerObjectProxy.h" />
+    <ClInclude Include="NtlSobVehicle.h" />
+    <ClInclude Include="NtlSobVehicleAttr.h" />
+    <ClInclude Include="NtlSobVehicleProxy.h" />
+    <ClInclude Include="NtlSobWorldItem.h" />
+    <ClInclude Include="NtlSobWorldItemAttr.h" />
+    <ClInclude Include="NtlSobWorldItemProxy.h" />
+    <ClInclude Include="NtlSoundMoodManager.h" />
+    <ClInclude Include="NtlSoundNode.h" />
+    <ClInclude Include="NtlStorageBinarySerializer.h" />
+    <ClInclude Include="NtlStorageDefine.h" />
+    <ClInclude Include="NtlStorageGroup.h" />
+    <ClInclude Include="NtlStorageGroupAccount.h" />
+    <ClInclude Include="NtlStorageGroupCharacter.h" />
+    <ClInclude Include="NtlStorageGroupGameInfo.h" />
+    <ClInclude Include="NtlStorageGroupQuest.h" />
+    <ClInclude Include="NtlStorageGroupScouter.h" />
+    <ClInclude Include="NtlStorageGroupSystem.h" />
+    <ClInclude Include="NtlStorageManager.h" />
+    <ClInclude Include="NtlStorageMTContainer.h" />
+    <ClInclude Include="NtlStorageSerializer.h" />
+    <ClInclude Include="NtlStorageTextSerializer.h" />
+    <ClInclude Include="NtlStorageUnit.h" />
+    <ClInclude Include="NtlThemeBGM.h" />
+    <ClInclude Include="NtlTriggerDirectSync.h" />
+    <ClInclude Include="NtlVehicleHelper.h" />
+    <ClInclude Include="NtlWareHouse.h" />
+    <ClInclude Include="NtlWorldConcept.h" />
+    <ClInclude Include="NtlWorldConceptController.h" />
+    <ClInclude Include="NtlWorldConceptDBC.h" />
+    <ClInclude Include="NtlWorldConceptDefine.h" />
+    <ClInclude Include="NtlWorldConceptDirect.h" />
+    <ClInclude Include="NtlWorldConceptDuel.h" />
+    <ClInclude Include="NtlWorldConceptNPCCommu.h" />
+    <ClInclude Include="NtlWorldConceptPartyDungeon.h" />
+    <ClInclude Include="NtlWorldConceptPrivateShop.h" />
+    <ClInclude Include="NtlWorldConceptPVP.h" />
+    <ClInclude Include="NtlWorldConceptRB.h" />
+    <ClInclude Include="NtlWorldConceptScramble.h" />
+    <ClInclude Include="NtlWorldConceptTB.h" />
+    <ClInclude Include="NtlWorldConceptTLQ.h" />
+    <ClInclude Include="NtlWorldConceptTMQ.h" />
+    <ClInclude Include="NtlWorldConceptTrade.h" />
+    <ClInclude Include="NtlWorldConceptTutorial.h" />
+    <ClInclude Include="precomp_ntlsimulation.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\DboShared\DboTrigger\DboTrigger.vcxproj">
+      <Project>{3bee299b-d145-4030-81dd-d8b9ade8b767}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\DboShared\NtlGameTable\NtlGameTable.vcxproj">
+      <Project>{9a4dc8e8-16ef-463b-8f14-77f447a782cc}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\DboShared\NtlShared2\NtlShared.vcxproj">
+      <Project>{573eb1e4-7620-479e-8ccf-def06491545b}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\NtlLib\Client\NtlClientNet\NtlClientNet.vcxproj">
+      <Project>{c54a01c8-8482-4ef8-b259-06dff4fd4dbe}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\NtlLib\Shared\Lua\Lua.vcxproj">
+      <Project>{f7291b35-71f2-47c4-ae77-f3c4ab3b43a0}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\NtlLib\Shared\NtlTrigger\NtlTrigger.vcxproj">
+      <Project>{31832309-d436-4c40-913d-87aaf73ffc99}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\NtlLib\Shared\NtlXMLLoader\NtlXMLLoader.vcxproj">
+      <Project>{9d941cac-4183-44e3-aec3-817c0a32d1dd}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\NtlCore\NtlCore.vcxproj">
+      <Project>{2d91cafc-1814-4cb4-b844-4e55f937d051}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\NtlGui\NtlGui.vcxproj">
+      <Project>{4cacaf6f-333c-4ac8-bb0e-ce8eee4b44a3}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\NtlPresentation\NtlPresentation.vcxproj">
+      <Project>{0ec8e06b-8138-4bfd-8af7-9cad1f2f65ac}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\NtlSound\NtlSound.vcxproj">
+      <Project>{ac4b3632-113d-40e1-b22f-0e6d9d1fd15a}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

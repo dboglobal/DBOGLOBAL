@@ -1,0 +1,971 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// 한국어 resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_KOR)
+#ifdef _WIN32
+LANGUAGE LANG_KOREAN, SUBLANG_DEFAULT
+#pragma code_page(949)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_KOR)\r\n"
+    "LANGUAGE 18, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#include ""res\\DTEditor.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#include ""afxprint.rc""       // printing/print preview resources\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\DTEditor.ico"
+IDR_DTEditorTYPE        ICON                    "res\\DTEditorDoc.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_BITMAP_ICONS        BITMAP                  "res\\PaneIcons.bmp"
+IDB_TOOLBAR_ALPHA       BITMAP                  "res\\ToolbarAlpha.bmp"
+IDB_TABITEM             BITMAP                  "res\\AdobeTab.bmp"
+IDB_OBJECTPANE_TOOLBARS_ICONS BITMAP                  "res\\PaneToobarsTreeIcons.bmp"
+IDR_MAINFRAME           BITMAP                  "res\\Toolbar.bmp"
+IDR_OBJ_PANE_TOOLBAR    BITMAP                  "res\\PaneObj.bmp"
+IDR_SCRIPT_PANE_TOOLBAR BITMAP                  "res\\SciptPane.bmp"
+IDR_CONTROL_PANE_TOOLBAR BITMAP                  "res\\ControlPane.bmp"
+IDB_RULER_DO            BITMAP                  "res\\rulerdo.bmp"
+IDB_RULER_DOM           BITMAP                  "res\\rulerdom.bmp"
+IDR_PROPERTY_TRANS_TOOLBAR BITMAP                  "res\\Transform.bmp"
+IDB_PROPERTY_TRANS_IMAGE BITMAP                  "res\\bitmap3.bmp"
+IDR_EDIT_MODE_TOOLBAR   BITMAP                  "res\\toolbar5.bmp"
+IDR_SKILL_PANE_TOOLBAR  BITMAP                  "res\\bmp00001.bmp"
+IDR_BOT_PANE_TOOLBAR    BITMAP                  "res\\bmp00002.bmp"
+IDR_POINTEDIT_TOOLBAR   BITMAP                  "res\\bmp00003.bmp"
+IDR_DIRECTIONBAR        BITMAP                  "res\\bmp00004.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Toolbar
+//
+
+IDR_MAINFRAME TOOLBAR  16, 15
+BEGIN
+    BUTTON      ID_FILE_NEW
+    BUTTON      ID_FILE_OPEN
+    BUTTON      ID_FILE_SAVE
+    SEPARATOR
+    BUTTON      ID_EDIT_CUT
+    BUTTON      ID_EDIT_COPY
+    BUTTON      ID_EDIT_PASTE
+    SEPARATOR
+    BUTTON      ID_FILE_PRINT
+    BUTTON      ID_APP_ABOUT
+END
+
+IDR_OBJ_PANE_TOOLBAR TOOLBAR  16, 15
+BEGIN
+    BUTTON      ID_OBJ_PANE_FOLDER_ADD
+    BUTTON      ID_OBJ_PANE_ADD
+    BUTTON      ID_OBJ_PANE_DELETE
+    SEPARATOR
+    BUTTON      ID_OBJ_PANE_REBUILD
+    BUTTON      ID_OBJ_PANE_RENAME
+    BUTTON      ID_OBJ_PANE_IMPORT_FILE
+END
+
+IDR_SCRIPT_PANE_TOOLBAR TOOLBAR  16, 15
+BEGIN
+    BUTTON      ID_SCRIPT_PANE_COMPILE
+    BUTTON      ID_SCRIPT_PANE_COMPILE_STOP
+    BUTTON      ID_SCRIPT_PANE_COPY
+    BUTTON      ID_SCRIPT_PANE_PASTE
+    BUTTON      ID_SCRIPT_PANE_COMPILE_ALL
+END
+
+IDR_CONTROL_PANE_TOOLBAR TOOLBAR  16, 15
+BEGIN
+    BUTTON      ID_CONTROL_PANE_TIME_CHANGE
+    BUTTON      ID_CONTROL_PANE_TIME_GRAPH
+    BUTTON      ID_CONTROL_PANE_SHAPE
+    BUTTON      ID_CONTROL_PANE_POINTEDIT
+    BUTTON      ID_CONTROL_PANE_POINTROTATEEDIT
+    BUTTON      ID_CONTROL_PANE_POINTATTREDIT
+    BUTTON      ID_CONTROL_PANE_RESET_TRANS
+    BUTTON      ID_CONTROL_PANE_RESET_CAMERA
+    BUTTON      ID_CONTROL_PANE_ADD_POINT
+    BUTTON      ID_CONTROL_PANE_REMOVE_POINT
+END
+
+IDR_PROPERTY_TRANS_TOOLBAR TOOLBAR  16, 15
+BEGIN
+    BUTTON      ID_PROP_TRANS_POSITION
+    BUTTON      ID_PROP_TRANS_ROTATE
+    BUTTON      ID_PROP_TRANS_SCALE
+    BUTTON      ID_POINT_TRANS_POSITION
+    BUTTON      ID_CURVE_TRANS_ROTATE
+END
+
+IDR_EDIT_MODE_TOOLBAR TOOLBAR  16, 15
+BEGIN
+    BUTTON      ID_EDIT_MODE_COMBO
+END
+
+IDR_SKILL_PANE_TOOLBAR TOOLBAR  16, 15
+BEGIN
+    BUTTON      ID_SKILL_PANE_USE
+END
+
+IDR_BOT_PANE_TOOLBAR TOOLBAR  16, 15
+BEGIN
+    BUTTON      ID_BOT_PANE_CREATE
+END
+
+IDR_POINTEDIT_TOOLBAR TOOLBAR  16, 15
+BEGIN
+    BUTTON      ID_POINTEDIT_QUATER_VIEW
+    BUTTON      ID_POINTEDIT_ZOOMIN
+    BUTTON      ID_POINTEDIT_ZOOMOUT
+END
+
+IDR_DIRECTIONBAR TOOLBAR  16, 15
+BEGIN
+    BUTTON      ID_BUTTON_DIRECTION_SAVE
+    BUTTON      ID_BUTTON_DIRECTION_LOAD
+    SEPARATOR
+    BUTTON      ID_BUTTON_DIRECTION_ADD_SET
+    BUTTON      ID_BUTTON_DIRECTION_ADD_NODE
+    BUTTON      ID_BUTTON_DIRECTION_REMOVE
+    SEPARATOR
+    BUTTON      ID_BUTTON_DIRECTION_RUN
+    BUTTON      ID_BUTTON_DIRECTION_STOP
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAINFRAME MENU 
+BEGIN
+    MENUITEM SEPARATOR
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&New\tCtrl+N",                ID_FILE_NEW
+        MENUITEM "&Open...\tCtrl+O",            ID_FILE_OPEN
+        MENUITEM "&Save\tCtrl+S",               ID_FILE_SAVE
+        MENUITEM "Save &As...",                 ID_FILE_SAVE_AS
+        MENUITEM SEPARATOR
+        MENUITEM "&Print...\tCtrl+P",           ID_FILE_PRINT
+        MENUITEM "Print Pre&view",              ID_FILE_PRINT_PREVIEW
+        MENUITEM "P&rint Setup...",             ID_FILE_PRINT_SETUP
+        MENUITEM SEPARATOR
+        MENUITEM "Recent File",                 ID_FILE_MRU_FILE1
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit",                       ID_APP_EXIT
+    END
+    POPUP "&Edit"
+    BEGIN
+        MENUITEM "&Undo\tCtrl+Z",               ID_EDIT_UNDO
+        MENUITEM SEPARATOR
+        MENUITEM "Cu&t\tCtrl+X",                ID_EDIT_CUT
+        MENUITEM "&Copy\tCtrl+C",               ID_EDIT_COPY
+        MENUITEM "&Paste\tCtrl+V",              ID_EDIT_PASTE
+        MENUITEM SEPARATOR
+        POPUP "Viewer Control"
+        BEGIN
+            MENUITEM "World Change",                ID_WORLD_CHANGE
+            MENUITEM "Avatar Race/Class/Gender",    ID_AVATAR_RACE
+            MENUITEM "Avatar Teleport",             ID_AVATAR_TELEPORT
+            MENUITEM "Avatar Speed",                ID_AVATAR_SPEED
+        END
+    END
+    POPUP "&View"
+    BEGIN
+        POPUP "&Toolbars"
+        BEGIN
+            MENUITEM "&Toolbar",                    ID_VIEW_TOOLBAR
+            MENUITEM SEPARATOR
+            MENUITEM "&Customize...",               35001
+        END
+        MENUITEM "&Status Bar",                 ID_VIEW_STATUS_BAR
+        POPUP "Spline  Mark"
+        BEGIN
+            MENUITEM "Control Point Line",          ID_SPLINEMARK_CONTROLLINE, CHECKED
+            MENUITEM "Curve Point Line",            ID_SPLINEMARK_CURVELINE, CHECKED
+            MENUITEM "Curve Rotate Line",           ID_SPLINEMARK_CURVEROTATELINE, CHECKED
+        END
+        POPUP "Option"
+        BEGIN
+            MENUITEM "Sound",                       ID_OPTION_SOUND
+        END
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&About DTEditor...",          ID_APP_ABOUT
+    END
+END
+
+IDR_POPUP MENU 
+BEGIN
+    POPUP "OBJECTTREE"
+    BEGIN
+        MENUITEM "Rename",                      ID_POPUP_OBJECTTREE_RENAME
+        MENUITEM "Attach File",                 ID_POPUP_OBJECTTREE_ATTACHFILE
+    END
+    POPUP "RENDERVIEW"
+    BEGIN
+        MENUITEM "World Rendering On/Off",      ID_RENDERVIEW_WORLDRENDER_ONOFF, CHECKED
+        MENUITEM SEPARATOR
+        MENUITEM "Control Point Line",          ID_SPLINEMARK_CONTROLLINE, CHECKED
+        MENUITEM "Curve Point Line",            ID_SPLINEMARK_CURVELINE, CHECKED
+        MENUITEM "Curve Rotate Line",           ID_SPLINEMARK_CURVEROTATELINE, CHECKED
+        MENUITEM SEPARATOR
+        MENUITEM "Valid Custom Data",           ID_SPLINEMARK_CURVE_CUSTOMDATA_VISIBLE
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_MAINFRAME ACCELERATORS 
+BEGIN
+    "C",            ID_EDIT_COPY,           VIRTKEY, CONTROL, NOINVERT
+    VK_INSERT,      ID_EDIT_COPY,           VIRTKEY, CONTROL, NOINVERT
+    VK_DELETE,      ID_EDIT_CUT,            VIRTKEY, SHIFT, NOINVERT
+    "X",            ID_EDIT_CUT,            VIRTKEY, CONTROL, NOINVERT
+    "V",            ID_EDIT_PASTE,          VIRTKEY, CONTROL, NOINVERT
+    VK_INSERT,      ID_EDIT_PASTE,          VIRTKEY, SHIFT, NOINVERT
+    VK_BACK,        ID_EDIT_UNDO,           VIRTKEY, ALT, NOINVERT
+    "Z",            ID_EDIT_UNDO,           VIRTKEY, CONTROL, NOINVERT
+    "N",            ID_FILE_NEW,            VIRTKEY, CONTROL, NOINVERT
+    "O",            ID_FILE_OPEN,           VIRTKEY, CONTROL, NOINVERT
+    "P",            ID_FILE_PRINT,          VIRTKEY, CONTROL, NOINVERT
+    "S",            ID_FILE_SAVE,           VIRTKEY, CONTROL, NOINVERT
+    VK_F6,          ID_NEXT_PANE,           VIRTKEY, NOINVERT
+    VK_F6,          ID_PREV_PANE,           VIRTKEY, SHIFT, NOINVERT
+    VK_F1,          ID_PROP_TRANS_POSITION, VIRTKEY, NOINVERT
+    VK_F2,          ID_PROP_TRANS_ROTATE,   VIRTKEY, NOINVERT
+    VK_F3,          ID_PROP_TRANS_SCALE,    VIRTKEY, NOINVERT
+    VK_F4,          ID_POINT_TRANS_POSITION, VIRTKEY, NOINVERT
+    VK_F5,          ID_CURVE_TRANS_ROTATE,  VIRTKEY, NOINVERT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 235, 55
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About DTEditor"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,17,20,20
+    LTEXT           "DTEditor Version 1.0",IDC_STATIC,40,10,119,8,SS_NOPREFIX
+    LTEXT           "Copyright (C) 2006",IDC_STATIC,40,25,119,8
+    DEFPUSHBUTTON   "OK",IDOK,178,7,50,16,WS_GROUP
+END
+
+IDD_CONTROL_PANE DIALOGEX 0, 0, 186, 90
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "",IDC_BORDER_TAB,"Static",SS_BLACKFRAME,9,7,170,76
+END
+
+IDD_ADD_PROP DIALOGEX 0, 0, 175, 82
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Add Property"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "Create",IDOK,51,62,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,108,62,50,14
+    LISTBOX         IDC_ADD_PROP_LIST,15,15,143,40,LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Property List :",IDC_STATIC,15,7,53,8
+END
+
+IDD_CONTROL_POINT DIALOGEX 0, 0, 320, 61
+STYLE DS_SETFONT | WS_CHILD
+FONT 9, "MS Sans Serif, 굴림", 0, 0, 0x0
+BEGIN
+END
+
+IDD_CONTROLPANE DIALOG  0, 0, 186, 95
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "대화 상자"
+FONT 9, "MS Sans Serif, 굴림"
+BEGIN
+    DEFPUSHBUTTON   "확인",IDOK,129,7,50,16
+    PUSHBUTTON      "취소",IDCANCEL,129,26,50,16
+END
+
+IDD_SEQUENCE_GRAPH DIALOGEX 0, 0, 600, 243
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Sequence graph"
+FONT 8, "Microsoft Sans Serif", 400, 0, 0x0
+BEGIN
+    LTEXT           "",IDC_CONTROL_POINT_TIME_INFO,325,86,20,11,0,WS_EX_TRANSPARENT
+    PUSHBUTTON      "Center",IDC_SEQUENCE_GRAPH_CENTER,25,0,50,14
+END
+
+IDD_POINTSHAPE DIALOGEX 0, 0, 290, 184
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Point Shape"
+FONT 8, "굴림", 400, 0, 0x81
+BEGIN
+    DEFPUSHBUTTON   "확인",IDOK,177,161,50,16
+    PUSHBUTTON      "취소",IDCANCEL,233,161,50,16
+END
+
+IDD_RENAME_PROP DIALOGEX 0, 0, 163, 58
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | DS_CENTERMOUSE | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Rename"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "Ok",IDOK,83,37,30,14
+    PUSHBUTTON      "Cancel",IDCANCEL,118,37,30,14
+    EDITTEXT        IDC_EDIT_RENAME,15,19,133,14,ES_AUTOHSCROLL
+    LTEXT           "Rename :",IDC_STATIC,15,7,32,9
+END
+
+IDD_VIEWER_CONTROL DIALOGEX 0, 0, 197, 294
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Viewer Control"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "확인",IDOK,75,273,50,14
+    PUSHBUTTON      "취소",IDCANCEL,137,273,50,14
+    GROUPBOX        "World Change",IDC_STATIC,7,7,183,103
+    GROUPBOX        "Avatar",IDC_STATIC,7,120,183,149
+    LTEXT           "Teleport(x,z) : ",IDC_STATIC,17,201,63,8
+    LTEXT           "Speed : ",IDC_STATIC,17,236,46,8
+    EDITTEXT        IDC_EDIT_TELEPORT_X,18,211,66,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_TELEPORT_Z,96,211,65,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_AVATAR_SPEED,18,247,67,14,ES_AUTOHSCROLL
+    LTEXT           "Name : ",IDC_STATIC,18,20,59,8
+    EDITTEXT        IDC_EDIT_WORLD_NAME,46,19,132,14,ES_AUTOHSCROLL | ES_READONLY
+    COMBOBOX        IDC_COMBO_WORLD_NAME,17,90,164,94,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    LTEXT           " Range : ",IDC_STATIC,17,39,71,8
+    EDITTEXT        IDC_EDIT_WORLD_MIN_Z,119,51,60,14,ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_EDIT_WORLD_MIN_X,39,51,58,14,ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_EDIT_WORLD_MAX_X,40,70,57,14,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "Min",IDC_STATIC,23,52,12,8
+    LTEXT           "Max",IDC_STATIC,23,71,14,8
+    EDITTEXT        IDC_EDIT_WORLD_MAX_Z,119,70,60,14,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "Race :",IDC_STATIC,16,133,22,8
+    LTEXT           "Class :",IDC_STATIC,15,153,22,8
+    LTEXT           "Gender :",IDC_STATIC,15,172,29,8
+    COMBOBOX        IDC_COMBO_AVATAR_RACE,56,131,125,78,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_COMBO_AVATAR_CLASS,56,151,125,83,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_COMBO_AVATAR_GENDER,55,170,125,60,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+END
+
+IDD_POINTEDIT DIALOGEX 0, 0, 485, 342
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Point Edit"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    PUSHBUTTON      "Center",IDC_POINTEDIT_CENTER_MOVE,0,0,36,14
+    LTEXT           "1.0",IDC_POINTEDIT_SCALE_INFO,381,329,89,11,0,WS_EX_STATICEDGE
+    LTEXT           "Scale :",IDC_STATIC_SCALE_INFO,357,330,22,8
+    PUSHBUTTON      "Serach",IDC_POINTEDIT_SEARCH_MOVE,39,0,38,14
+END
+
+IDD_POINTROTATEEDIT DIALOGEX 0, 0, 562, 294
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Point Rotate"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "",IDC_ROTATE_VIEW,7,7,452,280,0,WS_EX_STATICEDGE
+    PUSHBUTTON      "Reset Camera",IDC_POINTROTATEEDIT_RESET_CAMERA,471,19,74,14
+    EDITTEXT        IDC_POINTROTATEEDIT_GRID_NUM,474,49,57,14,ES_AUTOHSCROLL
+    LTEXT           "Grid Num : ",IDC_STATIC,473,39,37,8
+    LTEXT           "Direction :",IDC_STATIC,474,73,34,8
+    LTEXT           "",IDC_POINTROTATEEDIT_DIR_X,474,84,57,13,0,WS_EX_STATICEDGE
+    LTEXT           "",IDC_POINTROTATEEDIT_DIR_Y,474,100,57,13,0,WS_EX_STATICEDGE
+    LTEXT           "",IDC_POINTROTATEEDIT_DIR_Z,474,117,57,13,0,WS_EX_STATICEDGE
+    CONTROL         "Snap",IDC_POINTROTATEEDIT_SNAP,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,474,137,32,10
+    GROUPBOX        " Edit ",IDC_STATIC,464,7,87,147
+    GROUPBOX        " Rotate ",IDC_STATIC,464,164,87,116
+    PUSHBUTTON      "Back",IDC_POINTROTATEEDIT_BACK,475,196,66,14
+    PUSHBUTTON      "Point direction",IDC_POINTROTATEEDIT_POINT_DIRECTION,476,216,65,14
+    PUSHBUTTON      "Interpolation",IDC_POINTROTATEEDIT_INTERPOLATION,475,176,65,14
+END
+
+IDD_POINTATTRIBUTE DIALOGEX 0, 0, 143, 399
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Point attribute"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    PUSHBUTTON      "Change point position",IDC_POINTATTR_POINT_POS,14,121,101,14
+    EDITTEXT        IDC_POINTATTR_POINT_OFFSETY,63,54,49,14,ES_AUTOHSCROLL
+    LTEXT           "Offset Y :",IDC_STATIC,25,57,35,8
+    PUSHBUTTON      "Add point position",IDC_POINTATTR_ADD_POINT_POS,14,76,101,14
+    GROUPBOX        " Position setting ",IDC_STATIC,7,7,118,133
+    GROUPBOX        " Interpolation ",IDC_STATIC,7,151,119,38
+    PUSHBUTTON      "Selected point interpolation",IDC_POINTATTR_POINT_SELECTED_INTERPOLATION,13,165,101,14
+    COMBOBOX        IIDC_POINTATTR_COMBO_TYPE,14,28,100,105,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Type :",IDC_STATIC,15,19,44,8
+    GROUPBOX        " Attribute  ",IDC_STATIC,7,199,119,193
+    EDITTEXT        IDC_POINTATTR_CAMERA_SPEED,15,223,70,14,ES_AUTOHSCROLL
+    LTEXT           "Camera Speed :",IDC_STATIC,15,212,58,8
+    LTEXT           "Point box size : ",IDC_STATIC,17,246,60,8
+    EDITTEXT        IDC_POINTATTR_POINT_BOX,16,257,72,14,ES_AUTOHSCROLL
+    CONTROL         "Position",IDC_POINTATTR_CHECK_POS,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,17,109,41,10
+    CONTROL         "Direction",IDC_POINTATTR_CHECK_DIR,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,72,109,44,10
+    CONTROL         "Camera move point click",IDC_POINTATTR_CHECK_CAMERA_MOVE,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,17,302,95,10
+    CONTROL         "Avatar collision",IDC_POINTATTR_CHECK_AVATAR_COLLISION,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,17,320,86,10
+    PUSHBUTTON      "Reset avatar direction",IDC_POINTATTR_RESET_AVATAR_DIR,16,342,98,14
+    PUSHBUTTON      "Point Custom Edit",IDC_POINT_CUSTOM_DIALOG,16,366,98,14
+    CONTROL         "Camera collisiton",IDC_POINTATTR_CHECK_CAMERA_COLLISION,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,17,284,79,10
+END
+
+IDD_POINTCUSTOMEDIT DIALOGEX 0, 0, 189, 145
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Point Custom Edit"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    GROUPBOX        " Curve Point ",IDC_CUSTOM_CURVE_POINT,7,7,175,40
+    GROUPBOX        " Sound ",IDC_STATIC,7,57,175,55
+    CONTROL         "Loop",IDC_CUSVE_SOUND_LOOP,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,17,72,45,10
+    EDITTEXT        IDC_CUSVE_SOUND_FILENAME,15,87,129,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "...",IDC_BUTTON1,149,87,22,14
+    PUSHBUTTON      "Clear",IDC_CUSVE_SOUND_CLEAR,149,66,21,17
+    PUSHBUTTON      "Ok",IDOK,38,117,108,17
+END
+
+IDD_DIRECTION_ADD_NODE_DIALOG DIALOGEX 0, 0, 155, 54
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Add node"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "확인",IDOK,18,30,50,14
+    PUSHBUTTON      "취소",IDCANCEL,90,30,50,14
+    LISTBOX         IDC_LIST1,6,7,144,18,LBS_SORT | LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+END
+
+IDD_DIRECTION_PROP_REFREE DIALOGEX 0, 0, 148, 490
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_CHILD | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LISTBOX         IDC_LIST2,12,258,126,42,LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "Refree",IDC_REFREE,6,6,138,156
+    LISTBOX         IDC_LIST1,12,180,126,54,LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "Delete",IDC_BUTTON1,12,306,42,12
+    PUSHBUTTON      "Up",IDC_BUTTON2,60,306,36,12
+    PUSHBUTTON      "Down",IDC_BUTTON3,102,306,36,12
+    COMBOBOX        IDC_COMBO1,12,336,125,54,CBS_DROPDOWNLIST | WS_TABSTOP
+    LTEXT           "Animation Play Type",IDC_STATIC,12,323,84,12
+    GROUPBOX        "Animation List",IDC_STATIC,6,168,138,72,0,WS_EX_TRANSPARENT
+    GROUPBOX        "Selected Animation List",IDC_STATIC,6,246,138,108,0,WS_EX_TRANSPARENT
+    GROUPBOX        "Narration",IDC_STATIC,6,360,138,126,0,WS_EX_TRANSPARENT
+    LISTBOX         IDC_LIST5,12,372,126,60,LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "Delete",IDC_BUTTON7,12,438,42,12
+    PUSHBUTTON      "Up",IDC_BUTTON8,60,438,36,12
+    PUSHBUTTON      "Down",IDC_BUTTON9,102,438,38,12
+    LTEXT           "Narration Play Type",IDC_STATIC,12,456,84,12
+    COMBOBOX        IDC_COMBO2,12,468,126,42,CBS_DROPDOWNLIST | WS_TABSTOP
+END
+
+IDD_DIALOG2 DIALOGEX 0, 0, 148, 276
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_CHILD | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    GROUPBOX        "Property",IDC_STATIC,6,6,138,114
+END
+
+IDD_SOUND_OPTION DIALOGEX 0, 0, 250, 121
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "사운드 옵션"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "확인",IDOK,101,102,50,14
+    CONTROL         "",IDC_SLIDER_WEATHER_EFFECT,"msctls_trackbar32",TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,60,42,168,18
+    LTEXT           "Weather Effect",IDC_STATIC,6,46,54,8
+    CONTROL         "",IDC_CHECK_WEATHER_EFFECT,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,228,43,12,12
+    CTEXT           "Mute",IDC_STATIC,222,6,24,8
+    LTEXT           "Volume",IDC_STATIC,66,6,24,12
+    CONTROL         "",IDC_SLIDER_BGM,"msctls_trackbar32",TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,60,18,168,18
+    LTEXT           "BGM",IDC_STATIC,6,24,18,8
+    CONTROL         "",IDC_CHECK_BGM,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,228,19,12,12
+    CONTROL         "",IDC_SLIDER_WEATHER_MUSIC,"msctls_trackbar32",TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,60,66,168,18
+    LTEXT           "Weather Music",IDC_STATIC,6,70,54,8
+    CONTROL         "",IDC_CHECK_WEATHER_MUSIC,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,228,67,12,12
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904e4"
+        BEGIN
+            VALUE "CompanyName", "TODO: <Company name>"
+            VALUE "FileDescription", "TODO: <File description>"
+            VALUE "FileVersion", "1.0.0.1"
+            VALUE "InternalName", "DTEditor.exe"
+            VALUE "LegalCopyright", "TODO: (c) <Company name>.  All rights reserved."
+            VALUE "OriginalFilename", "DTEditor.exe"
+            VALUE "ProductName", "TODO: <Product name>"
+            VALUE "ProductVersion", "1.0.0.1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1252
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 228
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 48
+    END
+
+    IDD_CONTROL_PANE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 83
+    END
+
+    IDD_ADD_PROP, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 167
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 75
+    END
+
+    IDD_CONTROL_POINT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 313
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 54
+    END
+
+    IDD_CONTROLPANE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 88
+    END
+
+    IDD_POINTSHAPE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 283
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 177
+    END
+
+    IDD_RENAME_PROP, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 156
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 51
+    END
+
+    IDD_VIEWER_CONTROL, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 190
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 287
+    END
+
+    IDD_POINTROTATEEDIT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 555
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 287
+    END
+
+    IDD_POINTATTRIBUTE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 136
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 392
+    END
+
+    IDD_POINTCUSTOMEDIT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 182
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 138
+    END
+
+    IDD_DIRECTION_ADD_NODE_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 148
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 47
+    END
+
+    IDD_DIRECTION_PROP_REFREE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 141
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 458
+    END
+
+    IDD_DIALOG2, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 141
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 269
+    END
+
+    IDD_SOUND_OPTION, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 243
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 114
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDP_OLE_INIT_FAILED     "OLE initialization failed.  Make sure that the OLE libraries are the correct version."
+    IDS_STRING_EFFECT       "Effect"
+    IDS_STRING_SOUND        "Sound"
+    IDS_STRING_REFREE       "Refree"
+END
+
+STRINGTABLE 
+BEGIN
+    IDR_MAINFRAME           "DTEditor\n\nDTEditor\n\n\nDTEditor.Document\nDTEditor.Document"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_APP_TITLE       "DTEditor"
+    AFX_IDS_IDLEMESSAGE     "Ready"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_INDICATOR_EXT        "EXT"
+    ID_INDICATOR_CAPS       "CAP"
+    ID_INDICATOR_NUM        "NUM"
+    ID_INDICATOR_SCRL       "SCRL"
+    ID_INDICATOR_OVR        "OVR"
+    ID_INDICATOR_REC        "REC"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_FILE_NEW             "Create a new document\nNew"
+    ID_FILE_OPEN            "Open an existing document\nOpen"
+    ID_FILE_CLOSE           "Close the active document\nClose"
+    ID_FILE_SAVE            "Save the active document\nSave"
+    ID_FILE_SAVE_AS         "Save the active document with a new name\nSave As"
+    ID_FILE_PAGE_SETUP      "Change the printing options\nPage Setup"
+    ID_FILE_PRINT_SETUP     "Change the printer and printing options\nPrint Setup"
+    ID_FILE_PRINT           "Print the active document\nPrint"
+    ID_FILE_PRINT_PREVIEW   "Display full pages\nPrint Preview"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_APP_ABOUT            "Display program information, version number and copyright\nAbout"
+    ID_APP_EXIT             "Quit the application; prompts to save documents\nExit"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_FILE_MRU_FILE1       "Open this document"
+    ID_FILE_MRU_FILE2       "Open this document"
+    ID_FILE_MRU_FILE3       "Open this document"
+    ID_FILE_MRU_FILE4       "Open this document"
+    ID_FILE_MRU_FILE5       "Open this document"
+    ID_FILE_MRU_FILE6       "Open this document"
+    ID_FILE_MRU_FILE7       "Open this document"
+    ID_FILE_MRU_FILE8       "Open this document"
+    ID_FILE_MRU_FILE9       "Open this document"
+    ID_FILE_MRU_FILE10      "Open this document"
+    ID_FILE_MRU_FILE11      "Open this document"
+    ID_FILE_MRU_FILE12      "Open this document"
+    ID_FILE_MRU_FILE13      "Open this document"
+    ID_FILE_MRU_FILE14      "Open this document"
+    ID_FILE_MRU_FILE15      "Open this document"
+    ID_FILE_MRU_FILE16      "Open this document"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_NEXT_PANE            "Switch to the next window pane\nNext Pane"
+    ID_PREV_PANE            "Switch back to the previous window pane\nPrevious Pane"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_WINDOW_SPLIT         "Split the active window into panes\nSplit"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_EDIT_CLEAR           "Erase the selection\nErase"
+    ID_EDIT_CLEAR_ALL       "Erase everything\nErase All"
+    ID_EDIT_COPY            "Copy the selection and put it on the Clipboard\nCopy"
+    ID_EDIT_CUT             "Cut the selection and put it on the Clipboard\nCut"
+    ID_EDIT_FIND            "Find the specified text\nFind"
+    ID_EDIT_PASTE           "Insert Clipboard contents\nPaste"
+    ID_EDIT_REPEAT          "Repeat the last action\nRepeat"
+    ID_EDIT_REPLACE         "Replace specific text with different text\nReplace"
+    ID_EDIT_SELECT_ALL      "Select the entire document\nSelect All"
+    ID_EDIT_UNDO            "Undo the last action\nUndo"
+    ID_EDIT_REDO            "Redo the previously undone action\nRedo"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_VIEW_TOOLBAR         "Show or hide the toolbar\nToggle ToolBar"
+    ID_VIEW_STATUS_BAR      "Show or hide the status bar\nToggle StatusBar"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_SCSIZE          "Change the window size"
+    AFX_IDS_SCMOVE          "Change the window position"
+    AFX_IDS_SCMINIMIZE      "Reduce the window to an icon"
+    AFX_IDS_SCMAXIMIZE      "Enlarge the window to full size"
+    AFX_IDS_SCNEXTWINDOW    "Switch to the next document window"
+    AFX_IDS_SCPREVWINDOW    "Switch to the previous document window"
+    AFX_IDS_SCCLOSE         "Close the active window and prompts to save the documents"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_SCRESTORE       "Restore the window to normal size"
+    AFX_IDS_SCTASKLIST      "Activate Task List"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_PREVIEW_CLOSE   "Close print preview mode\nCancel Preview"
+END
+
+STRINGTABLE 
+BEGIN
+    IDR_PANE_OPTIONS        "Spline"
+    IDR_PANE_PROPERTIES     "Properties"
+    IDR_PANE_SCRIPT         "Script"
+    IDR_PANE_CONTROL        "Control"
+    IDR_PANE_OUTPUT         "Output"
+    IDR_PANE_CONTROL_POINT  "Control point"
+    IDR_PANE_ACTOR          "Actor"
+    IDR_PANE_SKILL          "Skill"
+    IDR_PANE_BOT            "Bot"
+    IDR_PANE_WAYPOINT       "Way Point"
+    IDR_PANE_CINEMATIC      "Cinematic Node"
+    IDR_DIRECTION_PANE      "Direction"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_PANE_OBJ_ADD         "추가"
+    ID_PANE_OBJ_DELETE      "삭제"
+    ID_OBJ_PANE_ADD         "Create a new direct prop\nAdd"
+    ID_OBJ_PANE_DELETE      "Delete a direct prop\nRemove"
+    ID_SCRIPT_PANE_COMPILE  "Build lua script\nBuild"
+    ID_SCRIPT_PANE_COMPILE_STOP "Script build stop\nBuild stop"
+    ID_BUTTON32781          "ID_SCRIPT_PANE_COPY"
+    ID_BUTTON32782          "ID_SCRIPT_PANE_PASTE"
+    ID_SCRIPT_PANE_COPY     "Copy the selection and put it on the Clipboard\nCopy"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_SCRIPT_PANE_PASTE    "Insert Clipboard contents\nPaste"
+    ID_OBJ_PANE_REBUILD     "Rebuild a property\nReBuild"
+    ID_CONTROL_PANE_TIME_CHANGE "Propery point time change\nGroup"
+    ID_CONTROL_PANE_TIME_GRAPH "Propery point sequence graph\nSequence graph"
+    ID_CONTROL_PANE_SHAPE   "Propery shape\nShape"
+    ID_CONTROL_PANE_RESET_CAMERA "Reset camera\nReset camera"
+    ID_CONTROL_PANE_RESET_TRANS "Reset transform\nReset transform"
+END
+
+STRINGTABLE 
+BEGIN
+    IDC_OBJ_PANE_PROP_TREECTRL "Direct property list"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_PROP_TRANS_POSITION  "Property position transform\nProperty position"
+    ID_PROP_TRANS_ROTATE    "Property rotate transform\nProperty rotate"
+    ID_PROP_TRANS_SCALE     "Property scale transform\nProperty scale"
+    ID_POINT_TRANS_POSITION "Control point position transform\nPoint position"
+    ID_CURVE_TRANS_ROTATE   "Control curve rotate transform\nCurve rotate"
+    ID_CONTROL_PANE_ADD_POINT "Add point\nAdd point"
+    ID_CONTROL_PANE_REMOVE_POINT "Remove point\nRemove point"
+    ID_OBJ_PANE_FORDER_ADD  "Create a folder\nForder add"
+    ID_OBJ_PANE_FOLDER_ADD  "Create a folder\nAdd folder"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_OBJ_PANE_RENAME      "Rename\nRename"
+    ID_OBJ_PANE_IMPORT_FILE "Import file\nImport file"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_SKILL_PANE_USE       "Skill use\nUse"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_BOT_PANE_CREATE      "Bot create\nCreate"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_SCRIPT_PANE_COMPILE_ALL "Compile all lua script\nCompile all"
+    ID_POINTEDIT_QUATER_VIEW "Quater view\nQuater view"
+    ID_POINTEDIT_ZOOMIN     "Zoom In\nZoom In"
+    ID_POINTEDIT_ZOOMOUT    "Zoom Out\nZoom Out"
+    ID_CONTROL_PANE_POINTEDIT "Point edit\nPoint"
+    ID_CONTROL_PANE_POINTROTATEEDIT "Point rotate edit\nPoint Rotate"
+    ID_CONTROL_PANE_POINTATTREDIT "Point attribute edit\nPoint Attribute"
+    ID_BUTTON_DIRECTION_SAVE "save\nsave"
+    ID_BUTTON_DIRECTION_LOAD "load\nload"
+    ID_BUTTON_DIRECTION_ADD_SET "add set\nadd set"
+    ID_BUTTON_DIRECTION_ADD_NODE "add node\nadd node"
+    ID_BUTTON_DIRECTION_REMOVE "remove\nremove"
+    ID_BUTTON_DIRECTION_RUN "run\nrun"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_BUTTON_DIRECTION_STOP "stop\nstop"
+END
+
+#endif    // 한국어 resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_KOR)
+LANGUAGE 18, 1
+#pragma code_page(1252)
+#include "res\DTEditor.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#include "afxprint.rc"       // printing/print preview resources
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

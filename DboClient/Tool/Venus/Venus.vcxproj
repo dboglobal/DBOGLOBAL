@@ -1,0 +1,364 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Release4Tools|Win32">
+      <Configuration>Release4Tools</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{767AEC44-F8ED-475A-96EE-E95808EDD620}</ProjectGuid>
+    <RootNamespace>Venus</RootNamespace>
+    <Keyword>MFCProj</Keyword>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release4Tools|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v80</PlatformToolset>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release4Tools|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>14.0.25431.1</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release4Tools|Win32'">
+    <OutDir>E:\DBOG\DBO\DBOG UNPACKED\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release4Tools|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+    </Midl>
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <AdditionalIncludeDirectories>$(SolutionDir)Renderware\Include;$(SolutionDir)Lib\NtlCore;$(SolutionDir)..\DboShared\NtlNetwork;$(SolutionDir)Lib\NtlPresentation;$(SolutionDir)Lib\NtlFramework;$(SolutionDir)..\NtlLib\Shared\NtlXMLLoader;$(SolutionDir)..\DboShared\NtlShared2;$(SolutionDir)..\DboShared\NtlShared;$(SolutionDir)Lib\NtlSimulation;$(SolutionDir)..\NtlLib\Client\NtlClientNet;$(SolutionDir)..\NtlLib\Shared\NtlTrigger;$(SolutionDir)..\NtlLib\Shared;..\..\..\DboShared\NtlGameTable;$(SolutionDir)Lib\NtlSound;$(SolutionDir)..\NtlLib\Shared\util;$(SolutionDir)..\Xtreme ToolkitPro v13.2.1\Source;$(DXSDK_DIR)Include;$(SolutionDir)Lib\NtlGui;$(SolutionDir)..\DboShared\DboTrigger;$(SolutionDir)..\NtlLib\Shared\Lua;$(SolutionDir)Client\Addin\Devil;$(SolutionDir)Tool\Venus\control;$(SolutionDir)Tool\Venus\gfl;$(SolutionDir)Tool\Venus\property;$(SolutionDir)Tool\Venus\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <OpenMPSupport>
+      </OpenMPSupport>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4819;4996;4805;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>ddraw.lib;Ws2_32.lib;Winmm.lib;Imm32.lib;rtdict.lib;rtcharse.lib;rtfsyst.lib;rtbmp.lib;rtpng.lib;rtintsec.lib;rtpick.lib;rttoc.lib;rpworld.lib;rtanim.lib;rphanim.lib;rtquat.lib;rplogo.lib;rpusrdat.lib;rpid.lib;rpmatfx.lib;rpuvanim.lib;rpprtstd.lib;rpprtadv.lib;rpptank.lib;rpskintoon.lib;rprandom.lib;rtimport.lib;rtgcond.lib;rtwing.lib;rtray.lib;rplodatm.lib;strmiids.lib;libgfx.lib;libgrenderer_d3d9.lib;libjpeg.lib;zlib.lib;d3dx9.lib;d3d9.lib;Devil.lib;rppvs.lib;rpltmap.lib;rtltmap.lib;rpmipkl.lib;rtpitexd.lib;rtbary.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+      <AdditionalLibraryDirectories>$(SolutionDir)Renderware\Lib\Release;$(SolutionDir)BugTrap;$(SolutionDir)DirectShow;$(SolutionDir)Lib/Localize/Lib;$(DXSDK_DIR)Lib\x86;$(SolutionDir)Release4Client;$(GFXSDK)3rdParty\expat-2.0.1\lib;$(SolutionDir)Lib\NtlFlasher\GFx SDK 3.3\Lib\$(PlatformName)\Msvc80\Release;$(SolutionDir)Lib\NtlFlasher\GFx SDK 3.3\3rdParty\jpeg-6b\lib\$(PlatformName)\Msvc80\Release;$(SolutionDir)Client\Addin\Devil;$(SolutionDir)..\Xtreme ToolkitPro v13.2.1\Lib\vc80;$(SolutionDir)Lib\NtlSound\fmod;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreSpecificDefaultLibraries>libcp.lib;libcmt.lib;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>$(TargetDir)$(TargetName).pdb</ProgramDatabaseFile>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <TargetMachine>MachineX86</TargetMachine>
+      <RandomizedBaseAddress />
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="ActionListCtrl.cpp" />
+    <ClCompile Include="ActionListDialog.cpp" />
+    <ClCompile Include="AnimationListDialog.cpp" />
+    <ClCompile Include="AvatarPropertyDialog.cpp" />
+    <ClCompile Include="Control\AutoFont.cpp" />
+    <ClCompile Include="Control\BtnST.cpp" />
+    <ClCompile Include="Control\ColorButton.cpp" />
+    <ClCompile Include="Control\ComboInListView.cpp" />
+    <ClCompile Include="Control\Dib.cpp" />
+    <ClCompile Include="Control\listeditctrl.cpp" />
+    <ClCompile Include="Control\MacButtons.cpp" />
+    <ClCompile Include="Control\MacProgressCtrl.cpp" />
+    <ClCompile Include="Control\MacSliderCtrl.cpp" />
+    <ClCompile Include="Control\RollupCtrl.cpp" />
+    <ClCompile Include="Control\Sizecbar.cpp" />
+    <ClCompile Include="Control\SizingTabCtrlBar.cpp" />
+    <ClCompile Include="Control\supergridctrl.cpp" />
+    <ClCompile Include="Control\SXbutton.cpp" />
+    <ClCompile Include="Control\TrueColorToolBar.cpp" />
+    <ClCompile Include="Control\WBButton.cpp" />
+    <ClCompile Include="Control\ztimeline.cpp" />
+    <ClCompile Include="CreateSplinePathDialog.cpp" />
+    <ClCompile Include="DataTreeCtrl.cpp" />
+    <ClCompile Include="EditDialog.cpp" />
+    <ClCompile Include="EffectEditLayer.cpp" />
+    <ClCompile Include="EffectListCtrl.cpp" />
+    <ClCompile Include="EffectListDialog.cpp" />
+    <ClCompile Include="EffectPropertyDialog.cpp" />
+    <ClCompile Include="EnemyPropertyDialog.cpp" />
+    <ClCompile Include="EventLayer.cpp" />
+    <ClCompile Include="EventListCtrl.cpp" />
+    <ClCompile Include="EventListDialog.cpp" />
+    <ClCompile Include="InputBox.cpp" />
+    <ClCompile Include="InstanceEffectDialog.cpp" />
+    <ClCompile Include="LightDialog.cpp" />
+    <ClCompile Include="Manipulator.cpp" />
+    <ClCompile Include="MeshLayer.cpp" />
+    <ClCompile Include="MeshListCtrl.cpp" />
+    <ClCompile Include="MeshListDialog.cpp" />
+    <ClCompile Include="MiniDump.cpp" />
+    <ClCompile Include="NtlLighting.cpp" />
+    <ClCompile Include="NtlLightingController.cpp" />
+    <ClCompile Include="NtlLightingStrip.cpp" />
+    <ClCompile Include="NtlTreeXml.cpp" />
+    <ClCompile Include="OptionDialog.cpp" />
+    <ClCompile Include="PathLayer.cpp" />
+    <ClCompile Include="PostEffectDialog.cpp" />
+    <ClCompile Include="ProgressDialog.cpp" />
+    <ClCompile Include="Property\N3Slider.cpp" />
+    <ClCompile Include="Property\PropTree.cpp" />
+    <ClCompile Include="Property\PropTreeInfo.cpp" />
+    <ClCompile Include="Property\PropTreeItem.cpp" />
+    <ClCompile Include="Property\PropTreeItemColor.cpp" />
+    <ClCompile Include="Property\PropTreeItemCombo.cpp" />
+    <ClCompile Include="Property\PropTreeItemEdit.cpp" />
+    <ClCompile Include="Property\PropTreeItemSlider.cpp" />
+    <ClCompile Include="Property\PropTreeItemStatic.cpp" />
+    <ClCompile Include="Property\PropTreeList.cpp" />
+    <ClCompile Include="Splash.cpp" />
+    <ClCompile Include="SplinePathListCtrl.cpp" />
+    <ClCompile Include="SplinePathListDialog.cpp" />
+    <ClCompile Include="SplinePathPropertyDialog.cpp" />
+    <ClCompile Include="StatusBarDialog.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release4Tools|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="StringDialog.cpp" />
+    <ClCompile Include="StringManager.cpp" />
+    <ClCompile Include="TextureInfoDialog.cpp" />
+    <ClCompile Include="TextureLayer.cpp" />
+    <ClCompile Include="TextureListCtrl.cpp" />
+    <ClCompile Include="TextureListDialog.cpp" />
+    <ClCompile Include="UpdateNewsDialog.cpp" />
+    <ClCompile Include="UvAniListDialog.cpp" />
+    <ClCompile Include="Venus.cpp" />
+    <ClCompile Include="VenusAPI.cpp" />
+    <ClCompile Include="VenusCamera.cpp" />
+    <ClCompile Include="VenusConfig.cpp" />
+    <ClCompile Include="VenusDoc.cpp" />
+    <ClCompile Include="VenusEventBall.cpp" />
+    <ClCompile Include="VenusEventEnemy.cpp" />
+    <ClCompile Include="VenusFrame.cpp" />
+    <ClCompile Include="VenusFramework.cpp" />
+    <ClCompile Include="VenusGrid.cpp" />
+    <ClCompile Include="VenusGridCtrl.cpp" />
+    <ClCompile Include="VenusPlayer.cpp" />
+    <ClCompile Include="VenusPlayerEvent.cpp" />
+    <ClCompile Include="VenusPlayerEventManager.cpp" />
+    <ClCompile Include="VenusPropertyContainer.cpp" />
+    <ClCompile Include="VenusPropertyContainer_Spline.cpp" />
+    <ClCompile Include="VenusView.cpp" />
+    <ClCompile Include="VenusVisualManager.cpp" />
+    <ClCompile Include="VenusXMLDoc.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ActionListCtrl.h" />
+    <ClInclude Include="ActionListDialog.h" />
+    <ClInclude Include="AnimationListDialog.h" />
+    <ClInclude Include="AvatarPropertyDialog.h" />
+    <ClInclude Include="Control\AutoFont.h" />
+    <ClInclude Include="Control\btnst.h" />
+    <ClInclude Include="Control\ColorButton.h" />
+    <ClInclude Include="Control\ComboInListView.h" />
+    <ClInclude Include="Control\Dib.h" />
+    <ClInclude Include="Control\listeditctrl.h" />
+    <ClInclude Include="Control\MacButtons.h" />
+    <ClInclude Include="Control\MacProgressCtrl.h" />
+    <ClInclude Include="Control\MacSliderCtrl.h" />
+    <ClInclude Include="Control\RollupCtrl.h" />
+    <ClInclude Include="Control\Sizecbar.h" />
+    <ClInclude Include="Control\SizingTabCtrlBar.h" />
+    <ClInclude Include="Control\supergridctrl.h" />
+    <ClInclude Include="Control\SXbutton.h" />
+    <ClInclude Include="Control\TrueColorToolBar.h" />
+    <ClInclude Include="Control\WBButton.h" />
+    <ClInclude Include="Control\ztimeline.h" />
+    <ClInclude Include="CreateSplinePathDialog.h" />
+    <ClInclude Include="DataTreeCtrl.h" />
+    <ClInclude Include="EditDialog.h" />
+    <ClInclude Include="EffectEditLayer.h" />
+    <ClInclude Include="EffectListCtrl.h" />
+    <ClInclude Include="EffectListDialog.h" />
+    <ClInclude Include="EffectPropertyDialog.h" />
+    <ClInclude Include="EnemyPropertyDialog.h" />
+    <ClInclude Include="EventLayer.h" />
+    <ClInclude Include="EventListCtrl.h" />
+    <ClInclude Include="EventListDialog.h" />
+    <ClInclude Include="Gfl\libgfl.h" />
+    <ClInclude Include="Gfl\libgfle.h" />
+    <ClInclude Include="InputBox.h" />
+    <ClInclude Include="InstanceEffectDialog.h" />
+    <ClInclude Include="LightDialog.h" />
+    <ClInclude Include="Manipulator.h" />
+    <ClInclude Include="MeshLayer.h" />
+    <ClInclude Include="MeshListCtrl.h" />
+    <ClInclude Include="MeshListDialog.h" />
+    <ClInclude Include="MiniDump.h" />
+    <ClInclude Include="NtlLighting.h" />
+    <ClInclude Include="NtlLightingController.h" />
+    <ClInclude Include="NtlLightingStrip.h" />
+    <ClInclude Include="NtlTreeXml.h" />
+    <ClInclude Include="OptionDialog.h" />
+    <ClInclude Include="PathLayer.h" />
+    <ClInclude Include="PostEffectDialog.h" />
+    <ClInclude Include="ProgressDialog.h" />
+    <ClInclude Include="PropertyControlID.h" />
+    <ClInclude Include="Property\N3Slider.h" />
+    <ClInclude Include="Property\PropTree.h" />
+    <ClInclude Include="Property\PropTreeInfo.h" />
+    <ClInclude Include="Property\PropTreeItem.h" />
+    <ClInclude Include="Property\PropTreeItemColor.h" />
+    <ClInclude Include="Property\PropTreeItemCombo.h" />
+    <ClInclude Include="Property\PropTreeItemEdit.h" />
+    <ClInclude Include="Property\PropTreeItemSlider.h" />
+    <ClInclude Include="Property\PropTreeItemStatic.h" />
+    <ClInclude Include="Property\PropTreeList.h" />
+    <ClInclude Include="Resource.h" />
+    <ClInclude Include="Splash.h" />
+    <ClInclude Include="SplinePathListCtrl.h" />
+    <ClInclude Include="SplinePathListDialog.h" />
+    <ClInclude Include="SplinePathPropertyDialog.h" />
+    <ClInclude Include="StatusBarDialog.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="StringDialog.h" />
+    <ClInclude Include="StringManager.h" />
+    <ClInclude Include="TextureInfoDialog.h" />
+    <ClInclude Include="TextureLayer.h" />
+    <ClInclude Include="TextureListCtrl.h" />
+    <ClInclude Include="TextureListDialog.h" />
+    <ClInclude Include="UpdateNewsDialog.h" />
+    <ClInclude Include="UvAniListDialog.h" />
+    <ClInclude Include="Venus.h" />
+    <ClInclude Include="VenusAPI.h" />
+    <ClInclude Include="VenusCamera.h" />
+    <ClInclude Include="VenusConfig.h" />
+    <ClInclude Include="VenusDefine.h" />
+    <ClInclude Include="VenusDoc.h" />
+    <ClInclude Include="VenusEventBall.h" />
+    <ClInclude Include="VenusEventEnemy.h" />
+    <ClInclude Include="VenusFrame.h" />
+    <ClInclude Include="VenusFramework.h" />
+    <ClInclude Include="VenusGrid.h" />
+    <ClInclude Include="VenusGridCtrl.h" />
+    <ClInclude Include="VenusPlayer.h" />
+    <ClInclude Include="VenusPlayerEvent.h" />
+    <ClInclude Include="VenusPlayerEventManager.h" />
+    <ClInclude Include="VenusPropertyContainer.h" />
+    <ClInclude Include="VenusView.h" />
+    <ClInclude Include="VenusVisualManager.h" />
+    <ClInclude Include="VenusXMLDoc.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="Gfl\libgfl.lib" />
+    <Library Include="Gfl\libgfle.lib" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="libgfl190.dll" />
+    <None Include="libgfle190.dll" />
+    <None Include="res\fpoint.cur" />
+    <None Include="res\spliter.cur" />
+    <None Include="res\Venus.rc2" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\..\..\DragonBall\Tool\VenusData\VenusIcon.bmp" />
+    <Image Include="res\Animation.ico" />
+    <Image Include="res\Category.ico" />
+    <Image Include="res\CircleEmitter.ICO" />
+    <Image Include="res\EffectListImage.bmp" />
+    <Image Include="res\EmitterColor.ico" />
+    <Image Include="res\EmitterSize.ico" />
+    <Image Include="res\expanddown.bmp" />
+    <Image Include="res\expanddown_blue.bmp" />
+    <Image Include="res\expandleft.bmp" />
+    <Image Include="res\expandleft_blue.bmp" />
+    <Image Include="res\PointEmitter.ICO" />
+    <Image Include="res\ResourceEffect.ico" />
+    <Image Include="res\ResourceParticle.ICO" />
+    <Image Include="res\SphereEmitter.ICO" />
+    <Image Include="res\TabImage.bmp" />
+    <Image Include="res\Toolbar.bmp" />
+    <Image Include="res\toolbar1.bmp" />
+    <Image Include="res\ToolbarDraw.bmp" />
+    <Image Include="res\ToolbarDrawHot.bmp" />
+    <Image Include="res\Venus.ico" />
+    <Image Include="res\VenusDoc.ico" />
+    <Image Include="res\VenusIcon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Venus.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="StringType.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\DboShared\NtlShared2\NtlShared.vcxproj">
+      <Project>{573eb1e4-7620-479e-8ccf-def06491545b}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\NtlLib\Shared\NtlXMLLoader\NtlXMLLoader.vcxproj">
+      <Project>{9d941cac-4183-44e3-aec3-817c0a32d1dd}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\NtlLib\Shared\Util\Util.vcxproj">
+      <Project>{5229f8ae-a505-4077-b6d3-5ce0164dfe73}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Lib\NtlCore\NtlCore.vcxproj">
+      <Project>{2d91cafc-1814-4cb4-b844-4e55f937d051}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Lib\NtlFlasher\NtlFlasher.vcxproj">
+      <Project>{de6f78c4-d4bd-4594-b1f0-e7fe85e30ee5}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Lib\NtlFramework\NtlFramework.vcxproj">
+      <Project>{a2e4d1ec-1758-44e0-b3c9-955c286f84be}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Lib\NtlGui\NtlGui.vcxproj">
+      <Project>{4cacaf6f-333c-4ac8-bb0e-ce8eee4b44a3}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Lib\NtlPresentation\NtlPresentation.vcxproj">
+      <Project>{0ec8e06b-8138-4bfd-8af7-9cad1f2f65ac}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Lib\NtlSound\NtlSound.vcxproj">
+      <Project>{ac4b3632-113d-40e1-b22f-0e6d9d1fd15a}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Lib\Ntl_Plugin_Collis\Ntl_Plugin_Collis.vcxproj">
+      <Project>{4bd7b6fb-4afc-4880-a136-3b59f384ed9e}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Lib\Ntl_Plugin_Toon\Ntl_Plugin_Toon.vcxproj">
+      <Project>{0a07ccc0-9f5d-4e94-b7d6-68bd00dfd37d}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Lib\Ntl_Plugin_World\Ntl_Plugin_World.vcxproj">
+      <Project>{837e47aa-e57b-46ff-b42f-26f23bcba8df}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties RESOURCE_FILE="Venus.rc" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

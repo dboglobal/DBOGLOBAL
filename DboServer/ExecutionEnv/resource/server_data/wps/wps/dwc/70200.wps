@@ -1,0 +1,6 @@
+-- DWC 3 dummy script
+
+GameStage(0)
+--[
+--]
+End()

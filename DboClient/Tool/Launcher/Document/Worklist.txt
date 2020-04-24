@@ -1,0 +1,10 @@
+2007.2.21
+ CurrentVersion 표시, Start Button Enable, Disable
+ Version 0.1.05로 올림 0.1.04만 Patch 했음
+
+ 추후에 할거
+ Patch Server 점검중 -> Patch 안되게, Patch 안될 때 문구 출력, 모두 Patch가 안된다, 특별한 경우 되게
+ Launcher Patch 일 경우 Launcher Application이 제일 상위 전면에서 실행
+
+                        
+

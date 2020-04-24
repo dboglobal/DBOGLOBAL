@@ -1,0 +1,12 @@
+<obstacles3D>
+    <obstacle3D>
+        <point3D x="-340" y="-436" z="0"/>
+        <point3D x="523" y="-436" z="0"/>
+        <point3D x="-340" y="343" z="0"/>
+        <point3D x="523" y="343" z="0"/>
+        <point3D x="-340" y="-436" z="799"/>
+        <point3D x="523" y="-436" z="799"/>
+        <point3D x="-340" y="343" z="799"/>
+        <point3D x="523" y="343" z="799"/>
+    </obstacle3D>
+</obstacles3D>

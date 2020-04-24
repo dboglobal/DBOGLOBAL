@@ -1,0 +1,77 @@
+
+GameStage(0)
+--[
+        Action( "change sps scene" )
+        --[
+                Param( "index", 1352102 )
+                Param( "play script", 1352102 )
+                Param( "play scene", 1 )
+        --]
+        End()
+        
+        Action( "wait" )
+        --[
+                Condition( "recv event from sps" )
+                --[
+                        Param( "object type", "npc" )
+                        Param( "object index", 1352102 )
+                        Param( "event id", 574 )
+                --]
+                End()
+        --]
+        End()
+
+        Action( "send event to ts" )
+        --[
+                Param( "trigger type", "quest" )
+                Param( "apply type", "register all" )
+                Param( "event id", 573 )
+        --]
+        End()
+
+        Action( "remove npc" )
+        --[
+                Param( "index", 1352102 )
+                Param( "type", "clear" )
+        --]
+        End()
+        
+        Action( "add npc" )
+        --[
+                Param( "index", 1352102 )
+                Param( "loc x", -996.32 )
+                Param( "loc y", -135.34 )
+                Param( "loc z", -3698.81 )
+                Param( "dir x", 0.92 )
+                Param( "dir z", 0.39 )
+                Param( "no spawn wait", "true" )
+                Param( "stand alone", "true" )
+        --]
+        End()        
+	
+--]
+End()
+
+GameFailed()
+--[
+        Action( "remove npc" )
+        --[
+                Param( "index", 1352102 )
+                Param( "type", "clear" )
+        --]
+        End()
+        
+        Action( "add npc" )
+        --[
+                Param( "index", 1352102 )
+                Param( "loc x", -996.32 )
+                Param( "loc y", -135.34 )
+                Param( "loc z", -3698.81 )
+                Param( "dir x", 0.92 )
+                Param( "dir z", 0.39 )
+                Param( "no spawn wait", "true" )
+                Param( "stand alone", "true" )
+        --]
+        End()
+--]
+End()
