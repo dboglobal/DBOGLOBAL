@@ -7,5 +7,12 @@
 - Xtreme ToolkitPro v13.2.1 - Required for Tools
 - GFx SDK 3.3
 
+## Requirements
+- DirectX9 SDK
+- Daffodil
+- Visual Studio 2010
+- Visual Studio 2019
+
+
 # Info
- Required 3rd Party apps can be found in our website https://forum.dboglobal.to
+ All requirements can be found in our website https://forum.dboglobal.to
