@@ -1,3 +1,4 @@
+Xtreme ToolkitPro v13.2.1\
 DboClient\.vs\
 DboClient\Release4Client\
 DboServer\.vs\
@@ -14,9 +15,7 @@ DboShared\NtlGameTable\Release4Server\
 DboShared\NtlGameTable\NtlShared2\
 DboShared\NtlGameTable\NtlShared2\
 NtlLib\Client\NtlClientNet\Release4Client\
-NtlLib\Server\boost_1_64_0\
 NtlLib\Server\Database\Release\
-NtlLib\Server\mysql57\
 NtlLib\Server\NtlNetwork\Release\
 NtlLib\Server\NtlSfx\Release\
 NtlLib\Server\NtlSystem\Release\
