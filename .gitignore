@@ -1,8 +1,10 @@
 Xtreme ToolkitPro v13.2.1
 DboClient/.vs
 DboClient/Release4Client
+DboClient/Release4Tools
 DboClient/Client/(Configuration)
 DboClient/Lib/NtlFlasher/GFx SDK 3.3
+DboClient/Lib/Discord/Release4Client
 DboServer/.vs
 DboServer/Server/AuthServer/ExecutionEnv
 DboServer/Server/CharServer/ExecutionEnv

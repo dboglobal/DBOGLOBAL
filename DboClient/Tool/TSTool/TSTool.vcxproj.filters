@@ -1,10 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="리소스 파일">
-      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
-      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav</Extensions>
-    </Filter>
     <Filter Include="Basic MFC">
       <UniqueIdentifier>{3547c3f6-874c-4eab-a6a3-47e39cb1b627}</UniqueIdentifier>
     </Filter>
@@ -77,29 +73,33 @@
     <Filter Include="QuestText">
       <UniqueIdentifier>{f5461f5e-07ea-4453-94ac-76e926616a34}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Resource">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav</Extensions>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Image Include="res\containerbar.bmp">
-      <Filter>리소스 파일</Filter>
+      <Filter>Resource</Filter>
     </Image>
     <Image Include="res\Toolbar.bmp">
-      <Filter>리소스 파일</Filter>
+      <Filter>Resource</Filter>
     </Image>
     <Image Include="res\TSTool.ico">
-      <Filter>리소스 파일</Filter>
+      <Filter>Resource</Filter>
     </Image>
     <Image Include="res\TSToolDoc.ico">
-      <Filter>리소스 파일</Filter>
+      <Filter>Resource</Filter>
     </Image>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="TSTool.rc">
-      <Filter>리소스 파일</Filter>
+      <Filter>Resource</Filter>
     </ResourceCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="res\TSTool.rc2">
-      <Filter>리소스 파일</Filter>
+      <Filter>Resource</Filter>
     </None>
   </ItemGroup>
   <ItemGroup>

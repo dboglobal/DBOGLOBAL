@@ -79,7 +79,7 @@ private:
 	MapMetaTag			m_mapMetaTag;
 
 	typedef VOID (CHtmlMetaTagContainter::*ParsingCall)(WCHAR*, const WCHAR*, INT);
-	typedef stdext::hash_map<std::wstring, ParsingCall> HMapTagToken;
+	typedef std::unordered_map<std::wstring, ParsingCall> HMapTagToken;
 	HMapTagToken		m_hmapTag;						// hash-map Token
 
 	CHtmlMetaTag		*m_pCurrMetaTag;
@@ -158,7 +158,7 @@ public:
 
 	// tag token parsing handler
 	typedef VOID (CHtmlDoc::*ParsingCall)(WCHAR*, const WCHAR*, INT);
-	typedef stdext::hash_map<std::wstring, ParsingCall> HMapTagToken;
+	typedef std::unordered_map<std::wstring, ParsingCall> HMapTagToken;
 	HMapTagToken m_hmapTag;
 
 	static UserTagFunc m_fnUserTag;

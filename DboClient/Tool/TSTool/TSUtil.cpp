@@ -61,7 +61,6 @@ CTableContainer* CreateTableContainer( const char* pPath, CTable::eLOADING_METHO
 	flagManager.Set(CTableContainer::TABLE_MOB_MOVE_PATTERN);	
 	flagManager.Set(CTableContainer::TABLE_DYNAMIC_OBJECT);		
 	flagManager.Set(CTableContainer::TABLE_ITEM_RECIPE);		
-	flagManager.Set(CTableContainer::TABLE_ITEM_UPGRADE);		
 	flagManager.Set(CTableContainer::TABLE_MIX_MACHINE);		
 	flagManager.Set(CTableContainer::TABLE_DOJO);				
 	flagManager.Set(CTableContainer::TABLE_QUEST_REWARD);		
@@ -109,7 +108,6 @@ CTableContainer* CreateTableContainer( const char* pPath, CTable::eLOADING_METHO
 	fileNameList.SetFileName(CTableContainer::TABLE_MOB_MOVE_PATTERN,		"Table_Mob_Move_Pattern_Data");
 	fileNameList.SetFileName(CTableContainer::TABLE_DYNAMIC_OBJECT,			"Table_Dynamic_Object_Data");
 	fileNameList.SetFileName(CTableContainer::TABLE_ITEM_RECIPE,			"Table_Item_Recipe_Data");
-	fileNameList.SetFileName(CTableContainer::TABLE_ITEM_UPGRADE,			"Table_Item_Upgrade_Data");
 	fileNameList.SetFileName(CTableContainer::TABLE_MIX_MACHINE,			"Table_Item_Mix_Machine_Data");
 	fileNameList.SetFileName(CTableContainer::TABLE_DOJO,					"Table_Dojo_Data");
 	fileNameList.SetFileName(CTableContainer::TABLE_QUEST_REWARD,			"Table_Quest_Reward_Data");

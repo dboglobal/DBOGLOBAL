@@ -266,7 +266,7 @@ protected:
 protected:
 	// 주어진 키워드에 따라서 호출될 핸들러 함수들을 미리 정의한다.
 	typedef BOOL (CParticleDoc::*ParsingCall)(char*);
-	typedef stdext::hash_map<std::string, ParsingCall> HMapHandler;
+	typedef std::unordered_map<std::string, ParsingCall> HMapHandler;
 	HMapHandler	m_hmapHandler;
 
 	typedef std::map< std::string, CParticleGroup* >			MAPGROUP;

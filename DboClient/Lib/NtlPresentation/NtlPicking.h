@@ -70,7 +70,7 @@ public:
 	};
 	typedef std::list<SPICK_INFO*> listdef_PICK_INFO_LIST;
 	typedef std::vector<SPICK_INFO*> vecdef_PICK_INFO_LIST;
-	typedef stdext::hash_map<RwUInt16, SPICK_INFO*> hashdef_PICK_INFO_LIST;
+	typedef std::unordered_map<RwUInt16, SPICK_INFO*> hashdef_PICK_INFO_LIST;
 
 	class CPickEntityPool
 	{

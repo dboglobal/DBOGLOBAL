@@ -3598,7 +3598,7 @@ void CInfoWindowGui::SetBuffInfo_AutoRecover(CNtlSobBuffAttr * pAttr)
 	m_pmdBox->Format("ExtendBuffRemainArray", FONT_TEXT, COMP_TEXT_LEFT, INFOCOLOR_0, 0, FALSE, GetDisplayStringManager()->GetString("DST_AUTO_RECOVER_ARRAY"), buf);
 	
 	if(pCommonConfig->adwValue[3] > 0)
-		m_pmdBox->Format("ExtendBuffRemainTime", FONT_TEXT, COMP_TEXT_LEFT, INFOCOLOR_0, 0, FALSE, GetDisplayStringManager()->GetString("DST_AUTO_RECOVER_COMMENT1"), Logic_GetTimeStringWithMillisecond(pCommonConfig->adwValue[3]));
+		m_pmdBox->Format("ExtendBuffRemainTime", FONT_TEXT, COMP_TEXT_LEFT, INFOCOLOR_0, 0, FALSE, GetDisplayStringManager()->GetString("DST_AUTO_RECOVER_COMMENT1"), Logic_GetTimeStringWithMillisecond((RwReal)pCommonConfig->adwValue[3]));
 }
 
 // REWARD SUB ////////////////////////////////////////////////////////////////////////////////////////////////////////////

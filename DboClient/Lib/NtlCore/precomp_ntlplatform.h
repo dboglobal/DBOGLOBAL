@@ -26,7 +26,6 @@
 #include <string>
 #include <map>
 #include <list>
-#include <hash_map>
 #include <vector>
 #include <deque>
 

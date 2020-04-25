@@ -9,8 +9,6 @@
 
 ## Requirements
 - DirectX9 SDK
-- Daffodil
-- Visual Studio 2010
 - Visual Studio 2019
 
 

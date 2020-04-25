@@ -13,7 +13,7 @@
 #ifndef __NTL_PLRESOURCE_PACK_H__
 #define __NTL_PLRESOURCE_PACK_H__
 
-#include <hash_map>
+#include <unordered_map>
 #include "NtlCallbackWidget.h"
 #include "NtlDebug.h"
 
@@ -156,7 +156,7 @@ class CNtlPLResourcePack
 {
 public:
 	
-	typedef stdext::hash_map<std::string, SFilePackHeaderElement*> HMapPackHeader;
+	typedef std::unordered_map<std::string, SFilePackHeaderElement*> HMapPackHeader;
 
 protected:
 

@@ -1,1 +1,94 @@
-﻿
+﻿  stdafx.cpp
+  NtlAvatar.cpp
+  NtlBattle.cpp
+  NtlBudokai.cpp
+  NtlCCBD.cpp
+  NtlCharacter.cpp
+  NtlCharacterState.cpp
+  NtlGuild.cpp
+  NtlItem.cpp
+  NtlMovement.cpp
+  NtlObject.cpp
+E:\DBOG\DBOGLOBAL_DEV\DboShared\NtlShared2\NtlAvatar.cpp(486,22): warning C4366: The result of the unary '&' operator may be unaligned
+E:\DBOG\DBOGLOBAL_DEV\DboShared\NtlShared2\NtlAvatar.cpp(511,44): warning C4366: The result of the unary '&' operator may be unaligned
+E:\DBOG\DBOGLOBAL_DEV\DboShared\NtlShared2\NtlAvatar.cpp(512,42): warning C4366: The result of the unary '&' operator may be unaligned
+E:\DBOG\DBOGLOBAL_DEV\DboShared\NtlShared2\NtlAvatar.cpp(513,26): warning C4366: The result of the unary '&' operator may be unaligned
+E:\DBOG\DBOGLOBAL_DEV\DboShared\NtlShared2\NtlAvatar.cpp(514,26): warning C4366: The result of the unary '&' operator may be unaligned
+  NtlPacketMQ.cpp
+E:\DBOG\DBOGLOBAL_DEV\DboShared\NtlShared2\NtlAvatar.cpp(515,30): warning C4366: The result of the unary '&' operator may be unaligned
+  NtlPacketQM.cpp
+E:\DBOG\DBOGLOBAL_DEV\DboShared\NtlShared2\NtlAvatar.cpp(516,31): warning C4366: The result of the unary '&' operator may be unaligned
+E:\DBOG\DBOGLOBAL_DEV\DboShared\NtlShared2\NtlAvatar.cpp(531,38): warning C4366: The result of the unary '&' operator may be unaligned
+E:\DBOG\DBOGLOBAL_DEV\DboShared\NtlShared2\NtlAvatar.cpp(532,36): warning C4366: The result of the unary '&' operator may be unaligned
+E:\DBOG\DBOGLOBAL_DEV\DboShared\NtlShared2\NtlAvatar.cpp(533,37): warning C4366: The result of the unary '&' operator may be unaligned
+E:\DBOG\DBOGLOBAL_DEV\DboShared\NtlShared2\NtlAvatar.cpp(534,35): warning C4366: The result of the unary '&' operator may be unaligned
+E:\DBOG\DBOGLOBAL_DEV\DboShared\NtlShared2\NtlAvatar.cpp(535,35): warning C4366: The result of the unary '&' operator may be unaligned
+E:\DBOG\DBOGLOBAL_DEV\DboShared\NtlShared2\NtlAvatar.cpp(536,38): warning C4366: The result of the unary '&' operator may be unaligned
+E:\DBOG\DBOGLOBAL_DEV\DboShared\NtlShared2\NtlAvatar.cpp(537,36): warning C4366: The result of the unary '&' operator may be unaligned
+E:\DBOG\DBOGLOBAL_DEV\DboShared\NtlShared2\NtlAvatar.cpp(538,41): warning C4366: The result of the unary '&' operator may be unaligned
+E:\DBOG\DBOGLOBAL_DEV\DboShared\NtlShared2\NtlAvatar.cpp(539,42): warning C4366: The result of the unary '&' operator may be unaligned
+E:\DBOG\DBOGLOBAL_DEV\DboShared\NtlShared2\NtlAvatar.cpp(540,36): warning C4366: The result of the unary '&' operator may be unaligned
+  NtlPetition.cpp
+E:\DBOG\DBOGLOBAL_DEV\DboShared\NtlShared2\NtlAvatar.cpp(541,44): warning C4366: The result of the unary '&' operator may be unaligned
+E:\DBOG\DBOGLOBAL_DEV\DboShared\NtlShared2\NtlAvatar.cpp(542,36): warning C4366: The result of the unary '&' operator may be unaligned
+E:\DBOG\DBOGLOBAL_DEV\DboShared\NtlShared2\NtlAvatar.cpp(543,44): warning C4366: The result of the unary '&' operator may be unaligned
+E:\DBOG\DBOGLOBAL_DEV\DboShared\NtlShared2\NtlAvatar.cpp(548,35): warning C4366: The result of the unary '&' operator may be unaligned
+E:\DBOG\DBOGLOBAL_DEV\DboShared\NtlShared2\NtlAvatar.cpp(549,35): warning C4366: The result of the unary '&' operator may be unaligned
+E:\DBOG\DBOGLOBAL_DEV\DboShared\NtlShared2\NtlAvatar.cpp(550,37): warning C4366: The result of the unary '&' operator may be unaligned
+E:\DBOG\DBOGLOBAL_DEV\DboShared\NtlShared2\NtlAvatar.cpp(551,45): warning C4366: The result of the unary '&' operator may be unaligned
+E:\DBOG\DBOGLOBAL_DEV\DboShared\NtlShared2\NtlAvatar.cpp(552,30): warning C4366: The result of the unary '&' operator may be unaligned
+E:\DBOG\DBOGLOBAL_DEV\DboShared\NtlShared2\NtlAvatar.cpp(553,33): warning C4366: The result of the unary '&' operator may be unaligned
+E:\DBOG\DBOGLOBAL_DEV\DboShared\NtlShared2\NtlAvatar.cpp(554,42): warning C4366: The result of the unary '&' operator may be unaligned
+  NtlRankBattle.cpp
+E:\DBOG\DBOGLOBAL_DEV\DboShared\NtlShared2\NtlAvatar.cpp(555,38): warning C4366: The result of the unary '&' operator may be unaligned
+E:\DBOG\DBOGLOBAL_DEV\DboShared\NtlShared2\NtlAvatar.cpp(556,47): warning C4366: The result of the unary '&' operator may be unaligned
+E:\DBOG\DBOGLOBAL_DEV\DboShared\NtlShared2\NtlAvatar.cpp(557,31): warning C4366: The result of the unary '&' operator may be unaligned
+E:\DBOG\DBOGLOBAL_DEV\DboShared\NtlShared2\NtlAvatar.cpp(558,40): warning C4366: The result of the unary '&' operator may be unaligned
+E:\DBOG\DBOGLOBAL_DEV\DboShared\NtlShared2\NtlAvatar.cpp(559,39): warning C4366: The result of the unary '&' operator may be unaligned
+E:\DBOG\DBOGLOBAL_DEV\DboShared\NtlShared2\NtlAvatar.cpp(560,45): warning C4366: The result of the unary '&' operator may be unaligned
+E:\DBOG\DBOGLOBAL_DEV\DboShared\NtlShared2\NtlAvatar.cpp(561,43): warning C4366: The result of the unary '&' operator may be unaligned
+E:\DBOG\DBOGLOBAL_DEV\DboShared\NtlShared2\NtlAvatar.cpp(570,38): warning C4366: The result of the unary '&' operator may be unaligned
+E:\DBOG\DBOGLOBAL_DEV\DboShared\NtlShared2\NtlAvatar.cpp(571,36): warning C4366: The result of the unary '&' operator may be unaligned
+  NtlReport.cpp
+  NtlService.cpp
+  NtlSkill.cpp
+  NtlStatistics.cpp
+  NtlSystemTool.cpp
+  NtlWorld.cpp
+  NtlRandom.cpp
+  NtlPacketUtil.cpp
+  NtlPacketAU.cpp
+  NtlPacketUA.cpp
+  NtlPacketGU.cpp
+  NtlPacketUG.cpp
+  NtlPacketCU.cpp
+  NtlPacketUC.cpp
+  NtlPacketTU.cpp
+  NtlPacketUT.cpp
+  NtlPacketAM.cpp
+E:\DBOG\DBOGLOBAL_DEV\DboShared\NtlShared2\NtlSkill.cpp(552): warning C4702: unreachable code
+  NtlPacketMA.cpp
+  NtlPacketCM.cpp
+  NtlPacketMC.cpp
+  NtlPacketGM.cpp
+  NtlPacketMG.cpp
+  NtlPacketMT.cpp
+  NtlPacketTM.cpp
+  NtlPacketGN.cpp
+  NtlPacketNG.cpp
+  NtlPacketCQ.cpp
+  NtlPacketQC.cpp
+  NtlPacketGQ.cpp
+  NtlPacketQG.cpp
+  NtlPacketGT.cpp
+  NtlPacketTG.cpp
+  NtlPacketTL.cpp
+  NtlPacketQT.cpp
+  NtlPacketTQ.cpp
+  NtlPacketXR.cpp
+  NtlBBox.cpp
+  NtlLine.cpp
+  NtlSphere.cpp
+  NtlSvrMath.cpp
+  NtlVector.cpp
+  NtlShared.vcxproj -> E:\DBOG\DBOGLOBAL_DEV\DboServer\x64\Release4Server\NtlShared.lib

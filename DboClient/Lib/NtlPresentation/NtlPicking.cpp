@@ -3,7 +3,7 @@
 #include "precomp_ntlpresentation.h"
 #include <d3d9.h>
 #include <list>
-#include <hash_map>
+#include <unordered_map>
 #include <vector>
 #include "rwcore.h"
 #include "rpworld.h"

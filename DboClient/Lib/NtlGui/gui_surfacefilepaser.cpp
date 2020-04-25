@@ -194,7 +194,7 @@ CSurfaceFileParser::CSurfaceFileParser(const std::string &filename)
 			else if (token == ";")
 			{
 				stlCompStack.top().second.Options.m_stlOptions.insert(std::make_pair(strVariableName, ""));
-                strVariableName = "";
+				strVariableName = "";
 				stlVariableValue.clear();
 				State = PrevState;
 			}

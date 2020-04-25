@@ -98,7 +98,7 @@ public:
 	//	type define
 	//--------------------------------------------------------------------
 
-	typedef stdext::hash_map< unsigned int, CNtlNaviGroupOutDoorInfo* > hashdef_OD_INFO_LIST;
+	typedef std::unordered_map< unsigned int, CNtlNaviGroupOutDoorInfo* > hashdef_OD_INFO_LIST;
 	typedef std::vector< CNtlNaviGroupOutDoorInfo::sNAVI_OBJECT_LIST* > vecdef_NAVIOBJ_LIST;
 	typedef std::map< std::string, sNAVI_RES_ENTITY > mapdef_NAVI_RES_ENTITY_LIST;
 	typedef std::vector< iFaceVertexMesh* > vecdef_FACE_VERTEX_MESH_LIST;

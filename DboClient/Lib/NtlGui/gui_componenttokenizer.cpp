@@ -516,7 +516,7 @@ VOID CComponentTokenizerW::Tokenize(VOID)
 				}
 				if (temp_pos == m_nTotalSize)
 				{
-					WriteError(L"Missing '"L"' following '"L"'-begin");
+					WriteError(L"Missing L following L -begin");
 					break;
 				}
 

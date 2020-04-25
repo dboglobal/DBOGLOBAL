@@ -68,7 +68,7 @@ private:
 // Signals
 private:
 
-	typedef struct PROGRESS_BUFFER
+	struct PROGRESS_BUFFER
 	{
 		int nValue;
 		float fUV;

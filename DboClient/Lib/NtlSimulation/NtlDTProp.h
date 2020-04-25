@@ -13,6 +13,7 @@
 #ifndef __NTL_DTPROP_H__
 #define __NTL_DTPROP_H__
 
+#include <unordered_map>
 #include "NtlSerializer.h"
 
 //////////////////////////////////////////////////////////////////////////////////////////
@@ -337,7 +338,7 @@ inline RwReal CNtlDTSpline::GetUniformSpeed(void) const
 #define DTCONTAINER_SERIALIZE_PROPDATA		2
 #define DTCONTAINER_SERIALIZE_END			0xff
 
-typedef stdext::hash_map<std::string, CNtlDTProp*> HMapDTProp;
+typedef std::unordered_map<std::string, CNtlDTProp*> HMapDTProp;
 
 class CNtlDTContainer
 {
