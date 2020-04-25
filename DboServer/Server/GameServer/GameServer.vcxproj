@@ -1461,9 +1461,6 @@
     <ProjectReference Include="..\..\..\NtlLib\Shared\Util\Util.vcxproj">
       <Project>{5229f8ae-a505-4077-b6d3-5ce0164dfe73}</Project>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\NtlLib\Shared\Zip\zlib123\projects\visualdotnet2005\zlib.vcxproj">
-      <Project>{9b2b6c11-764e-4d4b-8db2-f91ac99e0b93}</Project>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

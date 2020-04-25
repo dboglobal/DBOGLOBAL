@@ -4,7 +4,7 @@
 
 #include "NtlMovieDefine.h"
 #include "BandiVideo.h"
-
+#include <string>
 
 interface IBandiVideo;
 
