@@ -130,7 +130,6 @@ void DeleteTableContainer( CTableContainer*& pTblContainer )
 {
 	if ( pTblContainer )
 	{
-		pTblContainer->Destroy();
 		delete pTblContainer;
 		pTblContainer = NULL;
 	}

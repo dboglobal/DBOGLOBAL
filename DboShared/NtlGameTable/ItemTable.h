@@ -10,10 +10,6 @@
 #pragma pack(push, 4)
 struct sITEM_TBLDAT : public sTBLDAT
 {
-//	sITEM_TBLDAT()
-//	{
-//		bValidity_Able = true;
-//	};
 
 public:
 	bool			bValidity_Able;

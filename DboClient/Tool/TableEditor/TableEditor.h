@@ -4,7 +4,7 @@
 #pragma once
 
 #ifndef __AFXWIN_H__
-	#error "include 'stdafx.h' before including this file for PCH"
+	#error "include 'pch.h' before including this file for PCH"
 #endif
 
 #include "resource.h"       // main symbols
@@ -14,7 +14,7 @@
 // See TableEditor.cpp for the implementation of this class
 //
 
-class CTableEditorApp : public CWinApp
+class CTableEditorApp : public CWinAppEx
 {
 public:
 	CTableEditorApp();
@@ -25,6 +25,14 @@ public:
 	virtual BOOL InitInstance();
 	virtual int ExitInstance();
 
+// Implementation
+	BOOL  m_bHiColorIcons;
+
+	virtual void PreLoadState();
+	virtual void LoadCustomState();
+	virtual void SaveCustomState();
+
+	afx_msg void OnAppAbout();
 	DECLARE_MESSAGE_MAP()
 };
 

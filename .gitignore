@@ -32,6 +32,7 @@ DboClient/Lib/NtlSound/Release
 DboClient/Lib/NtlSound/Release4Tools
 DboClient/Tool/PackEditor/Release4Tools
 DboClient/Tool/TSTool/Release4Tools
+DboClient/Tool/TableEditor/Release4Tools
 DboServer/.vs
 DboServer/x64
 DboServer/Server/AuthServer/ExecutionEnv
