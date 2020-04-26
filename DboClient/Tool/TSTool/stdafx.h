@@ -23,11 +23,11 @@
 #endif						
 
 #ifndef _WIN32_WINDOWS		// Windows 98 이상에서만 기능을 사용할 수 있습니다.
-#define _WIN32_WINDOWS 0x0410 // Windows Me 이상에 맞도록 적합한 값으로 변경해 주십시오.
+#define _WIN32_WINDOWS 0x0501 // Windows Me 이상에 맞도록 적합한 값으로 변경해 주십시오.
 #endif
 
 #ifndef _WIN32_IE			// IE 6.0 이상에서만 기능을 사용할 수 있습니다.
-#define _WIN32_IE 0x0600	// 다른 버전의 IE에 맞도록 적합한 값으로 변경해 주십시오.
+#define _WIN32_IE 0x0501	// 다른 버전의 IE에 맞도록 적합한 값으로 변경해 주십시오.
 #endif
 
 #define _ATL_CSTRING_EXPLICIT_CONSTRUCTORS	// 일부 CString 생성자는 명시적으로 선언됩니다.

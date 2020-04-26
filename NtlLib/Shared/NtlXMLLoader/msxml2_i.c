@@ -5,12 +5,12 @@
 /* link this file in with the server and any clients */
 
 
- /* File created by MIDL compiler version 8.01.0622 */
-/* at Tue Jan 19 04:14:07 2038
+ /* File created by MIDL compiler version 7.00.0555 */
+/* at Sun Apr 26 12:05:15 2020
  */
 /* Compiler settings for MSXML Header Files\msxml2.idl:
-    Oicf, W1, Zp8, env=Win64 (32b run), target_arch=AMD64 8.01.0622 
-    protocol : all , ms_ext, c_ext, robust
+    Oicf, W1, Zp8, env=Win32 (32b run), target_arch=X86 7.00.0555 
+    protocol : dce , ms_ext, c_ext, robust
     error checks: allocation ref bounds_check enum stub_data 
     VC __declspec() decoration level: 
          __declspec(uuid()), __declspec(selectany), __declspec(novtable)
@@ -18,6 +18,7 @@
 */
 /* @@MIDL_FILE_HEADING(  ) */
 
+#pragma warning( disable: 4049 )  /* more than 64k source lines */
 
 
 #ifdef __cplusplus
@@ -62,9 +63,9 @@ typedef IID CLSID;
 #endif // CLSID_DEFINED
 
 #define MIDL_DEFINE_GUID(type,name,l,w1,w2,b1,b2,b3,b4,b5,b6,b7,b8) \
-        EXTERN_C __declspec(selectany) const type name = {l,w1,w2,{b1,b2,b3,b4,b5,b6,b7,b8}}
+        const type name = {l,w1,w2,{b1,b2,b3,b4,b5,b6,b7,b8}}
 
-#endif // !_MIDL_USE_GUIDDEF_
+#endif !_MIDL_USE_GUIDDEF_
 
 MIDL_DEFINE_GUID(IID, LIBID_MSXML2,0xf5078f18,0xc551,0x11d3,0x89,0xb9,0x00,0x00,0xf8,0x1f,0xe2,0x21);
 
