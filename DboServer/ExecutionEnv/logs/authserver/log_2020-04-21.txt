@@ -1,8 +1,0 @@
-[SYSTEM]	[2020-04-21 13:48:35:78]	Connecting to `127.0.0.1`, database `dbo_acc`...
- file[E:\DBOG\DBO\WORK-DBOG\DBOGLOBAL\NtlLib\Server\Database\MySQLDatabase.cpp]	line[52]	 function[MySQLDatabase::Initialize]	
-[SYSTEM]	[2020-04-21 13:48:37:129]	Connection failed due to: `Can't connect to MySQL server on '127.0.0.1' (10061)`
- file[E:\DBOG\DBO\WORK-DBOG\DBOGLOBAL\NtlLib\Server\Database\MySQLDatabase.cpp]	line[90]	 function[MySQLDatabase::Initialize]	
-[SYSTEM]	[2020-04-21 13:48:42:642]	Connecting to `127.0.0.1`, database `dbo_acc`...
- file[E:\DBOG\DBO\WORK-DBOG\DBOGLOBAL\NtlLib\Server\Database\MySQLDatabase.cpp]	line[52]	 function[MySQLDatabase::Initialize]	
-[SYSTEM]	[2020-04-21 13:48:44:658]	Connection failed due to: `Can't connect to MySQL server on '127.0.0.1' (10061)`
- file[E:\DBOG\DBO\WORK-DBOG\DBOGLOBAL\NtlLib\Server\Database\MySQLDatabase.cpp]	line[90]	 function[MySQLDatabase::Initialize]	
