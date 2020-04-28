@@ -34,6 +34,7 @@ DboClient/Tool/TSTool/Release4Tools
 DboClient/Tool/TableEditor/Release4Tools
 DboServer/.vs
 DboServer/x64
+DboServer/ExecutionEnv
 DboServer/Server/AuthServer/ExecutionEnv
 DboServer/Server/CharServer/ExecutionEnv
 DboServer/Server/ChatServer/ExecutionEnv
