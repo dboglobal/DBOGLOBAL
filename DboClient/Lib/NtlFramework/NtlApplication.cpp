@@ -641,16 +641,25 @@ RwBool CNtlApplication::ToggleFullMode(void)
 
 void CNtlApplication::ChangeVideoMode(RwInt32 iWidth, RwInt32 iHeight, RwInt32 iBitDepth)
 {
-	// FullScreen Mode가 아니라면 ChangeVideo Mode는 통하지 않는다.
+	// ChangeVideo Mode will not work unless it is in FullScreen Mode.
 	if(m_bFullScreen)
 	{
-
-		// Mode를 지원하는지 확인을 하고 지원한다면 적용한다.
+		// Check if Mode is supported and apply if supported.
 		RwInt32 nGcurSelVM = GetVideoMode(m_bFullScreen, iWidth, iHeight, iBitDepth);
 		if( nGcurSelVM < 0)
 		{
-			DBO_FAIL("failed to change video mode : " << iWidth << "*" << iHeight << "," << iBitDepth );
-			return;
+			DBO_WARNING_MESSAGE("Monitor does not support resolution : " << iWidth << "*" << iHeight << "," << iBitDepth );
+			
+			iWidth = NTL_APP_SCREEN_WIDTH;
+			iHeight = NTL_APP_SCREEN_HEIGHT;
+			iBitDepth = NTL_APP_BIT_DEPTH;
+
+			nGcurSelVM = GetVideoMode(m_bFullScreen, iWidth, iHeight, iBitDepth);
+			if (nGcurSelVM < 0)
+			{
+				DBO_FAIL("Go to DBOG/user and open SystemEnv.txt and change WINDOW_MODE to true");
+				return;
+			}
 		}	
 
 		// User가 선택한 해상도 업데이트
@@ -658,7 +667,7 @@ void CNtlApplication::ChangeVideoMode(RwInt32 iWidth, RwInt32 iHeight, RwInt32 i
 		m_iUserHeight = iHeight;
 		m_iBitDepth = iBitDepth;
 
-		if (!RwD3D9ChangeVideoMode (nGcurSelVM))
+		if (!RwD3D9ChangeVideoMode(nGcurSelVM))
 			return;
 
 		// ToggleFullMode() 의 경우 Window의 Resize message를 발생하지만 ChangeVideoMode의 경우 Resize를 강제적으로 발생시킨다.

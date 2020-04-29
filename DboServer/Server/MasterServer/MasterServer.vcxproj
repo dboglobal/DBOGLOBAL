@@ -45,7 +45,7 @@
       <WarningLevel>Level3</WarningLevel>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
-      <AdditionalIncludeDirectories>..\..\..\NtlLib\Server\NtlNetwork;..\..\..\NtlLib\Server\NtlSystem;..\..\..\NtlLib\Server\NtlThread;..\..\..\NtlLib\Server\NtlSfx;..\..\..\NtlLib\Server\servercommon;..\..\..\NtlLib\Shared;..\..\..\NtlLib\Shared\Util;..\..\..\NtlLib\Shared\NtlTrigger;..\..\..\DboShared\NtlShared2;..\..\..\NtlLib\Server\boost_1_64_0;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\..\NtlLib\Server\NtlNetwork;..\..\..\NtlLib\Server\NtlSystem;..\..\..\NtlLib\Server\NtlThread;..\..\..\NtlLib\Server\NtlSfx;..\..\..\NtlLib\Server\servercommon;..\..\..\NtlLib\Shared;..\..\..\NtlLib\Shared\Util;..\..\..\NtlLib\Shared\NtlTrigger;..\..\..\DboShared\NtlShared2;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OmitFramePointers>false</OmitFramePointers>
       <WholeProgramOptimization>false</WholeProgramOptimization>
       <FloatingPointModel>Fast</FloatingPointModel>
@@ -60,7 +60,7 @@
       <AdditionalDependencies>Ws2_32.lib;winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <RandomizedBaseAddress>false</RandomizedBaseAddress>
       <DataExecutionPrevention />
-      <AdditionalLibraryDirectories>..\..\..\NtlLib\Server\boost_1_64_0;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>

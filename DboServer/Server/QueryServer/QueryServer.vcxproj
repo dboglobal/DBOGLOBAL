@@ -45,7 +45,7 @@
       <WarningLevel>Level3</WarningLevel>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
-      <AdditionalIncludeDirectories>..\..\..\NtlLib\Server\NtlNetwork;..\..\..\NtlLib\Server\NtlSystem;..\..\..\NtlLib\Server\NtlThread;..\..\..\NtlLib\Server\NtlSfx;..\..\..\NtlLib\Server\servercommon;..\..\..\NtlLib\Server\mysql57;..\..\..\NtlLib\Server\boost_1_64_0;..\..\..\NtlLib\Server\Database;..\..\..\NtlLib\Shared;..\..\..\NtlLib\Shared\Util;..\..\..\NtlLib\Shared\NtlTrigger;..\..\..\DboShared\NtlShared2;..\..\..\DboShared\NtlGameTable;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\..\NtlLib\Server\NtlNetwork;..\..\..\NtlLib\Server\NtlSystem;..\..\..\NtlLib\Server\NtlThread;..\..\..\NtlLib\Server\NtlSfx;..\..\..\NtlLib\Server\servercommon;..\..\..\NtlLib\Server\mysql57;..\..\..\NtlLib\Server\Database;..\..\..\NtlLib\Shared;..\..\..\NtlLib\Shared\Util;..\..\..\NtlLib\Shared\NtlTrigger;..\..\..\DboShared\NtlShared2;..\..\..\DboShared\NtlGameTable;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OmitFramePointers>false</OmitFramePointers>
       <WholeProgramOptimization>false</WholeProgramOptimization>
       <FloatingPointModel>Fast</FloatingPointModel>
@@ -58,7 +58,7 @@
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <TargetMachine>MachineX64</TargetMachine>
       <AdditionalDependencies>Ws2_32.lib;winmm.lib;libmysql.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>..\..\..\NtlLib\Server\mysql57\lib;..\..\..\NtlLib\Server\boost_1_64_0;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>..\..\..\NtlLib\Server\mysql57\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>

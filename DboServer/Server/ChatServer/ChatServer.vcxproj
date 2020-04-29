@@ -45,7 +45,7 @@
       <WarningLevel>Level3</WarningLevel>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
-      <AdditionalIncludeDirectories>..\..\..\NtlLib\Server\NtlNetwork;..\..\..\NtlLib\Server\NtlSystem;..\..\..\NtlLib\Server\NtlThread;..\..\..\NtlLib\Server\NtlSfx;..\..\..\NtlLib\Shared;..\..\..\NtlLib\Shared\Util;..\..\..\NtlLib\Shared\NtlTrigger;..\..\..\NtlLib\Server\boost_1_64_0;..\..\..\NtlLib\Server\mysql57;..\..\..\NtlLib\Server\Database;..\..\..\NtlLib\Server\servercommon;..\..\..\DboShared\NtlGameTable;..\..\..\DboShared\NtlShared2;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\..\NtlLib\Server\NtlNetwork;..\..\..\NtlLib\Server\NtlSystem;..\..\..\NtlLib\Server\NtlThread;..\..\..\NtlLib\Server\NtlSfx;..\..\..\NtlLib\Shared;..\..\..\NtlLib\Shared\Util;..\..\..\NtlLib\Shared\NtlTrigger;..\..\..\NtlLib\Server\mysql57;..\..\..\NtlLib\Server\Database;..\..\..\NtlLib\Server\servercommon;..\..\..\DboShared\NtlGameTable;..\..\..\DboShared\NtlShared2;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OmitFramePointers>false</OmitFramePointers>
       <WholeProgramOptimization>false</WholeProgramOptimization>
       <FloatingPointModel>Fast</FloatingPointModel>
@@ -59,7 +59,7 @@
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <TargetMachine>MachineX64</TargetMachine>
       <AdditionalDependencies>Ws2_32.lib;winmm.lib;libmysql.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>..\..\..\NtlLib\Server\boost_1_64_0;..\..\..\NtlLib\Server\mysql57\lib;$(SolutionDir)x64\Release;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>..\..\..\NtlLib\Server\mysql57\lib;$(SolutionDir)x64\Release;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <RandomizedBaseAddress>false</RandomizedBaseAddress>
       <DataExecutionPrevention />
     </Link>

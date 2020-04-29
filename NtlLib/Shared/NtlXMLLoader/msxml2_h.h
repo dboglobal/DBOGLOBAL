@@ -3,11 +3,11 @@
 /* this ALWAYS GENERATED file contains the definitions for the interfaces */
 
 
- /* File created by MIDL compiler version 7.00.0555 */
-/* at Sun Apr 26 12:05:15 2020
+ /* File created by MIDL compiler version 8.01.0622 */
+/* at Tue Jan 19 04:14:07 2038
  */
 /* Compiler settings for MSXML Header Files\msxml2.idl:
-    Oicf, W1, Zp8, env=Win32 (32b run), target_arch=X86 7.00.0555 
+    Oicf, W1, Zp8, env=Win32 (32b run), target_arch=X86 8.01.0622 
     protocol : dce , ms_ext, c_ext, robust
     error checks: allocation ref bounds_check enum stub_data 
     VC __declspec() decoration level: 
@@ -16,12 +16,11 @@
 */
 /* @@MIDL_FILE_HEADING(  ) */
 
-#pragma warning( disable: 4049 )  /* more than 64k source lines */
 
 
 /* verify that the <rpcndr.h> version is high enough to compile this file*/
 #ifndef __REQUIRED_RPCNDR_H_VERSION__
-#define __REQUIRED_RPCNDR_H_VERSION__ 475
+#define __REQUIRED_RPCNDR_H_VERSION__ 500
 #endif
 
 #include "rpc.h"
@@ -29,7 +28,7 @@
 
 #ifndef __RPCNDR_H_VERSION__
 #error this stub requires an updated version of <rpcndr.h>
-#endif // __RPCNDR_H_VERSION__
+#endif /* __RPCNDR_H_VERSION__ */
 
 
 #ifndef __msxml2_h_h__
@@ -44,468 +43,546 @@
 #ifndef __IXMLDOMImplementation_FWD_DEFINED__
 #define __IXMLDOMImplementation_FWD_DEFINED__
 typedef interface IXMLDOMImplementation IXMLDOMImplementation;
+
 #endif 	/* __IXMLDOMImplementation_FWD_DEFINED__ */
 
 
 #ifndef __IXMLDOMNode_FWD_DEFINED__
 #define __IXMLDOMNode_FWD_DEFINED__
 typedef interface IXMLDOMNode IXMLDOMNode;
+
 #endif 	/* __IXMLDOMNode_FWD_DEFINED__ */
 
 
 #ifndef __IXMLDOMDocumentFragment_FWD_DEFINED__
 #define __IXMLDOMDocumentFragment_FWD_DEFINED__
 typedef interface IXMLDOMDocumentFragment IXMLDOMDocumentFragment;
+
 #endif 	/* __IXMLDOMDocumentFragment_FWD_DEFINED__ */
 
 
 #ifndef __IXMLDOMDocument_FWD_DEFINED__
 #define __IXMLDOMDocument_FWD_DEFINED__
 typedef interface IXMLDOMDocument IXMLDOMDocument;
+
 #endif 	/* __IXMLDOMDocument_FWD_DEFINED__ */
 
 
 #ifndef __IXMLDOMDocument2_FWD_DEFINED__
 #define __IXMLDOMDocument2_FWD_DEFINED__
 typedef interface IXMLDOMDocument2 IXMLDOMDocument2;
+
 #endif 	/* __IXMLDOMDocument2_FWD_DEFINED__ */
 
 
 #ifndef __IXMLDOMNodeList_FWD_DEFINED__
 #define __IXMLDOMNodeList_FWD_DEFINED__
 typedef interface IXMLDOMNodeList IXMLDOMNodeList;
+
 #endif 	/* __IXMLDOMNodeList_FWD_DEFINED__ */
 
 
 #ifndef __IXMLDOMNamedNodeMap_FWD_DEFINED__
 #define __IXMLDOMNamedNodeMap_FWD_DEFINED__
 typedef interface IXMLDOMNamedNodeMap IXMLDOMNamedNodeMap;
+
 #endif 	/* __IXMLDOMNamedNodeMap_FWD_DEFINED__ */
 
 
 #ifndef __IXMLDOMCharacterData_FWD_DEFINED__
 #define __IXMLDOMCharacterData_FWD_DEFINED__
 typedef interface IXMLDOMCharacterData IXMLDOMCharacterData;
+
 #endif 	/* __IXMLDOMCharacterData_FWD_DEFINED__ */
 
 
 #ifndef __IXMLDOMAttribute_FWD_DEFINED__
 #define __IXMLDOMAttribute_FWD_DEFINED__
 typedef interface IXMLDOMAttribute IXMLDOMAttribute;
+
 #endif 	/* __IXMLDOMAttribute_FWD_DEFINED__ */
 
 
 #ifndef __IXMLDOMElement_FWD_DEFINED__
 #define __IXMLDOMElement_FWD_DEFINED__
 typedef interface IXMLDOMElement IXMLDOMElement;
+
 #endif 	/* __IXMLDOMElement_FWD_DEFINED__ */
 
 
 #ifndef __IXMLDOMText_FWD_DEFINED__
 #define __IXMLDOMText_FWD_DEFINED__
 typedef interface IXMLDOMText IXMLDOMText;
+
 #endif 	/* __IXMLDOMText_FWD_DEFINED__ */
 
 
 #ifndef __IXMLDOMComment_FWD_DEFINED__
 #define __IXMLDOMComment_FWD_DEFINED__
 typedef interface IXMLDOMComment IXMLDOMComment;
+
 #endif 	/* __IXMLDOMComment_FWD_DEFINED__ */
 
 
 #ifndef __IXMLDOMProcessingInstruction_FWD_DEFINED__
 #define __IXMLDOMProcessingInstruction_FWD_DEFINED__
 typedef interface IXMLDOMProcessingInstruction IXMLDOMProcessingInstruction;
+
 #endif 	/* __IXMLDOMProcessingInstruction_FWD_DEFINED__ */
 
 
 #ifndef __IXMLDOMCDATASection_FWD_DEFINED__
 #define __IXMLDOMCDATASection_FWD_DEFINED__
 typedef interface IXMLDOMCDATASection IXMLDOMCDATASection;
+
 #endif 	/* __IXMLDOMCDATASection_FWD_DEFINED__ */
 
 
 #ifndef __IXMLDOMDocumentType_FWD_DEFINED__
 #define __IXMLDOMDocumentType_FWD_DEFINED__
 typedef interface IXMLDOMDocumentType IXMLDOMDocumentType;
+
 #endif 	/* __IXMLDOMDocumentType_FWD_DEFINED__ */
 
 
 #ifndef __IXMLDOMNotation_FWD_DEFINED__
 #define __IXMLDOMNotation_FWD_DEFINED__
 typedef interface IXMLDOMNotation IXMLDOMNotation;
+
 #endif 	/* __IXMLDOMNotation_FWD_DEFINED__ */
 
 
 #ifndef __IXMLDOMEntity_FWD_DEFINED__
 #define __IXMLDOMEntity_FWD_DEFINED__
 typedef interface IXMLDOMEntity IXMLDOMEntity;
+
 #endif 	/* __IXMLDOMEntity_FWD_DEFINED__ */
 
 
 #ifndef __IXMLDOMEntityReference_FWD_DEFINED__
 #define __IXMLDOMEntityReference_FWD_DEFINED__
 typedef interface IXMLDOMEntityReference IXMLDOMEntityReference;
+
 #endif 	/* __IXMLDOMEntityReference_FWD_DEFINED__ */
 
 
 #ifndef __IXMLDOMParseError_FWD_DEFINED__
 #define __IXMLDOMParseError_FWD_DEFINED__
 typedef interface IXMLDOMParseError IXMLDOMParseError;
+
 #endif 	/* __IXMLDOMParseError_FWD_DEFINED__ */
 
 
 #ifndef __IXMLDOMSchemaCollection_FWD_DEFINED__
 #define __IXMLDOMSchemaCollection_FWD_DEFINED__
 typedef interface IXMLDOMSchemaCollection IXMLDOMSchemaCollection;
+
 #endif 	/* __IXMLDOMSchemaCollection_FWD_DEFINED__ */
 
 
 #ifndef __IXTLRuntime_FWD_DEFINED__
 #define __IXTLRuntime_FWD_DEFINED__
 typedef interface IXTLRuntime IXTLRuntime;
+
 #endif 	/* __IXTLRuntime_FWD_DEFINED__ */
 
 
 #ifndef __IXSLTemplate_FWD_DEFINED__
 #define __IXSLTemplate_FWD_DEFINED__
 typedef interface IXSLTemplate IXSLTemplate;
+
 #endif 	/* __IXSLTemplate_FWD_DEFINED__ */
 
 
 #ifndef __IXSLProcessor_FWD_DEFINED__
 #define __IXSLProcessor_FWD_DEFINED__
 typedef interface IXSLProcessor IXSLProcessor;
+
 #endif 	/* __IXSLProcessor_FWD_DEFINED__ */
 
 
 #ifndef __ISAXXMLReader_FWD_DEFINED__
 #define __ISAXXMLReader_FWD_DEFINED__
 typedef interface ISAXXMLReader ISAXXMLReader;
+
 #endif 	/* __ISAXXMLReader_FWD_DEFINED__ */
 
 
 #ifndef __ISAXXMLFilter_FWD_DEFINED__
 #define __ISAXXMLFilter_FWD_DEFINED__
 typedef interface ISAXXMLFilter ISAXXMLFilter;
+
 #endif 	/* __ISAXXMLFilter_FWD_DEFINED__ */
 
 
 #ifndef __ISAXLocator_FWD_DEFINED__
 #define __ISAXLocator_FWD_DEFINED__
 typedef interface ISAXLocator ISAXLocator;
+
 #endif 	/* __ISAXLocator_FWD_DEFINED__ */
 
 
 #ifndef __ISAXEntityResolver_FWD_DEFINED__
 #define __ISAXEntityResolver_FWD_DEFINED__
 typedef interface ISAXEntityResolver ISAXEntityResolver;
+
 #endif 	/* __ISAXEntityResolver_FWD_DEFINED__ */
 
 
 #ifndef __ISAXContentHandler_FWD_DEFINED__
 #define __ISAXContentHandler_FWD_DEFINED__
 typedef interface ISAXContentHandler ISAXContentHandler;
+
 #endif 	/* __ISAXContentHandler_FWD_DEFINED__ */
 
 
 #ifndef __ISAXDTDHandler_FWD_DEFINED__
 #define __ISAXDTDHandler_FWD_DEFINED__
 typedef interface ISAXDTDHandler ISAXDTDHandler;
+
 #endif 	/* __ISAXDTDHandler_FWD_DEFINED__ */
 
 
 #ifndef __ISAXErrorHandler_FWD_DEFINED__
 #define __ISAXErrorHandler_FWD_DEFINED__
 typedef interface ISAXErrorHandler ISAXErrorHandler;
+
 #endif 	/* __ISAXErrorHandler_FWD_DEFINED__ */
 
 
 #ifndef __ISAXLexicalHandler_FWD_DEFINED__
 #define __ISAXLexicalHandler_FWD_DEFINED__
 typedef interface ISAXLexicalHandler ISAXLexicalHandler;
+
 #endif 	/* __ISAXLexicalHandler_FWD_DEFINED__ */
 
 
 #ifndef __ISAXDeclHandler_FWD_DEFINED__
 #define __ISAXDeclHandler_FWD_DEFINED__
 typedef interface ISAXDeclHandler ISAXDeclHandler;
+
 #endif 	/* __ISAXDeclHandler_FWD_DEFINED__ */
 
 
 #ifndef __ISAXAttributes_FWD_DEFINED__
 #define __ISAXAttributes_FWD_DEFINED__
 typedef interface ISAXAttributes ISAXAttributes;
+
 #endif 	/* __ISAXAttributes_FWD_DEFINED__ */
 
 
 #ifndef __IVBSAXXMLReader_FWD_DEFINED__
 #define __IVBSAXXMLReader_FWD_DEFINED__
 typedef interface IVBSAXXMLReader IVBSAXXMLReader;
+
 #endif 	/* __IVBSAXXMLReader_FWD_DEFINED__ */
 
 
 #ifndef __IVBSAXXMLFilter_FWD_DEFINED__
 #define __IVBSAXXMLFilter_FWD_DEFINED__
 typedef interface IVBSAXXMLFilter IVBSAXXMLFilter;
+
 #endif 	/* __IVBSAXXMLFilter_FWD_DEFINED__ */
 
 
 #ifndef __IVBSAXLocator_FWD_DEFINED__
 #define __IVBSAXLocator_FWD_DEFINED__
 typedef interface IVBSAXLocator IVBSAXLocator;
+
 #endif 	/* __IVBSAXLocator_FWD_DEFINED__ */
 
 
 #ifndef __IVBSAXEntityResolver_FWD_DEFINED__
 #define __IVBSAXEntityResolver_FWD_DEFINED__
 typedef interface IVBSAXEntityResolver IVBSAXEntityResolver;
+
 #endif 	/* __IVBSAXEntityResolver_FWD_DEFINED__ */
 
 
 #ifndef __IVBSAXContentHandler_FWD_DEFINED__
 #define __IVBSAXContentHandler_FWD_DEFINED__
 typedef interface IVBSAXContentHandler IVBSAXContentHandler;
+
 #endif 	/* __IVBSAXContentHandler_FWD_DEFINED__ */
 
 
 #ifndef __IVBSAXDTDHandler_FWD_DEFINED__
 #define __IVBSAXDTDHandler_FWD_DEFINED__
 typedef interface IVBSAXDTDHandler IVBSAXDTDHandler;
+
 #endif 	/* __IVBSAXDTDHandler_FWD_DEFINED__ */
 
 
 #ifndef __IVBSAXErrorHandler_FWD_DEFINED__
 #define __IVBSAXErrorHandler_FWD_DEFINED__
 typedef interface IVBSAXErrorHandler IVBSAXErrorHandler;
+
 #endif 	/* __IVBSAXErrorHandler_FWD_DEFINED__ */
 
 
 #ifndef __IVBSAXLexicalHandler_FWD_DEFINED__
 #define __IVBSAXLexicalHandler_FWD_DEFINED__
 typedef interface IVBSAXLexicalHandler IVBSAXLexicalHandler;
+
 #endif 	/* __IVBSAXLexicalHandler_FWD_DEFINED__ */
 
 
 #ifndef __IVBSAXDeclHandler_FWD_DEFINED__
 #define __IVBSAXDeclHandler_FWD_DEFINED__
 typedef interface IVBSAXDeclHandler IVBSAXDeclHandler;
+
 #endif 	/* __IVBSAXDeclHandler_FWD_DEFINED__ */
 
 
 #ifndef __IVBSAXAttributes_FWD_DEFINED__
 #define __IVBSAXAttributes_FWD_DEFINED__
 typedef interface IVBSAXAttributes IVBSAXAttributes;
+
 #endif 	/* __IVBSAXAttributes_FWD_DEFINED__ */
 
 
 #ifndef __IMXWriter_FWD_DEFINED__
 #define __IMXWriter_FWD_DEFINED__
 typedef interface IMXWriter IMXWriter;
+
 #endif 	/* __IMXWriter_FWD_DEFINED__ */
 
 
 #ifndef __IMXAttributes_FWD_DEFINED__
 #define __IMXAttributes_FWD_DEFINED__
 typedef interface IMXAttributes IMXAttributes;
+
 #endif 	/* __IMXAttributes_FWD_DEFINED__ */
 
 
 #ifndef __IMXReaderControl_FWD_DEFINED__
 #define __IMXReaderControl_FWD_DEFINED__
 typedef interface IMXReaderControl IMXReaderControl;
+
 #endif 	/* __IMXReaderControl_FWD_DEFINED__ */
 
 
 #ifndef __IMXSchemaDeclHandler_FWD_DEFINED__
 #define __IMXSchemaDeclHandler_FWD_DEFINED__
 typedef interface IMXSchemaDeclHandler IMXSchemaDeclHandler;
+
 #endif 	/* __IMXSchemaDeclHandler_FWD_DEFINED__ */
 
 
 #ifndef __IXMLDOMSchemaCollection2_FWD_DEFINED__
 #define __IXMLDOMSchemaCollection2_FWD_DEFINED__
 typedef interface IXMLDOMSchemaCollection2 IXMLDOMSchemaCollection2;
+
 #endif 	/* __IXMLDOMSchemaCollection2_FWD_DEFINED__ */
 
 
 #ifndef __ISchemaStringCollection_FWD_DEFINED__
 #define __ISchemaStringCollection_FWD_DEFINED__
 typedef interface ISchemaStringCollection ISchemaStringCollection;
+
 #endif 	/* __ISchemaStringCollection_FWD_DEFINED__ */
 
 
 #ifndef __ISchemaItemCollection_FWD_DEFINED__
 #define __ISchemaItemCollection_FWD_DEFINED__
 typedef interface ISchemaItemCollection ISchemaItemCollection;
+
 #endif 	/* __ISchemaItemCollection_FWD_DEFINED__ */
 
 
 #ifndef __ISchemaItem_FWD_DEFINED__
 #define __ISchemaItem_FWD_DEFINED__
 typedef interface ISchemaItem ISchemaItem;
+
 #endif 	/* __ISchemaItem_FWD_DEFINED__ */
 
 
 #ifndef __ISchema_FWD_DEFINED__
 #define __ISchema_FWD_DEFINED__
 typedef interface ISchema ISchema;
+
 #endif 	/* __ISchema_FWD_DEFINED__ */
 
 
 #ifndef __ISchemaParticle_FWD_DEFINED__
 #define __ISchemaParticle_FWD_DEFINED__
 typedef interface ISchemaParticle ISchemaParticle;
+
 #endif 	/* __ISchemaParticle_FWD_DEFINED__ */
 
 
 #ifndef __ISchemaAttribute_FWD_DEFINED__
 #define __ISchemaAttribute_FWD_DEFINED__
 typedef interface ISchemaAttribute ISchemaAttribute;
+
 #endif 	/* __ISchemaAttribute_FWD_DEFINED__ */
 
 
 #ifndef __ISchemaElement_FWD_DEFINED__
 #define __ISchemaElement_FWD_DEFINED__
 typedef interface ISchemaElement ISchemaElement;
+
 #endif 	/* __ISchemaElement_FWD_DEFINED__ */
 
 
 #ifndef __ISchemaType_FWD_DEFINED__
 #define __ISchemaType_FWD_DEFINED__
 typedef interface ISchemaType ISchemaType;
+
 #endif 	/* __ISchemaType_FWD_DEFINED__ */
 
 
 #ifndef __ISchemaComplexType_FWD_DEFINED__
 #define __ISchemaComplexType_FWD_DEFINED__
 typedef interface ISchemaComplexType ISchemaComplexType;
+
 #endif 	/* __ISchemaComplexType_FWD_DEFINED__ */
 
 
 #ifndef __ISchemaAttributeGroup_FWD_DEFINED__
 #define __ISchemaAttributeGroup_FWD_DEFINED__
 typedef interface ISchemaAttributeGroup ISchemaAttributeGroup;
+
 #endif 	/* __ISchemaAttributeGroup_FWD_DEFINED__ */
 
 
 #ifndef __ISchemaModelGroup_FWD_DEFINED__
 #define __ISchemaModelGroup_FWD_DEFINED__
 typedef interface ISchemaModelGroup ISchemaModelGroup;
+
 #endif 	/* __ISchemaModelGroup_FWD_DEFINED__ */
 
 
 #ifndef __ISchemaAny_FWD_DEFINED__
 #define __ISchemaAny_FWD_DEFINED__
 typedef interface ISchemaAny ISchemaAny;
+
 #endif 	/* __ISchemaAny_FWD_DEFINED__ */
 
 
 #ifndef __ISchemaIdentityConstraint_FWD_DEFINED__
 #define __ISchemaIdentityConstraint_FWD_DEFINED__
 typedef interface ISchemaIdentityConstraint ISchemaIdentityConstraint;
+
 #endif 	/* __ISchemaIdentityConstraint_FWD_DEFINED__ */
 
 
 #ifndef __ISchemaNotation_FWD_DEFINED__
 #define __ISchemaNotation_FWD_DEFINED__
 typedef interface ISchemaNotation ISchemaNotation;
+
 #endif 	/* __ISchemaNotation_FWD_DEFINED__ */
 
 
 #ifndef __IXMLElementCollection_FWD_DEFINED__
 #define __IXMLElementCollection_FWD_DEFINED__
 typedef interface IXMLElementCollection IXMLElementCollection;
+
 #endif 	/* __IXMLElementCollection_FWD_DEFINED__ */
 
 
 #ifndef __IXMLDocument_FWD_DEFINED__
 #define __IXMLDocument_FWD_DEFINED__
 typedef interface IXMLDocument IXMLDocument;
+
 #endif 	/* __IXMLDocument_FWD_DEFINED__ */
 
 
 #ifndef __IXMLDocument2_FWD_DEFINED__
 #define __IXMLDocument2_FWD_DEFINED__
 typedef interface IXMLDocument2 IXMLDocument2;
+
 #endif 	/* __IXMLDocument2_FWD_DEFINED__ */
 
 
 #ifndef __IXMLElement_FWD_DEFINED__
 #define __IXMLElement_FWD_DEFINED__
 typedef interface IXMLElement IXMLElement;
+
 #endif 	/* __IXMLElement_FWD_DEFINED__ */
 
 
 #ifndef __IXMLElement2_FWD_DEFINED__
 #define __IXMLElement2_FWD_DEFINED__
 typedef interface IXMLElement2 IXMLElement2;
+
 #endif 	/* __IXMLElement2_FWD_DEFINED__ */
 
 
 #ifndef __IXMLAttribute_FWD_DEFINED__
 #define __IXMLAttribute_FWD_DEFINED__
 typedef interface IXMLAttribute IXMLAttribute;
+
 #endif 	/* __IXMLAttribute_FWD_DEFINED__ */
 
 
 #ifndef __IXMLError_FWD_DEFINED__
 #define __IXMLError_FWD_DEFINED__
 typedef interface IXMLError IXMLError;
+
 #endif 	/* __IXMLError_FWD_DEFINED__ */
 
 
 #ifndef __IXMLDOMSelection_FWD_DEFINED__
 #define __IXMLDOMSelection_FWD_DEFINED__
 typedef interface IXMLDOMSelection IXMLDOMSelection;
+
 #endif 	/* __IXMLDOMSelection_FWD_DEFINED__ */
 
 
 #ifndef __XMLDOMDocumentEvents_FWD_DEFINED__
 #define __XMLDOMDocumentEvents_FWD_DEFINED__
 typedef interface XMLDOMDocumentEvents XMLDOMDocumentEvents;
+
 #endif 	/* __XMLDOMDocumentEvents_FWD_DEFINED__ */
 
 
 #ifndef __IDSOControl_FWD_DEFINED__
 #define __IDSOControl_FWD_DEFINED__
 typedef interface IDSOControl IDSOControl;
+
 #endif 	/* __IDSOControl_FWD_DEFINED__ */
 
 
 #ifndef __IXMLHTTPRequest_FWD_DEFINED__
 #define __IXMLHTTPRequest_FWD_DEFINED__
 typedef interface IXMLHTTPRequest IXMLHTTPRequest;
+
 #endif 	/* __IXMLHTTPRequest_FWD_DEFINED__ */
 
 
 #ifndef __IServerXMLHTTPRequest_FWD_DEFINED__
 #define __IServerXMLHTTPRequest_FWD_DEFINED__
 typedef interface IServerXMLHTTPRequest IServerXMLHTTPRequest;
+
 #endif 	/* __IServerXMLHTTPRequest_FWD_DEFINED__ */
 
 
 #ifndef __IServerXMLHTTPRequest2_FWD_DEFINED__
 #define __IServerXMLHTTPRequest2_FWD_DEFINED__
 typedef interface IServerXMLHTTPRequest2 IServerXMLHTTPRequest2;
+
 #endif 	/* __IServerXMLHTTPRequest2_FWD_DEFINED__ */
 
 
 #ifndef __IMXNamespacePrefixes_FWD_DEFINED__
 #define __IMXNamespacePrefixes_FWD_DEFINED__
 typedef interface IMXNamespacePrefixes IMXNamespacePrefixes;
+
 #endif 	/* __IMXNamespacePrefixes_FWD_DEFINED__ */
 
 
 #ifndef __IVBMXNamespaceManager_FWD_DEFINED__
 #define __IVBMXNamespaceManager_FWD_DEFINED__
 typedef interface IVBMXNamespaceManager IVBMXNamespaceManager;
+
 #endif 	/* __IVBMXNamespaceManager_FWD_DEFINED__ */
 
 
 #ifndef __IMXNamespaceManager_FWD_DEFINED__
 #define __IMXNamespaceManager_FWD_DEFINED__
 typedef interface IMXNamespaceManager IMXNamespaceManager;
+
 #endif 	/* __IMXNamespaceManager_FWD_DEFINED__ */
 
 
@@ -1032,6 +1109,16 @@ extern "C"{
 //  Copyright (C) Microsoft Corporation, 1997-1998.
 //
 //--------------------------------------------------------------------------
+#pragma warning(push)
+#pragma warning(disable:4001) 
+#pragma once
+#pragma warning(push)
+#pragma warning(disable:4001) 
+#pragma once
+#pragma warning(pop)
+#pragma warning(pop)
+#pragma region Desktop Family
+#pragma endregion
 #define DOMDocument DOMDocument2
 #define CLSID_DOMDocument CLSID_DOMDocument2
 
@@ -1141,186 +1228,198 @@ extern RPC_IF_HANDLE __MIDL_itf_msxml2_0000_0000_v0_0_s_ifspec;
 #if !defined(__msxml_h__)
 typedef /* [helpstring] */ 
 enum tagXMLEMEM_TYPE
-    {	XMLELEMTYPE_ELEMENT	= 0,
-	XMLELEMTYPE_TEXT	= ( XMLELEMTYPE_ELEMENT + 1 ) ,
-	XMLELEMTYPE_COMMENT	= ( XMLELEMTYPE_TEXT + 1 ) ,
-	XMLELEMTYPE_DOCUMENT	= ( XMLELEMTYPE_COMMENT + 1 ) ,
-	XMLELEMTYPE_DTD	= ( XMLELEMTYPE_DOCUMENT + 1 ) ,
-	XMLELEMTYPE_PI	= ( XMLELEMTYPE_DTD + 1 ) ,
-	XMLELEMTYPE_OTHER	= ( XMLELEMTYPE_PI + 1 ) 
+    {
+        XMLELEMTYPE_ELEMENT	= 0,
+        XMLELEMTYPE_TEXT	= ( XMLELEMTYPE_ELEMENT + 1 ) ,
+        XMLELEMTYPE_COMMENT	= ( XMLELEMTYPE_TEXT + 1 ) ,
+        XMLELEMTYPE_DOCUMENT	= ( XMLELEMTYPE_COMMENT + 1 ) ,
+        XMLELEMTYPE_DTD	= ( XMLELEMTYPE_DOCUMENT + 1 ) ,
+        XMLELEMTYPE_PI	= ( XMLELEMTYPE_DTD + 1 ) ,
+        XMLELEMTYPE_OTHER	= ( XMLELEMTYPE_PI + 1 ) 
     } 	XMLELEM_TYPE;
 
 #endif
 #if !defined(__msxml_h__) || defined(__IXMLElementNotificationSink_INTERFACE_DEFINED__)
 typedef /* [helpstring] */ 
 enum tagDOMNodeType
-    {	NODE_INVALID	= 0,
-	NODE_ELEMENT	= ( NODE_INVALID + 1 ) ,
-	NODE_ATTRIBUTE	= ( NODE_ELEMENT + 1 ) ,
-	NODE_TEXT	= ( NODE_ATTRIBUTE + 1 ) ,
-	NODE_CDATA_SECTION	= ( NODE_TEXT + 1 ) ,
-	NODE_ENTITY_REFERENCE	= ( NODE_CDATA_SECTION + 1 ) ,
-	NODE_ENTITY	= ( NODE_ENTITY_REFERENCE + 1 ) ,
-	NODE_PROCESSING_INSTRUCTION	= ( NODE_ENTITY + 1 ) ,
-	NODE_COMMENT	= ( NODE_PROCESSING_INSTRUCTION + 1 ) ,
-	NODE_DOCUMENT	= ( NODE_COMMENT + 1 ) ,
-	NODE_DOCUMENT_TYPE	= ( NODE_DOCUMENT + 1 ) ,
-	NODE_DOCUMENT_FRAGMENT	= ( NODE_DOCUMENT_TYPE + 1 ) ,
-	NODE_NOTATION	= ( NODE_DOCUMENT_FRAGMENT + 1 ) 
+    {
+        NODE_INVALID	= 0,
+        NODE_ELEMENT	= ( NODE_INVALID + 1 ) ,
+        NODE_ATTRIBUTE	= ( NODE_ELEMENT + 1 ) ,
+        NODE_TEXT	= ( NODE_ATTRIBUTE + 1 ) ,
+        NODE_CDATA_SECTION	= ( NODE_TEXT + 1 ) ,
+        NODE_ENTITY_REFERENCE	= ( NODE_CDATA_SECTION + 1 ) ,
+        NODE_ENTITY	= ( NODE_ENTITY_REFERENCE + 1 ) ,
+        NODE_PROCESSING_INSTRUCTION	= ( NODE_ENTITY + 1 ) ,
+        NODE_COMMENT	= ( NODE_PROCESSING_INSTRUCTION + 1 ) ,
+        NODE_DOCUMENT	= ( NODE_COMMENT + 1 ) ,
+        NODE_DOCUMENT_TYPE	= ( NODE_DOCUMENT + 1 ) ,
+        NODE_DOCUMENT_FRAGMENT	= ( NODE_DOCUMENT_TYPE + 1 ) ,
+        NODE_NOTATION	= ( NODE_DOCUMENT_FRAGMENT + 1 ) 
     } 	DOMNodeType;
 
 #endif
 typedef /* [helpstring] */ 
 enum _SERVERXMLHTTP_OPTION
-    {	SXH_OPTION_URL	= -1,
-	SXH_OPTION_URL_CODEPAGE	= ( SXH_OPTION_URL + 1 ) ,
-	SXH_OPTION_ESCAPE_PERCENT_IN_URL	= ( SXH_OPTION_URL_CODEPAGE + 1 ) ,
-	SXH_OPTION_IGNORE_SERVER_SSL_CERT_ERROR_FLAGS	= ( SXH_OPTION_ESCAPE_PERCENT_IN_URL + 1 ) ,
-	SXH_OPTION_SELECT_CLIENT_SSL_CERT	= ( SXH_OPTION_IGNORE_SERVER_SSL_CERT_ERROR_FLAGS + 1 ) 
+    {
+        SXH_OPTION_URL	= -1,
+        SXH_OPTION_URL_CODEPAGE	= ( SXH_OPTION_URL + 1 ) ,
+        SXH_OPTION_ESCAPE_PERCENT_IN_URL	= ( SXH_OPTION_URL_CODEPAGE + 1 ) ,
+        SXH_OPTION_IGNORE_SERVER_SSL_CERT_ERROR_FLAGS	= ( SXH_OPTION_ESCAPE_PERCENT_IN_URL + 1 ) ,
+        SXH_OPTION_SELECT_CLIENT_SSL_CERT	= ( SXH_OPTION_IGNORE_SERVER_SSL_CERT_ERROR_FLAGS + 1 ) 
     } 	SERVERXMLHTTP_OPTION;
 
 typedef /* [helpstring] */ 
 enum _SXH_SERVER_CERT_OPTION
-    {	SXH_SERVER_CERT_IGNORE_UNKNOWN_CA	= 0x100,
-	SXH_SERVER_CERT_IGNORE_WRONG_USAGE	= 0x200,
-	SXH_SERVER_CERT_IGNORE_CERT_CN_INVALID	= 0x1000,
-	SXH_SERVER_CERT_IGNORE_CERT_DATE_INVALID	= 0x2000,
-	SXH_SERVER_CERT_IGNORE_ALL_SERVER_ERRORS	= ( ( ( SXH_SERVER_CERT_IGNORE_UNKNOWN_CA + SXH_SERVER_CERT_IGNORE_WRONG_USAGE )  + SXH_SERVER_CERT_IGNORE_CERT_CN_INVALID )  + SXH_SERVER_CERT_IGNORE_CERT_DATE_INVALID ) 
+    {
+        SXH_SERVER_CERT_IGNORE_UNKNOWN_CA	= 0x100,
+        SXH_SERVER_CERT_IGNORE_WRONG_USAGE	= 0x200,
+        SXH_SERVER_CERT_IGNORE_CERT_CN_INVALID	= 0x1000,
+        SXH_SERVER_CERT_IGNORE_CERT_DATE_INVALID	= 0x2000,
+        SXH_SERVER_CERT_IGNORE_ALL_SERVER_ERRORS	= ( ( ( SXH_SERVER_CERT_IGNORE_UNKNOWN_CA + SXH_SERVER_CERT_IGNORE_WRONG_USAGE )  + SXH_SERVER_CERT_IGNORE_CERT_CN_INVALID )  + SXH_SERVER_CERT_IGNORE_CERT_DATE_INVALID ) 
     } 	SXH_SERVER_CERT_OPTION;
 
 typedef /* [helpstring] */ 
 enum _SXH_PROXY_SETTING
-    {	SXH_PROXY_SET_DEFAULT	= 0,
-	SXH_PROXY_SET_PRECONFIG	= 0,
-	SXH_PROXY_SET_DIRECT	= 0x1,
-	SXH_PROXY_SET_PROXY	= 0x2
+    {
+        SXH_PROXY_SET_DEFAULT	= 0,
+        SXH_PROXY_SET_PRECONFIG	= 0,
+        SXH_PROXY_SET_DIRECT	= 0x1,
+        SXH_PROXY_SET_PROXY	= 0x2
     } 	SXH_PROXY_SETTING;
 
 typedef /* [helpstring] */ 
 enum _SOMITEMTYPE
-    {	SOMITEM_SCHEMA	= 0x1000,
-	SOMITEM_ATTRIBUTE	= 0x1001,
-	SOMITEM_ATTRIBUTEGROUP	= 0x1002,
-	SOMITEM_NOTATION	= 0x1003,
-	SOMITEM_IDENTITYCONSTRAINT	= 0x1100,
-	SOMITEM_KEY	= 0x1101,
-	SOMITEM_KEYREF	= 0x1102,
-	SOMITEM_UNIQUE	= 0x1103,
-	SOMITEM_ANYTYPE	= 0x2000,
-	SOMITEM_DATATYPE	= 0x2100,
-	SOMITEM_DATATYPE_ANYTYPE	= 0x2101,
-	SOMITEM_DATATYPE_ANYURI	= 0x2102,
-	SOMITEM_DATATYPE_BASE64BINARY	= 0x2103,
-	SOMITEM_DATATYPE_BOOLEAN	= 0x2104,
-	SOMITEM_DATATYPE_BYTE	= 0x2105,
-	SOMITEM_DATATYPE_DATE	= 0x2106,
-	SOMITEM_DATATYPE_DATETIME	= 0x2107,
-	SOMITEM_DATATYPE_DAY	= 0x2108,
-	SOMITEM_DATATYPE_DECIMAL	= 0x2109,
-	SOMITEM_DATATYPE_DOUBLE	= 0x210a,
-	SOMITEM_DATATYPE_DURATION	= 0x210b,
-	SOMITEM_DATATYPE_ENTITIES	= 0x210c,
-	SOMITEM_DATATYPE_ENTITY	= 0x210d,
-	SOMITEM_DATATYPE_FLOAT	= 0x210e,
-	SOMITEM_DATATYPE_HEXBINARY	= 0x210f,
-	SOMITEM_DATATYPE_ID	= 0x2110,
-	SOMITEM_DATATYPE_IDREF	= 0x2111,
-	SOMITEM_DATATYPE_IDREFS	= 0x2112,
-	SOMITEM_DATATYPE_INT	= 0x2113,
-	SOMITEM_DATATYPE_INTEGER	= 0x2114,
-	SOMITEM_DATATYPE_LANGUAGE	= 0x2115,
-	SOMITEM_DATATYPE_LONG	= 0x2116,
-	SOMITEM_DATATYPE_MONTH	= 0x2117,
-	SOMITEM_DATATYPE_MONTHDAY	= 0x2118,
-	SOMITEM_DATATYPE_NAME	= 0x2119,
-	SOMITEM_DATATYPE_NCNAME	= 0x211a,
-	SOMITEM_DATATYPE_NEGATIVEINTEGER	= 0x211b,
-	SOMITEM_DATATYPE_NMTOKEN	= 0x211c,
-	SOMITEM_DATATYPE_NMTOKENS	= 0x211d,
-	SOMITEM_DATATYPE_NONNEGATIVEINTEGER	= 0x211e,
-	SOMITEM_DATATYPE_NONPOSITIVEINTEGER	= 0x211f,
-	SOMITEM_DATATYPE_NORMALIZEDSTRING	= 0x2120,
-	SOMITEM_DATATYPE_NOTATION	= 0x2121,
-	SOMITEM_DATATYPE_POSITIVEINTEGER	= 0x2122,
-	SOMITEM_DATATYPE_QNAME	= 0x2123,
-	SOMITEM_DATATYPE_SHORT	= 0x2124,
-	SOMITEM_DATATYPE_STRING	= 0x2125,
-	SOMITEM_DATATYPE_TIME	= 0x2126,
-	SOMITEM_DATATYPE_TOKEN	= 0x2127,
-	SOMITEM_DATATYPE_UNSIGNEDBYTE	= 0x2128,
-	SOMITEM_DATATYPE_UNSIGNEDINT	= 0x2129,
-	SOMITEM_DATATYPE_UNSIGNEDLONG	= 0x212a,
-	SOMITEM_DATATYPE_UNSIGNEDSHORT	= 0x212b,
-	SOMITEM_DATATYPE_YEAR	= 0x212c,
-	SOMITEM_DATATYPE_YEARMONTH	= 0x212d,
-	SOMITEM_DATATYPE_ANYSIMPLETYPE	= 0x21ff,
-	SOMITEM_SIMPLETYPE	= 0x2200,
-	SOMITEM_COMPLEXTYPE	= 0x2400,
-	SOMITEM_PARTICLE	= 0x4000,
-	SOMITEM_ANY	= 0x4001,
-	SOMITEM_ANYATTRIBUTE	= 0x4002,
-	SOMITEM_ELEMENT	= 0x4003,
-	SOMITEM_GROUP	= 0x4100,
-	SOMITEM_ALL	= 0x4101,
-	SOMITEM_CHOICE	= 0x4102,
-	SOMITEM_SEQUENCE	= 0x4103,
-	SOMITEM_EMPTYPARTICLE	= 0x4104,
-	SOMITEM_NULL	= 0x800,
-	SOMITEM_NULL_TYPE	= 0x2800,
-	SOMITEM_NULL_ANY	= 0x4801,
-	SOMITEM_NULL_ANYATTRIBUTE	= 0x4802,
-	SOMITEM_NULL_ELEMENT	= 0x4803
+    {
+        SOMITEM_SCHEMA	= 0x1000,
+        SOMITEM_ATTRIBUTE	= 0x1001,
+        SOMITEM_ATTRIBUTEGROUP	= 0x1002,
+        SOMITEM_NOTATION	= 0x1003,
+        SOMITEM_IDENTITYCONSTRAINT	= 0x1100,
+        SOMITEM_KEY	= 0x1101,
+        SOMITEM_KEYREF	= 0x1102,
+        SOMITEM_UNIQUE	= 0x1103,
+        SOMITEM_ANYTYPE	= 0x2000,
+        SOMITEM_DATATYPE	= 0x2100,
+        SOMITEM_DATATYPE_ANYTYPE	= 0x2101,
+        SOMITEM_DATATYPE_ANYURI	= 0x2102,
+        SOMITEM_DATATYPE_BASE64BINARY	= 0x2103,
+        SOMITEM_DATATYPE_BOOLEAN	= 0x2104,
+        SOMITEM_DATATYPE_BYTE	= 0x2105,
+        SOMITEM_DATATYPE_DATE	= 0x2106,
+        SOMITEM_DATATYPE_DATETIME	= 0x2107,
+        SOMITEM_DATATYPE_DAY	= 0x2108,
+        SOMITEM_DATATYPE_DECIMAL	= 0x2109,
+        SOMITEM_DATATYPE_DOUBLE	= 0x210a,
+        SOMITEM_DATATYPE_DURATION	= 0x210b,
+        SOMITEM_DATATYPE_ENTITIES	= 0x210c,
+        SOMITEM_DATATYPE_ENTITY	= 0x210d,
+        SOMITEM_DATATYPE_FLOAT	= 0x210e,
+        SOMITEM_DATATYPE_HEXBINARY	= 0x210f,
+        SOMITEM_DATATYPE_ID	= 0x2110,
+        SOMITEM_DATATYPE_IDREF	= 0x2111,
+        SOMITEM_DATATYPE_IDREFS	= 0x2112,
+        SOMITEM_DATATYPE_INT	= 0x2113,
+        SOMITEM_DATATYPE_INTEGER	= 0x2114,
+        SOMITEM_DATATYPE_LANGUAGE	= 0x2115,
+        SOMITEM_DATATYPE_LONG	= 0x2116,
+        SOMITEM_DATATYPE_MONTH	= 0x2117,
+        SOMITEM_DATATYPE_MONTHDAY	= 0x2118,
+        SOMITEM_DATATYPE_NAME	= 0x2119,
+        SOMITEM_DATATYPE_NCNAME	= 0x211a,
+        SOMITEM_DATATYPE_NEGATIVEINTEGER	= 0x211b,
+        SOMITEM_DATATYPE_NMTOKEN	= 0x211c,
+        SOMITEM_DATATYPE_NMTOKENS	= 0x211d,
+        SOMITEM_DATATYPE_NONNEGATIVEINTEGER	= 0x211e,
+        SOMITEM_DATATYPE_NONPOSITIVEINTEGER	= 0x211f,
+        SOMITEM_DATATYPE_NORMALIZEDSTRING	= 0x2120,
+        SOMITEM_DATATYPE_NOTATION	= 0x2121,
+        SOMITEM_DATATYPE_POSITIVEINTEGER	= 0x2122,
+        SOMITEM_DATATYPE_QNAME	= 0x2123,
+        SOMITEM_DATATYPE_SHORT	= 0x2124,
+        SOMITEM_DATATYPE_STRING	= 0x2125,
+        SOMITEM_DATATYPE_TIME	= 0x2126,
+        SOMITEM_DATATYPE_TOKEN	= 0x2127,
+        SOMITEM_DATATYPE_UNSIGNEDBYTE	= 0x2128,
+        SOMITEM_DATATYPE_UNSIGNEDINT	= 0x2129,
+        SOMITEM_DATATYPE_UNSIGNEDLONG	= 0x212a,
+        SOMITEM_DATATYPE_UNSIGNEDSHORT	= 0x212b,
+        SOMITEM_DATATYPE_YEAR	= 0x212c,
+        SOMITEM_DATATYPE_YEARMONTH	= 0x212d,
+        SOMITEM_DATATYPE_ANYSIMPLETYPE	= 0x21ff,
+        SOMITEM_SIMPLETYPE	= 0x2200,
+        SOMITEM_COMPLEXTYPE	= 0x2400,
+        SOMITEM_PARTICLE	= 0x4000,
+        SOMITEM_ANY	= 0x4001,
+        SOMITEM_ANYATTRIBUTE	= 0x4002,
+        SOMITEM_ELEMENT	= 0x4003,
+        SOMITEM_GROUP	= 0x4100,
+        SOMITEM_ALL	= 0x4101,
+        SOMITEM_CHOICE	= 0x4102,
+        SOMITEM_SEQUENCE	= 0x4103,
+        SOMITEM_EMPTYPARTICLE	= 0x4104,
+        SOMITEM_NULL	= 0x800,
+        SOMITEM_NULL_TYPE	= 0x2800,
+        SOMITEM_NULL_ANY	= 0x4801,
+        SOMITEM_NULL_ANYATTRIBUTE	= 0x4802,
+        SOMITEM_NULL_ELEMENT	= 0x4803
     } 	SOMITEMTYPE;
 
 typedef /* [helpstring] */ 
 enum _SCHEMAUSE
-    {	SCHEMAUSE_OPTIONAL	= 0,
-	SCHEMAUSE_PROHIBITED	= ( SCHEMAUSE_OPTIONAL + 1 ) ,
-	SCHEMAUSE_REQUIRED	= ( SCHEMAUSE_PROHIBITED + 1 ) 
+    {
+        SCHEMAUSE_OPTIONAL	= 0,
+        SCHEMAUSE_PROHIBITED	= ( SCHEMAUSE_OPTIONAL + 1 ) ,
+        SCHEMAUSE_REQUIRED	= ( SCHEMAUSE_PROHIBITED + 1 ) 
     } 	SCHEMAUSE;
 
 typedef /* [helpstring] */ 
 enum _SCHEMADERIVATIONMETHOD
-    {	SCHEMADERIVATIONMETHOD_EMPTY	= 0,
-	SCHEMADERIVATIONMETHOD_SUBSTITUTION	= 0x1,
-	SCHEMADERIVATIONMETHOD_EXTENSION	= 0x2,
-	SCHEMADERIVATIONMETHOD_RESTRICTION	= 0x4,
-	SCHEMADERIVATIONMETHOD_LIST	= 0x8,
-	SCHEMADERIVATIONMETHOD_UNION	= 0x10,
-	SCHEMADERIVATIONMETHOD_ALL	= 0xff,
-	SCHEMADERIVATIONMETHOD_NONE	= 0x100
+    {
+        SCHEMADERIVATIONMETHOD_EMPTY	= 0,
+        SCHEMADERIVATIONMETHOD_SUBSTITUTION	= 0x1,
+        SCHEMADERIVATIONMETHOD_EXTENSION	= 0x2,
+        SCHEMADERIVATIONMETHOD_RESTRICTION	= 0x4,
+        SCHEMADERIVATIONMETHOD_LIST	= 0x8,
+        SCHEMADERIVATIONMETHOD_UNION	= 0x10,
+        SCHEMADERIVATIONMETHOD_ALL	= 0xff,
+        SCHEMADERIVATIONMETHOD_NONE	= 0x100
     } 	SCHEMADERIVATIONMETHOD;
 
 typedef /* [helpstring] */ 
 enum _SCHEMACONTENTTYPE
-    {	SCHEMACONTENTTYPE_EMPTY	= 0,
-	SCHEMACONTENTTYPE_TEXTONLY	= ( SCHEMACONTENTTYPE_EMPTY + 1 ) ,
-	SCHEMACONTENTTYPE_ELEMENTONLY	= ( SCHEMACONTENTTYPE_TEXTONLY + 1 ) ,
-	SCHEMACONTENTTYPE_MIXED	= ( SCHEMACONTENTTYPE_ELEMENTONLY + 1 ) 
+    {
+        SCHEMACONTENTTYPE_EMPTY	= 0,
+        SCHEMACONTENTTYPE_TEXTONLY	= ( SCHEMACONTENTTYPE_EMPTY + 1 ) ,
+        SCHEMACONTENTTYPE_ELEMENTONLY	= ( SCHEMACONTENTTYPE_TEXTONLY + 1 ) ,
+        SCHEMACONTENTTYPE_MIXED	= ( SCHEMACONTENTTYPE_ELEMENTONLY + 1 ) 
     } 	SCHEMACONTENTTYPE;
 
 typedef /* [helpstring] */ 
 enum _SCHEMAPROCESSCONTENTS
-    {	SCHEMAPROCESSCONTENTS_NONE	= 0,
-	SCHEMAPROCESSCONTENTS_SKIP	= ( SCHEMAPROCESSCONTENTS_NONE + 1 ) ,
-	SCHEMAPROCESSCONTENTS_LAX	= ( SCHEMAPROCESSCONTENTS_SKIP + 1 ) ,
-	SCHEMAPROCESSCONTENTS_STRICT	= ( SCHEMAPROCESSCONTENTS_LAX + 1 ) 
+    {
+        SCHEMAPROCESSCONTENTS_NONE	= 0,
+        SCHEMAPROCESSCONTENTS_SKIP	= ( SCHEMAPROCESSCONTENTS_NONE + 1 ) ,
+        SCHEMAPROCESSCONTENTS_LAX	= ( SCHEMAPROCESSCONTENTS_SKIP + 1 ) ,
+        SCHEMAPROCESSCONTENTS_STRICT	= ( SCHEMAPROCESSCONTENTS_LAX + 1 ) 
     } 	SCHEMAPROCESSCONTENTS;
 
 typedef /* [helpstring] */ 
 enum _SCHEMAWHITESPACE
-    {	SCHEMAWHITESPACE_NONE	= -1,
-	SCHEMAWHITESPACE_PRESERVE	= 0,
-	SCHEMAWHITESPACE_REPLACE	= 1,
-	SCHEMAWHITESPACE_COLLAPSE	= 2
+    {
+        SCHEMAWHITESPACE_NONE	= -1,
+        SCHEMAWHITESPACE_PRESERVE	= 0,
+        SCHEMAWHITESPACE_REPLACE	= 1,
+        SCHEMAWHITESPACE_COLLAPSE	= 2
     } 	SCHEMAWHITESPACE;
 
 typedef /* [helpstring] */ 
 enum _SCHEMATYPEVARIETY
-    {	SCHEMATYPEVARIETY_NONE	= -1,
-	SCHEMATYPEVARIETY_ATOMIC	= 0,
-	SCHEMATYPEVARIETY_LIST	= 1,
-	SCHEMATYPEVARIETY_UNION	= 2
+    {
+        SCHEMATYPEVARIETY_NONE	= -1,
+        SCHEMATYPEVARIETY_ATOMIC	= 0,
+        SCHEMATYPEVARIETY_LIST	= 1,
+        SCHEMATYPEVARIETY_UNION	= 2
     } 	SCHEMATYPEVARIETY;
 
 
@@ -1348,6 +1447,7 @@ EXTERN_C const IID IID_IXMLDOMImplementation;
         
     };
     
+    
 #else 	/* C style interface */
 
     typedef struct IXMLDOMImplementationVtbl
@@ -1358,7 +1458,7 @@ EXTERN_C const IID IID_IXMLDOMImplementation;
             IXMLDOMImplementation * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
-            __RPC__deref_out  void **ppvObject);
+            _COM_Outptr_  void **ppvObject);
         
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IXMLDOMImplementation * This);
@@ -1386,14 +1486,22 @@ EXTERN_C const IID IID_IXMLDOMImplementation;
         
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IXMLDOMImplementation * This,
-            /* [in] */ DISPID dispIdMember,
-            /* [in] */ REFIID riid,
-            /* [in] */ LCID lcid,
-            /* [in] */ WORD wFlags,
-            /* [out][in] */ DISPPARAMS *pDispParams,
-            /* [out] */ VARIANT *pVarResult,
-            /* [out] */ EXCEPINFO *pExcepInfo,
-            /* [out] */ UINT *puArgErr);
+            /* [annotation][in] */ 
+            _In_  DISPID dispIdMember,
+            /* [annotation][in] */ 
+            _In_  REFIID riid,
+            /* [annotation][in] */ 
+            _In_  LCID lcid,
+            /* [annotation][in] */ 
+            _In_  WORD wFlags,
+            /* [annotation][out][in] */ 
+            _In_  DISPPARAMS *pDispParams,
+            /* [annotation][out] */ 
+            _Out_opt_  VARIANT *pVarResult,
+            /* [annotation][out] */ 
+            _Out_opt_  EXCEPINFO *pExcepInfo,
+            /* [annotation][out] */ 
+            _Out_opt_  UINT *puArgErr);
         
         /* [id] */ HRESULT ( STDMETHODCALLTYPE *hasFeature )( 
             IXMLDOMImplementation * This,
@@ -1587,6 +1695,7 @@ EXTERN_C const IID IID_IXMLDOMNode;
         
     };
     
+    
 #else 	/* C style interface */
 
     typedef struct IXMLDOMNodeVtbl
@@ -1597,7 +1706,7 @@ EXTERN_C const IID IID_IXMLDOMNode;
             IXMLDOMNode * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
-            __RPC__deref_out  void **ppvObject);
+            _COM_Outptr_  void **ppvObject);
         
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IXMLDOMNode * This);
@@ -1625,14 +1734,22 @@ EXTERN_C const IID IID_IXMLDOMNode;
         
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IXMLDOMNode * This,
-            /* [in] */ DISPID dispIdMember,
-            /* [in] */ REFIID riid,
-            /* [in] */ LCID lcid,
-            /* [in] */ WORD wFlags,
-            /* [out][in] */ DISPPARAMS *pDispParams,
-            /* [out] */ VARIANT *pVarResult,
-            /* [out] */ EXCEPINFO *pExcepInfo,
-            /* [out] */ UINT *puArgErr);
+            /* [annotation][in] */ 
+            _In_  DISPID dispIdMember,
+            /* [annotation][in] */ 
+            _In_  REFIID riid,
+            /* [annotation][in] */ 
+            _In_  LCID lcid,
+            /* [annotation][in] */ 
+            _In_  WORD wFlags,
+            /* [annotation][out][in] */ 
+            _In_  DISPPARAMS *pDispParams,
+            /* [annotation][out] */ 
+            _Out_opt_  VARIANT *pVarResult,
+            /* [annotation][out] */ 
+            _Out_opt_  EXCEPINFO *pExcepInfo,
+            /* [annotation][out] */ 
+            _Out_opt_  UINT *puArgErr);
         
         /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_nodeName )( 
             IXMLDOMNode * This,
@@ -1961,6 +2078,7 @@ EXTERN_C const IID IID_IXMLDOMDocumentFragment;
     public:
     };
     
+    
 #else 	/* C style interface */
 
     typedef struct IXMLDOMDocumentFragmentVtbl
@@ -1971,7 +2089,7 @@ EXTERN_C const IID IID_IXMLDOMDocumentFragment;
             IXMLDOMDocumentFragment * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
-            __RPC__deref_out  void **ppvObject);
+            _COM_Outptr_  void **ppvObject);
         
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IXMLDOMDocumentFragment * This);
@@ -1999,14 +2117,22 @@ EXTERN_C const IID IID_IXMLDOMDocumentFragment;
         
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IXMLDOMDocumentFragment * This,
-            /* [in] */ DISPID dispIdMember,
-            /* [in] */ REFIID riid,
-            /* [in] */ LCID lcid,
-            /* [in] */ WORD wFlags,
-            /* [out][in] */ DISPPARAMS *pDispParams,
-            /* [out] */ VARIANT *pVarResult,
-            /* [out] */ EXCEPINFO *pExcepInfo,
-            /* [out] */ UINT *puArgErr);
+            /* [annotation][in] */ 
+            _In_  DISPID dispIdMember,
+            /* [annotation][in] */ 
+            _In_  REFIID riid,
+            /* [annotation][in] */ 
+            _In_  LCID lcid,
+            /* [annotation][in] */ 
+            _In_  WORD wFlags,
+            /* [annotation][out][in] */ 
+            _In_  DISPPARAMS *pDispParams,
+            /* [annotation][out] */ 
+            _Out_opt_  VARIANT *pVarResult,
+            /* [annotation][out] */ 
+            _Out_opt_  EXCEPINFO *pExcepInfo,
+            /* [annotation][out] */ 
+            _Out_opt_  UINT *puArgErr);
         
         /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_nodeName )( 
             IXMLDOMDocumentFragment * This,
@@ -2449,6 +2575,7 @@ EXTERN_C const IID IID_IXMLDOMDocument;
         
     };
     
+    
 #else 	/* C style interface */
 
     typedef struct IXMLDOMDocumentVtbl
@@ -2459,7 +2586,7 @@ EXTERN_C const IID IID_IXMLDOMDocument;
             IXMLDOMDocument * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
-            __RPC__deref_out  void **ppvObject);
+            _COM_Outptr_  void **ppvObject);
         
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IXMLDOMDocument * This);
@@ -2487,14 +2614,22 @@ EXTERN_C const IID IID_IXMLDOMDocument;
         
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IXMLDOMDocument * This,
-            /* [in] */ DISPID dispIdMember,
-            /* [in] */ REFIID riid,
-            /* [in] */ LCID lcid,
-            /* [in] */ WORD wFlags,
-            /* [out][in] */ DISPPARAMS *pDispParams,
-            /* [out] */ VARIANT *pVarResult,
-            /* [out] */ EXCEPINFO *pExcepInfo,
-            /* [out] */ UINT *puArgErr);
+            /* [annotation][in] */ 
+            _In_  DISPID dispIdMember,
+            /* [annotation][in] */ 
+            _In_  REFIID riid,
+            /* [annotation][in] */ 
+            _In_  LCID lcid,
+            /* [annotation][in] */ 
+            _In_  WORD wFlags,
+            /* [annotation][out][in] */ 
+            _In_  DISPPARAMS *pDispParams,
+            /* [annotation][out] */ 
+            _Out_opt_  VARIANT *pVarResult,
+            /* [annotation][out] */ 
+            _Out_opt_  EXCEPINFO *pExcepInfo,
+            /* [annotation][out] */ 
+            _Out_opt_  UINT *puArgErr);
         
         /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_nodeName )( 
             IXMLDOMDocument * This,
@@ -3089,6 +3224,7 @@ EXTERN_C const IID IID_IXMLDOMDocument2;
         
     };
     
+    
 #else 	/* C style interface */
 
     typedef struct IXMLDOMDocument2Vtbl
@@ -3099,7 +3235,7 @@ EXTERN_C const IID IID_IXMLDOMDocument2;
             IXMLDOMDocument2 * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
-            __RPC__deref_out  void **ppvObject);
+            _COM_Outptr_  void **ppvObject);
         
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IXMLDOMDocument2 * This);
@@ -3127,14 +3263,22 @@ EXTERN_C const IID IID_IXMLDOMDocument2;
         
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IXMLDOMDocument2 * This,
-            /* [in] */ DISPID dispIdMember,
-            /* [in] */ REFIID riid,
-            /* [in] */ LCID lcid,
-            /* [in] */ WORD wFlags,
-            /* [out][in] */ DISPPARAMS *pDispParams,
-            /* [out] */ VARIANT *pVarResult,
-            /* [out] */ EXCEPINFO *pExcepInfo,
-            /* [out] */ UINT *puArgErr);
+            /* [annotation][in] */ 
+            _In_  DISPID dispIdMember,
+            /* [annotation][in] */ 
+            _In_  REFIID riid,
+            /* [annotation][in] */ 
+            _In_  LCID lcid,
+            /* [annotation][in] */ 
+            _In_  WORD wFlags,
+            /* [annotation][out][in] */ 
+            _In_  DISPPARAMS *pDispParams,
+            /* [annotation][out] */ 
+            _Out_opt_  VARIANT *pVarResult,
+            /* [annotation][out] */ 
+            _Out_opt_  EXCEPINFO *pExcepInfo,
+            /* [annotation][out] */ 
+            _Out_opt_  UINT *puArgErr);
         
         /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_nodeName )( 
             IXMLDOMDocument2 * This,
@@ -3769,6 +3913,7 @@ EXTERN_C const IID IID_IXMLDOMNodeList;
         
     };
     
+    
 #else 	/* C style interface */
 
     typedef struct IXMLDOMNodeListVtbl
@@ -3779,7 +3924,7 @@ EXTERN_C const IID IID_IXMLDOMNodeList;
             IXMLDOMNodeList * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
-            __RPC__deref_out  void **ppvObject);
+            _COM_Outptr_  void **ppvObject);
         
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IXMLDOMNodeList * This);
@@ -3807,14 +3952,22 @@ EXTERN_C const IID IID_IXMLDOMNodeList;
         
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IXMLDOMNodeList * This,
-            /* [in] */ DISPID dispIdMember,
-            /* [in] */ REFIID riid,
-            /* [in] */ LCID lcid,
-            /* [in] */ WORD wFlags,
-            /* [out][in] */ DISPPARAMS *pDispParams,
-            /* [out] */ VARIANT *pVarResult,
-            /* [out] */ EXCEPINFO *pExcepInfo,
-            /* [out] */ UINT *puArgErr);
+            /* [annotation][in] */ 
+            _In_  DISPID dispIdMember,
+            /* [annotation][in] */ 
+            _In_  REFIID riid,
+            /* [annotation][in] */ 
+            _In_  LCID lcid,
+            /* [annotation][in] */ 
+            _In_  WORD wFlags,
+            /* [annotation][out][in] */ 
+            _In_  DISPPARAMS *pDispParams,
+            /* [annotation][out] */ 
+            _Out_opt_  VARIANT *pVarResult,
+            /* [annotation][out] */ 
+            _Out_opt_  EXCEPINFO *pExcepInfo,
+            /* [annotation][out] */ 
+            _Out_opt_  UINT *puArgErr);
         
         /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_item )( 
             IXMLDOMNodeList * This,
@@ -3952,6 +4105,7 @@ EXTERN_C const IID IID_IXMLDOMNamedNodeMap;
         
     };
     
+    
 #else 	/* C style interface */
 
     typedef struct IXMLDOMNamedNodeMapVtbl
@@ -3962,7 +4116,7 @@ EXTERN_C const IID IID_IXMLDOMNamedNodeMap;
             IXMLDOMNamedNodeMap * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
-            __RPC__deref_out  void **ppvObject);
+            _COM_Outptr_  void **ppvObject);
         
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IXMLDOMNamedNodeMap * This);
@@ -3990,14 +4144,22 @@ EXTERN_C const IID IID_IXMLDOMNamedNodeMap;
         
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IXMLDOMNamedNodeMap * This,
-            /* [in] */ DISPID dispIdMember,
-            /* [in] */ REFIID riid,
-            /* [in] */ LCID lcid,
-            /* [in] */ WORD wFlags,
-            /* [out][in] */ DISPPARAMS *pDispParams,
-            /* [out] */ VARIANT *pVarResult,
-            /* [out] */ EXCEPINFO *pExcepInfo,
-            /* [out] */ UINT *puArgErr);
+            /* [annotation][in] */ 
+            _In_  DISPID dispIdMember,
+            /* [annotation][in] */ 
+            _In_  REFIID riid,
+            /* [annotation][in] */ 
+            _In_  LCID lcid,
+            /* [annotation][in] */ 
+            _In_  WORD wFlags,
+            /* [annotation][out][in] */ 
+            _In_  DISPPARAMS *pDispParams,
+            /* [annotation][out] */ 
+            _Out_opt_  VARIANT *pVarResult,
+            /* [annotation][out] */ 
+            _Out_opt_  EXCEPINFO *pExcepInfo,
+            /* [annotation][out] */ 
+            _Out_opt_  UINT *puArgErr);
         
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *getNamedItem )( 
             IXMLDOMNamedNodeMap * This,
@@ -4170,6 +4332,7 @@ EXTERN_C const IID IID_IXMLDOMCharacterData;
         
     };
     
+    
 #else 	/* C style interface */
 
     typedef struct IXMLDOMCharacterDataVtbl
@@ -4180,7 +4343,7 @@ EXTERN_C const IID IID_IXMLDOMCharacterData;
             IXMLDOMCharacterData * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
-            __RPC__deref_out  void **ppvObject);
+            _COM_Outptr_  void **ppvObject);
         
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IXMLDOMCharacterData * This);
@@ -4208,14 +4371,22 @@ EXTERN_C const IID IID_IXMLDOMCharacterData;
         
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IXMLDOMCharacterData * This,
-            /* [in] */ DISPID dispIdMember,
-            /* [in] */ REFIID riid,
-            /* [in] */ LCID lcid,
-            /* [in] */ WORD wFlags,
-            /* [out][in] */ DISPPARAMS *pDispParams,
-            /* [out] */ VARIANT *pVarResult,
-            /* [out] */ EXCEPINFO *pExcepInfo,
-            /* [out] */ UINT *puArgErr);
+            /* [annotation][in] */ 
+            _In_  DISPID dispIdMember,
+            /* [annotation][in] */ 
+            _In_  REFIID riid,
+            /* [annotation][in] */ 
+            _In_  LCID lcid,
+            /* [annotation][in] */ 
+            _In_  WORD wFlags,
+            /* [annotation][out][in] */ 
+            _In_  DISPPARAMS *pDispParams,
+            /* [annotation][out] */ 
+            _Out_opt_  VARIANT *pVarResult,
+            /* [annotation][out] */ 
+            _Out_opt_  EXCEPINFO *pExcepInfo,
+            /* [annotation][out] */ 
+            _Out_opt_  UINT *puArgErr);
         
         /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_nodeName )( 
             IXMLDOMCharacterData * This,
@@ -4616,6 +4787,7 @@ EXTERN_C const IID IID_IXMLDOMAttribute;
         
     };
     
+    
 #else 	/* C style interface */
 
     typedef struct IXMLDOMAttributeVtbl
@@ -4626,7 +4798,7 @@ EXTERN_C const IID IID_IXMLDOMAttribute;
             IXMLDOMAttribute * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
-            __RPC__deref_out  void **ppvObject);
+            _COM_Outptr_  void **ppvObject);
         
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IXMLDOMAttribute * This);
@@ -4654,14 +4826,22 @@ EXTERN_C const IID IID_IXMLDOMAttribute;
         
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IXMLDOMAttribute * This,
-            /* [in] */ DISPID dispIdMember,
-            /* [in] */ REFIID riid,
-            /* [in] */ LCID lcid,
-            /* [in] */ WORD wFlags,
-            /* [out][in] */ DISPPARAMS *pDispParams,
-            /* [out] */ VARIANT *pVarResult,
-            /* [out] */ EXCEPINFO *pExcepInfo,
-            /* [out] */ UINT *puArgErr);
+            /* [annotation][in] */ 
+            _In_  DISPID dispIdMember,
+            /* [annotation][in] */ 
+            _In_  REFIID riid,
+            /* [annotation][in] */ 
+            _In_  LCID lcid,
+            /* [annotation][in] */ 
+            _In_  WORD wFlags,
+            /* [annotation][out][in] */ 
+            _In_  DISPPARAMS *pDispParams,
+            /* [annotation][out] */ 
+            _Out_opt_  VARIANT *pVarResult,
+            /* [annotation][out] */ 
+            _Out_opt_  EXCEPINFO *pExcepInfo,
+            /* [annotation][out] */ 
+            _Out_opt_  UINT *puArgErr);
         
         /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_nodeName )( 
             IXMLDOMAttribute * This,
@@ -5044,6 +5224,7 @@ EXTERN_C const IID IID_IXMLDOMElement;
         
     };
     
+    
 #else 	/* C style interface */
 
     typedef struct IXMLDOMElementVtbl
@@ -5054,7 +5235,7 @@ EXTERN_C const IID IID_IXMLDOMElement;
             IXMLDOMElement * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
-            __RPC__deref_out  void **ppvObject);
+            _COM_Outptr_  void **ppvObject);
         
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IXMLDOMElement * This);
@@ -5082,14 +5263,22 @@ EXTERN_C const IID IID_IXMLDOMElement;
         
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IXMLDOMElement * This,
-            /* [in] */ DISPID dispIdMember,
-            /* [in] */ REFIID riid,
-            /* [in] */ LCID lcid,
-            /* [in] */ WORD wFlags,
-            /* [out][in] */ DISPPARAMS *pDispParams,
-            /* [out] */ VARIANT *pVarResult,
-            /* [out] */ EXCEPINFO *pExcepInfo,
-            /* [out] */ UINT *puArgErr);
+            /* [annotation][in] */ 
+            _In_  DISPID dispIdMember,
+            /* [annotation][in] */ 
+            _In_  REFIID riid,
+            /* [annotation][in] */ 
+            _In_  LCID lcid,
+            /* [annotation][in] */ 
+            _In_  WORD wFlags,
+            /* [annotation][out][in] */ 
+            _In_  DISPPARAMS *pDispParams,
+            /* [annotation][out] */ 
+            _Out_opt_  VARIANT *pVarResult,
+            /* [annotation][out] */ 
+            _Out_opt_  EXCEPINFO *pExcepInfo,
+            /* [annotation][out] */ 
+            _Out_opt_  UINT *puArgErr);
         
         /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_nodeName )( 
             IXMLDOMElement * This,
@@ -5491,6 +5680,7 @@ EXTERN_C const IID IID_IXMLDOMText;
         
     };
     
+    
 #else 	/* C style interface */
 
     typedef struct IXMLDOMTextVtbl
@@ -5501,7 +5691,7 @@ EXTERN_C const IID IID_IXMLDOMText;
             IXMLDOMText * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
-            __RPC__deref_out  void **ppvObject);
+            _COM_Outptr_  void **ppvObject);
         
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IXMLDOMText * This);
@@ -5529,14 +5719,22 @@ EXTERN_C const IID IID_IXMLDOMText;
         
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IXMLDOMText * This,
-            /* [in] */ DISPID dispIdMember,
-            /* [in] */ REFIID riid,
-            /* [in] */ LCID lcid,
-            /* [in] */ WORD wFlags,
-            /* [out][in] */ DISPPARAMS *pDispParams,
-            /* [out] */ VARIANT *pVarResult,
-            /* [out] */ EXCEPINFO *pExcepInfo,
-            /* [out] */ UINT *puArgErr);
+            /* [annotation][in] */ 
+            _In_  DISPID dispIdMember,
+            /* [annotation][in] */ 
+            _In_  REFIID riid,
+            /* [annotation][in] */ 
+            _In_  LCID lcid,
+            /* [annotation][in] */ 
+            _In_  WORD wFlags,
+            /* [annotation][out][in] */ 
+            _In_  DISPPARAMS *pDispParams,
+            /* [annotation][out] */ 
+            _Out_opt_  VARIANT *pVarResult,
+            /* [annotation][out] */ 
+            _Out_opt_  EXCEPINFO *pExcepInfo,
+            /* [annotation][out] */ 
+            _Out_opt_  UINT *puArgErr);
         
         /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_nodeName )( 
             IXMLDOMText * This,
@@ -5937,6 +6135,7 @@ EXTERN_C const IID IID_IXMLDOMComment;
     public:
     };
     
+    
 #else 	/* C style interface */
 
     typedef struct IXMLDOMCommentVtbl
@@ -5947,7 +6146,7 @@ EXTERN_C const IID IID_IXMLDOMComment;
             IXMLDOMComment * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
-            __RPC__deref_out  void **ppvObject);
+            _COM_Outptr_  void **ppvObject);
         
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IXMLDOMComment * This);
@@ -5975,14 +6174,22 @@ EXTERN_C const IID IID_IXMLDOMComment;
         
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IXMLDOMComment * This,
-            /* [in] */ DISPID dispIdMember,
-            /* [in] */ REFIID riid,
-            /* [in] */ LCID lcid,
-            /* [in] */ WORD wFlags,
-            /* [out][in] */ DISPPARAMS *pDispParams,
-            /* [out] */ VARIANT *pVarResult,
-            /* [out] */ EXCEPINFO *pExcepInfo,
-            /* [out] */ UINT *puArgErr);
+            /* [annotation][in] */ 
+            _In_  DISPID dispIdMember,
+            /* [annotation][in] */ 
+            _In_  REFIID riid,
+            /* [annotation][in] */ 
+            _In_  LCID lcid,
+            /* [annotation][in] */ 
+            _In_  WORD wFlags,
+            /* [annotation][out][in] */ 
+            _In_  DISPPARAMS *pDispParams,
+            /* [annotation][out] */ 
+            _Out_opt_  VARIANT *pVarResult,
+            /* [annotation][out] */ 
+            _Out_opt_  EXCEPINFO *pExcepInfo,
+            /* [annotation][out] */ 
+            _Out_opt_  UINT *puArgErr);
         
         /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_nodeName )( 
             IXMLDOMComment * This,
@@ -6384,6 +6591,7 @@ EXTERN_C const IID IID_IXMLDOMProcessingInstruction;
         
     };
     
+    
 #else 	/* C style interface */
 
     typedef struct IXMLDOMProcessingInstructionVtbl
@@ -6394,7 +6602,7 @@ EXTERN_C const IID IID_IXMLDOMProcessingInstruction;
             IXMLDOMProcessingInstruction * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
-            __RPC__deref_out  void **ppvObject);
+            _COM_Outptr_  void **ppvObject);
         
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IXMLDOMProcessingInstruction * This);
@@ -6422,14 +6630,22 @@ EXTERN_C const IID IID_IXMLDOMProcessingInstruction;
         
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IXMLDOMProcessingInstruction * This,
-            /* [in] */ DISPID dispIdMember,
-            /* [in] */ REFIID riid,
-            /* [in] */ LCID lcid,
-            /* [in] */ WORD wFlags,
-            /* [out][in] */ DISPPARAMS *pDispParams,
-            /* [out] */ VARIANT *pVarResult,
-            /* [out] */ EXCEPINFO *pExcepInfo,
-            /* [out] */ UINT *puArgErr);
+            /* [annotation][in] */ 
+            _In_  DISPID dispIdMember,
+            /* [annotation][in] */ 
+            _In_  REFIID riid,
+            /* [annotation][in] */ 
+            _In_  LCID lcid,
+            /* [annotation][in] */ 
+            _In_  WORD wFlags,
+            /* [annotation][out][in] */ 
+            _In_  DISPPARAMS *pDispParams,
+            /* [annotation][out] */ 
+            _Out_opt_  VARIANT *pVarResult,
+            /* [annotation][out] */ 
+            _Out_opt_  EXCEPINFO *pExcepInfo,
+            /* [annotation][out] */ 
+            _Out_opt_  UINT *puArgErr);
         
         /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_nodeName )( 
             IXMLDOMProcessingInstruction * This,
@@ -6780,6 +6996,7 @@ EXTERN_C const IID IID_IXMLDOMCDATASection;
     public:
     };
     
+    
 #else 	/* C style interface */
 
     typedef struct IXMLDOMCDATASectionVtbl
@@ -6790,7 +7007,7 @@ EXTERN_C const IID IID_IXMLDOMCDATASection;
             IXMLDOMCDATASection * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
-            __RPC__deref_out  void **ppvObject);
+            _COM_Outptr_  void **ppvObject);
         
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IXMLDOMCDATASection * This);
@@ -6818,14 +7035,22 @@ EXTERN_C const IID IID_IXMLDOMCDATASection;
         
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IXMLDOMCDATASection * This,
-            /* [in] */ DISPID dispIdMember,
-            /* [in] */ REFIID riid,
-            /* [in] */ LCID lcid,
-            /* [in] */ WORD wFlags,
-            /* [out][in] */ DISPPARAMS *pDispParams,
-            /* [out] */ VARIANT *pVarResult,
-            /* [out] */ EXCEPINFO *pExcepInfo,
-            /* [out] */ UINT *puArgErr);
+            /* [annotation][in] */ 
+            _In_  DISPID dispIdMember,
+            /* [annotation][in] */ 
+            _In_  REFIID riid,
+            /* [annotation][in] */ 
+            _In_  LCID lcid,
+            /* [annotation][in] */ 
+            _In_  WORD wFlags,
+            /* [annotation][out][in] */ 
+            _In_  DISPPARAMS *pDispParams,
+            /* [annotation][out] */ 
+            _Out_opt_  VARIANT *pVarResult,
+            /* [annotation][out] */ 
+            _Out_opt_  EXCEPINFO *pExcepInfo,
+            /* [annotation][out] */ 
+            _Out_opt_  UINT *puArgErr);
         
         /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_nodeName )( 
             IXMLDOMCDATASection * This,
@@ -7236,6 +7461,7 @@ EXTERN_C const IID IID_IXMLDOMDocumentType;
         
     };
     
+    
 #else 	/* C style interface */
 
     typedef struct IXMLDOMDocumentTypeVtbl
@@ -7246,7 +7472,7 @@ EXTERN_C const IID IID_IXMLDOMDocumentType;
             IXMLDOMDocumentType * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
-            __RPC__deref_out  void **ppvObject);
+            _COM_Outptr_  void **ppvObject);
         
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IXMLDOMDocumentType * This);
@@ -7274,14 +7500,22 @@ EXTERN_C const IID IID_IXMLDOMDocumentType;
         
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IXMLDOMDocumentType * This,
-            /* [in] */ DISPID dispIdMember,
-            /* [in] */ REFIID riid,
-            /* [in] */ LCID lcid,
-            /* [in] */ WORD wFlags,
-            /* [out][in] */ DISPPARAMS *pDispParams,
-            /* [out] */ VARIANT *pVarResult,
-            /* [out] */ EXCEPINFO *pExcepInfo,
-            /* [out] */ UINT *puArgErr);
+            /* [annotation][in] */ 
+            _In_  DISPID dispIdMember,
+            /* [annotation][in] */ 
+            _In_  REFIID riid,
+            /* [annotation][in] */ 
+            _In_  LCID lcid,
+            /* [annotation][in] */ 
+            _In_  WORD wFlags,
+            /* [annotation][out][in] */ 
+            _In_  DISPPARAMS *pDispParams,
+            /* [annotation][out] */ 
+            _Out_opt_  VARIANT *pVarResult,
+            /* [annotation][out] */ 
+            _Out_opt_  EXCEPINFO *pExcepInfo,
+            /* [annotation][out] */ 
+            _Out_opt_  UINT *puArgErr);
         
         /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_nodeName )( 
             IXMLDOMDocumentType * This,
@@ -7638,6 +7872,7 @@ EXTERN_C const IID IID_IXMLDOMNotation;
         
     };
     
+    
 #else 	/* C style interface */
 
     typedef struct IXMLDOMNotationVtbl
@@ -7648,7 +7883,7 @@ EXTERN_C const IID IID_IXMLDOMNotation;
             IXMLDOMNotation * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
-            __RPC__deref_out  void **ppvObject);
+            _COM_Outptr_  void **ppvObject);
         
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IXMLDOMNotation * This);
@@ -7676,14 +7911,22 @@ EXTERN_C const IID IID_IXMLDOMNotation;
         
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IXMLDOMNotation * This,
-            /* [in] */ DISPID dispIdMember,
-            /* [in] */ REFIID riid,
-            /* [in] */ LCID lcid,
-            /* [in] */ WORD wFlags,
-            /* [out][in] */ DISPPARAMS *pDispParams,
-            /* [out] */ VARIANT *pVarResult,
-            /* [out] */ EXCEPINFO *pExcepInfo,
-            /* [out] */ UINT *puArgErr);
+            /* [annotation][in] */ 
+            _In_  DISPID dispIdMember,
+            /* [annotation][in] */ 
+            _In_  REFIID riid,
+            /* [annotation][in] */ 
+            _In_  LCID lcid,
+            /* [annotation][in] */ 
+            _In_  WORD wFlags,
+            /* [annotation][out][in] */ 
+            _In_  DISPPARAMS *pDispParams,
+            /* [annotation][out] */ 
+            _Out_opt_  VARIANT *pVarResult,
+            /* [annotation][out] */ 
+            _Out_opt_  EXCEPINFO *pExcepInfo,
+            /* [annotation][out] */ 
+            _Out_opt_  UINT *puArgErr);
         
         /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_nodeName )( 
             IXMLDOMNotation * This,
@@ -8036,6 +8279,7 @@ EXTERN_C const IID IID_IXMLDOMEntity;
         
     };
     
+    
 #else 	/* C style interface */
 
     typedef struct IXMLDOMEntityVtbl
@@ -8046,7 +8290,7 @@ EXTERN_C const IID IID_IXMLDOMEntity;
             IXMLDOMEntity * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
-            __RPC__deref_out  void **ppvObject);
+            _COM_Outptr_  void **ppvObject);
         
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IXMLDOMEntity * This);
@@ -8074,14 +8318,22 @@ EXTERN_C const IID IID_IXMLDOMEntity;
         
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IXMLDOMEntity * This,
-            /* [in] */ DISPID dispIdMember,
-            /* [in] */ REFIID riid,
-            /* [in] */ LCID lcid,
-            /* [in] */ WORD wFlags,
-            /* [out][in] */ DISPPARAMS *pDispParams,
-            /* [out] */ VARIANT *pVarResult,
-            /* [out] */ EXCEPINFO *pExcepInfo,
-            /* [out] */ UINT *puArgErr);
+            /* [annotation][in] */ 
+            _In_  DISPID dispIdMember,
+            /* [annotation][in] */ 
+            _In_  REFIID riid,
+            /* [annotation][in] */ 
+            _In_  LCID lcid,
+            /* [annotation][in] */ 
+            _In_  WORD wFlags,
+            /* [annotation][out][in] */ 
+            _In_  DISPPARAMS *pDispParams,
+            /* [annotation][out] */ 
+            _Out_opt_  VARIANT *pVarResult,
+            /* [annotation][out] */ 
+            _Out_opt_  EXCEPINFO *pExcepInfo,
+            /* [annotation][out] */ 
+            _Out_opt_  UINT *puArgErr);
         
         /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_nodeName )( 
             IXMLDOMEntity * This,
@@ -8432,6 +8684,7 @@ EXTERN_C const IID IID_IXMLDOMEntityReference;
     public:
     };
     
+    
 #else 	/* C style interface */
 
     typedef struct IXMLDOMEntityReferenceVtbl
@@ -8442,7 +8695,7 @@ EXTERN_C const IID IID_IXMLDOMEntityReference;
             IXMLDOMEntityReference * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
-            __RPC__deref_out  void **ppvObject);
+            _COM_Outptr_  void **ppvObject);
         
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IXMLDOMEntityReference * This);
@@ -8470,14 +8723,22 @@ EXTERN_C const IID IID_IXMLDOMEntityReference;
         
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IXMLDOMEntityReference * This,
-            /* [in] */ DISPID dispIdMember,
-            /* [in] */ REFIID riid,
-            /* [in] */ LCID lcid,
-            /* [in] */ WORD wFlags,
-            /* [out][in] */ DISPPARAMS *pDispParams,
-            /* [out] */ VARIANT *pVarResult,
-            /* [out] */ EXCEPINFO *pExcepInfo,
-            /* [out] */ UINT *puArgErr);
+            /* [annotation][in] */ 
+            _In_  DISPID dispIdMember,
+            /* [annotation][in] */ 
+            _In_  REFIID riid,
+            /* [annotation][in] */ 
+            _In_  LCID lcid,
+            /* [annotation][in] */ 
+            _In_  WORD wFlags,
+            /* [annotation][out][in] */ 
+            _In_  DISPPARAMS *pDispParams,
+            /* [annotation][out] */ 
+            _Out_opt_  VARIANT *pVarResult,
+            /* [annotation][out] */ 
+            _Out_opt_  EXCEPINFO *pExcepInfo,
+            /* [annotation][out] */ 
+            _Out_opt_  UINT *puArgErr);
         
         /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_nodeName )( 
             IXMLDOMEntityReference * This,
@@ -8828,6 +9089,7 @@ EXTERN_C const IID IID_IXMLDOMParseError;
         
     };
     
+    
 #else 	/* C style interface */
 
     typedef struct IXMLDOMParseErrorVtbl
@@ -8838,7 +9100,7 @@ EXTERN_C const IID IID_IXMLDOMParseError;
             IXMLDOMParseError * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
-            __RPC__deref_out  void **ppvObject);
+            _COM_Outptr_  void **ppvObject);
         
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IXMLDOMParseError * This);
@@ -8866,14 +9128,22 @@ EXTERN_C const IID IID_IXMLDOMParseError;
         
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IXMLDOMParseError * This,
-            /* [in] */ DISPID dispIdMember,
-            /* [in] */ REFIID riid,
-            /* [in] */ LCID lcid,
-            /* [in] */ WORD wFlags,
-            /* [out][in] */ DISPPARAMS *pDispParams,
-            /* [out] */ VARIANT *pVarResult,
-            /* [out] */ EXCEPINFO *pExcepInfo,
-            /* [out] */ UINT *puArgErr);
+            /* [annotation][in] */ 
+            _In_  DISPID dispIdMember,
+            /* [annotation][in] */ 
+            _In_  REFIID riid,
+            /* [annotation][in] */ 
+            _In_  LCID lcid,
+            /* [annotation][in] */ 
+            _In_  WORD wFlags,
+            /* [annotation][out][in] */ 
+            _In_  DISPPARAMS *pDispParams,
+            /* [annotation][out] */ 
+            _Out_opt_  VARIANT *pVarResult,
+            /* [annotation][out] */ 
+            _Out_opt_  EXCEPINFO *pExcepInfo,
+            /* [annotation][out] */ 
+            _Out_opt_  UINT *puArgErr);
         
         /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_errorCode )( 
             IXMLDOMParseError * This,
@@ -9012,6 +9282,7 @@ EXTERN_C const IID IID_IXMLDOMSchemaCollection;
         
     };
     
+    
 #else 	/* C style interface */
 
     typedef struct IXMLDOMSchemaCollectionVtbl
@@ -9022,7 +9293,7 @@ EXTERN_C const IID IID_IXMLDOMSchemaCollection;
             IXMLDOMSchemaCollection * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
-            __RPC__deref_out  void **ppvObject);
+            _COM_Outptr_  void **ppvObject);
         
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IXMLDOMSchemaCollection * This);
@@ -9050,14 +9321,22 @@ EXTERN_C const IID IID_IXMLDOMSchemaCollection;
         
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IXMLDOMSchemaCollection * This,
-            /* [in] */ DISPID dispIdMember,
-            /* [in] */ REFIID riid,
-            /* [in] */ LCID lcid,
-            /* [in] */ WORD wFlags,
-            /* [out][in] */ DISPPARAMS *pDispParams,
-            /* [out] */ VARIANT *pVarResult,
-            /* [out] */ EXCEPINFO *pExcepInfo,
-            /* [out] */ UINT *puArgErr);
+            /* [annotation][in] */ 
+            _In_  DISPID dispIdMember,
+            /* [annotation][in] */ 
+            _In_  REFIID riid,
+            /* [annotation][in] */ 
+            _In_  LCID lcid,
+            /* [annotation][in] */ 
+            _In_  WORD wFlags,
+            /* [annotation][out][in] */ 
+            _In_  DISPPARAMS *pDispParams,
+            /* [annotation][out] */ 
+            _Out_opt_  VARIANT *pVarResult,
+            /* [annotation][out] */ 
+            _Out_opt_  EXCEPINFO *pExcepInfo,
+            /* [annotation][out] */ 
+            _Out_opt_  UINT *puArgErr);
         
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *add )( 
             IXMLDOMSchemaCollection * This,
@@ -9218,6 +9497,7 @@ EXTERN_C const IID IID_IXTLRuntime;
         
     };
     
+    
 #else 	/* C style interface */
 
     typedef struct IXTLRuntimeVtbl
@@ -9228,7 +9508,7 @@ EXTERN_C const IID IID_IXTLRuntime;
             IXTLRuntime * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
-            __RPC__deref_out  void **ppvObject);
+            _COM_Outptr_  void **ppvObject);
         
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IXTLRuntime * This);
@@ -9256,14 +9536,22 @@ EXTERN_C const IID IID_IXTLRuntime;
         
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IXTLRuntime * This,
-            /* [in] */ DISPID dispIdMember,
-            /* [in] */ REFIID riid,
-            /* [in] */ LCID lcid,
-            /* [in] */ WORD wFlags,
-            /* [out][in] */ DISPPARAMS *pDispParams,
-            /* [out] */ VARIANT *pVarResult,
-            /* [out] */ EXCEPINFO *pExcepInfo,
-            /* [out] */ UINT *puArgErr);
+            /* [annotation][in] */ 
+            _In_  DISPID dispIdMember,
+            /* [annotation][in] */ 
+            _In_  REFIID riid,
+            /* [annotation][in] */ 
+            _In_  LCID lcid,
+            /* [annotation][in] */ 
+            _In_  WORD wFlags,
+            /* [annotation][out][in] */ 
+            _In_  DISPPARAMS *pDispParams,
+            /* [annotation][out] */ 
+            _Out_opt_  VARIANT *pVarResult,
+            /* [annotation][out] */ 
+            _Out_opt_  EXCEPINFO *pExcepInfo,
+            /* [annotation][out] */ 
+            _Out_opt_  UINT *puArgErr);
         
         /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_nodeName )( 
             IXTLRuntime * This,
@@ -9681,6 +9969,7 @@ EXTERN_C const IID IID_IXSLTemplate;
         
     };
     
+    
 #else 	/* C style interface */
 
     typedef struct IXSLTemplateVtbl
@@ -9691,7 +9980,7 @@ EXTERN_C const IID IID_IXSLTemplate;
             IXSLTemplate * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
-            __RPC__deref_out  void **ppvObject);
+            _COM_Outptr_  void **ppvObject);
         
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IXSLTemplate * This);
@@ -9719,14 +10008,22 @@ EXTERN_C const IID IID_IXSLTemplate;
         
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IXSLTemplate * This,
-            /* [in] */ DISPID dispIdMember,
-            /* [in] */ REFIID riid,
-            /* [in] */ LCID lcid,
-            /* [in] */ WORD wFlags,
-            /* [out][in] */ DISPPARAMS *pDispParams,
-            /* [out] */ VARIANT *pVarResult,
-            /* [out] */ EXCEPINFO *pExcepInfo,
-            /* [out] */ UINT *puArgErr);
+            /* [annotation][in] */ 
+            _In_  DISPID dispIdMember,
+            /* [annotation][in] */ 
+            _In_  REFIID riid,
+            /* [annotation][in] */ 
+            _In_  LCID lcid,
+            /* [annotation][in] */ 
+            _In_  WORD wFlags,
+            /* [annotation][out][in] */ 
+            _In_  DISPPARAMS *pDispParams,
+            /* [annotation][out] */ 
+            _Out_opt_  VARIANT *pVarResult,
+            /* [annotation][out] */ 
+            _Out_opt_  EXCEPINFO *pExcepInfo,
+            /* [annotation][out] */ 
+            _Out_opt_  UINT *puArgErr);
         
         /* [helpstring][id][propputref] */ HRESULT ( STDMETHODCALLTYPE *putref_stylesheet )( 
             IXSLTemplate * This,
@@ -9822,7 +10119,7 @@ EXTERN_C const IID IID_IXSLProcessor;
         
         virtual /* [helpstring][id] */ HRESULT STDMETHODCALLTYPE setStartMode( 
             /* [in] */ BSTR mode,
-            /* [defaultvalue][in] */ BSTR namespaceURI = L"") = 0;
+            /* [defaultvalue][in] */ BSTR namespaceURI = (BSTR)L"") = 0;
         
         virtual /* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE get_startMode( 
             /* [retval][out] */ BSTR *mode) = 0;
@@ -9847,7 +10144,7 @@ EXTERN_C const IID IID_IXSLProcessor;
         virtual /* [helpstring][id] */ HRESULT STDMETHODCALLTYPE addParameter( 
             /* [in] */ BSTR baseName,
             /* [in] */ VARIANT parameter,
-            /* [defaultvalue][in] */ BSTR namespaceURI = L"") = 0;
+            /* [defaultvalue][in] */ BSTR namespaceURI = (BSTR)L"") = 0;
         
         virtual /* [helpstring][id] */ HRESULT STDMETHODCALLTYPE addObject( 
             /* [in] */ IDispatch *obj,
@@ -9857,6 +10154,7 @@ EXTERN_C const IID IID_IXSLProcessor;
             /* [retval][out] */ IXMLDOMNode **stylesheet) = 0;
         
     };
+    
     
 #else 	/* C style interface */
 
@@ -9868,7 +10166,7 @@ EXTERN_C const IID IID_IXSLProcessor;
             IXSLProcessor * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
-            __RPC__deref_out  void **ppvObject);
+            _COM_Outptr_  void **ppvObject);
         
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IXSLProcessor * This);
@@ -9896,14 +10194,22 @@ EXTERN_C const IID IID_IXSLProcessor;
         
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IXSLProcessor * This,
-            /* [in] */ DISPID dispIdMember,
-            /* [in] */ REFIID riid,
-            /* [in] */ LCID lcid,
-            /* [in] */ WORD wFlags,
-            /* [out][in] */ DISPPARAMS *pDispParams,
-            /* [out] */ VARIANT *pVarResult,
-            /* [out] */ EXCEPINFO *pExcepInfo,
-            /* [out] */ UINT *puArgErr);
+            /* [annotation][in] */ 
+            _In_  DISPID dispIdMember,
+            /* [annotation][in] */ 
+            _In_  REFIID riid,
+            /* [annotation][in] */ 
+            _In_  LCID lcid,
+            /* [annotation][in] */ 
+            _In_  WORD wFlags,
+            /* [annotation][out][in] */ 
+            _In_  DISPPARAMS *pDispParams,
+            /* [annotation][out] */ 
+            _Out_opt_  VARIANT *pVarResult,
+            /* [annotation][out] */ 
+            _Out_opt_  EXCEPINFO *pExcepInfo,
+            /* [annotation][out] */ 
+            _Out_opt_  UINT *puArgErr);
         
         /* [helpstring][id][propput] */ HRESULT ( STDMETHODCALLTYPE *put_input )( 
             IXSLProcessor * This,
@@ -10128,6 +10434,7 @@ EXTERN_C const IID IID_ISAXXMLReader;
         
     };
     
+    
 #else 	/* C style interface */
 
     typedef struct ISAXXMLReaderVtbl
@@ -10138,7 +10445,7 @@ EXTERN_C const IID IID_ISAXXMLReader;
             ISAXXMLReader * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
-            __RPC__deref_out  void **ppvObject);
+            _COM_Outptr_  void **ppvObject);
         
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             ISAXXMLReader * This);
@@ -10333,6 +10640,7 @@ EXTERN_C const IID IID_ISAXXMLFilter;
         
     };
     
+    
 #else 	/* C style interface */
 
     typedef struct ISAXXMLFilterVtbl
@@ -10343,7 +10651,7 @@ EXTERN_C const IID IID_ISAXXMLFilter;
             ISAXXMLFilter * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
-            __RPC__deref_out  void **ppvObject);
+            _COM_Outptr_  void **ppvObject);
         
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             ISAXXMLFilter * This);
@@ -10559,6 +10867,7 @@ EXTERN_C const IID IID_ISAXLocator;
         
     };
     
+    
 #else 	/* C style interface */
 
     typedef struct ISAXLocatorVtbl
@@ -10569,7 +10878,7 @@ EXTERN_C const IID IID_ISAXLocator;
             ISAXLocator * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
-            __RPC__deref_out  void **ppvObject);
+            _COM_Outptr_  void **ppvObject);
         
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             ISAXLocator * This);
@@ -10661,6 +10970,7 @@ EXTERN_C const IID IID_ISAXEntityResolver;
         
     };
     
+    
 #else 	/* C style interface */
 
     typedef struct ISAXEntityResolverVtbl
@@ -10671,7 +10981,7 @@ EXTERN_C const IID IID_ISAXEntityResolver;
             ISAXEntityResolver * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
-            __RPC__deref_out  void **ppvObject);
+            _COM_Outptr_  void **ppvObject);
         
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             ISAXEntityResolver * This);
@@ -10791,6 +11101,7 @@ EXTERN_C const IID IID_ISAXContentHandler;
         
     };
     
+    
 #else 	/* C style interface */
 
     typedef struct ISAXContentHandlerVtbl
@@ -10801,7 +11112,7 @@ EXTERN_C const IID IID_ISAXContentHandler;
             ISAXContentHandler * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
-            __RPC__deref_out  void **ppvObject);
+            _COM_Outptr_  void **ppvObject);
         
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             ISAXContentHandler * This);
@@ -10974,6 +11285,7 @@ EXTERN_C const IID IID_ISAXDTDHandler;
         
     };
     
+    
 #else 	/* C style interface */
 
     typedef struct ISAXDTDHandlerVtbl
@@ -10984,7 +11296,7 @@ EXTERN_C const IID IID_ISAXDTDHandler;
             ISAXDTDHandler * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
-            __RPC__deref_out  void **ppvObject);
+            _COM_Outptr_  void **ppvObject);
         
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             ISAXDTDHandler * This);
@@ -11084,6 +11396,7 @@ EXTERN_C const IID IID_ISAXErrorHandler;
         
     };
     
+    
 #else 	/* C style interface */
 
     typedef struct ISAXErrorHandlerVtbl
@@ -11094,7 +11407,7 @@ EXTERN_C const IID IID_ISAXErrorHandler;
             ISAXErrorHandler * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
-            __RPC__deref_out  void **ppvObject);
+            _COM_Outptr_  void **ppvObject);
         
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             ISAXErrorHandler * This);
@@ -11206,6 +11519,7 @@ EXTERN_C const IID IID_ISAXLexicalHandler;
         
     };
     
+    
 #else 	/* C style interface */
 
     typedef struct ISAXLexicalHandlerVtbl
@@ -11216,7 +11530,7 @@ EXTERN_C const IID IID_ISAXLexicalHandler;
             ISAXLexicalHandler * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
-            __RPC__deref_out  void **ppvObject);
+            _COM_Outptr_  void **ppvObject);
         
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             ISAXLexicalHandler * This);
@@ -11361,6 +11675,7 @@ EXTERN_C const IID IID_ISAXDeclHandler;
         
     };
     
+    
 #else 	/* C style interface */
 
     typedef struct ISAXDeclHandlerVtbl
@@ -11371,7 +11686,7 @@ EXTERN_C const IID IID_ISAXDeclHandler;
             ISAXDeclHandler * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
-            __RPC__deref_out  void **ppvObject);
+            _COM_Outptr_  void **ppvObject);
         
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             ISAXDeclHandler * This);
@@ -11555,6 +11870,7 @@ EXTERN_C const IID IID_ISAXAttributes;
         
     };
     
+    
 #else 	/* C style interface */
 
     typedef struct ISAXAttributesVtbl
@@ -11565,7 +11881,7 @@ EXTERN_C const IID IID_ISAXAttributes;
             ISAXAttributes * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
-            __RPC__deref_out  void **ppvObject);
+            _COM_Outptr_  void **ppvObject);
         
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             ISAXAttributes * This);
@@ -11811,6 +12127,7 @@ EXTERN_C const IID IID_IVBSAXXMLReader;
         
     };
     
+    
 #else 	/* C style interface */
 
     typedef struct IVBSAXXMLReaderVtbl
@@ -11821,7 +12138,7 @@ EXTERN_C const IID IID_IVBSAXXMLReader;
             IVBSAXXMLReader * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
-            __RPC__deref_out  void **ppvObject);
+            _COM_Outptr_  void **ppvObject);
         
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IVBSAXXMLReader * This);
@@ -11849,14 +12166,22 @@ EXTERN_C const IID IID_IVBSAXXMLReader;
         
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IVBSAXXMLReader * This,
-            /* [in] */ DISPID dispIdMember,
-            /* [in] */ REFIID riid,
-            /* [in] */ LCID lcid,
-            /* [in] */ WORD wFlags,
-            /* [out][in] */ DISPPARAMS *pDispParams,
-            /* [out] */ VARIANT *pVarResult,
-            /* [out] */ EXCEPINFO *pExcepInfo,
-            /* [out] */ UINT *puArgErr);
+            /* [annotation][in] */ 
+            _In_  DISPID dispIdMember,
+            /* [annotation][in] */ 
+            _In_  REFIID riid,
+            /* [annotation][in] */ 
+            _In_  LCID lcid,
+            /* [annotation][in] */ 
+            _In_  WORD wFlags,
+            /* [annotation][out][in] */ 
+            _In_  DISPPARAMS *pDispParams,
+            /* [annotation][out] */ 
+            _Out_opt_  VARIANT *pVarResult,
+            /* [annotation][out] */ 
+            _Out_opt_  EXCEPINFO *pExcepInfo,
+            /* [annotation][out] */ 
+            _Out_opt_  UINT *puArgErr);
         
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *getFeature )( 
             IVBSAXXMLReader * This,
@@ -12058,6 +12383,7 @@ EXTERN_C const IID IID_IVBSAXXMLFilter;
         
     };
     
+    
 #else 	/* C style interface */
 
     typedef struct IVBSAXXMLFilterVtbl
@@ -12068,7 +12394,7 @@ EXTERN_C const IID IID_IVBSAXXMLFilter;
             IVBSAXXMLFilter * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
-            __RPC__deref_out  void **ppvObject);
+            _COM_Outptr_  void **ppvObject);
         
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IVBSAXXMLFilter * This);
@@ -12096,14 +12422,22 @@ EXTERN_C const IID IID_IVBSAXXMLFilter;
         
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IVBSAXXMLFilter * This,
-            /* [in] */ DISPID dispIdMember,
-            /* [in] */ REFIID riid,
-            /* [in] */ LCID lcid,
-            /* [in] */ WORD wFlags,
-            /* [out][in] */ DISPPARAMS *pDispParams,
-            /* [out] */ VARIANT *pVarResult,
-            /* [out] */ EXCEPINFO *pExcepInfo,
-            /* [out] */ UINT *puArgErr);
+            /* [annotation][in] */ 
+            _In_  DISPID dispIdMember,
+            /* [annotation][in] */ 
+            _In_  REFIID riid,
+            /* [annotation][in] */ 
+            _In_  LCID lcid,
+            /* [annotation][in] */ 
+            _In_  WORD wFlags,
+            /* [annotation][out][in] */ 
+            _In_  DISPPARAMS *pDispParams,
+            /* [annotation][out] */ 
+            _Out_opt_  VARIANT *pVarResult,
+            /* [annotation][out] */ 
+            _Out_opt_  EXCEPINFO *pExcepInfo,
+            /* [annotation][out] */ 
+            _Out_opt_  UINT *puArgErr);
         
         /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_parent )( 
             IVBSAXXMLFilter * This,
@@ -12195,6 +12529,7 @@ EXTERN_C const IID IID_IVBSAXLocator;
         
     };
     
+    
 #else 	/* C style interface */
 
     typedef struct IVBSAXLocatorVtbl
@@ -12205,7 +12540,7 @@ EXTERN_C const IID IID_IVBSAXLocator;
             IVBSAXLocator * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
-            __RPC__deref_out  void **ppvObject);
+            _COM_Outptr_  void **ppvObject);
         
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IVBSAXLocator * This);
@@ -12233,14 +12568,22 @@ EXTERN_C const IID IID_IVBSAXLocator;
         
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IVBSAXLocator * This,
-            /* [in] */ DISPID dispIdMember,
-            /* [in] */ REFIID riid,
-            /* [in] */ LCID lcid,
-            /* [in] */ WORD wFlags,
-            /* [out][in] */ DISPPARAMS *pDispParams,
-            /* [out] */ VARIANT *pVarResult,
-            /* [out] */ EXCEPINFO *pExcepInfo,
-            /* [out] */ UINT *puArgErr);
+            /* [annotation][in] */ 
+            _In_  DISPID dispIdMember,
+            /* [annotation][in] */ 
+            _In_  REFIID riid,
+            /* [annotation][in] */ 
+            _In_  LCID lcid,
+            /* [annotation][in] */ 
+            _In_  WORD wFlags,
+            /* [annotation][out][in] */ 
+            _In_  DISPPARAMS *pDispParams,
+            /* [annotation][out] */ 
+            _Out_opt_  VARIANT *pVarResult,
+            /* [annotation][out] */ 
+            _Out_opt_  EXCEPINFO *pExcepInfo,
+            /* [annotation][out] */ 
+            _Out_opt_  UINT *puArgErr);
         
         /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_columnNumber )( 
             IVBSAXLocator * This,
@@ -12339,6 +12682,7 @@ EXTERN_C const IID IID_IVBSAXEntityResolver;
         
     };
     
+    
 #else 	/* C style interface */
 
     typedef struct IVBSAXEntityResolverVtbl
@@ -12349,7 +12693,7 @@ EXTERN_C const IID IID_IVBSAXEntityResolver;
             IVBSAXEntityResolver * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
-            __RPC__deref_out  void **ppvObject);
+            _COM_Outptr_  void **ppvObject);
         
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IVBSAXEntityResolver * This);
@@ -12377,14 +12721,22 @@ EXTERN_C const IID IID_IVBSAXEntityResolver;
         
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IVBSAXEntityResolver * This,
-            /* [in] */ DISPID dispIdMember,
-            /* [in] */ REFIID riid,
-            /* [in] */ LCID lcid,
-            /* [in] */ WORD wFlags,
-            /* [out][in] */ DISPPARAMS *pDispParams,
-            /* [out] */ VARIANT *pVarResult,
-            /* [out] */ EXCEPINFO *pExcepInfo,
-            /* [out] */ UINT *puArgErr);
+            /* [annotation][in] */ 
+            _In_  DISPID dispIdMember,
+            /* [annotation][in] */ 
+            _In_  REFIID riid,
+            /* [annotation][in] */ 
+            _In_  LCID lcid,
+            /* [annotation][in] */ 
+            _In_  WORD wFlags,
+            /* [annotation][out][in] */ 
+            _In_  DISPPARAMS *pDispParams,
+            /* [annotation][out] */ 
+            _Out_opt_  VARIANT *pVarResult,
+            /* [annotation][out] */ 
+            _Out_opt_  EXCEPINFO *pExcepInfo,
+            /* [annotation][out] */ 
+            _Out_opt_  UINT *puArgErr);
         
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *resolveEntity )( 
             IVBSAXEntityResolver * This,
@@ -12497,6 +12849,7 @@ EXTERN_C const IID IID_IVBSAXContentHandler;
         
     };
     
+    
 #else 	/* C style interface */
 
     typedef struct IVBSAXContentHandlerVtbl
@@ -12507,7 +12860,7 @@ EXTERN_C const IID IID_IVBSAXContentHandler;
             IVBSAXContentHandler * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
-            __RPC__deref_out  void **ppvObject);
+            _COM_Outptr_  void **ppvObject);
         
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IVBSAXContentHandler * This);
@@ -12535,14 +12888,22 @@ EXTERN_C const IID IID_IVBSAXContentHandler;
         
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IVBSAXContentHandler * This,
-            /* [in] */ DISPID dispIdMember,
-            /* [in] */ REFIID riid,
-            /* [in] */ LCID lcid,
-            /* [in] */ WORD wFlags,
-            /* [out][in] */ DISPPARAMS *pDispParams,
-            /* [out] */ VARIANT *pVarResult,
-            /* [out] */ EXCEPINFO *pExcepInfo,
-            /* [out] */ UINT *puArgErr);
+            /* [annotation][in] */ 
+            _In_  DISPID dispIdMember,
+            /* [annotation][in] */ 
+            _In_  REFIID riid,
+            /* [annotation][in] */ 
+            _In_  LCID lcid,
+            /* [annotation][in] */ 
+            _In_  WORD wFlags,
+            /* [annotation][out][in] */ 
+            _In_  DISPPARAMS *pDispParams,
+            /* [annotation][out] */ 
+            _Out_opt_  VARIANT *pVarResult,
+            /* [annotation][out] */ 
+            _Out_opt_  EXCEPINFO *pExcepInfo,
+            /* [annotation][out] */ 
+            _Out_opt_  UINT *puArgErr);
         
         /* [helpstring][id][propputref] */ HRESULT ( STDMETHODCALLTYPE *putref_documentLocator )( 
             IVBSAXContentHandler * This,
@@ -12701,6 +13062,7 @@ EXTERN_C const IID IID_IVBSAXDTDHandler;
         
     };
     
+    
 #else 	/* C style interface */
 
     typedef struct IVBSAXDTDHandlerVtbl
@@ -12711,7 +13073,7 @@ EXTERN_C const IID IID_IVBSAXDTDHandler;
             IVBSAXDTDHandler * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
-            __RPC__deref_out  void **ppvObject);
+            _COM_Outptr_  void **ppvObject);
         
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IVBSAXDTDHandler * This);
@@ -12739,14 +13101,22 @@ EXTERN_C const IID IID_IVBSAXDTDHandler;
         
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IVBSAXDTDHandler * This,
-            /* [in] */ DISPID dispIdMember,
-            /* [in] */ REFIID riid,
-            /* [in] */ LCID lcid,
-            /* [in] */ WORD wFlags,
-            /* [out][in] */ DISPPARAMS *pDispParams,
-            /* [out] */ VARIANT *pVarResult,
-            /* [out] */ EXCEPINFO *pExcepInfo,
-            /* [out] */ UINT *puArgErr);
+            /* [annotation][in] */ 
+            _In_  DISPID dispIdMember,
+            /* [annotation][in] */ 
+            _In_  REFIID riid,
+            /* [annotation][in] */ 
+            _In_  LCID lcid,
+            /* [annotation][in] */ 
+            _In_  WORD wFlags,
+            /* [annotation][out][in] */ 
+            _In_  DISPPARAMS *pDispParams,
+            /* [annotation][out] */ 
+            _Out_opt_  VARIANT *pVarResult,
+            /* [annotation][out] */ 
+            _Out_opt_  EXCEPINFO *pExcepInfo,
+            /* [annotation][out] */ 
+            _Out_opt_  UINT *puArgErr);
         
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *notationDecl )( 
             IVBSAXDTDHandler * This,
@@ -12846,6 +13216,7 @@ EXTERN_C const IID IID_IVBSAXErrorHandler;
         
     };
     
+    
 #else 	/* C style interface */
 
     typedef struct IVBSAXErrorHandlerVtbl
@@ -12856,7 +13227,7 @@ EXTERN_C const IID IID_IVBSAXErrorHandler;
             IVBSAXErrorHandler * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
-            __RPC__deref_out  void **ppvObject);
+            _COM_Outptr_  void **ppvObject);
         
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IVBSAXErrorHandler * This);
@@ -12884,14 +13255,22 @@ EXTERN_C const IID IID_IVBSAXErrorHandler;
         
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IVBSAXErrorHandler * This,
-            /* [in] */ DISPID dispIdMember,
-            /* [in] */ REFIID riid,
-            /* [in] */ LCID lcid,
-            /* [in] */ WORD wFlags,
-            /* [out][in] */ DISPPARAMS *pDispParams,
-            /* [out] */ VARIANT *pVarResult,
-            /* [out] */ EXCEPINFO *pExcepInfo,
-            /* [out] */ UINT *puArgErr);
+            /* [annotation][in] */ 
+            _In_  DISPID dispIdMember,
+            /* [annotation][in] */ 
+            _In_  REFIID riid,
+            /* [annotation][in] */ 
+            _In_  LCID lcid,
+            /* [annotation][in] */ 
+            _In_  WORD wFlags,
+            /* [annotation][out][in] */ 
+            _In_  DISPPARAMS *pDispParams,
+            /* [annotation][out] */ 
+            _Out_opt_  VARIANT *pVarResult,
+            /* [annotation][out] */ 
+            _Out_opt_  EXCEPINFO *pExcepInfo,
+            /* [annotation][out] */ 
+            _Out_opt_  UINT *puArgErr);
         
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *error )( 
             IVBSAXErrorHandler * This,
@@ -13004,6 +13383,7 @@ EXTERN_C const IID IID_IVBSAXLexicalHandler;
         
     };
     
+    
 #else 	/* C style interface */
 
     typedef struct IVBSAXLexicalHandlerVtbl
@@ -13014,7 +13394,7 @@ EXTERN_C const IID IID_IVBSAXLexicalHandler;
             IVBSAXLexicalHandler * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
-            __RPC__deref_out  void **ppvObject);
+            _COM_Outptr_  void **ppvObject);
         
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IVBSAXLexicalHandler * This);
@@ -13042,14 +13422,22 @@ EXTERN_C const IID IID_IVBSAXLexicalHandler;
         
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IVBSAXLexicalHandler * This,
-            /* [in] */ DISPID dispIdMember,
-            /* [in] */ REFIID riid,
-            /* [in] */ LCID lcid,
-            /* [in] */ WORD wFlags,
-            /* [out][in] */ DISPPARAMS *pDispParams,
-            /* [out] */ VARIANT *pVarResult,
-            /* [out] */ EXCEPINFO *pExcepInfo,
-            /* [out] */ UINT *puArgErr);
+            /* [annotation][in] */ 
+            _In_  DISPID dispIdMember,
+            /* [annotation][in] */ 
+            _In_  REFIID riid,
+            /* [annotation][in] */ 
+            _In_  LCID lcid,
+            /* [annotation][in] */ 
+            _In_  WORD wFlags,
+            /* [annotation][out][in] */ 
+            _In_  DISPPARAMS *pDispParams,
+            /* [annotation][out] */ 
+            _Out_opt_  VARIANT *pVarResult,
+            /* [annotation][out] */ 
+            _Out_opt_  EXCEPINFO *pExcepInfo,
+            /* [annotation][out] */ 
+            _Out_opt_  UINT *puArgErr);
         
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *startDTD )( 
             IVBSAXLexicalHandler * This,
@@ -13183,6 +13571,7 @@ EXTERN_C const IID IID_IVBSAXDeclHandler;
         
     };
     
+    
 #else 	/* C style interface */
 
     typedef struct IVBSAXDeclHandlerVtbl
@@ -13193,7 +13582,7 @@ EXTERN_C const IID IID_IVBSAXDeclHandler;
             IVBSAXDeclHandler * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
-            __RPC__deref_out  void **ppvObject);
+            _COM_Outptr_  void **ppvObject);
         
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IVBSAXDeclHandler * This);
@@ -13221,14 +13610,22 @@ EXTERN_C const IID IID_IVBSAXDeclHandler;
         
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IVBSAXDeclHandler * This,
-            /* [in] */ DISPID dispIdMember,
-            /* [in] */ REFIID riid,
-            /* [in] */ LCID lcid,
-            /* [in] */ WORD wFlags,
-            /* [out][in] */ DISPPARAMS *pDispParams,
-            /* [out] */ VARIANT *pVarResult,
-            /* [out] */ EXCEPINFO *pExcepInfo,
-            /* [out] */ UINT *puArgErr);
+            /* [annotation][in] */ 
+            _In_  DISPID dispIdMember,
+            /* [annotation][in] */ 
+            _In_  REFIID riid,
+            /* [annotation][in] */ 
+            _In_  LCID lcid,
+            /* [annotation][in] */ 
+            _In_  WORD wFlags,
+            /* [annotation][out][in] */ 
+            _In_  DISPPARAMS *pDispParams,
+            /* [annotation][out] */ 
+            _Out_opt_  VARIANT *pVarResult,
+            /* [annotation][out] */ 
+            _Out_opt_  EXCEPINFO *pExcepInfo,
+            /* [annotation][out] */ 
+            _Out_opt_  UINT *puArgErr);
         
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *elementDecl )( 
             IVBSAXDeclHandler * This,
@@ -13380,6 +13777,7 @@ EXTERN_C const IID IID_IVBSAXAttributes;
         
     };
     
+    
 #else 	/* C style interface */
 
     typedef struct IVBSAXAttributesVtbl
@@ -13390,7 +13788,7 @@ EXTERN_C const IID IID_IVBSAXAttributes;
             IVBSAXAttributes * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
-            __RPC__deref_out  void **ppvObject);
+            _COM_Outptr_  void **ppvObject);
         
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IVBSAXAttributes * This);
@@ -13418,14 +13816,22 @@ EXTERN_C const IID IID_IVBSAXAttributes;
         
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IVBSAXAttributes * This,
-            /* [in] */ DISPID dispIdMember,
-            /* [in] */ REFIID riid,
-            /* [in] */ LCID lcid,
-            /* [in] */ WORD wFlags,
-            /* [out][in] */ DISPPARAMS *pDispParams,
-            /* [out] */ VARIANT *pVarResult,
-            /* [out] */ EXCEPINFO *pExcepInfo,
-            /* [out] */ UINT *puArgErr);
+            /* [annotation][in] */ 
+            _In_  DISPID dispIdMember,
+            /* [annotation][in] */ 
+            _In_  REFIID riid,
+            /* [annotation][in] */ 
+            _In_  LCID lcid,
+            /* [annotation][in] */ 
+            _In_  WORD wFlags,
+            /* [annotation][out][in] */ 
+            _In_  DISPPARAMS *pDispParams,
+            /* [annotation][out] */ 
+            _Out_opt_  VARIANT *pVarResult,
+            /* [annotation][out] */ 
+            _Out_opt_  EXCEPINFO *pExcepInfo,
+            /* [annotation][out] */ 
+            _Out_opt_  UINT *puArgErr);
         
         /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_length )( 
             IVBSAXAttributes * This,
@@ -13639,6 +14045,7 @@ EXTERN_C const IID IID_IMXWriter;
         
     };
     
+    
 #else 	/* C style interface */
 
     typedef struct IMXWriterVtbl
@@ -13649,7 +14056,7 @@ EXTERN_C const IID IID_IMXWriter;
             IMXWriter * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
-            __RPC__deref_out  void **ppvObject);
+            _COM_Outptr_  void **ppvObject);
         
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IMXWriter * This);
@@ -13677,14 +14084,22 @@ EXTERN_C const IID IID_IMXWriter;
         
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IMXWriter * This,
-            /* [in] */ DISPID dispIdMember,
-            /* [in] */ REFIID riid,
-            /* [in] */ LCID lcid,
-            /* [in] */ WORD wFlags,
-            /* [out][in] */ DISPPARAMS *pDispParams,
-            /* [out] */ VARIANT *pVarResult,
-            /* [out] */ EXCEPINFO *pExcepInfo,
-            /* [out] */ UINT *puArgErr);
+            /* [annotation][in] */ 
+            _In_  DISPID dispIdMember,
+            /* [annotation][in] */ 
+            _In_  REFIID riid,
+            /* [annotation][in] */ 
+            _In_  LCID lcid,
+            /* [annotation][in] */ 
+            _In_  WORD wFlags,
+            /* [annotation][out][in] */ 
+            _In_  DISPPARAMS *pDispParams,
+            /* [annotation][out] */ 
+            _Out_opt_  VARIANT *pVarResult,
+            /* [annotation][out] */ 
+            _Out_opt_  EXCEPINFO *pExcepInfo,
+            /* [annotation][out] */ 
+            _Out_opt_  UINT *puArgErr);
         
         /* [helpstring][id][propput] */ HRESULT ( STDMETHODCALLTYPE *put_output )( 
             IMXWriter * This,
@@ -13915,6 +14330,7 @@ EXTERN_C const IID IID_IMXAttributes;
         
     };
     
+    
 #else 	/* C style interface */
 
     typedef struct IMXAttributesVtbl
@@ -13925,7 +14341,7 @@ EXTERN_C const IID IID_IMXAttributes;
             IMXAttributes * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
-            __RPC__deref_out  void **ppvObject);
+            _COM_Outptr_  void **ppvObject);
         
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IMXAttributes * This);
@@ -13953,14 +14369,22 @@ EXTERN_C const IID IID_IMXAttributes;
         
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IMXAttributes * This,
-            /* [in] */ DISPID dispIdMember,
-            /* [in] */ REFIID riid,
-            /* [in] */ LCID lcid,
-            /* [in] */ WORD wFlags,
-            /* [out][in] */ DISPPARAMS *pDispParams,
-            /* [out] */ VARIANT *pVarResult,
-            /* [out] */ EXCEPINFO *pExcepInfo,
-            /* [out] */ UINT *puArgErr);
+            /* [annotation][in] */ 
+            _In_  DISPID dispIdMember,
+            /* [annotation][in] */ 
+            _In_  REFIID riid,
+            /* [annotation][in] */ 
+            _In_  LCID lcid,
+            /* [annotation][in] */ 
+            _In_  WORD wFlags,
+            /* [annotation][out][in] */ 
+            _In_  DISPPARAMS *pDispParams,
+            /* [annotation][out] */ 
+            _Out_opt_  VARIANT *pVarResult,
+            /* [annotation][out] */ 
+            _Out_opt_  EXCEPINFO *pExcepInfo,
+            /* [annotation][out] */ 
+            _Out_opt_  UINT *puArgErr);
         
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *addAttribute )( 
             IMXAttributes * This,
@@ -14123,6 +14547,7 @@ EXTERN_C const IID IID_IMXReaderControl;
         
     };
     
+    
 #else 	/* C style interface */
 
     typedef struct IMXReaderControlVtbl
@@ -14133,7 +14558,7 @@ EXTERN_C const IID IID_IMXReaderControl;
             IMXReaderControl * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
-            __RPC__deref_out  void **ppvObject);
+            _COM_Outptr_  void **ppvObject);
         
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IMXReaderControl * This);
@@ -14161,14 +14586,22 @@ EXTERN_C const IID IID_IMXReaderControl;
         
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IMXReaderControl * This,
-            /* [in] */ DISPID dispIdMember,
-            /* [in] */ REFIID riid,
-            /* [in] */ LCID lcid,
-            /* [in] */ WORD wFlags,
-            /* [out][in] */ DISPPARAMS *pDispParams,
-            /* [out] */ VARIANT *pVarResult,
-            /* [out] */ EXCEPINFO *pExcepInfo,
-            /* [out] */ UINT *puArgErr);
+            /* [annotation][in] */ 
+            _In_  DISPID dispIdMember,
+            /* [annotation][in] */ 
+            _In_  REFIID riid,
+            /* [annotation][in] */ 
+            _In_  LCID lcid,
+            /* [annotation][in] */ 
+            _In_  WORD wFlags,
+            /* [annotation][out][in] */ 
+            _In_  DISPPARAMS *pDispParams,
+            /* [annotation][out] */ 
+            _Out_opt_  VARIANT *pVarResult,
+            /* [annotation][out] */ 
+            _Out_opt_  EXCEPINFO *pExcepInfo,
+            /* [annotation][out] */ 
+            _Out_opt_  UINT *puArgErr);
         
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *abort )( 
             IMXReaderControl * This);
@@ -14255,6 +14688,7 @@ EXTERN_C const IID IID_IMXSchemaDeclHandler;
         
     };
     
+    
 #else 	/* C style interface */
 
     typedef struct IMXSchemaDeclHandlerVtbl
@@ -14265,7 +14699,7 @@ EXTERN_C const IID IID_IMXSchemaDeclHandler;
             IMXSchemaDeclHandler * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
-            __RPC__deref_out  void **ppvObject);
+            _COM_Outptr_  void **ppvObject);
         
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IMXSchemaDeclHandler * This);
@@ -14293,14 +14727,22 @@ EXTERN_C const IID IID_IMXSchemaDeclHandler;
         
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IMXSchemaDeclHandler * This,
-            /* [in] */ DISPID dispIdMember,
-            /* [in] */ REFIID riid,
-            /* [in] */ LCID lcid,
-            /* [in] */ WORD wFlags,
-            /* [out][in] */ DISPPARAMS *pDispParams,
-            /* [out] */ VARIANT *pVarResult,
-            /* [out] */ EXCEPINFO *pExcepInfo,
-            /* [out] */ UINT *puArgErr);
+            /* [annotation][in] */ 
+            _In_  DISPID dispIdMember,
+            /* [annotation][in] */ 
+            _In_  REFIID riid,
+            /* [annotation][in] */ 
+            _In_  LCID lcid,
+            /* [annotation][in] */ 
+            _In_  WORD wFlags,
+            /* [annotation][out][in] */ 
+            _In_  DISPPARAMS *pDispParams,
+            /* [annotation][out] */ 
+            _Out_opt_  VARIANT *pVarResult,
+            /* [annotation][out] */ 
+            _Out_opt_  EXCEPINFO *pExcepInfo,
+            /* [annotation][out] */ 
+            _Out_opt_  UINT *puArgErr);
         
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *schemaElementDecl )( 
             IMXSchemaDeclHandler * This,
@@ -14389,6 +14831,7 @@ EXTERN_C const IID IID_IXMLDOMSchemaCollection2;
         
     };
     
+    
 #else 	/* C style interface */
 
     typedef struct IXMLDOMSchemaCollection2Vtbl
@@ -14399,7 +14842,7 @@ EXTERN_C const IID IID_IXMLDOMSchemaCollection2;
             IXMLDOMSchemaCollection2 * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
-            __RPC__deref_out  void **ppvObject);
+            _COM_Outptr_  void **ppvObject);
         
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IXMLDOMSchemaCollection2 * This);
@@ -14427,14 +14870,22 @@ EXTERN_C const IID IID_IXMLDOMSchemaCollection2;
         
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IXMLDOMSchemaCollection2 * This,
-            /* [in] */ DISPID dispIdMember,
-            /* [in] */ REFIID riid,
-            /* [in] */ LCID lcid,
-            /* [in] */ WORD wFlags,
-            /* [out][in] */ DISPPARAMS *pDispParams,
-            /* [out] */ VARIANT *pVarResult,
-            /* [out] */ EXCEPINFO *pExcepInfo,
-            /* [out] */ UINT *puArgErr);
+            /* [annotation][in] */ 
+            _In_  DISPID dispIdMember,
+            /* [annotation][in] */ 
+            _In_  REFIID riid,
+            /* [annotation][in] */ 
+            _In_  LCID lcid,
+            /* [annotation][in] */ 
+            _In_  WORD wFlags,
+            /* [annotation][out][in] */ 
+            _In_  DISPPARAMS *pDispParams,
+            /* [annotation][out] */ 
+            _Out_opt_  VARIANT *pVarResult,
+            /* [annotation][out] */ 
+            _Out_opt_  EXCEPINFO *pExcepInfo,
+            /* [annotation][out] */ 
+            _Out_opt_  UINT *puArgErr);
         
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *add )( 
             IXMLDOMSchemaCollection2 * This,
@@ -14599,6 +15050,7 @@ EXTERN_C const IID IID_ISchemaStringCollection;
         
     };
     
+    
 #else 	/* C style interface */
 
     typedef struct ISchemaStringCollectionVtbl
@@ -14609,7 +15061,7 @@ EXTERN_C const IID IID_ISchemaStringCollection;
             ISchemaStringCollection * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
-            __RPC__deref_out  void **ppvObject);
+            _COM_Outptr_  void **ppvObject);
         
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             ISchemaStringCollection * This);
@@ -14637,14 +15089,22 @@ EXTERN_C const IID IID_ISchemaStringCollection;
         
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             ISchemaStringCollection * This,
-            /* [in] */ DISPID dispIdMember,
-            /* [in] */ REFIID riid,
-            /* [in] */ LCID lcid,
-            /* [in] */ WORD wFlags,
-            /* [out][in] */ DISPPARAMS *pDispParams,
-            /* [out] */ VARIANT *pVarResult,
-            /* [out] */ EXCEPINFO *pExcepInfo,
-            /* [out] */ UINT *puArgErr);
+            /* [annotation][in] */ 
+            _In_  DISPID dispIdMember,
+            /* [annotation][in] */ 
+            _In_  REFIID riid,
+            /* [annotation][in] */ 
+            _In_  LCID lcid,
+            /* [annotation][in] */ 
+            _In_  WORD wFlags,
+            /* [annotation][out][in] */ 
+            _In_  DISPPARAMS *pDispParams,
+            /* [annotation][out] */ 
+            _Out_opt_  VARIANT *pVarResult,
+            /* [annotation][out] */ 
+            _Out_opt_  EXCEPINFO *pExcepInfo,
+            /* [annotation][out] */ 
+            _Out_opt_  UINT *puArgErr);
         
         /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_item )( 
             ISchemaStringCollection * This,
@@ -14751,6 +15211,7 @@ EXTERN_C const IID IID_ISchemaItemCollection;
         
     };
     
+    
 #else 	/* C style interface */
 
     typedef struct ISchemaItemCollectionVtbl
@@ -14761,7 +15222,7 @@ EXTERN_C const IID IID_ISchemaItemCollection;
             ISchemaItemCollection * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
-            __RPC__deref_out  void **ppvObject);
+            _COM_Outptr_  void **ppvObject);
         
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             ISchemaItemCollection * This);
@@ -14789,14 +15250,22 @@ EXTERN_C const IID IID_ISchemaItemCollection;
         
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             ISchemaItemCollection * This,
-            /* [in] */ DISPID dispIdMember,
-            /* [in] */ REFIID riid,
-            /* [in] */ LCID lcid,
-            /* [in] */ WORD wFlags,
-            /* [out][in] */ DISPPARAMS *pDispParams,
-            /* [out] */ VARIANT *pVarResult,
-            /* [out] */ EXCEPINFO *pExcepInfo,
-            /* [out] */ UINT *puArgErr);
+            /* [annotation][in] */ 
+            _In_  DISPID dispIdMember,
+            /* [annotation][in] */ 
+            _In_  REFIID riid,
+            /* [annotation][in] */ 
+            _In_  LCID lcid,
+            /* [annotation][in] */ 
+            _In_  WORD wFlags,
+            /* [annotation][out][in] */ 
+            _In_  DISPPARAMS *pDispParams,
+            /* [annotation][out] */ 
+            _Out_opt_  VARIANT *pVarResult,
+            /* [annotation][out] */ 
+            _Out_opt_  EXCEPINFO *pExcepInfo,
+            /* [annotation][out] */ 
+            _Out_opt_  UINT *puArgErr);
         
         /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_item )( 
             ISchemaItemCollection * This,
@@ -14923,6 +15392,7 @@ EXTERN_C const IID IID_ISchemaItem;
         
     };
     
+    
 #else 	/* C style interface */
 
     typedef struct ISchemaItemVtbl
@@ -14933,7 +15403,7 @@ EXTERN_C const IID IID_ISchemaItem;
             ISchemaItem * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
-            __RPC__deref_out  void **ppvObject);
+            _COM_Outptr_  void **ppvObject);
         
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             ISchemaItem * This);
@@ -14961,14 +15431,22 @@ EXTERN_C const IID IID_ISchemaItem;
         
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             ISchemaItem * This,
-            /* [in] */ DISPID dispIdMember,
-            /* [in] */ REFIID riid,
-            /* [in] */ LCID lcid,
-            /* [in] */ WORD wFlags,
-            /* [out][in] */ DISPPARAMS *pDispParams,
-            /* [out] */ VARIANT *pVarResult,
-            /* [out] */ EXCEPINFO *pExcepInfo,
-            /* [out] */ UINT *puArgErr);
+            /* [annotation][in] */ 
+            _In_  DISPID dispIdMember,
+            /* [annotation][in] */ 
+            _In_  REFIID riid,
+            /* [annotation][in] */ 
+            _In_  LCID lcid,
+            /* [annotation][in] */ 
+            _In_  WORD wFlags,
+            /* [annotation][out][in] */ 
+            _In_  DISPPARAMS *pDispParams,
+            /* [annotation][out] */ 
+            _Out_opt_  VARIANT *pVarResult,
+            /* [annotation][out] */ 
+            _Out_opt_  EXCEPINFO *pExcepInfo,
+            /* [annotation][out] */ 
+            _Out_opt_  UINT *puArgErr);
         
         /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_name )( 
             ISchemaItem * This,
@@ -15111,6 +15589,7 @@ EXTERN_C const IID IID_ISchema;
         
     };
     
+    
 #else 	/* C style interface */
 
     typedef struct ISchemaVtbl
@@ -15121,7 +15600,7 @@ EXTERN_C const IID IID_ISchema;
             ISchema * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
-            __RPC__deref_out  void **ppvObject);
+            _COM_Outptr_  void **ppvObject);
         
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             ISchema * This);
@@ -15149,14 +15628,22 @@ EXTERN_C const IID IID_ISchema;
         
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             ISchema * This,
-            /* [in] */ DISPID dispIdMember,
-            /* [in] */ REFIID riid,
-            /* [in] */ LCID lcid,
-            /* [in] */ WORD wFlags,
-            /* [out][in] */ DISPPARAMS *pDispParams,
-            /* [out] */ VARIANT *pVarResult,
-            /* [out] */ EXCEPINFO *pExcepInfo,
-            /* [out] */ UINT *puArgErr);
+            /* [annotation][in] */ 
+            _In_  DISPID dispIdMember,
+            /* [annotation][in] */ 
+            _In_  REFIID riid,
+            /* [annotation][in] */ 
+            _In_  LCID lcid,
+            /* [annotation][in] */ 
+            _In_  WORD wFlags,
+            /* [annotation][out][in] */ 
+            _In_  DISPPARAMS *pDispParams,
+            /* [annotation][out] */ 
+            _Out_opt_  VARIANT *pVarResult,
+            /* [annotation][out] */ 
+            _Out_opt_  EXCEPINFO *pExcepInfo,
+            /* [annotation][out] */ 
+            _Out_opt_  UINT *puArgErr);
         
         /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_name )( 
             ISchema * This,
@@ -15342,6 +15829,7 @@ EXTERN_C const IID IID_ISchemaParticle;
         
     };
     
+    
 #else 	/* C style interface */
 
     typedef struct ISchemaParticleVtbl
@@ -15352,7 +15840,7 @@ EXTERN_C const IID IID_ISchemaParticle;
             ISchemaParticle * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
-            __RPC__deref_out  void **ppvObject);
+            _COM_Outptr_  void **ppvObject);
         
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             ISchemaParticle * This);
@@ -15380,14 +15868,22 @@ EXTERN_C const IID IID_ISchemaParticle;
         
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             ISchemaParticle * This,
-            /* [in] */ DISPID dispIdMember,
-            /* [in] */ REFIID riid,
-            /* [in] */ LCID lcid,
-            /* [in] */ WORD wFlags,
-            /* [out][in] */ DISPPARAMS *pDispParams,
-            /* [out] */ VARIANT *pVarResult,
-            /* [out] */ EXCEPINFO *pExcepInfo,
-            /* [out] */ UINT *puArgErr);
+            /* [annotation][in] */ 
+            _In_  DISPID dispIdMember,
+            /* [annotation][in] */ 
+            _In_  REFIID riid,
+            /* [annotation][in] */ 
+            _In_  LCID lcid,
+            /* [annotation][in] */ 
+            _In_  WORD wFlags,
+            /* [annotation][out][in] */ 
+            _In_  DISPPARAMS *pDispParams,
+            /* [annotation][out] */ 
+            _Out_opt_  VARIANT *pVarResult,
+            /* [annotation][out] */ 
+            _Out_opt_  EXCEPINFO *pExcepInfo,
+            /* [annotation][out] */ 
+            _Out_opt_  UINT *puArgErr);
         
         /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_name )( 
             ISchemaParticle * This,
@@ -15536,6 +16032,7 @@ EXTERN_C const IID IID_ISchemaAttribute;
         
     };
     
+    
 #else 	/* C style interface */
 
     typedef struct ISchemaAttributeVtbl
@@ -15546,7 +16043,7 @@ EXTERN_C const IID IID_ISchemaAttribute;
             ISchemaAttribute * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
-            __RPC__deref_out  void **ppvObject);
+            _COM_Outptr_  void **ppvObject);
         
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             ISchemaAttribute * This);
@@ -15574,14 +16071,22 @@ EXTERN_C const IID IID_ISchemaAttribute;
         
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             ISchemaAttribute * This,
-            /* [in] */ DISPID dispIdMember,
-            /* [in] */ REFIID riid,
-            /* [in] */ LCID lcid,
-            /* [in] */ WORD wFlags,
-            /* [out][in] */ DISPPARAMS *pDispParams,
-            /* [out] */ VARIANT *pVarResult,
-            /* [out] */ EXCEPINFO *pExcepInfo,
-            /* [out] */ UINT *puArgErr);
+            /* [annotation][in] */ 
+            _In_  DISPID dispIdMember,
+            /* [annotation][in] */ 
+            _In_  REFIID riid,
+            /* [annotation][in] */ 
+            _In_  LCID lcid,
+            /* [annotation][in] */ 
+            _In_  WORD wFlags,
+            /* [annotation][out][in] */ 
+            _In_  DISPPARAMS *pDispParams,
+            /* [annotation][out] */ 
+            _Out_opt_  VARIANT *pVarResult,
+            /* [annotation][out] */ 
+            _Out_opt_  EXCEPINFO *pExcepInfo,
+            /* [annotation][out] */ 
+            _Out_opt_  UINT *puArgErr);
         
         /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_name )( 
             ISchemaAttribute * This,
@@ -15773,6 +16278,7 @@ EXTERN_C const IID IID_ISchemaElement;
         
     };
     
+    
 #else 	/* C style interface */
 
     typedef struct ISchemaElementVtbl
@@ -15783,7 +16289,7 @@ EXTERN_C const IID IID_ISchemaElement;
             ISchemaElement * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
-            __RPC__deref_out  void **ppvObject);
+            _COM_Outptr_  void **ppvObject);
         
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             ISchemaElement * This);
@@ -15811,14 +16317,22 @@ EXTERN_C const IID IID_ISchemaElement;
         
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             ISchemaElement * This,
-            /* [in] */ DISPID dispIdMember,
-            /* [in] */ REFIID riid,
-            /* [in] */ LCID lcid,
-            /* [in] */ WORD wFlags,
-            /* [out][in] */ DISPPARAMS *pDispParams,
-            /* [out] */ VARIANT *pVarResult,
-            /* [out] */ EXCEPINFO *pExcepInfo,
-            /* [out] */ UINT *puArgErr);
+            /* [annotation][in] */ 
+            _In_  DISPID dispIdMember,
+            /* [annotation][in] */ 
+            _In_  REFIID riid,
+            /* [annotation][in] */ 
+            _In_  LCID lcid,
+            /* [annotation][in] */ 
+            _In_  WORD wFlags,
+            /* [annotation][out][in] */ 
+            _In_  DISPPARAMS *pDispParams,
+            /* [annotation][out] */ 
+            _Out_opt_  VARIANT *pVarResult,
+            /* [annotation][out] */ 
+            _Out_opt_  EXCEPINFO *pExcepInfo,
+            /* [annotation][out] */ 
+            _Out_opt_  UINT *puArgErr);
         
         /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_name )( 
             ISchemaElement * This,
@@ -16079,6 +16593,7 @@ EXTERN_C const IID IID_ISchemaType;
         
     };
     
+    
 #else 	/* C style interface */
 
     typedef struct ISchemaTypeVtbl
@@ -16089,7 +16604,7 @@ EXTERN_C const IID IID_ISchemaType;
             ISchemaType * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
-            __RPC__deref_out  void **ppvObject);
+            _COM_Outptr_  void **ppvObject);
         
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             ISchemaType * This);
@@ -16117,14 +16632,22 @@ EXTERN_C const IID IID_ISchemaType;
         
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             ISchemaType * This,
-            /* [in] */ DISPID dispIdMember,
-            /* [in] */ REFIID riid,
-            /* [in] */ LCID lcid,
-            /* [in] */ WORD wFlags,
-            /* [out][in] */ DISPPARAMS *pDispParams,
-            /* [out] */ VARIANT *pVarResult,
-            /* [out] */ EXCEPINFO *pExcepInfo,
-            /* [out] */ UINT *puArgErr);
+            /* [annotation][in] */ 
+            _In_  DISPID dispIdMember,
+            /* [annotation][in] */ 
+            _In_  REFIID riid,
+            /* [annotation][in] */ 
+            _In_  LCID lcid,
+            /* [annotation][in] */ 
+            _In_  WORD wFlags,
+            /* [annotation][out][in] */ 
+            _In_  DISPPARAMS *pDispParams,
+            /* [annotation][out] */ 
+            _Out_opt_  VARIANT *pVarResult,
+            /* [annotation][out] */ 
+            _Out_opt_  EXCEPINFO *pExcepInfo,
+            /* [annotation][out] */ 
+            _Out_opt_  UINT *puArgErr);
         
         /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_name )( 
             ISchemaType * This,
@@ -16379,6 +16902,7 @@ EXTERN_C const IID IID_ISchemaComplexType;
         
     };
     
+    
 #else 	/* C style interface */
 
     typedef struct ISchemaComplexTypeVtbl
@@ -16389,7 +16913,7 @@ EXTERN_C const IID IID_ISchemaComplexType;
             ISchemaComplexType * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
-            __RPC__deref_out  void **ppvObject);
+            _COM_Outptr_  void **ppvObject);
         
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             ISchemaComplexType * This);
@@ -16417,14 +16941,22 @@ EXTERN_C const IID IID_ISchemaComplexType;
         
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             ISchemaComplexType * This,
-            /* [in] */ DISPID dispIdMember,
-            /* [in] */ REFIID riid,
-            /* [in] */ LCID lcid,
-            /* [in] */ WORD wFlags,
-            /* [out][in] */ DISPPARAMS *pDispParams,
-            /* [out] */ VARIANT *pVarResult,
-            /* [out] */ EXCEPINFO *pExcepInfo,
-            /* [out] */ UINT *puArgErr);
+            /* [annotation][in] */ 
+            _In_  DISPID dispIdMember,
+            /* [annotation][in] */ 
+            _In_  REFIID riid,
+            /* [annotation][in] */ 
+            _In_  LCID lcid,
+            /* [annotation][in] */ 
+            _In_  WORD wFlags,
+            /* [annotation][out][in] */ 
+            _In_  DISPPARAMS *pDispParams,
+            /* [annotation][out] */ 
+            _Out_opt_  VARIANT *pVarResult,
+            /* [annotation][out] */ 
+            _Out_opt_  EXCEPINFO *pExcepInfo,
+            /* [annotation][out] */ 
+            _Out_opt_  UINT *puArgErr);
         
         /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_name )( 
             ISchemaComplexType * This,
@@ -16710,6 +17242,7 @@ EXTERN_C const IID IID_ISchemaAttributeGroup;
         
     };
     
+    
 #else 	/* C style interface */
 
     typedef struct ISchemaAttributeGroupVtbl
@@ -16720,7 +17253,7 @@ EXTERN_C const IID IID_ISchemaAttributeGroup;
             ISchemaAttributeGroup * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
-            __RPC__deref_out  void **ppvObject);
+            _COM_Outptr_  void **ppvObject);
         
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             ISchemaAttributeGroup * This);
@@ -16748,14 +17281,22 @@ EXTERN_C const IID IID_ISchemaAttributeGroup;
         
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             ISchemaAttributeGroup * This,
-            /* [in] */ DISPID dispIdMember,
-            /* [in] */ REFIID riid,
-            /* [in] */ LCID lcid,
-            /* [in] */ WORD wFlags,
-            /* [out][in] */ DISPPARAMS *pDispParams,
-            /* [out] */ VARIANT *pVarResult,
-            /* [out] */ EXCEPINFO *pExcepInfo,
-            /* [out] */ UINT *puArgErr);
+            /* [annotation][in] */ 
+            _In_  DISPID dispIdMember,
+            /* [annotation][in] */ 
+            _In_  REFIID riid,
+            /* [annotation][in] */ 
+            _In_  LCID lcid,
+            /* [annotation][in] */ 
+            _In_  WORD wFlags,
+            /* [annotation][out][in] */ 
+            _In_  DISPPARAMS *pDispParams,
+            /* [annotation][out] */ 
+            _Out_opt_  VARIANT *pVarResult,
+            /* [annotation][out] */ 
+            _Out_opt_  EXCEPINFO *pExcepInfo,
+            /* [annotation][out] */ 
+            _Out_opt_  UINT *puArgErr);
         
         /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_name )( 
             ISchemaAttributeGroup * This,
@@ -16889,6 +17430,7 @@ EXTERN_C const IID IID_ISchemaModelGroup;
         
     };
     
+    
 #else 	/* C style interface */
 
     typedef struct ISchemaModelGroupVtbl
@@ -16899,7 +17441,7 @@ EXTERN_C const IID IID_ISchemaModelGroup;
             ISchemaModelGroup * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
-            __RPC__deref_out  void **ppvObject);
+            _COM_Outptr_  void **ppvObject);
         
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             ISchemaModelGroup * This);
@@ -16927,14 +17469,22 @@ EXTERN_C const IID IID_ISchemaModelGroup;
         
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             ISchemaModelGroup * This,
-            /* [in] */ DISPID dispIdMember,
-            /* [in] */ REFIID riid,
-            /* [in] */ LCID lcid,
-            /* [in] */ WORD wFlags,
-            /* [out][in] */ DISPPARAMS *pDispParams,
-            /* [out] */ VARIANT *pVarResult,
-            /* [out] */ EXCEPINFO *pExcepInfo,
-            /* [out] */ UINT *puArgErr);
+            /* [annotation][in] */ 
+            _In_  DISPID dispIdMember,
+            /* [annotation][in] */ 
+            _In_  REFIID riid,
+            /* [annotation][in] */ 
+            _In_  LCID lcid,
+            /* [annotation][in] */ 
+            _In_  WORD wFlags,
+            /* [annotation][out][in] */ 
+            _In_  DISPPARAMS *pDispParams,
+            /* [annotation][out] */ 
+            _Out_opt_  VARIANT *pVarResult,
+            /* [annotation][out] */ 
+            _Out_opt_  EXCEPINFO *pExcepInfo,
+            /* [annotation][out] */ 
+            _Out_opt_  UINT *puArgErr);
         
         /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_name )( 
             ISchemaModelGroup * This,
@@ -17079,6 +17629,7 @@ EXTERN_C const IID IID_ISchemaAny;
         
     };
     
+    
 #else 	/* C style interface */
 
     typedef struct ISchemaAnyVtbl
@@ -17089,7 +17640,7 @@ EXTERN_C const IID IID_ISchemaAny;
             ISchemaAny * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
-            __RPC__deref_out  void **ppvObject);
+            _COM_Outptr_  void **ppvObject);
         
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             ISchemaAny * This);
@@ -17117,14 +17668,22 @@ EXTERN_C const IID IID_ISchemaAny;
         
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             ISchemaAny * This,
-            /* [in] */ DISPID dispIdMember,
-            /* [in] */ REFIID riid,
-            /* [in] */ LCID lcid,
-            /* [in] */ WORD wFlags,
-            /* [out][in] */ DISPPARAMS *pDispParams,
-            /* [out] */ VARIANT *pVarResult,
-            /* [out] */ EXCEPINFO *pExcepInfo,
-            /* [out] */ UINT *puArgErr);
+            /* [annotation][in] */ 
+            _In_  DISPID dispIdMember,
+            /* [annotation][in] */ 
+            _In_  REFIID riid,
+            /* [annotation][in] */ 
+            _In_  LCID lcid,
+            /* [annotation][in] */ 
+            _In_  WORD wFlags,
+            /* [annotation][out][in] */ 
+            _In_  DISPPARAMS *pDispParams,
+            /* [annotation][out] */ 
+            _Out_opt_  VARIANT *pVarResult,
+            /* [annotation][out] */ 
+            _Out_opt_  EXCEPINFO *pExcepInfo,
+            /* [annotation][out] */ 
+            _Out_opt_  UINT *puArgErr);
         
         /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_name )( 
             ISchemaAny * This,
@@ -17279,6 +17838,7 @@ EXTERN_C const IID IID_ISchemaIdentityConstraint;
         
     };
     
+    
 #else 	/* C style interface */
 
     typedef struct ISchemaIdentityConstraintVtbl
@@ -17289,7 +17849,7 @@ EXTERN_C const IID IID_ISchemaIdentityConstraint;
             ISchemaIdentityConstraint * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
-            __RPC__deref_out  void **ppvObject);
+            _COM_Outptr_  void **ppvObject);
         
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             ISchemaIdentityConstraint * This);
@@ -17317,14 +17877,22 @@ EXTERN_C const IID IID_ISchemaIdentityConstraint;
         
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             ISchemaIdentityConstraint * This,
-            /* [in] */ DISPID dispIdMember,
-            /* [in] */ REFIID riid,
-            /* [in] */ LCID lcid,
-            /* [in] */ WORD wFlags,
-            /* [out][in] */ DISPPARAMS *pDispParams,
-            /* [out] */ VARIANT *pVarResult,
-            /* [out] */ EXCEPINFO *pExcepInfo,
-            /* [out] */ UINT *puArgErr);
+            /* [annotation][in] */ 
+            _In_  DISPID dispIdMember,
+            /* [annotation][in] */ 
+            _In_  REFIID riid,
+            /* [annotation][in] */ 
+            _In_  LCID lcid,
+            /* [annotation][in] */ 
+            _In_  WORD wFlags,
+            /* [annotation][out][in] */ 
+            _In_  DISPPARAMS *pDispParams,
+            /* [annotation][out] */ 
+            _Out_opt_  VARIANT *pVarResult,
+            /* [annotation][out] */ 
+            _Out_opt_  EXCEPINFO *pExcepInfo,
+            /* [annotation][out] */ 
+            _Out_opt_  UINT *puArgErr);
         
         /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_name )( 
             ISchemaIdentityConstraint * This,
@@ -17468,6 +18036,7 @@ EXTERN_C const IID IID_ISchemaNotation;
         
     };
     
+    
 #else 	/* C style interface */
 
     typedef struct ISchemaNotationVtbl
@@ -17478,7 +18047,7 @@ EXTERN_C const IID IID_ISchemaNotation;
             ISchemaNotation * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
-            __RPC__deref_out  void **ppvObject);
+            _COM_Outptr_  void **ppvObject);
         
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             ISchemaNotation * This);
@@ -17506,14 +18075,22 @@ EXTERN_C const IID IID_ISchemaNotation;
         
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             ISchemaNotation * This,
-            /* [in] */ DISPID dispIdMember,
-            /* [in] */ REFIID riid,
-            /* [in] */ LCID lcid,
-            /* [in] */ WORD wFlags,
-            /* [out][in] */ DISPPARAMS *pDispParams,
-            /* [out] */ VARIANT *pVarResult,
-            /* [out] */ EXCEPINFO *pExcepInfo,
-            /* [out] */ UINT *puArgErr);
+            /* [annotation][in] */ 
+            _In_  DISPID dispIdMember,
+            /* [annotation][in] */ 
+            _In_  REFIID riid,
+            /* [annotation][in] */ 
+            _In_  LCID lcid,
+            /* [annotation][in] */ 
+            _In_  WORD wFlags,
+            /* [annotation][out][in] */ 
+            _In_  DISPPARAMS *pDispParams,
+            /* [annotation][out] */ 
+            _Out_opt_  VARIANT *pVarResult,
+            /* [annotation][out] */ 
+            _Out_opt_  EXCEPINFO *pExcepInfo,
+            /* [annotation][out] */ 
+            _Out_opt_  UINT *puArgErr);
         
         /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_name )( 
             ISchemaNotation * This,
@@ -17658,6 +18235,7 @@ EXTERN_C const IID IID_IXMLElementCollection;
         
     };
     
+    
 #else 	/* C style interface */
 
     typedef struct IXMLElementCollectionVtbl
@@ -17668,7 +18246,7 @@ EXTERN_C const IID IID_IXMLElementCollection;
             IXMLElementCollection * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
-            __RPC__deref_out  void **ppvObject);
+            _COM_Outptr_  void **ppvObject);
         
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IXMLElementCollection * This);
@@ -17696,14 +18274,22 @@ EXTERN_C const IID IID_IXMLElementCollection;
         
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IXMLElementCollection * This,
-            /* [in] */ DISPID dispIdMember,
-            /* [in] */ REFIID riid,
-            /* [in] */ LCID lcid,
-            /* [in] */ WORD wFlags,
-            /* [out][in] */ DISPPARAMS *pDispParams,
-            /* [out] */ VARIANT *pVarResult,
-            /* [out] */ EXCEPINFO *pExcepInfo,
-            /* [out] */ UINT *puArgErr);
+            /* [annotation][in] */ 
+            _In_  DISPID dispIdMember,
+            /* [annotation][in] */ 
+            _In_  REFIID riid,
+            /* [annotation][in] */ 
+            _In_  LCID lcid,
+            /* [annotation][in] */ 
+            _In_  WORD wFlags,
+            /* [annotation][out][in] */ 
+            _In_  DISPPARAMS *pDispParams,
+            /* [annotation][out] */ 
+            _Out_opt_  VARIANT *pVarResult,
+            /* [annotation][out] */ 
+            _Out_opt_  EXCEPINFO *pExcepInfo,
+            /* [annotation][out] */ 
+            _Out_opt_  UINT *puArgErr);
         
         /* [id][hidden][restricted][propput] */ HRESULT ( STDMETHODCALLTYPE *put_length )( 
             IXMLElementCollection * This,
@@ -17843,6 +18429,7 @@ EXTERN_C const IID IID_IXMLDocument;
         
     };
     
+    
 #else 	/* C style interface */
 
     typedef struct IXMLDocumentVtbl
@@ -17853,7 +18440,7 @@ EXTERN_C const IID IID_IXMLDocument;
             IXMLDocument * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
-            __RPC__deref_out  void **ppvObject);
+            _COM_Outptr_  void **ppvObject);
         
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IXMLDocument * This);
@@ -17881,14 +18468,22 @@ EXTERN_C const IID IID_IXMLDocument;
         
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IXMLDocument * This,
-            /* [in] */ DISPID dispIdMember,
-            /* [in] */ REFIID riid,
-            /* [in] */ LCID lcid,
-            /* [in] */ WORD wFlags,
-            /* [out][in] */ DISPPARAMS *pDispParams,
-            /* [out] */ VARIANT *pVarResult,
-            /* [out] */ EXCEPINFO *pExcepInfo,
-            /* [out] */ UINT *puArgErr);
+            /* [annotation][in] */ 
+            _In_  DISPID dispIdMember,
+            /* [annotation][in] */ 
+            _In_  REFIID riid,
+            /* [annotation][in] */ 
+            _In_  LCID lcid,
+            /* [annotation][in] */ 
+            _In_  WORD wFlags,
+            /* [annotation][out][in] */ 
+            _In_  DISPPARAMS *pDispParams,
+            /* [annotation][out] */ 
+            _Out_opt_  VARIANT *pVarResult,
+            /* [annotation][out] */ 
+            _Out_opt_  EXCEPINFO *pExcepInfo,
+            /* [annotation][out] */ 
+            _Out_opt_  UINT *puArgErr);
         
         /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_root )( 
             IXMLDocument * This,
@@ -18104,6 +18699,7 @@ EXTERN_C const IID IID_IXMLDocument2;
         
     };
     
+    
 #else 	/* C style interface */
 
     typedef struct IXMLDocument2Vtbl
@@ -18114,7 +18710,7 @@ EXTERN_C const IID IID_IXMLDocument2;
             IXMLDocument2 * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
-            __RPC__deref_out  void **ppvObject);
+            _COM_Outptr_  void **ppvObject);
         
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IXMLDocument2 * This);
@@ -18142,14 +18738,22 @@ EXTERN_C const IID IID_IXMLDocument2;
         
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IXMLDocument2 * This,
-            /* [in] */ DISPID dispIdMember,
-            /* [in] */ REFIID riid,
-            /* [in] */ LCID lcid,
-            /* [in] */ WORD wFlags,
-            /* [out][in] */ DISPPARAMS *pDispParams,
-            /* [out] */ VARIANT *pVarResult,
-            /* [out] */ EXCEPINFO *pExcepInfo,
-            /* [out] */ UINT *puArgErr);
+            /* [annotation][in] */ 
+            _In_  DISPID dispIdMember,
+            /* [annotation][in] */ 
+            _In_  REFIID riid,
+            /* [annotation][in] */ 
+            _In_  LCID lcid,
+            /* [annotation][in] */ 
+            _In_  WORD wFlags,
+            /* [annotation][out][in] */ 
+            _In_  DISPPARAMS *pDispParams,
+            /* [annotation][out] */ 
+            _Out_opt_  VARIANT *pVarResult,
+            /* [annotation][out] */ 
+            _Out_opt_  EXCEPINFO *pExcepInfo,
+            /* [annotation][out] */ 
+            _Out_opt_  UINT *puArgErr);
         
         /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_root )( 
             IXMLDocument2 * This,
@@ -18369,6 +18973,7 @@ EXTERN_C const IID IID_IXMLElement;
         
     };
     
+    
 #else 	/* C style interface */
 
     typedef struct IXMLElementVtbl
@@ -18379,7 +18984,7 @@ EXTERN_C const IID IID_IXMLElement;
             IXMLElement * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
-            __RPC__deref_out  void **ppvObject);
+            _COM_Outptr_  void **ppvObject);
         
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IXMLElement * This);
@@ -18407,14 +19012,22 @@ EXTERN_C const IID IID_IXMLElement;
         
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IXMLElement * This,
-            /* [in] */ DISPID dispIdMember,
-            /* [in] */ REFIID riid,
-            /* [in] */ LCID lcid,
-            /* [in] */ WORD wFlags,
-            /* [out][in] */ DISPPARAMS *pDispParams,
-            /* [out] */ VARIANT *pVarResult,
-            /* [out] */ EXCEPINFO *pExcepInfo,
-            /* [out] */ UINT *puArgErr);
+            /* [annotation][in] */ 
+            _In_  DISPID dispIdMember,
+            /* [annotation][in] */ 
+            _In_  REFIID riid,
+            /* [annotation][in] */ 
+            _In_  LCID lcid,
+            /* [annotation][in] */ 
+            _In_  WORD wFlags,
+            /* [annotation][out][in] */ 
+            _In_  DISPPARAMS *pDispParams,
+            /* [annotation][out] */ 
+            _Out_opt_  VARIANT *pVarResult,
+            /* [annotation][out] */ 
+            _Out_opt_  EXCEPINFO *pExcepInfo,
+            /* [annotation][out] */ 
+            _Out_opt_  UINT *puArgErr);
         
         /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_tagName )( 
             IXMLElement * This,
@@ -18611,6 +19224,7 @@ EXTERN_C const IID IID_IXMLElement2;
         
     };
     
+    
 #else 	/* C style interface */
 
     typedef struct IXMLElement2Vtbl
@@ -18621,7 +19235,7 @@ EXTERN_C const IID IID_IXMLElement2;
             IXMLElement2 * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
-            __RPC__deref_out  void **ppvObject);
+            _COM_Outptr_  void **ppvObject);
         
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IXMLElement2 * This);
@@ -18649,14 +19263,22 @@ EXTERN_C const IID IID_IXMLElement2;
         
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IXMLElement2 * This,
-            /* [in] */ DISPID dispIdMember,
-            /* [in] */ REFIID riid,
-            /* [in] */ LCID lcid,
-            /* [in] */ WORD wFlags,
-            /* [out][in] */ DISPPARAMS *pDispParams,
-            /* [out] */ VARIANT *pVarResult,
-            /* [out] */ EXCEPINFO *pExcepInfo,
-            /* [out] */ UINT *puArgErr);
+            /* [annotation][in] */ 
+            _In_  DISPID dispIdMember,
+            /* [annotation][in] */ 
+            _In_  REFIID riid,
+            /* [annotation][in] */ 
+            _In_  LCID lcid,
+            /* [annotation][in] */ 
+            _In_  WORD wFlags,
+            /* [annotation][out][in] */ 
+            _In_  DISPPARAMS *pDispParams,
+            /* [annotation][out] */ 
+            _Out_opt_  VARIANT *pVarResult,
+            /* [annotation][out] */ 
+            _Out_opt_  EXCEPINFO *pExcepInfo,
+            /* [annotation][out] */ 
+            _Out_opt_  UINT *puArgErr);
         
         /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_tagName )( 
             IXMLElement2 * This,
@@ -18823,6 +19445,7 @@ EXTERN_C const IID IID_IXMLAttribute;
         
     };
     
+    
 #else 	/* C style interface */
 
     typedef struct IXMLAttributeVtbl
@@ -18833,7 +19456,7 @@ EXTERN_C const IID IID_IXMLAttribute;
             IXMLAttribute * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
-            __RPC__deref_out  void **ppvObject);
+            _COM_Outptr_  void **ppvObject);
         
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IXMLAttribute * This);
@@ -18861,14 +19484,22 @@ EXTERN_C const IID IID_IXMLAttribute;
         
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IXMLAttribute * This,
-            /* [in] */ DISPID dispIdMember,
-            /* [in] */ REFIID riid,
-            /* [in] */ LCID lcid,
-            /* [in] */ WORD wFlags,
-            /* [out][in] */ DISPPARAMS *pDispParams,
-            /* [out] */ VARIANT *pVarResult,
-            /* [out] */ EXCEPINFO *pExcepInfo,
-            /* [out] */ UINT *puArgErr);
+            /* [annotation][in] */ 
+            _In_  DISPID dispIdMember,
+            /* [annotation][in] */ 
+            _In_  REFIID riid,
+            /* [annotation][in] */ 
+            _In_  LCID lcid,
+            /* [annotation][in] */ 
+            _In_  WORD wFlags,
+            /* [annotation][out][in] */ 
+            _In_  DISPPARAMS *pDispParams,
+            /* [annotation][out] */ 
+            _Out_opt_  VARIANT *pVarResult,
+            /* [annotation][out] */ 
+            _Out_opt_  EXCEPINFO *pExcepInfo,
+            /* [annotation][out] */ 
+            _Out_opt_  UINT *puArgErr);
         
         /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_name )( 
             IXMLAttribute * This,
@@ -18951,6 +19582,7 @@ EXTERN_C const IID IID_IXMLError;
         
     };
     
+    
 #else 	/* C style interface */
 
     typedef struct IXMLErrorVtbl
@@ -18961,7 +19593,7 @@ EXTERN_C const IID IID_IXMLError;
             IXMLError * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
-            __RPC__deref_out  void **ppvObject);
+            _COM_Outptr_  void **ppvObject);
         
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IXMLError * This);
@@ -19062,6 +19694,7 @@ EXTERN_C const IID IID_IXMLDOMSelection;
         
     };
     
+    
 #else 	/* C style interface */
 
     typedef struct IXMLDOMSelectionVtbl
@@ -19072,7 +19705,7 @@ EXTERN_C const IID IID_IXMLDOMSelection;
             IXMLDOMSelection * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
-            __RPC__deref_out  void **ppvObject);
+            _COM_Outptr_  void **ppvObject);
         
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IXMLDOMSelection * This);
@@ -19100,14 +19733,22 @@ EXTERN_C const IID IID_IXMLDOMSelection;
         
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IXMLDOMSelection * This,
-            /* [in] */ DISPID dispIdMember,
-            /* [in] */ REFIID riid,
-            /* [in] */ LCID lcid,
-            /* [in] */ WORD wFlags,
-            /* [out][in] */ DISPPARAMS *pDispParams,
-            /* [out] */ VARIANT *pVarResult,
-            /* [out] */ EXCEPINFO *pExcepInfo,
-            /* [out] */ UINT *puArgErr);
+            /* [annotation][in] */ 
+            _In_  DISPID dispIdMember,
+            /* [annotation][in] */ 
+            _In_  REFIID riid,
+            /* [annotation][in] */ 
+            _In_  LCID lcid,
+            /* [annotation][in] */ 
+            _In_  WORD wFlags,
+            /* [annotation][out][in] */ 
+            _In_  DISPPARAMS *pDispParams,
+            /* [annotation][out] */ 
+            _Out_opt_  VARIANT *pVarResult,
+            /* [annotation][out] */ 
+            _Out_opt_  EXCEPINFO *pExcepInfo,
+            /* [annotation][out] */ 
+            _Out_opt_  UINT *puArgErr);
         
         /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_item )( 
             IXMLDOMSelection * This,
@@ -19297,7 +19938,7 @@ EXTERN_C const IID DIID_XMLDOMDocumentEvents;
             XMLDOMDocumentEvents * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
-            __RPC__deref_out  void **ppvObject);
+            _COM_Outptr_  void **ppvObject);
         
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             XMLDOMDocumentEvents * This);
@@ -19325,14 +19966,22 @@ EXTERN_C const IID DIID_XMLDOMDocumentEvents;
         
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             XMLDOMDocumentEvents * This,
-            /* [in] */ DISPID dispIdMember,
-            /* [in] */ REFIID riid,
-            /* [in] */ LCID lcid,
-            /* [in] */ WORD wFlags,
-            /* [out][in] */ DISPPARAMS *pDispParams,
-            /* [out] */ VARIANT *pVarResult,
-            /* [out] */ EXCEPINFO *pExcepInfo,
-            /* [out] */ UINT *puArgErr);
+            /* [annotation][in] */ 
+            _In_  DISPID dispIdMember,
+            /* [annotation][in] */ 
+            _In_  REFIID riid,
+            /* [annotation][in] */ 
+            _In_  LCID lcid,
+            /* [annotation][in] */ 
+            _In_  WORD wFlags,
+            /* [annotation][out][in] */ 
+            _In_  DISPPARAMS *pDispParams,
+            /* [annotation][out] */ 
+            _Out_opt_  VARIANT *pVarResult,
+            /* [annotation][out] */ 
+            _Out_opt_  EXCEPINFO *pExcepInfo,
+            /* [annotation][out] */ 
+            _Out_opt_  UINT *puArgErr);
         
         END_INTERFACE
     } XMLDOMDocumentEventsVtbl;
@@ -19410,6 +20059,7 @@ EXTERN_C const IID IID_IDSOControl;
         
     };
     
+    
 #else 	/* C style interface */
 
     typedef struct IDSOControlVtbl
@@ -19420,7 +20070,7 @@ EXTERN_C const IID IID_IDSOControl;
             IDSOControl * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
-            __RPC__deref_out  void **ppvObject);
+            _COM_Outptr_  void **ppvObject);
         
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IDSOControl * This);
@@ -19448,14 +20098,22 @@ EXTERN_C const IID IID_IDSOControl;
         
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IDSOControl * This,
-            /* [in] */ DISPID dispIdMember,
-            /* [in] */ REFIID riid,
-            /* [in] */ LCID lcid,
-            /* [in] */ WORD wFlags,
-            /* [out][in] */ DISPPARAMS *pDispParams,
-            /* [out] */ VARIANT *pVarResult,
-            /* [out] */ EXCEPINFO *pExcepInfo,
-            /* [out] */ UINT *puArgErr);
+            /* [annotation][in] */ 
+            _In_  DISPID dispIdMember,
+            /* [annotation][in] */ 
+            _In_  REFIID riid,
+            /* [annotation][in] */ 
+            _In_  LCID lcid,
+            /* [annotation][in] */ 
+            _In_  WORD wFlags,
+            /* [annotation][out][in] */ 
+            _In_  DISPPARAMS *pDispParams,
+            /* [annotation][out] */ 
+            _Out_opt_  VARIANT *pVarResult,
+            /* [annotation][out] */ 
+            _Out_opt_  EXCEPINFO *pExcepInfo,
+            /* [annotation][out] */ 
+            _Out_opt_  UINT *puArgErr);
         
         /* [id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_XMLDocument )( 
             IDSOControl * This,
@@ -19603,6 +20261,7 @@ EXTERN_C const IID IID_IXMLHTTPRequest;
         
     };
     
+    
 #else 	/* C style interface */
 
     typedef struct IXMLHTTPRequestVtbl
@@ -19613,7 +20272,7 @@ EXTERN_C const IID IID_IXMLHTTPRequest;
             IXMLHTTPRequest * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
-            __RPC__deref_out  void **ppvObject);
+            _COM_Outptr_  void **ppvObject);
         
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IXMLHTTPRequest * This);
@@ -19641,14 +20300,22 @@ EXTERN_C const IID IID_IXMLHTTPRequest;
         
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IXMLHTTPRequest * This,
-            /* [in] */ DISPID dispIdMember,
-            /* [in] */ REFIID riid,
-            /* [in] */ LCID lcid,
-            /* [in] */ WORD wFlags,
-            /* [out][in] */ DISPPARAMS *pDispParams,
-            /* [out] */ VARIANT *pVarResult,
-            /* [out] */ EXCEPINFO *pExcepInfo,
-            /* [out] */ UINT *puArgErr);
+            /* [annotation][in] */ 
+            _In_  DISPID dispIdMember,
+            /* [annotation][in] */ 
+            _In_  REFIID riid,
+            /* [annotation][in] */ 
+            _In_  LCID lcid,
+            /* [annotation][in] */ 
+            _In_  WORD wFlags,
+            /* [annotation][out][in] */ 
+            _In_  DISPPARAMS *pDispParams,
+            /* [annotation][out] */ 
+            _Out_opt_  VARIANT *pVarResult,
+            /* [annotation][out] */ 
+            _Out_opt_  EXCEPINFO *pExcepInfo,
+            /* [annotation][out] */ 
+            _Out_opt_  UINT *puArgErr);
         
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *open )( 
             IXMLHTTPRequest * This,
@@ -19835,6 +20502,7 @@ EXTERN_C const IID IID_IServerXMLHTTPRequest;
         
     };
     
+    
 #else 	/* C style interface */
 
     typedef struct IServerXMLHTTPRequestVtbl
@@ -19845,7 +20513,7 @@ EXTERN_C const IID IID_IServerXMLHTTPRequest;
             IServerXMLHTTPRequest * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
-            __RPC__deref_out  void **ppvObject);
+            _COM_Outptr_  void **ppvObject);
         
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IServerXMLHTTPRequest * This);
@@ -19873,14 +20541,22 @@ EXTERN_C const IID IID_IServerXMLHTTPRequest;
         
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IServerXMLHTTPRequest * This,
-            /* [in] */ DISPID dispIdMember,
-            /* [in] */ REFIID riid,
-            /* [in] */ LCID lcid,
-            /* [in] */ WORD wFlags,
-            /* [out][in] */ DISPPARAMS *pDispParams,
-            /* [out] */ VARIANT *pVarResult,
-            /* [out] */ EXCEPINFO *pExcepInfo,
-            /* [out] */ UINT *puArgErr);
+            /* [annotation][in] */ 
+            _In_  DISPID dispIdMember,
+            /* [annotation][in] */ 
+            _In_  REFIID riid,
+            /* [annotation][in] */ 
+            _In_  LCID lcid,
+            /* [annotation][in] */ 
+            _In_  WORD wFlags,
+            /* [annotation][out][in] */ 
+            _In_  DISPPARAMS *pDispParams,
+            /* [annotation][out] */ 
+            _Out_opt_  VARIANT *pVarResult,
+            /* [annotation][out] */ 
+            _Out_opt_  EXCEPINFO *pExcepInfo,
+            /* [annotation][out] */ 
+            _Out_opt_  UINT *puArgErr);
         
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *open )( 
             IServerXMLHTTPRequest * This,
@@ -20093,6 +20769,7 @@ EXTERN_C const IID IID_IServerXMLHTTPRequest2;
         
     };
     
+    
 #else 	/* C style interface */
 
     typedef struct IServerXMLHTTPRequest2Vtbl
@@ -20103,7 +20780,7 @@ EXTERN_C const IID IID_IServerXMLHTTPRequest2;
             IServerXMLHTTPRequest2 * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
-            __RPC__deref_out  void **ppvObject);
+            _COM_Outptr_  void **ppvObject);
         
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IServerXMLHTTPRequest2 * This);
@@ -20131,14 +20808,22 @@ EXTERN_C const IID IID_IServerXMLHTTPRequest2;
         
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IServerXMLHTTPRequest2 * This,
-            /* [in] */ DISPID dispIdMember,
-            /* [in] */ REFIID riid,
-            /* [in] */ LCID lcid,
-            /* [in] */ WORD wFlags,
-            /* [out][in] */ DISPPARAMS *pDispParams,
-            /* [out] */ VARIANT *pVarResult,
-            /* [out] */ EXCEPINFO *pExcepInfo,
-            /* [out] */ UINT *puArgErr);
+            /* [annotation][in] */ 
+            _In_  DISPID dispIdMember,
+            /* [annotation][in] */ 
+            _In_  REFIID riid,
+            /* [annotation][in] */ 
+            _In_  LCID lcid,
+            /* [annotation][in] */ 
+            _In_  WORD wFlags,
+            /* [annotation][out][in] */ 
+            _In_  DISPPARAMS *pDispParams,
+            /* [annotation][out] */ 
+            _Out_opt_  VARIANT *pVarResult,
+            /* [annotation][out] */ 
+            _Out_opt_  EXCEPINFO *pExcepInfo,
+            /* [annotation][out] */ 
+            _Out_opt_  UINT *puArgErr);
         
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *open )( 
             IServerXMLHTTPRequest2 * This,
@@ -20370,6 +21055,7 @@ EXTERN_C const IID IID_IMXNamespacePrefixes;
         
     };
     
+    
 #else 	/* C style interface */
 
     typedef struct IMXNamespacePrefixesVtbl
@@ -20380,7 +21066,7 @@ EXTERN_C const IID IID_IMXNamespacePrefixes;
             IMXNamespacePrefixes * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
-            __RPC__deref_out  void **ppvObject);
+            _COM_Outptr_  void **ppvObject);
         
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IMXNamespacePrefixes * This);
@@ -20408,14 +21094,22 @@ EXTERN_C const IID IID_IMXNamespacePrefixes;
         
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IMXNamespacePrefixes * This,
-            /* [in] */ DISPID dispIdMember,
-            /* [in] */ REFIID riid,
-            /* [in] */ LCID lcid,
-            /* [in] */ WORD wFlags,
-            /* [out][in] */ DISPPARAMS *pDispParams,
-            /* [out] */ VARIANT *pVarResult,
-            /* [out] */ EXCEPINFO *pExcepInfo,
-            /* [out] */ UINT *puArgErr);
+            /* [annotation][in] */ 
+            _In_  DISPID dispIdMember,
+            /* [annotation][in] */ 
+            _In_  REFIID riid,
+            /* [annotation][in] */ 
+            _In_  LCID lcid,
+            /* [annotation][in] */ 
+            _In_  WORD wFlags,
+            /* [annotation][out][in] */ 
+            _In_  DISPPARAMS *pDispParams,
+            /* [annotation][out] */ 
+            _Out_opt_  VARIANT *pVarResult,
+            /* [annotation][out] */ 
+            _Out_opt_  EXCEPINFO *pExcepInfo,
+            /* [annotation][out] */ 
+            _Out_opt_  UINT *puArgErr);
         
         /* [id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_item )( 
             IMXNamespacePrefixes * This,
@@ -20539,6 +21233,7 @@ EXTERN_C const IID IID_IVBMXNamespaceManager;
         
     };
     
+    
 #else 	/* C style interface */
 
     typedef struct IVBMXNamespaceManagerVtbl
@@ -20549,7 +21244,7 @@ EXTERN_C const IID IID_IVBMXNamespaceManager;
             IVBMXNamespaceManager * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
-            __RPC__deref_out  void **ppvObject);
+            _COM_Outptr_  void **ppvObject);
         
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IVBMXNamespaceManager * This);
@@ -20577,14 +21272,22 @@ EXTERN_C const IID IID_IVBMXNamespaceManager;
         
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IVBMXNamespaceManager * This,
-            /* [in] */ DISPID dispIdMember,
-            /* [in] */ REFIID riid,
-            /* [in] */ LCID lcid,
-            /* [in] */ WORD wFlags,
-            /* [out][in] */ DISPPARAMS *pDispParams,
-            /* [out] */ VARIANT *pVarResult,
-            /* [out] */ EXCEPINFO *pExcepInfo,
-            /* [out] */ UINT *puArgErr);
+            /* [annotation][in] */ 
+            _In_  DISPID dispIdMember,
+            /* [annotation][in] */ 
+            _In_  REFIID riid,
+            /* [annotation][in] */ 
+            _In_  LCID lcid,
+            /* [annotation][in] */ 
+            _In_  WORD wFlags,
+            /* [annotation][out][in] */ 
+            _In_  DISPPARAMS *pDispParams,
+            /* [annotation][out] */ 
+            _Out_opt_  VARIANT *pVarResult,
+            /* [annotation][out] */ 
+            _Out_opt_  EXCEPINFO *pExcepInfo,
+            /* [annotation][out] */ 
+            _Out_opt_  UINT *puArgErr);
         
         /* [id][propput] */ HRESULT ( STDMETHODCALLTYPE *put_allowOverride )( 
             IVBMXNamespaceManager * This,
@@ -20767,6 +21470,7 @@ EXTERN_C const IID IID_IMXNamespaceManager;
         
     };
     
+    
 #else 	/* C style interface */
 
     typedef struct IMXNamespaceManagerVtbl
@@ -20777,7 +21481,7 @@ EXTERN_C const IID IID_IMXNamespaceManager;
             IMXNamespaceManager * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
-            __RPC__deref_out  void **ppvObject);
+            _COM_Outptr_  void **ppvObject);
         
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IMXNamespaceManager * This);
@@ -21233,7 +21937,7 @@ XMLDocument;
 #endif
 #endif /* __MSXML2_LIBRARY_DEFINED__ */
 
-/* interface __MIDL_itf_msxml2_0001_0188 */
+/* interface __MIDL_itf_msxml2_0000_0001 */
 /* [local] */ 
 
 //----------------------------
@@ -21248,8 +21952,8 @@ XMLDocument;
 #endif
 
 
-extern RPC_IF_HANDLE __MIDL_itf_msxml2_0001_0188_v0_0_c_ifspec;
-extern RPC_IF_HANDLE __MIDL_itf_msxml2_0001_0188_v0_0_s_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_msxml2_0000_0001_v0_0_c_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_msxml2_0000_0001_v0_0_s_ifspec;
 
 /* Additional Prototypes for ALL interfaces */
 
