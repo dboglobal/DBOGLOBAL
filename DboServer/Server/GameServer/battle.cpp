@@ -628,8 +628,8 @@ void IncreaseTargetEnemyAggro(CCharacter * pCaster, CCharacter * pTarget, DWORD 
 	int nAgro = (int)(dwDefaultAggro + pCaster->GetCharAtt()->GetSkillAggroBonus());
 	nAgro += (int)((float)nAgro * pCaster->GetCharAtt()->GetSkillAggroBonusInPercent() / 100.f);
 
-	CTargetListManager::AGGROPOINT_MAP::iterator it = pTarget->GetTargetListManager()->AggroBegin();
-	CTargetListManager::AGGROPOINT_MAP::iterator itEnd = pTarget->GetTargetListManager()->AggroEnd();
+	auto it = pTarget->GetTargetListManager()->AggroBegin();
+	auto itEnd = pTarget->GetTargetListManager()->AggroEnd();
 
 	int nLoopCount = 0;
 

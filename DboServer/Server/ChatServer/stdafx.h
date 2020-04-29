@@ -5,7 +5,8 @@
 
 #include <tchar.h>
 #include <stdio.h>
-
+#include <iostream>
+#include <ctime>
 
 // TODO: reference additional headers your program requires here
 #include "NtlBase.h"

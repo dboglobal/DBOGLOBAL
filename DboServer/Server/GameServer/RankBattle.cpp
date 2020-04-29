@@ -1491,7 +1491,7 @@ void CRankbattleRoom::LeaveQueue(CPlayer * pPlayer)
 {
 	if (GetBattleMode() == RANKBATTLE_MODE_INDIVIDUAL)
 	{
-		boost::unordered_map<HOBJECT, CHARACTERID>::iterator it = m_mapSoloQueue.find(pPlayer->GetID());
+		auto it = m_mapSoloQueue.find(pPlayer->GetID());
 		if(it != m_mapSoloQueue.end())
 		{
 			if (pPlayer->GetCharID() == it->second)
@@ -1509,7 +1509,7 @@ void CRankbattleRoom::LeaveQueue(CPlayer * pPlayer)
 	}
 	else
 	{
-		for (boost::unordered_map<HOBJECT, CParty*>::iterator it = m_mapPartyQueue.begin(); it != m_mapPartyQueue.end(); it++)
+		for (auto it = m_mapPartyQueue.begin(); it != m_mapPartyQueue.end(); it++)
 		{
 			CParty* pParty = it->second;
 
@@ -1529,7 +1529,7 @@ void CRankbattleRoom::LeaveQueue(CPlayer * pPlayer)
 
 void CRankbattleRoom::LeaveQueue(PARTYID partyId)
 {
-	for (boost::unordered_map<HOBJECT, CParty*>::iterator it = m_mapPartyQueue.begin(); it != m_mapPartyQueue.end(); it++)
+	for (auto it = m_mapPartyQueue.begin(); it != m_mapPartyQueue.end(); it++)
 	{
 		CParty* pParty = it->second;
 		if (partyId == pParty->GetPartyID())
@@ -1554,11 +1554,11 @@ void CRankbattleRoom::UpdateMatchmakingQueue()
 			return;
 
 		std::vector<sRANK_SOLO> vecTemp;
-		boost::unordered_map<HOBJECT, CHARACTERID> vecTmpQueue(m_mapSoloQueue);
+		std::unordered_map<HOBJECT, CHARACTERID> vecTmpQueue(m_mapSoloQueue);
 
 		bool bFound = false;
 
-		for (boost::unordered_map<HOBJECT, CHARACTERID>::iterator fit = vecTmpQueue.begin(); fit != vecTmpQueue.end(); )
+		for (auto fit = vecTmpQueue.begin(); fit != vecTmpQueue.end(); )
 		{
 			bFound = false;
 
@@ -1568,7 +1568,7 @@ void CRankbattleRoom::UpdateMatchmakingQueue()
 				sRANK_SOLO rank;
 				rank.pOwner = pFirst;
 
-				for (boost::unordered_map<HOBJECT, CHARACTERID>::iterator sit = m_mapSoloQueue.begin(); sit != m_mapSoloQueue.end(); sit++) //find a matching partner
+				for (auto sit = m_mapSoloQueue.begin(); sit != m_mapSoloQueue.end(); sit++) //find a matching partner
 				{
 					CPlayer* pSecond = g_pObjectManager->GetPC(sit->first);
 					if (pSecond && pSecond->IsInitialized() && pSecond->GetCharID() == sit->second)
@@ -1641,9 +1641,9 @@ void CRankbattleRoom::UpdateMatchmakingQueue()
 		bool bFound = false;
 
 		std::vector<sRANK_PARTY> vecTemp;
-		boost::unordered_map<HOBJECT, CParty*> vecTmpQueue(m_mapPartyQueue);
+		std::unordered_map<HOBJECT, CParty*> vecTmpQueue(m_mapPartyQueue);
 
-		for (boost::unordered_map<HOBJECT, CParty*>::iterator fit = vecTmpQueue.begin(); fit != vecTmpQueue.end(); )
+		for (auto fit = vecTmpQueue.begin(); fit != vecTmpQueue.end(); )
 		{
 			bFound = false;
 
@@ -1655,7 +1655,7 @@ void CRankbattleRoom::UpdateMatchmakingQueue()
 				sRANK_PARTY rank;
 				rank.pOwner = pFirst;
 
-				for (boost::unordered_map<HOBJECT, CParty*>::iterator sit = m_mapPartyQueue.begin(); sit != m_mapPartyQueue.end(); sit++) //find matching partner
+				for (auto sit = m_mapPartyQueue.begin(); sit != m_mapPartyQueue.end(); sit++) //find matching partner
 				{
 					CParty* pSecond = sit->second;
 					if (pSecond && pFirst->GetPartyID() != pSecond->GetPartyID() && pSecond->GetPartyLeaderID() == sit->first && pSecond->GetPartyMemberCount() >= 2)

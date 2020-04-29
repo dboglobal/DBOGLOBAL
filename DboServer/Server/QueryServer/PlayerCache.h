@@ -3,7 +3,7 @@
 
 #include "NtlSingleton.h"
 #include <set>
-#include <boost/unordered_map.hpp>
+#include <unordered_map>
 
 #include "CallBack.h"
 
@@ -370,8 +370,8 @@ public:
 
 private:
 
-	boost::unordered_map<ACCOUNTID, CAccountCache*>	m_mapAccounts;
-	boost::unordered_map<CHARACTERID, CPlayerCache*>	m_mapCharacters;
+	std::unordered_map<ACCOUNTID, CAccountCache*>	m_mapAccounts;
+	std::unordered_map<CHARACTERID, CPlayerCache*>	m_mapCharacters;
 
 };
 

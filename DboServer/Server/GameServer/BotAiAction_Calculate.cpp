@@ -51,7 +51,7 @@ int CBotAiAction_Calculate::OnUpdate(DWORD dwTickDiff, float fMultiple)
 	CSvrScrVariableMap* pMap = GetValidVariableMap();
 	if (pMap)
 	{
-		for (std::vector<sSSD_FORMULA_DECLARE>::iterator it = m_sDeclareList.begin(); it != m_sDeclareList.end(); it++)
+		for (auto it = m_sDeclareList.begin(); it != m_sDeclareList.end(); it++)
 		{
 			sSSD_FORMULA_DECLARE& declare = *it;
 

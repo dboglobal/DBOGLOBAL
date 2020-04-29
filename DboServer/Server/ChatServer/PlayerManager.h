@@ -3,7 +3,9 @@
 
 #include "Player.h"
 #include "NtlSingleton.h"
-#include "boost.h"
+
+#include <unordered_map>
+
 
 class CPlayerManager : public CNtlSingleton<CPlayerManager>
 {
@@ -14,7 +16,7 @@ public:
 
 private:
 
-	boost::unordered_map<ACCOUNTID, CPlayer*> m_map_Player;
+	std::unordered_map<ACCOUNTID, CPlayer*> m_map_Player;
 
 public:
 	void			Init();

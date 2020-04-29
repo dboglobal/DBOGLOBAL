@@ -32,7 +32,7 @@ CPlayerItemContainer::CPlayerItemContainer()
 
 CPlayerItemContainer::~CPlayerItemContainer()
 {
-	for (TItemsMap::iterator it = m_map_CharItems.begin(); it != m_map_CharItems.end(); it++)
+	for (auto it = m_map_CharItems.begin(); it != m_map_CharItems.end(); it++)
 	{
 		CItem* pItem = it->second;
 		if (pItem)
@@ -47,7 +47,7 @@ CPlayerItemContainer::~CPlayerItemContainer()
 	}
 	m_map_CharItems.clear();
 
-	for (TItemsMap::iterator it = m_map_BankItems.begin(); it != m_map_BankItems.end(); it++)
+	for (auto it = m_map_BankItems.begin(); it != m_map_BankItems.end(); it++)
 	{
 		CItem* pItem = it->second;
 		if (pItem)
@@ -198,7 +198,7 @@ CItem * CPlayerItemContainer::GetItem(BYTE byPlace, BYTE byPos)
 {
 	if (IsBagContainer(byPlace) || IsInvenContainer(byPlace) || IsEquipContainer(byPlace)) //check if place is from bag/inventory. Search char items
 	{
-		for (TItemsMap::iterator it = m_map_CharItems.begin(); it != m_map_CharItems.end(); it++)
+		for (auto it = m_map_CharItems.begin(); it != m_map_CharItems.end(); it++)
 		{
 			CItem* itemdata = it->second;
 			if (itemdata->GetPlace() == byPlace && itemdata->GetPos() == byPos)
@@ -210,7 +210,7 @@ CItem * CPlayerItemContainer::GetItem(BYTE byPlace, BYTE byPos)
 
 	else if (IsBankContainer(byPlace))	//check if place is from bank. Search bank items
 	{
-		for (TItemsMap::iterator it = m_map_BankItems.begin(); it != m_map_BankItems.end(); it++)
+		for (auto it = m_map_BankItems.begin(); it != m_map_BankItems.end(); it++)
 		{
 			CItem* itemdata = it->second;
 			if (itemdata->GetPlace() == byPlace && itemdata->GetPos() == byPos)
@@ -222,7 +222,7 @@ CItem * CPlayerItemContainer::GetItem(BYTE byPlace, BYTE byPos)
 
 	else if (IsGuildContainer(byPlace))
 	{
-		for (TItemsMap::iterator it = m_map_GuildBankItems.begin(); it != m_map_GuildBankItems.end(); it++)
+		for (auto it = m_map_GuildBankItems.begin(); it != m_map_GuildBankItems.end(); it++)
 		{
 			CItem* itemdata = it->second;
 			if (itemdata->GetPlace() == byPlace && itemdata->GetPos() == byPos)
@@ -268,7 +268,7 @@ void CPlayerItemContainer::InsertItem(HOBJECT hHandle, CItem * item)
 
 CItem * CPlayerItemContainer::GetItem(HOBJECT hHandle)
 {
-	TItemsMap::iterator it = m_map_CharItems.find(hHandle);
+	auto it = m_map_CharItems.find(hHandle);
 
 	if (m_map_CharItems.end() == it)
 	{
@@ -280,7 +280,7 @@ CItem * CPlayerItemContainer::GetItem(HOBJECT hHandle)
 
 CItem * CPlayerItemContainer::GetItemByIdx(TBLIDX itemTblidx)
 {
-	for (TItemsMap::iterator it = m_map_CharItems.begin(); it != m_map_CharItems.end(); it++)
+	for (auto it = m_map_CharItems.begin(); it != m_map_CharItems.end(); it++)
 	{
 		CItem* itemdata = it->second;
 		if (itemdata->GetTblidx() == itemTblidx)
@@ -292,7 +292,7 @@ CItem * CPlayerItemContainer::GetItemByIdx(TBLIDX itemTblidx)
 
 CItem * CPlayerItemContainer::GetItem(ITEMID itemId)
 {
-	for (TItemsMap::iterator it = m_map_CharItems.begin(); it != m_map_CharItems.end(); it++)
+	for (auto it = m_map_CharItems.begin(); it != m_map_CharItems.end(); it++)
 	{
 		CItem* itemdata = it->second;
 		if (itemdata->GetItemID() == itemId)
@@ -304,7 +304,7 @@ CItem * CPlayerItemContainer::GetItem(ITEMID itemId)
 
 CItem * CPlayerItemContainer::CheckStackItem(TBLIDX itemidx, BYTE byCount, BYTE byMaxStack, BYTE byRestrictState)
 {
-	for (TItemsMap::iterator it = m_map_CharItems.begin(); it != m_map_CharItems.end(); it++)
+	for (auto it = m_map_CharItems.begin(); it != m_map_CharItems.end(); it++)
 	{
 		CItem* itemdata = it->second;
 
@@ -319,7 +319,7 @@ void CPlayerItemContainer::DeleteAllItems()
 {
 	int nInfiniteLoop = 0;
 
-	for (TItemsMap::iterator it = m_map_CharItems.begin(); it != m_map_CharItems.end(); )
+	for (auto it = m_map_CharItems.begin(); it != m_map_CharItems.end(); )
 	{
 		++nInfiniteLoop;
 		if (nInfiniteLoop > 1000)
@@ -433,7 +433,7 @@ bool CPlayerItemContainer::IsBagEmpty(BYTE byBagPos)
 
 	if (pBag->GetPlace() == 0 && pBag->GetPos() == byBagPos)
 	{
-		for (TItemsMap::iterator it = m_map_CharItems.begin(); it != m_map_CharItems.end(); it++)
+		for (auto it = m_map_CharItems.begin(); it != m_map_CharItems.end(); it++)
 		{
 			CItem* pItem = it->second;
 			if (pItem->GetPlace() == byBagPos + 1)
@@ -456,7 +456,7 @@ bool CPlayerItemContainer::HasRequiredItem(TBLIDX itemTblidx, BYTE byCount, int 
 {
 	int nCount = 0;
 	int nLoop = 0;
-	for (TItemsMap::iterator it = m_map_CharItems.begin(); it != m_map_CharItems.end(); it++)
+	for (auto it = m_map_CharItems.begin(); it != m_map_CharItems.end(); it++)
 	{
 		CItem* item = it->second;
 
@@ -479,7 +479,7 @@ bool CPlayerItemContainer::HasRequiredItem(TBLIDX itemTblidx, BYTE byCount, int 
 bool CPlayerItemContainer::RemoveRequiredItem(TBLIDX itemTblidx, BYTE byCount, BYTE& rbyUpdateCount, BYTE& rbyDeleteCount, sITEM_BASIC_DATA* apUpdate, sITEM_DELETE_DATA* apDelete)
 {
 	BYTE count = byCount;
-	TItemsMap::iterator it = m_map_CharItems.begin();
+	auto it = m_map_CharItems.begin();
 
 	int nloopCount = 0;
 
@@ -598,7 +598,7 @@ void CPlayerItemContainer::SortInventory(BYTE byInventoryType, HOBJECT hNpcHandl
 	//printf("sGU_INVENTORY_SORT_RES size = %I64u, %I64u, %I64u \n", sizeof(sGU_INVENTORY_SORT_RES), sizeof(res->moveItem), sizeof(res->delItem));
 	//if (byInventoryType == 0)
 	//{
-	//	for (TItemsMap::iterator it = m_map_CharItems.begin(); it != m_map_CharItems.end(); it++)
+	//	for (auto it = m_map_CharItems.begin(); it != m_map_CharItems.end(); it++)
 	//	{
 	//		CItem* item = it->second;
 	//		if (item->GetPlace() == CONTAINER_TYPE_BAG1)
@@ -622,7 +622,7 @@ void CPlayerItemContainer::SortInventory(BYTE byInventoryType, HOBJECT hNpcHandl
 	//}
 	//else if (byInventoryType == 2)
 	//{
-	//	for (TItemsMap::iterator it = m_map_BankItems.begin(); it != m_map_BankItems.end(); it++)
+	//	for (auto it = m_map_BankItems.begin(); it != m_map_BankItems.end(); it++)
 	//	{
 	//		CItem* item = it->second;
 
@@ -729,7 +729,7 @@ void CPlayerItemContainer::CopyItemBrief(sITEM_BRIEF * pBrief)
 
 void CPlayerItemContainer::OnDecreaseEquipmentDurability(BYTE* pbyDur, BYTE& rbyApplyCount)
 {
-	for (TItemsMap::iterator it = m_map_CharItems.begin(); it != m_map_CharItems.end(); it++)
+	for (auto it = m_map_CharItems.begin(); it != m_map_CharItems.end(); it++)
 	{
 		CItem* item = it->second;
 		if (item->GetPlace() == CONTAINER_TYPE_EQUIP && item->GetDurability() > 0)
@@ -802,7 +802,7 @@ void CPlayerItemContainer::CopyItemAttributesTo(CCharacterAtt* pCharAtt)
 	sITEM_TBLDAT* setRingIdx[NTL_SET_ITEM_SEMI_COUNT]; //semi because we can only have max 2
 	memset(setRingIdx, NULL, sizeof(setRingIdx));
 
-//	for (TItemsMap::iterator it = m_map_CharItems.begin(); it != m_map_CharItems.end(); it++)
+//	for (auto it = m_map_CharItems.begin(); it != m_map_CharItems.end(); it++)
 	for(BYTE a = 0; a < EQUIP_SLOT_TYPE_COUNT; a++)
 	{
 		CItem* item = GetItem(CONTAINER_TYPE_EQUIP, a);
@@ -1064,7 +1064,7 @@ void CPlayerItemContainer::InsertBankItem(HOBJECT hHandle, CItem * item)
 
 CItem * CPlayerItemContainer::GetBankItem(HOBJECT hHandle)
 {
-	TItemsMap::iterator it = m_map_BankItems.find(hHandle);
+	auto it = m_map_BankItems.find(hHandle);
 	if (it != m_map_BankItems.end())
 		return it->second;
 
@@ -1075,7 +1075,7 @@ void CPlayerItemContainer::FreeGuildBank()
 {
 	m_dwGuildZeni = 0;
 
-	for (TItemsMap::iterator it = m_map_GuildBankItems.begin(); it != m_map_GuildBankItems.end(); it++)
+	for (auto it = m_map_GuildBankItems.begin(); it != m_map_GuildBankItems.end(); it++)
 	{
 		CItem* pItem = it->second;
 		pItem->SetOwner(NULL);

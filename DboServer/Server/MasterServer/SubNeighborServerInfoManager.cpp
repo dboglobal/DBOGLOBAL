@@ -147,7 +147,7 @@ void CSubNeighborServerInfoManager::AddPlayerCharServer(ACCOUNTID AccID, SERVERI
 //Add player to game server online list
 void CSubNeighborServerInfoManager::AddPlayerGameServer(ACCOUNTID AccID, SERVERFARMID serverfarm, SERVERCHANNELID channel)
 {
-	boost::unordered_map<ACCOUNTID, _SERVER_PAIR_ID>::iterator it = m_map_GameServerPlayers.find(AccID);
+	auto it = m_map_GameServerPlayers.find(AccID);
 	if (it != m_map_GameServerPlayers.end())
 	{
 		it->second.serverFarmId = serverfarm;
@@ -163,7 +163,7 @@ void CSubNeighborServerInfoManager::AddPlayerGameServer(ACCOUNTID AccID, SERVERF
 //remove all players from server index
 void CSubNeighborServerInfoManager::RemoveAllPlayerFromCharServer(SERVERINDEX serverIndex)
 {
-	for (boost::unordered_map<ACCOUNTID, SERVERINDEX>::iterator it = m_map_CharServerPlayers.begin(); it != m_map_CharServerPlayers.end(); )
+	for (auto it = m_map_CharServerPlayers.begin(); it != m_map_CharServerPlayers.end(); )
 	{
 		if (it->second == serverIndex)
 		{
@@ -177,7 +177,7 @@ void CSubNeighborServerInfoManager::RemoveAllPlayerFromCharServer(SERVERINDEX se
 //remove all players from server&channel
 void CSubNeighborServerInfoManager::RemoveAllPlayerFromGameServer(_SERVER_PAIR_ID serverPairID)
 {
-	for (boost::unordered_map<ACCOUNTID, _SERVER_PAIR_ID>::iterator it = m_map_GameServerPlayers.begin(); it != m_map_GameServerPlayers.end(); )
+	for (auto it = m_map_GameServerPlayers.begin(); it != m_map_GameServerPlayers.end(); )
 	{
 		if (it->second == serverPairID)
 		{
@@ -198,7 +198,7 @@ void CSubNeighborServerInfoManager::DelPlayer(ACCOUNTID AccID, bool bIsGameServe
 	}
 	else
 	{
-		boost::unordered_map<ACCOUNTID, _SERVER_PAIR_ID>::iterator it = m_map_GameServerPlayers.find(AccID);
+		auto it = m_map_GameServerPlayers.find(AccID);
 		if (it != m_map_GameServerPlayers.end())
 		{
 			if(it->second.serverFarmId == serverfarmId && it->second.serverChannelId == channelId)
@@ -214,14 +214,14 @@ void CSubNeighborServerInfoManager::DelPlayer(ACCOUNTID AccID, bool bIsGameServe
 //check if player is in character or game server online
 bool CSubNeighborServerInfoManager::IsPlayerOnline(ACCOUNTID AccID)
 {
-	boost::unordered_map<ACCOUNTID, SERVERINDEX>::iterator it = m_map_CharServerPlayers.find(AccID);
+	auto it = m_map_CharServerPlayers.find(AccID);
 	if (it != m_map_CharServerPlayers.end())
 	{
 		ERR_LOG(LOG_USER, "USER %u ALREADY LOGGED IN CHAR SERVER INDEX %u", it->first, it->second);
 		return true;
 	}
 
-	boost::unordered_map<ACCOUNTID, _SERVER_PAIR_ID>::iterator it2 = m_map_GameServerPlayers.find(AccID);
+	auto it2 = m_map_GameServerPlayers.find(AccID);
 	if (it2 != m_map_GameServerPlayers.end())
 	{
 		ERR_LOG(LOG_USER, "USER %u ALREADY LOGGED IN GAME SERVER %u CHANNEL %u", it2->first, it2->second.serverFarmId, it2->second.serverChannelId);
@@ -235,7 +235,7 @@ void CSubNeighborServerInfoManager::PrintOnlinePlayers()
 {
 	ERR_LOG(LOG_GENERAL, "PRINT %I64u ONLINE PLAYERS - BEGIN", m_map_GameServerPlayers.size());
 
-	for (boost::unordered_map<ACCOUNTID, _SERVER_PAIR_ID>::iterator it = m_map_GameServerPlayers.begin(); it != m_map_GameServerPlayers.end(); it++)
+	for (auto it = m_map_GameServerPlayers.begin(); it != m_map_GameServerPlayers.end(); it++)
 	{
 		ERR_LOG(LOG_GENERAL, "Account: %u, Server-Farm: %u, Server-Channel: %u", it->first, it->second.serverFarmId, it->second.serverChannelId);
 	}

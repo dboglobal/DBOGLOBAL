@@ -89,7 +89,7 @@ void CAutionhouse::Init()
 
 void CAutionhouse::Destroy()
 {
-	for (TMapAuctionHouse::iterator it = m_mapAuctionhouse.begin(); it != m_mapAuctionhouse.end(); )
+	for (auto it = m_mapAuctionhouse.begin(); it != m_mapAuctionhouse.end(); )
 	{
 		delete it->second;
 
@@ -109,7 +109,7 @@ void CAutionhouse::EraseItem(ITEMID nItem)
 
 sTENKAICHIDAISIJYOU_DATA * CAutionhouse::GetItem(ITEMID nItem)
 {
-	TMapAuctionHouse::iterator it = m_mapAuctionhouse.find(nItem);
+	auto it = m_mapAuctionhouse.find(nItem);
 	if (it != m_mapAuctionhouse.end())
 		return it->second;
 

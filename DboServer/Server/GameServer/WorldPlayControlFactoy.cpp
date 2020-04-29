@@ -2,7 +2,7 @@
 #include "WorldPlayControlFactory.h"
 #include "ScriptAlgoDefine.h"
 
-#include <boost/unordered_map.hpp>
+#include <unordered_map>
 
 #include "ScriptAlgoAction_Default.h"
 #include "ScriptAlgoAction_Case.h"
@@ -94,7 +94,7 @@
 #include "WpsScriptAlgoCondition_CCBD_pattern.h"
 
 
-boost::unordered_map<int, CControlState*(*)(CWpsAlgoObject* pOwner)> s_controlStateMap_wps;
+std::unordered_map<int, CControlState*(*)(CWpsAlgoObject* pOwner)> s_controlStateMap_wps;
 bool s_bInitailize_wps = false;
 
 

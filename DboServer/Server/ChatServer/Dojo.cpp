@@ -170,7 +170,7 @@ void CDojo::WarRequestReponse(bool& rbIsAccept, WORD& rwResultcode, bool& rbIsRe
 
 void CDojo::BeginWarPreparation()
 {
-	m_lastDojoWar = std::time(NULL);
+	m_lastDojoWar = std::time(nullptr);
 	m_byRejectCount = 0;
 	m_bHasWarRequest = false;
 

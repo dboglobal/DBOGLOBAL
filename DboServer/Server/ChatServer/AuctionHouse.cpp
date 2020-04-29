@@ -1,6 +1,7 @@
 #include "stdafx.h"
 #include "ChatServer.h"
 #include "AuctionHouse.h"
+#include "NtlPacketGT.h"
 #include "NtlPacketTG.h"
 #include "NtlPacketTQ.h"
 #include "NtlMail.h"
@@ -107,7 +108,7 @@ void CAutionhouse::Update()
 	DBOTIME curTime = time(NULL);
 	std::vector<sTENKAICHIDAISIJYOU_DATA*> vecDelData;
 
-	for (TMapAuctionHouse::iterator it = m_mapAuctionhouse.begin(); it != m_mapAuctionhouse.end(); )
+	for (auto it = m_mapAuctionhouse.begin(); it != m_mapAuctionhouse.end(); )
 	{
 		sTENKAICHIDAISIJYOU_DATA* pData = it->second;
 
@@ -157,7 +158,7 @@ void CAutionhouse::AddItem(sTENKAICHIDAISIJYOU_DATA& rData)
 
 void CAutionhouse::DelItem(ITEMID nItem)
 {
-	TMapAuctionHouse::iterator it = m_mapAuctionhouse.find(nItem);
+	auto it = m_mapAuctionhouse.find(nItem);
 	if (it != m_mapAuctionhouse.end())
 	{
 		delete it->second;
@@ -179,7 +180,7 @@ void CAutionhouse::LoadAuctionHouseData(CPlayer* pPlayer, sGT_TENKAICHIDAISIJYOU
 	HSESSION gameServerSession = g_pServerInfoManager->GetGsSession(pPlayer->GetChannel());
 	//ERR_LOG(LOG_USER, "Account %u load auction house. Channel %u, Channel-Session %u", req->accountId, pPlayer->GetChannel(), gameServerSession);
 
-	for (TMapAuctionHouse::iterator it = m_mapAuctionhouse.begin(); it != m_mapAuctionhouse.end(); it++)
+	for (auto it = m_mapAuctionhouse.begin(); it != m_mapAuctionhouse.end(); it++)
 	{
 		sTENKAICHIDAISIJYOU_DATA* data = it->second;
 		
@@ -292,7 +293,7 @@ void CAutionhouse::LoadAuctionHouseData(CPlayer* pPlayer, sGT_TENKAICHIDAISIJYOU
 
 DWORD CAutionhouse::ReturnPrice(ITEMID nItem)
 {
-	TMapAuctionHouse::iterator it = m_mapAuctionhouse.find(nItem);
+	auto it = m_mapAuctionhouse.find(nItem);
 	if (it != m_mapAuctionhouse.end())
 		return it->second->dwPrice;
 
@@ -301,7 +302,7 @@ DWORD CAutionhouse::ReturnPrice(ITEMID nItem)
 
 sTENKAICHIDAISIJYOU_DATA* CAutionhouse::GetItem(ITEMID nitem)
 {
-	TMapAuctionHouse::iterator it = m_mapAuctionhouse.find(nitem);
+	auto it = m_mapAuctionhouse.find(nitem);
 	if (it != m_mapAuctionhouse.end())
 	{
 		return it->second;

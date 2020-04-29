@@ -33,10 +33,10 @@
 #include "TQSNodeCondition_RecvSpsEvent.h"
 #include "TQSNodeCondition_RecvTsEvent.h"
 
-#include "boost/unordered_map.hpp"
+#include <unordered_map>
 
-boost::unordered_map<std::string, CControlScriptNodeAction*(*)(const char*)> s_actionMap_tqs;
-boost::unordered_map<std::string, CControlScriptNodeCondition*(*)(const char*)> s_conditionMap_tqs;
+std::unordered_map<std::string, CControlScriptNodeAction*(*)(const char*)> s_actionMap_tqs;
+std::unordered_map<std::string, CControlScriptNodeCondition*(*)(const char*)> s_conditionMap_tqs;
 
 bool s_bInitailize_tqs = false;
 
@@ -239,7 +239,7 @@ CControlScriptNodeAction* CTQSNodeFactory::CreateControlNodeAction(const char* l
 		s_bInitailize_tqs = true;
 	}
 
-	boost::unordered_map<std::string, CControlScriptNodeAction*(*)(const char*)>::iterator it = s_actionMap_tqs.find(lpszNodeName);
+	auto it = s_actionMap_tqs.find(lpszNodeName);
 	if (it == s_actionMap_tqs.end())
 	{
 		printf("CTQSNodeFactory::CreateControlNodeAction: %s not found \n", lpszNodeName);
@@ -257,7 +257,7 @@ CControlScriptNodeCondition* CTQSNodeFactory::CreateControlNodeCondition(const c
 		s_bInitailize_tqs = true;
 	}
 
-	boost::unordered_map<std::string, CControlScriptNodeCondition*(*)(const char*)>::iterator it = s_conditionMap_tqs.find(lpszNodeName);
+	auto it = s_conditionMap_tqs.find(lpszNodeName);
 	if (it == s_conditionMap_tqs.end())
 	{
 		printf("CTQSNodeFactory::CreateControlNodeCondition: %s not found \n", lpszNodeName);

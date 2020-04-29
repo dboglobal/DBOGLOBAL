@@ -24,7 +24,7 @@ void CPlayerManager::Init()
 //--------------------------------------------------------------------------------------//
 void CPlayerManager::TickProcess(DWORD dwTickDiff)
 {
-	for (boost::unordered_map<ACCOUNTID, CPlayer*>::iterator it = m_map_Player.begin(); it != m_map_Player.end(); it++)
+	for (auto it = m_map_Player.begin(); it != m_map_Player.end(); it++)
 	{
 		CPlayer* pPlayer = it->second;
 		if (pPlayer && pPlayer->GetPcInitState())
@@ -50,7 +50,7 @@ CPlayer* CPlayerManager::CreatePlayer(ACCOUNTID AccID)
 //--------------------------------------------------------------------------------------//
 void CPlayerManager::RemovePlayer(ACCOUNTID AccID)
 {
-	itertype(m_map_Player) it = m_map_Player.find(AccID);
+	auto it = m_map_Player.find(AccID);
 	if (it == m_map_Player.end()) 
 		return; // prevent duplicated destrunction
 
@@ -66,7 +66,7 @@ void CPlayerManager::RemovePlayer(ACCOUNTID AccID)
 //--------------------------------------------------------------------------------------//
 void CPlayerManager::RemoveAllPlayers(SERVERCHANNELID channelId/* = INVALID_SERVERCHANNELID*/)
 {
-	boost::unordered_map<ACCOUNTID, CPlayer*>::iterator it = m_map_Player.begin();
+	auto it = m_map_Player.begin();
 
 	for (; it != m_map_Player.end(); )
 	{
@@ -96,7 +96,7 @@ void CPlayerManager::RemoveAllPlayers(SERVERCHANNELID channelId/* = INVALID_SERV
 //--------------------------------------------------------------------------------------//
 CPlayer* CPlayerManager::Find(HSESSION hClientSession)
 {
-	for (itertype(m_map_Player) it = m_map_Player.begin(); it != m_map_Player.end(); it++)
+	for (auto it = m_map_Player.begin(); it != m_map_Player.end(); it++)
 	{
 		CPlayer* player = it->second;
 		if (player->GetClientSession())
@@ -113,7 +113,7 @@ CPlayer* CPlayerManager::Find(HSESSION hClientSession)
 //--------------------------------------------------------------------------------------//
 CPlayer* CPlayerManager::FindPlayer(HOBJECT hPlayerID)
 {
-	for( itertype(m_map_Player) it = m_map_Player.begin(); it != m_map_Player.end(); it++ )
+	for(auto it = m_map_Player.begin(); it != m_map_Player.end(); it++ )
 	{
 		CPlayer* player = it->second;
 		if (player->GetCharID() == hPlayerID)
@@ -127,7 +127,7 @@ CPlayer* CPlayerManager::FindPlayer(HOBJECT hPlayerID)
 //--------------------------------------------------------------------------------------//
 CPlayer* CPlayerManager::FindPlayerWithAccID(ACCOUNTID AccID)
 {
-	itertype(m_map_Player) it = m_map_Player.find(AccID);
+	auto it = m_map_Player.find(AccID);
 	if (m_map_Player.end() == it)
 		return NULL;
 
@@ -138,7 +138,7 @@ CPlayer* CPlayerManager::FindPlayerWithAccID(ACCOUNTID AccID)
 //--------------------------------------------------------------------------------------//
 CPlayer* CPlayerManager::FindPlayerWithCharID(CHARACTERID CharID)
 {
-	for( itertype(m_map_Player) it = m_map_Player.begin(); it != m_map_Player.end(); it++ )
+	for(auto it = m_map_Player.begin(); it != m_map_Player.end(); it++ )
 	{
 		CPlayer* pcdata = it->second;
 		if(pcdata)
@@ -155,7 +155,7 @@ CPlayer* CPlayerManager::FindPlayerWithCharID(CHARACTERID CharID)
 //--------------------------------------------------------------------------------------//
 CPlayer* CPlayerManager::FindPlayerByName(WCHAR* wchName)
 {
-	for( itertype(m_map_Player) it = m_map_Player.begin(); it != m_map_Player.end(); it++ )
+	for(auto it = m_map_Player.begin(); it != m_map_Player.end(); it++ )
 	{
 		CPlayer* pcdata = it->second;
 		if(pcdata)
@@ -176,7 +176,7 @@ CPlayer* CPlayerManager::FindPlayerByName(WCHAR* wchName)
 //--------------------------------------------------------------------------------------//
 void CPlayerManager::UserSendMsgToFriends(CNtlPacket* pPacket, CHARACTERID CharId)
 {
-	for( itertype(m_map_Player) it = m_map_Player.begin(); it != m_map_Player.end(); it++ )
+	for(auto it = m_map_Player.begin(); it != m_map_Player.end(); it++ )
 	{
 		CPlayer* player = it->second;
 		if(player && player->GetPcInitState() && player->GetReadyForCommunityServer() && player->GetCharID() != CharId)
@@ -194,7 +194,7 @@ void CPlayerManager::UserSendMsgToFriends(CNtlPacket* pPacket, CHARACTERID CharI
 //--------------------------------------------------------------------------------------//
 void CPlayerManager::SendMsgToAll(CNtlPacket* pPacket, CHARACTERID senderCharId/* = INVALID_CHARATACTERID*/, bool bCheckBlacklist/* = false*/)
 {
-	for( itertype(m_map_Player) it = m_map_Player.begin(); it != m_map_Player.end(); it++ )
+	for(auto it = m_map_Player.begin(); it != m_map_Player.end(); it++ )
 	{
 		CPlayer* pPlayer = it->second;
 		if (pPlayer)
@@ -216,7 +216,7 @@ void CPlayerManager::SendMsgToAll(CNtlPacket* pPacket, CHARACTERID senderCharId/
 //--------------------------------------------------------------------------------------//
 void CPlayerManager::SendMsgToInRange(CNtlPacket* pPacket, CPlayer* pPlayer, float fRange, SERVERCHANNELID channel, WORLDID worldid, bool bCheckBlacklist/* = false*/)
 {
-	for( itertype(m_map_Player) it = m_map_Player.begin(); it != m_map_Player.end(); it++ )
+	for(auto it = m_map_Player.begin(); it != m_map_Player.end(); it++ )
 	{
 		CPlayer* pTarget = it->second;
 		if (pTarget)

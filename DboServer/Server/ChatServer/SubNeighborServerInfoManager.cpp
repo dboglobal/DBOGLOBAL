@@ -51,7 +51,7 @@ void CSubNeighborServerInfoManager::AddGameServerChannel(SERVERCHANNELID channel
 //--------------------------------------------------------------------------------------//
 HSESSION CSubNeighborServerInfoManager::GetGsSession(SERVERCHANNELID channelid)
 {
-	itertype(mapGameServerChannelSession) it = mapGameServerChannelSession.find(channelid);
+	auto it = mapGameServerChannelSession.find(channelid);
 	if (it != mapGameServerChannelSession.end()) 
 	{
 		return it->second;
@@ -65,7 +65,7 @@ HSESSION CSubNeighborServerInfoManager::GetGsSession(SERVERCHANNELID channelid)
 //--------------------------------------------------------------------------------------//
 void CSubNeighborServerInfoManager::Broadcast(CNtlPacket* pPacket, SERVERCHANNELID exception/* = INVALID_SERVERCHANNELID*/)
 {
-	std::map<SERVERCHANNELID, HSESSION>::iterator it =	mapGameServerChannelSession.begin();
+	auto it =	mapGameServerChannelSession.begin();
 
 	for (; it != mapGameServerChannelSession.end(); it++)
 	{

@@ -14,11 +14,10 @@
 #include "BotAiCondition_AIS_RecvEventFromWps.h"
 #include "BotAiCondition_AIS_RecvEventFromTqs.h"
 
-#include <boost/unordered_map.hpp>
+#include <unordered_map>
 
-
-boost::unordered_map<int, CControlState*(*)(CNpc* pBot, CControlState* pFrom)> s_ScripControlStateMap_ais;
-boost::unordered_map<int, CControlState*(*)(CNpc* pBot, CControlState* pFrom)> s_NodeControlStateMap_ais;
+std::unordered_map<int, CControlState*(*)(CNpc* pBot, CControlState* pFrom)> s_ScripControlStateMap_ais;
+std::unordered_map<int, CControlState*(*)(CNpc* pBot, CControlState* pFrom)> s_NodeControlStateMap_ais;
 bool s_bInitailize_ais = false;
 
 

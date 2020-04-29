@@ -4,7 +4,8 @@
 #include "NtlSingleton.h"
 #include "BudokaiTable.h"
 
-#include "boost/unordered_map.hpp"
+#include <unordered_map>
+
 
 class CPlayer;
 class CWorld;
@@ -363,9 +364,9 @@ private:
 
 	// ----
 
-	boost::unordered_map<JOINID, sBUDOKAI_REGISTER_INDIVIDUAL_DATA>	m_mapIndividual;
+	std::unordered_map<JOINID, sBUDOKAI_REGISTER_INDIVIDUAL_DATA>	m_mapIndividual;
 
-	boost::unordered_map<JOINID, sBUDOKAI_REGISTER_TEAM_DATA>			m_mapTeam;
+	std::unordered_map<JOINID, sBUDOKAI_REGISTER_TEAM_DATA>			m_mapTeam;
 
 	std::map<JOINID, sBUDOKAI_JOIN_INFO>							m_mapJoinInfo;
 

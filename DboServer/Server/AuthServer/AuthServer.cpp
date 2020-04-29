@@ -116,7 +116,7 @@ int		CAuthServer::OnAppStart()
 
 bool	CAuthServer::AddPlayer(ACCOUNTID AccID, CClientSession* session)
 {
-	boost::unordered_map<ACCOUNTID, CClientSession*>::iterator it = m_map_Players.find(AccID);
+	auto it = m_map_Players.find(AccID);
 	if (it == m_map_Players.end()) 
 	{
 		m_map_Players[AccID] = session;
@@ -127,7 +127,7 @@ bool	CAuthServer::AddPlayer(ACCOUNTID AccID, CClientSession* session)
 }
 void	CAuthServer::DelPlayer(ACCOUNTID AccID)
 {
-	boost::unordered_map<ACCOUNTID, CClientSession*>::iterator it = m_map_Players.find(AccID);
+	auto it = m_map_Players.find(AccID);
 	if (it == m_map_Players.end()) {
 		return;
 	}
@@ -136,7 +136,7 @@ void	CAuthServer::DelPlayer(ACCOUNTID AccID)
 }
 CClientSession*	CAuthServer::FindPlayer(ACCOUNTID AccID)
 {
-	boost::unordered_map<ACCOUNTID, CClientSession*>::iterator it = m_map_Players.find(AccID);
+	auto it = m_map_Players.find(AccID);
 	if (it == m_map_Players.end()) {
 	//	NTL_PRINT(PRINT_APP,"[CAuthServer::FindPlayer] %d not found", AccID);
 		return NULL;

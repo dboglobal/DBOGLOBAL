@@ -69,7 +69,7 @@ int CBotAiAction_Follow::MarineType(CNpc * pLeader)
 	//printf("CBotAiAction_Follow::MarineType \n");
 	HOBJECT handle = INVALID_HOBJECT;
 
-	for (CNpcParty::MEMBER_MAP::iterator it = m_pParty->Begin(); it != m_pParty->End(); it++)
+	for (auto it = m_pParty->Begin(); it != m_pParty->End(); it++)
 	{
 		if (GetBot()->GetID() == it->second.handle)
 			break;

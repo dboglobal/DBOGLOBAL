@@ -4,7 +4,7 @@
 #include <mysql.h>
 #include "Database.h"
 #include "QueryResult.h"
-
+#include <sstream>
 
 struct MySQLDatabaseConnection : public DatabaseConnection
 {

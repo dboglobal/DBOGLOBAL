@@ -45,9 +45,10 @@
       <WarningLevel>Level3</WarningLevel>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
-      <AdditionalIncludeDirectories>..\..\..\NtlLib\Server\NtlNetwork;..\..\..\NtlLib\Server\NtlSystem;..\..\..\NtlLib\Server\NtlThread;..\..\..\NtlLib\Server\NtlSfx;..\..\..\NtlLib\Shared;..\..\..\NtlLib\Shared\Util;..\..\..\NtlLib\Shared\NtlTrigger;..\..\..\DboShared\NtlShared2;..\..\..\NtlLib\Server\mysql57;..\..\..\NtlLib\Server\boost_1_64_0;..\..\..\NtlLib\Server\Database;..\..\..\NtlLib\Server\servercommon;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\..\NtlLib\Server\NtlNetwork;..\..\..\NtlLib\Server\NtlSystem;..\..\..\NtlLib\Server\NtlThread;..\..\..\NtlLib\Server\NtlSfx;..\..\..\NtlLib\Shared;..\..\..\NtlLib\Shared\Util;..\..\..\NtlLib\Shared\NtlTrigger;..\..\..\DboShared\NtlShared2;..\..\..\NtlLib\Server\mysql57;..\..\..\NtlLib\Server\Database;..\..\..\NtlLib\Server\servercommon;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OmitFramePointers>false</OmitFramePointers>
       <FloatingPointModel>Fast</FloatingPointModel>
+      <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>DebugFull</GenerateDebugInformation>
@@ -55,7 +56,7 @@
       <OptimizeReferences>true</OptimizeReferences>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <TargetMachine>MachineX64</TargetMachine>
-      <AdditionalLibraryDirectories>..\..\..\NtlLib\Server\boost_1_64_0;..\..\..\NtlLib\Server\mysql57\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>..\..\..\NtlLib\Server\mysql57\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>Ws2_32.lib;winmm.lib;libmysql.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <RandomizedBaseAddress>false</RandomizedBaseAddress>
       <DataExecutionPrevention />

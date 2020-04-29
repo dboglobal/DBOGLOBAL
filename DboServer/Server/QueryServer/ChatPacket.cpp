@@ -1125,7 +1125,6 @@ void CChatServerSession::RecvAuctionHouseBuyReq(CNtlPacket * pPacket, CQueryServ
 void CChatServerSession::RecvAuctionHouseServerDataReq(CNtlPacket * pPacket, CQueryServer * app)
 {
 	sTQ_TENKAICHIDAISIJYOU_SERVERDATA_REQ * req = (sTQ_TENKAICHIDAISIJYOU_SERVERDATA_REQ*)pPacket->GetPacketData();
-
 	UNREFERENCED_PARAMETER(req);
 
 	int nCount = 0;
@@ -1137,7 +1136,7 @@ void CChatServerSession::RecvAuctionHouseServerDataReq(CNtlPacket * pPacket, CQu
 	res->byCurPacketCount = 0;
 	res->bEndList = false;
 
-	for (CAutionhouse::TMapAuctionHouse::iterator it = g_pAH->GetBegin(); it != g_pAH->GetEnd(); it++)
+	for (auto it = g_pAH->GetBegin(); it != g_pAH->GetEnd(); it++)
 	{
 		nCount++;
 		memcpy(&res->sData[res->byCurPacketCount++], it->second, sizeof(sTENKAICHIDAISIJYOU_DATA));

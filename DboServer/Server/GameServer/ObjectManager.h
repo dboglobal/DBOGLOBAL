@@ -4,7 +4,7 @@
 #include "NtlSingleton.h"
 #include "NtlPacket.h"
 #include "NtlObject.h"
-#include "boost\unordered_map.hpp"
+#include <unordered_map>
 
 
 class CPlayer;
@@ -77,13 +77,12 @@ public:
 
 private:
 
-	typedef boost::unordered_map<HOBJECT, CGameObject*> OBJECTMAP;
-	OBJECTMAP									m_map_CharByUID;
+	std::unordered_map<HOBJECT, CGameObject*>	m_map_CharByUID;
 
-	boost::unordered_map<CHARACTERID, CPlayer*>	m_map_pkChrByPID; // only players in this map
+	std::unordered_map<CHARACTERID, CPlayer*>	m_map_pkChrByPID; // only players in this map
 	
-	boost::unordered_map<CGameObject*, DWORD>	m_map_DelayDelete; //DWORD = gCurTime
-	boost::unordered_map<CNpc*, DWORD>			m_map_Respawn; //DWORD = m_dwCurTickCount
+	std::unordered_map<CGameObject*, DWORD>		m_map_DelayDelete; //DWORD = gCurTime
+	std::unordered_map<CNpc*, DWORD>				m_map_Respawn; //DWORD = m_dwCurTickCount
 
 	CGameObject*						m_objectArray[MAX_GAME_OBJECT]; // used to get objects very fast without iterating a map
 };

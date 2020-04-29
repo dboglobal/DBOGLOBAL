@@ -141,7 +141,7 @@ bool CObjectManager::Create()
 
 void CObjectManager::Destroy()
 {
-	for (OBJECTMAP::iterator it = m_map_CharByUID.begin(); it != m_map_CharByUID.end(); it++)
+	for (auto it = m_map_CharByUID.begin(); it != m_map_CharByUID.end(); it++)
 		SAFE_DELETE(it->second);
 
 	m_map_CharByUID.clear();
@@ -156,7 +156,7 @@ void CObjectManager::Destroy()
 //--------------------------------------------------------------------------------------//
 void CObjectManager::TickProcess(DWORD dwTickDiff, float fMultiple)
 {
-	for (OBJECTMAP::iterator it = m_map_CharByUID.begin(); it != m_map_CharByUID.end(); it++)
+	for (auto it = m_map_CharByUID.begin(); it != m_map_CharByUID.end(); it++)
 	{
 		CGameObject* pGameObject = it->second;
 		if (pGameObject)
@@ -325,7 +325,7 @@ CSummonPet * CObjectManager::GetSummonPet(HOBJECT hHandle)
 
 CPlayer* CObjectManager::FindByAccount(ACCOUNTID uiAccId)
 {
-	for (boost::unordered_map<CHARACTERID, CPlayer*>::iterator it = m_map_pkChrByPID.begin(); it != m_map_pkChrByPID.end(); it++)
+	for (auto it = m_map_pkChrByPID.begin(); it != m_map_pkChrByPID.end(); it++)
 	{
 		CPlayer* found = it->second;
 		if(found)
@@ -340,7 +340,7 @@ CPlayer* CObjectManager::FindByAccount(ACCOUNTID uiAccId)
 
 CPlayer* CObjectManager::FindByChar(CHARACTERID uiCharId)
 {
-	boost::unordered_map<CHARACTERID, CPlayer*>::iterator it = m_map_pkChrByPID.find(uiCharId);
+	auto it = m_map_pkChrByPID.find(uiCharId);
 
 	if (m_map_pkChrByPID.end() == it)
 		return NULL;
@@ -350,7 +350,7 @@ CPlayer* CObjectManager::FindByChar(CHARACTERID uiCharId)
 
 CPlayer* CObjectManager::FindByName(WCHAR* wszCharName)
 {
-	for (boost::unordered_map<CHARACTERID, CPlayer*>::iterator it = m_map_pkChrByPID.begin(); it != m_map_pkChrByPID.end(); it++)
+	for (auto it = m_map_pkChrByPID.begin(); it != m_map_pkChrByPID.end(); it++)
 	{
 		CPlayer* found = it->second;
 		if(found)
@@ -365,7 +365,7 @@ CPlayer* CObjectManager::FindByName(WCHAR* wszCharName)
 }
 CPlayer* CObjectManager::FindByName(const WCHAR* wszCharName)
 {
-	for (boost::unordered_map<CHARACTERID, CPlayer*>::iterator it = m_map_pkChrByPID.begin(); it != m_map_pkChrByPID.end(); it++)
+	for (auto it = m_map_pkChrByPID.begin(); it != m_map_pkChrByPID.end(); it++)
 	{
 		CPlayer* found = it->second;
 		if(found && found->IsInitialized())
@@ -401,7 +401,7 @@ void CObjectManager::AddRespawn(CNpc* pBot)
 
 void CObjectManager::RemoveSpawn(HOBJECT hHandle)
 {
-	for (boost::unordered_map<CNpc*, DWORD>::iterator it = m_map_Respawn.begin(); it != m_map_Respawn.end(); it++)
+	for (auto it = m_map_Respawn.begin(); it != m_map_Respawn.end(); it++)
 	{
 		CNpc* pBot = it->first;
 		if (pBot)
@@ -424,7 +424,7 @@ void CObjectManager::ProcessRespawn()
 	if (m_map_Respawn.size() > 0)
 	{
 		DWORD dwCurTick = GetTickCount();
-		for (boost::unordered_map<CNpc*, DWORD>::iterator it = m_map_Respawn.begin(); it != m_map_Respawn.end(); )
+		for (auto it = m_map_Respawn.begin(); it != m_map_Respawn.end(); )
 		{
 			CNpc* pBot = it->first;
 			if (pBot)
@@ -461,7 +461,7 @@ void CObjectManager::ProcessDelayDeleteMap()
 	if (m_map_DelayDelete.size() > 0)
 	{
 		DWORD dwCurTick = GetTickCount();
-		for (boost::unordered_map<CGameObject*, DWORD>::iterator it = m_map_DelayDelete.begin(); it != m_map_DelayDelete.end(); )
+		for (auto it = m_map_DelayDelete.begin(); it != m_map_DelayDelete.end(); )
 		{
 			if (dwCurTick > it->second + TIME_DELETE_DELAY)
 			{
@@ -505,7 +505,7 @@ void CObjectManager::ProcessDelayDeleteMap()
 //--------------------------------------------------------------------------------------//
 void CObjectManager::SendPacketToAll(CNtlPacket * pPacket)
 {
-	for (boost::unordered_map<CHARACTERID, CPlayer*>::iterator it = m_map_pkChrByPID.begin(); it != m_map_pkChrByPID.end(); it++)
+	for (auto it = m_map_pkChrByPID.begin(); it != m_map_pkChrByPID.end(); it++)
 	{
 		CPlayer* ch = it->second;
 		if (ch && ch->IsInitialized())
@@ -519,7 +519,7 @@ void CObjectManager::SendPacketToAll(CNtlPacket * pPacket)
 bool CObjectManager::DisconnectAll()
 {
 	CPlayer* ch = NULL;
-	for (boost::unordered_map<CHARACTERID, CPlayer*>::iterator it = m_map_pkChrByPID.begin(); it != m_map_pkChrByPID.end(); it++)
+	for (auto it = m_map_pkChrByPID.begin(); it != m_map_pkChrByPID.end(); it++)
 	{
 		ch = it->second;
 		if (ch->GetClientSession())
@@ -534,7 +534,7 @@ bool CObjectManager::DisconnectAll()
 //--------------------------------------------------------------------------------------//
 void CObjectManager::SendToAllInZone(ZONEID zoneId, CNtlPacket * pPacket)
 {
-	for (boost::unordered_map<CHARACTERID, CPlayer*>::iterator it = m_map_pkChrByPID.begin(); it != m_map_pkChrByPID.end(); it++)
+	for (auto it = m_map_pkChrByPID.begin(); it != m_map_pkChrByPID.end(); it++)
 	{
 		CPlayer* ch = it->second;
 		if(ch && ch->IsInitialized())

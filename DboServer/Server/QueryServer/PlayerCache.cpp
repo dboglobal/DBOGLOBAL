@@ -2804,14 +2804,14 @@ void CPlayerCacheManager::Init()
 
 void CPlayerCacheManager::Destroy()
 {
-	for (boost::unordered_map<ACCOUNTID, CAccountCache*>::iterator it = m_mapAccounts.begin(); it != m_mapAccounts.end(); )
+	for (auto it = m_mapAccounts.begin(); it != m_mapAccounts.end(); )
 	{
 		delete it->second;
 
 		it = m_mapAccounts.erase(it);
 	}
 
-	for (boost::unordered_map<CHARACTERID, CPlayerCache*>::iterator it = m_mapCharacters.begin(); it != m_mapCharacters.end(); )
+	for (auto it = m_mapCharacters.begin(); it != m_mapCharacters.end(); )
 	{
 		delete it->second;
 
@@ -2821,7 +2821,7 @@ void CPlayerCacheManager::Destroy()
 
 CAccountCache * CPlayerCacheManager::GetAccount(ACCOUNTID accountID)
 {
-	boost::unordered_map<ACCOUNTID, CAccountCache*>::iterator it = m_mapAccounts.find(accountID);
+	auto it = m_mapAccounts.find(accountID);
 	if (it != m_mapAccounts.end())
 	{
 		return it->second;
@@ -2832,7 +2832,7 @@ CAccountCache * CPlayerCacheManager::GetAccount(ACCOUNTID accountID)
 
 CPlayerCache * CPlayerCacheManager::GetCharacter(CHARACTERID charID)
 {
-	boost::unordered_map<CHARACTERID, CPlayerCache*>::iterator it = m_mapCharacters.find(charID);
+	auto it = m_mapCharacters.find(charID);
 	if (it != m_mapCharacters.end())
 	{
 		return it->second;

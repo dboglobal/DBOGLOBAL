@@ -5,7 +5,7 @@
 #include "NtlSingleton.h"
 #include "RankBattleTable.h"
 
-#include "boost/unordered_map.hpp"
+#include <unordered_map>
 
 class CPlayer;
 class CWorld;
@@ -182,9 +182,9 @@ private:
 
 	std::map<ROOMID, CRankbattleBattle*>	m_mapRankBattleBattle;
 
-	boost::unordered_map<HOBJECT, CHARACTERID>	m_mapSoloQueue;
+	std::unordered_map<HOBJECT, CHARACTERID>	m_mapSoloQueue;
 
-	boost::unordered_map<HOBJECT, CParty*>	m_mapPartyQueue; //hobject = party leader
+	std::unordered_map<HOBJECT, CParty*>	m_mapPartyQueue; //hobject = party leader
 
 };
 
