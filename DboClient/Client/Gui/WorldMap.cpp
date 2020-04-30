@@ -506,8 +506,8 @@ VOID CWorldMapGui::Destroy()
 	CheckInfoWindow();
 	UnloadQuestSearch();;
 
-	Logic_DeleteTexture(m_srfMap.GetTexture());
-	Logic_DeleteTexture(m_srfBusRoute.GetTexture());
+	m_srfMap.UnsetTexture();
+	m_srfBusRoute.UnsetTexture();
 
 	UnLoadWorldFocus();
 	UnloadLandMark();
@@ -1071,7 +1071,7 @@ VOID CWorldMapGui::UpdateWarFog()
 			{
 				sprintf_s(acBuffer, 64, "fog_%05d", pWORLD_MAP_TBLDAT->wWarfog[i]);
 
-				m_WarFog[i].srfWarFog.SetTexture(Logic_CreateTexture(acBuffer, TEXTTYPE_WARFOG));
+				m_WarFog[i].srfWarFog.SetTexture(Logic_CreateTexture(acBuffer, TEXTTYPE_WARFOG), TRUE);
 
 				if( m_WarFog[i].srfWarFog.GetTexture() )
 				{
@@ -2627,7 +2627,6 @@ VOID CWorldMapGui::UnloadWarFogTexture()
 		m_WarFog[i].bShow			= FALSE;
 		m_WarFog[i].uiWarfogIndex	= INVALID_SERIAL_ID;
 
-		Logic_DeleteTexture(m_WarFog[i].srfWarFog.GetTexture());
 		m_WarFog[i].srfWarFog.UnsetTexture();		
 	}
 }
@@ -2865,8 +2864,6 @@ RwInt32 CWorldMapGui::SwitchDialog(bool bOpen)
 		UnloadWarFogTexture();
 		UnloadQuestSearch();
 
-		Logic_DeleteTexture(m_srfMap.GetTexture());
-		Logic_DeleteTexture(m_srfBusRoute.GetTexture());
 		m_srfMap.UnsetTexture();
 		m_srfBusRoute.UnsetTexture();
 
