@@ -52,6 +52,10 @@
 #pragma comment(linker,"/manifestdependency:\"type='win32' name='Microsoft.Windows.Common-Controls' version='6.0.0.0' processorArchitecture='x86' publicKeyToken='6595b64144ccf1df' language='*'\"")
 #endif
 
+#if _MSC_VER == 1925
+#define _XTPLIB_VISUALSTUDIO_VERSION "vc100"
+#endif
+
 #include <XTToolkitPro.h>    // Xtreme Toolkit Pro components
 
 
