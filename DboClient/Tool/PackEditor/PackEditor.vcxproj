@@ -10,12 +10,12 @@
     <ProjectGuid>{6B986670-4F74-4BD1-B3F2-4C79496BB2E1}</ProjectGuid>
     <RootNamespace>PackEditor</RootNamespace>
     <Keyword>MFCProj</Keyword>
-    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release4Tools|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
-    <PlatformToolset>v100</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
     <UseOfMfc>Dynamic</UseOfMfc>
     <CharacterSet>MultiByte</CharacterSet>
     <WholeProgramOptimization>true</WholeProgramOptimization>
@@ -42,7 +42,7 @@
       <ValidateAllParameters>false</ValidateAllParameters>
     </Midl>
     <ClCompile>
-      <AdditionalIncludeDirectories>$(SolutionDir)Renderware\Include;$(SolutionDir)Lib\NtlCore;$(SolutionDir)..\DboShared\NtlNetwork;$(SolutionDir)Lib\NtlPresentation;$(SolutionDir)Lib\NtlFramework;$(SolutionDir)..\NtlLib\Shared\NtlXMLLoader;$(SolutionDir)..\DboShared\NtlShared2;$(SolutionDir)..\DboShared\NtlShared;$(SolutionDir)Lib\NtlSimulation;..\..\Client\Main;..\..\Client\Stage;..\..\Client\Camera;..\..\..\DboShared\NtlNetwork\NtlNetClient;$(SolutionDir)..\NtlLib\Shared\NtlTrigger;$(SolutionDir)..\NtlLib\Shared;.\;.\property;..\..\..\DboShared\NtlGameTable;$(SolutionDir)Lib\NtlSound;$(SolutionDir)..\NtlLib\Shared\Util;$(SolutionDir)..\3rdParty\Xtreme ToolkitPro v15.2.1\Source;$(DXSDK_DIR)Include;$(SolutionDir)..\NtlLib\Shared\Zip\zlib123;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)Renderware\Include;$(SolutionDir)Lib\NtlCore;$(SolutionDir)..\DboShared\NtlNetwork;$(SolutionDir)Lib\NtlPresentation;$(SolutionDir)Lib\NtlFramework;$(SolutionDir)..\NtlLib\Shared\NtlXMLLoader;$(SolutionDir)..\DboShared\NtlShared2;$(SolutionDir)..\DboShared\NtlShared;$(SolutionDir)Lib\NtlSimulation;..\..\Client\Main;..\..\Client\Stage;..\..\Client\Camera;..\..\..\DboShared\NtlNetwork\NtlNetClient;$(SolutionDir)..\NtlLib\Shared\NtlTrigger;$(SolutionDir)..\NtlLib\Shared;.\;.\property;..\..\..\DboShared\NtlGameTable;$(SolutionDir)Lib\NtlSound;$(SolutionDir)..\NtlLib\Shared\Util;$(SolutionDir)..\3rdParty\Xtreme ToolkitPro v15.2.1\Source;$(IncludePath);$(DXSDK_DIR)Include;$(SolutionDir)..\NtlLib\Shared\Zip\zlib123;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MinimalRebuild>false</MinimalRebuild>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
@@ -60,7 +60,7 @@
     </ResourceCompile>
     <Link>
       <AdditionalDependencies>comsuppwd.lib;dxguid.lib;ddraw.lib;Ws2_32.lib;Winmm.lib;Imm32.lib;rtdict.lib;rtcharse.lib;rtfsyst.lib;rtpng.lib;rtbmp.lib;rtintsec.lib;rtpick.lib;rttoc.lib;rpworld.lib;rtanim.lib;rphanim.lib;rtquat.lib;rplogo.lib;rpusrdat.lib;rpid.lib;rpmatfx.lib;rpuvanim.lib;rpprtstd.lib;rpprtadv.lib;rpptank.lib;rpskintoon.lib;rprandom.lib;rtimport.lib;rtgcond.lib;rtwing.lib;rtray.lib;rplodatm.lib;strmiids.lib;libgfx.lib;libgrenderer_d3d9.lib;libjpeg.lib;zlib.lib;d3dx9.lib;d3d9.lib;Devil.lib;rppvs.lib;rpltmap.lib;rtltmap.lib;rpmipkl.lib;rtpitexd.lib;rtbary.lib;Gdiplus.lib;rpskin.lib;rpskinmatfx.lib;rpskinmatfxtoon.lib;rpspline.lib;rpteam.lib;rpmipslope.lib;rpnormmap.lib;rpenv.lib;rpadc.lib;rtnormmap.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>$(SolutionDir)Renderware\Lib\Release;$(SolutionDir)bugTrap;..\..\lib\NtlCore;$(SolutionDir)..\3rdParty\Xtreme ToolkitPro v15.2.1\Lib\vc100;$(DXSDK_DIR)Lib\x86;$(SolutionDir)DirectShow;$(SolutionDir)Release4Tools;$(SolutionDir)Client\Addin\Devil;$(SolutionDir)Lib\NtlSound\fmod;$(SolutionDir)Lib\NtlFlasher\GFx SDK 3.3\Lib\Win32\Msvc80\Release;$(SolutionDir)Lib\NtlFlasher\GFx SDK 3.3\3rdParty\jpeg-6b\lib\$(PlatformName)\Msvc80\Release;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(SolutionDir)Renderware\Lib\Release;$(SolutionDir)bugTrap;..\..\lib\NtlCore;$(SolutionDir)..\3rdParty\Xtreme ToolkitPro v15.2.1\Lib\vc100;$(LibraryPath);$(DXSDK_DIR)Lib\x86;$(SolutionDir)DirectShow;$(SolutionDir)Release4Tools;$(SolutionDir)Client\Addin\Devil;$(SolutionDir)Lib\NtlSound\fmod;$(SolutionDir)Lib\NtlFlasher\GFx SDK 3.3\Lib\Win32\Msvc80\Release;$(SolutionDir)Lib\NtlFlasher\GFx SDK 3.3\3rdParty\jpeg-6b\lib\$(PlatformName)\Msvc80\Release;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <IgnoreSpecificDefaultLibraries>libcp.lib;msvcprtd.lib;libcmtd.lib;libcmt.lib;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
       <GenerateDebugInformation>false</GenerateDebugInformation>
       <SubSystem>Windows</SubSystem>
@@ -107,7 +107,7 @@
       <Project>{5229f8ae-a505-4077-b6d3-5ce0164dfe73}</Project>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\NtlLib\Shared\Zip\zlib123\projects\visualdotnet2005\zlib.vcxproj">
+    <ProjectReference Include="..\..\..\NtlLib\Shared\Zip\zlib123\projects\zlib.vcxproj">
       <Project>{9b2b6c11-764e-4d4b-8db2-f91ac99e0b93}</Project>
     </ProjectReference>
     <ProjectReference Include="..\..\Lib\NtlCore\NtlCore.vcxproj">

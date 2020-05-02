@@ -9,6 +9,7 @@
 #include "Util.h"
 #include "ItemTable.h"
 #include "NewbieTable.h"
+#include "NpcSpeechTable.h"
 
 
 #ifdef _DEBUG
@@ -16,6 +17,9 @@
 static char THIS_FILE[]=__FILE__;
 #define new DEBUG_NEW
 #endif
+
+
+#define ADD_SUB_ITEM(x,y,z) pGroup1->AddSubItem(new CMFCPropertyGridProperty(_T(x), (_variant_t)y, _T(z)))
 
 /////////////////////////////////////////////////////////////////////////////
 // CResourceViewBar
@@ -68,147 +72,164 @@ void CPropertiesWnd::LoadTableData(int nTableType, sTBLDAT* pTbldat)
 		{
 			sITEM_TBLDAT* pTableData = (sITEM_TBLDAT*)pTbldat;
 
-			pGroup1->AddSubItem(new CMFCPropertyGridProperty(_T("TBLIDX"), (_variant_t)pTableData->tblidx, _T("Item Table Index")));
-			pGroup1->AddSubItem(new CMFCPropertyGridProperty(_T("bValidity_Able"), (_variant_t)pTableData->bValidity_Able, _T("Set item active/inactive")));
-			pGroup1->AddSubItem(new CMFCPropertyGridProperty(_T("Name"), (_variant_t)pTableData->Name, _T("Name Table Index")));
-			pGroup1->AddSubItem(new CMFCPropertyGridProperty(_T("wszNameText"), (_variant_t)pTableData->wszNameText, _T("Item Name. Max 32 Chars")));
-			pGroup1->AddSubItem(new CMFCPropertyGridProperty(_T("szIcon_Name"), (_variant_t)pTableData->szIcon_Name, _T("Icon Name")));
-			pGroup1->AddSubItem(new CMFCPropertyGridProperty(_T("byModel_Type"), (_variant_t)(int)pTableData->byModel_Type, _T("Model Type")));
-			pGroup1->AddSubItem(new CMFCPropertyGridProperty(_T("szModel"), (_variant_t)pTableData->szModel, _T("Model Name")));
-			pGroup1->AddSubItem(new CMFCPropertyGridProperty(_T("szSub_Weapon_Act_Model"), (_variant_t)pTableData->szSub_Weapon_Act_Model, _T("Item Table Index")));
-			pGroup1->AddSubItem(new CMFCPropertyGridProperty(_T("byItem_Type"), (_variant_t)(int)pTableData->byItem_Type, _T("Item Type")));
-			pGroup1->AddSubItem(new CMFCPropertyGridProperty(_T("byEquip_Type"), (_variant_t)(int)pTableData->byEquip_Type, _T("Equipment Type")));
-			pGroup1->AddSubItem(new CMFCPropertyGridProperty(_T("dwEquip_Slot_Type_Bit_Flag"), (_variant_t)pTableData->dwEquip_Slot_Type_Bit_Flag, _T("Item Table Index")));
-			pGroup1->AddSubItem(new CMFCPropertyGridProperty(_T("wFunction_Bit_Flag"), (_variant_t)pTableData->wFunction_Bit_Flag, _T("Item Table Index")));
-			pGroup1->AddSubItem(new CMFCPropertyGridProperty(_T("byMax_Stack"), (_variant_t)(int)pTableData->byMax_Stack, _T("Item Table Index")));
-			pGroup1->AddSubItem(new CMFCPropertyGridProperty(_T("byRank"), (_variant_t)(int)pTableData->byRank, _T("Item Table Index")));
-			pGroup1->AddSubItem(new CMFCPropertyGridProperty(_T("dwWeight"), (_variant_t)pTableData->dwWeight, _T("Item Table Index")));
-			pGroup1->AddSubItem(new CMFCPropertyGridProperty(_T("dwCost"), (_variant_t)pTableData->dwCost, _T("Item Table Index")));
-			pGroup1->AddSubItem(new CMFCPropertyGridProperty(_T("dwSell_Price"), (_variant_t)pTableData->dwSell_Price, _T("Item Table Index")));
-			pGroup1->AddSubItem(new CMFCPropertyGridProperty(_T("byDurability"), (_variant_t)(int)pTableData->byDurability, _T("Item Table Index")));
-			pGroup1->AddSubItem(new CMFCPropertyGridProperty(_T("byDurability_Count"), (_variant_t)(int)pTableData->byDurability_Count, _T("Item Table Index")));
-			pGroup1->AddSubItem(new CMFCPropertyGridProperty(_T("byBattle_Attribute"), (_variant_t)(int)pTableData->byBattle_Attribute, _T("Item Table Index")));
-			pGroup1->AddSubItem(new CMFCPropertyGridProperty(_T("wPhysical_Offence"), (_variant_t)pTableData->wPhysical_Offence, _T("Item Table Index")));
-			pGroup1->AddSubItem(new CMFCPropertyGridProperty(_T("wEnergy_Offence"), (_variant_t)pTableData->wEnergy_Offence, _T("Item Table Index")));
-			pGroup1->AddSubItem(new CMFCPropertyGridProperty(_T("wPhysical_Defence"), (_variant_t)pTableData->wPhysical_Defence, _T("Item Table Index")));
-			pGroup1->AddSubItem(new CMFCPropertyGridProperty(_T("wEnergy_Defence"), (_variant_t)pTableData->wEnergy_Defence, _T("Item Table Index")));
-			pGroup1->AddSubItem(new CMFCPropertyGridProperty(_T("fAttack_Range_Bonus"), (_variant_t)pTableData->fAttack_Range_Bonus, _T("Item Table Index")));
-			pGroup1->AddSubItem(new CMFCPropertyGridProperty(_T("wAttack_Speed_Rate"), (_variant_t)pTableData->wAttack_Speed_Rate, _T("Item Table Index")));
-			pGroup1->AddSubItem(new CMFCPropertyGridProperty(_T("byNeed_Min_Level"), (_variant_t)(int)pTableData->byNeed_Min_Level, _T("Item Table Index")));
-			pGroup1->AddSubItem(new CMFCPropertyGridProperty(_T("byNeed_Max_Level"), (_variant_t)(int)pTableData->byNeed_Max_Level, _T("Item Table Index")));
-			pGroup1->AddSubItem(new CMFCPropertyGridProperty(_T("dwNeed_Class_Bit_Flag"), (_variant_t)pTableData->dwNeed_Class_Bit_Flag, _T("Item Table Index")));
-			pGroup1->AddSubItem(new CMFCPropertyGridProperty(_T("dwNeed_Gender_Bit_Flag"), (_variant_t)pTableData->dwNeed_Gender_Bit_Flag, _T("Item Table Index")));
-			pGroup1->AddSubItem(new CMFCPropertyGridProperty(_T("byClass_Special"), (_variant_t)(int)pTableData->byClass_Special, _T("Item Table Index")));
-			pGroup1->AddSubItem(new CMFCPropertyGridProperty(_T("byRace_Special"), (_variant_t)(int)pTableData->byRace_Special, _T("Item Table Index")));
-			pGroup1->AddSubItem(new CMFCPropertyGridProperty(_T("wNeed_Str"), (_variant_t)pTableData->wNeed_Str, _T("Item Table Index")));
-			pGroup1->AddSubItem(new CMFCPropertyGridProperty(_T("wNeed_Con"), (_variant_t)pTableData->wNeed_Con, _T("Item Table Index")));
-			pGroup1->AddSubItem(new CMFCPropertyGridProperty(_T("wNeed_Foc"), (_variant_t)pTableData->wNeed_Foc, _T("Item Table Index")));
-			pGroup1->AddSubItem(new CMFCPropertyGridProperty(_T("wNeed_Dex"), (_variant_t)pTableData->wNeed_Dex, _T("Item Table Index")));
-			pGroup1->AddSubItem(new CMFCPropertyGridProperty(_T("wNeed_Sol"), (_variant_t)pTableData->wNeed_Sol, _T("Item Table Index")));
-			pGroup1->AddSubItem(new CMFCPropertyGridProperty(_T("wNeed_Eng"), (_variant_t)pTableData->wNeed_Eng, _T("Item Table Index")));
-			pGroup1->AddSubItem(new CMFCPropertyGridProperty(_T("set_Item_Tblidx"), (_variant_t)pTableData->set_Item_Tblidx, _T("Item Table Index")));
-			pGroup1->AddSubItem(new CMFCPropertyGridProperty(_T("Note"), (_variant_t)pTableData->Note, _T("Item Table Index")));
-			pGroup1->AddSubItem(new CMFCPropertyGridProperty(_T("byBag_Size"), (_variant_t)(int)pTableData->byBag_Size, _T("Item Table Index")));
-			pGroup1->AddSubItem(new CMFCPropertyGridProperty(_T("wScouter_Watt"), (_variant_t)pTableData->wScouter_Watt, _T("Item Table Index")));
-			pGroup1->AddSubItem(new CMFCPropertyGridProperty(_T("dwScouter_MaxPower"), (_variant_t)pTableData->dwScouter_MaxPower, _T("Item Table Index")));
-			pGroup1->AddSubItem(new CMFCPropertyGridProperty(_T("byScouter_Parts_Type1"), (_variant_t)(int)pTableData->byScouter_Parts_Type1, _T("Item Table Index")));
-			pGroup1->AddSubItem(new CMFCPropertyGridProperty(_T("byScouter_Parts_Type2"), (_variant_t)(int)pTableData->byScouter_Parts_Type2, _T("Item Table Index")));
-			pGroup1->AddSubItem(new CMFCPropertyGridProperty(_T("byScouter_Parts_Type3"), (_variant_t)(int)pTableData->byScouter_Parts_Type3, _T("Item Table Index")));
-			pGroup1->AddSubItem(new CMFCPropertyGridProperty(_T("byScouter_Parts_Type4"), (_variant_t)(int)pTableData->byScouter_Parts_Type4, _T("Item Table Index")));
-			pGroup1->AddSubItem(new CMFCPropertyGridProperty(_T("Use_Item_Tblidx"), (_variant_t)pTableData->Use_Item_Tblidx, _T("Item Table Index")));
-			pGroup1->AddSubItem(new CMFCPropertyGridProperty(_T("bIsCanHaveOption"), (_variant_t)pTableData->bIsCanHaveOption, _T("Item Table Index")));
-			pGroup1->AddSubItem(new CMFCPropertyGridProperty(_T("Item_Option_Tblidx"), (_variant_t)pTableData->Item_Option_Tblidx, _T("Item Table Index")));
-			pGroup1->AddSubItem(new CMFCPropertyGridProperty(_T("byItemGroup"), (_variant_t)(int)pTableData->byItemGroup, _T("Item Table Index")));
-			pGroup1->AddSubItem(new CMFCPropertyGridProperty(_T("Charm_Tblidx"), (_variant_t)pTableData->Charm_Tblidx, _T("Item Table Index")));
-			pGroup1->AddSubItem(new CMFCPropertyGridProperty(_T("wCostumeHideBitFlag"), (_variant_t)pTableData->wCostumeHideBitFlag, _T("Item Table Index")));
-			pGroup1->AddSubItem(new CMFCPropertyGridProperty(_T("NeedItemTblidx"), (_variant_t)pTableData->NeedItemTblidx, _T("Item Table Index")));
-			pGroup1->AddSubItem(new CMFCPropertyGridProperty(_T("CommonPoint"), (_variant_t)pTableData->CommonPoint, _T("Item Table Index")));
-			pGroup1->AddSubItem(new CMFCPropertyGridProperty(_T("byCommonPointType"), (_variant_t)(int)pTableData->byCommonPointType, _T("Item Table Index")));
-			pGroup1->AddSubItem(new CMFCPropertyGridProperty(_T("byNeedFunction"), (_variant_t)(int)pTableData->byNeedFunction, _T("Item Table Index")));
-			pGroup1->AddSubItem(new CMFCPropertyGridProperty(_T("dwUseDurationMax"), (_variant_t)pTableData->dwUseDurationMax, _T("Item Table Index")));
-			pGroup1->AddSubItem(new CMFCPropertyGridProperty(_T("byDurationType"), (_variant_t)(int)pTableData->byDurationType, _T("Item Table Index")));
-			pGroup1->AddSubItem(new CMFCPropertyGridProperty(_T("contentsTblidx"), (_variant_t)pTableData->contentsTblidx, _T("Item Table Index")));
-			pGroup1->AddSubItem(new CMFCPropertyGridProperty(_T("dwDurationGroup"), (_variant_t)pTableData->dwDurationGroup, _T("Item Table Index")));
-			pGroup1->AddSubItem(new CMFCPropertyGridProperty(_T("byDropLevel"), (_variant_t)(int)pTableData->byDropLevel, _T("Item Table Index")));
-			pGroup1->AddSubItem(new CMFCPropertyGridProperty(_T("enchantRateTblidx"), (_variant_t)pTableData->enchantRateTblidx, _T("Item Table Index")));
-			pGroup1->AddSubItem(new CMFCPropertyGridProperty(_T("excellentTblidx"), (_variant_t)pTableData->excellentTblidx, _T("Item Table Index")));
-			pGroup1->AddSubItem(new CMFCPropertyGridProperty(_T("rareTblidx"), (_variant_t)pTableData->rareTblidx, _T("Item Table Index")));
-			pGroup1->AddSubItem(new CMFCPropertyGridProperty(_T("legendaryTblidx"), (_variant_t)pTableData->legendaryTblidx, _T("Item Table Index")));
-			pGroup1->AddSubItem(new CMFCPropertyGridProperty(_T("bCreateSuperiorAble"), (_variant_t)pTableData->bCreateSuperiorAble, _T("Item Table Index")));
-			pGroup1->AddSubItem(new CMFCPropertyGridProperty(_T("bCreateExcellentAble"), (_variant_t)pTableData->bCreateExcellentAble, _T("Item Table Index")));
-			pGroup1->AddSubItem(new CMFCPropertyGridProperty(_T("bCreateRareAble"), (_variant_t)pTableData->bCreateRareAble, _T("Item Table Index")));
-			pGroup1->AddSubItem(new CMFCPropertyGridProperty(_T("bCreateLegendaryAble"), (_variant_t)pTableData->bCreateLegendaryAble, _T("Item Table Index")));
-			pGroup1->AddSubItem(new CMFCPropertyGridProperty(_T("byRestrictType"), (_variant_t)(int)pTableData->byRestrictType, _T("Item Table Index")));
-			pGroup1->AddSubItem(new CMFCPropertyGridProperty(_T("fAttack_Physical_Revision"), (_variant_t)pTableData->fAttack_Physical_Revision, _T("Item Table Index")));
-			pGroup1->AddSubItem(new CMFCPropertyGridProperty(_T("fAttack_Energy_Revision"), (_variant_t)pTableData->fAttack_Energy_Revision, _T("Item Table Index")));
-			pGroup1->AddSubItem(new CMFCPropertyGridProperty(_T("fDefence_Physical_Revision"), (_variant_t)pTableData->fDefence_Physical_Revision, _T("Item Table Index")));
-			pGroup1->AddSubItem(new CMFCPropertyGridProperty(_T("fDefence_Energy_Revision"), (_variant_t)pTableData->fDefence_Energy_Revision, _T("Item Table Index")));
-			pGroup1->AddSubItem(new CMFCPropertyGridProperty(_T("byTmpTabType"), (_variant_t)(int)pTableData->byTmpTabType, _T("Item Table Index")));
-			pGroup1->AddSubItem(new CMFCPropertyGridProperty(_T("bIsCanRenewal"), (_variant_t)pTableData->bIsCanRenewal, _T("Item Table Index")));
-			pGroup1->AddSubItem(new CMFCPropertyGridProperty(_T("wDisassemble_Bit_Flag"), (_variant_t)pTableData->wDisassemble_Bit_Flag, _T("Item Table Index")));
-			pGroup1->AddSubItem(new CMFCPropertyGridProperty(_T("byDisassembleNormalMin"), (_variant_t)(int)pTableData->byDisassembleNormalMin, _T("Item Table Index")));
-			pGroup1->AddSubItem(new CMFCPropertyGridProperty(_T("byDisassembleNormalMax"), (_variant_t)(int)pTableData->byDisassembleNormalMax, _T("Item Table Index")));
-			pGroup1->AddSubItem(new CMFCPropertyGridProperty(_T("byDisassembleUpperMin"), (_variant_t)(int)pTableData->byDisassembleUpperMin, _T("Item Table Index")));
-			pGroup1->AddSubItem(new CMFCPropertyGridProperty(_T("byDisassembleUpperMax"), (_variant_t)(int)pTableData->byDisassembleUpperMax, _T("Item Table Index")));
-			pGroup1->AddSubItem(new CMFCPropertyGridProperty(_T("byDropVisual"), (_variant_t)(int)pTableData->byDropVisual, _T("Item Table Index")));
-			pGroup1->AddSubItem(new CMFCPropertyGridProperty(_T("byUseDisassemble"), (_variant_t)(int)pTableData->byUseDisassemble, _T("Item Table Index")));
+			ADD_SUB_ITEM("TBLIDX",						pTableData->tblidx,						 "Item Table Index");
+			ADD_SUB_ITEM("bValidity_Able",				pTableData->bValidity_Able,				 "Set item active/inactive");
+			ADD_SUB_ITEM("Name",						pTableData->Name,						 "Name Table Index");
+			ADD_SUB_ITEM("wszNameText",					pTableData->wszNameText,				 "Item Name. Max 32 Chars");
+			ADD_SUB_ITEM("szIcon_Name",					pTableData->szIcon_Name,				 "Icon Name");
+			ADD_SUB_ITEM("byModel_Type",				(int)pTableData->byModel_Type,			 "Model Type");
+			ADD_SUB_ITEM("szModel",						pTableData->szModel,					 "Model Name");
+			ADD_SUB_ITEM("szSub_Weapon_Act_Model",		pTableData->szSub_Weapon_Act_Model,		 "Item Table Index");
+			ADD_SUB_ITEM("byItem_Type",					(int)pTableData->byItem_Type,			 "Item Type");
+			ADD_SUB_ITEM("byEquip_Type",				(int)pTableData->byEquip_Type,			 "Equipment Type");
+			ADD_SUB_ITEM("dwEquip_Slot_Type_Bit_Flag",	pTableData->dwEquip_Slot_Type_Bit_Flag,  "Item Table Index");
+			ADD_SUB_ITEM("wFunction_Bit_Flag",			pTableData->wFunction_Bit_Flag,			 "Item Table Index");
+			ADD_SUB_ITEM("byMax_Stack",					(int)pTableData->byMax_Stack,			 "Item Table Index");
+			ADD_SUB_ITEM("byRank",						(int)pTableData->byRank,				 "Item Table Index");
+			ADD_SUB_ITEM("dwWeight",					pTableData->dwWeight,					 "Item Table Index");
+			ADD_SUB_ITEM("dwCost",						pTableData->dwCost,						 "Item Table Index");
+			ADD_SUB_ITEM("dwSell_Price",				pTableData->dwSell_Price,				 "Item Table Index");
+			ADD_SUB_ITEM("byDurability",				(int)pTableData->byDurability,			 "Item Table Index");
+			ADD_SUB_ITEM("byDurability_Count",			(int)pTableData->byDurability_Count,	 "Item Table Index");
+			ADD_SUB_ITEM("byBattle_Attribute",			(int)pTableData->byBattle_Attribute,	 "Item Table Index");
+			ADD_SUB_ITEM("wPhysical_Offence",			pTableData->wPhysical_Offence,			 "Item Table Index");
+			ADD_SUB_ITEM("wEnergy_Offence",				pTableData->wEnergy_Offence,			 "Item Table Index");
+			ADD_SUB_ITEM("wPhysical_Defence",			pTableData->wPhysical_Defence,			 "Item Table Index");
+			ADD_SUB_ITEM("wEnergy_Defence",				pTableData->wEnergy_Defence,			 "Item Table Index");
+			ADD_SUB_ITEM("fAttack_Range_Bonus",			pTableData->fAttack_Range_Bonus,		 "Item Table Index");
+			ADD_SUB_ITEM("wAttack_Speed_Rate",			pTableData->wAttack_Speed_Rate,			 "Item Table Index");
+			ADD_SUB_ITEM("byNeed_Min_Level",			(int)pTableData->byNeed_Min_Level,		 "Item Table Index");
+			ADD_SUB_ITEM("byNeed_Max_Level",			(int)pTableData->byNeed_Max_Level,		 "Item Table Index");
+			ADD_SUB_ITEM("dwNeed_Class_Bit_Flag",		pTableData->dwNeed_Class_Bit_Flag,		 "Item Table Index");
+			ADD_SUB_ITEM("dwNeed_Gender_Bit_Flag",		pTableData->dwNeed_Gender_Bit_Flag,		 "Item Table Index");
+			ADD_SUB_ITEM("byClass_Special",				(int)pTableData->byClass_Special,		 "Item Table Index");
+			ADD_SUB_ITEM("byRace_Special",				(int)pTableData->byRace_Special,		 "Item Table Index");
+			ADD_SUB_ITEM("wNeed_Str",					pTableData->wNeed_Str,					 "Item Table Index");
+			ADD_SUB_ITEM("wNeed_Con",					pTableData->wNeed_Con,					 "Item Table Index");
+			ADD_SUB_ITEM("wNeed_Foc",					pTableData->wNeed_Foc,					 "Item Table Index");
+			ADD_SUB_ITEM("wNeed_Dex",					pTableData->wNeed_Dex,					 "Item Table Index");
+			ADD_SUB_ITEM("wNeed_Sol",					pTableData->wNeed_Sol,					 "Item Table Index");
+			ADD_SUB_ITEM("wNeed_Eng",					pTableData->wNeed_Eng,					 "Item Table Index");
+			ADD_SUB_ITEM("set_Item_Tblidx",				pTableData->set_Item_Tblidx,			 "Item Table Index");
+			ADD_SUB_ITEM("Note",						pTableData->Note,						 "Item Table Index");
+			ADD_SUB_ITEM("byBag_Size",					(int)pTableData->byBag_Size,			 "Item Table Index");
+			ADD_SUB_ITEM("wScouter_Watt",				pTableData->wScouter_Watt,				 "Item Table Index");
+			ADD_SUB_ITEM("dwScouter_MaxPower",			pTableData->dwScouter_MaxPower,			 "Item Table Index");
+			ADD_SUB_ITEM("byScouter_Parts_Type1",		(int)pTableData->byScouter_Parts_Type1,  "Item Table Index");
+			ADD_SUB_ITEM("byScouter_Parts_Type2",		(int)pTableData->byScouter_Parts_Type2,  "Item Table Index");
+			ADD_SUB_ITEM("byScouter_Parts_Type3",		(int)pTableData->byScouter_Parts_Type3,  "Item Table Index");
+			ADD_SUB_ITEM("byScouter_Parts_Type4",		(int)pTableData->byScouter_Parts_Type4,  "Item Table Index");
+			ADD_SUB_ITEM("Use_Item_Tblidx",				pTableData->Use_Item_Tblidx,			 "Item Table Index");
+			ADD_SUB_ITEM("bIsCanHaveOption",			pTableData->bIsCanHaveOption,			 "Item Table Index");
+			ADD_SUB_ITEM("Item_Option_Tblidx",			pTableData->Item_Option_Tblidx,			 "Item Table Index");
+			ADD_SUB_ITEM("byItemGroup",					(int)pTableData->byItemGroup,			 "Item Table Index");
+			ADD_SUB_ITEM("Charm_Tblidx",				pTableData->Charm_Tblidx,				 "Item Table Index");
+			ADD_SUB_ITEM("wCostumeHideBitFlag",			pTableData->wCostumeHideBitFlag,		 "Item Table Index");
+			ADD_SUB_ITEM("NeedItemTblidx",				pTableData->NeedItemTblidx,				 "Item Table Index");
+			ADD_SUB_ITEM("CommonPoint",					pTableData->CommonPoint,				 "Item Table Index");
+			ADD_SUB_ITEM("byCommonPointType",			(int)pTableData->byCommonPointType,		 "Item Table Index");
+			ADD_SUB_ITEM("byNeedFunction",				(int)pTableData->byNeedFunction,		 "Item Table Index");
+			ADD_SUB_ITEM("dwUseDurationMax",			pTableData->dwUseDurationMax,			 "Item Table Index");
+			ADD_SUB_ITEM("byDurationType",				(int)pTableData->byDurationType,		 "Item Table Index");
+			ADD_SUB_ITEM("contentsTblidx",				pTableData->contentsTblidx,				 "Item Table Index");
+			ADD_SUB_ITEM("dwDurationGroup",				pTableData->dwDurationGroup,			 "Item Table Index");
+			ADD_SUB_ITEM("byDropLevel",					(int)pTableData->byDropLevel,			 "Item Table Index");
+			ADD_SUB_ITEM("enchantRateTblidx",			pTableData->enchantRateTblidx,			 "Item Table Index");
+			ADD_SUB_ITEM("excellentTblidx",				pTableData->excellentTblidx,			 "Item Table Index");
+			ADD_SUB_ITEM("rareTblidx",					pTableData->rareTblidx,					 "Item Table Index");
+			ADD_SUB_ITEM("legendaryTblidx",				pTableData->legendaryTblidx,			 "Item Table Index");
+			ADD_SUB_ITEM("bCreateSuperiorAble",			pTableData->bCreateSuperiorAble,		 "Item Table Index");
+			ADD_SUB_ITEM("bCreateExcellentAble",		pTableData->bCreateExcellentAble,		 "Item Table Index");
+			ADD_SUB_ITEM("bCreateRareAble",				pTableData->bCreateRareAble,			 "Item Table Index");
+			ADD_SUB_ITEM("bCreateLegendaryAble",		pTableData->bCreateLegendaryAble,		 "Item Table Index");
+			ADD_SUB_ITEM("byRestrictType",				(int)pTableData->byRestrictType,		 "Item Table Index");
+			ADD_SUB_ITEM("fAttack_Physical_Revision",	pTableData->fAttack_Physical_Revision,	 "Item Table Index");
+			ADD_SUB_ITEM("fAttack_Energy_Revision",		pTableData->fAttack_Energy_Revision,	 "Item Table Index");
+			ADD_SUB_ITEM("fDefence_Physical_Revision",	pTableData->fDefence_Physical_Revision,  "Item Table Index");
+			ADD_SUB_ITEM("fDefence_Energy_Revision",	pTableData->fDefence_Energy_Revision,	 "Item Table Index");
+			ADD_SUB_ITEM("byTmpTabType",				(int)pTableData->byTmpTabType,			 "Item Table Index");
+			ADD_SUB_ITEM("bIsCanRenewal",				pTableData->bIsCanRenewal,				 "Item Table Index");
+			ADD_SUB_ITEM("wDisassemble_Bit_Flag",		pTableData->wDisassemble_Bit_Flag,		 "Item Table Index");
+			ADD_SUB_ITEM("byDisassembleNormalMin",		(int)pTableData->byDisassembleNormalMin, "Item Table Index");
+			ADD_SUB_ITEM("byDisassembleNormalMax",		(int)pTableData->byDisassembleNormalMax, "Item Table Index");
+			ADD_SUB_ITEM("byDisassembleUpperMin",		(int)pTableData->byDisassembleUpperMin,	 "Item Table Index");
+			ADD_SUB_ITEM("byDisassembleUpperMax",		(int)pTableData->byDisassembleUpperMax,  "Item Table Index");
+			ADD_SUB_ITEM("byDropVisual",				(int)pTableData->byDropVisual,			 "Item Table Index");
+			ADD_SUB_ITEM("byUseDisassemble",			(int)pTableData->byUseDisassemble,		 "Item Table Index");
 		}
 		break;
 
 		case CTableContainer::TABLE_NEWBIE:
 		{
-			sNEWBIE_TBLDAT* pTableData = (sNEWBIE_TBLDAT*)pTbldat;
-			pGroup1->AddSubItem(new CMFCPropertyGridProperty(_T("tblidx"), (_variant_t)pTableData->tblidx, _T("Item Table Index")));
-			pGroup1->AddSubItem(new CMFCPropertyGridProperty(_T("byRace"), (_variant_t)(int)pTableData->byRace, _T("Item Table Index")));
-			pGroup1->AddSubItem(new CMFCPropertyGridProperty(_T("byClass"), (_variant_t)(int)pTableData->byClass, _T("Item Table Index")));
-			pGroup1->AddSubItem(new CMFCPropertyGridProperty(_T("world_Id"), (_variant_t)pTableData->world_Id, _T("Item Table Index")));
-			pGroup1->AddSubItem(new CMFCPropertyGridProperty(_T("tutorialWorld"), (_variant_t)pTableData->tutorialWorld, _T("Item Table Index")));
+			sNEWBIE_TBLDAT*	pTableData = (sNEWBIE_TBLDAT*)pTbldat;
+			ADD_SUB_ITEM("tblidx",			pTableData->tblidx,		   "Item Table Index");
+			ADD_SUB_ITEM("byRace",			(int)pTableData->byRace,   "Item Table Index");
+			ADD_SUB_ITEM("byClass",			(int)pTableData->byClass,  "Item Table Index");
+			ADD_SUB_ITEM("world_Id",		pTableData->world_Id,	   "Item Table Index");
+			ADD_SUB_ITEM("tutorialWorld",	pTableData->tutorialWorld, "Item Table Index");
 
-			pGroup1->AddSubItem(new CMFCPropertyGridProperty(_T("vSpawn_Loc.x"), (_variant_t)pTableData->vSpawn_Loc.x, _T("Item Table Index")));
-			pGroup1->AddSubItem(new CMFCPropertyGridProperty(_T("vSpawn_Loc.y"), (_variant_t)pTableData->vSpawn_Loc.y, _T("Item Table Index")));
-			pGroup1->AddSubItem(new CMFCPropertyGridProperty(_T("vSpawn_Loc.z"), (_variant_t)pTableData->vSpawn_Loc.z, _T("Item Table Index")));
+			ADD_SUB_ITEM("vSpawn_Loc.x",	pTableData->vSpawn_Loc.x,  "Item Table Index");
+			ADD_SUB_ITEM("vSpawn_Loc.y",	pTableData->vSpawn_Loc.y,  "Item Table Index");
+			ADD_SUB_ITEM("vSpawn_Loc.z",	pTableData->vSpawn_Loc.z,  "Item Table Index");
 
-			pGroup1->AddSubItem(new CMFCPropertyGridProperty(_T("vSpawn_Dir.x"), (_variant_t)pTableData->vSpawn_Dir.x, _T("Item Table Index")));
-			pGroup1->AddSubItem(new CMFCPropertyGridProperty(_T("vSpawn_Dir.y"), (_variant_t)pTableData->vSpawn_Dir.y, _T("Item Table Index")));
-			pGroup1->AddSubItem(new CMFCPropertyGridProperty(_T("vSpawn_Dir.z"), (_variant_t)pTableData->vSpawn_Dir.z, _T("Item Table Index")));
+			ADD_SUB_ITEM("vSpawn_Dir.x",	pTableData->vSpawn_Dir.x,  "Item Table Index");
+			ADD_SUB_ITEM("vSpawn_Dir.y",	pTableData->vSpawn_Dir.y,  "Item Table Index");
+			ADD_SUB_ITEM("vSpawn_Dir.z",	pTableData->vSpawn_Dir.z,  "Item Table Index");
 
-			pGroup1->AddSubItem(new CMFCPropertyGridProperty(_T("vBind_Loc.x"), (_variant_t)pTableData->vBind_Loc.x, _T("Item Table Index")));
-			pGroup1->AddSubItem(new CMFCPropertyGridProperty(_T("vBind_Loc.y"), (_variant_t)pTableData->vBind_Loc.y, _T("Item Table Index")));
-			pGroup1->AddSubItem(new CMFCPropertyGridProperty(_T("vBind_Loc.z"), (_variant_t)pTableData->vBind_Loc.z, _T("Item Table Index")));
+			ADD_SUB_ITEM("vBind_Loc.x",		pTableData->vBind_Loc.x,   "Item Table Index");
+			ADD_SUB_ITEM("vBind_Loc.y",		pTableData->vBind_Loc.y,   "Item Table Index");
+			ADD_SUB_ITEM("vBind_Loc.z",		pTableData->vBind_Loc.z,   "Item Table Index");
 
-			pGroup1->AddSubItem(new CMFCPropertyGridProperty(_T("vBind_Dir.x"), (_variant_t)pTableData->vBind_Dir.x, _T("Item Table Index")));
-			pGroup1->AddSubItem(new CMFCPropertyGridProperty(_T("vBind_Dir.y"), (_variant_t)pTableData->vBind_Dir.y, _T("Item Table Index")));
-			pGroup1->AddSubItem(new CMFCPropertyGridProperty(_T("vBind_Dir.z"), (_variant_t)pTableData->vBind_Dir.z, _T("Item Table Index")));
+			ADD_SUB_ITEM("vBind_Dir.x",		pTableData->vBind_Dir.x,   "Item Table Index");
+			ADD_SUB_ITEM("vBind_Dir.y",		pTableData->vBind_Dir.y,   "Item Table Index");
+			ADD_SUB_ITEM("vBind_Dir.z",		pTableData->vBind_Dir.z,   "Item Table Index");
 
 			for(int i = 0; i < NTL_MAX_NEWBIE_ITEM; i++)
-				pGroup1->AddSubItem(new CMFCPropertyGridProperty(_T("aitem_Tblidx"), (_variant_t)pTableData->aitem_Tblidx[i], _T("Item Table Index")));
+				ADD_SUB_ITEM("aitem_Tblidx", pTableData->aitem_Tblidx[i], "Item Table Index");
 
 			for (int i = 0; i < NTL_MAX_NEWBIE_ITEM; i++)
-				pGroup1->AddSubItem(new CMFCPropertyGridProperty(_T("abyPos"), (_variant_t)(int)pTableData->abyPos[i], _T("Item Table Index")));
+				ADD_SUB_ITEM("abyPos", (int)pTableData->abyPos[i], "Item Table Index");
 
 			for (int i = 0; i < NTL_MAX_NEWBIE_ITEM; i++)
-				pGroup1->AddSubItem(new CMFCPropertyGridProperty(_T("abyStack_Quantity"), (_variant_t)(int)pTableData->abyStack_Quantity[i], _T("Item Table Index")));
+				ADD_SUB_ITEM("abyStack_Quantity", (int)pTableData->abyStack_Quantity[i], "Item Table Index");
 
-			pGroup1->AddSubItem(new CMFCPropertyGridProperty(_T("mapNameTblidx"), (_variant_t)pTableData->mapNameTblidx, _T("Item Table Index")));
+			ADD_SUB_ITEM("mapNameTblidx",	pTableData->mapNameTblidx, "Item Table Index");
 
 			for (int i = 0; i < NTL_MAX_NEWBIE_SKILL; i++)
-				pGroup1->AddSubItem(new CMFCPropertyGridProperty(_T("aSkillTblidx"), (_variant_t)pTableData->aSkillTblidx[i], _T("Item Table Index")));
+				ADD_SUB_ITEM("aSkillTblidx", pTableData->aSkillTblidx[i], "Item Table Index");
 
 			for (int i = 0; i < NTL_MAX_NEWBIE_QUICKSLOT_COUNT; i++)
 			{
-				pGroup1->AddSubItem(new CMFCPropertyGridProperty(_T("QuickSlot Tblidx"), (_variant_t)pTableData->asQuickData[i].tbilidx, _T("Item Table Index")));
-				pGroup1->AddSubItem(new CMFCPropertyGridProperty(_T("QuickSlot Type"), (_variant_t)(int)pTableData->asQuickData[i].byType, _T("Item Table Index")));
-				pGroup1->AddSubItem(new CMFCPropertyGridProperty(_T("QuickSlot Slot"), (_variant_t)(int)pTableData->asQuickData[i].byQuickSlot, _T("Item Table Index")));
+				ADD_SUB_ITEM("QuickSlot Tblidx", pTableData->asQuickData[i].tbilidx,		  "Item Table Index");
+				ADD_SUB_ITEM("QuickSlot Type",	 (int)pTableData->asQuickData[i].byType,	  "Item Table Index");
+				ADD_SUB_ITEM("QuickSlot Slot",   (int)pTableData->asQuickData[i].byQuickSlot, "Item Table Index");
 			}
 			
 			for (int i = 0; i < 3; i++)
-				pGroup1->AddSubItem(new CMFCPropertyGridProperty(_T("defaultPortalId"), (_variant_t)(int)pTableData->defaultPortalId[i], _T("Item Table Index")));
+				ADD_SUB_ITEM("defaultPortalId", (int)pTableData->defaultPortalId[i], "Item Table Index");
 
-			pGroup1->AddSubItem(new CMFCPropertyGridProperty(_T("qItemTblidx1"), (_variant_t)pTableData->qItemTblidx1, _T("Quest Item Table Index")));
-			pGroup1->AddSubItem(new CMFCPropertyGridProperty(_T("byQPosition1"), (_variant_t)(int)pTableData->byQPosition1, _T("Quest item position")));
-			pGroup1->AddSubItem(new CMFCPropertyGridProperty(_T("byQStackQuantity1"), (_variant_t)(int)pTableData->byQStackQuantity1, _T("Quest item quantity")));
-			pGroup1->AddSubItem(new CMFCPropertyGridProperty(_T("wMixLevelData"), (_variant_t)pTableData->wMixLevelData, _T("Mix level")));
+			ADD_SUB_ITEM("qItemTblidx1",	  pTableData->qItemTblidx1,			  "Quest Item Table Index");
+			ADD_SUB_ITEM("byQPosition1",	  (int)pTableData->byQPosition1,	  "Quest item position");
+			ADD_SUB_ITEM("byQStackQuantity1", (int)pTableData->byQStackQuantity1, "Quest item quantity");
+			ADD_SUB_ITEM("wMixLevelData",	  pTableData->wMixLevelData,		  "Mix level");
+		}
+		break;
+		
+		case CTableContainer::TABLE_SPEECH:
+		{
+			sNPC_SPEECH_TBLDAT* pTableData = (sNPC_SPEECH_TBLDAT*)pTbldat;
 
+			ADD_SUB_ITEM("tblidx",			pTableData->tblidx,			   "NPC Speech Table");
+
+			ADD_SUB_ITEM("dwDialogGroup",	pTableData->dwDialogGroup,	   "NPC Speech Table");
+			ADD_SUB_ITEM("szDialogType",	pTableData->szDialogType,	   "NPC Speech Table");
+			ADD_SUB_ITEM("byRate",			(int)pTableData->byRate,	   "NPC Speech Table");
+			ADD_SUB_ITEM("textIndex",		pTableData->textIndex,		   "NPC Speech Table");
+			ADD_SUB_ITEM("byBallonType",	(int)pTableData->byBallonType, "NPC Speech Table");
+			ADD_SUB_ITEM("dwDisplayTime",	pTableData->dwDisplayTime,	   "NPC Speech Table");
+			ADD_SUB_ITEM("szNote",			pTableData->szNote,			   "NPC Speech Table");
+			ADD_SUB_ITEM("bySpeechType",	(int)pTableData->bySpeechType, "NPC Speech Table");
+		
 		}
 		break;
 
@@ -311,7 +332,7 @@ void CPropertiesWnd::InitPropList()
 
 	/*CMFCPropertyGridProperty* pGroup1 = new CMFCPropertyGridProperty(_T("Appearance"));
 
-	pGroup1->AddSubItem(new CMFCPropertyGridProperty(_T("3D Look"), (_variant_t) false, _T("Specifies the window's font will be non-bold and controls will have a 3D border")));
+	ADD_SUB_ITEM("3D Look", false, "Specifies the window's font will be non-bold and controls will have a 3D border");
 
 	CMFCPropertyGridProperty* pProp = new CMFCPropertyGridProperty(_T("Border"), _T("Dialog Frame"), _T("One of: None, Thin, Resizable, or Dialog Frame"));
 	pProp->AddOption(_T("None"));
@@ -321,17 +342,17 @@ void CPropertiesWnd::InitPropList()
 	pProp->AllowEdit(FALSE);
 
 	pGroup1->AddSubItem(pProp);
-	pGroup1->AddSubItem(new CMFCPropertyGridProperty(_T("Caption"), (_variant_t) _T("About"), _T("Specifies the text that will be displayed in the window's title bar")));
+	ADD_SUB_ITEM("Caption",  _T("About", "Specifies the text that will be displayed in the window's title bar"));
 
 	m_wndPropList.AddProperty(pGroup1);
 
 	CMFCPropertyGridProperty* pSize = new CMFCPropertyGridProperty(_T("Window Size"), 0, TRUE);
 
-	pProp = new CMFCPropertyGridProperty(_T("Height"), (_variant_t) 250l, _T("Specifies the window's height"));
+	pProp = new CMFCPropertyGridProperty(_T("Height"),  250l, _T("Specifies the window's height"));
 	pProp->EnableSpinControl(TRUE, 50, 300);
 	pSize->AddSubItem(pProp);
 
-	pProp = new CMFCPropertyGridProperty( _T("Width"), (_variant_t) 150l, _T("Specifies the window's width"));
+	pProp = new CMFCPropertyGridProperty( _T("Width"),  150l, _T("Specifies the window's width"));
 	pProp->EnableSpinControl(TRUE, 50, 200);
 	pSize->AddSubItem(pProp);
 
@@ -346,7 +367,7 @@ void CPropertiesWnd::InitPropList()
 	_tcscpy_s(lf.lfFaceName, _T("Arial"));
 
 	pGroup2->AddSubItem(new CMFCPropertyGridFontProperty(_T("Font"), lf, CF_EFFECTS | CF_SCREENFONTS, _T("Specifies the default font for the window")));
-	pGroup2->AddSubItem(new CMFCPropertyGridProperty(_T("Use System Font"), (_variant_t) true, _T("Specifies that the window uses MS Shell Dlg font")));
+	pGroup2->AddSubItem(new CMFCPropertyGridProperty(_T("Use System Font"),  true, _T("Specifies that the window uses MS Shell Dlg font")));
 
 	m_wndPropList.AddProperty(pGroup2);
 
