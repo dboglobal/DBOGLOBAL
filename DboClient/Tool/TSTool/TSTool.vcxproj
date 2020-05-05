@@ -10,12 +10,12 @@
     <ProjectGuid>{76814177-7FC9-46C0-9415-8A7A6DE32B13}</ProjectGuid>
     <RootNamespace>TSTool</RootNamespace>
     <Keyword>MFCProj</Keyword>
-    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release4Tools|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
-    <PlatformToolset>v100</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
     <UseOfMfc>Dynamic</UseOfMfc>
     <CharacterSet>MultiByte</CharacterSet>
     <WholeProgramOptimization>true</WholeProgramOptimization>
@@ -474,7 +474,7 @@
       <Project>{5229f8ae-a505-4077-b6d3-5ce0164dfe73}</Project>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\NtlLib\Shared\Zip\zlib123\projects\visualdotnet2005\zlib.vcxproj">
+    <ProjectReference Include="..\..\..\NtlLib\Shared\Zip\zlib123\projects\zlib.vcxproj">
       <Project>{9b2b6c11-764e-4d4b-8db2-f91ac99e0b93}</Project>
     </ProjectReference>
     <ProjectReference Include="..\..\Lib\NtlCore\NtlCore.vcxproj">

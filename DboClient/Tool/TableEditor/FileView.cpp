@@ -111,6 +111,9 @@ void CFileView::FillFileView()
 	item = m_wndFileView.InsertItem(_T("Table_Newbie_Data"), 1, 1, hRoot);
 	m_wndFileView.SetItemData(item, CTableContainer::TABLE_NEWBIE);
 
+	item = m_wndFileView.InsertItem(_T("Table_NPC_Speech_Data"), 1, 1, hRoot);
+	m_wndFileView.SetItemData(item, CTableContainer::TABLE_SPEECH);
+
 	m_wndFileView.Expand(hRoot, TVE_EXPAND);
 }
 

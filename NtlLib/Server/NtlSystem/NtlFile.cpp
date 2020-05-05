@@ -20,7 +20,7 @@
 
 #include <io.h>
 #include <tchar.h>
-
+#include <filesystem>
 
 
 //-----------------------------------------------------------------------------------
@@ -71,6 +71,14 @@ void CNtlFile::Destroy()
 //-----------------------------------------------------------------------------------
 int CNtlFile::Create(LPCTSTR lpszFileName, int nOperationFlag /* = _O_CREAT | _O_APPEND | _O_RDWR */, int nSharingFlag /* = _SH_DENYNO */, int nPermissionMode /* = _S_IREAD | _S_IWRITE */, bool bAutoClose /* = false */)
 {
+	if ((nOperationFlag & _O_CREAT) == _O_CREAT)		//if the file should be created
+	{
+		auto path = std::filesystem::path(lpszFileName).remove_filename();
+
+		if (!std::filesystem::exists(path))				//check if the path exists
+			std::filesystem::create_directories(path);  //and create directories
+	}
+
 	int rc = _tsopen_s( &m_hFile, lpszFileName, nOperationFlag, nSharingFlag, nPermissionMode );
 	if( NTL_SUCCESS != rc )
 	{

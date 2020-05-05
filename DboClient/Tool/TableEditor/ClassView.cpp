@@ -8,6 +8,7 @@
 #include "Util.h"
 #include "ItemTable.h"
 #include "NewbieTable.h"
+#include "NpcSpeechTable.h"
 
 
 class CClassViewMenuButton : public CMFCToolBarMenuButton
@@ -210,6 +211,12 @@ void CClassView::LoadTableData(int nTableType)
 		case CTableContainer::TABLE_NEWBIE:
 		{
 			pTable = GetTableContainer()->GetNewbieTable();
+		}
+		break;
+
+		case CTableContainer::TABLE_SPEECH:
+		{
+			pTable = GetTableContainer()->GetNpcSpeechTable();
 		}
 		break;
 
