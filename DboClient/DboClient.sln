@@ -70,6 +70,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "zlib", "..\NtlLib\Shared\Zi
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TableEditor", "Tool\TableEditor\TableEditor.vcxproj", "{B964121C-8283-4619-A3DC-5DE195776A44}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "2DParticleEditor", "Tool\2DParticleEditor\2DParticleEditor.vcxproj", "{CB929600-27F1-4214-9B31-EC7872B80762}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Release|Win32 = Release|Win32
@@ -183,6 +185,10 @@ Global
 		{B964121C-8283-4619-A3DC-5DE195776A44}.Release|Win32.ActiveCfg = Release4Tools|Win32
 		{B964121C-8283-4619-A3DC-5DE195776A44}.Release4Tools|Win32.ActiveCfg = Release4Tools|Win32
 		{B964121C-8283-4619-A3DC-5DE195776A44}.Release4Tools|Win32.Build.0 = Release4Tools|Win32
+		{CB929600-27F1-4214-9B31-EC7872B80762}.Release|Win32.ActiveCfg = Release|Win32
+		{CB929600-27F1-4214-9B31-EC7872B80762}.Release|Win32.Build.0 = Release|Win32
+		{CB929600-27F1-4214-9B31-EC7872B80762}.Release4Tools|Win32.ActiveCfg = Release4Tools|Win32
+		{CB929600-27F1-4214-9B31-EC7872B80762}.Release4Tools|Win32.Build.0 = Release4Tools|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -216,6 +222,7 @@ Global
 		{76814177-7FC9-46C0-9415-8A7A6DE32B13} = {80D46013-0A0B-4129-890D-2B99E8B8D1FC}
 		{9B2B6C11-764E-4D4B-8DB2-F91AC99E0B93} = {6B42106C-F035-4BB9-9DBD-82844EAFDADF}
 		{B964121C-8283-4619-A3DC-5DE195776A44} = {80D46013-0A0B-4129-890D-2B99E8B8D1FC}
+		{CB929600-27F1-4214-9B31-EC7872B80762} = {80D46013-0A0B-4129-890D-2B99E8B8D1FC}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {8B7002E8-47F5-4485-AE58-4F3A0E699663}
