@@ -37,15 +37,17 @@
 #define DROPITEM_SHOW_TIME	5.0f
 #define DROPITEM_FADE_TIME	1.0f
 
-CDropItemInfoGui::CDropItemInfoGui(VOID)
+CDropItemInfoGui::CDropItemInfoGui(RwUInt32 init_m_uiDropItemSerial, CNtlSobWorldItem* init_m_pDropItem, RwBool init_m_pDropItemShow, const RwChar* pName)
+: CNtlPLGui( pName )
+
 {
-	Init();
+	Init(init_m_uiDropItemSerial, init_m_pDropItem, init_m_pDropItemShow);
 }
 
 CDropItemInfoGui::CDropItemInfoGui( const RwChar* pName )
 : CNtlPLGui( pName )
 {
-	Init();
+	Init(INVALID_SERIAL_ID, NULL, FALSE);
 }
 
 CDropItemInfoGui::~CDropItemInfoGui(VOID)
@@ -53,14 +55,17 @@ CDropItemInfoGui::~CDropItemInfoGui(VOID)
 
 }
 
-VOID CDropItemInfoGui::Init(VOID)
+VOID CDropItemInfoGui::Init(RwUInt32 init_m_uiDropItemSerial, CNtlSobWorldItem* init_m_pDropItem, RwBool init_m_pDropItemShow)
 {
 	m_fTime = 0.0f;
 	m_eState = HIDE;
+	m_uiDropItemSerial = init_m_uiDropItemSerial;
+	m_pDropItem = init_m_pDropItem;
+	m_pDropItemShow = init_m_pDropItemShow;
 }
 
-RwBool CDropItemInfoGui::Create(VOID)
-{
+RwBool CDropItemInfoGui::Create()
+{	
 	NTL_FUNCTION( "CDropItemInfoGui::Create" );
 
 	if( !CNtlPLGui::Create( "", "gui\\DropItemInfo.srf", "gui\\DropItemInfo.frm" ) )
@@ -79,14 +84,19 @@ RwBool CDropItemInfoGui::Create(VOID)
 	m_surIcon.SetRectWH( 0, 0, 32, 32 );	
 
 	GetNtlGuiManager()->AddUpdateFunc( this );
-	SetState( HIDE );
+
+	if(m_pDropItem!=NULL){
+		ShowItemInCapsule();	
+	}else{
+		SetState( HIDE );
+		CDboEventGenerator::OpenHelpContent(DIALOG_DROPITEM_INFO);
+	}
 
 	LinkMsg( g_EventSobGotFocus );
 	LinkMsg( g_EventSobLostFocus );
 	LinkMsg( g_EventCharObjDelete );
 
-	CDboEventGenerator::OpenHelpContent(DIALOG_DROPITEM_INFO);
-
+	
 	NTL_RETURN( TRUE );
 }
 
@@ -123,10 +133,31 @@ RwInt32 CDropItemInfoGui::SwitchDialog( bool bOpen )
 	return 1;
 }
 
+VOID CDropItemInfoGui::ShowItemInCapsule(){
+	// icon surface setting.
+	CNtlSobWorldItemAttr* pAttr = reinterpret_cast<CNtlSobWorldItemAttr*>( m_pDropItem->GetSobAttr() );
+	if( pAttr->IsItem() )
+	{
+		if( pAttr->IsIdentified() )
+			m_surIcon.SetTexture( Logic_CreateTexture( pAttr->GetItemTbl()->szIcon_Name ) );
+		else
+			m_surIcon.SetTexture( Logic_CreateTexture( UNIDENTIFIED_ICON_NAME ) );					
+	}
+	else if( pAttr->IsMoney() )
+	{
+		m_surIcon.SetTexture( Logic_CreateTexture(  QUEST_REWARD_ICONNAME_ZENY ) ) ;				
+	}
+	else
+		return;			
+
+	SetState( FADE_IN );	
+}
+
 VOID CDropItemInfoGui::HandleEvents( RWS::CMsg& msg )
 {
-	if( msg.Id == g_EventSobGotFocus )
-	{
+
+	if( msg.Id == g_EventSobGotFocus && !m_pDropItemShow ){
+		
 		SNtlEventSobGotFocus* pData = reinterpret_cast<SNtlEventSobGotFocus*>( msg.pData );
 		CNtlSob* pObj = GetNtlSobManager()->GetSobObject( pData->hSerialId );
 
@@ -138,7 +169,7 @@ VOID CDropItemInfoGui::HandleEvents( RWS::CMsg& msg )
 
 		CNtlSobWorldItem* pDropObject = reinterpret_cast<CNtlSobWorldItem*>( pObj );
 
-		if( m_uiDropItemSerial == pDropObject->GetSerialID() )
+		if( m_uiDropItemSerial == pDropObject->GetSerialID())
 		{
 			switch( m_eState )
 			{			
@@ -153,27 +184,10 @@ VOID CDropItemInfoGui::HandleEvents( RWS::CMsg& msg )
 			Logic_DeleteTexture( m_surIcon.GetTexture() );
 			m_surIcon.UnsetTexture();
 
-			// icon surface setting.
-			CNtlSobWorldItemAttr* pAttr = reinterpret_cast<CNtlSobWorldItemAttr*>( m_pDropItem->GetSobAttr() );
-			if( pAttr->IsItem() )
-			{
-				if( pAttr->IsIdentified() )
-					m_surIcon.SetTexture( Logic_CreateTexture( pAttr->GetItemTbl()->szIcon_Name ) );
-				else
-					m_surIcon.SetTexture( Logic_CreateTexture( UNIDENTIFIED_ICON_NAME ) );					
-			}
-			else if( pAttr->IsMoney() )
-			{
-				m_surIcon.SetTexture( Logic_CreateTexture(  QUEST_REWARD_ICONNAME_ZENY ) ) ;				
-			}
-			else
-				return;			
-
-			SetState( FADE_IN );				
+			ShowItemInCapsule();			
 		}
-		
 	}
-	else if( msg.Id == g_EventSobLostFocus )
+	else if( msg.Id == g_EventSobLostFocus && !m_pDropItemShow)
 	{
 		SNtlEventSobLostFocus* pData = reinterpret_cast<SNtlEventSobLostFocus*>( msg.pData );
 
@@ -193,6 +207,9 @@ VOID CDropItemInfoGui::HandleEvents( RWS::CMsg& msg )
 		if( m_uiDropItemSerial == *pDeleteSerial )
 		{
 			SetState( HIDE );
+			if(m_pDropItemShow){
+				Destroy();
+			}
 		}
 	}
 }
@@ -204,13 +221,13 @@ VOID CDropItemInfoGui::SetState( RwInt32 eState )
 	case HIDE:
 		m_uiDropItemSerial = INVALID_SERIAL_ID;
 		m_pDropItem = NULL;
-		OnMouseLeave( NULL );	// ÀÎÆ÷À©µµ¿ì ´Ý±â 
+		OnMouseLeave( NULL );	// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ý±ï¿½ 
 		Logic_DeleteTexture( m_surIcon.GetTexture() );
 		m_surIcon.UnsetTexture();
 		Show( false );
 		break;
 	case FADE_IN:
-		m_fTime = 0.0f;
+		m_fTime = 15.0f;
 		Show( true );
 		break;
 	case SHOW_WAIT_FADE:				

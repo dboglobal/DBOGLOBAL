@@ -2,14 +2,14 @@
 *
 * File			: DboPacketHandler.h
 * Author		: HyungSuk, Jang
-* Copyright	: (ÁÖ)NTL
+* Copyright	: (ï¿½ï¿½)NTL
 * Date			: 2005. 9. 27	
 * Abstract		: DBO packet handler
 *****************************************************************************
-* Desc         : InclreiBuild ¹ö±×·Î ÀÏ´Ü ÇÔ¼ö¸¦ º°µµÀÇ .cpp ÆÄÀÏ·Î ºÐ¸®¸¦
-*				 ÇÏ¸é ¸µÅ©°¡ µÇÁö ¾Ê´Â´Ù. ÀÌ·± ÆÄÀÏµéÀ» ±»ÀÌ ºÐ¸®ÇÏÁö ¾Ê´Â´Ù.
+* Desc         : InclreiBuild ï¿½ï¿½ï¿½×·ï¿½ ï¿½Ï´ï¿½ ï¿½Ô¼ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ .cpp ï¿½ï¿½ï¿½Ï·ï¿½ ï¿½Ð¸ï¿½ï¿½ï¿½
+*				 ï¿½Ï¸ï¿½ ï¿½ï¿½Å©ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ê´Â´ï¿½. ï¿½Ì·ï¿½ ï¿½ï¿½ï¿½Ïµï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ð¸ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ê´Â´ï¿½.
 *
-*				 ¿¹) UserTrade °ü·Ã ÆÐÅ¶µé..
+*				 ï¿½ï¿½) UserTrade ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Å¶ï¿½ï¿½..
 *****************************************************************************/
 
 #ifndef __DBO_PACKET_HANDLER_H__
@@ -51,11 +51,11 @@
 #define dPACKET_MEESAGE_LENGTH	1024
 static WCHAR awcPacketMessageBuffer[dPACKET_MEESAGE_LENGTH] = L"";
 
-/// ¼­¹ö¿¡¼­ »ç¿ëÇÏ´Â Vector °´Ã¼¸¦ Å¬¶óÀÌ¾ðÆ®ÀÇ º¤ÅÍ °´Ã¼·Î º¯È¯ÇÏ´Â ¸ÅÅ©·Î ÇÔ¼ö
+/// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ï´ï¿½ Vector ï¿½ï¿½Ã¼ï¿½ï¿½ Å¬ï¿½ï¿½ï¿½Ì¾ï¿½Æ®ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ã¼ï¿½ï¿½ ï¿½ï¿½È¯ï¿½Ï´ï¿½ ï¿½ï¿½Å©ï¿½ï¿½ ï¿½Ô¼ï¿½
 //#define SVector2RwV3d(rwV3d, svector) rwV3d.x = svector.x; rwV3d.y = svector.y; rwV3d.z = svector.z; // disable by daneos
 
 //-----------------------------------------------------------------------------
-// packet handler µî·Ï/»èÁ¦
+// packet handler ï¿½ï¿½ï¿½/ï¿½ï¿½ï¿½ï¿½
 //-----------------------------------------------------------------------------
 
 void RegisterPacketHandler(void);
@@ -268,7 +268,7 @@ void PacketHandler_GSSkillResetPlusRes(void* pPacket);
 void PacketHandler_GSCharRenameRes(void* pPacket);
 
 
-// ½ºÄ«¿ìÅÍ
+// ï¿½ï¿½Ä«ï¿½ï¿½ï¿½ï¿½
 void PacketHandler_GUCharScouterOnNfy(void* pPacket);
 void PacketHandler_GUCharScouterOffNfy(void* pPacket);
 
@@ -357,8 +357,8 @@ void PacketHandler_GSScouterEquipCheckRes(void *pPacket);
 
 // Class & Child
 void PacketHandler_GSConvertClass(void *pPacket);
-void PacketHandler_GSChildAdultSwitchedNfy(void* pPacket);              ///< ¾î¸¥ <-> ¾î¸°ÀÌ·Î º¯°æµÉ¶§ÀÇ ÆÐÅ¶
-void PacketHandler_GSChangeClassAuthorityChangedNfy(void* pPacket);		///< ÀüÁ÷±ÇÇÑ È¹µæ ÆÐÅ¶
+void PacketHandler_GSChildAdultSwitchedNfy(void* pPacket);              ///< ï¿½î¸¥ <-> ï¿½î¸°ï¿½Ì·ï¿½ ï¿½ï¿½ï¿½ï¿½É¶ï¿½ï¿½ï¿½ ï¿½ï¿½Å¶
+void PacketHandler_GSChangeClassAuthorityChangedNfy(void* pPacket);		///< ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ È¹ï¿½ï¿½ ï¿½ï¿½Å¶
 
 // Party
 void PacketHandler_GSPartyCreateRes(void *pPacket);
@@ -463,7 +463,7 @@ void PacketHandler_GSTradeCancelNfy(void *pPacket);
 void PacketHandler_GSTradeCancelRes(void *pPacket);
 void PacketHandler_GSTradeDeclineRes(void* pPacket);
 
-// guild : GS °ü·Ã
+// guild : GS ï¿½ï¿½ï¿½ï¿½
 void PacketHandler_GSGuild_Create_Res(void* pPacket);
 void PacketHandler_GSGuild_Invite_Res(void* pPacket);
 void PacketHandler_GSGuild_NameChanged_Res(void* pPacket);
@@ -483,7 +483,7 @@ void PacketHandler_GSGuild_Create_Emblem_Res(void* pPacket);
 void PacketHandler_GSGuild_Change_Emblem_Res(void* pPacket);
 void PacketHandler_GSGuild_Change_Emblem_Nfy(void* pPacket);
 
-// µµÀå 
+// ï¿½ï¿½ï¿½ï¿½ 
 void PacketHandler_GSDojo_CreateRes(void* pPacket);
 void PacketHandler_GSDojo_FunctionAddRes(void* pPacket);
 void PacketHandler_GSDojo_LevelChangedNfy(void* pPacket);
@@ -496,7 +496,7 @@ void PacketHandler_GSDojo_SealAttackBeginNfy(void* pPacket);
 void PacketHandler_GSDojo_SealAttackEndNfy(void* pPacket);
 void PacketHandler_GSDojo_ScrambleShiftStateNfy(void* pPacket);
 
-// µµº¹
+// ï¿½ï¿½ï¿½ï¿½
 void PacketHandler_GSDogi_CreateRes(void* pPacket);
 void PacketHandler_GSDogi_ChangeRes(void* pPacket);
 void PacketHandler_GSDogi_UpdateNfy(void* pPacket);
@@ -523,7 +523,7 @@ void PacketHandler_GUTimeQuest_CouponCount(void *pPacket);
 void PacketHandler_GUTimeQuest_TMQPoint(void *pPacket);
 void PacketHandler_GUTimeQuest_GameTime(void *pPacket);
 
-// ¼­¹ö·ÎºÎÅÍÀÇ ¸Þ¼¼Áö
+// ï¿½ï¿½ï¿½ï¿½ï¿½Îºï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Þ¼ï¿½ï¿½ï¿½
 void PacketHandler_GUTeleCast_Message_Beg_Nfy(void* pPacket);
 void PacketHandler_GUTeleCast_Message_End_Nfy(void* pPacket);
 
@@ -641,26 +641,26 @@ void PacketHandler_GUPortalAddRes(void* pPacket);
 void PacketHandler_GUPortalRes(void* pPacket);
 
 // Mob
-void PacketHandler_GUBotCautionNfy(void* pPacket);                          ///< ¼±°ø¸÷ÀÌ ´«Ä¡Ã«À»¶§
-void PacketHandler_GUBotHelpMeNfy(void* pPacket);                           ///< ¸÷ÀÌ ÁÖÀ§ µ¿·á¿¡°Ô µµ¿òÀ» Ã»ÇÒ¶§
+void PacketHandler_GUBotCautionNfy(void* pPacket);                          ///< ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ä¡Ã«ï¿½ï¿½ï¿½ï¿½
+void PacketHandler_GUBotHelpMeNfy(void* pPacket);                           ///< ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½á¿¡ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Ã»ï¿½Ò¶ï¿½
 
-// ¹ö½º ¹× Å»°Í
+// ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ Å»ï¿½ï¿½
 void PacketHandler_GURideOnBusRes(void* pPacket);
 void PacketHandler_GURideOffBusRes(void* pPacket);
 
-// º¯½Å °ü·Ã
-void PacketHandler_GUAfterEffectRemainTimeNfy(void* pPacket);               ///< º¯½Å ÈÞÀ¯Áß ³²Àº ½Ã°£
-void PacketHandler_GUTransformCancelRes(void* pPacket);                     ///< º¯½Å Ãë¼Ò ¿äÃ»¿¡ ´ëÇÑ ÀÀ´ä
-void PacketHandler_GUMonsterTransformedNfy(void* pPacket);                  ///< ¸ó½ºÅÍ º¯½Å ¾Ë¸² ÆÐÅ¶
+// ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+void PacketHandler_GUAfterEffectRemainTimeNfy(void* pPacket);               ///< ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ã°ï¿½
+void PacketHandler_GUTransformCancelRes(void* pPacket);                     ///< ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½Ã»ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+void PacketHandler_GUMonsterTransformedNfy(void* pPacket);                  ///< ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ë¸ï¿½ ï¿½ï¿½Å¶
 
-// ÄÁµð¼Ç °ü·Ã
-void PacketHandler_GUSkillConfuseTragetNfy(void* pPacket);                  ///< È¥¶õ Å¸°ÙÀ» ¹Þ´Â ÆÐÅ¶
-void PacketHandler_GUSkillTerrorCourseChangeNfy(void* pPacket);             ///< °øÆ÷ Å¸°ÙÀ» ¹Þ´Â ÆÐÅ¶
+// ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+void PacketHandler_GUSkillConfuseTragetNfy(void* pPacket);                  ///< È¥ï¿½ï¿½ Å¸ï¿½ï¿½ï¿½ï¿½ ï¿½Þ´ï¿½ ï¿½ï¿½Å¶
+void PacketHandler_GUSkillTerrorCourseChangeNfy(void* pPacket);             ///< ï¿½ï¿½ï¿½ï¿½ Å¸ï¿½ï¿½ï¿½ï¿½ ï¿½Þ´ï¿½ ï¿½ï¿½Å¶
 
 // RankBattle Score
-void PacketHandler_GUCharRankBattleScore(void* pPacket);				///< ·©Å©¹èÆ² Score
+void PacketHandler_GUCharRankBattleScore(void* pPacket);				///< ï¿½ï¿½Å©ï¿½ï¿½Æ² Score
 
-// ÃµÇÏÁ¦ÀÏ ¹«µµÈ¸
+// Ãµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½È¸
 void PacketHandler_GUMinorMatchStateUpdateNfy(void* pPacket);
 void PacketHandler_GUMinorMatchTeamInfoNfy(void* pPacket);
 void PacketHandler_GUMinorMatchPlayerStateNfy(void* pPacket);
@@ -708,7 +708,7 @@ void PacketHandler_GUBudokaiPrizeWinnerTeamNameRes(void* pPacket);
 void PacketHandler_GUDisconnectNfy(void* pPacket);
 void PacketHandler_GUBudokaiMarkingNfy(void* pPacket);
 
-// ÁÖ»çÀ§
+// ï¿½Ö»ï¿½ï¿½ï¿½
 void PacketHandler_GUDiceRollRes(void* pPacket);
 void PacketHandler_GUDiceRolledNfy(void* pPacket);
 
@@ -719,7 +719,7 @@ void PacketHandler_GUShopGambleBuyRes(void* pPacket);
 void PacketHandler_GUTeleportProposalNfy(void* pPacket);
 void PacketHandler_GUTeleportConfirmRes(void* pPacket);
 
-// HTB RP ±¸½½ »ç¿ë
+// HTB RP ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½
 void PacketHandler_GUHTBLastStepChangedNfy(void *pPacket);
 void PacketHandler_GSHTBRPBallResultDecidedNfy(void* pPacket);
 
@@ -819,7 +819,7 @@ void PacketHandler_TUGuild_ChangeNotice_Res(void *pPacket);
 void PacketHandler_TUGuild_changeNotice_Nfy(void *pPacket);
 void PacketHandler_TUGuild_GiveZenny_Nfy(void *pPacket);
 
-// µµÀå
+// ï¿½ï¿½ï¿½ï¿½
 void PacketHandler_TUDojo_CreateNfy(void *pPacket);
 void PacketHandler_TUDojo_DestoryNfy(void *pPacket);
 void PacketHandler_TUDojo_BriefNfy(void *pPacket);
@@ -836,7 +836,7 @@ void PacketHandler_TUDojo_NoticeChangeNfy(void *pPacket);
 void PacketHandler_TUDojo_ScrambleResultNfy(void *pPacket);
 void PacketHandler_TUDojo_ScrambleRewardNfy(void *pPacket);
 
-// Ä£±¸
+// Ä£ï¿½ï¿½
 void PacketHandler_TUFreind_Add_Res(void* pPacket);
 void PacketHandler_TUFriend_Del_Res(void* pPacket);
 void PacketHandler_TUFriend_Move_Res(void* pPacket);
@@ -883,8 +883,8 @@ void PacketHandler_GUCharRefreshBattleAttributeModifier(void* pPacket);
 void PacketHandler_GUCharRankPointResetNfy(void* pPacket);
 
 
-// »ó¿ëÈ­ °ü·Ã
-void PacketHandler_GUNetMarbleMemberShipNfy(void* pPacket);             ///< PC¹æ À¯Àú¶ó´Â ÅëÁö ¸Þ½ÃÁö
+// ï¿½ï¿½ï¿½È­ ï¿½ï¿½ï¿½ï¿½
+void PacketHandler_GUNetMarbleMemberShipNfy(void* pPacket);             ///< PCï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Þ½ï¿½ï¿½ï¿½
 
 // Calsule unlock item notify
 void PacketHandler_GUInventoryCapsuleUnlockNfy(void* pPacket);

@@ -148,7 +148,7 @@ void CNtlSLEventGenerator::CreateWorld( RwBool bCreate )
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 /**
-* avatar/camera ÀÌµ¿ ¹× È¸Àü
+* avatar/camera ï¿½Ìµï¿½ ï¿½ï¿½ È¸ï¿½ï¿½
 */
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -222,7 +222,7 @@ void CNtlSLEventGenerator::CameraDB(SERIAL_HANDLE hSerialId)
 	SEND_MSG(g_EventCameraDB, &sCameraDB);
 }
 
-// Å¸ÀÓ¸Ó½Å ¿¬Ãâ¿ë Ä«¸Þ¶ó
+// Å¸ï¿½Ó¸Ó½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ Ä«ï¿½Þ¶ï¿½
 void CNtlSLEventGenerator::CameraTimeMachine( SERIAL_HANDLE hSerialID ) 
 {
 	CNtlSobActor* pObj = (CNtlSobActor*)GetNtlSobManager()->GetSobObject(hSerialID);
@@ -288,13 +288,13 @@ void CNtlSLEventGenerator::CameraDirectSplineNode(RwReal fDelayTime, RwV3d vStar
 	_SendMsg(msg);
 }
 
-// ÇÁ¸®Ä«¸Þ¶ó·Î Ä«¸Þ¶ó¸¦ Ã¼ÀÎÁö ÇÑ´Ù.
+// ï¿½ï¿½ï¿½ï¿½Ä«ï¿½Þ¶ï¿½ï¿½ Ä«ï¿½Þ¶ï¿½ Ã¼ï¿½ï¿½ï¿½ï¿½ ï¿½Ñ´ï¿½.
 void CNtlSLEventGenerator::CameraFree() 
 {
 	SEND_MSG(g_EventCameraFree, NULL);
 }
 
-// 1ÀÎÄª Ä«¸Þ¶ó·Î ÀüÈ¯ÇÑ´Ù.
+// 1ï¿½ï¿½Äª Ä«ï¿½Þ¶ï¿½ï¿½ ï¿½ï¿½È¯ï¿½Ñ´ï¿½.
 void CNtlSLEventGenerator::CameraFPS(RwV3d& vCurrLookAt, RwV3d& vTargetLookAt)
 {
 	SNtlEventCameraFPS data;    
@@ -304,7 +304,7 @@ void CNtlSLEventGenerator::CameraFPS(RwV3d& vCurrLookAt, RwV3d& vTargetLookAt)
 	SEND_MSG(g_EventCameraFPS, &data);
 }
 
-// ¹ö½º Ä«¸Þ¶ó·Î ÀüÈ¯ÇÑ´Ù
+// ï¿½ï¿½ï¿½ï¿½ Ä«ï¿½Þ¶ï¿½ï¿½ ï¿½ï¿½È¯ï¿½Ñ´ï¿½
 void CNtlSLEventGenerator::CameraBus(CNtlSobActor* pActor)
 {
 	SNtlEventCameraControlBus data;    
@@ -3093,13 +3093,13 @@ void CNtlSLEventGenerator::ReloadTS( void )
 }
 
 void CNtlSLEventGenerator::RegQuest_Nfy( sTS_KEY& sTSKey,
-										bool bNewRegister,						// Äù½ºÆ® µî·Ï½Ã New typeÀÇ µî·Ï ¿©ºÎ
-										bool bQuestShare,						// Äù½ºÆ® °øÀ¯
-										RwUInt32 uiQuestAreaName,				// Äù½ºÆ® Áö¿ª ÀÌ¸§
-										RwUInt32 uiQuestState,					// Äù½ºÆ® »óÅÂ
-										RwUInt32 uiQuestTitle,					// Äù½ºÆ® Á¦¸ñ
-										RwUInt32 uiQuestGoal,					// Äù½ºÆ® ¸ñÀû
-										eQUEST_SORT_TYPE eQuestSortType )		// Äù½ºÆ® Á¾·ùÀÇ Å¸ÀÔ
+										bool bNewRegister,						// ï¿½ï¿½ï¿½ï¿½Æ® ï¿½ï¿½Ï½ï¿½ New typeï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+										bool bQuestShare,						// ï¿½ï¿½ï¿½ï¿½Æ® ï¿½ï¿½ï¿½ï¿½
+										RwUInt32 uiQuestAreaName,				// ï¿½ï¿½ï¿½ï¿½Æ® ï¿½ï¿½ï¿½ï¿½ ï¿½Ì¸ï¿½
+										RwUInt32 uiQuestState,					// ï¿½ï¿½ï¿½ï¿½Æ® ï¿½ï¿½ï¿½ï¿½
+										RwUInt32 uiQuestTitle,					// ï¿½ï¿½ï¿½ï¿½Æ® ï¿½ï¿½ï¿½ï¿½
+										RwUInt32 uiQuestGoal,					// ï¿½ï¿½ï¿½ï¿½Æ® ï¿½ï¿½ï¿½ï¿½
+										eQUEST_SORT_TYPE eQuestSortType )		// ï¿½ï¿½ï¿½ï¿½Æ® ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Å¸ï¿½ï¿½
 {
 	SNtlEventRegQuest_Nfy sRegQuestNfy;
 	sRegQuestNfy.sTSKey = sTSKey;
@@ -3142,22 +3142,22 @@ void CNtlSLEventGenerator::ShowQuestWindow( sTS_KEY& sTSKey )
 }
 
 void CNtlSLEventGenerator::ShowQuestWindow_Nfy( sTS_KEY& sTSKey,
-											    RwUInt32 uiQuestAreaName,			// Äù½ºÆ® Áö¿ª ÀÌ¸§
-											    RwUInt32 uiQuestTitle,				// Äù½ºÆ® Á¦¸ñ
-											    RwUInt32 uiQuestSort,				// Äù½ºÆ® Á¾·ù
-											    RwUInt32 uiQuestGrade,				// Äù½ºÆ® ³­ÀÌµµ
-											    eGRADE_TYPE eGradeType,				// Äù½ºÆ® ³­ÀÌµµ Å¸ÀÔ
-											    RwUInt32 uiQuestGoal,				// Äù½ºÆ® ¸ñÇ¥
-											    RwUInt32 uiQuestContents,			// Äù½ºÆ® ³»¿ë
-											    sREWARD_INFO* psDefaultReward,		// Äù½ºÆ® º¸»ó Á¤º¸ - ±âº» º¸»ó
-											    sREWARD_INFO* psSelectReward,		// Äù½ºÆ® º¸»ó Á¤º¸ - ¼±ÅÃ º¸»ó
+											    RwUInt32 uiQuestAreaName,			// ï¿½ï¿½ï¿½ï¿½Æ® ï¿½ï¿½ï¿½ï¿½ ï¿½Ì¸ï¿½
+											    RwUInt32 uiQuestTitle,				// ï¿½ï¿½ï¿½ï¿½Æ® ï¿½ï¿½ï¿½ï¿½
+											    RwUInt32 uiQuestSort,				// ï¿½ï¿½ï¿½ï¿½Æ® ï¿½ï¿½ï¿½ï¿½
+											    RwUInt32 uiQuestGrade,				// ï¿½ï¿½ï¿½ï¿½Æ® ï¿½ï¿½ï¿½Ìµï¿½
+											    eGRADE_TYPE eGradeType,				// ï¿½ï¿½ï¿½ï¿½Æ® ï¿½ï¿½ï¿½Ìµï¿½ Å¸ï¿½ï¿½
+											    RwUInt32 uiQuestGoal,				// ï¿½ï¿½ï¿½ï¿½Æ® ï¿½ï¿½Ç¥
+											    RwUInt32 uiQuestContents,			// ï¿½ï¿½ï¿½ï¿½Æ® ï¿½ï¿½ï¿½ï¿½
+											    sREWARD_INFO* psDefaultReward,		// ï¿½ï¿½ï¿½ï¿½Æ® ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ - ï¿½âº» ï¿½ï¿½ï¿½ï¿½
+											    sREWARD_INFO* psSelectReward,		// ï¿½ï¿½ï¿½ï¿½Æ® ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ - ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 	unsigned int uiRewardExp,
 	unsigned int uiRewardZeni,
-											    eSTOC_EVT_DATA_TYPE eEvtInfoType,	// ¼­¹ö ÀÌº¥Æ® Á¤º¸ - µ¥ÀÌÅÍ Å¸ÀÔ
-											    const uSTOC_EVT_DATA& uEvtInfoData,	// ¼­¹ö ÀÌº¥Æ® Á¤º¸ - µ¥ÀÌÅÍ
-											    RwUInt32 uiTimeLimit,				// Å¸ÀÓ Á¦ÇÑ Á¤º¸
-											    RwUInt32 uiEventType,				// eEVENT_GEN_TYPE ( ÇöÀç´Â eEVENT_GEN_TYPE_CLICK_NPC ¸¸ »ç¿ëÇÔ )
-											    RwUInt32 uiEventID,					// uiEventType ¿¡ µû¸¥ ÀÎµ¦½º eEVENT_GEN_TYPE_CLICK_NPC	: Mob table index
+											    eSTOC_EVT_DATA_TYPE eEvtInfoType,	// ï¿½ï¿½ï¿½ï¿½ ï¿½Ìºï¿½Æ® ï¿½ï¿½ï¿½ï¿½ - ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Å¸ï¿½ï¿½
+											    const uSTOC_EVT_DATA& uEvtInfoData,	// ï¿½ï¿½ï¿½ï¿½ ï¿½Ìºï¿½Æ® ï¿½ï¿½ï¿½ï¿½ - ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+											    RwUInt32 uiTimeLimit,				// Å¸ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+											    RwUInt32 uiEventType,				// eEVENT_GEN_TYPE ( ï¿½ï¿½ï¿½ï¿½ï¿½ eEVENT_GEN_TYPE_CLICK_NPC ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ )
+											    RwUInt32 uiEventID,					// uiEventType ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Îµï¿½ï¿½ï¿½ eEVENT_GEN_TYPE_CLICK_NPC	: Mob table index
 												RwBool bIsEventStarter )			// Event type [ True : Starter, False : Reward ]
 
 {
@@ -3310,10 +3310,10 @@ void CNtlSLEventGenerator::ShowIndicator_Nfy( sTS_KEY& sTSKey,
 	_SendMsg(msg);
 }
 
-void CNtlSLEventGenerator::DoQuest( sQUEST_INFO& sQuestInfo,		// Quest Á¤º¸
-								    eEVENT_GEN_TYPE eEventGenType,	// Event Á¾·ù
+void CNtlSLEventGenerator::DoQuest( sQUEST_INFO& sQuestInfo,		// Quest ï¿½ï¿½ï¿½ï¿½
+								    eEVENT_GEN_TYPE eEventGenType,	// Event ï¿½ï¿½ï¿½ï¿½
 									RwUInt32 uiOwnerID,				// Owner ID
-									RwBool bTransCameraCtrlRight)	// Ä«¸Þ¶ó Á¦¾î±ÇÀ» ³Ñ±â´Â °æ¿ì TRUE
+									RwBool bTransCameraCtrlRight)	// Ä«ï¿½Þ¶ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ñ±ï¿½ï¿½ ï¿½ï¿½ï¿½ TRUE
 {
 	SNtlEventDoQuest sDoQuest;
 	sDoQuest.sQuestInfo = sQuestInfo;
@@ -3525,14 +3525,14 @@ void CNtlSLEventGenerator::QuestRewardDialog_Res( bool bResult, sTS_KEY& sTSKey,
 }
 
 void CNtlSLEventGenerator::QuestNarrationDialog_Req( sTS_KEY& sTSKey,
-													eNARRATION_PROGRESS_STATE eProgState,		// Narration ÁøÇà »óÅÂ
-													eNARRATION_OWNER_TYPE eOwnerType,			// OwnerÀÇ Á¾·ù
-													RwUInt32 uiOwnerIdx,						// OwnerÀÇ Å×ÀÌºí ÀÎµ¦½º
-													eNARRATION_OWNER_STATE eOwnerState,		// OwnerÀÇ »óÅÂ
-													eNARRATION_DIALOG_DIR_TYPE eDialogDirType,	// ´ëÈ­ ¿¬Ãâ Á¾·ù
-													RwUInt32 uiDialog,							// ´ëÈ­ ³»¿ë
-													eNARRATION_GUI_TYPE eGUIType,				// GUI Á¾·ù
-													RwUInt32 uiMaxLifeTime )					// ÀÌ ½Ã°£ ÀÌ»ó ³ª·¹ÀÌ¼Ç Ã¢ÀÌ À¯Áö µÇ´Â °æ¿ì ÀÚµ¿À¸·Î Next·Î ³Ñ¾î°¡¾ß ÇÑ´Ù.
+													eNARRATION_PROGRESS_STATE eProgState,		// Narration ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+													eNARRATION_OWNER_TYPE eOwnerType,			// Ownerï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+													RwUInt32 uiOwnerIdx,						// Ownerï¿½ï¿½ ï¿½ï¿½ï¿½Ìºï¿½ ï¿½Îµï¿½ï¿½ï¿½
+													eNARRATION_OWNER_STATE eOwnerState,		// Ownerï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+													eNARRATION_DIALOG_DIR_TYPE eDialogDirType,	// ï¿½ï¿½È­ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+													RwUInt32 uiDialog,							// ï¿½ï¿½È­ ï¿½ï¿½ï¿½ï¿½
+													eNARRATION_GUI_TYPE eGUIType,				// GUI ï¿½ï¿½ï¿½ï¿½
+													RwUInt32 uiMaxLifeTime )					// ï¿½ï¿½ ï¿½Ã°ï¿½ ï¿½Ì»ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ì¼ï¿½ Ã¢ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ç´ï¿½ ï¿½ï¿½ï¿½ ï¿½Úµï¿½ï¿½ï¿½ï¿½ï¿½ Nextï¿½ï¿½ ï¿½Ñ¾î°¡ï¿½ï¿½ ï¿½Ñ´ï¿½.
 {
 	SNtlEventQuestNarrationDialog_Req sQuestNarrationDialogReq;
 	sQuestNarrationDialogReq.sTSKey = sTSKey;
@@ -3689,10 +3689,10 @@ void CNtlSLEventGenerator::ShowQuestPosMark( sTS_KEY& sTSKey, RwBool bShow )
 }
 
 void CNtlSLEventGenerator::QuestObjDialog_Req( sTS_KEY& sTSKey,
-											  eOBJCONV_TYPE eObjConvType,			// Object ´ëÈ­ Å¸ÀÔ
-											  RwUInt32 uiWorldIdx,					// Object ¼Ò¼Ó world index
-											  RwUInt32 uiObjIdx,					// Object Å×ÀÌºí ÀÎµ¦½º
-											  RwUInt32 uiDesc )					// Object ´ëÈ­
+											  eOBJCONV_TYPE eObjConvType,			// Object ï¿½ï¿½È­ Å¸ï¿½ï¿½
+											  RwUInt32 uiWorldIdx,					// Object ï¿½Ò¼ï¿½ world index
+											  RwUInt32 uiObjIdx,					// Object ï¿½ï¿½ï¿½Ìºï¿½ ï¿½Îµï¿½ï¿½ï¿½
+											  RwUInt32 uiDesc )					// Object ï¿½ï¿½È­
 {
 	SNtlEventQuestObjDialog_Req sObjDlg;
 
@@ -3844,7 +3844,7 @@ void CNtlSLEventGenerator::TSScoutUse( RwUInt32 uiItemIdx, RwUInt32 uiTargetClas
 
 void CNtlSLEventGenerator::TSSkillUse_Guard( SERIAL_HANDLE hSource )
 {
-	// TS skill use ÀÌº¥Æ®´Â ¾Æ¹ÙÅ¸°¡ ÁÖÃ¼ÀÏ °æ¿ì¸¸ µ¿ÀÛÇÑ´Ù
+	// TS skill use ï¿½Ìºï¿½Æ®ï¿½ï¿½ ï¿½Æ¹ï¿½Å¸ï¿½ï¿½ ï¿½ï¿½Ã¼ï¿½ï¿½ ï¿½ï¿½ì¸¸ ï¿½ï¿½ï¿½ï¿½ï¿½Ñ´ï¿½
 	if ( GetNtlSLGlobal()->GetSobAvatar()->GetSerialID() != hSource )
 	{
 		return;
@@ -3865,7 +3865,7 @@ void CNtlSLEventGenerator::TSSkillUse_Guard( SERIAL_HANDLE hSource )
 
 void CNtlSLEventGenerator::TSSkillUse_Dash( SERIAL_HANDLE hSource )
 {
-	// TS skill use ÀÌº¥Æ®´Â ¾Æ¹ÙÅ¸°¡ ÁÖÃ¼ÀÏ °æ¿ì¸¸ µ¿ÀÛÇÑ´Ù
+	// TS skill use ï¿½Ìºï¿½Æ®ï¿½ï¿½ ï¿½Æ¹ï¿½Å¸ï¿½ï¿½ ï¿½ï¿½Ã¼ï¿½ï¿½ ï¿½ï¿½ì¸¸ ï¿½ï¿½ï¿½ï¿½ï¿½Ñ´ï¿½
 	if ( GetNtlSLGlobal()->GetSobAvatar()->GetSerialID() != hSource )
 	{
 		return;
@@ -3886,7 +3886,7 @@ void CNtlSLEventGenerator::TSSkillUse_Dash( SERIAL_HANDLE hSource )
 
 void CNtlSLEventGenerator::TSSkillUse_Charging( SERIAL_HANDLE hSource )
 {
-	// TS skill use ÀÌº¥Æ®´Â ¾Æ¹ÙÅ¸°¡ ÁÖÃ¼ÀÏ °æ¿ì¸¸ µ¿ÀÛÇÑ´Ù
+	// TS skill use ï¿½Ìºï¿½Æ®ï¿½ï¿½ ï¿½Æ¹ï¿½Å¸ï¿½ï¿½ ï¿½ï¿½Ã¼ï¿½ï¿½ ï¿½ï¿½ì¸¸ ï¿½ï¿½ï¿½ï¿½ï¿½Ñ´ï¿½
 	if ( GetNtlSLGlobal()->GetSobAvatar()->GetSerialID() != hSource )
 	{
 		return;
@@ -3907,7 +3907,7 @@ void CNtlSLEventGenerator::TSSkillUse_Charging( SERIAL_HANDLE hSource )
 
 void CNtlSLEventGenerator::TSSkillUse_Skill( SERIAL_HANDLE hSource, SSkillStuff* pSkillStuff, CNtlAttackData* pAttackData )
 {
-	// TS skill use ÀÌº¥Æ®´Â ¾Æ¹ÙÅ¸°¡ ÁÖÃ¼ÀÏ °æ¿ì¸¸ µ¿ÀÛÇÑ´Ù
+	// TS skill use ï¿½Ìºï¿½Æ®ï¿½ï¿½ ï¿½Æ¹ï¿½Å¸ï¿½ï¿½ ï¿½ï¿½Ã¼ï¿½ï¿½ ï¿½ï¿½ì¸¸ ï¿½ï¿½ï¿½ï¿½ï¿½Ñ´ï¿½
 	if ( GetNtlSLGlobal()->GetSobAvatar()->GetSerialID() != hSource )
 	{
 		return;
@@ -3939,7 +3939,7 @@ void CNtlSLEventGenerator::TSSkillUse_Skill( SERIAL_HANDLE hSource, SSkillStuff*
 
 void CNtlSLEventGenerator::TSSkillUse_HTB( SERIAL_HANDLE hSource, SERIAL_HANDLE hTarget, RwUInt32 uiSkillTblId )
 {
-	// TS skill use ÀÌº¥Æ®´Â ¾Æ¹ÙÅ¸°¡ ÁÖÃ¼ÀÏ °æ¿ì¸¸ µ¿ÀÛÇÑ´Ù
+	// TS skill use ï¿½Ìºï¿½Æ®ï¿½ï¿½ ï¿½Æ¹ï¿½Å¸ï¿½ï¿½ ï¿½ï¿½Ã¼ï¿½ï¿½ ï¿½ï¿½ì¸¸ ï¿½ï¿½ï¿½ï¿½ï¿½Ñ´ï¿½
 	if ( GetNtlSLGlobal()->GetSobAvatar()->GetSerialID() != hSource )
 	{
 		return;
@@ -4205,7 +4205,7 @@ void CNtlSLEventGenerator::TObjectUpdateState( SERIAL_HANDLE hSerialId, TBLIDX t
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 /**
-* Æ®¸®°Å ¿ÀºêÁ§Æ® ½ºÄ«¿ìÅÍ ¿¬Ãâ °ü·Ã
+* Æ®ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ® ï¿½ï¿½Ä«ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 */
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -5080,7 +5080,7 @@ void CNtlSLEventGenerator::BroadMsgNfy_Emergency( std::wstring& wstrSpeech )
 {
 	sBROAD_MSG_DATA sBroadMsgData;
 
-	// ÃßÈÄ Å×ÀÌºí·Î »¬Áö ¸»Áö ÅäÀÇ ÇÊ¿ä ( ÇöÀç´Â ÇÏµåÄÚµù )
+	// ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ìºï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ê¿ï¿½ ( ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ïµï¿½ï¿½Úµï¿½ )
 	//////////////////////////////////////////////////////////////////////////
 	sBroadMsgData.eUIDirType = eBROAD_MSG_UI_DIR_TYPE_WARNING;
 	sBroadMsgData.eUIShowHideType = eBROAD_MSG_UI_SHOWHIDE_DIR_TYPE_FADE_SLIDE;

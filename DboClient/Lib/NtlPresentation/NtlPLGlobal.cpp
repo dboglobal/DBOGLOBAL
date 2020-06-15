@@ -27,7 +27,7 @@ std::string					CNtlPLGlobal::m_strAppPath = "";
 
 RwBool						CNtlPLGlobal::m_bCollObjVisible = FALSE;
 RwReal						CNtlPLGlobal::m_fDistFiterFrequency = 2.0f;	
-RwReal						CNtlPLGlobal::m_fDistFiterObjFrequency = 1.0f;	// ¿ÀºêÁ§Æ® ÆäÀÌµå ºí·»µù Å¸ÀÓ
+RwReal						CNtlPLGlobal::m_fDistFiterObjFrequency = 1.0f;	// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ® ï¿½ï¿½ï¿½Ìµï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Å¸ï¿½ï¿½
 RwBool						CNtlPLGlobal::m_bWorldTerrainVisible = TRUE;
 RwBool						CNtlPLGlobal::m_bWorldSkyVisible = TRUE;
 RwBool						CNtlPLGlobal::m_bCharacterUpdateVisible = FALSE;
@@ -38,9 +38,10 @@ RwBool						CNtlPLGlobal::m_UseTerrainPVSMode = TRUE;
 RwUInt32					CNtlPLGlobal::m_uiRenderFlag = 0x00000000;
 RwBool						CNtlPLGlobal::m_IsMinimapRendering = FALSE;
 RwUInt32					CNtlPLGlobal::m_uiMinimapLayer = NTL_PLEFLAG_MINIMAP_LAYER_NONE;
-RwBool						CNtlPLGlobal::m_bObjectRender = TRUE;              ///< Object Render À¯¹« ÇÃ·¡±×
+RwBool						CNtlPLGlobal::m_bObjectRender = TRUE;              ///< Object Render ï¿½ï¿½ï¿½ï¿½ ï¿½Ã·ï¿½ï¿½ï¿½
 RwBool						CNtlPLGlobal::m_bRenderScouter = TRUE;
-RwBool          		    CNtlPLGlobal::m_bEntityNotCulling = FALSE;
+RwBool          		    CNtlPLGlobal::m_bEntityNotCulling = TRUE;
+RwBool						CNtlPLGlobal::m_bItemDropDisplay;
 						
 RwReal						CNtlPLGlobal::m_fIndoorPlaneHeight = 0.0f;
 

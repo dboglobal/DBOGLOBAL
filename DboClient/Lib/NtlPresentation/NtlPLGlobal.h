@@ -2,7 +2,7 @@
  *
  * File			: NtlPLGlobal.h
  * Author		: HyungSuk, Jang
- * Copyright	: (ÁÖ)NTL
+ * Copyright	: (ï¿½ï¿½)NTL
  * Date			: 2005. 8. 11	
  * Abstract		: Presentation layer global variable class
  *****************************************************************************
@@ -25,8 +25,8 @@ extern RwReal g_fCharScheduleTime;
 
 /**
  * \ingroup NtlPresentation
- * global data ÀÚ·á±¸Á¶.
- * renderware RpWorld¿Í RwCamera´Â ¸¹Àº °÷À¸·Î »ç¿ëÇÏ¹Ç·Î, Àü¿ªÀ¸·Î ÂüÁ¶ÇÒ ¼ö ÀÖ°Ô ¸¸µé¾ú´Ù.
+ * global data ï¿½Ú·á±¸ï¿½ï¿½.
+ * renderware RpWorldï¿½ï¿½ RwCameraï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ï¹Ç·ï¿½, ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½Ö°ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½.
  *
  */
 
@@ -35,19 +35,19 @@ class CNtlPLGlobal
 {
 public:
 
-	static RpWorld*					m_pRpWorld;						/* ÇöÀç active µÈ RpWorld pointer **/
-	static RwCamera*				m_RwCamera;						/* ÇöÀç active µÈ RwCamera pointer **/
+	static RpWorld*					m_pRpWorld;						/* ï¿½ï¿½ï¿½ï¿½ active ï¿½ï¿½ RpWorld pointer **/
+	static RwCamera*				m_RwCamera;						/* ï¿½ï¿½ï¿½ï¿½ active ï¿½ï¿½ RwCamera pointer **/
 
-	// ÀÎµµ¾î
-	static RpWorldSector*			m_RpWorldSector;				/* ÇöÀç active µÈ RpWorldSector pointer **/
+	// ï¿½Îµï¿½ï¿½ï¿½
+	static RpWorldSector*			m_RpWorldSector;				/* ï¿½ï¿½ï¿½ï¿½ active ï¿½ï¿½ RpWorldSector pointer **/
 
-	static RwV3d					m_vZeroV3;						/* ÃÊ±âÈ­ µÈ vector º¯¼ö **/
-	static RwMatrix					m_matIden;						/* ÃÊ±âÈ­ µÈ matrix º¯¼ö **/
+	static RwV3d					m_vZeroV3;						/* ï¿½Ê±ï¿½È­ ï¿½ï¿½ vector ï¿½ï¿½ï¿½ï¿½ **/
+	static RwMatrix					m_matIden;						/* ï¿½Ê±ï¿½È­ ï¿½ï¿½ matrix ï¿½ï¿½ï¿½ï¿½ **/
 	static RwV3d					m_vIdenV3;
 	static RwV3d					m_vXAxisV3;
 	static RwV3d					m_vYAxisV3;
 	static RwV3d					m_vZAxisV3;
-	static RwMatrix					m_matNameBox;					/* name box matrix º¯¼ö */
+	static RwMatrix					m_matNameBox;					/* name box matrix ï¿½ï¿½ï¿½ï¿½ */
 
 	static std::string				m_strAppPath;
 	static RwBool					m_bCollObjVisible;				/* collision object rendering on/off flag */
@@ -55,30 +55,30 @@ public:
 	static RwReal					m_fDistFiterObjFrequency;		/* object distance fade in/out filtering update frequency */
 	static RwBool					m_bWorldTerrainVisible;			/* world terrain visible on/off */
 	static RwBool					m_bWorldSkyVisible;				/* world Sky visible on/off */
-	static RwBool					m_bDecalRender;					// Decal Render on/Off	 - Decal Test ¿ë
-    static RwBool					m_bCharacterUpdateVisible;		///< Ä³¸¯ÅÍ°¡ VisibleÀÎ °æ¿ì¿¡¸¸ UdpateÇÑ´Ù´Â Flag (¸ÊÅø¿¡¼­ »ç¿ë)
-	static RwReal					m_fLensFlareForDNRatio;			///< D&NÀÌ ÀÛ¿ëÇÒ¶§ Lens Flare°¡ ¾ó¸¶¸¸Å­ÀÇ ¿µÇâÀ» ¹ÞÀ»ÁöÀÇ ¹èÀ²
+	static RwBool					m_bDecalRender;					// Decal Render on/Off	 - Decal Test ï¿½ï¿½
+    static RwBool					m_bCharacterUpdateVisible;		///< Ä³ï¿½ï¿½ï¿½Í°ï¿½ Visibleï¿½ï¿½ ï¿½ï¿½ì¿¡ï¿½ï¿½ Udpateï¿½Ñ´Ù´ï¿½ Flag (ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½)
+	static RwReal					m_fLensFlareForDNRatio;			///< D&Nï¿½ï¿½ ï¿½Û¿ï¿½ï¿½Ò¶ï¿½ Lens Flareï¿½ï¿½ ï¿½ó¸¶¸ï¿½Å­ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 	
 	
 	// Cz : 08.1.31
-	static CNtlPLEntity*			m_pWHEntity;					// world height °¡ object À§¿¡ ÀÖ´Â°¡? // Bool Çü ´ë½Å Entity·Î º¯°æ.
+	static CNtlPLEntity*			m_pWHEntity;					// world height ï¿½ï¿½ object ï¿½ï¿½ï¿½ï¿½ ï¿½Ö´Â°ï¿½? // Bool ï¿½ï¿½ ï¿½ï¿½ï¿½ Entityï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½.
 	
 	
-	static RwBool					m_UseTerrainPVSMode;			// terrainÀÇ PVS data »ç¿ë À¯¹«
+	static RwBool					m_UseTerrainPVSMode;			// terrainï¿½ï¿½ PVS data ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 	static RwUInt32					m_uiRenderFlag;
 	static RwBool					m_IsMinimapRendering;
 	static RwUInt32					m_uiMinimapLayer;
-	static std::vector<std::string> m_vecPathMinimapObject;			// ¹Ì´Ï¸Ê Ãâ·Â ½Ã Á¦°ÅµÇ¾î¾ß ÇÒ Object List. ÀÓ½Ã·Î »ç¿ëÇÑ´Ù.
+	static std::vector<std::string> m_vecPathMinimapObject;			// ï¿½Ì´Ï¸ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ÅµÇ¾ï¿½ï¿½ ï¿½ï¿½ Object List. ï¿½Ó½Ã·ï¿½ ï¿½ï¿½ï¿½ï¿½Ñ´ï¿½.
 
-    static RwBool					m_bObjectRender;				///< Object Render À¯¹« ÇÃ·¡±×
+    static RwBool					m_bObjectRender;				///< Object Render ï¿½ï¿½ï¿½ï¿½ ï¿½Ã·ï¿½ï¿½ï¿½
 
 	static D3DMATRIX				m_mD3D9IdentityMatrix;
-    static RwBool					m_bRenderScouter;				///< ½ºÄ«¿ìÅÍ ·»´õ¸µ À¯¹« ÇÃ·¡±×
-    static RwBool					m_bEntityNotCulling;            ///< Entity ÄÃ¸µ ¾ÈÇÒ¶§ »ç¿ëÇÏ´Â ÇÃ·¡±×
+    static RwBool					m_bRenderScouter;				///< ï¿½ï¿½Ä«ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ã·ï¿½ï¿½ï¿½
+    static RwBool					m_bEntityNotCulling;            ///< Entity ï¿½Ã¸ï¿½ ï¿½ï¿½ï¿½Ò¶ï¿½ ï¿½ï¿½ï¿½ï¿½Ï´ï¿½ ï¿½Ã·ï¿½ï¿½ï¿½
 
-	static RwReal					m_fIndoorPlaneHeight;			///< Indoor¿¡¼­ »ç¿ëÇÏ´Â ÁöÇü Æò¸é ³ôÀÌ.
+	static RwReal					m_fIndoorPlaneHeight;			///< Indoorï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ï´ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½.
 
-	static RwUInt16					m_uiRenderFrame;				///< Culling¿¡¼­ »ç¿ë µÇ´Â RenderFrame
+	static RwUInt16					m_uiRenderFrame;				///< Cullingï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½Ç´ï¿½ RenderFrame
 
 	static RwUInt32					m_uiCullTestCnt;
 	static RwUInt32					m_uiCullTestAtomicCnt;
@@ -87,36 +87,39 @@ public:
 	// Test PVS Multi Layer
 	static RwInt32					m_iCurrentPVSLayer;
 
+	static RwBool					m_bItemDropDisplay;
+
+
    
 public:
 
 	/**
-	*  Initialize ÇÔ¼ö.
+	*  Initialize ï¿½Ô¼ï¿½.
 	*  \see Terminate
 	*/
 	static void Init(void);
 
 	/**
-	*  Terminate ÇÔ¼ö.
+	*  Terminate ï¿½Ô¼ï¿½.
 	*  \see Init
 	*/
 	static void Terminate(void);
 
 	/**
-	*  RpWorld¸¦ settingÇÏ´Â ÇÔ¼ö.
+	*  RpWorldï¿½ï¿½ settingï¿½Ï´ï¿½ ï¿½Ô¼ï¿½.
 	*  \param pRpWorld 
 	*/
 	static void SetActiveWorld(const RpWorld *pRpWorld);
 
 	/**
-	*  RwCamera¸¦ settingÇÏ´Â ÇÔ¼ö.
+	*  RwCameraï¿½ï¿½ settingï¿½Ï´ï¿½ ï¿½Ô¼ï¿½.
 	*  \param pRwCamera
 	*/
 	static void SetActiveCamera(const RwCamera *pRwCamera);
 
 	/**
-	*  SABER¿¡¼­ Minimap Ãâ·Â ½Ã Ãâ·ÂÇÏÁö ¸»¾Æ¾ß ÇÒ Object List¸¦ Load ÇÑ´Ù.
-	*  ÀÌ ÇÔ¼ö ¹× m_strPathMiniMapObject º¯¼ö´Â ÃßÈÄ Minimap ±âÈ¹¿¡ µû¶ó »èÁ¦ µÉ ¼ö ÀÖ´Ù.
+	*  SABERï¿½ï¿½ï¿½ï¿½ Minimap ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Æ¾ï¿½ ï¿½ï¿½ Object Listï¿½ï¿½ Load ï¿½Ñ´ï¿½.
+	*  ï¿½ï¿½ ï¿½Ô¼ï¿½ ï¿½ï¿½ m_strPathMiniMapObject ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ Minimap ï¿½ï¿½È¹ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ ï¿½Ö´ï¿½.
 	*/
 	static void	LoadMinimapPassObjectList(const RwChar* pFilename);
 };

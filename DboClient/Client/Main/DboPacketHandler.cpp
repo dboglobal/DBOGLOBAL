@@ -1,9 +1,9 @@
 /*****************************************************************************
 * File			: DboPackethandler.cpp
 * Author		: Hong sungbock
-* Copyright		: (ÁÖ)NTL
+* Copyright		: (ï¿½ï¿½)NTL
 * Date			: 2007. 1. 16
-* Abstract		: ÆÐÅ¶ ÇÚµé·¯ ¸ðÀ½
+* Abstract		: ï¿½ï¿½Å¶ ï¿½Úµé·¯ ï¿½ï¿½ï¿½ï¿½
 *****************************************************************************
 * Desc         : 
 *****************************************************************************/
@@ -41,6 +41,9 @@
 #include "NtlPLResourceManager.h"
 #include "NtlPLSceneManager.h"
 #include "NtlPLEventGenerator.h"
+
+// presentation
+#include "NtlPLGuiManager.h"
 
 // simulation
 #include "NtlSLDef.h"
@@ -94,7 +97,7 @@
 
 #include "GMPopupGui.h"
 #include "GMQuickSlotGui.h"
-
+#include "DropItemInfoGui.h"
 // discord
 #ifdef USE_DISCORD
 #include "Discord.h"
@@ -153,7 +156,7 @@ void PacketHandler_GSObjectCreate(void *pPacket)
 		sNPC_BRIEF *pNpcBrief = &(pObjCreate->sObjectInfo.npcBrief);
 		sCHARSTATE *pCharState = &(pObjCreate->sObjectInfo.npcState);
 
-		// dragon ball camera ¿¬Ãâ.
+		// dragon ball camera ï¿½ï¿½ï¿½ï¿½.
 		if(GetNtlWorldConcept()->GetWorldConceptController(WORLD_PLAY_DRAGONBALL_COLLECT) && 
 			Logic_IsDragonBallNPC(pNpcBrief->tblidx))
 		{
@@ -163,11 +166,11 @@ void PacketHandler_GSObjectCreate(void *pPacket)
 			CNtlSLEventGenerator::SobNpcCreate(SLCLASS_NPC, pObjCreate->handle, vLoc, vDir, pNpcBrief, pCharState, FALSE);
 			GetNtlResourceManager()->SetLoadScheduling(bScheduling);
 
-            // ÀÚ½ÅÀÌ ¼ÒÈ¯ÇÑ ¿ë½ÅÀÏ¶§¸¸ Ä«¸Þ¶ó ¿¬ÃâÀ» ÇÑ´Ù. (2007.9.10 by agebreak)
+            // ï¿½Ú½ï¿½ï¿½ï¿½ ï¿½ï¿½È¯ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ï¶ï¿½ï¿½ï¿½ Ä«ï¿½Þ¶ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ñ´ï¿½. (2007.9.10 by agebreak)
             CNtlWorldConceptDBC* pDBC = (CNtlWorldConceptDBC*)GetNtlWorldConcept()->GetWorldConceptController(WORLD_PLAY_DRAGONBALL_COLLECT);
             if(pDBC->IsMyDragon())
             {
-			    // ¿©±â´Ù°¡... dragon ball camera¸¦ ¿¬ÃâÇÑ´Ù.
+			    // ï¿½ï¿½ï¿½ï¿½Ù°ï¿½... dragon ball cameraï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ñ´ï¿½.
 			    CNtlSLEventGenerator::CameraDB(pObjCreate->handle);
             }
 		}
@@ -199,7 +202,7 @@ void PacketHandler_GSObjectCreate(void *pPacket)
 
 		sCHARSTATE *pCharState = &(pObjCreate->sObjectInfo.summonPetState);
 		
-		// ÀÌ ºÎºÐ Àá½Ã °ËÅä
+		// ï¿½ï¿½ ï¿½Îºï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 		CNtlSobAvatar *pSobAvatar = GetNtlSLGlobal()->GetSobAvatar();
 		if(pSobAvatar->GetSerialID() == pObjCreate->sObjectInfo.summonPetBrief.hOwner)
 		{
@@ -211,7 +214,7 @@ void PacketHandler_GSObjectCreate(void *pPacket)
 			CNtlSLEventGenerator::SobPetCreate(SLCLASS_PET, pSummonPetInfo->uiSerialId, vLoc, vDir, TRUE, uPetBrief, pCharState);
 			CNtlSLEventGenerator::SobSummonPetSpawnSync(pSummonPetInfo->sCharPf.hOwner, pSummonPetInfo->uiSerialId);
 
-			// ÀÚ½ÅÀÇ PetÀÎ°æ¿ì¿¡¸¸ Pet UI¸¦ ¶Ù¿î´Ù.
+			// ï¿½Ú½ï¿½ï¿½ï¿½ Petï¿½Î°ï¿½ì¿¡ï¿½ï¿½ Pet UIï¿½ï¿½ ï¿½Ù¿ï¿½ï¿½.
 			CDboEventGenerator::SummonPet(TRUE, pSummonPetInfo->uiSerialId);
 		}
 		else
@@ -235,6 +238,24 @@ void PacketHandler_GSObjectCreate(void *pPacket)
 		void* pOptionSet = reinterpret_cast<void*>(&pObjCreate->sObjectInfo.itemOptionSet);
 
 		CNtlSLEventGenerator::SobWorldItemCreate( SLCLASS_WORLD_ITEM, pObjCreate->handle, vLoc, OBJTYPE_DROPITEM, pBrief, pState, pOptionSet);
+		CNtlSob* pObj = GetNtlSobManager()->GetSobObject( pObjCreate->handle );
+		CNtlSobWorldItem* pDropObject = reinterpret_cast<CNtlSobWorldItem*>( pObj );
+
+		bool isOptionsShowAllItemsEnabled = CNtlPLGlobal::m_bItemDropDisplay;
+		if(isOptionsShowAllItemsEnabled){
+
+			CDropItemInfoGui* m_pDropItemInfoGui = NTL_NEW CDropItemInfoGui(pObjCreate->handle, pDropObject, CNtlPLGlobal::m_bItemDropDisplay, "DropItemInfoGui");
+			
+			if( !m_pDropItemInfoGui->Create() )
+			{
+				m_pDropItemInfoGui->Destroy();
+				NTL_DELETE( m_pDropItemInfoGui );
+			}
+			CNtlPLGuiManager::GetInstance()->AddGui( m_pDropItemInfoGui );
+			GetDialogManager()->RegistDialog( DIALOG_DROPITEM_INFO, m_pDropItemInfoGui, &CDropItemInfoGui::SwitchDialog );
+		}
+	
+
 	}
 	else if( pObjCreate->sObjectInfo.objType == OBJTYPE_DROPMONEY )
 	{
@@ -281,7 +302,7 @@ void PacketHandler_GSObjectDestroy(void *pPacket)
 
 	if(pSobAvatar->GetSerialID() != pObjDestroy->handle)
 	{
-		// ÀÚ±â PetÀÎ °æ¿ì¿¡¸¸ UI ÀÌº¥Æ®¸¦ º¸³½´Ù.
+		// ï¿½Ú±ï¿½ Petï¿½ï¿½ ï¿½ï¿½ì¿¡ï¿½ï¿½ UI ï¿½Ìºï¿½Æ®ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½.
 		if(pSobObj && pSobObj->GetClassID() == SLCLASS_PET && pSobObj->GetOwnerID() == pSobAvatar->GetSerialID())
 		{
 			CDboEventGenerator::SummonPet(FALSE, pObjDestroy->handle);
@@ -394,8 +415,8 @@ void PacketHandler_GSCharTeleportRes(void *pPacket)
 			CDboEventGenerator::DialogEvent(DIALOGEVENT_NPC_BYEBYE, DIALOG_UNKNOWN, edType);
 		}
 
-		// teleport Àü¿¡ Á¤º¸¸¦ clear ÇÑ´Ù.
-		// Á¤º¸ clear
+		// teleport ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ clear ï¿½Ñ´ï¿½.
+		// ï¿½ï¿½ï¿½ï¿½ clear
 		Logic_SobTarget(INVALID_SERIAL_ID, INVALID_BYTE);
 		//CBalloonManager::GetInstance()->RemoveAllBalloonData();
 		GetNtlGameCameraManager()->EnableUpdateData(FALSE);
@@ -406,14 +427,14 @@ void PacketHandler_GSCharTeleportRes(void *pPacket)
 			GetNtlDTCinematicManager()->Clear();
 		CNtlSLEventGenerator::SobRevivalNotify();
 
-		// »õ·Î¿î ¼­¹ö·Î ¿Å°Ü¾ß ÇÏ´Â°¡?
+		// ï¿½ï¿½ï¿½Î¿ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Å°Ü¾ï¿½ ï¿½Ï´Â°ï¿½?
 		if(pTeleport->bIsToMoveAnotherServer)
 		{
 			GetDboGlobal()->GetGamePacketGenerator()->SendServerChangeReq();
 		}
 		else
 		{
-			// »õ·Î¿î Á¤º¸ setting.
+			// ï¿½ï¿½ï¿½Î¿ï¿½ ï¿½ï¿½ï¿½ï¿½ setting.
 
 			SAvatarInfo *pAvatarInfo = GetNtlSLGlobal()->GetAvatarInfo(); 
 
@@ -530,13 +551,13 @@ void PacketHandler_GSItemReplace(void *pPacket)
 	sGU_ITEM_REPLACE* pItemReplace = (sGU_ITEM_REPLACE*)pPacket;
 	CNtlSobAvatar *pSobAvatar = GetNtlSLGlobal()->GetSobAvatar();
 
-	// »èÁ¦ÇØÁÖ±â Àü¿¡ TableÀ» °¡Áö°í ¿Í¼­ È®ÀÎÇØ¾ß ÇÑ´Ù.
+	// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö±ï¿½ ï¿½ï¿½ï¿½ï¿½ Tableï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Í¼ï¿½ È®ï¿½ï¿½ï¿½Ø¾ï¿½ ï¿½Ñ´ï¿½.
 	sITEM_TBLDAT* pItemTblDat = Logic_GetItemDataFromSob( pItemReplace->hDeleteItem );
 	
 	// Gamble
 	if( pItemTblDat->byItem_Type == ITEM_TYPE_GAMBLE )
 	{
-		// ¿¬Ãâ ÇÃ·¡½¬ÀÇ ÀÌ¸§
+		// ï¿½ï¿½ï¿½ï¿½ ï¿½Ã·ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ì¸ï¿½
 		CHAR acBuffer[DBO_MAX_LENGTH_ITEM_ICON_NAME + 1];
 		sprintf_s( acBuffer, DBO_MAX_LENGTH_ITEM_ICON_NAME + 1, "%s", pItemTblDat->szIcon_Name );
 		CHAR* pcNewExtension = ".swf";
@@ -547,17 +568,17 @@ void PacketHandler_GSItemReplace(void *pPacket)
 			return;
 		}
 
-		// È®ÀåÀÚ .png -> .swf º¯°æ
+		// È®ï¿½ï¿½ï¿½ï¿½ .png -> .swf ï¿½ï¿½ï¿½ï¿½
 		memcpy( pExtensionPos, pcNewExtension, strlen(pcNewExtension) * sizeof(CHAR) );
 
-		// ÆÄÀÏ ÀÌ¸§ ¾Õ¿¡ ÀÎ½ÄÀÚ TB_Boom_
+		// ï¿½ï¿½ï¿½ï¿½ ï¿½Ì¸ï¿½ ï¿½Õ¿ï¿½ ï¿½Î½ï¿½ï¿½ï¿½ TB_Boom_
 		CHAR acBuffer2[DBO_MAX_LENGTH_ITEM_ICON_NAME +1 ];
 		sprintf_s( acBuffer2, DBO_MAX_LENGTH_ITEM_ICON_NAME+1, "TB_Boom_%s", acBuffer );
 
 		// Delete item
 		if( pItemReplace->byDeleteItemPlace >= CONTAINER_TYPE_BANK1 && pItemReplace->byDeleteItemPlace <= CONTAINER_TYPE_BANK4 )
 		{
-			// Ã¢°íÀÇ ¾ÆÀÌÅÛÀ» Áö¿î´Ù
+			// Ã¢ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½
 			CNtlSLEventGenerator::SobWarehouseItemDelete(pSobAvatar->GetSerialID(), pItemReplace->hDeleteItem, pItemReplace->byDeleteItemPlace, pItemReplace->byDeleteItemPos);
 		}
 		else
@@ -584,7 +605,7 @@ void PacketHandler_GSItemReplace(void *pPacket)
 		// Delete item
 		if( pItemReplace->byDeleteItemPlace >= CONTAINER_TYPE_BANK1 && pItemReplace->byDeleteItemPlace <= CONTAINER_TYPE_BANK4 )
 		{
-			// Ã¢°íÀÇ ¾ÆÀÌÅÛÀ» Áö¿î´Ù
+			// Ã¢ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½
 			CNtlSLEventGenerator::SobWarehouseItemDelete(pSobAvatar->GetSerialID(), pItemReplace->hDeleteItem, pItemReplace->byDeleteItemPlace, pItemReplace->byDeleteItemPos);
 		}
 		else
@@ -623,7 +644,7 @@ void PacketHandler_GSItemDelete(void *pPacket)
 	CNtlSobAvatar *pSobAvatar = GetNtlSLGlobal()->GetSobAvatar(); 
 	if( pItemDelRes->bySrcPlace >= CONTAINER_TYPE_BANK1 && pItemDelRes->bySrcPlace <= CONTAINER_TYPE_BANK4 )
 	{
-		// Ã¢°íÀÇ ¾ÆÀÌÅÛÀ» Áö¿î´Ù
+		// Ã¢ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½
 		CNtlSLEventGenerator::SobWarehouseItemDelete(pSobAvatar->GetSerialID(), pItemDelRes->hSrcItem, pItemDelRes->bySrcPlace, pItemDelRes->bySrcPos);
 	}
 	else
@@ -760,7 +781,7 @@ void PacketHandler_GSItemRepair(void *pPacket)
 
 void PacketHandler_GSItemRepairAll(void *pPacket)
 {
-	// ¼­¹ö·ÎºÎÅÍ ÀÀ´äÀ» ¹Þ¾Ò´Ù
+	// ï¿½ï¿½ï¿½ï¿½ï¿½Îºï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Þ¾Ò´ï¿½
 	API_GetSLPacketLockManager()->Unlock(GU_ITEM_EQUIP_REPAIR_RES);
 
 	sGU_ITEM_EQUIP_REPAIR_RES* pResult = (sGU_ITEM_EQUIP_REPAIR_RES*)pPacket;
@@ -770,7 +791,7 @@ void PacketHandler_GSItemRepairAll(void *pPacket)
 		return;
 	}
 
-	// %d Á¦´Ï¸¦ ÁöºÒÇÏ°í ¸ðµç ¾ÆÀÌÅÛÀ» ¼ö¸®ÇÏ¿´½À´Ï´Ù
+	// %d ï¿½ï¿½ï¿½Ï¸ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï°ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï¿ï¿½ï¿½ï¿½ï¿½Ï´ï¿½
 	GetAlarmManager()->FormattedAlarmMessage("DST_REPAIR_ALL_ITEM", FALSE, NULL, Logic_FormatZeni(pResult->dwSpendedZenny));
 
 	CDboEventGenerator::DialogEvent(DIALOGEVENT_REPAIR_ALL, DIALOG_UNKNOWN, DIALOG_NPCSHOP);
@@ -1268,7 +1289,7 @@ void PacketHandler_GSQuestItemCreate(void *pPacket)
 
 	CNtlSLEventGenerator::SobQuestItemAdd( GetNtlSLGlobal()->GetSobAvatar()->GetSerialID(), pCreate->qItemTblidx, pCreate->byPos, pCreate->byCurCount );
 
-	// ¸Þ¼¼Áö Ãâ·Â
+	// ï¿½Þ¼ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½
 	std::wstring wstrName;	
 	CTextTable* pQuestItemTextTable = API_GetTableContainer()->GetTextAllTable()->GetQuestItemTbl();
 	sQUESTITEM_TBLDAT* pQuestItemData = reinterpret_cast<sQUESTITEM_TBLDAT*>( API_GetTableContainer()->GetQuestItemTable()->FindData( pCreate->qItemTblidx ) );
@@ -1282,7 +1303,7 @@ void PacketHandler_GSQuestItemUpdateNfy(void *pPacket)
 {
 	sGU_QUEST_ITEM_UPDATE_NFY* pUpdate = (sGU_QUEST_ITEM_UPDATE_NFY*)pPacket;
 
-	// ¸Þ¼¼Áö Ãâ·Â
+	// ï¿½Þ¼ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½
 	std::wstring wstrName;
 	CTextTable* pQuestItemTextTable = API_GetTableContainer()->GetTextAllTable()->GetQuestItemTbl();
 	CNtlSobQuestItemAttr* pQuestItemAttr = reinterpret_cast<CNtlSobQuestItemAttr*>( GetNtlSLGlobal()->GetSobAvatar()->GetQuestInventory()->GetQuestItemFromIdx( pUpdate->byPos )->GetSobAttr() );
@@ -1413,14 +1434,14 @@ void PacketHandler_GSCharDestMove(void *pPacket)
 {
 	sGU_CHAR_DEST_MOVE *pDestMove = (sGU_CHAR_DEST_MOVE*)pPacket;
 
-	//// Dest location counter´Â ¹Ýµå½Ã 1 ÀÌ»óÀÌ¾î¾ß ÇÑ´Ù
+	//// Dest location counterï¿½ï¿½ ï¿½Ýµï¿½ï¿½ 1 ï¿½Ì»ï¿½ï¿½Ì¾ï¿½ï¿½ ï¿½Ñ´ï¿½
 	//if ( 0 == pDestMove->byDestLocCount )
 	//{
 	//	DBO_FAIL( "A dest location counter must be one more." );
 	//	return;
 	//}
 
-	//// Dest location counter´Â ¹Ýµå½Ã DBO_MAX_NEXT_DEST_LOC_COUNT º¸´Ù ÀÛ°Å³ª °°¾Æ¾ß ÇÑ´Ù
+	//// Dest location counterï¿½ï¿½ ï¿½Ýµï¿½ï¿½ DBO_MAX_NEXT_DEST_LOC_COUNT ï¿½ï¿½ï¿½ï¿½ ï¿½Û°Å³ï¿½ ï¿½ï¿½ï¿½Æ¾ï¿½ ï¿½Ñ´ï¿½
 	//if ( pDestMove->byDestLocCount > DBO_MAX_NEXT_DEST_LOC_COUNT )
 	//{
 	//	DBO_FAIL( "A dest location counter must be less equal than DBO_MAX_NEXT_DEST_LOC_COUNT." );
@@ -1905,7 +1926,7 @@ void PacketHandler_GUSkillRpBonusSettingRes( void *pPacket )
 		return;
 	}
 
-	// ¼³Á¤ÀÌ Àû¿ëµÇ¾ú´Ù.
+	// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ç¾ï¿½ï¿½ï¿½.
 	CNtlSLEventGenerator::RpBonusSetupRes( pResult->skillId, pResult->skillIndex, pResult->byRpBonusType, pResult->bIsRpBonusAuto );
 	GetAlarmManager()->AlarmMessage( "DST_SKILL_ABILITY_ACCEPT" );
 }
@@ -1949,7 +1970,7 @@ void PacketHandler_GSBuffRegisted(void *pPacket)
 	CNtlSLEventGenerator::SobBuffAdd(pBuffReg->hHandle, pBuffReg->buffInfo.buffIndex, pBuffReg->buffInfo.bySourceType, pBuffReg->buffInfo.sourceTblidx, 
 		pBuffReg->buffInfo.dwTimeRemaining, pBuffReg->buffInfo.dwInitialDuration, pBuffReg->buffInfo.aBuffParameter);
 
-	// Fake BuffÀÇ Ã³¸®	
+	// Fake Buffï¿½ï¿½ Ã³ï¿½ï¿½	
 	if (pBuffReg->hHandle != Logic_GetAvatarHandle())
 	{
 		CNtlSLEventGenerator::SobFakeBuffAdd(pBuffReg->hHandle, pBuffReg->buffInfo.buffIndex, pBuffReg->buffInfo.bySourceType, pBuffReg->buffInfo.sourceTblidx, pBuffReg->buffInfo.dwTimeRemaining, pBuffReg->buffInfo.dwInitialDuration, pBuffReg->buffInfo.aBuffParameter);
@@ -1970,7 +1991,7 @@ void PacketHandler_GSBuffDropped(void *pPacket)
 
 	CNtlSLEventGenerator::SobBuffDrop(pBuffDrop->hHandle, pBuffDrop->buffIndex, pBuffDrop->bySourceType);
 
-	// Fake BuffÀÇ Ã³¸®	
+	// Fake Buffï¿½ï¿½ Ã³ï¿½ï¿½	
 	if( pBuffDrop->hHandle != Logic_GetAvatarHandle() )
 		CNtlSLEventGenerator::SobFakeBuffDrop(pBuffDrop->hHandle, pBuffDrop->buffIndex, pBuffDrop->bySourceType);
 }
@@ -1981,7 +2002,7 @@ void PacketHandler_GSBuffRefreshAll(void *pPacket)
 
 	CNtlSLEventGenerator::SobBuffRefreshAll( pBuffRefreshAll->hHandle, pBuffRefreshAll->byCount, pBuffRefreshAll->aBuffInfo );
 
-	// Fake BuffÀÇ Ã³¸®	
+	// Fake Buffï¿½ï¿½ Ã³ï¿½ï¿½	
 	if( pBuffRefreshAll->hHandle != Logic_GetAvatarHandle() )
 		CNtlSLEventGenerator::SobFakeBuffRefreshAll(pBuffRefreshAll->hHandle, pBuffRefreshAll->byCount, pBuffRefreshAll->aBuffInfo);
 }
@@ -2011,7 +2032,7 @@ void PacketHandler_GSCharUpdateLp(void *pPacket)
 	CNtlParty* pParty = reinterpret_cast<CNtlParty*>(GetNtlSLGlobal()->GetSobAvatar()->GetParty());
 	if( pParty->IsMember(pUpdateLp->handle) )
 	{
-		// ³ªÀÇ ÆÄÆ¼¿øÀÌ¶ó¸é ¾÷µ¥ÀÌÆ®
+		// ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Æ¼ï¿½ï¿½ï¿½Ì¶ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ®
 		CNtlSLEventGenerator::PartyUpdate(PMT_LP, pUpdateLp->handle, pUpdateLp->curLp, pUpdateLp->maxLp);
 	}
 
@@ -2041,7 +2062,7 @@ void PacketHandler_GSCharUpdateEp(void *pPacket)
 	CNtlParty* pParty = reinterpret_cast<CNtlParty*>(GetNtlSLGlobal()->GetSobAvatar()->GetParty());
 	if( pParty->IsMember(pUpdateEp->handle) )
 	{
-		// ³ªÀÇ ÆÄÆ¼¿øÀÌ¶ó¸é ¾÷µ¥ÀÌÆ®
+		// ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Æ¼ï¿½ï¿½ï¿½Ì¶ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ®
 		CNtlSLEventGenerator::PartyUpdate(PMT_EP, pUpdateEp->handle, pUpdateEp->wCurEP, pUpdateEp->wMaxEP);
 	}
 
@@ -2049,7 +2070,7 @@ void PacketHandler_GSCharUpdateEp(void *pPacket)
 
 	if(pActor == NULL)
 	{
-		// avooo : ¸Ö¸® ¶³¾îÁ® ÀÖ´Â ÆÄÆ¼ÀÇ EP ¾÷µ¥ÀÌÆ®µµ ¿À±â¿¡ ÁÖ¼®Ã³¸® Çß½À´Ï´Ù.
+		// avooo : ï¿½Ö¸ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ö´ï¿½ ï¿½ï¿½Æ¼ï¿½ï¿½ EP ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ®ï¿½ï¿½ ï¿½ï¿½ï¿½â¿¡ ï¿½Ö¼ï¿½Ã³ï¿½ï¿½ ï¿½ß½ï¿½ï¿½Ï´ï¿½.
 		//NTL_ASSERTFAIL( "PacketHandler_GSCharUpdateRp => invalid handle (" << pUpdateEp->handle << ")" );
 		return;
 	}
@@ -2063,7 +2084,7 @@ void PacketHandler_GSCharUpdateLpEp(void* pPacket)
 	CNtlParty* pParty = reinterpret_cast<CNtlParty*>(GetNtlSLGlobal()->GetSobAvatar()->GetParty());
 	if( pParty->IsMember(pUpdateLpEp->handle) )
 	{
-		// ³ªÀÇ ÆÄÆ¼¿øÀÌ¶ó¸é ¾÷µ¥ÀÌÆ®
+		// ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Æ¼ï¿½ï¿½ï¿½Ì¶ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ®
 		CNtlSLEventGenerator::PartyUpdate(PMT_LP, pUpdateLpEp->handle, pUpdateLpEp->curLp, pUpdateLpEp->maxLp);		
 		CNtlSLEventGenerator::PartyUpdate(PMT_EP, pUpdateLpEp->handle, pUpdateLpEp->wCurEP, pUpdateLpEp->wMaxEP);
 	}
@@ -2095,7 +2116,7 @@ void PacketHandler_GSCharRefreshLpEp(void* pPacket)
 	//CNtlParty* pParty = reinterpret_cast<CNtlParty*>(GetNtlSLGlobal()->GetSobAvatar()->GetParty());
 	//if( pParty->IsMember(pRefreshLpEp->hSubject) )
 	//{
-	//	// ³ªÀÇ ÆÄÆ¼¿øÀÌ¶ó¸é ¾÷µ¥ÀÌÆ®
+	//	// ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Æ¼ï¿½ï¿½ï¿½Ì¶ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ®
 	//	CNtlSLEventGenerator::PartyUpdate(PMT_LP, pRefreshLpEp->hSubject, pRefreshLpEp->wCurLp, pRefreshLpEp->wMaxLp);		
 	//	CNtlSLEventGenerator::PartyUpdate(PMT_EP, pRefreshLpEp->hSubject, pRefreshLpEp->wCurEp, pRefreshLpEp->wMaxEp);
 	//}
@@ -2343,8 +2364,8 @@ void PacketHandler_GSCharUpdateZenny(void *pPacket)
 		RwUInt32 uiZenny = pUpdateState->dwZenny - Logic_GetZenny();
 		CDboEventGenerator::ZennyLootingEffect( uiZenny );
 
-        if(pUpdateState->byChangeType != ZENNY_CHANGE_TYPE_PICK &&    // PICKÀº PICK RES¿¡¼­ Ã³¸®ÇÑ´Ù.
-		   pUpdateState->byChangeType != ZENNY_CHANGE_TYPE_PARTY_PICK ) // ZENNY_CHANGE_TYPE_PARTY_PICK : GU_ZENNY_PICK_RES ¿¡¼­ Ã³¸®
+        if(pUpdateState->byChangeType != ZENNY_CHANGE_TYPE_PICK &&    // PICKï¿½ï¿½ PICK RESï¿½ï¿½ï¿½ï¿½ Ã³ï¿½ï¿½ï¿½Ñ´ï¿½.
+		   pUpdateState->byChangeType != ZENNY_CHANGE_TYPE_PARTY_PICK ) // ZENNY_CHANGE_TYPE_PARTY_PICK : GU_ZENNY_PICK_RES ï¿½ï¿½ï¿½ï¿½ Ã³ï¿½ï¿½
         {
 		    GetAlarmManager()->FormattedAlarmMessage( "DST_NOTIFY_GET_ZENNY", FALSE, NULL, Logic_FormatZeni(uiZenny) );
         }
@@ -2400,7 +2421,7 @@ void PacketHandler_GUCharUpdateHonor(void *pPacket)
 
 void PacketHandler_GSItemIdentificationRes(void *pPacket)
 {	
-	// ¹ÌÈ®ÀÎ ¾ÆÀÌÅÛ °¨Á¤ °á°ú
+	// ï¿½ï¿½È®ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½
 	sGU_ITEM_IDENTIFY_RES* pResult = (sGU_ITEM_IDENTIFY_RES*)pPacket;
 
 	API_GetSLPacketLockManager()->Unlock( GU_ITEM_IDENTIFY_RES );
@@ -2411,7 +2432,7 @@ void PacketHandler_GSItemIdentificationRes(void *pPacket)
 		return;
 	}
 
-	// ¾ÆÀÌÅÛ Update¿Í ÇÔ²² Effect
+	// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Updateï¿½ï¿½ ï¿½Ô²ï¿½ Effect
 	sITEM_DATA* pItemData = &pResult->sItemData;
 	CNtlSobAvatar* pSobAvatar = GetNtlSLGlobal()->GetSobAvatar();
 	CNtlSLEventGenerator::SobItemUpdate(pSobAvatar->GetSerialID(), pResult->hItemHandle, pItemData->itemNo, &pItemData->sOptionSet, pItemData->byPlace, pItemData->byPosition,
@@ -2419,13 +2440,13 @@ void PacketHandler_GSItemIdentificationRes(void *pPacket)
 		pItemData->byRestrictState, pItemData->awchMaker, pItemData->byDurationType, pItemData->nUseStartTime, pItemData->nUseEndTime);
 	CDboEventGenerator::ItemIdentifyEffect( TRUE, pResult->hItemHandle );
 
-	// ¾ÆÀÌÅÛ °¨Á¤ Äù½ºÆ®
+	// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Æ®
 	CNtlSLEventGenerator::TSItemIdentity();
 }
 
 void PacketHandler_GSScouterEquipCheckRes(void *pPacket)
 {
-	// PC Àåºñ º¸±â
+	// PC ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 	sGU_SCOUTER_EQUIP_CHECK_RES* pResult = (sGU_SCOUTER_EQUIP_CHECK_RES*)pPacket;
 
 	if( pResult && pResult->wResultCode != GAME_SUCCESS )
@@ -2478,7 +2499,7 @@ void PacketHandler_GSCharStateWrong(void *pPacket)
 		sGU_CHAR_STATE_WRONG *pStateWrong = (sGU_CHAR_STATE_WRONG*)pPacket;
 
 		RwChar chBuffer[1024];
-		sprintf_s(chBuffer, 1024, "opcode(%s - Çö »óÅÂ¿¡¼­ Ã³¸®ÇÒ ¼ö ¾ø´Â event), handle(%d) => send opcode(%s), server current state(%s)",
+		sprintf_s(chBuffer, 1024, "opcode(%s - ï¿½ï¿½ ï¿½ï¿½ï¿½Â¿ï¿½ï¿½ï¿½ Ã³ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ event), handle(%d) => send opcode(%s), server current state(%s)",
 			NtlGetPacketName(pStateWrong->wOpCode), pStateWrong->handle, NtlGetPacketName(pStateWrong->wPrevOPCode), NtlGetCharStateString(pStateWrong->byStateID) );
 
 		WCHAR wMsg[1024];
@@ -2493,7 +2514,7 @@ void PacketHandler_GSCharStateWrong(void *pPacket)
 	sGU_CHAR_STATE_WRONG *pStateWrong = (sGU_CHAR_STATE_WRONG*)pPacket;
 
 	RwChar chBuffer[1024];
-	sprintf_s(chBuffer, 1024, "opcode(%s - Çö »óÅÂ¿¡¼­ Ã³¸®ÇÒ ¼ö ¾ø´Â event), handle(%d) => send opcode(%s), server current state(%s)",
+	sprintf_s(chBuffer, 1024, "opcode(%s - ï¿½ï¿½ ï¿½ï¿½ï¿½Â¿ï¿½ï¿½ï¿½ Ã³ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ event), handle(%d) => send opcode(%s), server current state(%s)",
 		NtlGetPacketName(pStateWrong->wOpCode), pStateWrong->handle, NtlGetPacketName(pStateWrong->wPrevOPCode), NtlGetCharStateString(pStateWrong->byStateID) );
 
 	WCHAR wMsg[1024];
@@ -2712,7 +2733,7 @@ void PacketHandler_GSEffectAffected(void *pPacket)
 		}
 	}
 
-    // ¿ø±â Èí¼ö¸¦ À§ÇÑ Ã³¸®
+    // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ Ã³ï¿½ï¿½
     if(pSystemEffTblData->effectCode == ACTIVE_LP_STEAL_OVER_TIME || 
        pSystemEffTblData->effectCode == ACTIVE_EP_STEAL_OVER_TIME)
     {
@@ -2902,7 +2923,7 @@ void PacketHandler_GSNPCShopStartRes(void *pPacket)
 
 void PacketHandler_GSNPCShopBuyRes(void *pPacket)
 {
-	// ¼­¹ö·ÎºÎÅÍ ÀÀ´äÀ» ¹Þ¾Ò´Ù
+	// ï¿½ï¿½ï¿½ï¿½ï¿½Îºï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Þ¾Ò´ï¿½
 	API_GetSLPacketLockManager()->Unlock(GU_SHOP_BUY_RES);
 
 	sGU_SHOP_BUY_RES* pResult = (sGU_SHOP_BUY_RES*)pPacket;
@@ -2917,7 +2938,7 @@ void PacketHandler_GSNPCShopBuyRes(void *pPacket)
 
 void PacketHandler_GSNPCShopSellRes(void *pPacket)
 {
-	// ¼­¹ö·ÎºÎÅÍ ÀÀ´äÀ» ¹Þ¾Ò´Ù
+	// ï¿½ï¿½ï¿½ï¿½ï¿½Îºï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Þ¾Ò´ï¿½
 	API_GetSLPacketLockManager()->Unlock(GU_SHOP_SELL_RES);
 
 	sGU_SHOP_SELL_RES* pResult = (sGU_SHOP_SELL_RES*)pPacket;
@@ -2942,13 +2963,13 @@ void PacketHandler_GSNPCShopEndRes(void *pPacket)
 		return;
 	}
 
-	// »óÁ¡À» ´Ý´Â´Ù
+	// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ý´Â´ï¿½
 	CDboEventGenerator::ShopEvent(TRM_CLOSE, 0);
 }
 
 void PacketHandler_GSNPCEventShopStartRes(void *pPacket)
 {
-	// ÀÌº¥Æ® »óÁ¡ ½ÃÀÛ
+	// ï¿½Ìºï¿½Æ® ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 	API_GetSLPacketLockManager()->Unlock( GU_SHOP_EVENTITEM_START_RES );
 
 	sGU_SHOP_EVENTITEM_START_RES* pResult = (sGU_SHOP_EVENTITEM_START_RES*)pPacket;
@@ -2968,7 +2989,7 @@ void PacketHandler_GSNPCEventShopStartRes(void *pPacket)
 
 void PacketHandler_GSNPCEventShopBuyRes(void *pPacket)
 {
-	// ÀÌº¥Æ® »óÁ¡¿¡¼­ ±¸ÀÔÀ» Çß´Ù
+	// ï¿½Ìºï¿½Æ® ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ß´ï¿½
 	API_GetSLPacketLockManager()->Unlock(GU_SHOP_EVENTITEM_BUY_RES);
 
 	sGU_SHOP_EVENTITEM_BUY_RES* pResult = (sGU_SHOP_EVENTITEM_BUY_RES*)pPacket;
@@ -2983,7 +3004,7 @@ void PacketHandler_GSNPCEventShopBuyRes(void *pPacket)
 
 void PacketHandler_GSNPCEventShopEndRes(void *pPacket)
 {
-	// ÀÌº¥Æ® »óÁ¡ Á¾·á
+	// ï¿½Ìºï¿½Æ® ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 	API_GetSLPacketLockManager()->Unlock( GU_SHOP_EVENTITEM_END_RES );
 
 	sGU_SHOP_EVENTITEM_END_RES* pResult = (sGU_SHOP_EVENTITEM_END_RES*)pPacket;
@@ -2994,7 +3015,7 @@ void PacketHandler_GSNPCEventShopEndRes(void *pPacket)
 		return;
 	}
 
-	// »óÁ¡À» ´Ý´Â´Ù
+	// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ý´Â´ï¿½
 	CDboEventGenerator::ShopEvent(TRM_CLOSE, 0);
 }
 
@@ -3010,7 +3031,7 @@ void PacketHandler_GSNPCShopItemIdentifyRes(void *pPacket)
 		return;
 	}
 
-	// Pos ½½·Ô À§Ä¡
+	// Pos ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ä¡
 
 	sITEM_DATA* pItemData = &pResult->sItemData;
 	CNtlSobAvatar* pSobAvatar = GetNtlSLGlobal()->GetSobAvatar();
@@ -3022,7 +3043,7 @@ void PacketHandler_GSNPCShopItemIdentifyRes(void *pPacket)
 		pItemData->byRestrictState, pItemData->awchMaker, pItemData->byDurationType, pItemData->nUseStartTime, pItemData->nUseEndTime);
 	CDboEventGenerator::ItemIdentifyEffect( TRUE, hItem );
 
-	// ¾ÆÀÌÅÛ °¨Á¤ Äù½ºÆ®
+	// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Æ®
 	CNtlSLEventGenerator::TSItemIdentity();
 }
 
@@ -3305,7 +3326,7 @@ void PacketHandler_GUQuestForceCompletion(void* pPacket)
 
 void PacketHandler_GSTradeStartNfy(void *pPacket)
 {
-	// °Å·¡ ¿äÃ»À» ¹ÞÀº »ç¶÷¿¡°Ô °Å·¡ ½ÃÀÛÀ» ¾Ë¸°´Ù
+	// ï¿½Å·ï¿½ ï¿½ï¿½Ã»ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Å·ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ë¸ï¿½ï¿½ï¿½
 	sGU_TRADE_START_NFY* pResult = (sGU_TRADE_START_NFY*)pPacket;	
 
 	if( pResult->wResultCode != GAME_SUCCESS )
@@ -3329,7 +3350,7 @@ void PacketHandler_GSTradeStartRes(void *pPacket)
 {
 	API_GetSLPacketLockManager()->Unlock( GU_TRADE_START_RES );
 
-	// °Å·¡ ¿äÃ»À» ÇÑ »ç¶÷¿¡°Ô ½ÃÀÛÀ» ¾Ë¸°´Ù
+	// ï¿½Å·ï¿½ ï¿½ï¿½Ã»ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ë¸ï¿½ï¿½ï¿½
 	sGU_TRADE_START_RES* pResult = (sGU_TRADE_START_RES*)pPacket;	
 
 	if( pResult->wResultCode != GAME_SUCCESS )
@@ -3350,7 +3371,7 @@ void PacketHandler_GSTradeStartRes(void *pPacket)
 
 void PacketHandler_GSTradeOKReq(void *pPacket)
 {	
-	// ´Ù¸¥ »ç¶÷À¸·ÎºÎÅÍ °Å·¡¸¦ ½ÅÃ»¹Þ´Â´Ù
+	// ï¿½Ù¸ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îºï¿½ï¿½ï¿½ ï¿½Å·ï¿½ï¿½ï¿½ ï¿½ï¿½Ã»ï¿½Þ´Â´ï¿½
 	sGU_TRADE_OK_REQ* pResult = (sGU_TRADE_OK_REQ*)pPacket;
 
 	CNtlSobPlayer* pSobPlayer = reinterpret_cast<CNtlSobPlayer*>(GetNtlSobManager()->GetSobObject(pResult->handle));
@@ -3362,27 +3383,27 @@ void PacketHandler_GSTradeOKReq(void *pPacket)
 		GetDboGlobal()->SetAskedPCSerial(INVALID_SERIAL_ID);
 		return;
 	}
-	else if(Logic_IsBlackList(pResult->handle)) // ºí·¢¸®½ºÆ®¿¡ µî·ÏµÇ¾î ÀÖ´Â °æ¿ì °ÅÀý  
+	else if(Logic_IsBlackList(pResult->handle)) // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ®ï¿½ï¿½ ï¿½ï¿½ÏµÇ¾ï¿½ ï¿½Ö´ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  
 	{
 		GetDboGlobal()->GetGamePacketGenerator()->SendTradeOkReq(pResult->handle, ACCEPT_RES_TYPE_DENY);        
 		GetDboGlobal()->SetAskedPCSerial(INVALID_SERIAL_ID);
 		return;
 	}
 
-	// Áú¹®À» ÇÑ PCÀÇ ÇÚµé ÀúÀå
+	// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ PCï¿½ï¿½ ï¿½Úµï¿½ ï¿½ï¿½ï¿½ï¿½
 	GetDboGlobal()->SetAskedPCSerial(pResult->handle);
 
 	//memset((char*)awcPacketMessageBuffer, 0, sizeof(WCHAR) * dPACKET_MEESAGE_LENGTH);
 	//swprintf_s(awcPacketMessageBuffer, dPACKET_MEESAGE_LENGTH, GetDisplayStringManager()->GetString("DST_TRADE_ACCEPT_TRADE"), pSobPlayerAttr->GetName() );	
 
-	// %s´ÔÀÇ °Å·¡ ¿äÃ»¿¡ ÀÀÇÏ½Ã°Ú½À´Ï±î?
+	// %sï¿½ï¿½ï¿½ï¿½ ï¿½Å·ï¿½ ï¿½ï¿½Ã»ï¿½ï¿½ ï¿½ï¿½ï¿½Ï½Ã°Ú½ï¿½ï¿½Ï±ï¿½?
 	//CDboEventGenerator::MsgBoxShow(awcPacketMessageBuffer, MBW_USER_TRADE_REQ, MBTF_OK | MBTF_CANCEL);
 	GetAlarmManager()->FormattedAlarmMessage( "DST_TRADE_ACCEPT_TRADE", FALSE, NULL, pSobPlayerAttr->GetName() );
 }
 
 void PacketHandler_GSTradeAddNfy(void *pPacket)
 {
-	// ´Ù¸¥ »ç¶÷ÀÌ ¾ÆÀÌÅÛÀ» µî·ÏÇÑ´Ù
+	// ï¿½Ù¸ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ñ´ï¿½
 	sGU_TRADE_ADD_NFY* pResult = (sGU_TRADE_ADD_NFY*)pPacket;
 
 	CDboEventGenerator::UserTrade(USERTRADE_ADD_ITEM_NOTIFY, INVALID_SERIAL_ID, pResult->hItem, pResult->byCount, (void*)&pResult->sItem);
@@ -3392,7 +3413,7 @@ void PacketHandler_GSTradeAddRes(void *pPacket)
 {
 	API_GetSLPacketLockManager()->Unlock( GU_TRADE_ADD_RES );
 
-	// ÀÚ½ÅÀÌ ¾ÆÀÌÅÛÀ» µî·ÏÇÑ´Ù
+	// ï¿½Ú½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ñ´ï¿½
 	sGU_TRADE_ADD_RES* pResult = (sGU_TRADE_ADD_RES*)pPacket;
 
 	if( pResult->wResultCode != GAME_SUCCESS )
@@ -3408,7 +3429,7 @@ void PacketHandler_GSTradeAddRes(void *pPacket)
 
 void PacketHandler_GSTradeDelNfy(void *pPacket)
 {
-	// ´Ù¸¥ »ç¶÷ÀÌ ¾ÆÀÌÅÛÀ» µî·ÏÇØÁ¦ÇÑ´Ù
+	// ï¿½Ù¸ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ñ´ï¿½
 	sGU_TRADE_DEL_NFY* pResult = (sGU_TRADE_DEL_NFY*)pPacket;
 
 	CDboEventGenerator::UserTrade(USERTRADE_DEL_ITEM_NOTIFY, INVALID_SERIAL_ID, pResult->hItem);
@@ -3418,7 +3439,7 @@ void PacketHandler_GSTradeDelRes(void *pPacket)
 {
 	API_GetSLPacketLockManager()->Unlock( GU_TRADE_DEL_RES );
 
-	// ³»°¡ ¾ÆÀÌÅÛÀ» µî·ÏÇØÁ¦ÇÑ´Ù
+	// ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ñ´ï¿½
 	sGU_TRADE_DEL_RES* pResult = (sGU_TRADE_DEL_RES*)pPacket;
 
 	if( pResult->wResultCode != GAME_SUCCESS )
@@ -3432,7 +3453,7 @@ void PacketHandler_GSTradeDelRes(void *pPacket)
 
 void PacketHandler_GSTradeModifyNfy(void *pPacket)
 {
-	// ´Ù¸¥ »ç¶÷ÀÌ ¾ÆÀÌÅÛ °¹¼ö¸¦ º¯°æÇÏ¿´´Ù
+	// ï¿½Ù¸ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï¿ï¿½ï¿½ï¿½
 	sGU_TRADE_MODIFY_NFY* pResult = (sGU_TRADE_MODIFY_NFY*)pPacket;
 
 	CDboEventGenerator::UserTrade(USERTRADE_UPDATE_ITEM_NOTIFY, INVALID_SERIAL_ID, pResult->hItem, pResult->byCount);
@@ -3442,7 +3463,7 @@ void PacketHandler_GSTradeModifyRes(void *pPacket)
 {
 	API_GetSLPacketLockManager()->Unlock( GU_TRADE_MODIFY_RES );
 
-	// ³»°¡ ¾ÆÀÌÅÛÀ» ¾ÆÀÌÅÛ °¹¼ö¸¦ º¯°æÇÏ¿´´Ù
+	// ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï¿ï¿½ï¿½ï¿½
 	sGU_TRADE_MODIFY_RES* pResult = (sGU_TRADE_MODIFY_RES*)pPacket;
 
 	if( pResult->wResultCode != GAME_SUCCESS )
@@ -3456,7 +3477,7 @@ void PacketHandler_GSTradeModifyRes(void *pPacket)
 
 void PacketHandler_GSTradeZennyUpdateNfy(void *pPacket)
 {
-	// ´Ù¸¥ »ç¶÷ÀÌ Á¦´Ï¸¦ º¯°æÇÏ¿´´Ù
+	// ï¿½Ù¸ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ï¸ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï¿ï¿½ï¿½ï¿½
 	sGU_TRADE_ZENNY_UPDATE_NFY* pResult = (sGU_TRADE_ZENNY_UPDATE_NFY*)pPacket;
 
 	CDboEventGenerator::UserTrade(USERTRADE_UPDATE_ZENNY_NOTIFY, INVALID_SERIAL_ID, pResult->dwZenny);
@@ -3466,7 +3487,7 @@ void PacketHandler_GSTradeZennyUpdateRes(void *pPacket)
 {
 	API_GetSLPacketLockManager()->Unlock( GU_TRADE_ZENNY_UPDATE_RES );
 
-	// ³»°¡ Á¦´Ï¸¦ º¯°æÇÏ¿´´Ù
+	// ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ï¸ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï¿ï¿½ï¿½ï¿½
 	sGU_TRADE_ZENNY_UPDATE_RES* pResult = (sGU_TRADE_ZENNY_UPDATE_RES*)pPacket;
 
 	if( pResult->wResultCode != GAME_SUCCESS )
@@ -3482,7 +3503,7 @@ void PacketHandler_GSTradeZennyUpdateRes(void *pPacket)
 
 void PacketHandler_GSTradeEndNfy(void *pPacket)
 {
-	// »ó´ë¹æÀÌ °Å·¡ ÁØºñ¸¦ ³¡³µ´Ù
+	// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Å·ï¿½ ï¿½Øºï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	sGU_TRADE_END_NFY* pResult = (sGU_TRADE_END_NFY*)pPacket;	
 
 	if( pResult->wResultCode != GAME_SUCCESS )
@@ -3498,7 +3519,7 @@ void PacketHandler_GSTradeEndNfy(void *pPacket)
 
 void PacketHandler_GSTradeEndRes(void *pPacket)
 {
-	// ³»°¡ °Å·¡ ÁØºñ°¡ ³¡³µ´Ù
+	// ï¿½ï¿½ï¿½ï¿½ ï¿½Å·ï¿½ ï¿½Øºï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	API_GetSLPacketLockManager()->Unlock( GU_TRADE_END_RES );
 	
 	sGU_TRADE_END_RES* pResult = (sGU_TRADE_END_RES*)pPacket;
@@ -3516,21 +3537,21 @@ void PacketHandler_GSTradeEndRes(void *pPacket)
 
 void PacketHandler_GSTradeCancelNfy(void *pPacket)
 {
-	// ¼­¹ö¿¡¼­ ´Ù¾çÇÑ ÀÌÀ¯·Î GU_TRADE_START_RESÀÇ ÀÀ´ä ´ë½Å GU_TRADE_CANCEL_NFY·Î Á¾·áµÉ ¼ö ÀÖ´Ù
+	// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ù¾ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ GU_TRADE_START_RESï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ GU_TRADE_CANCEL_NFYï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½Ö´ï¿½
 	API_GetSLPacketLockManager()->Unlock( GU_TRADE_START_RES );
 
-	// »ó´ë¹æÀÌ °Å·¡¸¦ Á¾·áÇÏ¿´´Ù
+	// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Å·ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï¿ï¿½ï¿½ï¿½
 	sGU_TRADE_CANCEL_NFY* pResult = (sGU_TRADE_CANCEL_NFY*)pPacket;
 
 	if( pResult->wResultCode != GAME_SUCCESS )
 	{
-		// Á¾·áµÇ´Â ÀÌÀ¯¸¦ ¼³¸íÇÏ°í ³²Àº ·ÎÁ÷À» °è¼Ó ÁøÇàÇÑ´Ù
+		// ï¿½ï¿½ï¿½ï¿½Ç´ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï°ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ñ´ï¿½
 		GetAlarmManager()->AlarmMessage(Logic_GetResultCodeString(pResult->wResultCode, "GU_TRADE_START_RES"), TRUE );
 	}
 
 	GetDboGlobal()->SetAskedPCSerial(INVALID_SERIAL_ID);
 
-	// »ó´ë¹æÀÌ °Å·¡¸¦ Á¾·áÇÏ¿´½À´Ï´Ù
+	// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Å·ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï¿ï¿½ï¿½ï¿½ï¿½Ï´ï¿½
 	GetAlarmManager()->AlarmMessage("DST_TRADE_OTHER_CANCLE_TRADE");
 
 	if( GetDialogManager()->IsOpenDialog(DIALOG_TRADECART) )
@@ -3539,9 +3560,9 @@ void PacketHandler_GSTradeCancelNfy(void *pPacket)
 
 void PacketHandler_GSTradeCancelRes(void *pPacket)
 {
-	// ³»°¡ °Å·¡¸¦ Á¾·áÇÏ¿´´Ù
+	// ï¿½ï¿½ï¿½ï¿½ ï¿½Å·ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï¿ï¿½ï¿½ï¿½
 
-	// ¼­¹ö¿¡¼­ ´Ù¾çÇÑ ÀÌÀ¯·Î GU_TRADE_START_RESÀÇ ÀÀ´ä ´ë½Å GU_TRADE_CANCEL_RES·Î Á¾·áµÉ ¼ö ÀÖ´Ù
+	// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ù¾ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ GU_TRADE_START_RESï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ GU_TRADE_CANCEL_RESï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½Ö´ï¿½
 	API_GetSLPacketLockManager()->Unlock( GU_TRADE_START_RES );
 	API_GetSLPacketLockManager()->Unlock( GU_TRADE_CANCEL_RES );
 	
@@ -3549,7 +3570,7 @@ void PacketHandler_GSTradeCancelRes(void *pPacket)
 
 	if( pResult->wResultCode != GAME_SUCCESS )
 	{
-		// Á¾·áµÇ´Â ÀÌÀ¯¸¦ ¼³¸íÇÏ°í ³²Àº ·ÎÁ÷À» °è¼Ó ÁøÇàÇÑ´Ù
+		// ï¿½ï¿½ï¿½ï¿½Ç´ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï°ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ñ´ï¿½
 		GetAlarmManager()->AlarmMessage(Logic_GetResultCodeString(pResult->wResultCode, "GU_TRADE_CANCEL_RES"), TRUE );
 	}
 
@@ -3563,7 +3584,7 @@ void PacketHandler_GSTradeDeclineRes(void *pPacket)
 {
 	API_GetSLPacketLockManager()->Unlock( GU_TRADE_DENY_RES );
 
-	// ³»°¡ °Å·¡ ½ÅÃ»À» ¹ÞÁö ¾Êµµ·Ï ¿äÃ»ÇÏ¿´´Ù
+	// ï¿½ï¿½ï¿½ï¿½ ï¿½Å·ï¿½ ï¿½ï¿½Ã»ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Êµï¿½ï¿½ï¿½ ï¿½ï¿½Ã»ï¿½Ï¿ï¿½ï¿½ï¿½
 	sGU_TRADE_DENY_RES* pResult = (sGU_TRADE_DENY_RES*)pPacket;
 
 	if( pResult->wResultCode != GAME_SUCCESS )
@@ -3574,12 +3595,12 @@ void PacketHandler_GSTradeDeclineRes(void *pPacket)
 
 	if( pResult->bIsDeny )
 	{
-		// °Å·¡ ½ÅÃ»À» ¹ÞÁö ¾Ê´Â´Ù
+		// ï¿½Å·ï¿½ ï¿½ï¿½Ã»ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ê´Â´ï¿½
 		CDboEventGenerator::UserTrade(USERTRADE_DECLINE, INVALID_SERIAL_ID);
 	}
 	else
 	{
-		// °Å·¡ ½ÅÃ»À» ¹Þ´Â´Ù
+		// ï¿½Å·ï¿½ ï¿½ï¿½Ã»ï¿½ï¿½ ï¿½Þ´Â´ï¿½
 		CDboEventGenerator::UserTrade(USERTRADE_ACCEPT, INVALID_SERIAL_ID);
 	}
 }
@@ -3644,8 +3665,8 @@ void PacketHandler_GU_Progess_message_Nfy( void* pPacket )
 {
 	sGU_PROGRESS_MESSAGE_NFY* pResult = (sGU_PROGRESS_MESSAGE_NFY*)pPacket;
 
-	// byProgressType, byMessageValue, byMessageType ¼ø¼­·Î ¹ÞÀº ÀÎÀÚ¸¦
-	// 2¹øÂ° 3¹øÂ° °ªÀ» ¹Ù²Ù¾î¼­ Àû¿ëÇÑ´Ù
+	// byProgressType, byMessageValue, byMessageType ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ú¸ï¿½
+	// 2ï¿½ï¿½Â° 3ï¿½ï¿½Â° ï¿½ï¿½ï¿½ï¿½ ï¿½Ù²Ù¾î¼­ ï¿½ï¿½ï¿½ï¿½ï¿½Ñ´ï¿½
 	CDboEventGenerator::FlashNotify(pResult->byProgressType, pResult->byMessageValue, pResult->byMessageType);
 }
 
@@ -3997,7 +4018,7 @@ void PacketHandler_GURideOnBusRes( void* pPacket )
 		GetAlarmManager()->FormattedAlarmMessage("DST_BUS_SUCCESS_GET_ON", FALSE, NULL, pNPC_TBLDAT->amerchant_Tblidx[0] );
 	}
 
-    // NOTE: ¼º°øÈÄ¿¡´Â ½ºÅ×ÀÌÆ® º¯È¯ÀÌ ³¯¶ó¿À±â ¶§¹®¿¡, ½ÇÁ¦ Ã³¸®´Â ½ºÅ×ÀÌÆ®¿¡¼­ ÇÑ´Ù.
+    // NOTE: ï¿½ï¿½ï¿½ï¿½ï¿½Ä¿ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ® ï¿½ï¿½È¯ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½, ï¿½ï¿½ï¿½ï¿½ Ã³ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ®ï¿½ï¿½ï¿½ï¿½ ï¿½Ñ´ï¿½.
 }
 
 void PacketHandler_GURideOffBusRes( void* pPacket ) 
@@ -4012,7 +4033,7 @@ void PacketHandler_GURideOffBusRes( void* pPacket )
         return;
     }
 
-    // NOTE: ¼º°øÈÄ¿¡´Â ½ºÅ×ÀÌÆ® º¯È¯ÀÌ ³¯¶ó¿À±â ¶§¹®¿¡, ½ÇÁ¦ Ã³¸®´Â ½ºÅ×ÀÌÆ®¿¡¼­ ÇÑ´Ù.
+    // NOTE: ï¿½ï¿½ï¿½ï¿½ï¿½Ä¿ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ® ï¿½ï¿½È¯ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½, ï¿½ï¿½ï¿½ï¿½ Ã³ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ®ï¿½ï¿½ï¿½ï¿½ ï¿½Ñ´ï¿½.
 }
 
 void PacketHandler_GUAfterEffectRemainTimeNfy( void* pPacket ) 
@@ -4112,7 +4133,7 @@ void PacketHandler_GUTeleportProposalNfy( void* pPacket )
 {
 	sGU_TELEPORT_PROPOSAL_NFY* pNotify = (sGU_TELEPORT_PROPOSAL_NFY*)pPacket;
 
-	// ±¸Á¶Ã¼¸¦ ÇÑ¹ø¿¡ ³¯¸°´Ù.
+	// ï¿½ï¿½ï¿½ï¿½Ã¼ï¿½ï¿½ ï¿½Ñ¹ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½.
 	SDboEventTeleportProposalNfy data;
 	data.byTeleportType = pNotify->byTeleportType;
 	data.byInfoIndex = pNotify->byInfoIndex;
@@ -4139,7 +4160,7 @@ void PacketHandler_GUTeleportConfirmRes( void* pPacket )
 	data.bTeleport = pResult->bTeleport;
 	data.bClearInterface = pResult->bClearInterface;
 
-	// ResultCode °Ë»ç µî ¸ðµç °ÍÀ» TeleportProposalManager¿¡¼­ ¹Þ¾Æ¼­ Ã³¸®ÇÑ´Ù.
+	// ResultCode ï¿½Ë»ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ TeleportProposalManagerï¿½ï¿½ï¿½ï¿½ ï¿½Þ¾Æ¼ï¿½ Ã³ï¿½ï¿½ï¿½Ñ´ï¿½.
 
 	CDboEventGenerator::TeleportConfirmRes( &data );
 }
@@ -4235,7 +4256,7 @@ void PacketHandler_GSHTBRPBallResultDecidedNfy( void* pPacket )
 	RwInt32 iAttackPoint	= pHTBRPBall->bySubjectRpBallUsed;
 	RwInt32 iDefenderPoint	= pHTBRPBall->byTargetRpBallUsed;
 	
-	// °ø°ÝÀÚ ÀÎ°¡?
+	// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Î°ï¿½?
 	if(hAvatarSerialId == pHTBRPBall->hAttacker)
 	{
 		bAttacker = TRUE;
@@ -4415,13 +4436,13 @@ void PacketHandler_GUCharUpdateNetPy( void* pPacket )
     
     CDboEventGenerator::UpdateNetPy(pData->netP, pData->dwAccumulationNetP, pData->timeNextGainTime);
 
-    // ±âÁ¸°ª°ú ºñ±³¸¦ À§ÇØ¼­, ¼¼ÆÃÀº µÚ¿¡ ÇÑ´Ù.
+    // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ñ±³¸ï¿½ ï¿½ï¿½ï¿½Ø¼ï¿½, ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ú¿ï¿½ ï¿½Ñ´ï¿½.
     Logic_SetNetPy(pData->netP);
 }
 
 void PacketHandler_GUBusLocationNfy( void* pPacket ) 
 {
-	// ¾Æ¹ÙÅ¸°¡ À§Ä¡ÇÏ°í ÀÖ´Â Á¸ÀÇ ¹ö½º À§Ä¡, ¹æÇâ Á¤º¸¸¦ ¹Þ¾Ò´Ù
+	// ï¿½Æ¹ï¿½Å¸ï¿½ï¿½ ï¿½ï¿½Ä¡ï¿½Ï°ï¿½ ï¿½Ö´ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ä¡, ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Þ¾Ò´ï¿½
 	sGU_BUS_LOCATION_NFY* pResult = (sGU_BUS_LOCATION_NFY*)pPacket;
 
 	RwV3d v3Pos = {pResult->vCurLoc.x, 0.f, pResult->vCurLoc.z};
@@ -4432,7 +4453,7 @@ void PacketHandler_GUBusLocationNfy( void* pPacket )
 
 void PacketHandler_GUBusLocationErasedNfy( void* pPacket ) 
 {
-	// ¾Æ¹ÙÅ¸°¡ À§Ä¡ÇÏ°í ÀÖ´Â Á¸ÀÇ ¹ö½º°¡ »ç¶óÁ³´Ù(È¤Àº µð½ºÆù)
+	// ï¿½Æ¹ï¿½Å¸ï¿½ï¿½ ï¿½ï¿½Ä¡ï¿½Ï°ï¿½ ï¿½Ö´ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½(È¤ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½)
 	sGU_BUS_LOCATION_ERASED_NFY* pResult = (sGU_BUS_LOCATION_ERASED_NFY*)pPacket;
 
 	CNtlSLEventGenerator::BusMove(BUS_MOVE_DELETE_BUS, pResult->hSubject, INVALID_TBLIDX, NULL, NULL);
@@ -4440,7 +4461,7 @@ void PacketHandler_GUBusLocationErasedNfy( void* pPacket )
 
 void PacketHandler_GUBusLocationResetAllNfy( void* pPacket ) 
 {
-	// ±âÁ¸¿¡ ¼­¹ö·Î ºÎÅÍ ¹Þ¾Ò´ø ¹ö½ºÀÇ À§Ä¡, ¹æÇâ Á¤º¸¸¦ ¸ðµÎ Áö¿î´Ù
+	// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Þ¾Ò´ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ä¡, ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½
 	//sGU_BUS_LOCATION_RESET_ALL_NFY* pResult = (sGU_BUS_LOCATION_RESET_ALL_NFY*)pPacket;
 
 	CNtlSLEventGenerator::BusMove(BUS_MOVE_RESET, INVALID_SERIAL_ID, INVALID_TBLIDX, NULL, NULL);
@@ -4469,7 +4490,7 @@ void PacketHandler_GUItemExpiredNfy(void* pPacket)
 	else
 	{
 		DBO_ASSERTE( "PacketHandler_GUItempExpredNfy : Item Handle is invalid" );
-		// Place, Pos·Î ´Ù½Ã ÇÑ¹ø °Ë»ç
+		// Place, Posï¿½ï¿½ ï¿½Ù½ï¿½ ï¿½Ñ¹ï¿½ ï¿½Ë»ï¿½
 	}
 }
 
@@ -4792,7 +4813,7 @@ void PacketHandler_GUCharUpdateMaxLP( void* pPacket )
 	CNtlParty* pParty = reinterpret_cast<CNtlParty*>(GetNtlSLGlobal()->GetSobAvatar()->GetParty());
 	if( pParty->IsMember(pUpdateLp->handle) )
 	{
-		// ³ªÀÇ ÆÄÆ¼¿øÀÌ¶ó¸é ¾÷µ¥ÀÌÆ®
+		// ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Æ¼ï¿½ï¿½ï¿½Ì¶ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ®
 		CNtlSLEventGenerator::PartyUpdate(PMT_LP, pNfy->hSubject, pUpdateLp->wCurLP, pUpdateLp->wMaxLP);
 	}
 

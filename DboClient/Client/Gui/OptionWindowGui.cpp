@@ -645,7 +645,7 @@ void COptionSound::OnHandleEvents( RWS::CMsg &pMsg )
 // Class : COptionInfo
 ////////////////////////////////////////////////////////////////////////////////
 COptionInfo::COptionInfo() : m_pGuildOn(NULL), m_pGuildOff(NULL), m_pDojoOn(NULL), m_pDojoOff(NULL),
-m_pScouterOn(NULL), m_pScouterOff(NULL)
+m_pScouterOn(NULL), m_pScouterOff(NULL), m_pItemDropOn(NULL), m_pItemDropOff(NULL)
 {
 }
 
@@ -675,10 +675,20 @@ RwBool COptionInfo::Create(COptionWindowGui* pOptionWindow)
 
 	m_pScouterOn = (gui::CButton*)GetComponent("btnInfoScouterOn");
 	m_pScouterOff= (gui::CButton*)GetComponent("btnInfoScouterOff");
+
 	SetComponentGroup(0, GetDisplayStringManager()->GetString("DST_OPTION_INFO_SCOUTERMODEL"),
 		GetDisplayStringManager()->GetString("DST_OPTION_TOOLTIP_SCOUTER"),
 		GetComponent("stbMiddle3"), m_pScouterOn, m_pScouterOff, NULL);
 	SetComponentOnOff(&m_onoffScouter, m_pScouterOn, m_pScouterOff);
+
+
+	m_pItemDropOn = (gui::CButton*)GetComponent("btnInfoItemDropOn");
+	m_pItemDropOff = (gui::CButton*)GetComponent("btnInfoItemDropOff");
+	SetComponentGroup(1, GetDisplayStringManager()->GetString("DST_OPTION_INFO_SHOW_ITEM"),
+		GetDisplayStringManager()->GetString("DST_OPTION_TOOLTIP_SHOW_ITEM"),
+		GetComponent("stbMiddle4"), m_pItemDropOn, m_pItemDropOff, NULL);
+	SetComponentOnOff(&m_onoffItemDrop, m_pItemDropOn, m_pItemDropOff);
+
 
 	NTL_RETURN(TRUE);
 }
@@ -693,7 +703,11 @@ void COptionInfo::OnInit()
 {
 	/*SetOnOff(&m_onoffGuild, GetGuildEmblemOnOff());
 	SetOnOff(&m_onoffDojo, GetDojoMarkOnOff());*/
+
 	SetOnOff(&m_onoffScouter, GetScouterModelOnOff());
+	SetOnOff(&m_onoffItemDrop, GetItemDropOnOff());
+	COptionInfo::OnOk();
+
 }
 
 void COptionInfo::OnReset()
@@ -701,6 +715,7 @@ void COptionInfo::OnReset()
 	/*SetOnOff(&m_onoffGuild, GAMEOPT_DEFAULT_INFO_GUILDEMBLEM);
 	SetOnOff(&m_onoffDojo, GAMEOPT_DEFAULT_INFO_DOJOMARK);*/
 	SetOnOff(&m_onoffScouter, GetNtlStorageMTContainer()->GetDefaultBool( dSTORAGE_GAMEINFO_SCOUTER_VISIBLE ));
+	SetOnOff(&m_onoffItemDrop, GetNtlStorageMTContainer()->GetDefaultBool( dSTORAGE_GAMEINFO_ITEM_DROP ));
 }
 
 void COptionInfo::OnOk()
@@ -708,6 +723,7 @@ void COptionInfo::OnOk()
 	//SetGuildEmblemOnOff(m_onoffGuild.bValue);
 	//SetDojoMarkOnOff(m_onoffDojo.bValue);
 	SetScouterModelOnOff(m_onoffScouter.bValue);
+	SetItemDropOnOff(m_onoffItemDrop.bValue);
 }
 
 void COptionInfo::OnCancel()
@@ -743,6 +759,17 @@ void COptionInfo::SetScouterModelOnOff(RwBool bOnOff)
 RwBool COptionInfo::GetScouterModelOnOff()
 {
 	return GetNtlStorageManager()->GetBoolData( dSTORAGE_GAMEINFO_SCOUTER_VISIBLE );
+}
+
+void COptionInfo::SetItemDropOnOff(RwBool bOnOff)
+{
+	GetNtlStorageManager()->SetData(dSTORAGE_GAMEINFO_ITEM_DROP, B2b(bOnOff));
+	CNtlPLGlobal::m_bItemDropDisplay = bOnOff;
+}
+
+RwBool COptionInfo::GetItemDropOnOff()
+{
+	return GetNtlStorageManager()->GetBoolData( dSTORAGE_GAMEINFO_ITEM_DROP );
 }
 
 void COptionInfo::OnHandleEvents( RWS::CMsg &pMsg ) 

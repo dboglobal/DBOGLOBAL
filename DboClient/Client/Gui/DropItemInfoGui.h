@@ -1,6 +1,6 @@
 ////////////////////////////////////////////////////////////////////////////////
 // File: DropItemInfoGui.h
-// Desc: DropµÈ ItemÀÇ Á¤º¸¸¦ º¸¿©ÁÖ´Â GUI
+// Desc: Dropï¿½ï¿½ Itemï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ö´ï¿½ GUI
 //
 // 2007.05.22 Peessi@hitel.net   
 //
@@ -21,13 +21,13 @@ public:
 	enum STATE { HIDE, FADE_IN, SHOW, SHOW_WAIT_FADE, FADE_OUT };
 		
 	//! Contructor & Destructor
-	CDropItemInfoGui(VOID);
+	CDropItemInfoGui(RwUInt32 init_m_uiDropItemSerial, CNtlSobWorldItem* init_m_pDropItem, RwBool init_m_pDropItemShow, const RwChar* pName);
 	CDropItemInfoGui( const RwChar* pName );
 	~CDropItemInfoGui(VOID);
 
 	//! Operation
-	VOID	Init(VOID);
-	RwBool	Create(VOID);
+	VOID	Init(RwUInt32 init_m_uiDropItemSerial, CNtlSobWorldItem* init_m_pDropItem, RwBool init_m_pDropItemShow);
+	RwBool	Create();
 	VOID	Destroy(VOID);
 
 	VOID	Update( RwReal fElapsedTime );
@@ -36,6 +36,9 @@ public:
 
 	//! Events
 	virtual VOID HandleEvents( RWS::CMsg& msg );	
+
+	//! Refactoring method
+	VOID 	ShowItemInCapsule();
 
 private:
 	//! Implementation
@@ -60,13 +63,15 @@ private:
 	//! Variables
 	CSurfaceGui	m_surIcon;
 
-	RwReal		m_fTime;
-	RwInt32		m_eState;
-
 	RwUInt32	m_uiDropItemSerial;
 	CNtlSobWorldItem* m_pDropItem;
 
+	RwReal		m_fTime;
+	RwInt32		m_eState;
+
 	RwBool		m_bDirectToShowWaitFade;
+
+	RwReal		m_pDropItemShow;
 };
 
 #endif//__DROP_ITEM_INFO_GUI_H__

@@ -6,7 +6,7 @@
 
 /**
 * \brief NTL Storage Define Mapping Table
-* 1¹øÀº Ä«Å×°í¸®·Î ÇöÀçÀÇ °ªÀÌ Ä«Å×°í¸®ÀÓÀ» ¾Ë¸°´Ù.
+* 1ï¿½ï¿½ï¿½ï¿½ Ä«ï¿½×°ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ Ä«ï¿½×°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ë¸ï¿½ï¿½ï¿½.
 */
 SNtlStorageMappingTableData CNtlStorageMTContainer::m_StorageMappingTable[] = {
 // Table rule
@@ -46,6 +46,7 @@ SNtlStorageMappingTableData CNtlStorageMTContainer::m_StorageMappingTable[] = {
 {dSTORAGE_GAMEINFO_GUILD_EMBLEM,	eBOOL,		eNTL_STORAGE_GAMEINFO,	"GUILD_EMBLEM",		NULL,	"true"},
 {dSTORAGE_GAMEINFO_DOJO_MARK,		eBOOL,		eNTL_STORAGE_GAMEINFO,	"DOJO_MARK",		NULL,	"true"},
 {dSTORAGE_GAMEINFO_SCOUTER_VISIBLE,	eBOOL,		eNTL_STORAGE_GAMEINFO,	"SCOUTER_VISIBLE",	NULL,	"true"},
+{dSTORAGE_GAMEINFO_ITEM_DROP,		eBOOL,		eNTL_STORAGE_GAMEINFO,	"ITEM_DROP",		NULL,	"true"},
 
 {dSTORAGE_ETC_FRIEND_NOTIFY	,		eBOOL,		eNTL_STORAGE_ETC,		"FRIEND_NOTIFY",	NULL,	"true"},
 {dSTORAGE_ETC_GUILD_MEMBER_NOTIFY,	eBOOL,		eNTL_STORAGE_ETC,		"GUILD_NOTIFY",		NULL,	"true"},
@@ -113,7 +114,7 @@ SNtlStorageMappingTableData CNtlStorageMTContainer::m_StorageMappingTable[] = {
 
 
 // You have to insert the table data after the current line. 
-// ¹Ýµå½Ã ÇöÀç ¶óÀÎ ´ÙÀ½¿¡ Ãß°¡ÇÏ¿©¾ß ÇÕ´Ï´Ù.
+// ï¿½Ýµï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ß°ï¿½ï¿½Ï¿ï¿½ï¿½ï¿½ ï¿½Õ´Ï´ï¿½.
 
 // Table End ----------------------------------------------------------------------------
 };
@@ -130,26 +131,26 @@ CNtlStorageMTContainer::~CNtlStorageMTContainer(void)
 }
 
 /**
-* \brief ¹Ì¸® Å×ÀÌºíÀ» ÇÑ¹ø ¼øÈ¸ÇÏ¿© Ä«Å×°í¸®º°, IDº° Æ÷ÀÎÅÍ¸¦ ÀúÀåÇÏ°í ÀÖ´Â´Ù.
+* \brief ï¿½Ì¸ï¿½ ï¿½ï¿½ï¿½Ìºï¿½ï¿½ï¿½ ï¿½Ñ¹ï¿½ ï¿½ï¿½È¸ï¿½Ï¿ï¿½ Ä«ï¿½×°ï¿½ï¿½ï¿½ï¿½ï¿½, IDï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Í¸ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï°ï¿½ ï¿½Ö´Â´ï¿½.
 */
 bool CNtlStorageMTContainer::SortTable()
 {
-	// Å×ÀÌºí °¹¼ö¸¦ ÀÐ¾îµé¿©¼­ ÀúÀåÇØ³õ´Â´Ù.
+	// ï¿½ï¿½ï¿½Ìºï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ð¾ï¿½é¿©ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ø³ï¿½ï¿½Â´ï¿½.
 	m_uiCount = _countof(m_StorageMappingTable);
 
 	for( unsigned int i=0; i < m_uiCount; ++i )
 	{
-		// Ä«Å×°í¸®º°·Î µî·Ï
+		// Ä«ï¿½×°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½
 		m_mmapCategory.insert(
 			std::make_pair( m_StorageMappingTable[i].byCategoryType,
 			&m_StorageMappingTable[i] ));
 
-		// KEY ID¸¦ Key·Î ÇÏ¿© µî·Ï
+		// KEY IDï¿½ï¿½ Keyï¿½ï¿½ ï¿½Ï¿ï¿½ ï¿½ï¿½ï¿½
 		m_mapTable.insert(
 			std::make_pair( m_StorageMappingTable[i].uiKey,
 			&m_StorageMappingTable[i] ));
 
-		// STRINGÀ» Key·Î µî·Ï
+		// STRINGï¿½ï¿½ Keyï¿½ï¿½ ï¿½ï¿½ï¿½
 		std::string strKey;
 		strKey.append(m_StorageMappingTable[i].acKeyName);
 		
@@ -168,12 +169,12 @@ bool CNtlStorageMTContainer::SetUnitCheckFunc( unsigned int uiKey, NtlStorageUni
 	TABLEMAP::iterator it = m_mapTable.find( uiKey );
 	if( it == m_mapTable.end() )
 	{
-		// Å×ÀÌºí¿¡ µî·ÏµÇ¾î ÀÖ´Â KEY°¡ ¾ø´Ù.
+		// ï¿½ï¿½ï¿½Ìºï¿½ï¿½ï¿½ ï¿½ï¿½ÏµÇ¾ï¿½ ï¿½Ö´ï¿½ KEYï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½.
 
 		return false;
 	}
 
-	// »õ·Î¿î ÇÔ¼ö Æ÷ÀÎÅÍ ¼³Á¤
+	// ï¿½ï¿½ï¿½Î¿ï¿½ ï¿½Ô¼ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 	SNtlStorageMappingTableData* pData = it->second;
 	pData->ntlStorageFunc = funcApply;
 
@@ -185,7 +186,7 @@ NtlStorageUnitCheckFunc CNtlStorageMTContainer::GetUnitCheckFunc( unsigned int u
 	TABLEMAP::iterator it = m_mapTable.find( uiKey );
 	if( it == m_mapTable.end() )
 	{
-		// Å×ÀÌºí¿¡ µî·ÏµÇ¾î ÀÖ´Â KEY°¡ ¾ø´Ù.
+		// ï¿½ï¿½ï¿½Ìºï¿½ï¿½ï¿½ ï¿½ï¿½ÏµÇ¾ï¿½ ï¿½Ö´ï¿½ KEYï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½.
 
 		return NULL;
 	}
@@ -203,7 +204,7 @@ eNTL_STORAGE_VARIABLE_TYPE CNtlStorageMTContainer::GetVariableType( unsigned int
 	TABLEMAP::iterator it = m_mapTable.find( uiKey );
 	if( it == m_mapTable.end() )
 	{
-		// Å×ÀÌºí¿¡ µî·ÏµÇ¾î ÀÖ´Â KEY°¡ ¾ø´Ù.
+		// ï¿½ï¿½ï¿½Ìºï¿½ï¿½ï¿½ ï¿½ï¿½ÏµÇ¾ï¿½ ï¿½Ö´ï¿½ KEYï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½.
 
 		return eNTL_STORAGE_VARIABLE_INVALID;
 	}
@@ -216,7 +217,7 @@ eNTL_STORAGE_TYPE CNtlStorageMTContainer::GetStorageType( unsigned int uiKey )
 	TABLEMAP::iterator it = m_mapTable.find( uiKey );
 	if( it == m_mapTable.end() )
 	{
-		// Å×ÀÌºí¿¡ µî·ÏµÇ¾î ÀÖ´Â KEY°¡ ¾ø´Ù.
+		// ï¿½ï¿½ï¿½Ìºï¿½ï¿½ï¿½ ï¿½ï¿½ÏµÇ¾ï¿½ ï¿½Ö´ï¿½ KEYï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½.
 
 		return eNTL_STORAGE_INVALID;
 	}
@@ -229,7 +230,7 @@ const char* CNtlStorageMTContainer::GetString( unsigned int uiKey )
 	TABLEMAP::iterator it = m_mapTable.find( uiKey );
 	if( it == m_mapTable.end() )
 	{
-		// Å×ÀÌºí¿¡ µî·ÏµÇ¾î ÀÖ´Â KEY°¡ ¾ø´Ù.
+		// ï¿½ï¿½ï¿½Ìºï¿½ï¿½ï¿½ ï¿½ï¿½ÏµÇ¾ï¿½ ï¿½Ö´ï¿½ KEYï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½.
 
 		return NULL;
 	}
@@ -242,7 +243,7 @@ const char* CNtlStorageMTContainer::GetDefaultString( unsigned int uiKey )
 	TABLEMAP::iterator it = m_mapTable.find( uiKey );
 	if( it == m_mapTable.end() )
 	{
-		// Å×ÀÌºí¿¡ µî·ÏµÇ¾î ÀÖ´Â KEY°¡ ¾ø´Ù.
+		// ï¿½ï¿½ï¿½Ìºï¿½ï¿½ï¿½ ï¿½ï¿½ÏµÇ¾ï¿½ ï¿½Ö´ï¿½ KEYï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½.
 
 		return NULL;
 	}
@@ -255,7 +256,7 @@ bool CNtlStorageMTContainer::GetDefaultBool( unsigned int uiKey )
 	TABLEMAP::iterator it = m_mapTable.find( uiKey );
 	if( it == m_mapTable.end() )
 	{
-		// Å×ÀÌºí¿¡ µî·ÏµÇ¾î ÀÖ´Â KEY°¡ ¾ø´Ù.
+		// ï¿½ï¿½ï¿½Ìºï¿½ï¿½ï¿½ ï¿½ï¿½ÏµÇ¾ï¿½ ï¿½Ö´ï¿½ KEYï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½.
 
 		return false;
 	}
@@ -273,7 +274,7 @@ int CNtlStorageMTContainer::GetDefaultInt( unsigned int uiKey )
 	TABLEMAP::iterator it = m_mapTable.find( uiKey );
 	if( it == m_mapTable.end() )
 	{
-		// Å×ÀÌºí¿¡ µî·ÏµÇ¾î ÀÖ´Â KEY°¡ ¾ø´Ù.
+		// ï¿½ï¿½ï¿½Ìºï¿½ï¿½ï¿½ ï¿½ï¿½ÏµÇ¾ï¿½ ï¿½Ö´ï¿½ KEYï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½.
 
 		return 0xFFFFFFFF;
 	}
@@ -286,7 +287,7 @@ float CNtlStorageMTContainer::GetDefaultFloat( unsigned int uiKey )
 	TABLEMAP::iterator it = m_mapTable.find( uiKey );
 	if( it == m_mapTable.end() )
 	{
-		// Å×ÀÌºí¿¡ µî·ÏµÇ¾î ÀÖ´Â KEY°¡ ¾ø´Ù.
+		// ï¿½ï¿½ï¿½Ìºï¿½ï¿½ï¿½ ï¿½ï¿½ÏµÇ¾ï¿½ ï¿½Ö´ï¿½ KEYï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½.
 
 		return 0.0f;
 	}

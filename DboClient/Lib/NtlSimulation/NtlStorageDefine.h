@@ -1,7 +1,7 @@
 #ifndef __NTL_STORAGE_DEFINE_H__
 #define __NTL_STORAGE_DEFINE_H__
 
-// Àû¿ë ÇÏ´Â Flags
+// ï¿½ï¿½ï¿½ï¿½ ï¿½Ï´ï¿½ Flags
 enum eNTL_STORAGE_APPLY
 {
 	eNTL_STORAGE_APPLY_PRESENTATION				= 0x00000001,
@@ -12,35 +12,35 @@ enum eNTL_STORAGE_APPLY
 };
 
 /**
-* \brief NTL_STORAGE UNITµéÀÇ GROUP TYPE( ÇÏ³ªÀÇ File °ú 1:1 ¸ÅÄªµÈ´Ù. )
+* \brief NTL_STORAGE UNITï¿½ï¿½ï¿½ï¿½ GROUP TYPE( ï¿½Ï³ï¿½ï¿½ï¿½ File ï¿½ï¿½ 1:1 ï¿½ï¿½Äªï¿½È´ï¿½. )
 */
 enum eNTL_STORAGE_GROUP_TYPE
 {
-	eNTL_STORAGE_GROUP_ACCOUNT,		///< °èÁ¤ Á¤º¸
-	eNTL_STORAGE_GROUP_SYSTEM,		///< ½Ã½ºÅÛ
-	eNTL_STORAGE_GROUP_GAMEINFO,	///< °ÔÀÓ Á¤º¸
-	eNTL_STORAGE_GROUP_SCOUTER,		///< Ä³¸¯ÅÍ ½ºÄ«¿ìÅÍ Á¤º¸
-	eNTL_STORAGE_GROUP_QUEST,		///< Äù½ºÆ® ÀÎµðÄÉÀÌÅÍ Á¤º¸
-	eNTL_STORAGE_GROUP_CHARACTER,	///< Ä³¸¯ÅÍ °ÔÀÓ Á¤º¸
+	eNTL_STORAGE_GROUP_ACCOUNT,		///< ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+	eNTL_STORAGE_GROUP_SYSTEM,		///< ï¿½Ã½ï¿½ï¿½ï¿½
+	eNTL_STORAGE_GROUP_GAMEINFO,	///< ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+	eNTL_STORAGE_GROUP_SCOUTER,		///< Ä³ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ä«ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+	eNTL_STORAGE_GROUP_QUEST,		///< ï¿½ï¿½ï¿½ï¿½Æ® ï¿½Îµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+	eNTL_STORAGE_GROUP_CHARACTER,	///< Ä³ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 
 	eNTL_STORAGE_GROUP_NUMS,
 	eNTL_STORAGE_GROUP_INVALID = 0xFF
 };
 
 /**
-* \brief NtlStorageUnit µéÀÇ Type
+* \brief NtlStorageUnit ï¿½ï¿½ï¿½ï¿½ Type
 */
 enum eNTL_STORAGE_TYPE
 {
-	eNTL_STORAGE_ACCOUNT,			///< °èÁ¤
-	eNTL_STORAGE_GRAPHIC,			///< ±×·¡ÇÈ
-	eNTL_STORAGE_SOUND,				///< ¼Ò¸®
-	eNTL_STORAGE_GAMEINFO,			///< °ÔÀÓ Á¤º¸
-	eNTL_STORAGE_ETC,				///< ±âÅ¸
-	eNTL_STORAGE_CHAT,				///< Ã¤ÆÃ
-	eNTL_STORAGE_SCOUTER,			///< ¸ó½ºÅÍ ½ºÄ«¿ìÅÍ ¹× Ä³¸¯ÅÍ ½ºÄ«¿ìÅÍ Á¤º¸(ÀüÅõ·Â ÃøÁ¤)
-	eNTL_STORAGE_QUEST,				///< Äù½ºÆ®
-	eNTL_STORAGE_CHARACTER,			///< Ä³¸¯ÅÍº° ¼¼ÆÃ
+	eNTL_STORAGE_ACCOUNT,			///< ï¿½ï¿½ï¿½ï¿½
+	eNTL_STORAGE_GRAPHIC,			///< ï¿½×·ï¿½ï¿½ï¿½
+	eNTL_STORAGE_SOUND,				///< ï¿½Ò¸ï¿½
+	eNTL_STORAGE_GAMEINFO,			///< ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+	eNTL_STORAGE_ETC,				///< ï¿½ï¿½Å¸
+	eNTL_STORAGE_CHAT,				///< Ã¤ï¿½ï¿½
+	eNTL_STORAGE_SCOUTER,			///< ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ä«ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ Ä³ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ä«ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½(ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½)
+	eNTL_STORAGE_QUEST,				///< ï¿½ï¿½ï¿½ï¿½Æ®
+	eNTL_STORAGE_CHARACTER,			///< Ä³ï¿½ï¿½ï¿½Íºï¿½ ï¿½ï¿½ï¿½ï¿½
 	eNTL_STORAGE_CHARACTER_ETC,
 	eNTL_STORAGE_CHARACTER_SCOUTER,
 	eNTL_STORAGE_SYSTEM_ETC,
@@ -49,38 +49,38 @@ enum eNTL_STORAGE_TYPE
 	eNTL_STORAGE_INVALID = 0xFF
 };
 
-// eNTL_STORAGE_TYPE°ú ÀÏÄ¡ÇÏ¿©¾ß ÇÔ
+// eNTL_STORAGE_TYPEï¿½ï¿½ ï¿½ï¿½Ä¡ï¿½Ï¿ï¿½ï¿½ï¿½ ï¿½ï¿½
 extern const char* g_acNtlStorageTypeString[eNTL_STORAGE_NUMS];
 
 /**
-* \brief NtlStorageValue°¡ °¡Áö´Â Data Typeµé
+* \brief NtlStorageValueï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Data Typeï¿½ï¿½
 */
 enum eNTL_STORAGE_VARIABLE_TYPE
 {
-	eINT,			// INT Çü
-	eFLOAT,			// FLOAT Çü
-	eBOOL,			// bool Çü
-	eSTRING,		// ¹®ÀÚ¿­ Çü
-	eUSER,			// »ç¿ëÀÚ Á¤ÀÇ Çü
+	eINT,			// INT ï¿½ï¿½
+	eFLOAT,			// FLOAT ï¿½ï¿½
+	eBOOL,			// bool ï¿½ï¿½
+	eSTRING,		// ï¿½ï¿½ï¿½Ú¿ï¿½ ï¿½ï¿½
+	eUSER,			// ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½
 
 	eNTL_STORAGE_VARIABLE_NUMS,
 	eNTL_STORAGE_VARIABLE_INVALID = 0xFF
 };
 
-// Check ÇÔ¼ö Æ÷ÀÎÅÍ ( Å°¿Í ¿¬°áµÈ °ªÀÇ ¹üÀ§Ã¼Å©¿¡ »ç¿ëµÈ´Ù. )
+// Check ï¿½Ô¼ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ( Å°ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ã¼Å©ï¿½ï¿½ ï¿½ï¿½ï¿½È´ï¿½. )
 typedef bool (*NtlStorageUnitCheckFunc)(unsigned int uiKey);
 
-// Apply ÇÔ¼ö Æ÷ÀÎÅÍ ( À¯´Ö°ú ¿¬°áµÇ¾î À¯´Ö ´ÜÀ§·Î Apply ÇÑ´Ù. )
+// Apply ï¿½Ô¼ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ( ï¿½ï¿½ï¿½Ö°ï¿½ ï¿½ï¿½ï¿½ï¿½Ç¾ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Apply ï¿½Ñ´ï¿½. )
 class CNtlStorageUnit;
 typedef bool (*NtlStorageUnitApplyFunc)(CNtlStorageUnit* pUnit, unsigned int uiFlags);
 
-// NTL_STORAGE Å° ³×ÀÓÀÇ ±æÀÌ
+// NTL_STORAGE Å° ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 #define dNTL_STORAGE_MAX_KEY_NAME_LENGTH	(32+1)
 
-// NTL_STORAGE VALUE ÀÇ ±æÀÌ
+// NTL_STORAGE VALUE ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 #define dNTL_STORAGE_MAX_VALUE_LENGTH		(128+1)
 
-// ¸ÅÇÎ Å×ÀÌºí
+// ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ìºï¿½
 struct SNtlStorageMappingTableData
 {
 	unsigned int		uiKey;
@@ -88,8 +88,8 @@ struct SNtlStorageMappingTableData
 	unsigned char		byCategoryType;
 	char				acKeyName[dNTL_STORAGE_MAX_KEY_NAME_LENGTH];
 	
-	// ÀÌÇÏºÎÅÍ¸¸ º¯°æ °¡´É
-	NtlStorageUnitCheckFunc		ntlStorageFunc;		///< Check ÇÔ¼ö Æ÷ÀÎÅÍ
+	// ï¿½ï¿½ï¿½Ïºï¿½ï¿½Í¸ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+	NtlStorageUnitCheckFunc		ntlStorageFunc;		///< Check ï¿½Ô¼ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	char						acDefaultValue[dNTL_STORAGE_MAX_VALUE_LENGTH];
 };
 
@@ -97,7 +97,7 @@ struct SNtlStorageMappingTableData
 #define dSTORAGE_TRUE		"true"
 #define dSTORAGE_FALSE		"false"
 
-// ½ºÄ«¿ìÅÍ ÃøÁ¤ Á¤º¸
+// ï¿½ï¿½Ä«ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 typedef struct _SMemoryScouterData
 {
 	_SMemoryScouterData::_SMemoryScouterData(VOID)
@@ -105,11 +105,11 @@ typedef struct _SMemoryScouterData
 		uiPower = 0;
 	}
 
-	unsigned int uiPower;				// ÀüÅõ·Â
+	unsigned int uiPower;				// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 
 }SMemoryScouterData;
 
-// Äù½ºÆ® Á¤º¸
+// ï¿½ï¿½ï¿½ï¿½Æ® ï¿½ï¿½ï¿½ï¿½
 typedef struct _SMemoryQuestData
 {
 	_SMemoryQuestData::_SMemoryQuestData(VOID)
@@ -130,71 +130,72 @@ typedef struct _SMemoryQuestData
 #define dSTORAGE_CATEGORY						0
 
 // Account
-#define dSTORAGE_ACCOUNT_LASTCHAR				1000		// ¸¶Áö¸·À¸·Î ÇÃ·¹ÀÌ ÇÑ Ä³¸¯ÅÍ ÀÌ¸§
+#define dSTORAGE_ACCOUNT_LASTCHAR				1000		// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ã·ï¿½ï¿½ï¿½ ï¿½ï¿½ Ä³ï¿½ï¿½ï¿½ï¿½ ï¿½Ì¸ï¿½
 
 // Graphic
-#define dSTORAGE_GRAPHIC_SELECT_VIDEOWIDTH		2000		// ÇØ»óµµ WIDTH
+#define dSTORAGE_GRAPHIC_SELECT_VIDEOWIDTH		2000		// ï¿½Ø»ï¿½ WIDTH
 #define dSTORAGE_GRAPHIC_SELECT_VIDEOHEIGHT		2001
-#define dSTORAGE_GRAPHIC_SELECT_VIDEODEPTH		2002		// »ö»ó
-#define dSTORAGE_GRAPHIC_GAMMA					2003		// ¹à±â
-#define dSTORAGE_GRAPHIC_WINDOW_MODE			2004		// Ã¢¸ðµå
-#define dSTORAGE_GRAPHIC_PRESET					2005		// ÇÁ¸®¼Â ·¹º§ 0~3, 4 = »ç¿ëÀÚ ¼³Á¤
-#define dSTORAGE_GRAPHIC_TERRAIN_RANGE			2006		// ÁöÇü ½Ã¾ß°Å¸®
-#define dSTORAGE_GRAPHIC_OBJECT_RANGE			2007		// »ç¹° ½Ã¾ß°Å¸®
-#define dSTORAGE_GRAPHIC_TERRAIN_SHADOW			2010		// ÁöÇü ±×¸²ÀÚ
-#define dSTORAGE_GRAPHIC_WATER_EFFECT			2011		// ¹°È¿°ú
-#define dSTORAGE_GRAPHIC_CHARACTER_RANGE		2012		// Ä³¸¯ÅÍ ½Ã¾ß°Å¸®
-#define dSTORAGE_GRAPHIC_CHARACTER_EFFECT		2013		// Ä³¸¯ÅÍ ¾÷±×·¹ÀÌµå È¿°ú 
-#define dSTORAGE_GRAPHIC_CHARACTER_SHADOW		2014		// Ä³¸¯ÅÍ ±×¸²ÀÚ
-#define dSTORAGE_GRAPHIC_MAGIC_EFFECT			2015		// ¸¶¹ý ¼¼ºÎÈ¿°ú
-#define dSTORAGE_GRAPHIC_WEATHER_EFFECT			2016		// ³¯½Ã È¿°ú
-#define dSTORAGE_GRAPHIC_TEXTURE_LEVEL			2017		// ÅØ½ºÃÄ ÇØ»óµµ
-#define dSTORAGE_GRAPHIC_SHADER_HDR				2018		// HDR È¿°ú
-#define dSTORAGE_GRAPHIC_CHARACTER_EDGE			2019		// Ä«Å÷ ¿Ü°û¼±
+#define dSTORAGE_GRAPHIC_SELECT_VIDEODEPTH		2002		// ï¿½ï¿½ï¿½ï¿½
+#define dSTORAGE_GRAPHIC_GAMMA					2003		// ï¿½ï¿½ï¿½
+#define dSTORAGE_GRAPHIC_WINDOW_MODE			2004		// Ã¢ï¿½ï¿½ï¿½
+#define dSTORAGE_GRAPHIC_PRESET					2005		// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ 0~3, 4 = ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+#define dSTORAGE_GRAPHIC_TERRAIN_RANGE			2006		// ï¿½ï¿½ï¿½ï¿½ ï¿½Ã¾ß°Å¸ï¿½
+#define dSTORAGE_GRAPHIC_OBJECT_RANGE			2007		// ï¿½ç¹° ï¿½Ã¾ß°Å¸ï¿½
+#define dSTORAGE_GRAPHIC_TERRAIN_SHADOW			2010		// ï¿½ï¿½ï¿½ï¿½ ï¿½×¸ï¿½ï¿½ï¿½
+#define dSTORAGE_GRAPHIC_WATER_EFFECT			2011		// ï¿½ï¿½È¿ï¿½ï¿½
+#define dSTORAGE_GRAPHIC_CHARACTER_RANGE		2012		// Ä³ï¿½ï¿½ï¿½ï¿½ ï¿½Ã¾ß°Å¸ï¿½
+#define dSTORAGE_GRAPHIC_CHARACTER_EFFECT		2013		// Ä³ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½×·ï¿½ï¿½Ìµï¿½ È¿ï¿½ï¿½ 
+#define dSTORAGE_GRAPHIC_CHARACTER_SHADOW		2014		// Ä³ï¿½ï¿½ï¿½ï¿½ ï¿½×¸ï¿½ï¿½ï¿½
+#define dSTORAGE_GRAPHIC_MAGIC_EFFECT			2015		// ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½È¿ï¿½ï¿½
+#define dSTORAGE_GRAPHIC_WEATHER_EFFECT			2016		// ï¿½ï¿½ï¿½ï¿½ È¿ï¿½ï¿½
+#define dSTORAGE_GRAPHIC_TEXTURE_LEVEL			2017		// ï¿½Ø½ï¿½ï¿½ï¿½ ï¿½Ø»ï¿½
+#define dSTORAGE_GRAPHIC_SHADER_HDR				2018		// HDR È¿ï¿½ï¿½
+#define dSTORAGE_GRAPHIC_CHARACTER_EDGE			2019		// Ä«ï¿½ï¿½ ï¿½Ü°ï¿½ï¿½ï¿½
 #define dSTORAGE_GRAPHIC_SHOW_FPS				2020
 #define dSTORAGE_GRAPHIC_FPS					2021
 
 // Sound
-#define dSTORAGE_SOUND_MAIN_VOLUME				4000	// ¸ÞÀÎ º¼·ý
-#define dSTORAGE_SOUND_BACK_VOLUME				4001	// ¹è°æÀ½ º¼·ý
-#define dSTORAGE_SOUND_EFFECT_VOLUME			4002	// È¿°úÀ½ º¼·ý
-#define dSTORAGE_SOUND_ENV_VOLUME				4003	// È¯°æÀ½ º¼·ý
+#define dSTORAGE_SOUND_MAIN_VOLUME				4000	// ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+#define dSTORAGE_SOUND_BACK_VOLUME				4001	// ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+#define dSTORAGE_SOUND_EFFECT_VOLUME			4002	// È¿ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+#define dSTORAGE_SOUND_ENV_VOLUME				4003	// È¯ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 
 // GameInfo
-#define dSTORAGE_GAMEINFO_GUILD_EMBLEM			5000	// À¯ÆÄ ¿¥ºí·½
-#define dSTORAGE_GAMEINFO_DOJO_MARK				5001	// µµÀå ¸¶Å©
-#define dSTORAGE_GAMEINFO_SCOUTER_VISIBLE		5002	// ½ºÄ«¿ìÅÍ Ç¥½Ã
+#define dSTORAGE_GAMEINFO_GUILD_EMBLEM			5000	// ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+#define dSTORAGE_GAMEINFO_DOJO_MARK				5001	// ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Å©
+#define dSTORAGE_GAMEINFO_SCOUTER_VISIBLE		5002	// ï¿½ï¿½Ä«ï¿½ï¿½ï¿½ï¿½ Ç¥ï¿½ï¿½
+#define dSTORAGE_GAMEINFO_ITEM_DROP				5003	// ìŠ¤ì¹´ìš°í„° í‘œì‹œ
 
 // Etc
-#define dSTORAGE_ETC_FRIEND_NOTIFY				6000	// Ä£±¸ Á¢¼Ó ¾Ë¸²
-#define dSTORAGE_ETC_GUILD_MEMBER_NOTIFY		6001	// ¹®ÇÏ»ý Á¢¼Ó ¾Ë¸²
-#define dSTORAGE_ETC_QUESTTEXT_EFFECT			6002	// Äù½ºÆ® ÅØ½ºÆ® È¿°ú
-#define dSTORAGE_ETC_USER_TRADE					6003	// °Å·¡
-#define dSTORAGE_ETC_MOVEABLEWINDOW				6004	// À©µµ¿ì ÀÌµ¿ °¡´É ¿©ºÎ
-#define dSTORAGE_ETC_MOUSE_DASH					6005	// ¸¶¿ì½º ´ë½Ã °£°Ý
+#define dSTORAGE_ETC_FRIEND_NOTIFY				6000	// Ä£ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ë¸ï¿½
+#define dSTORAGE_ETC_GUILD_MEMBER_NOTIFY		6001	// ï¿½ï¿½ï¿½Ï»ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ë¸ï¿½
+#define dSTORAGE_ETC_QUESTTEXT_EFFECT			6002	// ï¿½ï¿½ï¿½ï¿½Æ® ï¿½Ø½ï¿½Æ® È¿ï¿½ï¿½
+#define dSTORAGE_ETC_USER_TRADE					6003	// ï¿½Å·ï¿½
+#define dSTORAGE_ETC_MOVEABLEWINDOW				6004	// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ìµï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+#define dSTORAGE_ETC_MOUSE_DASH					6005	// ï¿½ï¿½ï¿½ì½º ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 #define dSTORAGE_ETC_MOUSE_FOV					6006
 #define dSTORAGE_ETC_MOUSE_VIEW_POINT			6007
 
 // Chatting
-#define dSTORAGE_CHAT_INPUTMODE					7000	// Ã¤ÆÃÃ¢ ÀÔ·Â¸ðµå
-#define dSTORAGE_CHAT_WINDOW_LOCK				7001	// Ã¤ÆÃÃ¢ Àá±Ý
-#define dSTORAGE_CHAT_MOUSE_SCROLL				7002	// ¸¶¿ì½º ½ºÅ©·Ñ
-#define dSTORAGE_CHAT_EXTEND_WINDOW				7003	// È®Àå Ã¤ÆÃÃ¢
-#define dSTORAGE_CHAT_WINDOW_OPACITY			7004	// À©µµ¿ì Åõ¸íµµ
-#define dSTORAGE_CHAT_BASIC_NORMAL				7005	// ±âº» À©µµ¿ì : ÀÏ¹Ý´ëÈ­
-#define dSTORAGE_CHAT_BASIC_WISPHER				7006	// ±âº» À©µµ¿ì : ±Ó¼Ó¸»
-#define dSTORAGE_CHAT_BASIC_PARTY				7007	// ±âº» À©µµ¿ì : ÆÄÆ¼
-#define dSTORAGE_CHAT_BASIC_GUILD				7008	// ±âº» À©µµ¿ì : À¯ÆÄ
-#define dSTORAGE_CHAT_BASIC_TRADE				7009	// ±âº» À©µµ¿ì : °Å·¡
-#define dSTORAGE_CHAT_BASIC_SHOUT				7010	// ±âº» À©µµ¿ì : ¿ÜÄ¡±â
-#define dSTORAGE_CHAT_BASIC_SYSTEM				7011	// ±âº» À©µµ¿ì : ½Ã½ºÅÛ
-#define dSTORAGE_CHAT_EXTEND_NORMAL				7012	// È®Àå À©µµ¿ì : ÀÏ¹Ý´ëÈ­
-#define dSTORAGE_CHAT_EXTEND_WISPHER			7013	// È®Àå À©µµ¿ì : ±Ó¼Ó¸»
-#define dSTORAGE_CHAT_EXTEND_PARTY				7014	// È®Àå À©µµ¿ì : ÆÄÆ¼
-#define dSTORAGE_CHAT_EXTEND_GUILD				7015	// È®Àå À©µµ¿ì : À¯ÆÄ
-#define dSTORAGE_CHAT_EXTEND_TRADE				7016	// È®Àå À©µµ¿ì : °Å·¡
-#define dSTORAGE_CHAT_EXTEND_SHOUT				7017	// È®Àå À©µµ¿ì : ¿ÜÄ¡±â
-#define dSTORAGE_CHAT_EXTEND_SYSTEM				7018	// È®Àå À©µµ¿ì : ½Ã½ºÅÛ
+#define dSTORAGE_CHAT_INPUTMODE					7000	// Ã¤ï¿½ï¿½Ã¢ ï¿½Ô·Â¸ï¿½ï¿½
+#define dSTORAGE_CHAT_WINDOW_LOCK				7001	// Ã¤ï¿½ï¿½Ã¢ ï¿½ï¿½ï¿½
+#define dSTORAGE_CHAT_MOUSE_SCROLL				7002	// ï¿½ï¿½ï¿½ì½º ï¿½ï¿½Å©ï¿½ï¿½
+#define dSTORAGE_CHAT_EXTEND_WINDOW				7003	// È®ï¿½ï¿½ Ã¤ï¿½ï¿½Ã¢
+#define dSTORAGE_CHAT_WINDOW_OPACITY			7004	// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+#define dSTORAGE_CHAT_BASIC_NORMAL				7005	// ï¿½âº» ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ : ï¿½Ï¹Ý´ï¿½È­
+#define dSTORAGE_CHAT_BASIC_WISPHER				7006	// ï¿½âº» ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ : ï¿½Ó¼Ó¸ï¿½
+#define dSTORAGE_CHAT_BASIC_PARTY				7007	// ï¿½âº» ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ : ï¿½ï¿½Æ¼
+#define dSTORAGE_CHAT_BASIC_GUILD				7008	// ï¿½âº» ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ : ï¿½ï¿½ï¿½ï¿½
+#define dSTORAGE_CHAT_BASIC_TRADE				7009	// ï¿½âº» ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ : ï¿½Å·ï¿½
+#define dSTORAGE_CHAT_BASIC_SHOUT				7010	// ï¿½âº» ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ : ï¿½ï¿½Ä¡ï¿½ï¿½
+#define dSTORAGE_CHAT_BASIC_SYSTEM				7011	// ï¿½âº» ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ : ï¿½Ã½ï¿½ï¿½ï¿½
+#define dSTORAGE_CHAT_EXTEND_NORMAL				7012	// È®ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ : ï¿½Ï¹Ý´ï¿½È­
+#define dSTORAGE_CHAT_EXTEND_WISPHER			7013	// È®ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ : ï¿½Ó¼Ó¸ï¿½
+#define dSTORAGE_CHAT_EXTEND_PARTY				7014	// È®ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ : ï¿½ï¿½Æ¼
+#define dSTORAGE_CHAT_EXTEND_GUILD				7015	// È®ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ : ï¿½ï¿½ï¿½ï¿½
+#define dSTORAGE_CHAT_EXTEND_TRADE				7016	// È®ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ : ï¿½Å·ï¿½
+#define dSTORAGE_CHAT_EXTEND_SHOUT				7017	// È®ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ : ï¿½ï¿½Ä¡ï¿½ï¿½
+#define dSTORAGE_CHAT_EXTEND_SYSTEM				7018	// È®ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ : ï¿½Ã½ï¿½ï¿½ï¿½
 #define dSTORAGE_CHAT_BASIC_FIND_PARTY			7019
 #define dSTORAGE_CHAT_EXTEND_FIND_PARTY			7020
 #define dSTORAGE_CHAT_EXTEND2_NORMAL			7021
@@ -221,9 +222,9 @@ typedef struct _SMemoryQuestData
 #define dSTORAGE_QUEST_INFO_INDICATE					7003
 
 // Character Info
-#define dSTORAGE_ETC_EX_QUICKSLOT1						8000	// Ãß°¡ Äü½½·Ô 1
-#define dSTORAGE_ETC_EX_QUICKSLOT2						8001	// Ãß°¡ Äü½½·Ô 2
-#define dSTORAGE_ETC_QUICKSLOT_LOCK						8002	// Äü½½·Ô Àá±×±â
+#define dSTORAGE_ETC_EX_QUICKSLOT1						8000	// ï¿½ß°ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ 1
+#define dSTORAGE_ETC_EX_QUICKSLOT2						8001	// ï¿½ß°ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ 2
+#define dSTORAGE_ETC_QUICKSLOT_LOCK						8002	// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½×±ï¿½
 
 #define dSTORAGE_CHARACTER_ETC_DISCORD_HIDE_NAME		9000	// show character name in discord 
 

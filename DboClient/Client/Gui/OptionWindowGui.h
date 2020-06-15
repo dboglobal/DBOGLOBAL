@@ -1,14 +1,14 @@
 /******************************************************************************
 * File			: OptionWindowGui.h
 * Author		: Kim Jinsung
-* Copyright		: (ÁÖ)NTL
+* Copyright		: (ï¿½ï¿½)NTL
 * Date			: 2007. . 
 * Abstract		: 
 *****************************************************************************
 * Desc			: COptionWindowGui
-* Modify		: 2007. 10. 1 - Cho haesung Ãß°¡(COptionControl)
+* Modify		: 2007. 10. 1 - Cho haesung ï¿½ß°ï¿½(COptionControl)
 
-¿É¼Ç À©µµ¿ì GUI
+ï¿½É¼ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ GUI
 *****************************************************************************/
 
 #ifndef _OPTIONWINDOWGUI_H_
@@ -26,14 +26,14 @@ class COptionInfo;
 class COptionETC;
 class COptionChatting;
 
-#define dOPTION_VIRTUAL_NUM				9			// º¸¿©Áú ¸®½ºÆ®ÀÇ °¹¼ö
-#define dOPTION_VIRTUAL_NUM_CONTROL		9			// Á¶ÀÛÅ°¿¡¼­ º¸¿©Áú ¸®½ºÆ®ÀÇ °¹¼ö
+#define dOPTION_VIRTUAL_NUM				9			// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Æ®ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+#define dOPTION_VIRTUAL_NUM_CONTROL		9			// ï¿½ï¿½ï¿½ï¿½Å°ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Æ®ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 #define	dOPTION_VIRTUAL_HEIGHT			21			// The height of the list
-#define	dOPTION_VIRTUAL_HEIGHT_EX		300			// ÄÞº¸¹Ú½º Å¬¸¯ ÈÄ ³ôÀÌ
-#define dOPTION_SCROLL_HEIGHT			345			// ½ºÅ©·Ñ¹Ù ³ôÀÌ
-#define dOPTION_SCROLL_HEIGHT_CONRTOL	200			// Á¶ÀÛÅ°¿¡¼­ ½ºÅ©·Ñ¹Ù ³ôÀÌ
+#define	dOPTION_VIRTUAL_HEIGHT_EX		300			// ï¿½Þºï¿½ï¿½Ú½ï¿½ Å¬ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+#define dOPTION_SCROLL_HEIGHT			345			// ï¿½ï¿½Å©ï¿½Ñ¹ï¿½ ï¿½ï¿½ï¿½ï¿½
+#define dOPTION_SCROLL_HEIGHT_CONRTOL	200			// ï¿½ï¿½ï¿½ï¿½Å°ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Å©ï¿½Ñ¹ï¿½ ï¿½ï¿½ï¿½ï¿½
 //
-//// Video Mode ¸®½ºÆ®
+//// Video Mode ï¿½ï¿½ï¿½ï¿½Æ®
 //typedef struct _SVideoModeInfo
 //{
 //	RwInt32 iWidth;
@@ -45,7 +45,7 @@ class COptionChatting;
 
 /**
 * \ingroup Client
-* ¿É¼ÇÀ©µµ¿ìÀÇ ¸Å´ÏÀú Å¬·¡½º
+* ï¿½É¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Å´ï¿½ï¿½ï¿½ Å¬ï¿½ï¿½ï¿½ï¿½
 */
 class COptionWindowGui : public CNtlPLGui, public RWS::CEventHandler
 {
@@ -148,10 +148,10 @@ public:
 
 /**
 * \ingroup client
-* \brief »ç¿îµå ¿É¼Ç
-* ÇöÀç º¼·ýÀ» ÁöÁ¤ÇÏ´Â ¼öÄ¡¸¦ 0 ºÎÅÍ 50±îÁö ¼³Á¤ÇØ³õÀ½
-* »ç¿îµå ¶óÀÌºê·¯¸®¿Í BGMÀÇ µ¿±â¸¦ ¸ÂÃß±â À§ÇÏ¿©
-* BGMÀÇ º¼·ý¸¸ Get * 200  ,  Set * 0.005 ¸¦ ÇÔ. Comment by Kell(2007. 12. 31)
+* \brief ï¿½ï¿½ï¿½ï¿½ ï¿½É¼ï¿½
+* ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½ ï¿½ï¿½Ä¡ï¿½ï¿½ 0 ï¿½ï¿½ï¿½ï¿½ 50ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ø³ï¿½ï¿½ï¿½
+* ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ìºê·¯ï¿½ï¿½ï¿½ï¿½ BGMï¿½ï¿½ ï¿½ï¿½ï¿½â¸¦ ï¿½ï¿½ï¿½ß±ï¿½ ï¿½ï¿½ï¿½Ï¿ï¿½
+* BGMï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Get * 200  ,  Set * 0.005 ï¿½ï¿½ ï¿½ï¿½. Comment by Kell(2007. 12. 31)
 */
 class COptionSound : public COptionBase
 {
@@ -216,10 +216,13 @@ protected:
 	gui::CButton*		m_pDojoOff;
 	gui::CButton*		m_pScouterOn;
 	gui::CButton*		m_pScouterOff;
+	gui::CButton* 		m_pItemDropOn;
+	gui::CButton* 		m_pItemDropOff;
 
 	SOnOff				m_onoffGuild;
 	SOnOff				m_onoffDojo;
 	SOnOff				m_onoffScouter;
+	SOnOff				m_onoffItemDrop;
 
 public:
 	COptionInfo();
@@ -241,6 +244,8 @@ private: // system setting
 	RwBool				GetDojoMarkOnOff();
 	void				SetScouterModelOnOff(RwBool bOnOff);
 	RwBool				GetScouterModelOnOff();
+	void				SetItemDropOnOff(RwBool bOnOff);
+	RwBool				GetItemDropOnOff();
 };
 
 class COptionETC : public COptionBase
