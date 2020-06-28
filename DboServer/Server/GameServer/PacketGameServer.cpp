@@ -9226,6 +9226,8 @@ void CClientSession::RecvRepairItemReq(CNtlPacket * pPacket)
 		res->wResultCode = GAME_FAIL;
 	else
 	{
+		
+
 		CNpc* pNPC = g_pObjectManager->GetNpc(req->handle);
 		if (pNPC == NULL)
 			res->wResultCode = GAME_TARGET_NOT_FOUND;
@@ -9249,7 +9251,7 @@ void CClientSession::RecvRepairItemReq(CNtlPacket * pPacket)
 							res->hItem = item->GetID();
 
 							CGameServer* app = (CGameServer*)g_pApp;
-
+							
 							cPlayer->UpdateZeni(ZENNY_CHANGE_TYPE_REPAIR, repairprice, false, false);
 
 
@@ -9315,6 +9317,7 @@ void CClientSession::RecvEquipRepairReq(CNtlPacket * pPacket)
 			res->wResultCode = GAME_TARGET_TOO_FAR;
 		else
 		{
+		
 			//Get repair price
 			for (int slot = 0; slot < EQUIP_SLOT_TYPE_COUNT; slot++)
 			{
@@ -9344,19 +9347,21 @@ void CClientSession::RecvEquipRepairReq(CNtlPacket * pPacket)
 					for (int j = 0; j < EQUIP_SLOT_TYPE_COUNT; j++)
 					{
 						CItem* pItem = cPlayer->GetPlayerItemContainer()->GetItem(CONTAINER_TYPE_EQUIP, j);
-						if (pItem && pItem->IsLocked(false))
+						if (pItem && !pItem->IsLocked(false))
 						{
 							sITEM_TBLDAT* pItemData = pItem->GetTbldat();
-							if (pItem->GetDurability() < pItemData->byDurability)
+							if (pItemData->byDurability != INVALID_BYTE && pItem->GetDurability() < pItemData->byDurability)
 							{
 								pItem->UpdateDurability(pItemData->byDurability);
-
+	
 								res->wResultCode = GAME_SUCCESS;
+								
 								res2->byCount += 1;
 								res2->asItemData[j].itemID = pItem->GetItemID();
 								res2->asItemData[j].byPlace = pItem->GetPlace();
 								res2->asItemData[j].byPosition = pItem->GetPos();
 								res2->asItemData[j].byDur = pItemData->byDurability;
+
 							}
 						}
 					}
@@ -9364,7 +9369,8 @@ void CClientSession::RecvEquipRepairReq(CNtlPacket * pPacket)
 					res2->dwZenny = repairprice;
 					packet2.SetPacketLen(sizeof(sGQ_ITEM_EQUIP_REPAIR_REQ));
 					app->SendTo(app->GetQueryServerSession(), &packet2);
-
+					
+					res->wResultCode = GAME_SUCCESS;
 					cPlayer->UpdateZeni(ZENNY_CHANGE_TYPE_REPAIR, repairprice, false, false);
 
 				}
