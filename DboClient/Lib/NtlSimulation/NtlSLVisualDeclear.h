@@ -116,7 +116,16 @@
 #define NTL_VID_STATE_BLEED					"GME_STS_BLEED"
 #define NTL_VID_STATE_POISON				"GME_STS_POISON"
 
+//Guard auras
 #define NTL_VID_GUARD_SUCCESS				"GME_Guard_Success" // effect while using guard
+#define NTL_VID_GUARD_BLUE					"GME_Guard_01" // blue aura when guarding
+#define NTL_VID_GUARD_GREEN					"GME_Guard_02" // green aura when guarding
+#define NTL_VID_GUARD_GREENT				"GME_Guard_03" // refined green aura when guarding
+#define NTL_VID_GUARD_YELLOW				"GME_Guard_04" // yellow aura when guarding
+#define NTL_VID_GUARD_YELLOWT				"GME_Guard_05" // refined yellow aura when guarding
+#define NTL_VID_GUARD_RED					"GME_Guard_06" // red aura when guarding
+#define NTL_VID_GUARD_REDT					"GME_Guard_07" // refined aura when guarding
+#define NTL_VID_GUARD_PURPLE				"GME_Guard_08" // purple aura when guarding
 
 #define NTL_VID_BLOCKING_DEFENCE			"GME_Guard_Attack"
 #define NTL_VID_BLOCKING_DAMAGE				"TXT_Guard_Normal"

@@ -1889,7 +1889,93 @@ void CNtlSobCharProxy::DetachRPBonusEffect()
 
 void CNtlSobCharProxy::CreateGuardEffect()
 {
-	m_pDecorationProxy->CreateGuardEffect();
+	//m_pDecorationProxy->CreateGuardEffect();
+	RwUInt8 mGrade = m_pEquipProxy->GetEquipItem(EQUIP_SLOT_TYPE_JACKET)->byGrade; //get's jacket grade
+
+	switch (mGrade)
+	{
+		case (0): 
+		{
+			m_pDecorationProxy->CreateGuardEffect(NTL_VID_GUARD_SUCCESS);
+			break;
+		}
+		case (1):
+		{
+			m_pDecorationProxy->CreateGuardEffect(NTL_VID_GUARD_BLUE);
+			break;
+		}
+		case (2):
+		{
+			m_pDecorationProxy->CreateGuardEffect(NTL_VID_GUARD_BLUE);
+			break;
+		}
+		case (3):
+		{
+			m_pDecorationProxy->CreateGuardEffect(NTL_VID_GUARD_BLUE);
+			break;
+		}
+		case (4):
+		{
+			m_pDecorationProxy->CreateGuardEffect(NTL_VID_GUARD_BLUE);
+			break;
+		}
+		case (5):
+		{
+			m_pDecorationProxy->CreateGuardEffect(NTL_VID_GUARD_GREEN);
+			break;
+		}
+		case (6):
+		{
+			m_pDecorationProxy->CreateGuardEffect(NTL_VID_GUARD_GREEN);
+			break;
+		}
+		case (7):
+		{
+			m_pDecorationProxy->CreateGuardEffect(NTL_VID_GUARD_GREENT);
+			break;
+		}
+		case (8):
+		{
+			m_pDecorationProxy->CreateGuardEffect(NTL_VID_GUARD_GREENT);
+			break;
+		}
+		case (9):
+		{
+			m_pDecorationProxy->CreateGuardEffect(NTL_VID_GUARD_YELLOW);
+			break;
+		}
+		case (10):
+		{
+			m_pDecorationProxy->CreateGuardEffect(NTL_VID_GUARD_YELLOW);
+			break;
+		}
+		case (11):
+		{
+			m_pDecorationProxy->CreateGuardEffect(NTL_VID_GUARD_YELLOWT);
+			break;
+		}
+		case (12):
+		{
+			m_pDecorationProxy->CreateGuardEffect(NTL_VID_GUARD_YELLOWT);
+			break;
+		}
+		case (13):
+		{
+			m_pDecorationProxy->CreateGuardEffect(NTL_VID_GUARD_RED);
+			break;
+		}
+		case (14):
+		{
+			m_pDecorationProxy->CreateGuardEffect(NTL_VID_GUARD_REDT);
+			break;
+		}
+		case (15):
+		{
+			m_pDecorationProxy->CreateGuardEffect(NTL_VID_GUARD_PURPLE);
+			break;
+		}
+	}
+
 }
 
 void CNtlSobCharProxy::DeleteGuardEffect()

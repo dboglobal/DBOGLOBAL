@@ -1025,11 +1025,11 @@ RwBool CNtlSobCharDecorationProxy::DetachRPBonusEffect()
     return TRUE;
 }
 
-void CNtlSobCharDecorationProxy::CreateGuardEffect()
+void CNtlSobCharDecorationProxy::CreateGuardEffect(RwChar* pKey)
 {
 	DeleteGuardEffect();
 
-	m_pGuardEffect = GetSceneManager()->CreateEntity(PLENTITY_EFFECT, NTL_VID_GUARD_SUCCESS);
+	m_pGuardEffect = GetSceneManager()->CreateEntity(PLENTITY_EFFECT, pKey);
 	if (m_pGuardEffect)
 	{
 		RwV3d vOffset = ZeroAxis;
@@ -1055,9 +1055,9 @@ void CNtlSobCharDecorationProxy::CreateRpChargeEffect(RwChar *pKey)
 
 	if (m_pRpChargeEffect)
 	{
-		RwV3d vPos = m_pPLCharacter->GetPosition();
 		RwV3d vOffset = ZeroAxis;
-		m_pRpChargeEffect->SetPosition(&m_pPLCharacter->GetPosition());
+		m_pRpChargeEffect->SetPosition(&m_pSobObj->GetSobProxy()->GetPosition());
+		m_pRpChargeEffect->SetDirection(&m_pSobObj->GetSobProxy()->GetDirection());
 		m_pRpChargeEffect->SetScale(m_pSobObj->GetSobProxy()->GetScale()); //m_pSobObj->GetSobProxy()->GetScale()
 		Helper_AttachWorldPos(m_pPLCharacter, m_pRpChargeEffect, vOffset);
 	}
