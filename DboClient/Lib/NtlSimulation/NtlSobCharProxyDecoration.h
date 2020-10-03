@@ -193,7 +193,7 @@ public:
 	void DeleteGuardEffect();
 
 	// rp charging Skill
-	void CreateRpChargeEffect();
+	void CreateRpChargeEffect(RwChar *pKey);
 	void DeleteRpChargeEffect();
 
     // Transform

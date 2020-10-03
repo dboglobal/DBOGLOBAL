@@ -154,7 +154,18 @@
 #define NTL_VID_RPBOUNS_SMALL               "GME_RP_Bonus_Act"
 #define NTL_VID_RPBONUS_BIG                 "GME_RP_Bonus_Act_02"
 #define NTL_VID_RPBALL_UP                   "COM_SKL_AVE_002_02"
-#define NTL_VID_RP_CHARGE					"COM_SKL_AVE_002" // effect while using rp charge skill
+
+// RP Charge Auras
+#define NTL_VID_RP_CHARGE					"COM_SKL_AVE_002" // effect while using rp charge skill (grey aura)
+#define NTL_VID_RP_CHARGE_BLUE				"COM_SKL_AVE_002_1" // effect while using rp charge skill (blue aura)
+#define NTL_VID_RP_CHARGE_GREEN				"COM_SKL_AVE_002_2" // effect while using rp charge skill (green aura)
+#define NTL_VID_RP_CHARGE_GREENT			"COM_SKL_AVE_002_3" // effect while using rp charge skill (refined green aura)
+#define NTL_VID_RP_CHARGE_YELLOW			"COM_SKL_AVE_002_4" // effect while using rp charge skill (yellow aura)
+#define NTL_VID_RP_CHARGE_YELLOWT			"COM_SKL_AVE_002_5" // effect while using rp charge skill (refined yellow aura)
+#define NTL_VID_RP_CHARGE_RED				"COM_SKL_AVE_002_6" // effect while using rp charge skill (red aura)
+#define NTL_VID_RP_CHARGE_REDT				"COM_SKL_AVE_002_7" // effect while using rp charge skill (refined red aura)
+#define NTL_VID_RP_CHARGE_PURPLE			"COM_SKL_AVE_002_8" // effect while using rp charge skill (purple aura)
+
 
 // Super Saiyan Effect
 #define NTL_VID_SUPER_SAIYAN_SMALL          "HUM_Super_Saiyan"
