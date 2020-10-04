@@ -399,6 +399,9 @@ RwBool			Logic_IsActiveNotAttachSubWeapon(TBLIDX tblidx);
 // main weapon과 change해야 하는 sub weapon인가?
 RwBool			Logic_IsWeaponChangeSubWeapon(TBLIDX tblidx);
 
+//Getting item grade -Makoto
+RwUInt8         Logic_GetBootsGrade(CNtlSob* pSobObj);
+
 // costume item 인가?
 RwBool			Logic_IsCostumeItem(sITEM_TBLDAT *pItemTblData);
 

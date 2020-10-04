@@ -4,6 +4,9 @@
 // shared 
 #include "NtlMovement.h"
 
+// inventory
+#include "NtlInventory.h"
+
 // sound
 #include "NtlSoundDefines.h"
 #include "NtlSoundManager.h"
@@ -671,7 +674,91 @@ void CNtlBehaviorCharGroundMove::SetAnim(RwUInt8 byMoveFlags)
         else
             uiNextAnimKey = NML_DASH_RIGHT;
 
-        CreateDashEffect(byMoveFlags);
+        RwUInt8 bootsGrade = Logic_GetBootsGrade(m_pActor);
+        switch (bootsGrade) 
+        {
+            case (0): 
+            {
+                CreateDashEffect(byMoveFlags, NTL_VID_DASH_ACTIVE_01, NTL_VID_DASH_ACTIVE_02);
+                break;
+            }
+            case (1):
+            {
+                CreateDashEffect(byMoveFlags, NTL_VID_DASH_ACTIVE_BLUE_01, NTL_VID_DASH_ACTIVE_BLUE_02);
+                break;
+            }
+            case (2):
+            {
+                CreateDashEffect(byMoveFlags, NTL_VID_DASH_ACTIVE_BLUE_01, NTL_VID_DASH_ACTIVE_BLUE_02);
+                break;
+            }
+            case (3):
+            {
+                CreateDashEffect(byMoveFlags, NTL_VID_DASH_ACTIVE_BLUE_01, NTL_VID_DASH_ACTIVE_BLUE_02);
+                break;
+            }
+            case (4):
+            {
+                CreateDashEffect(byMoveFlags, NTL_VID_DASH_ACTIVE_BLUE_01, NTL_VID_DASH_ACTIVE_BLUE_02);
+                break;
+            }
+            case (5):
+            {
+                CreateDashEffect(byMoveFlags, NTL_VID_DASH_ACTIVE_GREEN_01, NTL_VID_DASH_ACTIVE_GREEN_02);
+                break;
+            }
+            case (6):
+            {
+                CreateDashEffect(byMoveFlags, NTL_VID_DASH_ACTIVE_GREEN_01, NTL_VID_DASH_ACTIVE_GREEN_02);
+                break;
+            }
+            case (7):
+            {
+                CreateDashEffect(byMoveFlags, NTL_VID_DASH_ACTIVE_GREENT_01, NTL_VID_DASH_ACTIVE_GREEN_02);
+                break;
+            }
+            case (8):
+            {
+                CreateDashEffect(byMoveFlags, NTL_VID_DASH_ACTIVE_GREENT_01, NTL_VID_DASH_ACTIVE_GREEN_02);
+                break;
+            }
+            case (9):
+            {
+                CreateDashEffect(byMoveFlags, NTL_VID_DASH_ACTIVE_YELLOW_01, NTL_VID_DASH_ACTIVE_YELLOW_02);
+                break;
+            }
+            case (10):
+            {
+                CreateDashEffect(byMoveFlags, NTL_VID_DASH_ACTIVE_YELLOW_01, NTL_VID_DASH_ACTIVE_YELLOW_02);
+                break;
+            }
+            case (11):
+            {
+                CreateDashEffect(byMoveFlags, NTL_VID_DASH_ACTIVE_YELLOW_01, NTL_VID_DASH_ACTIVE_YELLOW_02);
+                break;
+            }
+            case (12):
+            {
+                CreateDashEffect(byMoveFlags, NTL_VID_DASH_ACTIVE_YELLOW_01, NTL_VID_DASH_ACTIVE_YELLOW_02);
+                break;
+            }
+            case (13):
+            {
+                CreateDashEffect(byMoveFlags, NTL_VID_DASH_ACTIVE_RED_01, NTL_VID_DASH_ACTIVE_RED_02);
+                break;
+            }
+            case (14):
+            {
+                CreateDashEffect(byMoveFlags, NTL_VID_DASH_ACTIVE_REDT_01, NTL_VID_DASH_ACTIVE_REDT_02);
+                break;
+            }
+            case (15):
+            {
+                CreateDashEffect(byMoveFlags, NTL_VID_DASH_ACTIVE_PURPLE_01, NTL_VID_DASH_ACTIVE_PURPLE_02);
+                break;
+            }
+        }
+
         UpdateDashEffect(byMoveFlags, m_MoveStuff.vDir);
     }
     else if(m_MoveStuff.byType == NTL_MOVETARGET_DASH_ACTOR)
@@ -680,7 +767,91 @@ void CNtlBehaviorCharGroundMove::SetAnim(RwUInt8 byMoveFlags)
 
         RwV3d vDir = m_pActor->GetDirection();
 
-        CreateDashEffect(NTL_MOVE_F);
+        RwUInt8 bootsGrade = Logic_GetBootsGrade(m_pActor);
+        switch (bootsGrade)
+        {
+        case (0):
+        {
+            CreateDashEffect(byMoveFlags, NTL_VID_DASH_ACTIVE_01, NTL_VID_DASH_ACTIVE_02);
+            break;
+        }
+        case (1):
+        {
+            CreateDashEffect(byMoveFlags, NTL_VID_DASH_ACTIVE_BLUE_01, NTL_VID_DASH_ACTIVE_BLUE_02);
+            break;
+        }
+        case (2):
+        {
+            CreateDashEffect(byMoveFlags, NTL_VID_DASH_ACTIVE_BLUE_01, NTL_VID_DASH_ACTIVE_BLUE_02);
+            break;
+        }
+        case (3):
+        {
+            CreateDashEffect(byMoveFlags, NTL_VID_DASH_ACTIVE_BLUE_01, NTL_VID_DASH_ACTIVE_BLUE_02);
+            break;
+        }
+        case (4):
+        {
+            CreateDashEffect(byMoveFlags, NTL_VID_DASH_ACTIVE_BLUE_01, NTL_VID_DASH_ACTIVE_BLUE_02);
+            break;
+        }
+        case (5):
+        {
+            CreateDashEffect(byMoveFlags, NTL_VID_DASH_ACTIVE_GREEN_01, NTL_VID_DASH_ACTIVE_GREEN_02);
+            break;
+        }
+        case (6):
+        {
+            CreateDashEffect(byMoveFlags, NTL_VID_DASH_ACTIVE_GREEN_01, NTL_VID_DASH_ACTIVE_GREEN_02);
+            break;
+        }
+        case (7):
+        {
+            CreateDashEffect(byMoveFlags, NTL_VID_DASH_ACTIVE_GREENT_01, NTL_VID_DASH_ACTIVE_GREEN_02);
+            break;
+        }
+        case (8):
+        {
+            CreateDashEffect(byMoveFlags, NTL_VID_DASH_ACTIVE_GREENT_01, NTL_VID_DASH_ACTIVE_GREEN_02);
+            break;
+        }
+        case (9):
+        {
+            CreateDashEffect(byMoveFlags, NTL_VID_DASH_ACTIVE_YELLOW_01, NTL_VID_DASH_ACTIVE_YELLOW_02);
+            break;
+        }
+        case (10):
+        {
+            CreateDashEffect(byMoveFlags, NTL_VID_DASH_ACTIVE_YELLOW_01, NTL_VID_DASH_ACTIVE_YELLOW_02);
+            break;
+        }
+        case (11):
+        {
+            CreateDashEffect(byMoveFlags, NTL_VID_DASH_ACTIVE_YELLOW_01, NTL_VID_DASH_ACTIVE_YELLOW_02);
+            break;
+        }
+        case (12):
+        {
+            CreateDashEffect(byMoveFlags, NTL_VID_DASH_ACTIVE_YELLOW_01, NTL_VID_DASH_ACTIVE_YELLOW_02);
+            break;
+        }
+        case (13):
+        {
+            CreateDashEffect(byMoveFlags, NTL_VID_DASH_ACTIVE_RED_01, NTL_VID_DASH_ACTIVE_RED_02);
+            break;
+        }
+        case (14):
+        {
+            CreateDashEffect(byMoveFlags, NTL_VID_DASH_ACTIVE_REDT_01, NTL_VID_DASH_ACTIVE_REDT_02);
+            break;
+        }
+        case (15):
+        {
+            CreateDashEffect(byMoveFlags, NTL_VID_DASH_ACTIVE_PURPLE_01, NTL_VID_DASH_ACTIVE_PURPLE_02);
+            break;
+        }
+        }
+
         UpdateDashEffect(NTL_MOVE_F, vDir);
     }
 
@@ -1556,7 +1727,7 @@ RwBool CNtlBehaviorCharGroundMove::UpdateDashTargetMove(RwReal fElapsed)
 }
 
 
-void CNtlBehaviorCharGroundMove::CreateDashEffect(RwUInt32 uiMoveDirFlags)
+void CNtlBehaviorCharGroundMove::CreateDashEffect(RwUInt32 uiMoveDirFlags, RwChar *pKey1, RwChar *pKey2)
 {
     if(!m_pActor)
         return;
@@ -1566,10 +1737,10 @@ void CNtlBehaviorCharGroundMove::CreateDashEffect(RwUInt32 uiMoveDirFlags)
 
     CNtlPLAttach* pPLChar = (CNtlPLAttach*)m_pActor->GetSobProxy()->GetPLMainEntity();
 
-    m_pDashEffect = GetSceneManager()->CreateEntity(PLENTITY_EFFECT, NTL_VID_DASH_ACTIVE_01);
+    m_pDashEffect = GetSceneManager()->CreateEntity(PLENTITY_EFFECT, pKey1);
     pPLChar->Attach((CNtlPLAttach*)m_pDashEffect);
 
-    m_pDashEffectSmoke = GetSceneManager()->CreateEntity(PLENTITY_EFFECT, NTL_VID_DASH_ACTIVE_02);
+    m_pDashEffectSmoke = GetSceneManager()->CreateEntity(PLENTITY_EFFECT, pKey2);
     pPLChar->Attach((CNtlPLAttach*)m_pDashEffectSmoke);    
 
     if(m_pActor->GetClassID() == SLCLASS_AVATAR)

@@ -93,10 +93,28 @@
 #define NTL_VID_SWIM_IDLE					"GME_SWIM_STOP"
 #define NTL_VID_SWIM_BUBBLE                 "GME_SWIM_BUBBLE"
 
+//dash line
+#define NTL_VID_DASH_LINE					"GME_DashLine"
 
+//dash auras
 #define NTL_VID_DASH_ACTIVE_01				"COM_SKL_AVE_001"
 #define NTL_VID_DASH_ACTIVE_02				"COM_SKL_AVE_001_02"
-#define NTL_VID_DASH_LINE					"GME_DashLine"
+#define NTL_VID_DASH_ACTIVE_BLUE_01			"COM_SKL_AVE_001_1" // blue dash aura
+#define NTL_VID_DASH_ACTIVE_BLUE_02			"COM_SKL_AVE_001_02_1" // blue dash aura
+#define NTL_VID_DASH_ACTIVE_GREEN_01		"COM_SKL_AVE_001_2" // green dash aura
+#define NTL_VID_DASH_ACTIVE_GREEN_02		"COM_SKL_AVE_001_02_2" // green dash aura
+#define NTL_VID_DASH_ACTIVE_GREENT_01		"COM_SKL_AVE_001_3" // refined green dash aura
+#define NTL_VID_DASH_ACTIVE_YELLOW_01		"COM_SKL_AVE_001_4" // yellow dash aura
+#define NTL_VID_DASH_ACTIVE_YELLOW_02		"COM_SKL_AVE_001_02_4" // yellow dash aura
+#define NTL_VID_DASH_ACTIVE_RED_01			"COM_SKL_AVE_001_6" // red dash aura
+#define NTL_VID_DASH_ACTIVE_RED_02			"COM_SKL_AVE_001_02_6" // red dash aura
+#define NTL_VID_DASH_ACTIVE_REDT_01			"COM_SKL_AVE_001_7" // refined red dash aura
+#define NTL_VID_DASH_ACTIVE_REDT_02			"COM_SKL_AVE_001_02_7" // refined red dash aura
+#define NTL_VID_DASH_ACTIVE_PURPLE_01		"COM_SKL_AVE_001_8" // purple dash aura
+#define NTL_VID_DASH_ACTIVE_PURPLE_02		"COM_SKL_AVE_001_02_8" // purple dash aura
+
+
+
 
 #define NTL_VID_NORMAL_SKILL_USE			"GME_Normal_Skill"
 #define NTL_VID_SPECIAL_SKILL_USE			"GME_Special_Skill"
