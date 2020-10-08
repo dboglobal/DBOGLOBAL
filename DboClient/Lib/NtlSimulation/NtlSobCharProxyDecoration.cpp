@@ -1033,6 +1033,8 @@ void CNtlSobCharDecorationProxy::CreateGuardEffect(RwChar* pKey)
 	if (m_pGuardEffect)
 	{
 		RwV3d vOffset = ZeroAxis;
+		m_pGuardEffect->SetPosition(&m_pSobObj->GetSobProxy()->GetPosition());
+		m_pGuardEffect->SetDirection(&m_pPLCharacter->GetDirection());
 		m_pGuardEffect->SetScale(m_pSobObj->GetSobProxy()->GetScale());
 		Helper_AttachWorldPos(m_pPLCharacter, m_pGuardEffect, vOffset);
 	}
@@ -1057,9 +1059,8 @@ void CNtlSobCharDecorationProxy::CreateRpChargeEffect(RwChar *pKey)
 	{
 		RwV3d vOffset = ZeroAxis;
 		m_pRpChargeEffect->SetPosition(&m_pSobObj->GetSobProxy()->GetPosition());
-		m_pRpChargeEffect->SetDirection(&m_pSobObj->GetSobProxy()->GetDirection());
-		m_pRpChargeEffect->SetScale(m_pSobObj->GetSobProxy()->GetScale()); //m_pSobObj->GetSobProxy()->GetScale()
-		Helper_AttachWorldPos(m_pPLCharacter, m_pRpChargeEffect, vOffset);
+		m_pRpChargeEffect->SetScale(m_pPLCharacter->GetScale());
+		m_pPLCharacter->AttachBone((CNtlPLAttach*)m_pRpChargeEffect, "nullroot");
 	}
 
 }
