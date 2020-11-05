@@ -3103,6 +3103,25 @@ sITEM_TBLDAT* Logic_GetEquipedWeaponItemTableData(CNtlSob *pSobObj)
 	return NULL;
 }
 
+RwUInt8 Logic_GetBootsGrade(CNtlSob* pSobObj)
+{
+	if (!pSobObj)
+		return NULL;
+
+	CNtlInventory* pInventory = reinterpret_cast<CNtlSobAvatar*>(pSobObj)->GetInventory();
+	SERIAL_HANDLE hItem = pInventory->GetEquipItem(EQUIP_SLOT_TYPE_BOOTS);
+	if (hItem == INVALID_SERIAL_ID)
+		return NULL;
+
+	CNtlSobItem* pSobItem = reinterpret_cast<CNtlSobItem*>(GetNtlSobManager()->GetSobObject(hItem));
+	if (!pSobItem)
+		return NULL;
+
+	CNtlSobItemAttr* pSobItemAttr = reinterpret_cast<CNtlSobItemAttr*>(pSobItem->GetSobAttr());
+	return pSobItemAttr->GetGrade();
+
+}
+
 SERIAL_HANDLE Logic_GetEquipedSubWeaponItemSerial(CNtlSob *pSobObj)
 {
 	if( !pSobObj )

@@ -8,8 +8,14 @@ struct sTIME_BLOCK_NODE
 };
 
 
-#define dEMUV_UPGRADE03LVL_TBN_NUM (2)
-#define dEMUV_UPGRADE04LVL_TBN_NUM (8)
+#define dEMUV_UPGRADE01LVL_TBN_NUM (4)
+#define dEMUV_UPGRADE02LVL_TBN_NUM (6)
+#define dEMUV_UPGRADE03LVL_TBN_NUM (1)
+#define dEMUV_UPGRADE04LVL_TBN_NUM (1)
+#define dEMUV_UPGRADE05LVL_TBN_NUM (1)
+#define dEMUV_UPGRADE06LVL_TBN_NUM (1)
+#define dEMUV_UPGRADE07LVL_TBN_NUM (1)
+#define dEMUV_UPGRADE08LVL_TBN_NUM (1)
 
 
 using std::vector;
@@ -42,21 +48,75 @@ public:
 	RwBool		GetActivation() { return m_vecTBN[m_CurTBNIdx]._Vision; }
 };
 
+class CNtlPLItemEMUV_Upgrade01Lvl : public CNtlPLItemEMUVController
+{
+public:
+	CNtlPLItemEMUV_Upgrade01Lvl();
+	virtual ~CNtlPLItemEMUV_Upgrade01Lvl() {;}
+public:
+	virtual VOID Update(RwReal _ElaspedTime);
+};
+
+class CNtlPLItemEMUV_Upgrade02Lvl : public CNtlPLItemEMUVController
+{
+public:
+	CNtlPLItemEMUV_Upgrade02Lvl();
+	virtual ~CNtlPLItemEMUV_Upgrade02Lvl() {;}
+public:
+	virtual VOID Update(RwReal _ElaspedTime);
+};
+
 class CNtlPLItemEMUV_Upgrade03Lvl : public CNtlPLItemEMUVController
 {
 public:
 	CNtlPLItemEMUV_Upgrade03Lvl();
 	virtual ~CNtlPLItemEMUV_Upgrade03Lvl() {;}
-
 public:
-	virtual VOID Update(RwReal _ElapsedTime);
+	virtual VOID Update(RwReal _ElaspedTime);
 };
 
 class CNtlPLItemEMUV_Upgrade04Lvl : public CNtlPLItemEMUVController
 {
 public:
 	CNtlPLItemEMUV_Upgrade04Lvl();
-	virtual ~CNtlPLItemEMUV_Upgrade04Lvl() {;}
+	virtual ~CNtlPLItemEMUV_Upgrade04Lvl() { ; }
+public:
+	virtual VOID Update(RwReal _ElaspedTime);
+};
+
+class CNtlPLItemEMUV_Upgrade05Lvl : public CNtlPLItemEMUVController
+{
+public:
+	CNtlPLItemEMUV_Upgrade05Lvl();
+	virtual ~CNtlPLItemEMUV_Upgrade05Lvl() { ; }
+public:
+	virtual VOID Update(RwReal _ElaspedTime);
+};
+
+class CNtlPLItemEMUV_Upgrade06Lvl : public CNtlPLItemEMUVController
+{
+public:
+	CNtlPLItemEMUV_Upgrade06Lvl();
+	virtual ~CNtlPLItemEMUV_Upgrade06Lvl() { ; }
+public:
+	virtual VOID Update(RwReal _ElaspedTime);
+};
+
+class CNtlPLItemEMUV_Upgrade07Lvl : public CNtlPLItemEMUVController
+{
+public:
+	CNtlPLItemEMUV_Upgrade07Lvl();
+	virtual ~CNtlPLItemEMUV_Upgrade07Lvl() {;}
+
+public:
+	virtual VOID Update(RwReal _ElapsedTime);
+};
+
+class CNtlPLItemEMUV_Upgrade08Lvl : public CNtlPLItemEMUVController
+{
+public:
+	CNtlPLItemEMUV_Upgrade08Lvl();
+	virtual ~CNtlPLItemEMUV_Upgrade08Lvl() {;}
 
 public:
 	virtual VOID Update(RwReal _ElapsedTime);

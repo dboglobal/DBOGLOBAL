@@ -64,7 +64,7 @@ protected:
     void	CreateStartDashCamera(void);
     void	DestroyEndDashCamera(void);
 
-    void	CreateDashEffect(RwUInt32 uiMoveDirFlags);
+    void	CreateDashEffect(RwUInt32 uiMoveDirFlags, RwChar *pKey1, RwChar *pKey2);
     void	DestroyDashEffect(void);
     void	DestroyDashEffectSmoke(void);
     void	UpdateDashEffect(RwUInt32 uiMoveDirFlags, RwV3d& vDir);
