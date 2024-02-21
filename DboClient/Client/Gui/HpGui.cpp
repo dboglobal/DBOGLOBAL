@@ -225,7 +225,6 @@ RwBool CHpGui::Create(void)
 	// disable air default
 	m_ppnlAirPoint->Show(false);
 	m_surMidAir.Show(false);
-	m_surRoundAir.Show(false);
 
 	// Event link
 	LinkMsg(g_EventSobInfoUpdate, 0);
@@ -283,7 +282,6 @@ void CHpGui::Destroy(void)
 	GetNtlGuiManager()->RemoveUpdateFunc( this );
 
 	m_surMidAir.UnsetTexture();
-	m_surRoundAir.UnsetTexture();
 	CNtlPLGui::DestroyComponents();
 	CNtlPLGui::Destroy(); 
 
@@ -634,7 +632,7 @@ void CHpGui::HandleEvents(RWS::CMsg &pMsg)
 	else if (pMsg.Id == g_EventEnableAir)
 	{
 		SNtlEventEnableAir* pEvent = reinterpret_cast<SNtlEventEnableAir*>(pMsg.pData);
-		
+
 		EnableAir(pEvent->bFlag);
 	}
 	else if (pMsg.Id == g_EventSetAp)
@@ -768,11 +766,15 @@ void CHpGui::UpdateAir()
 
 	CheckAir();
 
-	CRectangle  rec = m_psttAirPoint->GetScreenRect();
-	m_surMidAir.SetPosition(rec.left + 8.5, (rec.bottom / 2) - 7); // rec.left + 8.5, (rec.bottom / 2) - 7
-	m_surMidAir.SetAlpha(255);
-	m_surRoundAir.SetPosition(rec.left - 2, (rec.bottom / 2) - 17);
-	m_surRoundAir.SetAlpha(255);
+	m_rRoundAir.StartProc(pSobAvatarAttr->GetMaxAp(), false, true);
+
+	if(pSobAvatarAttr->GetAp() > 0)
+	{
+		m_rRoundAir.Update(pSobAvatarAttr->GetAp());
+	}
+
+	m_surMidAir.SetPosition(m_psttAirPoint->GetScreenRect().left + 8.5, (m_psttAirPoint->GetScreenRect().bottom / 2) - 7);
+	m_rRoundAir.SetPosition(m_ppnlAirPoint->GetScreenRect().left + 3, m_ppnlAirPoint->GetScreenRect().top + 4);
 
 	if (m_bIsWorldAirPossible)
 	{
@@ -795,8 +797,6 @@ void CHpGui::CheckAir()
 	}
 
 	m_surMidAir.Show(bIsWorldAirPossible);
-	m_surRoundAir.Show(bIsWorldAirPossible);
-
 
 	if (m_bIsWorldAirPossible != bIsWorldAirPossible)
 	{
@@ -828,26 +828,26 @@ void CHpGui::EnableAir(bool bFlag)
 			nMaxAP = DBO_CHAR_DEFAULT_AP;
 
 		SetAP(pSobAvatarAttr->GetAp() / 1000, nMaxAP / 1000);
+		m_rRoundAir.SetClippingRect(*m_ppnlAirPoint->GetClippingRect());
 		CalculateAirHeight();
 	}
 
 	m_ppnlAirPoint->Show(bFlag);
+	m_ppnlAirPoint->SetPriority(0);
 	m_surMidAir.Show(bFlag);
-	m_surRoundAir.Show(bFlag);
 }
 
 void CHpGui::SetAP(int nAP, int nMaxAP)
 {
 	int nPercent = nAP * 100 / nMaxAP;
-
+	CRectangle rec = m_psttAirPoint->GetScreenRect();;
 	if (nPercent >= 0 && nPercent < 33) // RED
 	{
 		if (m_eAirColor != TYPE_RED)
 		{
 			m_surMidAir.UnsetTexture();
-			m_surRoundAir.UnsetTexture();
 			m_surMidAir.SetSurface(GetNtlGuiManager()->GetSurfaceManager()->GetSurface("AirPoint.srf", "srfTimeMiddleRed"));
-			m_surRoundAir.SetSurface(GetNtlGuiManager()->GetSurfaceManager()->GetSurface("AirPoint.srf", "srfTimeRoundRed"));
+			m_rRoundAir.SetSurface(GetNtlGuiManager()->GetSurfaceManager()->GetSurface("AirPoint.srf", "srfTimeRoundRed"));
 			m_eAirColor = TYPE_RED;
 		}
 	}
@@ -856,9 +856,8 @@ void CHpGui::SetAP(int nAP, int nMaxAP)
 		if (m_eAirColor != TYPE_YELLOW)
 		{
 			m_surMidAir.UnsetTexture();
-			m_surRoundAir.UnsetTexture();
 			m_surMidAir.SetSurface(GetNtlGuiManager()->GetSurfaceManager()->GetSurface("AirPoint.srf", "srfTimeMiddleYellow"));
-			m_surRoundAir.SetSurface(GetNtlGuiManager()->GetSurfaceManager()->GetSurface("AirPoint.srf", "srfTimeRoundYellow"));
+			m_rRoundAir.SetSurface(GetNtlGuiManager()->GetSurfaceManager()->GetSurface("AirPoint.srf", "srfTimeRoundYellow"));
 			m_eAirColor = TYPE_YELLOW;
 		}
 	}
@@ -867,9 +866,8 @@ void CHpGui::SetAP(int nAP, int nMaxAP)
 		if (m_eAirColor != TYPE_BLUE)
 		{
 			m_surMidAir.UnsetTexture();
-			m_surRoundAir.UnsetTexture();
 			m_surMidAir.SetSurface(GetNtlGuiManager()->GetSurfaceManager()->GetSurface("AirPoint.srf", "srfTimeMiddleBlue"));
-			m_surRoundAir.SetSurface(GetNtlGuiManager()->GetSurfaceManager()->GetSurface("AirPoint.srf", "srfTimeRoundBlue"));
+			m_rRoundAir.SetSurface(GetNtlGuiManager()->GetSurfaceManager()->GetSurface("AirPoint.srf", "srfTimeRoundBlue"));
 			m_eAirColor = TYPE_BLUE;
 		}
 	}
@@ -896,7 +894,6 @@ void CHpGui::CalculateAirHeight()
 	{
 		m_psttAirHeight->SetText("AP");
 	}
-
 	m_psttAirHeight->SetRenderTop(true);
 }
 
@@ -957,9 +954,8 @@ VOID CHpGui::OnPaintPost()
 
 	if (m_eAirColor != TYPE_DISABLE)
 	{
-		m_surMidAir.Render( true );
-		m_surRoundAir.Render( true );
-		//m_surRoundAir.Render( true );
+		m_rRoundAir.Render();
+		m_surMidAir.Render();
 	}
 }
 

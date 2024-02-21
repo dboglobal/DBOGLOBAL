@@ -96,7 +96,9 @@ private:
 
 	TYPE_AIR_COLOR	m_eAirColor;
 	CSurfaceGui		m_surMidAir;
-	CSurfaceGui		m_surRoundAir;
+	//CSurfaceGui		m_surRoundAir;
+
+	gui::CRadarEffect m_rRoundAir;
 	
 public:
 
