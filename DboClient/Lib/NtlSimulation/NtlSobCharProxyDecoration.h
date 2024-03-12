@@ -189,11 +189,11 @@ public:
     RwBool DetachRPBonusEffect();             ///< RP Bonus Effect를 제거한다.
 
 	 // Guard Skill
-	void CreateGuardEffect();
+	void CreateGuardEffect(RwChar *pKey);
 	void DeleteGuardEffect();
 
 	// rp charging Skill
-	void CreateRpChargeEffect();
+	void CreateRpChargeEffect(RwChar *pKey);
 	void DeleteRpChargeEffect();
 
     // Transform

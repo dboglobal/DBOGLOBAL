@@ -93,10 +93,28 @@
 #define NTL_VID_SWIM_IDLE					"GME_SWIM_STOP"
 #define NTL_VID_SWIM_BUBBLE                 "GME_SWIM_BUBBLE"
 
+//dash line
+#define NTL_VID_DASH_LINE					"GME_DashLine"
 
+//dash auras
 #define NTL_VID_DASH_ACTIVE_01				"COM_SKL_AVE_001"
 #define NTL_VID_DASH_ACTIVE_02				"COM_SKL_AVE_001_02"
-#define NTL_VID_DASH_LINE					"GME_DashLine"
+#define NTL_VID_DASH_ACTIVE_BLUE_01			"COM_SKL_AVE_001_1" // blue dash aura
+#define NTL_VID_DASH_ACTIVE_BLUE_02			"COM_SKL_AVE_001_02_1" // blue dash aura
+#define NTL_VID_DASH_ACTIVE_GREEN_01		"COM_SKL_AVE_001_2" // green dash aura
+#define NTL_VID_DASH_ACTIVE_GREEN_02		"COM_SKL_AVE_001_02_2" // green dash aura
+#define NTL_VID_DASH_ACTIVE_GREENT_01		"COM_SKL_AVE_001_3" // refined green dash aura
+#define NTL_VID_DASH_ACTIVE_YELLOW_01		"COM_SKL_AVE_001_4" // yellow dash aura
+#define NTL_VID_DASH_ACTIVE_YELLOW_02		"COM_SKL_AVE_001_02_4" // yellow dash aura
+#define NTL_VID_DASH_ACTIVE_RED_01			"COM_SKL_AVE_001_6" // red dash aura
+#define NTL_VID_DASH_ACTIVE_RED_02			"COM_SKL_AVE_001_02_6" // red dash aura
+#define NTL_VID_DASH_ACTIVE_REDT_01			"COM_SKL_AVE_001_7" // refined red dash aura
+#define NTL_VID_DASH_ACTIVE_REDT_02			"COM_SKL_AVE_001_02_7" // refined red dash aura
+#define NTL_VID_DASH_ACTIVE_PURPLE_01		"COM_SKL_AVE_001_8" // purple dash aura
+#define NTL_VID_DASH_ACTIVE_PURPLE_02		"COM_SKL_AVE_001_02_8" // purple dash aura
+
+
+
 
 #define NTL_VID_NORMAL_SKILL_USE			"GME_Normal_Skill"
 #define NTL_VID_SPECIAL_SKILL_USE			"GME_Special_Skill"
@@ -116,7 +134,16 @@
 #define NTL_VID_STATE_BLEED					"GME_STS_BLEED"
 #define NTL_VID_STATE_POISON				"GME_STS_POISON"
 
+//Guard auras
 #define NTL_VID_GUARD_SUCCESS				"GME_Guard_Success" // effect while using guard
+#define NTL_VID_GUARD_BLUE					"GME_Guard_01" // blue aura when guarding
+#define NTL_VID_GUARD_GREEN					"GME_Guard_02" // green aura when guarding
+#define NTL_VID_GUARD_GREENT				"GME_Guard_03" // refined green aura when guarding
+#define NTL_VID_GUARD_YELLOW				"GME_Guard_04" // yellow aura when guarding
+#define NTL_VID_GUARD_YELLOWT				"GME_Guard_05" // refined yellow aura when guarding
+#define NTL_VID_GUARD_RED					"GME_Guard_06" // red aura when guarding
+#define NTL_VID_GUARD_REDT					"GME_Guard_07" // refined aura when guarding
+#define NTL_VID_GUARD_PURPLE				"GME_Guard_08" // purple aura when guarding
 
 #define NTL_VID_BLOCKING_DEFENCE			"GME_Guard_Attack"
 #define NTL_VID_BLOCKING_DAMAGE				"TXT_Guard_Normal"
@@ -154,7 +181,18 @@
 #define NTL_VID_RPBOUNS_SMALL               "GME_RP_Bonus_Act"
 #define NTL_VID_RPBONUS_BIG                 "GME_RP_Bonus_Act_02"
 #define NTL_VID_RPBALL_UP                   "COM_SKL_AVE_002_02"
-#define NTL_VID_RP_CHARGE					"COM_SKL_AVE_002" // effect while using rp charge skill
+
+// RP Charge Auras
+#define NTL_VID_RP_CHARGE					"COM_SKL_AVE_002" // effect while using rp charge skill (grey aura)
+#define NTL_VID_RP_CHARGE_BLUE				"COM_SKL_AVE_002_1" // effect while using rp charge skill (blue aura)
+#define NTL_VID_RP_CHARGE_GREEN				"COM_SKL_AVE_002_2" // effect while using rp charge skill (green aura)
+#define NTL_VID_RP_CHARGE_GREENT			"COM_SKL_AVE_002_3" // effect while using rp charge skill (refined green aura)
+#define NTL_VID_RP_CHARGE_YELLOW			"COM_SKL_AVE_002_4" // effect while using rp charge skill (yellow aura)
+#define NTL_VID_RP_CHARGE_YELLOWT			"COM_SKL_AVE_002_5" // effect while using rp charge skill (refined yellow aura)
+#define NTL_VID_RP_CHARGE_RED				"COM_SKL_AVE_002_6" // effect while using rp charge skill (red aura)
+#define NTL_VID_RP_CHARGE_REDT				"COM_SKL_AVE_002_7" // effect while using rp charge skill (refined red aura)
+#define NTL_VID_RP_CHARGE_PURPLE			"COM_SKL_AVE_002_8" // effect while using rp charge skill (purple aura)
+
 
 // Super Saiyan Effect
 #define NTL_VID_SUPER_SAIYAN_SMALL          "HUM_Super_Saiyan"

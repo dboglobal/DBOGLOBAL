@@ -210,6 +210,8 @@ public:
     RwInt32             GetUpgradeEffect() {return m_nGrade;}
     void                SetEnableUpgradeEffect( RwBool bEnable );									///< Item의 Grade Effect 사용 유무를 설정한다.
 	
+	void				SetEffect(ENtlPLItemGrade eGrade, char* effect, RwChar* bone1 = nullptr, RwChar* bone2 = nullptr);
+
 	RwV3d	GetSubWeaponOffset() { return m_pProperty->GetAttachOffset();}
 
     RwBool	SetAnimation(RwUInt32 uiAnimKey, RwReal fStartTime = 0.0f, RwBool bLoop = TRUE);		///< Animation을 적용한다.

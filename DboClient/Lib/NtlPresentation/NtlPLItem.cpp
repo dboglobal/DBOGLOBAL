@@ -20,7 +20,7 @@
 #define dDEFAULT_DOGI_COLOR_GREEN			(255)
 #define dDEFAULT_DOGI_COLOR_BLUE			(255)
 
-
+CNtlPLCharacter* p_Owner;
 
 const char* g_strTraceBoneName[] = 
 {
@@ -405,6 +405,7 @@ void CNtlPLItem::SetPosition(const RwV3d *pPos)
 void CNtlPLItem::SetChangeEquip(CNtlPLCharacter *pOwner, RwBool bApplyAttach)
 {
 	m_pOwner = pOwner;
+	p_Owner = pOwner;
 
 	m_sScheduleResInfo.bEquip = TRUE;
 	m_sScheduleResInfo.bAttach = bApplyAttach;
@@ -433,7 +434,7 @@ void CNtlPLItem::SetApplyEquipData()
 {
 	if( !m_sScheduleResInfo.bLoadComplete || m_sScheduleResInfo.bApplyedEquip  || !m_pOwner)
 		return;
-
+	p_Owner = m_pOwner;
 	if( m_sScheduleResInfo.bEquip )
 	{
 		if( m_sScheduleResInfo.bAttach )
@@ -1154,32 +1155,256 @@ RwBool CNtlPLItem::SetUpgradeEffect(ENtlPLItemGrade eGrade)
         }
         m_pUpgradeEffects.clear();
     }        
-
+	
 	// 1,2 Upgrades do not display effects.
     if(eGrade < ITEM_GRADE_3)
     {
         return TRUE;
     }
 
-    CNtlInstanceEffect* pGradeEffect = NULL; 
+    CNtlInstanceEffect* pGradeEffect = NULL;
+
+	switch (m_pProperty->GetEquipSlotType()) 
+	{
+		case ITEM_EQUIP_JACKET:
+			if (p_Owner->GetCharScheduleResInfo()->uiRace == 0)
+			{
+				if (eGrade > 10 || eGrade < 14) 
+				{
+					SetEffect(eGrade, "GME_ITM_AM_G03", "Bip01 Spine2");
+				}
+				if (eGrade == 14 || eGrade == 15)
+				{
+					SetEffect(eGrade, "GME_ITM_AM_G04", "Bip01 Spine2");
+				}
+			}
+			if (p_Owner->GetCharScheduleResInfo()->uiRace == 1)
+			{
+				if (eGrade > 10 || eGrade < 14)
+				{
+					SetEffect(eGrade, "GME_ITM_AM_G03_NMY", "Bip01 Spine2");
+				}
+				if (eGrade == 14 || eGrade == 15)
+				{
+					SetEffect(eGrade, "GME_ITM_AM_G04_NMY", "Bip01 Spine2");
+				}
+			}
+			if (p_Owner->GetCharScheduleResInfo()->uiRace == 2)
+			{
+				if (p_Owner->GetCharScheduleResInfo()->uiGender == 1)
+				{
+					if (eGrade > 10 || eGrade < 14)
+					{
+						SetEffect(eGrade, "GME_ITM_AM_G03", "Bip01 Spine2");
+					}
+					if (eGrade == 14 || eGrade == 15)
+					{
+						SetEffect(eGrade, "GME_ITM_AM_G04", "Bip01 Spine2");
+					}
+				}
+				else 
+				{
+					if (eGrade > 10 || eGrade < 14)
+					{
+						SetEffect(eGrade, "GME_ITM_AM_G03_MAJ", "Bip01 Spine2");
+					}
+					if (eGrade == 14 || eGrade == 15)
+					{
+						SetEffect(eGrade, "GME_ITM_AM_G04_MAJ", "Bip01 Spine2");
+					}
+				}
+			}
+			break;
+		case ITEM_EQUIP_PANTS:
+			if (p_Owner->GetCharScheduleResInfo()->uiRace == 0)
+			{
+				if (eGrade > 10 || eGrade < 14)
+				{
+					SetEffect(eGrade, "GME_ITM_AM_G03_Pants", "Bip01 R Calf", "Bip01 L Calf");
+				}
+				if (eGrade == 14 || eGrade == 15)
+				{
+					SetEffect(eGrade, "GME_ITM_AM_G04_Pants", "Bip01 R Calf", "Bip01 L Calf");
+				}
+			}
+			if (p_Owner->GetCharScheduleResInfo()->uiRace == 1)
+			{
+				if (eGrade > 10 || eGrade < 14)
+				{
+					SetEffect(eGrade, "GME_ITM_AM_G03_NMY_Pants", "Bip01 R Calf", "Bip01 L Calf");
+				}
+				if (eGrade == 14 || eGrade == 15)
+				{
+					SetEffect(eGrade, "GME_ITM_AM_G04_NMY_Pants", "Bip01 R Calf", "Bip01 L Calf");
+				}
+			}
+			if (p_Owner->GetCharScheduleResInfo()->uiRace == 2)
+			{
+				if (p_Owner->GetCharScheduleResInfo()->uiGender == 1)
+				{
+					if (eGrade > 10 || eGrade < 14)
+					{
+						SetEffect(eGrade, "GME_ITM_AM_G03_Pants", "Bip01 R Calf", "Bip01 L Calf");
+					}
+					if (eGrade == 14 || eGrade == 15)
+					{
+						SetEffect(eGrade, "GME_ITM_AM_G04_Pants", "Bip01 R Calf", "Bip01 L Calf");
+					}
+				}
+				else
+				{
+					if (eGrade > 10 || eGrade < 14)
+					{
+						SetEffect(eGrade, "GME_ITM_AM_G03_MAJ", "Bip01 Pelvis");
+					}
+					if (eGrade == 14 || eGrade == 15)
+					{
+						SetEffect(eGrade, "GME_ITM_AM_G04_MAJ", "Bip01 Pelvis");
+					}
+				}
+			}
+			break;
+		case ITEM_EQUIP_BOOTS:
+			if (p_Owner->GetCharScheduleResInfo()->uiRace == 0)
+			{
+				if (eGrade > 10 || eGrade < 14)
+				{
+					SetEffect(eGrade, "GME_ITM_AM_G03_Shoes", "Bip01 R Calf", "Bip01 L Foot");
+				}
+				if (eGrade == 14 || eGrade == 15)
+				{
+					SetEffect(eGrade, "GME_ITM_AM_G04_Shoes", "Bip01 R Calf", "Bip01 L Foot");
+				}
+			}
+			if (p_Owner->GetCharScheduleResInfo()->uiRace == 1)
+			{
+				if (eGrade > 10 || eGrade < 14)
+				{
+					SetEffect(eGrade, "GME_ITM_AM_G03_NMY_Shoes", "Bip01 R Calf", "Bip01 L Foot");
+				}
+				if (eGrade == 14 || eGrade == 15)
+				{
+					SetEffect(eGrade, "GME_ITM_AM_G04_NMY_Shoes", "Bip01 R Calf", "Bip01 L Foot");
+				}
+			}
+			if (p_Owner->GetCharScheduleResInfo()->uiRace == 2)
+			{
+				if (p_Owner->GetCharScheduleResInfo()->uiGender == 1)
+				{
+					if (eGrade > 10 || eGrade < 14)
+					{
+						SetEffect(eGrade, "GME_ITM_AM_G03_Shoes", "Bip01 R Calf", "Bip01 L Foot");
+					}
+					if (eGrade == 14 || eGrade == 15)
+					{
+						SetEffect(eGrade, "GME_ITM_AM_G04_Shoes", "Bip01 R Calf", "Bip01 L Foot");
+					}
+				}
+				else
+				{
+					if (eGrade > 10 || eGrade < 14)
+					{
+						SetEffect(eGrade, "GME_ITM_AM_G03_MAJ_Shoes", "Bip01 Pelvis");
+					}
+					if (eGrade == 14 || eGrade == 15)
+					{
+						SetEffect(eGrade, "GME_ITM_AM_G04_MAJ_Shoes", "Bip01 Pelvis");
+					}
+				}
+			}
+			break;
+		case ITEM_EQUIP_TWO_HAND:
+			if (eGrade > 10 || eGrade < 14)
+			{
+				SetEffect(eGrade, "GME_ITM_WP_G05");
+			}
+			if (eGrade == 14)
+			{
+				SetEffect(eGrade, "GME_ITM_WP_G07");
+			}
+			if (eGrade == 15) 
+			{
+				SetEffect(eGrade, "GME_ITM_WP_G08");
+			}
+			if (p_Owner->GetCharScheduleResInfo()->uiRace == 2 && p_Owner->GetCharScheduleResInfo()->uiGender == 0) 
+			{
+				if (eGrade > 10 || eGrade < 14)
+				{
+					SetEffect(eGrade, "GME_ITM_WP_G05_02");
+				}
+				if (eGrade == 14)
+				{
+					SetEffect(eGrade, "GME_ITM_WP_G07_02");
+				}
+				if (eGrade == 15)
+				{
+					SetEffect(eGrade, "GME_ITM_WP_G08_02");
+				}
+			}
+			break;
+		case ITEM_EQUIP_R_HAND:
+			if (eGrade > 10 || eGrade < 14)
+			{
+				SetEffect(eGrade, "GME_ITM_WP_G05_02");
+			}
+			if (eGrade == 14)
+			{
+				SetEffect(eGrade, "GME_ITM_WP_G07_02");
+			}
+			if (eGrade == 15)
+			{
+				SetEffect(eGrade, "GME_ITM_WP_G08_02");
+			}
+			break;
+		case ITEM_EQUIP_BACK:
+			if (eGrade > 10 || eGrade < 14)
+			{
+				SetEffect(eGrade, "GME_ITM_WP_G05_02");
+			}
+			if (eGrade == 14)
+			{
+				SetEffect(eGrade, "GME_ITM_WP_G07_02");
+			}
+			if (eGrade == 15)
+			{
+				SetEffect(eGrade, "GME_ITM_WP_G08_02");
+			}
+			break;
+		case ITEM_EQUIP_USER_MOVE1:
+			if (eGrade > 10 || eGrade < 14)
+			{
+				SetEffect(eGrade, "GME_ITM_WP_G05_03");
+			}
+			if (eGrade == 14)
+			{
+				SetEffect(eGrade, "GME_ITM_WP_G07_03");
+			}
+			if (eGrade == 15)
+			{
+				SetEffect(eGrade, "GME_ITM_WP_G08_03");
+			}
+			break;
+	}
 
 	//// creates upgrade effects for each
-	//switch (eGrade)
-	//{
-	//	case ITEM_GRADE_3: pGradeEffect = (CNtlInstanceEffect*)GetSceneManager()->CreateEntity(PLENTITY_EFFECT, m_pProperty->GetUpgradeEffectProperty()->szEffect1);
-	//	case ITEM_GRADE_4: pGradeEffect = (CNtlInstanceEffect*)GetSceneManager()->CreateEntity(PLENTITY_EFFECT, m_pProperty->GetUpgradeEffectProperty()->szEffect2);
-	//	case ITEM_GRADE_5: pGradeEffect = (CNtlInstanceEffect*)GetSceneManager()->CreateEntity(PLENTITY_EFFECT, m_pProperty->GetUpgradeEffectProperty()->szEffect3);
-	//	case ITEM_GRADE_6: pGradeEffect = (CNtlInstanceEffect*)GetSceneManager()->CreateEntity(PLENTITY_EFFECT, m_pProperty->GetUpgradeEffectProperty()->szEffect4);
-	//	case ITEM_GRADE_7: pGradeEffect = (CNtlInstanceEffect*)GetSceneManager()->CreateEntity(PLENTITY_EFFECT, m_pProperty->GetUpgradeEffectProperty()->szEffect5);
-	//	case ITEM_GRADE_8: pGradeEffect = (CNtlInstanceEffect*)GetSceneManager()->CreateEntity(PLENTITY_EFFECT, m_pProperty->GetUpgradeEffectProperty()->szEffect6);
-	//	case ITEM_GRADE_9: pGradeEffect = (CNtlInstanceEffect*)GetSceneManager()->CreateEntity(PLENTITY_EFFECT, m_pProperty->GetUpgradeEffectProperty()->szEffect7);
-	//	case ITEM_GRADE_10: pGradeEffect = (CNtlInstanceEffect*)GetSceneManager()->CreateEntity(PLENTITY_EFFECT, m_pProperty->GetUpgradeEffectProperty()->szEffect8);
-	//	case ITEM_GRADE_11: pGradeEffect = (CNtlInstanceEffect*)GetSceneManager()->CreateEntity(PLENTITY_EFFECT, m_pProperty->GetUpgradeEffectProperty()->szEffect9);
-	//	case ITEM_GRADE_12: pGradeEffect = (CNtlInstanceEffect*)GetSceneManager()->CreateEntity(PLENTITY_EFFECT, m_pProperty->GetUpgradeEffectProperty()->szEffect10);
-	//	case ITEM_GRADE_13: pGradeEffect = (CNtlInstanceEffect*)GetSceneManager()->CreateEntity(PLENTITY_EFFECT, m_pProperty->GetUpgradeEffectProperty()->szEffect11);
-	//	case ITEM_GRADE_14: pGradeEffect = (CNtlInstanceEffect*)GetSceneManager()->CreateEntity(PLENTITY_EFFECT, m_pProperty->GetUpgradeEffectProperty()->szEffect12);
-	//	case ITEM_GRADE_15: pGradeEffect = (CNtlInstanceEffect*)GetSceneManager()->CreateEntity(PLENTITY_EFFECT, m_pProperty->GetUpgradeEffectProperty()->szEffect13);
-	//}
+	switch (eGrade)
+	{
+		case ITEM_GRADE_11: 
+			pGradeEffect = (CNtlInstanceEffect*)GetSceneManager()->CreateEntity(PLENTITY_EFFECT, m_pProperty->GetUpgradeEffectProperty()->szEffect[11]);
+			break;
+		case ITEM_GRADE_12: 
+			pGradeEffect = (CNtlInstanceEffect*)GetSceneManager()->CreateEntity(PLENTITY_EFFECT, m_pProperty->GetUpgradeEffectProperty()->szEffect[12]);
+			break;
+		case ITEM_GRADE_13: 
+			pGradeEffect = (CNtlInstanceEffect*)GetSceneManager()->CreateEntity(PLENTITY_EFFECT, m_pProperty->GetUpgradeEffectProperty()->szEffect[13]);
+			break;
+		case ITEM_GRADE_14: 
+			pGradeEffect = (CNtlInstanceEffect*)GetSceneManager()->CreateEntity(PLENTITY_EFFECT, m_pProperty->GetUpgradeEffectProperty()->szEffect[14]);
+			break;
+		case ITEM_GRADE_15: 
+			pGradeEffect = (CNtlInstanceEffect*)GetSceneManager()->CreateEntity(PLENTITY_EFFECT, m_pProperty->GetUpgradeEffectProperty()->szEffect[15]);
+			break;
+	}
 
 	if( !pGradeEffect )
 		return TRUE;
@@ -1217,6 +1442,20 @@ RwBool CNtlPLItem::SetUpgradeEffect(ENtlPLItemGrade eGrade)
     }
 
     return TRUE;
+}
+
+void CNtlPLItem::SetEffect(ENtlPLItemGrade eGrade, char* effect, RwChar* bone1, RwChar* bone2)
+{
+	strcpy(m_pProperty->GetUpgradeEffectProperty()->szEffect[eGrade], effect);
+	
+	if (bone1 != nullptr)
+	{
+		strcpy(m_pProperty->GetUpgradeEffectProperty()->szBone1, bone1);
+	}
+	if (bone2 != nullptr)
+	{
+		strcpy(m_pProperty->GetUpgradeEffectProperty()->szBone2, bone2);
+	}
 }
 
 void CNtlPLItem::SetEnableUpgradeEffect( RwBool bEnable ) 

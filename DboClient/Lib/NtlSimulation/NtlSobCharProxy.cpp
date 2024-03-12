@@ -1889,7 +1889,93 @@ void CNtlSobCharProxy::DetachRPBonusEffect()
 
 void CNtlSobCharProxy::CreateGuardEffect()
 {
-	m_pDecorationProxy->CreateGuardEffect();
+	//m_pDecorationProxy->CreateGuardEffect();
+	RwUInt8 mGrade = m_pEquipProxy->GetEquipItem(EQUIP_SLOT_TYPE_JACKET)->byGrade; //get's jacket grade
+
+	switch (mGrade)
+	{
+		case (0): 
+		{
+			m_pDecorationProxy->CreateGuardEffect(NTL_VID_GUARD_SUCCESS);
+			break;
+		}
+		case (1):
+		{
+			m_pDecorationProxy->CreateGuardEffect(NTL_VID_GUARD_BLUE);
+			break;
+		}
+		case (2):
+		{
+			m_pDecorationProxy->CreateGuardEffect(NTL_VID_GUARD_BLUE);
+			break;
+		}
+		case (3):
+		{
+			m_pDecorationProxy->CreateGuardEffect(NTL_VID_GUARD_BLUE);
+			break;
+		}
+		case (4):
+		{
+			m_pDecorationProxy->CreateGuardEffect(NTL_VID_GUARD_BLUE);
+			break;
+		}
+		case (5):
+		{
+			m_pDecorationProxy->CreateGuardEffect(NTL_VID_GUARD_GREEN);
+			break;
+		}
+		case (6):
+		{
+			m_pDecorationProxy->CreateGuardEffect(NTL_VID_GUARD_GREEN);
+			break;
+		}
+		case (7):
+		{
+			m_pDecorationProxy->CreateGuardEffect(NTL_VID_GUARD_GREENT);
+			break;
+		}
+		case (8):
+		{
+			m_pDecorationProxy->CreateGuardEffect(NTL_VID_GUARD_GREENT);
+			break;
+		}
+		case (9):
+		{
+			m_pDecorationProxy->CreateGuardEffect(NTL_VID_GUARD_YELLOW);
+			break;
+		}
+		case (10):
+		{
+			m_pDecorationProxy->CreateGuardEffect(NTL_VID_GUARD_YELLOW);
+			break;
+		}
+		case (11):
+		{
+			m_pDecorationProxy->CreateGuardEffect(NTL_VID_GUARD_YELLOWT);
+			break;
+		}
+		case (12):
+		{
+			m_pDecorationProxy->CreateGuardEffect(NTL_VID_GUARD_YELLOWT);
+			break;
+		}
+		case (13):
+		{
+			m_pDecorationProxy->CreateGuardEffect(NTL_VID_GUARD_RED);
+			break;
+		}
+		case (14):
+		{
+			m_pDecorationProxy->CreateGuardEffect(NTL_VID_GUARD_REDT);
+			break;
+		}
+		case (15):
+		{
+			m_pDecorationProxy->CreateGuardEffect(NTL_VID_GUARD_PURPLE);
+			break;
+		}
+	}
+
 }
 
 void CNtlSobCharProxy::DeleteGuardEffect()
@@ -1899,7 +1985,94 @@ void CNtlSobCharProxy::DeleteGuardEffect()
 
 void CNtlSobCharProxy::CreateRpChargeEffect()
 {
-	m_pDecorationProxy->CreateRpChargeEffect();
+	RwUInt8 mGrade = m_pEquipProxy->GetEquipItem(EQUIP_SLOT_TYPE_PANTS)->byGrade; //get's pants grade
+
+
+	switch (mGrade) 
+	{
+		case (0): //if no upgrades then it's a normal aura
+		{
+			m_pDecorationProxy->CreateRpChargeEffect(NTL_VID_RP_CHARGE);
+			break;
+		}
+		case (1): //if upgraded successfully once then it has a blue aura 
+		{
+			m_pDecorationProxy->CreateRpChargeEffect(NTL_VID_RP_CHARGE_BLUE);
+			break;
+		}
+		case (2):  //if upgraded successfully twice then it still has a blue aura 
+		{
+			m_pDecorationProxy->CreateRpChargeEffect(NTL_VID_RP_CHARGE_BLUE);
+			break;
+		}
+		case (3): //if upgraded successfully three times then it still has a blue aura
+		{
+			m_pDecorationProxy->CreateRpChargeEffect(NTL_VID_RP_CHARGE_BLUE);
+			break;
+		}
+		case (4): //if upgraded successfully four times then it still has a blue aura
+		{
+			m_pDecorationProxy->CreateRpChargeEffect(NTL_VID_RP_CHARGE_BLUE);
+			break;
+		}
+		case (5): //if upgraded successfully 5 times then it has a green aura
+		{
+			m_pDecorationProxy->CreateRpChargeEffect(NTL_VID_RP_CHARGE_GREEN);
+			break;
+		}
+		case (6): //if upgraded successfully 6 times then it has a green aura
+		{
+			m_pDecorationProxy->CreateRpChargeEffect(NTL_VID_RP_CHARGE_GREEN);
+			break;
+		}
+		case (7): //if upgraded successfully 7 times then it has a refined green aura
+		{
+			m_pDecorationProxy->CreateRpChargeEffect(NTL_VID_RP_CHARGE_GREENT);
+			break;
+		}
+		case (8): //if upgraded successfully 8 times then it has a refined green aura
+		{
+			m_pDecorationProxy->CreateRpChargeEffect(NTL_VID_RP_CHARGE_GREENT);
+			break;
+		}
+		case (9): //if upgraded successfully 9 times then it has a yellow aura
+		{
+			m_pDecorationProxy->CreateRpChargeEffect(NTL_VID_RP_CHARGE_YELLOW);
+			break;
+		}
+		case (10): //if upgraded successfully 10 times then it has a yellow aura
+		{
+			m_pDecorationProxy->CreateRpChargeEffect(NTL_VID_RP_CHARGE_YELLOW);
+			break;
+		}
+		case (11): //if upgraded successfully 11 times then it has a refined yellow aura
+		{
+			m_pDecorationProxy->CreateRpChargeEffect(NTL_VID_RP_CHARGE_YELLOWT);
+			break;
+		}
+		case (12): //if upgraded successfully 12 times then it has a refined yellow aura
+		{
+			m_pDecorationProxy->CreateRpChargeEffect(NTL_VID_RP_CHARGE_YELLOWT);
+			break;
+		}
+		case (13): //if upgraded successfully 13 times then it has a red aura
+		{
+			m_pDecorationProxy->CreateRpChargeEffect(NTL_VID_RP_CHARGE_RED);
+			break;
+		}
+		case (14): //if upgraded successfully 14 times then it has a refined red aura
+		{
+			m_pDecorationProxy->CreateRpChargeEffect(NTL_VID_RP_CHARGE_REDT);
+			break;
+		}
+		case (15): //if upgraded successfully 15 times then it has a purple aura
+		{
+			m_pDecorationProxy->CreateRpChargeEffect(NTL_VID_RP_CHARGE_PURPLE);
+			break;
+		}
+
+	}
+
 }
 
 void CNtlSobCharProxy::DeleteRpChargeEffect()

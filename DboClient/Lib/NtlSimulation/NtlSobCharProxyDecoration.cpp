@@ -1025,14 +1025,16 @@ RwBool CNtlSobCharDecorationProxy::DetachRPBonusEffect()
     return TRUE;
 }
 
-void CNtlSobCharDecorationProxy::CreateGuardEffect()
+void CNtlSobCharDecorationProxy::CreateGuardEffect(RwChar* pKey)
 {
 	DeleteGuardEffect();
 
-	m_pGuardEffect = GetSceneManager()->CreateEntity(PLENTITY_EFFECT, NTL_VID_GUARD_SUCCESS);
+	m_pGuardEffect = GetSceneManager()->CreateEntity(PLENTITY_EFFECT, pKey);
 	if (m_pGuardEffect)
 	{
 		RwV3d vOffset = ZeroAxis;
+		m_pGuardEffect->SetPosition(&m_pSobObj->GetSobProxy()->GetPosition());
+		m_pGuardEffect->SetDirection(&m_pPLCharacter->GetDirection());
 		m_pGuardEffect->SetScale(m_pSobObj->GetSobProxy()->GetScale());
 		Helper_AttachWorldPos(m_pPLCharacter, m_pGuardEffect, vOffset);
 	}
@@ -1047,16 +1049,18 @@ void CNtlSobCharDecorationProxy::DeleteGuardEffect()
 	}
 }
 
-void CNtlSobCharDecorationProxy::CreateRpChargeEffect()
+void CNtlSobCharDecorationProxy::CreateRpChargeEffect(RwChar *pKey)
 {
 	DeleteRpChargeEffect();
 
-	m_pRpChargeEffect = GetSceneManager()->CreateEntity(PLENTITY_EFFECT, NTL_VID_RP_CHARGE);
+	m_pRpChargeEffect = GetSceneManager()->CreateEntity(PLENTITY_EFFECT, pKey);
+
 	if (m_pRpChargeEffect)
 	{
 		RwV3d vOffset = ZeroAxis;
-		m_pRpChargeEffect->SetScale(m_pSobObj->GetSobProxy()->GetScale());
-		Helper_AttachWorldPos(m_pPLCharacter, m_pRpChargeEffect, vOffset);
+		m_pRpChargeEffect->SetPosition(&m_pSobObj->GetSobProxy()->GetPosition());
+		m_pRpChargeEffect->SetScale(m_pPLCharacter->GetScale());
+		m_pPLCharacter->AttachBone((CNtlPLAttach*)m_pRpChargeEffect, "nullroot");
 	}
 
 }

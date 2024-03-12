@@ -49,7 +49,7 @@
 
 // Edge effect
 #define dTARGET_EDGE_THICKNESS_ORIGINAL			1.f
-#define dTARGET_EDGE_THICKNESS_EFFECT			2.5f
+#define dTARGET_EDGE_THICKNESS_EFFECT			1.f
 #define dTARGET_EDGE_THICKNESS_ORIGINAL_RED		0
 #define dTARGET_EDGE_THICKNESS_ORIGINAL_GREEN	0
 #define dTARGET_EDGE_THICKNESS_ORIGINAL_BLUE	0
@@ -479,20 +479,10 @@ VOID CScouterMeasureDlgGui::TargetEdgeEffect(bool bActive)
 	CNtlSobProxy* pSobProxy = m_scouterData.pSobTarget->GetSobProxy();
 	NTL_ASSERT(pSobProxy, "CScouterMeasureDlgGui::TargetEdgeEffect, Not exist sob proxy of handle : " << m_scouterData.pSobTarget->GetSerialID());
 
-	if (bActive)
-	{
-		pSobProxy->SetInkColor(dTARGET_EDGE_THICKNESS_EFFECT_RED,
-			dTARGET_EDGE_THICKNESS_EFFECT_GREEN,
-			dTARGET_EDGE_THICKNESS_EFFECT_BLUE);
-		pSobProxy->SetInkThicknessWeight(dTARGET_EDGE_THICKNESS_EFFECT);
-	}
-	else
-	{
-		pSobProxy->SetInkColor(dTARGET_EDGE_THICKNESS_ORIGINAL_RED,
-			dTARGET_EDGE_THICKNESS_ORIGINAL_GREEN,
-			dTARGET_EDGE_THICKNESS_ORIGINAL_BLUE);
-		pSobProxy->SetInkThicknessWeight(dTARGET_EDGE_THICKNESS_ORIGINAL);
-	}
+	pSobProxy->SetInkColor(dTARGET_EDGE_THICKNESS_ORIGINAL_RED,
+		dTARGET_EDGE_THICKNESS_ORIGINAL_GREEN,
+		dTARGET_EDGE_THICKNESS_ORIGINAL_BLUE);
+	pSobProxy->SetInkThicknessWeight(dTARGET_EDGE_THICKNESS_ORIGINAL);
 }
 
 VOID CScouterMeasureDlgGui::OnPaint()

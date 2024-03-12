@@ -8,7 +8,7 @@
 typedef	std::map<std::string, RwFrame *>			FRAME_MAP;
 typedef	std::map<std::string, RwFrame *>::iterator	FRAME_MAP_ITER;
 
-#define DEFAULT_INK_THICKNESS		1.7f
+#define DEFAULT_INK_THICKNESS		1.f
 struct SToonData
 {
 	RpToonInk		*pToonInk;
