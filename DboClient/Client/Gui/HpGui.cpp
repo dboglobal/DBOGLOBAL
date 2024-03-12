@@ -785,6 +785,10 @@ void CHpGui::UpdateAir()
 		SetAP(pSobAvatarAttr->GetAp() / 1000, nMaxAP / 1000);
 		CalculateAirHeight();
 	}
+	if(!m_bIsWorldAirPossible)
+	{
+		m_rRoundAir.EndProc();
+	}
 }
 
 void CHpGui::CheckAir()
@@ -804,6 +808,7 @@ void CHpGui::CheckAir()
 		{
 			m_ppnlAirPoint->SetToolTip(GetDisplayStringManager()->GetString("DST_AIR_CAN_NOT_FLY"));
 			m_eAirColor = TYPE_DISABLE;
+			m_rRoundAir.EndProc();
 		}
 		else
 		{
